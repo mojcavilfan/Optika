@@ -1,0 +1,525 @@
+%\chapterimage{Geometrijska.jpg} % Chapter heading image
+
+\chapter{Geometrijska optika}
+V tem poglavju bomo na kratko predstavili geometrijsko optiko,
+v kateri svetlobo obravnavamo kot ravne žarke. Zapisali bomo žarkovno
+enačbo, opisali prehod skozi optične elemente z matrikami ABCD in na nekaj 
+primerih pokazali njihovo uporabo. Na koncu bomo opisali 
+delovanje nekaterih optičnih naprav. 
+
+\section{Optična pot in Fermatov teorem}
+V uvodnem zgodovinskem pregledu smo zapisali Fermatov teorem, 
+ki pravi, da svetloba med dvema točkama potuje po tisti poti, 
+za katero potrebuje najmanj časa. Označimo
+hitrost svetlobe v snovi s $c$, pri čemer se ta razlikuje
+od hitrosti svetlobe v praznem prostoru $c_0$. Razmerje med
+hitrostjo svetlobe v praznem prostoru in njeno hitrostjo
+v snovi opisuje lomni količnik $n$. Velja:
+\boxeq{eq:c}{
+c = \frac{c_0}{n}.
+}
+Hitrost svetlobe v praznem prostoru je
+po definiciji enaka $c_0 = 299\,\,792\,\,458~\si{m/s}$, 
+lomni količnik pa je odvisen od snovi in frekvence svetlobe: za vidno svetlobo
+je v vodi približno $1,3$, v steklih okoli $1,4$--$1,9$ in v diamantu $2,4$.
+
+Naj svetloba potuje po snovi z lomnim količnikom $n$. Potem lahko zapišemo čas $t$, 
+ki ga svetloba potrebuje, da prepotuje določeno pot $s$, kot:
+\begin{equation}
+ dt = \frac{ds}{c} = \frac{ds}{c_0/n} = \frac{nds}{c_0}.
+\label{eq:02_02}
+\end{equation}
+Fermatov teorem pravi, da svetloba potuje po poti, za katero je:
+\beq
+\frac{nds}{c_0} = \mathrm{min}.
+\label{eq:02_03}
+\eeq
+V homogeni snovi svetloba torej potuje naravnost in ne spreminja smeri.
+Vpeljemo pojem optične poti $S$, to je produkta fizične poti $s$ in lomnega količnika
+na tej poti $n$. V splošnem se lomni količnik $n$ lahko s krajem spreminja, zato moramo
+optično pot zapisati v diferencialni obliki in jo integrirati od začetne do končne točke v
+prostoru. Dobimo: 
+\boxeq{eq:02_04}{
+S = \int_1^2 n(\mathbf{r})ds = \mathrm{min}.
+}
+Zapisani izraz imenujemo princip najmanjše optične poti oziroma najmanjše optične akcije. 
+Problem je podoben principu najmanjše akcije v klasični mehaniki, zato včasih govorimo  
+tudi o Langrangeevi oziroma Hamiltonovi optiki.
+\begin{remark}
+Princip najmanjše optične poti temelji na predpostavki, ki jo je privzel 
+Fermat v zapisu svojega teorema. Isti pogoj lahko formalno izpeljemo z 
+obravnavo valovnih front in žarkov v valovni optiki, če naredimo limito $\lambda \to 0$.
+Tako lahko izhajajoč iz Maxwellovih enačb pokažemo pravilnost Fermatovega teorema.
+\end{remark}
+
+\begin{example}
+{\bf Izpeljava lomnega zakona iz Fermatovega teorema.}
+Naj svetlobni žarek vpada na ravno mejo dveh snovi. Levo od meje je snov 
+z lomnim količnikom $n_1$, desno pa snov z lomnim količnikom $n_2$. Naj svetloba
+potuje od točke 1, ki jo izberemo na oddaljenosti $z_1$ levo 
+od meje, do točke 2 na oddaljenosti $z_2$ desno od meje. Vertikalna razdalja med obema
+točkama naj bo $x$ (glej sliko~\ref{fig:01_FerLom}). 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/02_FerLom.pdf_tex}
+\caption{K izračunu loma na meji dveh sredstev}
+\label{fig:01_FerLom}
+\end{figure}
+
+Naša naloga je poiskati točko na meji, skozi katero potuje žarek svetlobe,
+ob pogoju, da je skupna optična pot od točke 1 do točke 2 najmanjša.
+Celotno optično pot zapišemo kot:
+\begin{equation}
+S = n_1 s_1 + n_2 s_2 = n_1 \sqrt{x_1^2+z_1^2}\, +\, n_2 \sqrt{x_2^2+z_2^2}.
+\label{eq:02_05}
+\end{equation}
+Izrazimo parameter $x_2$ z lego iskane točke $x_1$: 
+\begin{equation}
+S = n_1 \sqrt{x_1^2+z_1^2}\, +\, n_2 \sqrt{(x-x_1)^2+z_2^2}.
+\label{eq:02_06}
+\end{equation}
+Najkrajšo optično pot izračunamo tako, da poiščemo vrednost $x_1$, 
+pri kateri je odvod optične poti po $x_1$ enak nič. Zapišemo:
+\begin{equation}
+\frac{dS}{dx_1} = \frac{2 n_1 x_1}{2 \sqrt{x_1^2+z_1^2}}+
+\frac{-2n_2 (x-x_1)}{2 \sqrt{(x-x_1)^2+z_2^2}} = 0.
+\label{eq:02_07}
+\end{equation}
+Vpadni kot $\alpha$ vpeljemo glede na normalo na mejo snovi (slika~\ref{fig:01_FerLom}):
+\begin{equation}
+\sin \alpha = \frac{x_1}{\sqrt{x_1^2+z_1^2}}.
+\label{eq:02_08}
+\end{equation}
+Vpeljemo še lomni kot $\beta$, ki je kot med smerjo žarka v drugi snovi in normalo na mejo snovi: 
+\begin{equation}
+\sin \beta = \frac{x_2}{\sqrt{x_2^2+z_2^2}} = \frac{(x-x_1)}{\sqrt{(x-x_1)^2+z_2^2}}.
+\label{eq:02_09}
+\end{equation}
+Vstavimo enačbi~(\ref{eq:02_08}) in (\ref{eq:02_09}) v enačbo~(\ref{eq:02_07})
+in zapišemo lomni zakon v obliki, kot jo poznamo:
+\boxeq{eq:lomnizakon}{
+n_1 \sin \alpha = n_2 \sin \beta.
+}
+Podobno lahko izpeljemo tudi odbojni zakon, tako da izračunamo 
+najkrajšo optično pot med točkama 1 in 3 in dobimo:
+\boxeq{eq:odbojnizakon}{
+\tilde{\alpha} = \alpha.
+}
+\end{example}
+
+\section{Žarkovna enačba}
+Poglejmo, kako se lotimo računa najkrajše optične poti v primeru, ko 
+meja med dvema snovema ni ostra, ampak se lomni količnik zvezno spreminja. 
+Naj bo lomni količnik v splošnem funkcija kraja: $n = n(\mathbf{r}) = n(x,y,z)$.
+Numerično se tega problema lotimo tako, da snov razdelimo
+na majhne elemente in na mejah med njimi uporabimo lomni ali odbojni zakon.
+Analitično problem rešujemo z uporabo Euler-Lagrangeeve enačbe za minimum
+funkcionala optične poti $S$:
+\begin{equation}
+ S = \int_1^2 n(x,y,z) ds  = \int_1^2 n(x,y,z)\,|\mathbf{v}|\,dt  = 
+ \int_1^2 n(x,y,z) \sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2} dt,
+ \label{eq:02_10}
+\end{equation}
+pri čemer pika označuje odvod posamezne koordinate po času. Integrand
+enačbe predstavlja Langrangian $L$, ki je funkcija treh koordinat in njihovih
+odvodov.
+\begin{equation}
+L(x, y, z, \dot{x}, \dot{y}, \dot{z}) = n(x,y,z) \sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}.
+\label{eq:02_11}
+\end{equation}
+Lagrangian vstavimo v Euler-Lagrangeevo enačbo\footnote{~Glej npr. P. Prelovšek, {\it Klasična
+mehanika}, skripta, 2013.} in za koordinato $x$ dobimo:
+\begin{equation}
+ \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - 
+ \frac{\partial L}{\partial x} = 0.
+ \label{eq:02_12}
+\end{equation}
+Podobni enačbi zapišemo tudi za $y$ in $z$. Vstavimo Langrangian (enačba~\ref{eq:02_11}) 
+v enačbo~(\ref{eq:02_12}) in dobimo:
+\begin{equation}
+\frac{d}{dt}\left(n \frac{\dot{x}}{\sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}} \right)
+ = \frac{\partial n}{\partial x}\sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}.
+  \label{eq:02_13}
+\end{equation}
+Pomnožimo enačbo z $dt/ds$:
+\begin{equation}
+\frac{d}{dt}\left(n \frac{\dot{x}}{\sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}} \right)
+\frac{dt}{ds}
+ = \frac{\partial n}{\partial x}\frac{\sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}\,dt}{ds}.
+  \label{eq:02_14}
+\end{equation}
+Na desni strani enačbe uporabimo zvezo:
+\begin{equation}
+ \sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2} dt = ds,
+ \label{eq:02_15}
+\end{equation}
+na levi strani pa verižno pravilo odvajanja, po katerem lahko pokrajšamo $dt$. Dobimo:
+\begin{equation}
+ \frac{d}{ds} \left( n \frac{dx}{dt\sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}} \right)=
+ \frac{\partial n}{\partial x}.
+ \label{eq:02_16}
+\end{equation}
+Enačbo~(\ref{eq:02_15}) uporabimo še enkrat v oklepaju na levi strani. Sledi:
+\begin{equation}
+ \frac{d}{ds} \left( n\, \frac{dx}{ds} \right)=
+ \frac{\partial n}{\partial x}.
+  \label{eq:02_17}
+\end{equation}
+Podobni enačbi zapišemo še za koordinati $y$ in $z$. Vse tri enačbe
+združimo v enotno žarkovno enačbo:
+\boxeq{eq:zarkovnaenacba}{
+\nabla n = \frac{d}{ds} \left( n \frac{d\mathbf{r}}{ds}\right)\!.
+}
+Rešitev žarkovne enačbe $\mathbf{r}(s)$ poda trajektorijo
+optičnega žarka.
+
+\begin{example}
+{\bf Žarkovna enačba v homogeni snovi.} Naj svetloba potuje po snovi,
+v kateri je lomni količnik konstanten. Potem je $\nabla n = 0$ in 
+\begin{equation}
+0 = \frac{d}{ds}\left( n \frac{d\mathbf{r}}{ds} \right) = 
+n \frac{d^2 \mathbf{r}}{ds^2}.
+ \label{eq:02_18}
+\end{equation}
+Rešitev te enačbe je ravni žarek:
+\begin{equation}
+ \mathbf{r} = \mathbf{a}_0+\mathbf{a}_1\,s,
+  \label{eq:02_19}
+\end{equation}
+pri čemer vektor $\mathbf{a}_0$ opisuje lego začetne točke, 
+vektor $\mathbf{a}_1$ pa ima smer od začetne do končne točke.
+\end{example}
+
+V optiki pogosto privzamemo, da smer širjenja svetlobe le malo 
+odstopa od neke dane smeri. Naj bo to smer $z$, ki jo imenujemo
+optična os sistema, trajektorijo žarka pa opazujemo v ravnini $xz$ 
+(slika~\ref{fig:01_FerOs}). Lomni količnik naj bo funkcija $n= n(x)$.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/02_FerOs.pdf_tex}
+\caption{K zapisu žarkovne enačbe v obosnem približku}
+\label{fig:01_FerOs}
+\end{figure}
+
+Predpostavko, da smer žarka le malo odstopa od smeri osi $z$, 
+matematično zapišemo s pogojem:
+\begin{equation}
+ \frac{dx}{dz}\ll 1.
+  \label{eq:02_20}
+\end{equation}
+Iz tega sledi, da za naklon žarka $\vartheta$, ki ga izračunamo kot:
+\begin{equation}
+\vartheta = \frac{dx}{dz}
+ \label{eq:02_21}
+\end{equation}
+velja $\sin \vartheta \approx \tan \vartheta \approx \vartheta \ll 1$.
+Upoštevajoč enačbo~(\ref{eq:02_20}) zapišemo:
+\begin{equation}
+ds = \sqrt{dx^2+dz^2} = \sqrt{\left(\left(\frac{dx}{dz}\right)^2 + 1\right)}\,\,dz \approx dz.
+\label{eq:02_22}
+\end{equation}
+Predpostavki, da se žarek širi približno vzdolž osi $z$, pravimo
+obosni ali paraksialni približek. V nadaljevanju se ga bomo še velikokrat 
+posluževali. Žarkovno enačbo (enačba~\ref{eq:zarkovnaenacba}) v obosnem približku
+zapišemo kot:
+\begin{equation}
+ \frac{dn}{dx} = \frac{d}{dz}\left(n(x)\,\frac{dx}{dz}\right) = n(x)\,\frac{d^2x}{dz^2}
+  \label{eq:02_23}
+\end{equation}
+oziroma
+\begin{equation}
+\frac{d^2x}{dz^2} = \frac{1}{n(x)} \frac{dn}{dx}.
+ \label{eq:02_24}
+\end{equation}
+
+\begin{example}
+{\bf Žarkovna enačba v snovi s paraboličnim profilom
+lomnega količnika.} Izračunajmo trajektorijo žarka svetlobe v 
+obosnem približku v snovi, v kateri se lomni količnik parabolično 
+spreminja z oddaljenostjo od osi $z$.  Odvisnost lomnega količnika 
+od oddaljenosti $r$ od osi $z$ zapišemo kot:
+\begin{equation}
+ n(x) = n_0 \left(1-\frac{\alpha^2\,x^2}{2}\right)\!,
+ \label{eq:02_25}
+\end{equation}
+pri čemer je $\alpha x$ majhen.
+Vstavimo izraz za lomni količnik (enačba~\ref{eq:02_25}) v obosni približek
+žarkovne enačbe (enačba~\ref{eq:02_24}) in dobimo:
+\begin{equation}
+ \frac{d^2x}{dz^2}= \frac{1}{n(x)}\frac{dn}{dz} = 
+ \frac{-n_0 \alpha^2x}{n_0 \left(1-\alpha^2\,x^2/2\right)} 
+ \approx -\frac{n_0\alpha^2x}{n_0} = -\alpha^2x.
+ \label{eq:02_26}
+\end{equation}
+Enačbo~(\ref{eq:02_26}) preprosto rešimo in dobimo splošno 
+obliko trajektorije:
+\begin{equation}
+ x(z) = A \cos (\alpha x) + B \sin (\alpha x).
+  \label{eq:02_27}
+\end{equation}
+Naj bo na začetku pri $z=0$ žarek na oddaljenosti $x_0$ 
+in naj se širi pod kotom $\vartheta_0$. 
+Z upoštevanjem začetnih pogojev dobimo rešitev:
+\begin{equation}
+x (z) = x_0 \cos(\alpha x) + \frac{\vartheta_0}{\alpha} \sin (\alpha x).
+ \label{eq:02_28}
+\end{equation}
+Rešitve obosnega približka žarkovne enačbe v snovi s paraboličnim profilom 
+so torej oscilatorne funkcije s periodo $2\pi/\alpha$ (glej sliko~\ref{fig:01_FerPar}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/02_FerPar.pdf_tex}
+\caption{Rešitev žarkovne enačbe v snovi s paraboličnim profilom je periodična. Narisanih
+je šest žarkov, pri katerih je $x_0=0$, razlikujejo pa se v $\vartheta_0$.}
+\label{fig:01_FerPar}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=10truecm]{slike/02_Sladkor.jpg}
+\caption{Potek žarka v vodni raztopini sladkorja, v kateri koncentracija sladkorja in z
+njo lomni količnik naraščata z globino. Vodi smo dodali fluorescein, da vidimo potek žarka.}
+\label{fig:01_Sladkor}
+\end{figure}
+\end{example}
+
+\section{Transformacije žarkov z matrikami ABCD}
+V prejšnjem razdelku smo zapisali žarkovno enačbo v obosnem 
+približku. Ključna parametra za opis trajektorije žarka sta 
+oddaljenost od optične osi $z$, ki jo označimo z $x$, in naklonski 
+kot žarka glede na optično os, ki ga označimo s $\vartheta$.
+Naša naloga je povezati dve točki žarka na različnih mestih v
+prostoru in zapisati preslikavo med njima, če je med točkama
+optični medij oziroma nek optični element. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/02_ABCD0.pdf_tex}
+\caption{Pri danem $z$ žarek opišemo z lego $x$ in smerjo $\vartheta$. Spremembo
+teh dveh parametrov opišemo s preslikavo.}
+\label{fig:01_ABCD0}
+\end{figure}
+
+V splošnem vrednosti lege in naklona v točki 2 izrazimo kot 
+linearno kombinacijo prvotnih vrednosti v točki 1:
+\begin{align}
+ x_2 = & A x_1 + B \vartheta_1 \qquad \mathrm{in}  \label{eq:02_29}\\
+ \vartheta_2 = & C x_1 + D\vartheta_1.
+ \label{eq:02_30}
+\end{align}
+Če združimo parametra $x$ in $\vartheta$ v neki točki prostora
+v dvodimenzionalni vektor,
+lahko preslikavo strnjeno zapišemo v matrični obliki:
+\boxeq{eq:02_31}{
+\left[\begin{array}{c}
+x_2\\
+\vartheta_2
+\end{array}\right] = 
+\left[\begin{array}{cc}
+A& B\\
+C&D
+\end{array}\right]
+\left[\begin{array}{c}
+x_1\\
+\vartheta_1
+\end{array}\right]
+= M \left[\begin{array}{c}
+x_1\\
+\vartheta_1
+\end{array}\right]\!\!.
+}
+Matriko $M$ imenujemo transformacijska oziroma prehodna matrika 
+vmesnega optičnega medija ali optičnega elementa. 
+
+\begin{example}
+\label{ex:ML}
+{\bf Matrika ABCD za premik v homogeni snovi s konstantnim lomnim količnikom.} 
+Prvi primer naj bo homogena snov, v kateri je lomni količnik konstanten in enak $n$. 
+V točki 1 pri $z_1$ naj bosta komponenti vektorja enaki $x_1$ in 
+$\vartheta_1$. Poiščimo vrednosti komponent vektorja, 
+če se premaknemo za $L$ vzdolž optične osi sistema do $z_2$ 
+(slika~\ref{fig:01_ABCD1}). 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/02_ABCD1.pdf_tex}
+\caption{K izračunu matrike ABCD za premik v homogeni snovi}
+\label{fig:01_ABCD1}
+\end{figure}
+
+Naklon žarka se pri premiku ne spremeni, zato ostane $\vartheta_2 = \vartheta_1$. Spremeni
+pa se odmik od optične osi, saj žarek potuje pod določenim kotom. 
+Vrednost $x_2$ zapišemo kot:
+\begin{equation}
+ x_2 = x_1 + (z_2-z_1)\vartheta_1 = x_1 + L\vartheta_1.
+\label{eq:02_32}
+\end{equation}
+Potem zapišemo sistem enačb:
+\begin{align}
+ x_2 =& 1\cdot x_1 + L\cdot \vartheta_1 \qquad \mathrm{in} \label{eq:02_33}\\
+ \vartheta_2 =& 0\cdot x_1 + 1\cdot \vartheta_1.
+ \label{eq:02_34}
+\end{align}
+Iz zapisa razberemo koeficiente matrike $M$ za homogeno snov dolžine $L$:
+\begin{equation}
+ M = \left[\begin{array}{cc}
+1& L\\
+0&1
+\end{array}\right]\!\!.
+ \label{eq:02_35}
+\end{equation}
+\end{example}
+
+\begin{example}
+\label{ex:Mmeja}
+{\bf Matrika ABCD za prehod skozi ravno mejo med dvema snovema.} Naj svetloba vpada na 
+mejo dveh snovi z različnima lomnima količnikoma $n_1$ in $n_2$. Za izračun 
+prehodne matrike izberemo dve točki na žarku: eno tik pred mejo in eno tik za njo. 
+Lega žarka se ob tem ne spremeni in $x_2 = x_1$. 
+Spremeni pa se naklon žarka. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/02_ABCD2.pdf_tex}
+\caption{K izračunu matrike ABCD za prehod skozi ravno mejo med dvema snovema}
+\label{fig:01_ABCD2}
+\end{figure}
+
+Za majhne naklone lahko lomni zakon
+(enačba~\ref{eq:lomnizakon}) razvijemo in dobimo:
+\begin{equation}
+n_1 \vartheta_1 = n_2 \vartheta_2.
+ \label{eq:02_36}
+\end{equation}
+Sistem enačb je potem:
+\begin{align}
+ x_2 =& 1\cdot x_1 + 0\cdot \vartheta_1 \qquad \mathrm{in} \label{eq:02_37}\\
+ \vartheta_2 =& 0\cdot x_1 + \frac{n_1}{n_2}\cdot \vartheta_1.
+ \label{eq:02_38}
+\end{align}
+Matrika $M$ za prehod skozi mejo med dvema snovema je:
+\begin{equation}
+ M = \left[\begin{array}{cc}
+1& 0\\
+0&\frac{n_1}{n_2}
+\end{array}\right]\!\!.
+\label{eq:02_39}
+\end{equation}
+\end{example}
+
+\begin{example}
+\label{ex:MUmeja}
+{\bf Matrika ABCD za prehod skozi ukrivljeno mejo med dvema snovema.} V prejšnjem 
+primeru je bila meja med snovema z lomnima količnikoma $n_1$ in $n_2$ ravna, zdaj pa 
+poglejmo še matriko za prehod skozi ukrivljeno mejo. Krivinski radij mejne ploskve
+naj bo $R$, pri čemer $R$ štejemo pozitivno, če je meja konveksna glede na smer
+naraščajočega $z$, in negativno, če je meja konkavna. Ponovno izberemo prvo točko
+tik pred mejo, drugo pa tik za mejo. To pomeni, da se oddaljenost od optične osi
+pri prehodu ohranja in $x_1 = x_2$. 
+
+Izračun naklona žarka po prehodu je malo bolj zapleten. Za zapis lomnega 
+zakona moramo namreč vpeljati kote glede na normalo na
+mejo. Vpadni kot je tako $\alpha = \vartheta_1 + \varphi$, lomni kot pa 
+$\beta = \vartheta_2 + \varphi$ (glej sliko~\ref{fig:01_ABCD3}).
+S slike razberemo, da velja zveza:
+\begin{equation}
+ \sin \varphi = \frac{x}{R} \approx \varphi,
+ \label{eq:02_40}
+\end{equation}
+pri čemer smo privzeli, da so žarki blizu optične osi. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/02_ABCD3.pdf_tex}
+\caption{K izračunu matrike ABCD za prehod skozi ukrivljeno mejo med dvema snovema}
+\label{fig:01_ABCD3}
+\end{figure}
+
+Zapišemo lomni zakon,
+pri čemer privzamemo, da so vsi koti majhni:
+\begin{equation}
+n_1 (\vartheta_1 + \varphi) = n_2 (\vartheta_2 + \varphi).
+\label{eq:02_41}
+\end{equation}
+Od tod izračunamo kot $\vartheta_2$:
+\begin{equation}
+ \vartheta_2 = \frac{n_1-n_2}{n_2}\varphi + \frac{n_1}{n_2} \vartheta_1.
+ \label{eq:02_42}
+ \end{equation}
+Če $\varphi$ izrazimo iz enačbe~(\ref{eq:02_40}), zapišemo transformacijo koordinat:
+\begin{align}
+ x_2 =& 1\cdot x_1 + 0\cdot \vartheta_1 \qquad \mathrm{in} \\
+ \vartheta_2 =& \frac{n_1-n_2}{n_2R}\cdot x_1 + \frac{n_1}{n_2}\cdot \vartheta_1.
+ \label{eq:02_43}
+\end{align}
+Razberemo matriko $M$ za prehod skozi ukrivljeno mejo med dvema snovema:
+\begin{equation}
+ M = \left[\begin{array}{cc}
+1& 0\\
+\frac{n_1-n_2}{n_2R}&\frac{n_1}{n_2}
+\end{array}\right]\!\!.
+ \label{eq:02_44}
+\end{equation}
+V limitnem primeru, ko gre $R \to \infty$, se matrika prevede na matriko za
+prehod skozi ravno mejo (glej primer~\ref{ex:Mmeja}).
+\end{example}
+
+Izračunajmo še determinanto izpeljanih matrik ABCD. Na splošno velja, da
+je determinanta matrike ABCD enaka razmerju lomnih količnikov začetne in 
+končne snovi. Če je lomni količnik snovi na koncu enak
+kot na začetku (primer~\ref{ex:ML}), je $\det(M) = 1$, v nasprotnem primeru 
+(primera~\ref{ex:Mmeja} in \ref{ex:MUmeja}) je $\det(M) = n_1/n_2$.
+
+Do zdaj smo obravnavali primere posameznih prehodov. Poglejmo, kako izračunamo
+prehodno matriko za primer, če svetloba potuje skozi več elementov zapored. V tem
+primeru se pokaže praktičnost zapisa z matrikami, saj ob prehodu svetlobe skozi 
+več elementov matrike za te elemente preprosto zmnožimo. Paziti moramo seveda
+na vrsti red: matriko za element, na katerega vpade svetloba najprej, zapišemo
+najbolj desno, to je najbliže vektorju, ki opisuje vpadno svetlobo. Celoten prehod
+spet opiše ena sama matrika:
+\begin{equation}
+\left[\begin{array}{c}
+x_N\\
+\vartheta_N
+\end{array}\right] 
+= \tilde{M} \left[\begin{array}{c}
+x_1\\
+\vartheta_1
+\end{array}\right]\!\!,
+ \label{eq:02_45}
+\end{equation}
+pri čemer je:
+\begin{equation}
+\tilde{M} = M_N \cdot M_{N-1}~...~M_2 \cdot M_1.
+ \label{eq:02_46}
+\end{equation}
+\begin{figure}[ht]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/02_MMM.pdf_tex}
+\caption{Prehod žarka skozi več optičnih elementov zapišemo kot produkt matrik posameznih prehodov.
+Pri tem moramo paziti na vrstni red zapisa matrik.}
+\label{fig:01_MMM}
+\end{figure}
+
+\section{Leče, zrcala}
+
+Nujno dodati poglavja klasične geometrijske optike.
+
+Leča? Poglejmo, kaj se zgodi s svetlobo ob prehodu skozi
+tanko lečo s krivinskima radijema ploskev $R_1$ in $R_2$. Z uporabo matrik ABCD zapišemo:
+
+Za primerjavo naredimo še prehod skozi lečo brez matrik(?, glej Strnad). 
+Debela leča, lečje. 
+
+Najpreprostejša optični element je zrcalo. Najprej z odbojem, potem z matriko?
+
+Hm, prizma? Ali je potrebna? Ne moremo je opisati z matrikami. Za disperzijo kasneje?
+
+\section{Optične naprave}
+mikroskop, daljnogled, spektroskop, oko, korekcijska očala. Kaj astronomskega? Nujno dodati.
+
+

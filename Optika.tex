@@ -1,0 +1,136 @@
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+\input{preamble}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\pdfsuppresswarningpagegroup=1
+\begin{document}                
+\let\cleardoublepage\clearpage
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+%--------------------------------------------------------------------------
+
+%	TITLE PAGE
+%--------------------------------------------------------------------------
+
+
+\begingroup
+\thispagestyle{empty}
+\centering
+\vspace*{5cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{OPTIKA}
+{\LARGE }\par % Book title
+\vspace*{1cm}
+{\LARGE Učno gradivo za študente \\ Fakultete za matematiko in fiziko
+\\ 
+Univerze v Ljubljani\\}\par % Author name
+\vspace*{1cm}
+{\LARGE \textcolor{red}{Delovna verzija}\\}\par
+\vspace*{8cm}
+{\Large Irena DREVENŠEK in Mojca VILFAN \\}\par % Author name
+\endgroup
+
+%--------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%-------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+% Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
+OPTIKA \\
+
+Irena Drevenšek in Mojca Vilfan\\
+{\it Fakulteta za matematiko in fiziko\\
+Univerza v Ljubljani}\\
+in\\
+{\it Institut ``Jožef Stefan'', Ljubljana}\\
+ 
+ Recenzija:  \\% Recenzent
+
+ Risbe in diagrami: \\ % Risbe in diagrami
+ 
+ Oblikovanje, postavitev in prelom: Mojca Vilfan \\ %Design
+
+ Besedilo je bilo jezikovno pregledano.\\
+ 
+ Naslovne slike poglavij: \\ % Fotografije
+
+ \textit{\textcopyright  
+Kopiranje in razmnoževanje besedila ali njegovih delov ter slik je 
+dovoljeno samo z odobritvijo avtorjev knjige.} \\% Printing/edition date
+
+ \textsc{Ljubljana, 2020}\\
+
+%-------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%--------------------------------------------------------------------
+
+%\chapterimage{Lit.jpg} % heading image
+
+\pagestyle{empty} % No headers
+
+\renewcommand\contentsname{Kazalo}
+\renewcommand{\bibname}{Bibliographie}
+\setcounter{tocdepth}{1}
+
+\tableofcontents% Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on 
+
+\pagestyle{fancy} % Print headers again
+
+
+%---------
+%	PREDGOVOR
+%-------------------------------------------------------------------------------
+
+%\chapterimage{slike/Nebo.jpg} % Chapter heading image
+
+\cleardoublepage
+\thispagestyle{empty}
+\mbox{}
+
+\chapter*{Predgovor}
+\vskip2truecm
+blabla
+
+Fizika v tej knjigi, razen zadnje poglavje, je optika izpred 1900, 
+to se pravi ne kvantna optika. Pomembno je, da novejša spoznanja
+s področja optike, to je po letu 1900, niso ovrgla obstoječih
+zakonov optike, ampak so samo izpostavila njihove omejitve in 
+določila meje njihove veljavnosti. 
+
+blabla
+
+\vspace{1em}
+
+Ljubljana, 2020+n
+
+\hfill Irena Drevenšek in Mojca Vilfan
+
+\cleardoublepage
+\thispagestyle{empty}
+\mbox{}
+\cleardoublepage
+
+
+\input{Chapter_01_Uvod}
+\input{Chapter_02_GeometrijskaOptika}
+\input{Chapter_03_ElektromagnetnoValovanje}
+\input{Chapter_04_LomOdboj}
+\input{Chapter_05_Uklon}
+\input{Chapter_06_Interferenca}
+\input{Chapter_07_Sipanje}
+\input{Chapter_08_Koherenca}
+\input{Chapter_09_Snov}
+\input{Chapter_10_AnizotropneSnovi}
+\input{Chapter_11_Laserji}
+\input{Chapter_12_Ucni_Listi}
+\printindex
+
+\end{document}

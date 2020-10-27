@@ -1,0 +1,1107 @@
+%\chapterimage{Geometrijska.jpg} % Chapter heading image
+
+\chapter{Odboj in lom}
+Dva izmed najosnovnejših optičnih pojavov sta odboj in lom valovanja, ki vpada na mejo
+dveh sredstev. V tem poglavju bomo podrobneje spoznali, kako se svetloba odbije in lomi ter
+kako se pri tem spremenita amplituda in faza valovanja. Opisali bomo totalni odboj,
+vpeljali Brewstrov kot in na koncu na hitro spoznali še odboj svetlobe na meji s kovino.
+
+\section{Robni pogoji na meji dveh dielektrikov}
+Že geometrijska optika pove, kako se svetloba na meji dveh sredstev odbija 
+in lomi. Vemo, da je odbojni kot enak vpadnemu (enačba~\ref{eq:odbojnizakon}), 
+smer lomljenega žarka pa je odvisna od lomnih količnikov snovi (enačba~\ref{eq:lomnizakon}). 
+Vendar geometrijska optika ne pove ničesar o amplitudah in fazah odbitega 
+in prepuščenega vala. Za to potrebujemo valovno obravnavo svetlobe. 
+
+Izhajamo iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), ki 
+opisujejo elektromagnetno valovanje v snovi. Za obravnavo prehoda
+skozi mejo dveh snovi potrebujemo še ustrezne robne pogoje. Zapišimo jih
+za mejo med snovema z lomnima količnikoma
+$n_1$ in $n_2$. Na meji naj ne bo električnih tokov ali površinskih nabojev. 
+V prvi snovi naj bo gostota električnega polja enaka $\mathbf{D}_1$, v drugi 
+pa $\mathbf{D}_2$.
+
+Zapišimo Gaussov zakon (enačba~\ref{eq:Maxwell3}) v integralni obliki:
+\beq
+\oint \mathbf{D}\cdot d\mathbf{S} = 0.
+\label{eq:04_01}
+\eeq
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/04_RP.pdf_tex}
+\caption{K izpeljavi robnih pogojev na meji dveh snovi. Prvi robni pogoj je ohranitev
+pravokotne komponente $\mathbf{D}$ (a), drugi pa ohranitev tangentne komponente 
+$\mathbf{E}$ (b).}
+\label{fig:04_RP}
+\end{figure}
+
+Sklenjena ploskev, po kateri integriramo, naj bo kvader z dvema stranicama
+vzporednima mejni ploskvi (slika~\ref{fig:04_RP}\,a). 
+Ko gre višina kvadra $h \to 0$, ostaneta le še dva prispevka k integralu:
+\beq
+\mathbf{D}_1 \cdot \mathbf{s}_0 + \mathbf{D}_2 \cdot (-\mathbf{s}_0) = 0,
+\label{eq:04_02}
+\eeq
+pri čemer vektor $\mathbf{s}_0 $ opisuje normalo na ploskev kvadra in hkrati
+tudi normalo na mejno ravnino. Sledi:
+\boxeq{eq:RPD}{
+\left( \mathbf{D}_2-\mathbf{D}_1 \right) \cdot \mathbf{s}_0 = 0 \qquad \mathrm{oziroma} \qquad
+D_{1\perp} = D_{2\perp}.
+}
+Pri prehodu skozi mejo dveh snovi se torej ohranja normalna komponenta gostote
+električnega polja. Povsem enak račun lahko naredimo za gostoto magnetnega polja, 
+če izhajamo iz enačbe:
+\beq
+\oint \mathbf{B}\cdot d\mathbf{S} = 0.
+\label{eq:04_03}
+\eeq
+Pri prehodu skozi mejo dveh snovi se tako ohranja normalna komponeneta
+gostote magnetnega polja:
+\boxeq{eq:RPB}{
+\left( \mathbf{B}_2-\mathbf{B}_1 \right) \cdot \mathbf{s}_0 = 0 \qquad 
+\mathrm{oziroma} \qquad B_{1\perp} = B_{2\perp}.
+}
+
+Naredimo zdaj še pravokotno zanko, ki leži v ravnini, pravokotni na mejo dveh 
+sredstev (slika~\ref{fig:04_RP}\,b). Zanko 
+lahko vedno izberemo tako, da leži v ravnini, ki jo tvorita vektorja normale na 
+mejo $\mathbf{s}_0$ in jakosti električnega polja $\mathbf{E}$. 
+Zapišemo Faradayev zakon (enačba~\ref{eq:Maxwell2}) v integralni obliki, pri 
+čemer integriramo po sklenjeni zanki:
+\beq
+\oint \mathbf{E}\cdot d\mathbf{l} = - \frac{\partial}{\partial t}\int \mathbf{B}\cdot d\mathbf{S}.
+\label{eq:04_04}
+\eeq
+Višino zanke naredimo kar se da majhno ($h \to 0$), zato ostaneta le še 
+integrala po zgornji in spodnji stranici:
+\beq
+\mathbf{E}_1 \cdot d\mathbf{l} - \mathbf{E}_2 \cdot d\mathbf{l} = 0.
+\label{eq:04_05}
+\eeq
+Ohranja se torej projekcija vektorja jakosti električnega polja na mejo. 
+Ker je vektor $d\mathbf{l}$ vzporeden z mejo, vektor $d\mathbf{s}_0$ pa 
+pravokoten nanjo, lahko zgornji izraz zapišemo kot:
+\boxeq{eq:RPE}{
+\left( \mathbf{E}_2-\mathbf{E}_1 \right) \times \mathbf{s}_0 = 0 \qquad \mathrm{oziroma} \qquad
+E_{1 \parallel} = E_{2 \parallel}.
+}
+Podobno izpeljemo tudi robni pogoj za ohranitev tangentne komponente
+jakosti magnetnega polja:
+\boxeq{eq:RPH}{
+\left( \mathbf{H}_2-\mathbf{H}_1 \right) \times \mathbf{s}_0 = 0 \qquad \mathrm{oziroma} \qquad
+H_{1\parallel} = H_{2\parallel}.
+}
+
+\section{Odbojni in lomni zakon}
+Zamislimo si ravno potujoče sinusno elektromagnetno valovanje, ki vpada na mejo dveh snovi
+z lomnima količnikoma $n_1$ in $n_2$. Vemo, da se vpadno valovanje razdeli na odbito in prepuščeno (lomljeno) valovanje. Zanima nas, kakšne lastnosti morata imeti odbito in prepuščeno valovanje, da zadostita robnim pogojem. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/04_lom.pdf_tex}
+\caption{K izpeljavi odboja in loma na meji dveh snovi (a). Pri odboju in lomu
+se ohranja komponenta valovnega vektorja, ki je vzporedna z mejno ploskvijo (b).}
+\label{fig:04_lom}
+\end{figure}
+
+Naj žarek svetlobe vpada na mejno ravnino pod kotom $\alpha$ glede na normalo na mejo (glej
+sliko~\ref{fig:04_lom}). Njegov valovni vektor naj bo $\mathbf{k}_i$, 
+krožna frekvenca $\omega_i$, faza $\delta_i$ in amplituda $\mathbf{E}_{0i}$. 
+Pripadajoče valovno število
+je $k_i = \omega_i n_1/c_0$. Vpadni val na splošno zapišemo kot:
+\beq
+\mathbf{E}_i = \mathbf{E}_{0i} e^{i\mathbf{k}_i\cdot \mathbf{r} - i \omega_i t + i \delta_i}.
+\label{eq:04_06}
+\eeq
+Podobno zapišemo odbiti val z valovnim vektorjem $\mathbf{k}_r$, 
+krožno frekvenco $\omega_r$, fazo $\delta_r$ in amplitudo $\mathbf{E}_{0r}$: 
+\beq
+\mathbf{E}_r = \mathbf{E}_{0r} e^{i\mathbf{k}_r\cdot \mathbf{r} - i \omega_r t + i \delta_r}
+\label{eq:04_07}
+\eeq
+in prepuščeni val z valovnim vektorjem $\mathbf{k}_t$, 
+krožno frekvenco $\omega_t$, fazo $\delta_t$ in amplitudo $\mathbf{E}_{0t}$:
+\beq
+\mathbf{E}_t = \mathbf{E}_{0t} e^{i\mathbf{k}_t\cdot \mathbf{r} - i \omega_i t + i \delta_t}.
+\label{eq:04_08}
+\eeq
+Mejo med snovema postavimo v ravnino $z=0$. Iz robnega pogoja za ohranitev tangentne
+komponente vektorja $\mathbf{E}$ (enačba~\ref{eq:RPE}) dobimo zvezo:
+\beq
+\mathbf{E}_{i\parallel} + \mathbf{E}_{r\parallel} = \mathbf{E}_{t\parallel},
+\label{eq:04_09}
+\eeq
+oziroma izpisano:
+\beq
+\mathbf{E}_{0i\parallel} e^{ik_{ix}x+ik_{iy}y - i \omega_i t + i \delta_i}+
+\mathbf{E}_{0r\parallel} e^{ik_{rx}x+ik_{ry}y - i \omega_r t + i \delta_r} =
+\mathbf{E}_{0t\parallel} e^{ik_{tx}x+ik_{ty}y - i \omega_i t + i \delta_t}.
+\label{eq:04_10}
+\eeq
+Pri tem smo upoštevali $z=0$. Zapisana zveza mora veljati 
+ob vseh časih $t$ in za vse vrednosti $x$ in $y$. Vzemimo najprej $x=y=0$ in $t=0$. 
+Od tod sledi, da so vse fazne enake in $\delta_i = \delta_r = \delta_t$.
+Drugi pogoj poglejmo pri $x=y=0$ in poljubnem času $t>0$. Robni pogoj 
+je izpolnjen le v primeru, da velja 
+\boxeq{eq:omegakonst}{
+\omega_i =
+\omega_r = \omega_t
+}
+in se torej frekvenca pri odboju in lomu ohranja. 
+
+Obravnavajmo zdaj primer $t=0$ pri poljubnem paru $x,y$ oziroma vektorju $\mathbf{r}$
+v mejni ravnini. Da bo lahko robni pogoj izpolnjen za vsak $\mathbf{r}$,
+mora veljati:
+\beq
+\mathbf{k}_i\cdot \mathbf{r} = \mathbf{k}_r\cdot \mathbf{r} = \mathbf{k}_t\cdot \mathbf{r} = \mathrm{konst.}
+\label{eq:04_11}
+\eeq
+Iz tega sledi, da so projekcije vseh treh valovnih vektorjev na mejno
+ravnino enake. Pomembnejša je ugotovitev, da ležijo valovni vektorji vpadnega, odbitega
+in lomljenega valovanja vedno v eni ravnini. Imenujemo jo vpadna ravnina. 
+
+Navadno izberemo, da je vpadna ravnina ravnina $xz$. Potem zapišemo 
+valovne vektorje vpadne, odbite in prepuščene svetobe kot:
+\begin{align}
+\mathbf{k}_i  =& \left( \sin\alpha, 0, \cos \alpha\right) \frac{\omega}{c_0} n_1, \label{eq:04_12}\\
+\mathbf{k}_r  =& \left( \sin\tilde{\alpha}, 0, -\cos \tilde{\alpha}\right) \frac{\omega}{c_0} n_1,\label{eq:04_13}\\
+\mathbf{k}_t  =& \left( \sin\beta, 0, \cos \beta\right) \frac{\omega}{c_0} n_2.\label{eq:04_14}
+\end{align}
+Pri tem smo poleg vpadnega kota $\alpha$ vpeljali še odbojni kot $\alpha'$ in lomni
+kot $\beta$. Iz enačbe~(\ref{eq:04_11}) neposredno sledi, da se mora ohranjati komponenta
+valovnega vektorja, ki je vzporedna z mejno ravnino:
+\beq
+k_{ix} = k_{rx} = k_{tx}.
+\label{eq:04_15}
+\eeq
+Najprej poglejmo prvo enakost ($k_{ix} = k_{rx}$). Vstavimo komponenti valovnih
+vektorjev (enačbi~\ref{eq:04_12} in \ref{eq:04_13}) in dobimo:
+\beq
+\frac{\omega}{c_0} n_1 \sin \alpha  =  \frac{\omega}{c_0} n_1 \sin\tilde{\alpha},
+\label{eq:04_16}
+\eeq
+od koder sledi odbojni zakon, ki pravi, da je odbojni kot enak vpadnemu:
+\boxeq{eq:odbojni}{
+\tilde\alpha = \alpha.
+}
+
+Poglejmo zdaj še drugo enakost ($k_{ix} = k_{tx}$). Vstavimo komponenti
+valovnih vektorjev (enačbi~\ref{eq:04_12} in \ref{eq:04_14}) in dobimo:
+\beq
+\frac{\omega}{c_0} n_1 \sin \alpha  = \frac{\omega}{c_0} n_2\sin\beta.
+\label{eq:04_17}
+\eeq
+Od tu sledi lomni zakon:
+\boxeq{eq:04_18}{
+n_1 \sin \alpha = n_2 \sin \beta.
+}
+
+Z odbojnim in lomnim zakonom smo izpolnili ujemanje faz v enačbi~(\ref{eq:04_10}). 
+Hribi in doline vpadnega, odbitega in prepuščenega valovanja vzdolž meje 
+potujejo enako hitro. Dodatno informacijo o valovanju dobimo, če
+uskladimo še amplitude jakosti električnih polj. Preden izpeljemo
+zveze, ki povezujejo razmerja med amplitudami, vpeljimo koordinatni sistem
+in se dogovorimo o oznaki polarizacij.
+
+Za obravnavo izberemo dve ortogonalni linearni polarizaciji, saj lahko potem
+poljubno polarizacijo sestavimo kot kombinacijo teh dveh.
+Mejna ravnina naj bo kot do zdaj ravnina $xy$, os $z$ pa naj bo obrnjena navzdol. 
+V prvem primeru naj bo jakost elektičnega polja
+vpadne, odbite in prepuščene svetlobe vzporedna z osjo $y$ in tako pravokotna
+na vpadno ravnino (slika~\ref{fig:04_tetm}\,a). 
+Tako valovanje imenujemo transverzalno električno (TE) valovanje. 
+V literaturi pogosto najdemo oznaki $s$ (kot {\it senkrecht}, pravokotno) ali $\sigma$.
+
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/04_tetm.pdf_tex}
+\caption{V primeru transverzalne električne (TE) polarizacije leži jakost
+električnega polja pravokotno na vpadno ravnino (a),
+pri transverzalni magnetni (TM) polarizaciji pa leži jakost električnega
+polja v vpadni ravnini (b).}
+\label{fig:04_tetm}
+\end{figure}
+
+V drugem primeru ležijo jakosti električnega polja v 
+vpadni ravnini (slika~\ref{fig:04_tetm}\,b), gostote magnetnega polja 
+pa so pravokotne na njih. To polarizacijo zato poimenujemo 
+transverzalna magnetna (TM) polarizacija. Uporabljajo se tudi oznake
+$p$ (kot {\it parallel}, vzporedno) ali $\pi$. 
+Omenjena primera bomo obravnavali ločeno, začenši s TE polarizacijo. V 
+obeh primerih se bomo omejili na izotropne in nemagnetne snovi ($\mu=1$).
+
+\section{Fresnelove enačbe za transverzalno električno valovanje}
+Osnovna zahteva na meji dveh snovi je izpolnjevanje robnih
+pogojev, po katerih se na meji ohranja tangentna komponenta jakosti električnega
+polja. Ker so vse tri jakosti vzporedne z osjo $y$, velja preprosta zveza:
+\beq
+E_{0i} + E_{0r}= E_{0t}
+\label{eq:04_19}
+\eeq
+Pri tem smo upoštevali, da je polje v prvi snovi superpozicija vpadnega in odbitega
+polja, v drugi snovi pa je samo prepuščeno valovanje. Drugi robni pogoj, ki zahteva
+ohranitev normalne komponente gostote električnega polja (enačba~\ref{eq:RPD}) je 
+vedno izpolnjen, saj je ta komponenta v obeh snoveh identično enaka nič. 
+Tretji robni pogoj (enačba~\ref{eq:RPH}) zahteva
+ohranitev tangentne komponente jakosti magnetnega polja. Privzamemo, da
+sta snovi nemagnetni $\mu=1$ in dobimo:
+\beq
+-B_{0i}\cos \alpha + B_{0r}\cos \alpha = -B_{0t}\cos \beta.
+\label{eq:04_20}
+\eeq
+Upoštevajoč zvezo med amplitudama električnega in magnetnega 
+polja $E_0 = B_0 c = B_0 c_0/n$  (enačba~\ref{eq:EBc}) zapišemo robni pogoj kot:
+\beq
+-E_{0i}n_1\cos \alpha + E_{0r}n_1\cos \alpha = -E_{0t}n_2\cos \beta,
+\label{eq:04_21}
+\eeq 
+oziroma:
+\beq
+n_1 E_{0i} \cos \alpha  -n_1 E_{0r}\cos \alpha = n_2 E_{0t}\cos \beta.
+\label{eq:04_22}
+\eeq
+Na koncu zapišemo še četrti robni pogoj, ohranitev normalne komponente
+gostote magnetnega polja (enačba~\ref{eq:RPB}):
+\beq
+B_{0i} \sin \alpha  + B_{0r}\sin \alpha = B_{0t}\sin \beta.
+\label{eq:04_23}
+\eeq
+Ponovno uporabimo zvezo med amplitudami (enačba~\ref{eq:EBc}) in dobimo:
+\beq
+n_1  \sin \alpha \left( E_{0i} + E_{0r} \right) = n_2 E_{0t} \sin \beta.
+\label{eq:04_24}
+\eeq
+Upoštevamo še lomni zakon (enačba~\ref{eq:04_18}) in dobimo:
+\beq
+E_{0i} + E_{0r} = E_{0t}.
+\label{eq:04_25}
+\eeq
+Ta pogoj je ekvivalenten prvemu pogoju (enačba~\ref{eq:04_19}). Iz robnih
+pogojev tako dobimo dve neodvisni enačbi (enačbi~\ref{eq:04_19} in \ref{eq:04_22}) 
+za tri neznake: $E_{0i}$, $E_{0r}$ in $E_{0t}$. Navadno izrazimo amplitudi
+odbitega in prepuščenega valovanja z amplitudo vpadnega valovanja in tako določimo 
+relativno amplitudo odbite in prepuščene svetlobe. Izračunajmo ju.
+
+Najprej pomnožimo enačbo~(\ref{eq:04_19}) z $n_2 \cos \beta$ in od nje odštejemo
+enačbo~(\ref{eq:04_22}). Dobimo:
+\beq
+\left( n_2 \cos \beta-n_1 \cos \alpha\right) E_{0i} + 
+\left( n_2 \cos \beta+n_1 \cos \alpha\right) E_{0r} = 0.
+\label{eq:04_26}
+\eeq
+Vpeljemo amplitudno odbojnost $r = E_{0r}/E_{0i}$ 
+kot razmerje odbite in vpadne amplitude valovanja. Iz enačbe~(\ref{eq:04_26}) sledi:
+\boxeq{eq:TEr}{
+r  = \frac{n_1 \cos \alpha - n_2 \cos \beta}
+{n_1 \cos \alpha + n_2 \cos \beta},
+}
+pri čemer $\alpha$ in $\beta$ označujeta vpadni in lomni kot. Izraz za $r$
+lahko z porabo lomnega zakona preoblikujemo:
+\beq
+r = \frac{\frac{n_1}{n_2} \cos \alpha - \cos \beta}{\frac{n_1}{n_2} \cos \alpha - \cos \beta} = 
+\frac{\frac{\sin \beta}{\sin \alpha} \cos \alpha - \cos \beta}
+{\frac{\sin \beta}{\sin \alpha} \cos \alpha - \cos \beta} = \frac{\sin \beta \cos \alpha -
+\cos \beta \sin \alpha}{\sin \beta \cos \alpha + \cos \beta \sin \alpha} = 
+-\frac{\sin (\alpha -\beta)}{\sin (\alpha + \beta)}.
+\label{eq:04_27}
+\eeq
+
+Izračunajmo še amplitudno prepustnost $t = E_{0t}/E_{0i}$, ki jo vpeljemo
+kot razmerje amplitud prepuščenega in vpadnega valovanja. Izhajamo
+iz prvega robnega pogoja (enačba~\ref{eq:04_19}) in zapišemo:
+\beq
+t = \frac{E_{0t}}{E_{0i}} = \frac{E_{0i} + E_{0r}}{E_{0i}} = 1+ r.
+\label{eq:04_28}
+\eeq
+Amplitudna prepustnost je tako:
+\boxeq{eq:TEt}{
+t = 1+r = \frac{2n_1\cos \alpha}{n_1 \cos \alpha + n_2 \cos \beta}.
+}
+
+\section{Fresnelove enačbe za transverzalno magnetno valovanje}
+Izračunajmo še amplitudno odbdojnost in prepustnost za 
+transverzalno magnetno polarizirano valovanje. Tudi v tem primeru začnemo
+z robnimi pogoji. Na meji dveh sredstev se ohranja tangentna 
+komponenta jakosti magnetnega polja (enačba~\ref{eq:RPH}):
+\beq
+H_{0i} + H_{0r}= H_{0t}.
+\label{eq:04_29}
+\eeq
+Privzamemo, da so snovi nemagnetne in velja: $\mu_1 = \mu_2 = 1$. Potem enačbo
+prepišemo v:
+\beq
+B_{0i} + B_{0r}= B_{0t}.
+\label{eq:04_30}
+\eeq
+Iz zveze med amplitudama električnega in magnetnega polja (enačba~\ref{eq:EBc})
+dobimo:
+\beq
+E_{0i}n_1 + E_{0r}n_1= E_{0t}n_2.
+\label{eq:04_31}
+\eeq
+Drugi robni pogoj (enačba~\ref{eq:RPB}), ki pravi, da se ob prehodu v drugo snov ohranja
+pravokotna komponenta gostote magnetnega polja, je prav tako izpolnjen, saj je $B_{\perp}=0$. 
+Iz tretjega robnega pogoja, ohranitve tangentne komponente jakosti
+električnega polja (enačba~\ref{eq:RPE}), sledi:
+\beq
+E_{0i} \cos \alpha - E_{0r}\cos \alpha = E_{0t}\cos \beta.
+\label{eq:04_32}
+\eeq
+Predznak jakosti električnega polja smo zapisali v skladu s sliko~\ref{fig:04_tetm}. 
+Za vajo lahko zapišemo še četrti robni pogoj, ki pomeni ohranitev normalne 
+komponenete gostote električnega polja $D_\perp$ (enačba~\ref{eq:RPD}):
+\beq
+D_{0i}\sin \alpha - D_{0r}\sin \alpha = D_{0t}\sin \beta.
+\label{eq:04_33}
+\eeq
+Upoštevamo, da je $D_0 = \varepsilon \varepsilon_0 E_0 = \varepsilon_0 n^2 E_0$ in
+zapišemo:
+\beq
+E_{0i} n_1^2 \sin \alpha - E_{0r} n_1^2 \sin \alpha  = 
+E_{0t} n_2^2 \sin \beta = E_{0t} n_1 n_2 \sin \alpha.
+\label{eq:04_34}
+\eeq
+Pri tem smo upoštevali lomni zakon. Po krajšanju dobimo enačbo, 
+ki je enaka prvemu robnemu pogoju in ne da nove informacije. 
+Ostaneta dve enačbi za tri neznanke in ponovno lahko
+izrazimo amplitudi odbite in prepuščene svetlobe z amplitudo vpadne. 
+Enačbo (\ref{eq:04_31}) pomnožimo s $\cos \beta$, enačbo~(\ref{eq:04_32}) pa z $n_2$:
+\begin{align}
+E_{0i} n_1 \cos \beta + E_{0r} n_1 \cos \beta  =& E_{0t} n_2 \cos \beta \label{eq:04_35} \\
+E_{0i} n_2 \cos \alpha - E_{0r} n_2 \cos \alpha  =& E_{0t} n_2 \cos \beta\label{eq:04_36}.
+\end{align}
+Enačbi odštejemo in dobimo:
+\beq
+E_{0i} \left(n_1 \cos \beta - n_2 \cos \alpha \right) + E_{0r} \left(n_1 \cos \beta + 
+n_2 \cos \alpha \right) = 0.
+\label{eq:04_37}
+\eeq
+Od tod izračunamo amplitudno odbojnost $r = E_{0r}/E_{0i}$, ki je 
+razmerje med odbito in vpadno amplitudo jakosti električnega polja:
+\boxeq{eq:TMr}{
+r = \frac{n_2 \cos \alpha - n_1 \cos \beta}{n_2 \cos \alpha + n_1 \cos \beta}.
+}
+Tudi ta izraz lahko predelamo z upoštevanjem lomnega zakona:
+\beq
+r = \frac{\frac{n_2}{n_1} \cos \alpha - \cos \beta}{\frac{n_2}{n_1} \cos \alpha - \cos \beta} = 
+\frac{\frac{\sin \alpha}{\sin \beta} \cos \alpha - \cos \beta}
+{\frac{\sin \alpha}{\sin \beta} \cos \alpha - \cos \beta} = 
+\frac{\sin \alpha \cos \alpha -\cos \beta \sin \beta}
+{\sin \alpha \cos \alpha + \cos \beta \sin \beta}.
+\label{eq:04_38}
+\eeq
+To lahko zapišemo z dvojnimi koti:
+\beq
+r = \frac{\sin(2\alpha) - \sin(2\beta)}{\sin(2\alpha) + \sin(2\beta)},
+\label{eq:04_39}
+\eeq
+nato pa razliko in vsoto sinusov zapišemo kot produkt in dobimo:
+\beq
+r = \frac{2\cos(\alpha+\beta )\sin(\alpha-\beta )}
+{2\sin(\alpha+\beta )\cos(\alpha-\beta )} = \frac{\tan(\alpha-\beta )}{\tan(\alpha+\beta )}.
+\label{eq:04_40}
+\eeq
+Amplitudno prepustnost $t = E_{0t}/E_{0i}$ 
+izračunamo iz enačbe~(\ref{eq:04_31}):
+\boxeq{eq:TMt}{
+t = \frac{n_1}{n_2}\left(1+r \right) = 
+\frac{2 n_1 \cos \alpha}{n_2 \cos \alpha + n_1 \cos \beta}.
+}
+
+\begin{example}{\bf Amplitudni odbojnost in prepustnost pri pravokotnem vpadu.} 
+Izračunali smo amplitudni odbojnosti $r$ in prepustnosti $t$ za obe med seboj 
+pravokotni polarizaciji TE in TM. Poglejmo zdaj najpreprostejši primer, pri katerem
+svetloba vpada pravokotno na mejo snovi. V tem primeru so vpadni, odbojni in 
+lomni kot enaki in $\alpha = \tilde{\alpha} = \beta = 0$. Za TE polarizacijo dobimo:
+\beq
+r_{\mathrm{TE}} = \frac{n_1 -n_2}{n_1+n_2} \qquad \mathrm{in} \qquad
+t_{\mathrm{TE}} = \frac{2n_1}{n_1+n_2},
+\label{eq:04_42}
+\eeq
+za TM polarizacijo pa:
+\beq
+r_{\mathrm{TM}} = \frac{n_2 -n_1}{n_2+n_1} \qquad \mathrm{in} \qquad
+t_{\mathrm{TM}} = \frac{2n_1}{n_1+n_2}.
+\label{eq:04_43}
+\eeq
+Ker je vpad pravokoten, pričakujemo enaka rezultata za obe polarizaciji, saj 
+polarizacij pri pravokotnem vpadu ne moremo ločiti med seboj. Rezultata za
+prepuščeno svetlobo sta res enaka, za odbito svetlobo pa se razlikujeta za predznak.
+Vzrok za to navidezno neenakost je v začetni izbiri smeri polarizacije 
+pri odboju (glej sliko~\ref{fig:04_tetm}).
+Odbojnost je z upoštevanjem privzete smeri tako enaka za obe polarizaciji 
+-- kar je seveda pravilno.
+\end{example}
+
+\section{Energijski tok pri odboju in lomu}
+V poskusih nas navadno zanima energijski tok valovanja. Gostoto energijskega
+toka na splošno zapišemo kot (enačba~\ref{eq:j}):
+\beq
+j = \frac{1}{2} \varepsilon_0^2 E_0^2 c_0 n.
+\label{eq:04_44}
+\eeq
+Odbojnost $\mathcal{R}$ vpeljemo kot razmerje med gostotama energijskih
+tokov odbite in vpadne svetlobe:
+\beq
+\mathcal{R} = \frac{j_r}{j_i} = \frac{\frac{1}{2}\varepsilon_0 E_{0r}^2 c_0 n_1}
+{\frac{1}{2}\varepsilon_0 E_{0i}^2 c_0 n_1} = \left(\frac{E_{0r}}{E_{0i}}\right)^2\!\!.
+\label{eq:04_45}
+\eeq
+V razmerju jakosti električnega polja prepoznamo amplitudno odbojnost in zapišemo:
+\boxeq{eq:TEMR}{
+\mathcal{R} = |r|^2.
+}
+Ker odbita in vpadna svetloba potujeta po isti snovi, je odbojnost kar 
+enaka kvadratu razmerja amplitud polj. 
+
+Izračunajmo še prepustnost $\mathcal{T}$, ki je razmerje med gostotama svetlobnih
+tokov prepuščene in vpadne svetlobe. Pri zapisu je treba biti pazljiv, saj je 
+treba upoštevati projekcijo povprečnega Poyntingovega vektorja. Zato zapišemo: 
+\beq
+\mathcal{T} = \frac{j_t}{j_i} = \frac{\frac{1}{2}\varepsilon_0 E_{0t}^2 c_0 n_2}
+{\frac{1}{2}\varepsilon_0 E_{0i}^2 c_0 n_1} \frac{\cos\beta}{\cos\alpha}= 
+\left(\frac{E_{0t}}{E_{0i}}\right)^2 \frac{n_2\cos\beta}{n_1\cos\alpha}.
+\label{eq:04_46}
+\eeq
+Prepustnost je torej enaka:
+\boxeq{eq:TEMT}{
+\mathcal{T} = |t|^2 \frac{n_2\cos\beta}{n_1\cos\alpha}.
+}
+
+Izračunajmo vsoto odbojnosti in prepustnosti na primeru TE polariziranega valovanja:
+\begin{align}
+\mathcal{R}+ \mathcal{T}=&
+\left(\frac{n_1 \cos \alpha - n_2 \cos \beta}{n_1 \cos \alpha + n_2 \cos \beta}\right)^2+
+\frac{4n_1n_2\cos \alpha \, \cos \beta}{\left(n_1 \cos \alpha + n_2 \cos \beta\right)^2}\\ =& 
+\frac{n_1^2 \cos^2\alpha + n_2^2\cos^2\beta -2 n_1n_2 \cos \alpha \cos \beta + 
+4n_1n_2\cos\alpha \cos \beta}{\left(n_1 \cos \alpha + n_2 \cos \beta\right)^2}\\ = &
+\frac{n_1^2 \cos^2\alpha + n_2^2\cos^2\beta +2 n_1n_2 \cos \alpha \cos \beta}
+{n_1^2 \cos^2\alpha + n_2^2\cos^2\beta +2 n_1n_2 
+\cos \alpha \cos \beta} = 1.
+\label{eq:04_47}
+\end{align}
+Če povzamemo:
+\boxeq{eq:TEMRT}{
+\mathcal{R}+\mathcal{T} = 1.
+}
+Rezultat je seveda pričakovan, saj opisuje ohranitev energije. Pogosto je najbolj
+priročno izračunati odbojnost, nato pa z uporabo enačbe~(\ref{eq:TEMRT})
+preprosto še prepustnost. 
+
+Opozorimo še enkrat, da je pri izračunu prepustnosti treba upoštevati tudi 
+spremembo lomnega količnika in kota širjenja svetlobe, zato:
+\beq
+|r|^2+ |t|^2 \neq 1.
+\label{eq:04_48}
+\eeq
+
+\begin{example}{\bf Odbojnost pri pravokotnem vpadu na steklo.} 
+Izračunajmo, kolikšna je odbojnost svetlobe, ki vpada pod pravim kotom iz zraka na
+steklo z lomnim količnikom $n_2=1,5$. Uporabimo enačbi~(\ref{eq:TEr}) in (\ref{eq:TEMR})
+in dobimo:
+\beq
+\mathcal{R} = \left(\frac{n_1-n_2}{n_1+n_2}\right)^2 \approx~4~\%.
+\label{eq:04_49}
+\eeq
+Ob pravokotnem vpadu na steklo se $4~\%$ svetlobe odbije, ostala 
+svetloba je prepuščena.
+\end{example}
+
+\section{Prehod v optično gostejšo snov}
+Najprej si oglejmo prehajanje svetlobe iz snovi z manjšim lomnim
+količnikom v snov z večjim lomni količnikom ($n_1<n_2$). To je na primer
+primer odboja in loma pri vpadu svetlobe iz zraka v vodo ali steklo. 
+
+Narišimo najprej amplitudno odbojnost in prepustnost za TE polarizacijo v odvisnosti
+od vpadnega kota (slika~\ref{fig:04_redte}\,a). 
+Iz enačbe~(\ref{eq:TEr}) sledi, da je amplitudna odbojnost $r_\mathrm{TE}$
+za vse kote negativna. Njena velikost se zvezno spreminja od začetne vrednosti
+pri pravokotnem vpadu do vrednosti $-1$, ko se vpadni kot približuje $90\si{\degree}$.
+Negativni predznak pri kotu $\alpha =0$ pomeni, da se svetloba pri 
+pravokotnem vpadu na optično gostejše sredstvo vedno odbije z nasprotno fazo, ne 
+glede na njeno polarizacijo.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/04_redte.pdf_tex}
+\caption{nknl}
+\label{fig:04_redte}
+\end{figure}
+
+Amplitudna prepustnost $t_\mathrm{TE}$, ki jo izračunamo kot $t=r+1$, je za vse
+vpadne kote pozitivna in pojema od največje vrednosti pri pravokotnem vpadu
+do vrednosti $0$, ko se vpadni kot približuje $90\si{\degree}$. 
+Odbojnost $\mathcal{R}_\mathrm{TE}$, ki jo izračunamo kot kvadrat amplitudne odbojnosti,
+je prikazana na sliki~\ref{fig:04_redte}\,b. Vrednost je po pričakovanju 
+vedno pozitivna in narašča od neke začetne vrednosti pri pravokotnem
+vpadu do vrednosti $1$, ko se vpadi kot približuje $90\si{\degree}$. Prepustnost
+$\mathcal{R}_\mathrm{TE}$ izračunamo po enačbi $\mathcal{T} = 1 -\mathcal{R}$. 
+
+Poglejmo še primer transverzalne magnetne polarizacije. Narišemo odvisnost
+$r$ in $t$ od vpadnega kota (slika~\ref{fig:04_redtm}\,a). Zaradi začetne 
+izbire smeri odbite jakosti električnega polja je predznak pri pravokotnem vpadu drugačen kot pri 
+polarizaciji TE in je pozitiven. Z naraščajočim vpadnim kotom se amplitudna
+odbojnost zmanjšuje in doseže vrednost $r=-1$ ko se vpadni kot
+približuje $\alpha = 90\si{\degree}$. Vidimo, da pri nekem kotu zavzame  
+vrednost $r = 0$. Pri tem kotu, imenujemo ga Brewstrov kot $\alpha_B$, 
+je odbojnost za TM polarizacijo enaka nič. To ima pomembno in uporabno
+posledico, da je celotno TM polarizirano valovanje pri Brewstrovem kotu prepuščeno. 
+Ker amplitudna odbojnost pri Brewstrovem kotu zamenja predznak, se pri tem
+kotu tudi spremeni faza odbite svetlobe. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/04_redtm.pdf_tex}
+\caption{nknl}
+\label{fig:04_redtm}
+\end{figure}
+
+Odbojnost in prepustnost TM polariziranega valovanja sta prikazani na 
+sliki~\ref{fig:04_redtm}\,b. Odbojnost od začetne vrednosti pri $\alpha=0$
+pojema z naraščajočim vpadnim kotom do vrednosti 0, ki jo doseže pri 
+Brewstrovem vpadnem kotu $\alpha_B$. Nato odbojnost strmo naraste z naraščajočim vpadnim
+kotom do vrednosti 1. Prepustnost je enaka $\mathcal{T} = 1- \mathcal{R}$.
+
+\subsection*{Brewstrov kot}
+Brewstrov kot smo vpeljali kot kot, pri katerem je odbojnost
+TM polariziranega valovanja enaka nič. Poglejmo, pri katerem
+vpadnem kotu se to zgodi. Amplitudna odbojnost $r$ je po enačbi~(\ref{eq:04_40})
+enaka:
+\beq
+r = \frac{\tan(\alpha-\beta)}{\tan(\alpha+\beta)}.
+\label{eq:04_50}
+\eeq
+Pri vrednosti $\alpha + \beta = \pi/2$ imenovalec v izrazu za $r$ 
+naraste v neskončnost. Števec je vedno različen od nič, saj
+sta po lomnem zakonu vpadni in lomljeni kot vedno različna. Posledično
+je pri vrednosti $\alpha + \beta = \pi/2$ odbojnost enaka nič.
+Ob tem pogoju lahko zapišemo $\cos \alpha = \sin \beta$. Iz lomnega 
+zakona sledi:
+\beq
+n_1 \sin \alpha = n_2 \sin \beta = n_2 \cos \alpha.
+\label{eq:04_51}
+\eeq
+Od tod seledi, da za Brewstrov kot velja:
+\boxeq{eq:Brewstrovkot}{
+\tan \alpha_B = \frac{n_2}{n_1}.
+}
+Pri prehodu zrak/steklo je $\alpha_B = 56,3\si{\degree}$ in na meji
+steklo/zrak $\alpha_B = 33,6\si{\degree}$. 
+
+Zaradi tega pojava je odbojnost za TM polarizirano valovanje pri
+večjih vpadnih kotih dosti manjša kot za TE polarizirano valovanje. 
+Kadar osvetljujemo mejno ploskev z nepolarizirano svetlobo, se 
+pri kotu $\alpha_B$ od mejne ploskve odbije samo TE polarizirano
+valovanje, TM pa je v celoti prepuščeno. Na ta preprost način
+dobimo iz nepolarizirane svetlobe linearno polarizirano. 
+
+To s pridom uporabljamo pri polarizacijskih sončnih očalih. Ker
+se od bleščeče površine, na primer morske gladine, snežene pokrajine
+ali gladke ceste, odbije razmero malo TM polariziranega valovanja, 
+je odbita svetloba pretežno TE linearno polarizirana. Če sončna
+očala delujejo kot polarizator, ki TE polarizirane svetlobe
+ne prepušča, je prepuščene zelo malo odbite svetlobe.
+
+\begin{remark}
+Odstonost odboja pri Brewsterjevem kotu lahko pojasnimo tudi z mikroskopsko
+sliko. Električni dipoli, ki sevajo odbito svetlobo, ne sevdajo v smeri
+dipola. To je ravno v smeri pravokotno na smer vpadne svetlobe, zato 
+pri pogoju $\alpha + \beta$ ni izsevane svetlobe.
+\end{remark}
+
+\section{Prehod v optično redkejšo snov}
+Pri prehodu v snov z manjšim lomnim količnikom pride do novih zanimivih pojavov.
+Primer tega je prehod svetlobe iz vode ali stekla v zrak, ko je $n_1>n_2$.
+Če izhajamo iz lomnega zakona in zapišemo lomni kot:
+\beq
+\beta = \arcsin \left(\frac{n_1}{n_2}\sin \alpha\right),
+\label{eq:04_52}
+\eeq
+vidimo, da pri določeni vrednosti argument doseže vrednost $1$ in lomni kot
+$\beta = 90\si{\degree}$. Za večje
+vpadne kote $\alpha$ enačba nima več rešitve. Takrat govorimo o totalnem 
+ali popolnem odboju. Mejni kot totalnega odboja izračunamo kot:
+\boxeq{eq:totalni}{
+\alpha_m = \arcsin\left(\frac{n_2}{n_1}\right).
+}
+V steklu z lomnim količnikom $n_1=1,5$ je mejni kot totalnega odboja
+enak $\alpha_m = 41,8\si{\degree}$, v vodi z lomnim količnikom 
+$n_1 = 1,33$ pa $\alpha_m = 48,7\si{\degree}$.
+
+Izračunajmo odbojnost in prepustnost najprej za TE polarizacijo.
+Po enačbi~(\ref{eq:TEMr}) je:
+\beq
+r = \frac{n_1 \cos \alpha - n_2 \sqrt{1 - (\sin \alpha n_1/n_2)^2}}
+{n_1 \cos \alpha + n_2 \sqrt{1 - (\sin \alpha n_1/n_2)^2}}.
+\eeq
+Za vrednosti vpadnega kota $\alpha > \alpha_m$ je argument korena
+negativen, zato postane člen imaginaren. Zapišimo:
+\beq
+r = \frac{n_1 \cos \alpha - i \kappa}{n_1 \cos \alpha + i \kappa},
+\eeq
+pri čemer je:
+\beq
+\kappa = n_2 \sqrt{\left(\frac{n_1}{n_2}\sin \alpha \right)^2-1}  = 
+n_2 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2 -1}.
+\eeq
+Potem izračunamo odbojnost $\mathcal{R}$:
+\beq
+\mathcal{R} = |r|^2 = \frac{n_1 \cos \alpha -i \kappa}{n_1 \cos \alpha -i \kappa}
+\cdot \frac{n_1 \cos \alpha +i \kappa}{n_1 \cos \alpha -i \kappa} = 1.
+\eeq
+Pri vpadnih kotih, ki so večji od mejnega kota totalnega odboja, se torej 
+vsa vpadna svetloba odbije $\mathcal{R} = 1$, pri čemer velja
+odbojni zakon. 
+
+Narišimo zdaj amplitudni odbojnost in prepustnost za TE valovanje. Ker je 
+$n_1>n_2$, je amplitudna odbojnost pri pravokotnem vpadu pozitivna. Njena
+vrednost z naraščajočim vpadnim kotom narašča do mejnega kota totalnega
+odboja, pri katerem naraste do $r=1$. Prepustnost, ki jo izračunamo
+kot $t = 1+r$, zavzame zato pri pravokotnem vpadu vrednost nekaj nad 1,
+nato pa narašča do vrednosti $t=2$, ki jo doseže pri mejnem kotu totalnega
+odboja. To, da je prepustnost večja od 1, nas ne sme motiti, saj gre
+razmerje med amplitudami valovanja in ne med energijskimi tokovi.
+
+Na sliki je prikazana še odbojnost $\mathcal{R}$, ki homogeno
+narašča od neke začetne vrednosti do $1$ pri mejnem kotu totalnega 
+odboja. Vrednost $\mathcal{R} = 1$ ostaja za vse kote, večje
+od mejnega kota. 
+
+Za TM polarizacijo amplitudna prepustnost, ki homogeno
+narašča od začetne negativne vrenosti do 1 pri mejnem
+kotu totalnega odboja, pri Brewstrovem kotu zavzame vrednost 0. 
+Tako sta pri prehodu TM polariziranega valovanja v optično redkejšo
+snov pomembna dva kota: Brewstrov kot in mejni kot totalnega odboja.
+Pri enem je odbojnost enaka nič, pri drugem pa 1. 
+
+\section{Evanescento polje in Goos-Hanchen pojav}
+V prejšnjem razdelku smo spoznali totalni odboj, do katerega
+pride pri prehodu snovi iz optično gostejše v optično redkejšo 
+snov. Odbojnost je pri kotih, ki so večji od mejnega kota
+je enaka 1. Poglejmo pojav podrobneje.
+
+Naj svetloba vpada na ravno mejo dveh neprevodnih, homogenih 
+in izotropnih snovi, za kateri velja $n_1>n_2$.
+Za prepuščeno svetlobo velja lomni zakon:
+\beq
+n_1 \sin \alpha = n_2 \sin \beta.
+\eeq
+Ko doseže lomljeni kot največjo možno vrednost $\beta = 90\si{\degree}$,
+pride do totalnega odboja. Za mejni vpadni kot $\alpha$ velja:
+\beq
+\sin \alpha_m = \frac{n_2}{n_1},
+\eeq
+za lomljenega $\beta$ pa:
+\beq
+\cos \beta  = \sqrt{1 - \left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2}
+\eeq
+Za vrednosti $\alpha > \alpha_m$ postane vrednost pod korenom
+negativna in koren kompleksen. Zapišemo:
+\beq
+\cos \beta = i \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1} = i\kappa.
+\eeq
+
+Amplitudni odbojnosti za obe polarizaciji zapišemo kot:
+\beq
+r_{\mathrm{TE}} = \frac{n_1 \cos \alpha - i n_2 \kappa}
+{n_1 \cos \alpha + i n_2 \kappa} \qquad \mathrm{in} \qquad
+r_{\mathrm{TM}} = \frac{n_2 \cos \alpha - i n_1 \kappa}
+{n_2 \cos \alpha + i n_1 \kappa}.
+\eeq
+Amplitudni odbojnosti za različni polarizaciji nista enaki.
+
+Omejimo se na primer TE polariziranega valovanja. Valovni
+vektor prepuščenega valovanja je enak:
+\beq
+\mathbf{k}_t = k_0 n_2 \left( \sin \beta, 0, \cos \beta \right) = 
+\left( k_0 n_2 \sin \beta, 0, k_0 n_2 \cos \beta \right) = 
+\left( k_0 n_1 \sin \alpha, 0, i k_0 n_2 \kappa \right).
+\eeq
+Prva komponenta, ki je vzporedna z mejno ravnino, se vedno ohranja,
+tretja komponenta pa pri velikih vpadnih kotih postane imaginarna.
+Prepuščeno valovanje v drugi snovi kot zapišemo kot:
+\begin{align}
+\mathbf{E}_t =& \mathbf{E}_{0t} e^{i k_0 n_2 \sin \beta x}
+ e^{i k_0 n_2 \cos \beta z} e^{-i \omega t} \\
+ =& \mathbf{e}_{y} E_{0t}  e^{i k_0 n_1 \sin \alpha x}
+ e^{-i \omega t} e^{i k_0 n_2 (i\kappa) z} \\
+ =& \mathbf{e}_{y} E_{0t}  e^{i k_0 n_1 \sin \alpha x}
+ e^{-i \omega t} e^{- \varkappa z},
+\end{align}
+pri čemer smo vpeljali $\varkappa = k_0 n_2 \kappa$.
+
+Amplituda jakosti električnega polja torej pojema eksponentno
+z oddaljenostjo od mejne ploskve. Temu eksponentno pojemajočemu
+polju v snovi z manjšim lomnim količnikom pravimo evanescnetno polje 
+oziroma evanescentno valovanje. Jakost električnega polja zapišemo kot:
+\beq
+\mathbf{E}_t = \mathbf{e}_{y} E_{0t} e^{- \varkappa z}
+\cos \left( k_0 n_1 \sin \alpha x-i \omega t\right). 
+\eeq
+Valovne fronte torej potujejo v smeri $x$, amplituda pa pojema
+eksponentno v smeri $z$. 
+
+Odbito polje je potem enako vpadnemu, le smer $k_z$ se spremeni. 
+Celotno polje v snovi 1 potem zapišemo kot:
+\begin{align}
+\mathbf{E}_1 =& \mathbf{e}_{y} E_{0i} e^{ik_x x}e^{ik_z z -i \omega t} +
+\mathbf{e}_{y} E_{0r} e^{ik_x x}e^{-ik_z z -i \omega t} \\
+=& \mathbf{e}_{y} E_{0} \left(
+e^{ik_0n_1\sin \alpha x}e^{ik_0n_1\cos \alpha z}+
+e^{ik_0n_1\sin \alpha x}e^{-ik_0n_1\cos \alpha z}\right) e^{-i \omega t} \\
+=& \mathbf{e}_{y} E_{0} e^{ik_0n_1\sin \alpha x-i\omega t} 2 
+\cos \left(k_0 n_1\cos \alpha z\right).
+\end{align}
+Potem zapišemo realni del jakosti električnega polja v prvi snovi:
+\boxeq{eq:ev1}{
+\mathbf{E}_1 = 2 \mathbf{e}_{y} E_{0} 
+\cos \left(k_0 n_1\cos \alpha z\right)\cdot 
+\cos \left(k_0 n_1\sin \alpha x-\omega t\right)
+}
+in v drugi snovi:
+\boxeq{eq:ev1}{
+\mathbf{E}_2 = 2 \mathbf{e}_{y} E_{0} 
+e^{-\kappa z} 
+\cos \left(k_0 n_1\sin \alpha x-\omega t\right).
+}
+V prvi snovi se pojavi torej interferenčno modulirano polje v smeri osi $z$,
+valovne fronte pa se širijo v smeri osi $x$.  V drugi snovi pa imamo
+evanescentno polje, pri katerem valovne fronte potujejo v smeri osi $x$, 
+amplituda polja pa pojema eksponentno v smeri $z$.
+
+\begin{remark}
+V resnici se vpadno in odbojno polje razlikujeta za več kot samo 
+za predznak komponente valovnega vektorja. Pri odboju pride
+namreč tudi do faznega zamika glede na vpadno polje, tako da je 
+na splošno treba pri argumentu kosinusa  dodati fazni zamik.
+\end{remark}
+
+Izračunajmo še Poyntingov vektor v snoveh 1 in 2. Račun pokaže, da 
+ima v obeh snoveh Poyntingov vektor samo komponento vzdolž osi $x$. 
+To pomeni, da energija potuje zdolž osi $x$, vzdolž osi $z$ pa ne. 
+
+\begin{exercise}
+Izračunajmo Poyntingov vektor v snovi 2. 
+Najprej zapišemo jakost električnega polja:
+\beq
+\mathbf{E} = \left(0, E_{0t} e^{ik_xx-i\omega t}e^{-\varkappa z}, 0\right)
+ = \left(0,1,0\right) E_{0t} e^{ik_xx-i\omega t-\varkappa z},
+\eeq
+pri čemer je $E_{0t} = 2E_{0i} = E_0$.
+Iz Maxwellove enačbe:
+\beq
+\nabla \times \mathbf{E} = - \frac{\partial B}{\partial t} = -\mu_0 
+\frac{\partial \mathbf{H}}{\partial t} = \mu i \omega \mathbf{H}
+\eeq
+izpeljemo vektor jakosti magnetnega polja:
+\beq
+\mathbf{H} = \frac{-iE_{0t}}{\mu \omega} \left|
+\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+0&e^{ik_xx-i\omega t-\varkappa z}& 0 \\
+\end{array}
+\right|.
+\eeq
+Sledi:
+\beq
+\mathbf{H} =
+\frac{-iE_{0t}}{\mu \omega} \left( -\varkappa  e^{ik_xx-i\omega t-\varkappa z}, 0, 
+ik_x e^{ik_xx-i\omega t-\varkappa z}\right) = 
+\frac{E_{0t}}{\mu \omega} e^{ik_xx-i\omega t-\varkappa z} \left(i\varkappa, 0, k_x \right).
+\eeq
+iz tega lahko izračunamo Poyntingov vektor:
+\beq
+\mathbf{S} = \mathbf{E}\times \mathbf{H}^* = \frac{E_{0t} e^{-2\varkappa z }}{\mu_0 \omega} 
+\left( (0,1,0) \times (i\varkappa, 0, k_x)\right) = 
+\frac{E_{0t} e^{-2\varkappa z }}{\mu_0 \omega} \left( k_x, 0, -i\varkappa \right).
+\eeq
+Vidimo, da je $z$ komponenta Poyntingovega vektorja imaginarna. To pomeni, 
+da se svetloba v smeri $z$ ne razširja. 
+
+Mogoče je pojav razumljivejši, če zapišemo vektorje v realni obliki. Jakost električnega
+polja zapišemo kot:
+\beq
+\mathbf{E} = E_{0t} \left(0,1,0\right) e^{-\varkappa z} \cos(k_xx-\omega t).
+\eeq
+Jakost magnetnega polja izračunamo iz Maxwellove enačbe:
+\beq
+\nabla \times \mathbf{E} = -\mu_0 \frac{\partial \mathbf{H}}{\partial t}.
+\eeq
+Najprej izračunamo levo stran enačbe:
+\beq
+\nabla \times \mathbf{E} = \left|
+\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+0&E_{0t}e^{-\varkappa z} \cos \left(k_xx-\omega t\right)& 0 \\
+\end{array}
+\right| = \left[
+\begin{array}{c}
+-\varkappa E_{0t} e^{-\varkappa z} \cos \left(k_xx-\omega t\right) \\
+0\\
+-k_x E_{0t} e^{-\varkappa z} \sin \left(k_xx-\omega t\right)\\
+\end{array}
+\right]
+\eeq
+Sledi:
+\beq
+\frac{\partial \mathbf{H}}{\partial t} = \frac{-1}{\mu_0} \left[
+\begin{array}{c}
+-\varkappa E_{0t} e^{-\varkappa z} \cos \left(k_xx-\omega t\right) \\
+0\\
+-k_x E_{0t} e^{-\varkappa z} \sin \left(k_xx-\omega t\right)\\
+\end{array}
+\right]
+\eeq
+in 
+\beq
+\mathbf{H} = \frac{E_{0t}}{\mu_0} \left[
+\begin{array}{c}
+\varkappa e^{-\varkappa z} \int \cos \left(k_xx-\omega t\right) dt\\
+0\\
+k_x e^{-\varkappa z} \int\sin \left(k_xx-\omega t\right) dt\\
+\end{array}
+\right] = 
+\frac{E_{0t}}{\mu_0} \left[
+\begin{array}{c}
+\frac{\varkappa}{\omega} e^{-\varkappa z} \sin \left(k_xx-\omega t\right)\\
+0\\
+\frac{k_x}{\omega} e^{-\varkappa z} \cos \left(k_xx-\omega t\right) dt\\
+\end{array}
+\right].
+\eeq
+Zdaj lahko izračunamo Poyntingov vektor:
+\beq
+\mathbf{S} = \mathbf{E} \times \mathbf{H} = 
+E_{0t}e^{-\varkappa z} \left[ \begin{array}{c}
+                        0\\
+                        \cos(k_xx-\omega t)\\
+                        0 \\
+                       \end{array}\right]
+\times
+\frac{E_{0t}}{\mu_0\omega}e^{-\varkappa z}\left[
+\begin{array}{c}
+\frac{\varkappa}{\omega} e^{-\varkappa z} \sin \left(k_xx-\omega t\right)\\
+0\\
+\frac{k_x}{\omega} e^{-\varkappa z} \cos \left(k_xx-\omega t\right) \\
+\end{array}
+\right]
+= \frac{E_{0t}^2}{\mu_0\omega}e^{-2\varkappa z}\left[
+\begin{array}{c}
+k_x\cos^2 \left(k_xx-\omega t\right)\\
+0\\
+\varkappa \sin \left(k_xx-\omega t\right) \cos \left(k_xx-\omega t\right)\\
+\end{array}
+\right].
+\eeq
+Pri energijskem toku na zanima časovno povprečje Poyntingovega vektorja:
+\beq
+\langle \mathbf{S}\rangle = \frac{E_{0t}^2}{\mu_0\omega}e^{-2\varkappa z}\left[
+\begin{array}{c}
+k_x/2\\
+0\\
+0\\
+\end{array}
+\right].
+\eeq
+Iz zapisanega vidimo, da je energijski tok v zmeri $z$ enak nič - pravokotno na mejno 
+ploskev se torej energija ne prenaša. 
+
+Kaj pa v smeri vzporedno z mejno ploskvijo? Izračunana komponenta Poyntingovega vektorja je:
+\beq
+\langle \mathbf{S}_x\rangle = \frac{E_{0t}^2}{2\mu_0\omega}e^{-2\varkappa z}k_0 n_1\sin \alpha,
+\eeq
+pri čemer smo upoštevali, da je $k_x = k_0 n_1 \sin \alpha$. Če izraz pomnožimo v števcu in imenovalcu 
+z $\varepsilon_0$ in upoštevamo izraz za svetlobno hitrost, dobimo:
+\beq
+\langle \mathbf{S}_x\rangle = \frac{1}{2}\varepsilon_0 E_{0t}^2 e^{-2\varkappa z} c_0 n_1 \sin \alpha.
+\eeq
+Dobili smo izraz za gostoto svetlobnega toka, ki pa je pomnožen s faktorjem $\sin \alpha$ in seveda eksponentno
+pojemajočim delom $\exp(-\varkappa z)$. 
+
+Poyntingov vektor lahko izračunamo tudi v snovi 1. Vidimo, da ima pri $z=0$ enako vrednost. Tudi v snovi 1 je
+različno od nič le povprečje komponente $x$, povprečje komponente v smeri $z$ pa je enako nič. Za razliko
+od snovi 2, kjer intenziteta pojema eksponentno, se v snovi 1 intenziteta spreminja oscilatorno. 
+\end{exercise}
+
+Izračunajmo še vdorno globino $d_v$ evanescentnega polja v snovi 2. Vpeljemo jo kot inverz 
+parametra $\varkappa$. Spomnimo se, da smo parameter $\varkappa$ vpeljali kot (enačba~):
+\beq
+\varkappa = k_0 n_2 \kappa = k_0 n_2 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}.
+\eeq
+Vdorna globina je potem:
+\beq
+d_v = \frac{1}{\varkappa} = \frac{\lambda_0}{2 \pi n_2 }\frac{1}{\sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}}=
+\frac{\lambda_0}{2\pi}\frac{1}{\sqrt{n_1^2\sin ^2\alpha - n_2^2}}.
+\eeq
+Pri $\alpha = \alpha_m$ se vdorna globina povečuje proti neskončnosti. Pri $\alpha \to \pi/2$ pa vdorna
+globina pade na vrednost $d_v = \lambda_0/2\pi NA$, pri čemer je $NA = \sqrt{n_1^2-n_2^2}$ numerična odprtina
+ali numerična apertura. 
+
+\subsection*{Frustrirani totalni odboj}
+Če je pri totalnem odboju debela snovi 2 majhna, lahko pride to tuneliranja svetlobe iz snovi 1 v snov 3. To je 
+še zlasti opazno, kadar je debelina snovi 2 po velikosti primerljiva z vdorno globino evanescentnega polja. Takrat
+znaten delež vpadne svetlobe preide v snov 3. Prepustnost takega ``tunela'' za svetlobo spreminjamo
+z debelino ``prepovedane plasti'' oziroma debelino reže med snovema 1 in 3. 
+
+Primer aplikacije: čitalec prstih odtisov. Totalni odboj je močno odvisen od širine zračne reže med steklom
+in prstom. Ker se ta razdalja spreminja zaradi vzorca prstnega odtisa, se to pozna na vzorcu odbite svetlobe. 
+
+\section{Faza pri totalnem odboju}
+Poglejmo, da se zgodi s fazo odbite svetlobe. Pri navadnem odboju, pri katerem sta koeficienta
+amplitudne odbojnost za obe polarizaciji realna, ni težav. Pogledati moramo samo predznak $r$ in vidimo,
+da se faza pri pravokotnem odboju na optično gostejšem sredstvu spremeni za $\pi$, faza pri odboju v optično
+redkejšo snov pa ostane enaka. To bo imelo pomembne posledice pri računu odboja svetlobe in 
+interference svetlobe na tankih plasteh (poglavje..). 
+
+Zanimivejša je faza pri totalnem odboju. V prejšnjem razdelku smo spoznali, da atenuacijski koeficient
+$\varkappa$ nastopa v izrazi kot parameter, ki določa vdorno globino polja v snovi 2. Njegova vrednost
+je odvisna od vpadnega kota in tudi od polarizacije vpadnega valovanja:
+\beq
+\varkappa_{\mathrm{TE}}= k_0 n_2 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1} 
+\qquad \mathrm{in}\qquad
+\varkappa_{\mathrm{TM}}= k_0 n_1 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}.
+\eeq
+Ker polje vdira v snov 2, pri oboju doživi fazni zamik, ki je odvisen od kota $\alpha$. Ta fazni
+zamik je pole tega odvisen tudi od polarizacije svetlobe. 
+
+Goos-Hanchen pojav. 
+
+Izračunajmo najprej fazo za TE polarizirano valovanje: 
+\beq
+r = \frac{n_1 \cos \alpha - i n_2 \kappa}{n_1 \cos \alpha + i n_2 \kappa} = 
+\frac{\sqrt{n_1^2\cos^2 \alpha + n_2^2 \kappa^2}e^{-i\Phi}}{\sqrt{n_1^2\cos^2 \alpha + n_2^2 \kappa^2}e^{+i\Phi}}
+= e^{-2i\Phi},
+\eeq
+pri čemer je:
+\beq
+\Phi = \arctan\frac{n_2\kappa}{n_1 \cos \alpha} = \arctan\frac{n_2 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}}{n_1 \cos \alpha}.
+\eeq
+Pri $\alpha = \alpha_m$ je vrednost $\Phi=0$, pri vpadnem kotu $\alpha \to 90~\si{\degree}$ pa je
+fazni zamik odbitega valovanja $2\Phi = \pi$. 
+
+Podoben rezultat dobimo tudi za TM polarizirano valovanje, le da sta lomna količnika $n_1$ in $n_2$
+zamenjana. Tako dobimo:
+\beq
+\Phi = \arctan\frac{n_1\kappa}{n_2 \cos \alpha} = \arctan\frac{n_1 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}}{n_2 \cos \alpha}.
+\eeq
+Ker je $n_1 > n_2$, so vrednosti faznega zamika za TM polarizacijo vedno večje od faznega zamika za TE polarizirano
+valovanje. Pri tem velja:
+\beq
+\tan \Phi |_\mathrm{TM} = \left(\frac{n_1}{n_2}\right)^2 \tan \Phi |_\mathrm{TE}
+\eeq
+in posledično:
+\beq
+\Delta = 2\Phi_\mathrm{TM}-2\Phi_\mathrm{TE} > 0.
+\eeq
+Na meji steklo zrak dobimo maksimalno vrednost $\Delta > \pi/4$. To pomeni, da lahko z dvema zaporednima
+totalnima odbojema dobimo fazni zamik med TE in TM polariziranim valovanjem, ki je enak $\pi/2$. Tak 
+optični element, v katerem pride do dveh zaporednih totalnih odbojev torej lahko deluje kot ploščica
+$\lambda/4$. S štirimi totalnimi odboji dobimo fazni zamik $\pi$ in učinek ploščice $\lambda/2$. Tovrstni
+retarderji se imenujejo Fresnelovi rombi. Glavna prednost je, da je njihov učinek neodvisen od 
+valovne dolžine $\lambda$, saj ta ne nastopa eksplicitno v izrazu za $\Delta$. 
+
+\section{Optična vlakna?}
+\section{Odboj na meji s kovino}
+Zanimivo vprašanje je, kako se Fresnelove enačbe spremenijo, če je snov 2 prevodna. V tem primeru
+vemo, da polje pojema z globino zaradi notranjih električnih tokov. Pričakujemo torej, da bo po analogiji
+s totalnim odbojem, odbojnost na meji zato večja. 
+
+Ker je zaradi meje simetrija prostora zlomljena le v smeri osi $z$, tudi v tem primeru polje
+lahko pojema le z globino, to je s koordinato $z$. V prevodni snovi 2 tako zapišemo:
+\beq
+\mathbf{E}_2 = \mathbf{e}_y E_{0t} e^{i(k_z+i\varkappa)z} e^{ik_xx-i\omega t}.
+\eeq
+Drugi člen je enak kot v snovi 1, pri čemer velja $k_x = k_0 n_1 \sin \alpha$,
+v prvem členu pa vpeljemo $\tilde{k}_z = k_z + i \varkappa$.
+
+V snovi 2 velja telegrafska enačba in zato:
+\beq
+\tilde{\mathbf{k}}^2 = k_0^2 \mathcal{N}^2 = k_x^2 + (k_z+i\varkappa)^2 = 
+k_0^2 \left(\varepsilon_2 + \frac{i\sigma_2}{\varepsilon_0 \omega}\right).
+\eeq
+Iz tega sledi:
+\beq
+\frac{k_x^2+k_z^2 - \varkappa^2}{k_0^2} + \frac{2 i \kappa k_z}{k_0^2} = \varepsilon_2 + 
+\frac{i \sigma_2}{\varepsilon_0 \omega}.
+\eeq
+Iz te enačbe lahko izračunamo $k_z$ in $\varkappa$ v odvisnosti od $k_x = k_0 n_1 \sin \alpha$, ki
+se mora ohranjati zaradi robnih pogojev. 
+
+Rešimo enačbo, tako da $k_x$ nesemo na drugo stran in dobimo:
+\beq
+k_z^2 - \varkappa^2+ 2 i \kappa k_z= k_0^2 \varepsilon_2 - k_x^2 + i\frac{k_0^2\sigma_2}{\varepsilon_0 \omega}.
+\eeq
+Nato postopamo podobno, kot smo 
+to naredili pri izračunu kompleksnega lomnega količnika. Sledi:
+\beq
+k_z^2 = \frac{1}{2}\left(\sqrt{(k_0^2\varepsilon_2-k_x^2)^2 + \left(\frac{\sigma k_0^2}{\varepsilon_0 \omega}\right)^2}
++ (k_0^2\varepsilon_2-k_x^2)^2 \right)
+\eeq
+in 
+\beq
+\varkappa^2 = \frac{1}{2}\left(\sqrt{(k_0^2\varepsilon_2-k_x^2)^2 + \left(\frac{\sigma k_0^2}{\varepsilon_0 \omega}\right)^2}
+- (k_0^2\varepsilon_2-k_x^2)^2 \right).
+\eeq
+Celotno komponento valovnega vektorja v smeri $z$ v snovi 2 potem zapišemo kot:
+\beq
+\tilde{k}_z = k_z + i \varkappa.
+\eeq
+
+Spomnimo se, da za navadni neprevodni primer amplitudno odbojnost zapišemo kot:
+\beq
+r = \frac{n_1 \cos \alpha - n_2 \cos \beta}{n_1 \cos \alpha + n_2 \cos \beta} = 
+\frac{k_0 n_1 \cos \alpha - k_0 n_2 \cos \beta}{k_0 n_1 \cos \alpha + k_0 n_2 \cos \beta} = 
+\frac{k_{z1}-k_{z2}}{k_{z1}+k_{z2}}.
+\eeq
+Domnevamo, da zapišemo amplitudno odbojnost za primer kovine v enaki obliki, le 
+upoštevati moramo kompleksno vrednost komponente $\tilde{k}_z = k_{2z}+ i\varkappa$.
+
+V to se lahko prepričamo, če zapišemo robne pogoje in rešimo enačbi:
+\beq
+E_{0i} + E_{0r} = E_{0t}
+\eeq
+in 
+\beq
+-ik_{1z}E_{0i} + ik_{1z}E_{0r}= -(ik_{2z}-\varkappa)E_{0t}.
+\eeq
+Prvo enačbo pomnožimo s $\tilde{k}_z$ in enačbi odštejemo. Dobimo:
+\boxeq{eq:Kovinar}{
+r = \frac{E_{0r}}{E_{0i}} = \frac{k_{z1}-k_{z2}-i \varkappa}{k_{z1}+k_{z2}+i\varkappa}.
+}
+Realni del je povsem enak amplitudni odbojnosti v neprevodnih snoveh, drugi del pa je 
+analogen kot pri totalnemu odboju na meji med dvema neprevodnima snovema. 
+
+Za TE polarizirano valovanje potem zapišemo:
+\beq
+r_\mathrm{TE} = \frac{n_1 \cos \alpha - \mathcal{N}_2 \cos \beta}{n_1 \cos \alpha + \mathcal{N}_2 \cos \beta}
+\eeq
+in za TM polarizirano: 
+\beq
+r_\mathrm{TM} = \frac{\mathcal{N}_2 \cos \alpha - n_1 \cos \beta}{\mathcal{N}_2 \cos \alpha + n_1 \cos \beta}.
+\eeq
+Pri tem je tudi $\cos \beta$ kompleksno število, določeno formalno z zvezo $n_1 \sin \alpha = \mathcal{N}_2 \sin \beta$.
+
+Temu ustrezno lahko rezultat razumemo kot neko vmesno rešitev, ki delno spominja
+na navadni odboj, vendar ima večjo odbojnost. Kovine dobro odbijajo svetlobo
+in se zato ``bleščijo''. 
+
+Zgornji račun je preprost je za primer pravokotnega vpada, ko sta $\alpha = \beta = 0$. 
+Takrat dobimo za amplitudno odbojnost:
+\beq
+r = \frac{n_1 - \mathcal{N}}{n_1 + \mathcal{N}} = \frac{n_1 -n_2' -in_2''}{n_1 +n_2' +in_2''}.
+\eeq
+Odbojnost pa se zapiše kot:
+\beq
+\mathcal{R} = |r|^2 = \frac{(n_1 -n_2')^2 +n_2''^2}{(n_1 +n_2')^2 +n_2''^2}.
+\eeq
+
+Če imamo zelo dobro kovino z veliko prevodnostjo in velja $\sigma/\varepsilon_0 \omega \gg \varepsilon$, potem
+vemo, da velja $n''> n'$ in 
+\beq
+\mathcal{R} = \frac{n_1^2 +n_2''^2}{n_1^2 +n_2''^2} = 1.
+\eeq
+Plast dobro prevodne kovine, ki je ravna in brez prask (spolirana), tako deluje kot zrcalo!
