@@ -104,7 +104,8 @@ Izhajamo iz uklonskega integrala (enačba~\ref{eq:05_05}):
 E(\xi, \eta, z_0) = \frac{i}{\lambda} \int_{-\infty}^{\infty}
 \int_{-\infty}^{\infty} f(x,y) E_0 \left(\frac{e^{ikR}}{R}\right) dx dy.
 \eeq
-V Fraunhoferjevem približku uklona razvijemo razdaljo $R$ med točko v odprtini
+V Fraunhoferjevem približku uklona, ki ga poenostavljeno imenujemo
+Fraunhoferjev uklon, razvijemo razdaljo $R$ med točko v odprtini
 in točko na zaslonu do prvega reda. Zapišemo:
 \beq
 R = \sqrt{(\xi-x)^2 + (\eta - y)^2 + z_0^2} \approx
@@ -164,6 +165,104 @@ Pogosto naredimo še približek $R_0 \approx z_0$.
 Iz enačbe~(\ref{eq:Fraunhoferjev}) je razvidno, 
 da je uklonska slika nekega objekta v Fraunhoferjevem uklonskem približku
 enaka 2D Fourierovi transformiranki aperturne funkcije tega objekta. 
+
+
+\subsection*{Fresnelovo število}
+Poiščimo kriterij, ki bo določil, kdaj lahko uporabimo navedeni približek. Spomnimo se, da smo
+v razvoju izraza za $R$ zanemarili kvadratni člen (enačba~\ref{eq:05_10}). Ta člen v izrazu
+za sferične valove nastopa v členu $\exp(ik(x^2 + y^2)/2R_0)$ in torej prinaša nek dodatni fazni 
+zamik. Da bo res zanemarljiv, mora za vsako vrednost $x$ in $y$ veljati:
+\beq
+\frac{k(x^2+y^2)}{2R_0} \ll 2 \pi.
+\label{eq:05_15}
+\eeq
+Privzamemo, da je $(x^2+y^2)_\mathrm{max} = d^2$, pri čemer $d$ meri karakteristično razsežnost 
+odprtine v objektnem zaslonu. Sledi
+\beq
+\frac{kd^2}{2R_0}  = \frac{2\pi}{\lambda}\frac{d^2}{2R_0}\ll 2 \pi.
+\label{eq:05_16}
+\eeq
+Vpeljemo Fresnelovo število $F$:
+\beq
+F  = \frac{d^2}{\lambda R_0}
+\label{eq:05_17}
+\eeq
+in Fraunhoferjev približek je veljaven, kadar
+\beq
+F \ll 1. 
+\label{eq:05_18}
+\eeq
+Pogoj je ekvivalenten zahtevi, da je 
+\beq
+R_0 \gg \frac{d^2}{\lambda}.
+\label{eq:05_19}
+\eeq
+Tipične vrednosti $R_0 \approx z_0$  morajo biti dosti večje od dimenzij odprtine, zato 
+Fraunhoferjevem približku rečemo tudi približek daljnjega polja. 
+
+\begin{example}{\bf Veljavnost Fraunhoferjevega približka.}
+Naj bo valovna dolžina svetlobe $\lambda = 500~\si{nm}$. Če je tipična razsežnost odprtine $d = 1~\si{\micro\metre}$,
+mora biti za veljavnost Fraunhoferjevega približka oddaljenost od zaslona $R\gg 2~\si{\micro\metre}$. Pri razsežnosti
+$d = 10~\si{\micro\metre}$ mora veljati $R\gg 200~\si{\micro\metre}$, pri $d = 100~\si{\micro\metre}$ mora biti
+$R\gg 2~\si{\centi\metre}$ in pri $d = 1~\si{\milli\metre}$ velja Fraunhoferejev približek pri $R\gg 2~\si{\metre}$. 
+\end{example}
+ 
+Preden obravnavamo primere Fraunhoferjevega uklona, si oglejmo še interpretacijo približnosti Fraunhoferjevega
+približka. Če si zamislimo enodimenzionalno režo, ki se razteza v smemi osi $x$. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_priblizek.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_priblizek}
+\end{figure}
+
+Fazni zamik sekundarnih sferičnih valov, ki izvirajo z območja reže, se spreminja kot
+\beq
+\Delta \Phi = \frac{k \xi x}{R_0}.
+\label{eq:05_20}
+\eeq
+Če opazujemo vrednost $\Delta \Phi(x)$ valov, ki potujejo v smeri $\vartheta_\xi \approx
+\xi/R_0$ glede na os $z$, vidimo, da velja 
+\beq
+\Delta \Phi = k \varphi_\xi x.
+\label{eq:05_21}
+\eeq
+Zapis ustreza ravnemu valovanju. Za $R_0 \gg d^2/\lambda$ se uklonjeno valovanje manifestira
+kot del ravnega valovanja. 
+
+
+Zapisali smo, da mora biti za veljavnost Fraunhoferjevega približka zaslon zelo
+oddaljen od odprtine, na kateri se svetloba uklanja. Vendar za opazovanje 
+Fraunhoferjevega uklona ni nujno, da zaslon postavimo zelo daleč za objektno ravnino.
+Namesto tega lahko za objektni zaslon postavimo zbiralno lečo in uklonsko sliko opazujemo
+v njeni goriščni ravnini. Zbiralna leča namreč snop vzporednih žarkov zbere v eni 
+točki v goriščni ravnini leče. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_2DFourier.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_2DFourier}
+\end{figure}
+\begin{remark}
+Opisani sistem je analogna naprava za izračun 2D-Fourierove transformacije nekega 
+delno prozornega objekta ali vzorca. /pattern recognition?/
+\end{remark}
+
+\begin{example}{\bf Fraunhoferjev uklon na reži debeline $d$.}
+ 
+\end{example}
+
+\begin{example}{\bf Fraunhoferjev uklon na sistemu $N$ vzporednih rež.}
+Naj bo v objektni ravnini $N$ vzporednih rež debeline $d$. Perioda ponavljanja
+rež naj bo $D$. 
+\end{example}
+
+\begin{example}{\bf Fraunhoferjev uklon na okrogli odprtini s polmerom $a$.}
+ 
+\end{example}
+
 
 
 \section{Ločljivost optičnih naprav}
