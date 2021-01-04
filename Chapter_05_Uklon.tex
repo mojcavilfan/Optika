@@ -158,7 +158,7 @@ Potem zapišemo uklonski integral v Fraunhoferjevem približku kot:
 \boxeq{eq:Fraunhoferjev}{
 E(\omega_\xi,\omega_\eta) = \frac{i}{\lambda} \frac{E_0 e^{ikR_0}}{R_0}
 \int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) e^{-i\omega_xi x} e^{-i \omega_\eta y} dx dy.
+\int_{-\infty}^{\infty} f(x,y) e^{-i\omega_\xi x} e^{-i \omega_\eta y} dx dy.
 }
 Pogosto naredimo še približek $R_0 \approx z_0$. 
 
@@ -199,16 +199,10 @@ R_0 \gg \frac{d^2}{\lambda}.
 \eeq
 Tipične vrednosti $R_0 \approx z_0$  morajo biti dosti večje od dimenzij odprtine, zato 
 Fraunhoferjevem približku rečemo tudi približek daljnjega polja. 
-
-\begin{example}{\bf Veljavnost Fraunhoferjevega približka.}
-Naj bo valovna dolžina svetlobe $\lambda = 500~\si{nm}$. Če je tipična razsežnost odprtine $d = 1~\si{\micro\metre}$,
-mora biti za veljavnost Fraunhoferjevega približka oddaljenost od zaslona $R\gg 2~\si{\micro\metre}$. Pri razsežnosti
-$d = 10~\si{\micro\metre}$ mora veljati $R\gg 200~\si{\micro\metre}$, pri $d = 100~\si{\micro\metre}$ mora biti
-$R\gg 2~\si{\centi\metre}$ in pri $d = 1~\si{\milli\metre}$ velja Fraunhoferejev približek pri $R\gg 2~\si{\metre}$. 
-\end{example}
  
-Preden obravnavamo primere Fraunhoferjevega uklona, si oglejmo še interpretacijo približnosti Fraunhoferjevega
-približka. Če si zamislimo enodimenzionalno režo, ki se razteza v smemi osi $x$. 
+Preden obravnavamo primere Fraunhoferjevega uklona, si oglejmo še interpretacijo 
+približnosti Fraunhoferjevega približka. Če si zamislimo enodimenzionalno režo, 
+ki se razteza v smemi osi $x$. 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
@@ -231,8 +225,20 @@ Fazni zamik sekundarnih sferičnih valov, ki izvirajo z območja reže, se sprem
 Zapis ustreza ravnemu valovanju. Za $R_0 \gg d^2/\lambda$ se uklonjeno valovanje manifestira
 kot del ravnega valovanja. 
 
+\begin{example}{\bf Veljavnost Fraunhoferjevega približka.}
+Naj bo valovna dolžina svetlobe $\lambda = 500~\si{nm}$. Če je tipična 
+razsežnost odprtine $d = 1~\si{\micro\metre}$, mora biti za veljavnost 
+Fraunhoferjevega približka oddaljenost od zaslona 
+$R\gg 2~\si{\micro\metre}$. Pri razsežnosti
+$d = 10~\si{\micro\metre}$ mora veljati $R\gg 200~\si{\micro\metre}$, 
+pri $d = 100~\si{\micro\metre}$ mora biti $R\gg 2~\si{\centi\metre}$ in 
+pri $d = 1~\si{\milli\metre}$ velja Fraunhoferejev približek pri 
+$R\gg 2~\si{\metre}$. Pri majhnih odprtinah je torej Fraunhoferjev približek
+preprosto izpolniti, že pri milimetrsih odprtinah
+pa mora biti zaslon oddaljen vsaj nekaj metrov. 
+\end{example}
 
-Zapisali smo, da mora biti za veljavnost Fraunhoferjevega približka zaslon zelo
+Za veljavnost Fraunhoferjevega približka mora biti torej zaslon zelo
 oddaljen od odprtine, na kateri se svetloba uklanja. Vendar za opazovanje 
 Fraunhoferjevega uklona ni nujno, da zaslon postavimo zelo daleč za objektno ravnino.
 Namesto tega lahko za objektni zaslon postavimo zbiralno lečo in uklonsko sliko opazujemo
@@ -251,20 +257,296 @@ delno prozornega objekta ali vzorca. /pattern recognition?/
 \end{remark}
 
 \begin{example}{\bf Fraunhoferjev uklon na reži debeline $d$.}
- 
+Obravnavajmo uklon svetlobe z valovno dolžino $\lambda$, ki v obliki ravnih valov 
+vpada na zaslon z režo debeline $d$. Uklonsko sliko na oddaljenem opazovalnem zaslonu
+izračunamo iz enačbe~(\ref{eq:Fraunhoferjev}), pri čemer je funkcija $f(x)$ enaka 1 za
+$-d/2<x<d/2$, sicer je 0. Dobimo:
+\beq
+E(\omega_\xi) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}
+\int_{-d/2}^{d/2} e^{-i\omega_\xi x} dx \approx \frac{i}{\lambda}
+\frac{\tilde{E}_0 e^{ikz}}{z}\frac{1}{-i\omega_\xi}\left(e^{-i\omega_\xi d/2}- e^{i\omega_\xi d/2}\right),
+\label{eq:05_22}
+\eeq
+od koder z upoštevanjem izrazov za $\sin(x)$ in $k$ sledi:
+\beq
+E(\omega_\xi) = \frac{i}{\lambda}
+\frac{\tilde{E}_0 e^{ikz}}{z}\frac{2}{\omega_\xi} \sin\left(\omega_\xi d/2\right) = 
+\frac{id}{\lambda}
+\frac{\tilde{E}_0 e^{ikz}}{z}
+\frac{\sin\left(\omega_\xi d/2\right)}{\omega_\xi d/2}.
+\label{eq:05_23}
+\eeq
+Gostota svetlobnega toka uklonjene svetlobe na opazovalnem zaslonu je tako:
+\boxeq{eq:uklon1reza}{
+j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin(\vartheta)/2\right)}{kd\sin(\vartheta)/2}\right)^2,
+}
+pri čemer so $k$ valovno število, $d$ debelina reže in $\vartheta$ uklonski kot. Gostoto
+toka smo normirali, tako da je v smeri naravnost (pri $\vartheta = 0$) enaka $j_0$.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_1Reza.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_1Reza}
+\end{figure}
+
+V smeri naprej je intenziteta uklonjene svetlobe največja, nato z naraščajočim
+kotom pojema, dokler ne doseže vrednosti 0. Pri večjih kotih ponovno naraste, vendar 
+je njena intenziteta znatno manjša kot v osrednjem vrhu. Uklonske kote, pri 
+katerih se pojavijo oslabitve, izračunamo preprosto iz enačbe~(\ref{eq:uklon1reza}), tako da
+števec postavimo na nič. Sledi:
+\beq
+kd \sin(\vartheta)/2 = N\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{N\lambda}{d},
+\label{eq:05_24}
+\eeq
+pri čemer je $N$ celo število. Lego in intenziteto vrhov je treba določiti numerično. 
 \end{example}
 
 \begin{example}{\bf Fraunhoferjev uklon na sistemu $N$ vzporednih rež.}
-Naj bo v objektni ravnini $N$ vzporednih rež debeline $d$. Perioda ponavljanja
-rež naj bo $D$. 
+Naj bo v objektni ravnini $N$ vzporednih rež debeline $d$, perioda ponavljanja
+rež pa naj bo $D$.
+
+Podobno kot smo izračunali uklonsko sliko na eni reži, izračunamo tudi uklonsko sliko
+na več vzporedih režah. Prepustnostna funkcija $f$ je tako enaka 1 v vsaki reži, med
+režami in zunaj območja rež pa je enaka 0.
+\beq
+E(\omega_\xi) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}
+\left( \int_{-d/2}^{d/2} e^{-i\omega_\xi x} dx + \int_{D-d/2}^{D+d/2} e^{-i\omega_\xi x} dx +
+\int_{2D-d/2}^{2D+d/2} e^{-i\omega_\xi x} dx + ... \right).
+\label{eq:05_25}
+\eeq
+Integrale izračunamo in dobimo:
+\beq
+E(\omega_\xi) = \frac{i}{-i\omega_\xi \lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}
+\left(e^{-i\omega_\xi d/2}- e^{i\omega_\xi d/2} \right) \left(1 + e^{-i\omega_xi D} + 
+e^{-i\omega_xi 2 D} + ...\right).
+\label{eq:05_26}
+\eeq
+Sledi:
+\beq
+E(\omega_\xi) = \frac{id}{\lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}\frac{e^{-iN\omega_\xi D/2}}
+{e^{-i\omega_\xi D/2}}
+\frac{\sin(\omega_\xi d/2)}{\omega_\xi d/q} 
+\frac{\sin(N\omega_\xi D/2)}{\sin(\omega_\xi D/2)}.
+\label{eq:05_27}
+\eeq
+Gostota svetlobnega toka uklonjene svetlobe na opazovalnem zaslonu je tako:
+\boxeq{eq:uklonNrez}{
+j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin(\vartheta)/2\right)}{kd\sin(\vartheta)/2}\right)^2
+\left(\frac{\sin\left(NkD\sin(\vartheta)/2\right)}{\sin\left(kD\sin(\vartheta)/2\right)}\right)^2.
+}
+Prvi oklepaj imenujemo strukturni faktor $S(\vartheta)$ in določa ovojnico uklonske slike. Enak je uklonski
+sliki za eno samo režo debeline $d$. Drugi oklepaj imenujemo mrežni faktor $M(\vartheta)$ in je odvisen od 
+razporeditve rež. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_Nrez.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Nrez}
+\end{figure}
+
+Glavne vrhove v uklonski sliki dobimo, kadar je imenovalec ulomka enak nič:
+\beq
+kD \sin(\vartheta)/2 = n\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{n\lambda}{D},
+\label{eq:05_28}
+\eeq
+pri čemer je $n$ celo število. Med posamičnimi glavnimi vrhovi se pojavijo še manjši
+stranski vrhovi. Poiščemo jih med zaporednimi minimumi, ki jih določajo ničle števca
+ulomka:
+\beq
+NkD \sin(\vartheta)/2 = m\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{m\lambda}{ND},
+\label{eq:05_29}
+\eeq
+pri čemer je $m$ celo število. Med dvema glavnima vrhoma je tako v splošnem
+$N-2$ stranskih vrhov. Pri izračunu amplitude vrhov moramo upoštevati
+tudi strukturni faktor, torej ovojnico. 
+
+Prvi primer na sliki~\ref{fig:05_Nrez} prikazuje uklonsko sliko za primer $N = 6$ in 
+$D=4d$. Med dvema glavnima vrhoma so štirje stranski vrhovi. Z upoštevanjem amplitude
+envelope ugotovimo, da vsak četri (preveri!) glavni vrh izgine zaradi minimuma envelope.
 \end{example}
 
 \begin{example}{\bf Fraunhoferjev uklon na okrogli odprtini s polmerom $a$.}
- 
+Kot naslednji primer si oglejmo Fraunhoferjev uklon na okrogli odprtini s polmerom $a$. 
+Lego točke $P$ v objektni ravnini $xy$ opišemo v polarnih koordinatah $\varrho$ in $\varphi$
+kot:
+\beq
+x = \varrho \cos \varphi \qquad \mathrm{in} \qquad y = \varrho \sin \varphi. 
+\label{eq:05_30}
+\eeq
+Lego točke $P_0$ v opazovalni ravnini $\xi \eta$ zapišemo v polarnih koordinatah 
+$q$ in $\phi$:
+\beq
+\xi = q \cos \phi \qquad \mathrm{in} \qquad \eta = q \sin \phi. 
+\label{eq:05_31}
+\eeq
+Uklonski integral potem zapišemo kot:
+\beq
+E(q,\phi,z_0) = \frac{i}{\lambda} \frac{E_0e^{ikR_0}}{R_0}\int_0^{2\pi} \int_0^a
+e^{-i\omega_\xi x}e^{-i\omega_\eta y}\varrho d\varrho d\varphi.
+\label{eq:05_32}
+\eeq
+Upoštevamo enačbe~(\ref{eq:05_13} in \ref{eq:05_14}) in zapišemo:
+\beq
+\omega_\xi x + \omega_\eta y= \frac{qk\cos \phi}{R_0} \varrho \cos\phi + \frac{qk\sin \phi}{R_0} \varrho \sin\phi = 
+ \frac{qk\sin \phi}{R_0} \cos(\varphi - \phi).
+\label{eq:05_33}
+\eeq
+Zaradi simetrije lahko postavimo $\phi=0$ in zapišemo integral:
+\beq
+E(q,\phi,z_0) = \frac{i}{\lambda} \frac{E_0e^{ikR_0}}{R_0}\int_0^{2\pi} \int_0^a
+e^{-iqk\varrho \cos(\varphi)/R_0)} \varrho d\varrho d\varphi.
+\label{eq:05_34}
+\eeq
+Spomnimo se integralnega zapisa Besslovih funkcij prve vrste:
+\beq
+J_m(u) = \frac{(-1)^m}{2\pi} \int_0^{2\pi} e^{-iu\cos v }e^{imv}dv
+\label{eq:05_35}
+\eeq
+in rekurzijske zveze:
+\beq
+\frac{d}{du}\left( u^m J_m(u)\right) = u^m J_{m-1}(u).
+\label{eq:05_36}
+\eeq
+Primerjamo enačbi~(\ref{eq:05_34}) in (\ref{eq:05_35}) in vpeljemo
+zveze $v = \varphi$, $m=0$ in $u = qk\varrho/R_0$. Pri računu integrala 
+upoštevamo izraza za Besslove funkcije (enačbe~\ref{eq:05_35} in \ref{eq:05_36}) 
+in dobimo:
+\beq
+E = \frac{i}{\lambda}\frac{E_0 e^{ikR_0}}{R_0} \pi a^2 \frac{2 J_1 (kqa/R_0}{kqa/R_0}.
+\label{eq:05_37}
+\eeq
+Če vpeljemo še uklonski kot $\vartheta$ in zapišemo gostoto svetlobnega toka
+uklonjene svetlobe:
+\boxeq{eq:uklonAiry}{
+j = j_0 \left(\frac{2J_1(ka\sin\vartheta}{ka\sin \vartheta}\right)^2.
+}
+Opisano odvisnost, ki jo imenujemo tudi Airyjev uklonski vzorec po angleškem
+matematiku in astronomu Siru Georgeu Biddellu Airyu, si poglejmo podrobneje. 
+Na opazovalnem zaslonu nastane rotacijsko simetrična uklonska slika, ki 
+jo imenujemo Airyjev disk. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_Airy.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Airy}
+\end{figure}
+V smeri naravnost (na sredini Airyjevega diska) 
+je gostota svetlobnega toka enaka $j_0$, saj velja:
+\beq
+\lim_{u \to 0}\frac{J_1(u)}{u} = \frac{1}{2}.
+\label{eq:05_39}
+\eeq
+Z naraščajočim uklonskim kotom intenziteta uklonjene svetlobe pojema, nato
+spet naraste in ponovno pojema ... Ničle uklonske slike so določene
+s pogojem, da je $J_1 = 0$ in se pojavijo pri vrednostih:
+\beq
+ka\sin\vartheta  \approx 3,83;~7,02;~10,17;~13,32 ...
+\label{eq:05_40}
+\eeq
+Intenziteta stranskih obročev je razmeroma šibka, zato je najpomembnejši
+notranji krog uklonske slike. Polmer notranjega kroga oziroma diska 
+izračunamo iz zveze:
+\beq
+ka q_A/R_0 = \frac{2\pi a q_A}{\lambda R_0} = 3,83
+\label{eq:05_41}
+\eeq
+in dobimo:
+\beq
+q_A = \frac{3,83}{\pi}\frac{\lambda R_0}{2a} = 1,22 \frac{\lambda R_0}{2a}.
+\label{eq:05_42}
+\eeq
 \end{example}
 
-
-
 \section{Ločljivost optičnih naprav}
+Pri optičnih napravah pogosto svetloba potuje skozi lečo in 
+nato vpade na svetlobni detektor. Leča pri tem deluje
+kot okrogla odprtina s polmerom $a$, svetloba pa se na njej
+uklanja.
+
+Poglejmo primer zelo oddaljenega točkastega predmeta, ki ga 
+preslikamo z lečo z goriščno razdaljo $f$ in premerom $D$. Slika predmeta 
+nastane v goriščni ravnini, zato je $R_0=f$. Zaradi uklona potem 
+točkasti predmet na detektorju vidimo kot okrogel disk s polmerom
+\beq
+q_A \approx 1,22 \frac{f\lambda}{D} = 1,22 \lambda \frac{f}{D} = 0,61 \frac{\lambda}{NA},
+\label{eq:05_43}
+\eeq
+pri čemer je numerična apertura $NA$ razmerje med polmerom leče $D/2$
+in goriščno razdaljo $f$:
+\beq
+NA = \frac{D/2}{f}.
+\label{eq:05_44}
+\eeq
+Značilne vrednosti za numerično aperturo so $NA \lesssim 1$.
+
+Če opazujemo dve oddaljeni točkasti telesi, bo v opazovalni ravnini vsako
+od njih ustvarilo Airyjev disk. Kadar se diska začneta prekrivati, teles
+na sliki ne moremo več ločiti. Ta pojav omejuje ločljivost optičnih naprav
+in ga poglejmo podrobneje. 
+
+Kriterij, ki določa, ali dva objekta na sliki še ločimo med seboj, imenujemo
+Rayleighev kriterij ločljivosti po angleškemu fiziku Lordu Rayleighu. Kriterij
+pravi, da objekta ločimo, če velja:
+\beq
+\Delta q_A \geq 1,22 \frac{\lambda}{NA} \gtrsim \lambda.
+\label{eq:05_45}
+\eeq
+Najmanjša razlika zornih kotov:
+\beq
+\Delta \alpha_{\mathrm{min}} = 
+\frac{\Delta q_{A\mathrm{min}}}{f} \gtrsim 1,22 \frac{\lambda}{D}.
+\label{eq:05_46}
+\eeq
+Večjo kotno ločljivost optičnih naprav, na primer teleskopov, torej 
+dosežemo pri manjših valovnih dolžinah svetlobe in večjih lečah.
+
+\begin{example}{\bf Ločljivost teleskopa.}
+S teleskopom, ki ima premer leče $D=5~\si{m}$, opazujemo
+Luno, ki je od Zemlje oddaljena $L = 384 000~\si{km}$. Če je 
+valovna dolžina svetlobe $500~\si{nm}$, ocenimo velikost podrobnosti
+na Luninem površju, ki jih še ločimo.
+
+Iz enačbe~(\ref{eq:05_46}) ocenimo:
+\beq
+\Delta l = 1,22 \frac{\lambda}{D} L \approx 50~\si{m}.
+\label{eq:05_47}
+\eeq
+\end{example}
+
+Na podoben način izračunamo tudi ločljivost optičnih mikroskopov. Ker
+tam pri njih predmet blizu goriščne razdalje, je ločljivost
+teh naprav približno enaka valovni dolžini svetlobe $\Delta l \approx \lambda$.
 
 \section{Fresnelov uklon}
+
+\section{*Izpeljava Kirchhoffovega uklonskega integrala}
+Poglejmo še matematično izpeljavo uklonskega integrala (enačba~\ref{eq:05_01})
+in najprej ponovimo Greenov teorem, ki izhaja iz Gaussovega stavka. Naj bo 
+$\mathbf{W}(\mathbf{r})$ poljubno zvezno in zvezno odvedljivo vektorsko
+polje. Gaussov stavek pravi, da je intergal po sklenjeni ploskvi enak
+integralu divergence vektorskega polja po prostoru:
+\beq
+\oint_S \mathbf{W} d\mathbf{S} = \int_V \div(\mathbf{W})dV.
+\label{eq:05_48}
+\eeq
+Zapišimo  vektorsko polje $\mathbf{W}$ s skalarnima poljema $\Psi$ in $\Phi$
+v obliki:
+\beq
+\mathbf{W}(\mathbf{r}) = \Psi \nabla \Phi - \Phi \nabla \Psi.
+\label{eq:05_49}
+\eeq
+Potem velja:
+\beq
+\div \mathbf{W}= \Psi \nabla^2 \Phi - \Phi \nabla^2 \Psi
+\label{eq:05_50}
+\eeq
+in dobimo Greenov teorem:
+\beq
+\oint_S \left(\Psi \nabla \Phi - \Phi \nabla \Psi\right) d\mathbf{S}  =
+\int_V \left( \Psi \nabla^2 \Phi - \Phi \nabla^2 \Psi \right) dV.
+\label{eq:05_51}
+\eeq
+
