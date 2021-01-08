@@ -46,7 +46,8 @@ krajevni del krogelnih valov, $\lambda$ pa je valovna dolžina vpadne svetlobe
 \begin{remark}
 Prvotno je uklonski integral zapisal Fresnel, tako da je namesto predfaktorja 
 $i/\lambda$ zapisal eksperimentalno določeno konstanto. Predfaktor v zapisani
-obliki je izpeljal Kirchhoff. Popolnejši zapis je oblike $i \chi(\mathbf{r})/\lambda$,
+obliki je izpeljal Kirchhoff (glej izpeljavo v razdelku~\ref{chap:Kirchhoff}). 
+Popolnejši zapis je oblike $i \chi(\mathbf{r})/\lambda$,
 pri čemer $\chi$ predstavlja smerni faktor. Kadar je značilna razsežnost odprtine v 
 objektnem zaslonu $d$ bistveno manjša od oddaljenosti do zaslona, 
 je $\chi \approx 1$.
@@ -83,11 +84,10 @@ P_0: \mathbf{r}_0 = (\xi,\eta,z_0).
 \label{eq:05_04}
 \eeq
 Uporabimo uklonski integral (enačba~\ref{eq:05_01}) in zapišemo:
-\beq
+\boxeq{eq:05_05}{
 E(\xi, \eta, z_0) = \frac{i}{\lambda} \int_{-\infty}^{\infty}
 \int_{-\infty}^{\infty} f(x,y) E_0 \left(\frac{e^{ikR}}{R}\right) dx dy.
-\label{eq:05_05}
-\eeq
+}
 V izrazu za krogelne valove nastopa razdalja $R$ med točjo $P$ in $P_0$, za
 katero velja:
 \beq
@@ -251,6 +251,11 @@ točki v goriščni ravnini leče.
 \caption{SLIKA}
 \label{fig:05_2DFourier}
 \end{figure}
+Pri računu smo tudi privzeli, da je optično polje, ki vpade na objektni zaslon $xy$ povsod 
+konstantno in enako $E_0$. Tudi to v eksperimentu dosežemo z uporabo leče. 
+Svetlobo, ki izhaja iz točkastega svetila, lahko namreč kolimiramo z lečo (in z ustreznim
+spektralnim filtrom ustvarimo monokromatsko valovanje), tako da izvor postavimo 
+v gorišče leče.
 \begin{remark}
 Opisani sistem je analogna naprava za izračun 2D-Fourierove transformacije nekega 
 delno prozornega objekta ali vzorca. /pattern recognition?/
@@ -521,8 +526,99 @@ tam pri njih predmet blizu goriščne razdalje, je ločljivost
 teh naprav približno enaka valovni dolžini svetlobe $\Delta l \approx \lambda$.
 
 \section{Fresnelov uklon}
+Doslej smo predpostavili, da je optično polje, ki vpade na objektni zaslon $xy$ povsod 
+konstantno in enako $E_0$. Obravnavajmo zdaj primer, ko je svetloba, 
+ki vpada na objektni zaslon, funkcija kraja $E_0 = E_0(x,y)$. 
+
+Naj izvor svetlobe $S$, ki oddaja krogelno valovanje, leži v ravnini 
+$x'y'$. Razdalja med ravnino izvora svetlobe in objektno ravnino
+naj bo enaka $z_0'$ (slika~\ref{Fresnel}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_Fresnel.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Fresnel}
+\end{figure}
+Polje v točki $P$ v objektni ravnini potem zapišemo kot 
+\beq
+E_0 (x,y,0) = \tilde{E}_0 \frac{e^{ikR'}}{R'}.
+\label{eq:05_65}
+\eeq
+Uklonski integral (enačba~\ref{eq:05_05}) se potem zapiše kot:
+\beq
+E(\xi, \eta, z_0) = \frac{i}{\lambda} \tilde{E}_0 \int_{-\infty}^{\infty}
+\int_{-\infty}^{\infty} f(x,y) E_0 \left(\frac{e^{ikR'}}{R'}\right) \left(\frac{e^{ikR}}{R}\right) dx dy.
+\label{eq:05_66}
+\eeq
+Izraza za $R$ in $R'$ razvijemo v Taylorjevo vrsto:
+\beq
+R^2 = (x-\xi)^2 + (y-\eta)^2 + z_0^2 \approx 
+R_0 - \frac{x\xi}{R_0} - \frac{y\eta}{R_0} + \frac{x^2+y^2}{2R_0} + ...
+\label{eq:05_67}
+\eeq
+Pri Fraunhoferjevem uklonu smo upoštevali prve tri člene, četrtega pa smo zanemarili.
+Pri Fresnelovem uklonu upoštevamo tudi četrti člen v razvoju. 
+
+Zapišemo razdaljo $R$ malo drugače:
+\beq
+R^2 = z_0^2 + (x-\xi)^2+(y-\eta)^2 = z_0^2 \left(1+ \frac{(x-\xi)^2+(y-\eta)^2}{z_0^2}\right).
+\label{eq:05_68}
+\eeq
+Vpeljemo parameter $d^2 = (x-\xi)^2+(y-\eta)^2$ in izraz razvijemo
+\beq
+R = z_0^2 \left(1+\frac{d^2}{z_0^2}\right) \approx z_0 + \frac{d^2}{2z_0} + ...
+\label{eq:05_69}
+\eeq
+Členi, ki smo jih zanemarili v razvoju, so zanemarljivi, če velja
+odprtine:
+\beq
+k\left( \frac{1}{8}\frac{d^4}{z_0^3}\right) \ll 2\pi.
+\label{eq:05_70}
+\eeq
+Pogoj preoblikujemo v:
+\beq
+\frac{d^4}{z_0^4} \ll \frac{8\lambda}{z_0}.
+\label{eq:05_71}
+\eeq
+Kadar je zapisani pogoj izpolnjen, je Fresnelov približek veljaven.
+
+\begin{example}
+Naj bo razdalja med objektnim in opazovalnim zaslonom $z_0=1~\si{m}$ in 
+valovna dolžina svetlobe $500~\si{nm}$. Pogoj za Fresnelov približek
+uklona je izpolnjen, kadar je:
+\beq
+\frac{d^4}{z_0^4} \ll 8\frac{500~\si{nm}}{1~\si{m}} = 4\cdot 10^{-6},
+\label{eq:05_72}
+\eeq
+kar pomeni, da mora za veljavnost približka veljati:
+\beq
+d\ll z_0 \sqrt[4]{4\cdot 10^{-6}} \approx 4~\si{mm}.
+\label{eq:05_73}
+\eeq
+Izračunajmo še Fresnelovo število (enačba~\ref{eq:05_17}):
+\beq
+F = \frac{d^2}{\lambda R_0} \ll \frac{16 \times 10^{-6}~\si{m}^2}{500~\si{nm} \cdot 1~\si{m}} \approx 30. 
+\label{eq:05_74}
+\eeq
+\end{example}
+
+Podobno kot smo razvili $R$ (enačba~\ref{eq:05_69}), razvijemo tudi $R'$:
+\beq
+R' \approx z_0' + \frac{1}{2}\frac{(x-x')^2+(y-y')^2}{2z_0'}.
+\label{eq:05_75}
+\eeq
+Oba izraza vstavimo v uklonski integral 
+
+
+
+
+
+
+
 
 \section{*Izpeljava Kirchhoffovega uklonskega integrala}
+\label{chap:Kirchhoff}
 Poglejmo še matematično izpeljavo uklonskega integrala (enačba~\ref{eq:05_01})
 in najprej ponovimo Greenov teorem, ki izhaja iz Gaussovega stavka. Naj bo 
 $\mathbf{W}(\mathbf{r})$ poljubno zvezno in zvezno odvedljivo vektorsko
@@ -535,9 +631,10 @@ integralu divergence vektorskega polja po prostoru:
 Zapišimo  vektorsko polje $\mathbf{W}$ s skalarnima poljema $\Psi$ in $\Phi$
 v obliki:
 \beq
-\mathbf{W}(\mathbf{r}) = \Psi \nabla \Phi - \Phi \nabla \Psi.
+\mathbf{W}(\mathbf{r}) = \Psi \nabla \Phi - \Phi \nabla \Psi,
 \label{eq:05_49}
 \eeq
+pri čemer sta funkciji $\Psi$ in $\Phi$ zvezni in dvakrat zvezno odvedljivi.
 Potem velja:
 \beq
 \div \mathbf{W}= \Psi \nabla^2 \Phi - \Phi \nabla^2 \Psi
@@ -549,4 +646,122 @@ in dobimo Greenov teorem:
 \int_V \left( \Psi \nabla^2 \Phi - \Phi \nabla^2 \Psi \right) dV.
 \label{eq:05_51}
 \eeq
+Za $\Psi$ in $\Phi$ izberemo funkciji, ki predstavljata skalarni rešitvi
+krajevnega dela valovne enačbe. Za ti dve funkciji torej veljata zvezi:
+\beq
+\nabla^2 \Psi + k^2 \Psi = 0 \qquad \mathrm{in} \qquad \nabla^2 \Phi + k^2 \Phi = 0.
+\label{eq:05_52}
+\eeq
+Z upoštevanjem teh dveh vez postane desni del Greenovega teorema 
+(enačba~\ref{eq:05_51}) identično enak nič. Od tod sledi, da za funkciji $\Phi$ in $\Phi$,
+ki sta rešitvi valovne enačbe, velja zveza:
+\beq
+\oint \left( \Psi\frac{\partial \Phi}{\partial \mathbf{n}} -
+\Phi\frac{\partial \Psi}{\partial \mathbf{n}} \right) dS = 0.
+\label{eq:05_53}
+\eeq
 
+Zamislimo si zdaj, da funkcija $\Psi$ opisuje sferične valove, ki
+izhajajo iz izhodišča koordinatnega sistema $P_0$ in jo zapišemo kot:
+\beq
+\Psi = \frac{e^{ikr}}{r}.
+\label{eq:05_54}
+\eeq
+Ker ta funkcija v izhodišču pri $r=0$ divergira, moramo izhodišče
+izvzeti iz računa. Zato si okoli izhodišča zamislimo kroglo s 
+polmerom $\varepsilon$ (slika~\ref{fig:05_Green}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_Green.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Green}
+\end{figure}
+Celotna integracijska površina je tako sestavljena iz zunanje ploskve
+$S$ in notranje krogle $S_\varepsilon$. Enačbo~(\ref{eq:05_53}) prepišemo v:
+\beq
+\oint_S \left( \frac{e^{ikr}}{r}\frac{\partial \Phi}{\partial \mathbf{n}} -
+\Phi\frac{\partial}{\partial \mathbf{n}}\left( \frac{e^{ikr}}{r} \right) \right) dS -
+\oint_{S\varepsilon} \left( \frac{e^{ikr}}{r}\frac{\partial \Phi}{\partial \mathbf{n}} -
+\Phi\frac{\partial}{\partial \mathbf{n}}\left( \frac{e^{ikr}}{r} \right) \right)r^2 d\Omega = 0.
+\label{eq:05_55}
+\eeq
+Ker je notranja ploskev krogla, je smer normale na ploskev $\mathbf{n}$ enaka smeri $\mathbf{r}$.
+Potem zapišemo odvod:
+\beq
+\frac{\partial}{\partial r}\left( \frac{e^{ikr}}{r}\right)  = ik \frac{e^{ikr}}{r} - \frac{e^{ikr}}{r^2}.
+\label{eq:05_56}
+\eeq
+Drugi člen v enačbi~(\ref{eq:05_55}) potem prepišemo v:
+\beq
+\oint_{S\varepsilon} \left( \frac{e^{ikr}}{r}\frac{\partial \Phi}{\partial \mathbf{n}}r^2 -
+ik\frac{e^{ikr}}{r}r^2\Phi + \frac{e^{ikr}}{r^2}\Phi r^2 \right) d\Omega.
+\label{eq:05_57}
+\eeq
+V limiti $\varepsilon \to 0$ gresta tako prvi kot 
+drugi člen proti 0, tretji člen pa gre proti vrednosti $4\pi \Phi(P_0)$. Faktor $4\pi$ 
+dobimo pri integraciji po polnem kotu. Rezultat povežemo in dobimo:
+\beq
+\Phi(P_0) = \frac{1}{4\pi} \oint_S \left( \frac{e^{ikr}}{r}\frac{\partial \Phi}{\partial \mathbf{n}} -
+\Phi\frac{\partial}{\partial \mathbf{n}}\left( \frac{e^{ikr}}{r} \right) \right) dS.
+\label{eq:05_58}
+\eeq
+Na ta način smo polje v opazovani točki $P_0$ izrazili s skalarnim poljem na sklenjeni površini
+$S$, ki to točko obdaja.
+
+Zdaj si zamislimo izvor valovanja $S$, ki oddaja krogelne valove oblike $\Phi = \exp(ikr')/r'$. Ti valovi
+vpadajo na objektni zaslon z odprtino (slika~\ref{fig:05_Kirchhoff}), nato pa jih opazujemo 
+v točki $P$ na drugi strani zaslona. Za izračun polja v točki $P$ moramo tako poznati polje na neki
+sklenjeni ploskvi, ki to točko obdaja.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_Kirchhoff.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Kirchhoff}
+\end{figure}
+
+Integracijsko ploskev okoli točke $P$ izberemo tako, da delno poteka po zaslonu, povsod drugje
+pa tako daleč stran, da so prispevki polja $\Phi$ zanemarljivo majhni. Polje na zaslonu in njegov odvod
+naj bosta povsod, razen v odprtini, enaka nič. Privzamemo tudi, da je polje
+v odprtini tako, kot da bi zaslona ne bilo. Potem za izračun polja v točki $P$ zadošča izračunati
+integral le po površini odprtine. 
+
+Izračunajmo smerni odvod:
+\beq
+\frac{\partial \Phi}{\partial \mathbf{n}} = (\nabla \Phi)\cdot \mathbf{n} = 
+\frac{\partial \Phi}{\partial r'} \frac{\mathbf{r'}}{r'}\cdot \mathbf{n} = \frac{\partial \Phi}{\partial r'} 
+\cos\left(\mathbf{r'},\mathbf{n}\right).
+\label{eq:05_59}
+\eeq
+Vstavimo še funkcijo $\Phi$ in izračunamo:
+\beq
+\frac{\partial \Phi}{\partial r'} = \frac{\partial}{\partial r'}\left(\frac{e^{ikr'}}{r'}\right) = 
+\frac{ikr'-1}{r'^2}e^{ikr'} \approx \frac{ikr'}{r'}e^{ikr'}.
+\label{eq:05_60}
+\eeq
+Privzeli smo, da je razdalja $r'$ bistveno večja od valovne dolžine svetlobe, in 1 v števcu zanemarilli. 
+Podobno izračunamo tudi drugi člen v enačbi~(\ref{eq:05_58}) in upoštevamo, da je $\lambda \ll r$. 
+Uporabimo enačbi~(\ref{eq:05_59} in \ref{eq:05_60}) in ju vstavimo v enačbo~(\ref{eq:05_58}). Dobimo:
+\beq
+\Phi(P_0) = \frac{1}{4\pi} \int_S \left( \frac{e^{ikr}}{r} \frac{ik}{r'}e^{ikr'} \cos\left(\mathbf{r'},\mathbf{n}\right)-
+\frac{e^{ikr'}}{r'} \frac{ik}{r}e^{ikr} \cos\left(\mathbf{r},\mathbf{n}\right)  \right) dS,
+\label{eq:05_61}
+\eeq
+od koder sledi:
+\beq
+\Phi(P_0) = \frac{ik}{4\pi} \int_S \frac{e^{ikr}e^{ikr'}}{rr'}
+\left( \cos\left(\mathbf{r'},\mathbf{n}\right) - \cos\left(\mathbf{r},\mathbf{n}\right) \right) dS.
+\label{eq:05_62}
+\eeq
+Razliko kosinusov imenujemo tudi oblikovni faktor. V geometriji, ki smo jo privzeli, navadno velja
+\beq
+\cos\left(\mathbf{r'},\mathbf{n}\right) \approx 1 \qquad \mathrm{in} \qquad \cos\left(\mathbf{r},\mathbf{n}\right) \approx -1.
+\label{eq:05_63}
+\eeq
+Potem se integral iz enačbe~(\ref{eq:05_62}) poenostavi v:
+\beq
+\Phi(P_0) = \frac{2ik}{4\pi} \int_S \frac{e^{ikr}e^{ikr'}}{rr'} dS = \frac{i}{\lambda} \int_S \frac{e^{ikr}e^{ikr'}}{rr'} dS.
+\label{eq:05_64}
+\eeq
+S tem smo izpeljali predfaktor v prvotni enačbi~(\ref{eq:05_01}).
