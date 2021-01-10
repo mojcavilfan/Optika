@@ -608,7 +608,74 @@ Podobno kot smo razvili $R$ (enačba~\ref{eq:05_69}), razvijemo tudi $R'$:
 R' \approx z_0' + \frac{1}{2}\frac{(x-x')^2+(y-y')^2}{2z_0'}.
 \label{eq:05_75}
 \eeq
-Oba izraza vstavimo v uklonski integral 
+Oba izraza vstavimo v uklonski integral (enačba~\ref{eq:05_66}) in dobimo:
+\boxeq{eq:05_76}{
+E(\xi, \eta, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int
+\int_{-\infty}^{\infty} f(x,y) e^{\frac{ik}{2z_0'}((x-x')^2+(y-y')^2)} e^{\frac{ik}{2z_0}((x-\xi)^2+(y-\eta)^2)}  dx dy
+}
+Pri tem smo člene v imenovalcu ulomka pred integralom približali z $z_0'$ in $z_0$. Zapisani izraz
+Fresnelovega približka je za analitično računanje precej zahtevnejši kot Fraunhoferjev uklon. Zato bomo obravnavali
+le dva primera: Fresnelove conske plošče in uklon na pravokotni reži oziroma ostrem robu.
+
+\begin{example}{\bf Fresnelova conska plošča.}
+V objektni ravnini imamo okroglo odprtino s polmerom $a$. Oz $z$ naj poteka skozi središče odprtine. 
+Točkasti izvor svetlobe leži na osi $z$ v razdalji $z_0'$ pred odprtino. Zanima nas intenziteta
+svetlobe na osi $z$ v razdalji $z_0$ za odprtino.
+
+Izhajamo iz enačbe~\ref{eq:05_76} in vstavimo $x'=y'=0$ in $\xi = \eta = 0$. Dobimo:
+\beq
+E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{-\infty}^{\infty}
+\int_{-\infty}^{\infty} f(x,y) e^{(ik/2z_0')(x^2+y^2)} e^{(ik/2z_0)(x^2+y^2)} dx dy
+\label{eq:05_77}
+\eeq
+Integral računamo v cilindričnih koordinatah in vpeljemo $\varrho = \sqrt{x^2 + y^2}$ ter
+\beq
+dx dy = 2 \pi \varrho d\varrho.
+\label{eq:05_78}
+\eeq
+Funkcija $f=1$ za $\varrho \leq a$, sicer je enaka 0. Dobimo:
+\beq
+E(0,0, z_0) = \frac{2\pi i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{0}^{a}
+e^{\frac{ik\varrho^2}{2}\left(\frac{1}{z_0'}+\frac{1}{z_0}\right)}\varrho d\varrho.
+\label{eq:05_79}
+\eeq
+Vpeljemo:
+\beq
+\frac{1}{L} = \frac{1}{z_0'} + \frac{1}{z_0} \qquad \mathrm{in} \qquad z_0'z_0 = L(z_0'+z_0).
+\label{eq:05_80}
+\eeq
+Izračunamo integral:
+\beq
+\int_0^a e^{ik\varrho^2/2L}\varrho d\varrho = \frac{L}{ik}\left(e^{ika^2/2L}-1\right) = 
+\frac{2L}{k}e^{ika^2/4L} \sin\left(\frac{ka^2}{4L}\right).
+\label{eq:05_81}
+\eeq
+Za gostoto energijskega toka $j$ dobimo:
+\beq
+j = 4 j_0 \sin\left(\frac{ka^2}{4L}\right),
+\label{eq:05_82}
+\eeq
+pri čemer smo z $j_0$ označili gostoto toka, kakršna bi bila na mestu opazovanja, 
+če ne bi bilo zaslona:
+\beq
+\frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
+\label{eq:05_83}
+\eeq
+Na sliki~\ref{eq:05_82} je narisana odvisnost gostote svetlobnega toka na danem 
+mestu od polmera odprtine $a$. Vidimo, da je največja vrednost, ki jo doseže $j$
+štirikratnik intenzitete $j_0$, ki bi bila na mestu mestu opazovanja brez zaslona. 
+Polmer $a_1$, pri katerem doseže vrednost $j$ prvi maksimum, imenujemo polmer
+prve Fresnelove cone in je enak:
+\beq
+\frac{ka_1^2}{4L} = \frac{\pi}{2} \qquad \mathrm{in} \qquad a_1  = \sqrt{\lambda L}.
+\label{eq:05_84}
+\eeq
+
+
+
+
+
+\end{example}
 
 
 
