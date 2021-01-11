@@ -1,8 +1,85 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Interferenca}
+Uklon in interferenca sta pravzaprav manifestacija enega in istega pojava 
+-- superpozicije optičnega polja. Pri poglavju o uklonu
+so nas zanimale predvsem uklonski vzorci oziroma slike. V poglavju
+o interferenci pa se bomo bolj posvetili aplikacijam, interferometrom.
 
 \section{Interferenca}
+Električno polje obravnavajmo kot skalarno količino. V eksperimentih
+to realiziramo tako, da uporabimo polarizirano valovanje, pri čemer
+imajo so vsa valovanja enako polarizirana. Valovanje je potem v splošnem 
+$E= E(\mathbf{r},t)$. 
+
+Izračunajmo naprej interferenčni vzorec dveh ravnih valovanj z enako
+polarizacijo in enako frekvenco. Valovanji zapišemo kot:
+\beq
+E_1 = E_{10} e^{i\mathbf{k}_1 \cdot \mathbf{r} - i \omega t + i \delta_1}
+\qquad \mathrm{in} \qquad
+E_2 = E_{20} e^{i\mathbf{k}_2 \cdot \mathbf{r} - i \omega t + i \delta_2}.
+\label{eq:06_01}
+\eeq
+Pri tem privzamemo, da sta $E_{10}$ in $E_{20}$ realni števili. Celotno
+električno polje je potem:
+\beq
+E = E_1 + E_2 = E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t},
+\label{eq:06_02}
+\eeq
+pri čemer sta $\phi_{1,2} = \mathbf{k}_{1,2} \cdot \mathbf{r} + \delta_{1,2}$. 
+Zanima nas gostota svetlobnega toka $j$, ki je enaka:
+\beq
+j = \left|\langle \mathbf{S}\rangle \right| = \frac{1}{2}\varepsilon \varepsilon_0 |E|^2c
+\label{eq:06_03}
+\eeq
+in 
+\beq
+j \propto (E_1+E_2)(E_1^*+E_2^*)  = 
+\left( E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t}\right)
+\left( E_{10} e^{-i\phi_1 + i \omega t} + E_{20} e^{-i\phi_2 + i \omega t}\right).
+\label{eq:06_04}
+\eeq
+Dobimo:
+\beq
+j \propto E_{10}^2 + E_{20}^2 + E_{10}E_{20} \left(e^{i\phi_1-i\phi_2}+ e^{-i\phi_1+i\phi_2}\right)
+\label{eq:06_05}
+\eeq
+in 
+\beq
+j = j_1 + j_2 + 2\sqrt{j_1 j_2} \cos(\Delta \phi),
+\label{eq:06_06}
+\eeq
+pri čemer sta $j_1$ in $j_2$ gostoti svetlobnih tokov prvega in drugega delnega valovanja,
+$\Delta \phi$ pa označuje razliko faz $\phi_1-\phi_2$. Le kadar je ta razlika neodvisna
+od časa, lahko v eksperimentu izmerimo tudi tretji člen v enačbi~(\ref{eq:06_06}). Sicer se 
+ta člen pri meritvi izpovpreči. V odvisnosti od (časovno neodvisnega) $\Delta \phi$,  
+gostota svetlobnega toka zavzema vrednosti:
+\beq
+\left(\sqrt{j_1}- \sqrt{j_2}\right)^2 < j < \left(\sqrt{j_1} +\sqrt{j_2}\right)^2.
+\label{eq:06_07}
+\eeq
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/06_kontrast.pdf_tex}
+\caption{SLIKA}
+\label{fig:06_kontrast}
+\end{figure}
+
+Vpeljemo vidljivost ali kontrast interferenčnega vzorca:
+\beq
+v = \frac{j_\mathrm{max}- j_\mathrm{min}}{j_\mathrm{max}+ j_\mathrm{min}},
+\label{eq:06_08}
+\eeq
+ki lahko zavzema vrednosti med 0 in 1.
+
+
+
+
+
+
+
+
 \section{Interferometri}
 \section{Delitev valovno fronte}
 \section{Delitev amplitude}

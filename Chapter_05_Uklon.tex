@@ -532,7 +532,7 @@ ki vpada na objektni zaslon, funkcija kraja $E_0 = E_0(x,y)$.
 
 Naj izvor svetlobe $S$, ki oddaja krogelno valovanje, leži v ravnini 
 $x'y'$. Razdalja med ravnino izvora svetlobe in objektno ravnino
-naj bo enaka $z_0'$ (slika~\ref{Fresnel}).
+naj bo enaka $z_0'$ (slika~\ref{fig:05_Fresnel}).
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
@@ -585,7 +585,8 @@ Kadar je zapisani pogoj izpolnjen, je Fresnelov približek veljaven.
 
 \begin{example}
 Naj bo razdalja med objektnim in opazovalnim zaslonom $z_0=1~\si{m}$ in 
-valovna dolžina svetlobe $500~\si{nm}$. Pogoj za Fresnelov približek
+valovna dolžina svetlobe $500~\si{nm}$. 
+Pogoj za Fresnelov približek
 uklona je izpolnjen, kadar je:
 \beq
 \frac{d^4}{z_0^4} \ll 8\frac{500~\si{nm}}{1~\si{m}} = 4\cdot 10^{-6},
@@ -621,6 +622,13 @@ le dva primera: Fresnelove conske plošče in uklon na pravokotni reži oziroma 
 V objektni ravnini imamo okroglo odprtino s polmerom $a$. Oz $z$ naj poteka skozi središče odprtine. 
 Točkasti izvor svetlobe leži na osi $z$ v razdalji $z_0'$ pred odprtino. Zanima nas intenziteta
 svetlobe na osi $z$ v razdalji $z_0$ za odprtino.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_FresCona.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_FresCona}
+\end{figure}
 
 Izhajamo iz enačbe~\ref{eq:05_76} in vstavimo $x'=y'=0$ in $\xi = \eta = 0$. Dobimo:
 \beq
@@ -658,10 +666,17 @@ j = 4 j_0 \sin\left(\frac{ka^2}{4L}\right),
 pri čemer smo z $j_0$ označili gostoto toka, kakršna bi bila na mestu opazovanja, 
 če ne bi bilo zaslona:
 \beq
-\frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
+j_0 = \frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
 \label{eq:05_83}
 \eeq
-Na sliki~\ref{eq:05_82} je narisana odvisnost gostote svetlobnega toka na danem 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_FresCona2.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_FresCona2}
+\end{figure}
+Na sliki~\ref{fig:05_FresCona2} je narisana odvisnost gostote svetlobnega toka na danem 
 mestu od polmera odprtine $a$. Vidimo, da je največja vrednost, ki jo doseže $j$
 štirikratnik intenzitete $j_0$, ki bi bila na mestu mestu opazovanja brez zaslona. 
 Polmer $a_1$, pri katerem doseže vrednost $j$ prvi maksimum, imenujemo polmer
@@ -670,18 +685,197 @@ prve Fresnelove cone in je enak:
 \frac{ka_1^2}{4L} = \frac{\pi}{2} \qquad \mathrm{in} \qquad a_1  = \sqrt{\lambda L}.
 \label{eq:05_84}
 \eeq
+Prva Fresnelova cona svetlobo svetlobo torej zbira in deluje kot zbiralna leča. 
+Sekundarni krogelni valovi, ki izhajajo iz območja znotraj prve Fresnelove cone, 
+se seštevajo. Poglejmo račun za primer odprtine v velikosti prve Fresnelove
+cone in $z_0' \to \infty$ oziroma $L = z_0$. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_FresCona3.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_FresCona3}
+\end{figure}
 
+Potem velja:
+\beq
+R^2 = z_0^2 + a_1^2 = z_0^2 + \lambda z_0.
+\label{eq:05_85}
+\eeq
+Fazni zamik za žarek oziroma valovanje, ki izvira iz roba cone, je:
+\beq
+\phi_1 = kR = k\sqrt{z_0^2+\lambda z_0}.
+\label{eq:05_86}
+\eeq
+Fazni zamik za valovanje iz sredine cone pa je:
+\beq
+\phi_0 = kz_0.
+\label{eq:05_87}
+\eeq
+Dokler je fazna zakasnitev med žarki iz sredine in žarki z roba odprtine
+manjša od $\pi$ oziroma razlika v dolžini poti manjša od $\lambda/2$, 
+se žarki seštevajo in intenziteta na mestu $z_0$ narašča. Preverimo, ali 
+se ta ugotovitev ujema s pogojem za prvo Fresnelovo cono:
+\beq
+R - z = \sqrt{z_0^2 + \lambda z_0} - z_0  \approx z_0 + \frac{\lambda}{2} - z_0 = \frac{\lambda}{2}.
+\label{eq:05_88}
+\eeq
+Če polmer odprtine povečamo na območje $a>a_1$, se pojavijo valovi v protifazi in 
+prispevki iz sredine odprtine in z roba odprtine se odštevajo. Zato z naraščajočim
+polmerom intenziteta svetlobe pojema. Minimum doseže pri $a_2$, za katerega velja:
+\beq
+\frac{ka_2^2}{4L} = \pi
+\label{eq:05_89}
+\eeq
+in $a_2 = \sqrt{2\lambda L}$. Kolobar z notranjim polmerom 
+$a_1 = \sqrt{\lambda L}$ in zunanjim polmerom $a_2 = \sqrt{2\lambda L}$
+imenujemo druga Fresnelova cona. Na splošno je N-ta Fresnelova cona
+kolobar, ki ga omejujeta polmera $a_{N-1}$ in $a_N$:
+\beq
+a_{N-1} = \sqrt{(N-1)\lambda L} < a < a_{N} = \sqrt{N \lambda L}.
+\label{eq:05_90}
+\eeq
+V tretji Fresnelovi coni $j$ spet narašča, nato v območju $a_3 - a_4$ spet pojema ...
 
-
-
-
+{\bf Fresnelova uklonska leča}: Če ohranimo v ravnini $xy$ le tiste kolobarje oziroma
+cone, ki so ali samo lihe ali samo sode, se prispevki vseh con seštevajo. Taka
+naprava (conska plošča) zbira svetlobo na podoben način kot klasična leča. Gostota 
+svetlobnega toka v točki $P_0$ je pri uporabi conske plošče dosti večja, kot bi bila 
+v primeru, če bi izvor svetlobe točko osvetljeval neposredno. Tovrstne plošče so
+uporabne za zabiranje svetlobe, kadar nimamo možnosti izdelave leč (na primer 
+leče za žarke X. Glavna slabost Fresnelovih uklonskih leč je njihova kromatična
+aberacija -- odvisnost goriščne razdalje od valovne dolžine svetlobe $f= f(L)$.
+Goriščno razdaljo lahko izračunamo, da upoštevamo $z_0'\to \infty$:
+\beq
+\frac{1}{z_0'}+ \frac{1}{z_0}= \frac{1}{z_0} = \frac{1}{L} = \frac{1}{f},
+\label{eq:05_91}
+\eeq
+od koder sledi:
+\beq
+f = \frac{a_1^2}{\lambda}.
+\label{eq:05_92}
+\eeq
+Goriščno razdaljo conske leče z velikim številom plošč lahko tudi izračunamo:
+\beq
+a_{N+1}^2 - a_N^2 = \lambda (N+1)L - \lambda NL = \lambda L. 
+\label{eq:05_93}
+\eeq
+Po drugi strani velja:
+\beq
+a_{N+1}^2 - a_N^2 = \left(a_{N+1}+a_N\right)\left(a_{N+1}- a_N\right) = 2\overline{a}\Delta a.
+\label{eq:05_94}
+\eeq
+Od tod sledi:
+\beq
+f = \frac{a_1^2}{\lambda} = \frac{2 \overline{a}\Delta a}{\lambda}.
+\label{eq:05_95}
+\eeq
 \end{example}
 
+\begin{example}{\bf Fresnelov uklon na robu in pravokotni reži.}
+Kot drugi primer uporabe Fresnelovega uklonskega približka 
+izračunajmo uklonsko sliko na ostrem robu oziroma na pravokotni 
+reži. Oz $z$ izberemo tako, da točkasti izvor svetlobe $S$ in
+opazovalna točka $P_0$  ležita na njej, pravokotna reža s
+koordinatami $x_1<x<x_2$ in $y_1<y<y_2$ pa naj leži v objektni
+ravniki, ki je pravokotna na zveznico med točkama $S$ in $P_0$.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_FresPravokot.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_FresPravokot}
+\end{figure}
 
+Uklonski integral (enačba~\ref{eq:05_76}) je potem:
+\beq
+E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{x_1}^{x_2}
+\int_{y_1}^{y_2} e^{\frac{ik(x^2+y^2)}{2L}}  dx dy
+\label{eq:05_96}
+\eeq
+oziroma:
+\beq
+E(P_0) \propto \int_{u_1}^{u_2} e^{i\frac{\pi}{2}u^2} du
+\int_{v_1}^{v_2} e^{i\frac{\pi}{2}v^2} dv,
+\label{eq:05_97}
+\eeq
+ pri čemer smo uvedli novi spremenljivki:
+ \beq
+ u = \sqrt{\frac{k}{\pi L}}x \qquad \mathrm{in} \qquad v = \sqrt{\frac{k}{\pi L}}y.
+ \label{eq:05_98}
+ \eeq
+ Zapisana integrala izrazimo s Fresnelovima integraloma $S(x)$ in $C(x)$.
+\begin{remark}
+Fresnelova integrala sta oblike:
+\beq
+C(u) = \int_0^u \cos\left(\frac{1}{2}\pi x^2\right) dx \qquad \mathrm{in} \qquad 
+S(v) = \int_0^v \sin\left(\frac{1}{2}\pi x^2\right) dx. 
+\label{eq:05_99}
+\eeq
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_CS.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_CS}
+\end{figure}
+To sta dve transcedentni funkciji, ki ju moramo izračunati numerično. Tipične
+vrednosti so $C(-\infty) = -1/2$; $C(0) = 0$; $C(\infty) = 1/2$ in enako za $S$, 
+pri čemer sta obe funkciji lihi. Skupaj ju združimo v integral:
+\beq
+\int_{0}^{u} e^{i\frac{\pi}{2}u^2} du = C(u)+iS(u) = \frac{1+i}{2}\erf \left(\frac{\sqrt{\pi}(1-i)u}{2}\right).
+\label{eq:05_100}
+\eeq
+\end{remark}
 
+Fresnelovo uklonsko sliko na pravokotni odprtini torej zapišemo kot:
+\beq
+E(P_0) \propto \left( C(u) + iS(u) \right) \left|_{u_1}^{u_2} \cdot 
+\left( C(v) + iS(v) \right) \right|_{v_1}^{v_2}.
+\label{eq:05_101}
+\eeq
 
+Na osnovi rezultata lahko obravnavamo tudi uklon na ravnem robu. 
+To ustreza enodimenzionalnemu primeru $x_1 \to \infty$ oziroma $u_1 \to \infty$
+in $x_2 = d$ oziroma $u_2  = d\sqrt{k/\pi L}$. Uklonska slika
+je potem:
+\beq
+E(P_0) \propto C(u_2) + i S(u_2) + \frac{1}{2} + i \frac{1}{2},
+\label{eq:05_102}
+\eeq
+od koder sledi:
+\beq
+j(P_0) \propto |E(P_0)|^2  \propto \left(C(u_2) + \frac{1}{2}\right)^2 + \left(S(u_2) + \frac{1}{2}\right)^2.
+\label{eq:05_103}
+\eeq
+Zanima nas odvinost $j(d)$. Namesto da pri izračunu zaslon miruje in spreminjamo opazovalno
+točko $P_0$ vzdolž osi $\xi$, točko $P_0$ ohranjamo in si mislimo, da se premika rob zaslona 
+v smeri osi $x$, pri čemer negativne vrednosti $d$ ustrezajo geometrijski senci. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_FresRob.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_FresRob}
+\end{figure}
 
-
+\begin{remark}
+Fresnelova integrala $C(u)$ in $S(u)$  lahko prikažemo grafično tako, da narišemo
+krivuljo v parametrični obliki $C(t), S(t)$ v 2D-ravnini. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_Cornu.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Cornu}
+\end{figure}
+Poglejmo nekaj lasnosti te parametrične krivulje, ki jo imenujemo tudi Cornujeva oziroma
+Eulerjeva spirala. Pri vrednosti $t\to \infty$ je vrednost $(1/2, 1/2)$ in pri 
+$t\to -\infty$ je vrednost $(-1/2, -1/2)$. 
+Dolžina krivulje? Strmina krivulje? Ukrivljenost krivulje je sorazmerna z dolžino
+trajektorije (poti). 
+\end{remark}
+\end{example}
 
 
 \section{*Izpeljava Kirchhoffovega uklonskega integrala}
