@@ -6,6 +6,12 @@ Uklon in interferenca sta pravzaprav manifestacija enega in istega pojava
 so nas zanimale predvsem uklonski vzorci oziroma slike. V poglavju
 o interferenci pa se bomo bolj posvetili aplikacijam, interferometrom.
 
+'Interferometry' is a measurement method using the phenomenon of interference of waves (usually light, radio or sound waves). The measurements may include those of certain characteristics of the waves themselves and the materials that the waves interact with. In addition, interferometry is used to describe the techniques that use light waves for the study of changes in displacement. This displacement measuring interferometry is extensively used for calibration and mechanical stage motion control in precision machining.
+
+By using two light beams (usually by splitting one beam into two), an interference pattern can be formed when these two beams superpose. Because the wavelength of the visible light is very short, small changes in the differences in the optical paths (distance travelled) between the two beams can be detected (as these differences will produce noticeable changes in the interference pattern). Hence, the optical interferometry has been a valuable measurement technique for more than a hundred years. Its accuracy has later been improved with the invention of lasers. 
+
+Interferometers are widely used in science and industry for the measurement of small displacements, refractive index changes and surface irregularities. 
+
 \section{Interferenca}
 Električno polje obravnavajmo kot skalarno količino. V eksperimentih
 to realiziramo tako, da uporabimo polarizirano valovanje, pri čemer
@@ -73,6 +79,125 @@ v = \frac{j_\mathrm{max}- j_\mathrm{min}}{j_\mathrm{max}+ j_\mathrm{min}},
 \eeq
 ki lahko zavzema vrednosti med 0 in 1.
 
+V posebnem primeru, ko sta amplitudi obeh valovanj enaki $E_{01} = E_{02} = E_0$ in velja 
+$j_1 = j_2 = j_0$, dobimo:
+\beq
+j = 2j_0 + 2j_0 \cos (\Delta \phi) = 4j_0 \cos^2 (\Delta \phi/2)
+\label{eq:06_09}
+\eeq
+Interferenčni vzorec dveh enako močnih snopov svetlobe zavzame vrednosti med 0 
+in $4j_0$, kar pomeni, da je kontrast takega vzorca enak 1. 
+
+Kako pa je z ohranitvijo energijskega toka? Pri interferenci se energijski 
+tok seveda ohranja, pride le do preporazdelitve energije. Povprečni energijski 
+tok čez veliko območje prostora pa je 
+\beq
+\langle j \rangle = \frac{1}{2}(4j_0) = 2j_0,
+\label{eq:06_10}
+\eeq
+kar ustreza gostoti energijskega toka začetnih dveh valovanj. 
+
+Poglejmo interferenco dveh valovanj, ki pod kotom vpadata eno glede na drugo.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/06_interferenca.pdf_tex}
+\caption{SLIKA}
+\label{fig:06_interferenca}
+\end{figure}
+Potem prvo valovanje zapišemo kot:
+\beq
+E_1 = e^{ik_\perp x} e^{ik_z z}e^{-i\omega t}
+\label{eq:06_11}
+\eeq
+in drugo kot:
+\beq
+E_1 = e^{-ik_\perp x} e^{ik_z z}e^{-i\omega t},
+\label{eq:06_12}
+\eeq
+pri čemer sta vektorja:
+\beq
+\mathbf{k}_1 = (k_\perp,0, k_z) \qquad \mathrm{in} \qquad \mathbf{k}_2 = (-k_\perp,0, k_z).
+\label{eq:06_13}
+\eeq
+Interferenca teh dveh valovanj da:
+\beq
+E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_\perp x}+e^{-ik_\perp x} \right) = 
+E_0 e^{ik_z z -i\omega t } 2 \cos(k_\perp x).
+\label{eq:06_14}
+\eeq
+Interferenčni vzorec, ki ga opazujemo, je:
+\beq
+j = 4 j_0 \cos^2(k_\perp x).
+\label{eq:06_15}
+\eeq
+
+\section{Interferenca z delitvijo valovne fronte}
+V večini interferometričnih ustvarimo interferenco z enim samim snopom svetlobe, 
+ki ga razdelimo na dva dela. To lahko naredimo na dva načina: lahko razdelimo
+valovno fronto valovanja (npr. Youngov poskus) ali pa razdelimo amplitudo
+valovanja (npr. Michelsonov interferometer). 
+
+Najpomembnejši primer interference z delitvijo valovne fronte je nedvomno
+Youngov poskus (1801), ki je angleškega fizika Thomasa Younga vodil do spoznanja,
+da je svetloba transverzalno valovanje. Pri tem poskusu vpadno valovanje iz 
+monokromatskega izvora simetrično usmerimo na zaslon, v katerem sta dve enaki ozki
+reži in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovTorej potrebujemoanje mora biti 
+koherentno. Več o tej lastnosti valovanja 
+bomo spoznali v poglavju~\label{chap:Koherenca}.}. Uklonsko sliko 
+pravzaprav že poznamo, saj jo lahko izračunamo s Fraunhoferjevim 
+uklonskim približkom.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/06_Young.pdf_tex}
+\caption{SLIKA}
+\label{fig:06_Young}
+\end{figure}
+
+Naj bodo $z_0$ razdalja od objektnega zaslona do opazovalnega zaslona, $D$ razdalja 
+med središčema rež, $r_1$ razdalja med sredino prve reže in izbrano točko na zaslonu
+ter $r_2$ razdalja med sredino druge reže in točko na zaslonu. Potem za velike 
+oddaljenosti $r_1, r_2 \gg D$ velja:
+\beq
+\Delta r = r_1-r_2 \approx D \sin\vartheta,
+\label{eq:06_16}
+\eeq
+pri čemer je $\vartheta$ kot med osjo $z$ in zveznico med točko na sredini med režama in
+izbrano točko na opazovalnem zaslonu. Uporabimo enačbo~(\ref{eq:06_09}) in dobimo:
+\beq
+j = 4 j_0 \cos^2\left(\frac{\Delta \Phi}{2}\right) = 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right).
+\label{eq:06_17}
+\eeq
+
+V točkah, kjer se prispevka obeh valovanj seštevata, nastopi tako imenovana
+konstruktivna interferenca in na zaslonu opazimo ojačitve. Pogoj za ojačitev zapišemo kot:
+\beq
+\frac{kD\sin \vartheta}{2} = N\pi,
+\label{eq:06_18}
+\eeq
+pri čemer je $N$ celo število. Od tod izračunamo pogoj za kote $\vartheta_\mathrm{max}$, pri katerih
+se pojavijo vrhovi:
+\boxeq{eq:InterferencaMax}{
+D \sin\vartheta = N \lambda.
+}
+Ker je leva stran enačbe enaka razliki poti od rež do točke na zaslonu, je zapis preprosto razumeti:
+razlika poti od središč rež do točke na zaslonu mora biti enaka večkratniku valovne dolžine valovanja.
+
+V vmesnih točkah, kjer se prispevka valovanj odštevata, je destruktivna
+interferenca in na zaslonu opazimo oslabitve (temne proge). Podobno kot za ojačitve
+zapišemo pogoj za oslabitve:
+\boxeq{eq:InterferencaMin}{
+D \sin\vartheta = \left(N + \frac{1}{2}\right)\lambda.
+}
+
+Vzorec, ki se pojavi v daljnjem polju oziroma na oddaljenem zaslonu,
+je periodičen s periodo ponavljanja $\Delta \xi_0$. Izračunajmo jo. Velja:
+\beq
+\Delta \left(\frac{kD\sin \vartheta}{2}\right) = \pi.
+\label{eq:06_19}
+\eeq
+Za majhne kote $\vartheta$ velja 
 
 
 
@@ -80,8 +205,15 @@ ki lahko zavzema vrednosti med 0 in 1.
 
 
 
-\section{Interferometri}
-\section{Delitev valovno fronte}
+
+
+
+
+
+
+
+
+
 \section{Delitev amplitude}
 \section{Tanka plast}
 \section{Fabry-Perotov interferometer}
