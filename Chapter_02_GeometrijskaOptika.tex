@@ -2,16 +2,17 @@
 
 \chapter{Geometrijska optika}
 V tem poglavju bomo na kratko predstavili geometrijsko optiko,
-v kateri svetlobo obravnavamo kot ravne žarke. Zapisali bomo žarkovno
-enačbo, opisali prehod skozi optične elemente z matrikami ABCD in na nekaj 
+v kateri svetlobo obravnavamo kot ravne žarke. Zapisali bomo
+žarkovno enačbo, vpeljali matrike ABCD za račun prehoda svetlobe
+skozi optične elemente in na
 primerih pokazali njihovo uporabo. Na koncu bomo opisali 
-delovanje nekaterih optičnih naprav. 
+delovanje nekaterih preprostih optičnih naprav. 
 
-\section{Optična pot in Fermatov teorem}
+\section{Fermatov teorem in optična pot}
 V uvodnem zgodovinskem pregledu smo zapisali Fermatov teorem, 
 ki pravi, da svetloba med dvema točkama potuje po tisti poti, 
 za katero potrebuje najmanj časa. Označimo
-hitrost svetlobe v snovi s $c$, pri čemer se ta razlikuje
+hitrost svetlobe v snovi s $c$ in na splošno se  $c$ razlikuje
 od hitrosti svetlobe v praznem prostoru $c_0$. Razmerje med
 hitrostjo svetlobe v praznem prostoru in njeno hitrostjo
 v snovi opisuje lomni količnik $n$. Velja:
@@ -23,31 +24,31 @@ po definiciji enaka $c_0 = 299\,\,792\,\,458~\si{m/s}$,
 lomni količnik pa je odvisen od snovi in frekvence svetlobe: za vidno svetlobo
 je v vodi približno $1,3$, v steklih okoli $1,4$--$1,9$ in v diamantu $2,4$.
 
-Naj svetloba potuje po snovi z lomnim količnikom $n$. Potem lahko zapišemo čas $t$, 
-ki ga svetloba potrebuje, da prepotuje določeno pot $s$, kot:
+Naj svetloba potuje po snovi z lomnim količnikom $n$. Celotno pot, ki 
+jo svetloba opravi od začetne do končne točke, razdelimo na kratke intervale 
+poti $ds$. Za ločni element $ds$ potrebuje svetloba čas $dt$, ki ga zapišemo kot:
 \begin{equation}
  dt = \frac{ds}{c} = \frac{ds}{c_0/n} = \frac{nds}{c_0}.
 \label{eq:02_02}
 \end{equation}
-Fermatov teorem pravi, da svetloba potuje po poti, za katero je:
+Fermatov teorem pravi, da svetloba potuje po poti, za katero velja:
 \beq
-\frac{nds}{c_0} = \mathrm{min}.
+\int_1^2 dt = \int_1^2 \frac{nds}{c_0} = \mathrm{min}.
 \label{eq:02_03}
 \eeq
-V homogeni snovi svetloba torej potuje naravnost in ne spreminja smeri.
-Vpeljemo pojem optične poti $S$, to je produkta fizične poti $s$ in lomnega količnika
-na tej poti $n$. V splošnem se lomni količnik $n$ lahko s krajem spreminja, zato moramo
-optično pot zapisati v diferencialni obliki in jo integrirati od začetne do končne točke v
-prostoru. Dobimo: 
+Če je lomni količnik konstanten, svetloba potuje naravnost in 
+ne spreminja smeri. Na splošno pa se lomni količnik spreminja s 
+krajem, zato teorem prepišemo v:
 \boxeq{eq:02_04}{
 S = \int_1^2 n(\mathbf{r})ds = \mathrm{min}.
 }
+Celotni integral $S$ imenujemo optična pot, ki se od geometrijske poti razlikuje v tem,
+da upošteva tudi lomni količnik snovi. 
 Zapisani izraz imenujemo princip najmanjše optične poti oziroma najmanjše optične akcije. 
 Problem je podoben principu najmanjše akcije v klasični mehaniki, zato včasih govorimo  
 tudi o Langrangeevi oziroma Hamiltonovi optiki.
 \begin{remark}
-Princip najmanjše optične poti temelji na predpostavki, ki jo je privzel 
-Fermat v zapisu svojega teorema. Isti pogoj lahko formalno izpeljemo z 
+Princip najkrajše optične poti lahko formalno izpeljemo z 
 obravnavo valovnih front in žarkov v valovni optiki, če naredimo limito $\lambda \to 0$.
 Tako lahko izhajajoč iz Maxwellovih enačb pokažemo pravilnost Fermatovega teorema.
 \end{remark}
@@ -57,18 +58,18 @@ Tako lahko izhajajoč iz Maxwellovih enačb pokažemo pravilnost Fermatovega teo
 Naj svetlobni žarek vpada na ravno mejo dveh snovi. Levo od meje je snov 
 z lomnim količnikom $n_1$, desno pa snov z lomnim količnikom $n_2$. Naj svetloba
 potuje od točke 1, ki jo izberemo na oddaljenosti $z_1$ levo 
-od meje, do točke 2 na oddaljenosti $z_2$ desno od meje. Vertikalna razdalja med obema
-točkama naj bo $x$ (glej sliko~\ref{fig:01_FerLom}). 
+od meje, do točke 2 na oddaljenosti $z_2$ desno od meje. Vzdolžna razdalja med obema
+točkama naj bo $x$ (slika~\ref{fig:01_FerLom}). 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/02_FerLom.pdf_tex}
-\caption{K izračunu loma na meji dveh sredstev}
+\caption{K izračunu loma na meji dveh snovi}
 \label{fig:01_FerLom}
 \end{figure}
 
-Naša naloga je poiskati točko na meji, skozi katero potuje žarek svetlobe,
-ob pogoju, da je skupna optična pot od točke 1 do točke 2 najmanjša.
+Naša naloga je poiskati pot žarka svetlobe od točke 1 do točke 2 ob pogoju, 
+da je skupna optična pot najkrajša.
 Celotno optično pot zapišemo kot:
 \begin{equation}
 S = n_1 s_1 + n_2 s_2 = n_1 \sqrt{x_1^2+z_1^2}\, +\, n_2 \sqrt{x_2^2+z_2^2}.
@@ -86,34 +87,34 @@ pri kateri je odvod optične poti po $x_1$ enak nič. Zapišemo:
 \frac{-2n_2 (x-x_1)}{2 \sqrt{(x-x_1)^2+z_2^2}} = 0.
 \label{eq:02_07}
 \end{equation}
-Vpadni kot $\alpha$ vpeljemo glede na normalo na mejo snovi (slika~\ref{fig:01_FerLom}):
+Vpeljemo vpadni kot $\alpha$ glede na normalo na mejo snovi (slika~\ref{fig:01_FerLom}):
 \begin{equation}
 \sin \alpha = \frac{x_1}{\sqrt{x_1^2+z_1^2}}.
 \label{eq:02_08}
 \end{equation}
-Vpeljemo še lomni kot $\beta$, ki je kot med smerjo žarka v drugi snovi in normalo na mejo snovi: 
+Lomni kot $\beta$ naj bo kot med smerjo žarka v drugi snovi in normalo na mejo snovi: 
 \begin{equation}
 \sin \beta = \frac{x_2}{\sqrt{x_2^2+z_2^2}} = \frac{(x-x_1)}{\sqrt{(x-x_1)^2+z_2^2}}.
 \label{eq:02_09}
 \end{equation}
 Vstavimo enačbi~(\ref{eq:02_08}) in (\ref{eq:02_09}) v enačbo~(\ref{eq:02_07})
-in zapišemo lomni zakon v obliki, kot jo poznamo:
+in dobimo lomni zakon v znani obliki:
 \boxeq{eq:lomnizakon}{
 n_1 \sin \alpha = n_2 \sin \beta.
 }
-Podobno lahko izpeljemo tudi odbojni zakon, tako da izračunamo 
-najkrajšo optično pot med točkama 1 in 3 in dobimo:
+Na podoben način izpeljemo tudi odbojni zakon, tako da izračunamo 
+najkrajšo optično pot med točkama 1 in 3. Dobimo:
 \boxeq{eq:odbojnizakon}{
 \tilde{\alpha} = \alpha.
 }
 \end{example}
 
 \section{Žarkovna enačba}
-Poglejmo, kako se lotimo računa najkrajše optične poti v primeru, ko 
+Poglejmo, kako izračunamo najkrajšo optično poti v primeru, ko 
 meja med dvema snovema ni ostra, ampak se lomni količnik zvezno spreminja. 
 Naj bo lomni količnik v splošnem funkcija kraja: $n = n(\mathbf{r}) = n(x,y,z)$.
-Numerično se tega problema lotimo tako, da snov razdelimo
-na majhne elemente in na mejah med njimi uporabimo lomni ali odbojni zakon.
+Numerično se naloge lotimo tako, da snov razdelimo
+na kratke odseke in na mejah med njimi uporabimo lomni ali odbojni zakon.
 Analitično problem rešujemo z uporabo Euler-Lagrangeeve enačbe za minimum
 funkcionala optične poti $S$:
 \begin{equation}
@@ -166,13 +167,12 @@ Enačbo~(\ref{eq:02_15}) uporabimo še enkrat v oklepaju na levi strani. Sledi:
  \frac{\partial n}{\partial x}.
   \label{eq:02_17}
 \end{equation}
-Podobni enačbi zapišemo še za koordinati $y$ in $z$. Vse tri enačbe
+Podobni enačbi zapišemo še za koordinati $y$ in $z$, nato vse tri enačbe
 združimo v enotno žarkovno enačbo:
 \boxeq{eq:zarkovnaenacba}{
 \nabla n = \frac{d}{ds} \left( n \frac{d\mathbf{r}}{ds}\right)\!.
 }
-Rešitev žarkovne enačbe $\mathbf{r}(s)$ poda trajektorijo
-optičnega žarka.
+Rešitev žarkovne enačbe poda trajektorijo optičnega žarka.
 
 \begin{example}
 {\bf Žarkovna enačba v homogeni snovi.} Naj svetloba potuje po snovi,
