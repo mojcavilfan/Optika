@@ -584,7 +584,7 @@ preslika v $(x_2, \vartheta_2)$.
 \label{fig:02_tankaleca}
 \end{figure}
 
-Izračunajmo najprej matriko za lečo. Ker smo privzeli, da je leča tanka, 
+Izračunajmo najprej matriko za prehod skozi lečo. Ker smo privzeli, da je leča tanka, 
 vmesne matrike za premik po steklu ne zapišemo. Z upoštevanjem enačbe~(\ref{eq:02_44})
 dobimo:
 \beq
@@ -607,8 +607,8 @@ Vpeljemo parameter $f$, za katerega velja:
 \frac{1}{f} = -\frac{n_2-n_1}{n_1}\left(\frac{1}{R_2}-\frac{1}{R_1}\right)\!\!.
 \label{eq:02_48}
 \eeq
-Element matrike $C$ potem zapišemo kot $-1/f$. Pomen tega parametra
-bomo še spoznali.
+Element matrike $C$ je tako enak $-1/f$. Fizikalni pomen tega parametra
+bomo kmalu spoznali.
 
 Uporabimo izračunano matriko za opis prehoda svetlobe skozi lečo. Naj žarek izhaja iz 
 predmeta, ki je na oddaljenosti $a$ od leče, opazujemo pa ga na razdalji
@@ -638,7 +638,7 @@ M =
 \label{eq:02_49}
 \eeq
 Najprej poiščimo pomen parametra $f$, ki smo ga vpeljali z enačbo~(\ref{eq:02_48}).
-Poglejmo, v kaj se preslika žarek, ki na poljubni oddaljenosti od osi $x_1$ vpada na lečo 
+Poglejmo, v kaj se preslikajo žarki, ki na neki oddaljenosti od osi $x_1$ vpadajo na lečo 
 vzporedno z optično osjo $z$:
 \beq
 \left[\begin{array}{c}
@@ -659,16 +659,16 @@ x_1\\
 \end{array}\right]\!\!.
 \label{eq:02_51}
 \eeq
-Da se vsi vzporedni žarki pri poljubnem $x_1$ zberejo 
-v eni točki, mora veljati $1-b/f = 0$ in $b=f$. Vzporedni
-žarki se torej zberejo na oddaljenosti $f$ od leče, zato 
+Vsi vzporedni vpadni žarki se zberejo v eni točki, kadar velja $1-b/f = 0$ in $b=f$. 
+Vzporedni žarki se torej zberejo na oddaljenosti $f$, zato 
 parameter $f$ prestavlja goriščno razdaljo leče. 
-Ker navadno obravnavamo lečo v zraku, enačbo~(\ref{eq:02_48})
-poenostavljeno zapišemo  kot:
+Ker navadno obravnavamo lečo v zraku, enačbo~(\ref{eq:02_48}) za izračun 
+goriščne razdalje leče poenostavljeno zapišemo  kot:
 \boxeq{eq:goriscna}{
 \frac{1}{f} = \left(n-1\right)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\!\!,
 }
-pri čemer je $n$ lomni količnik stekla, iz katerega je leča narejena.
+pri čemer je $n$ lomni količnik stekla, iz katerega je leča narejena, $R_1$ in $R_2$ pa 
+sta krivinska radija mejnih ploskev leče.
 
 Vrnimo se k izračunani matriki (enačba~\ref{eq:02_49}).
 Da na desni strani leče nastane slika predmeta, se morajo 
@@ -679,6 +679,7 @@ Ta zahteva je izpolnjena le ob pogoju, da je element matrike prehoda $B = 0$ in 
 \frac{1}{f} = \frac{1}{a}+\frac{1}{b}.
 }
 Dobili smo enačbo leče, ki povezuje lego predmeta z lego njegove slike.
+
 Razmerje med velikostima slike $x_2$ in predmeta $x_1$ določa
 element matrike $A$, ki ga z upoštevanjem enačbe~(\ref{eq:PreslikavaLeca})
 zapišemo kot:
@@ -688,9 +689,9 @@ A= 1-\frac{b}{f} = 1 - b\left(\frac{1}{a}+\frac{1}{b}\right) = -\frac{b}{a}.
 \eeq
 Povečava leče je tako enaka:
 \boxeq{eq:PovecavaLece}{
-\frac{x_2}{x_1} =-\frac{b}{a},
+\frac{x_2}{x_1} =-\frac{b}{a}.
 }
-pri čemer negativni predznak pomeni obrnjeno sliko 
+Negativni predznak pomeni, da je slika predmeta desno od leče obrnjena na glavo
 (glej sliko~\ref{fig:02_slikazaleco}).
 \begin{figure}[!ht]
 \centering
@@ -703,31 +704,31 @@ nastane pokočna navidezna slika na isti strani, kot je predmet. V tem primeru v
 \label{fig:02_slikazaleco}
 \end{figure}
 
-Če je predmet blizu leče in velja $a<f$, je po enačbi~(\ref{eq:PreslikavaLeca}) 
-vrednost $b$ negativna. 
-Žarki desno od leče se ne sekajo, temveč se sekajo podaljški 
+Če je predmet oddaljen od leče več kot je goriščna razdalja, nastane na desni
+strani na glavo obrnjena prava slika, ki jo lahko projiciramo na zaslon. Če je 
+predmet blizu leče in velja $a<f$, je po enačbi~(\ref{eq:PreslikavaLeca}) 
+vrednost $b$ negativna. Žarki desno od leče se ne sekajo, temveč se sekajo podaljški 
 žarkov levo od leče. Slika predmeta je tako le navidezna in je
 ne moremo projicirati na zaslon. Povečava take slike je pozitivna, 
-kar pomeni, da je navidezna slika pravilno obrnjena.
+kar pomeni, da je navidezna slika pokončno obrnjena.
 
 Opisani izračun je bil narejen na primeru bikonveksne leče, vendar velja
 povsem splošno za poljubno tanko lečo. Paziti moramo le na predznake krivinskih
 radijev vstopne in izstopne ploskve. Če je ena stranica leče ravna, je 
 njen krivinski radij neskončen. 
 
-\begin{example}{\bf Preslikava z dvema zaporednima lečama}
+\begin{example}{\bf Preslikava z dvema zaporednima lečama.}
 Poglejmo prehod svetlobe skozi dve zaporedni tanki leči z goriščnima
 razdaljama $f_1$ in $f_2$, ki sta na medsebojni oddaljenosti $s$.
 \begin{figure}[!h]
 \centering
-\def\svgwidth{70truemm} 
-%\input{slike/02_lecje.pdf_tex}
+\def\svgwidth{100truemm} 
+\input{slike/02_dveleci.pdf_tex}
 \caption{Prehod svetlobe skozi sistem dveh tankih leč}
 \label{fig:02_lecje}
 \end{figure}
 
-Matriko 
-za prehod z leve proti desni zapišemo kot:
+Matriko sistema dveh leč za prehod z leve proti desni zapišemo kot:
 \beq
 M = 
 \left[\begin{array}{cc}
@@ -748,10 +749,11 @@ M =
 \end{array}\right]\!\!.
 \label{eq:02_54}
 \eeq
-Izračunajmo zdaj goriščno razdaljo takega sistema in lego gorišča
+Izračunajmo goriščno razdaljo takega sistema in lego gorišča
 na desni strani. Za opis  žarkov desno
 od sistema je treba matriko prehoda pomnožiti še z matriko premika. 
-Naj bodo vpadni žarki vzporedni z optično ravnino in jih zapišemo 
+
+Naj bodo vpadni žarki vzporedni z optično osjo in jih zapišemo 
 v obliki vektorja $(x_1,0)$. Izhodne žarke potem izračunamo kot:
 \beq
 \left[\begin{array}{c}
@@ -778,7 +780,7 @@ Cx_1
 \end{array}\right]\!\!,
 \label{eq:02_55}
 \eeq
-pri čemer so elementi matrike podani z enačbo~(\ref{eq:02_54}). 
+pri čemer so elementi matrike ABCD podani z enačbo~(\ref{eq:02_54}). 
 Po definiciji se vzporedni vpadni žarki po prehodu sekajo v gorišču, 
 zato je naklon izhodnega žarka $\vartheta_2 = -x_1/f$ in $C = -1/f$. 
 Od tod razberemo goriščno razdaljo sistema:
@@ -790,43 +792,26 @@ Oddaljenost gorišča od desne leče določimo iz pogoja, da je v gorišču $x_2
 d = -\frac{A}{C} = \frac{f_1f_2-sf_2}{f_1+f_2-s}.
 \label{eq:02_56}
 \eeq
-
-Pri sestavu leč vpeljemo še glavno ravnino, to je ravnino, v kateri bi 
+Pri sestavu leč pogosto vpeljemo glavno ravnino. To je ravnina, pravokotna
+na optično os, v kateri bi 
 bila postavljena nadomesta tanka leča. Dobimo jo tako, da poiščemo 
 presečišče žarkov, ki vpadajo na sistem vzporedno z optično osjo, 
-in žarkov, ki iz sestava izhajajo desno od lečja. Lego glavne ravnine je preprosto
-določiti, saj vemo, da je gorišče od glavne ravnine oddaljeno ravno 
-za goriščno razdaljo. Ker oba parametra poznamo, lahko hitro izračunamo
-tudi lego glavne ravnine.
+in žarkov ali njihovih podaljškov, ki iz sestava izhajajo desno od lečja. 
+Lego glavne ravnine je preprosto določiti, saj vemo, da je gorišče od glavne 
+ravnine oddaljeno ravno za goriščno razdaljo.
 
-Račun, ki smo ga naredili do zdaj, je bil narejen za prehod svetlobe iz
+Račun je bil narejen za prehod svetlobe iz
 leve proti desni strani. Ker se leči v splošnem razlikujeta in matrike
 ne komutirajo, je prehod z desne proti levi drugačen. Skupna goriščna
-razdalja ostane enaka, premakneta pa se lega gorišča (ki ga imenujemo
-levo gorišče) in glavne ravnine.
-
-Poglejmo za konec še pogoj, pri katerem so izhodni žarki iz sistema 
-vzporedni z optično osjo. Da to velja pri vseh vstopnih $x$, mora biti 
-element matrike $C$ enak nič in:
-\beq
-s = f_1 + f_2.
-\label{eq:02_57}
-\eeq
-Povečava takega sistema je z upoštevanjem enačbe~(\ref{eq:02_57}) enaka:
-\beq
-\frac{x_2}{x_1} = 1 - \frac{s}{f_1} = \frac{f_2}{f_1}.
-\label{eq:02_58}
-\eeq
-Postavitev dveh leč na oddaljenost, ki je enaka vsoti goriščnih razdalj
-leč, je praktično zelo pomembna, saj predstavlja postavitev leč pri 
-daljnogledu oziroma teleskopu.
+razdalja ostane enaka, premakneta pa se lega gorišča in glavna ravnina.
 \end{example}
 
 \begin{example}{\bf Preslikava z debelo lečo}
 Matriko za prehod skozi debelo lečo s krivinskima radijema
 $R_1$ in $R_2$ ter debelino $d$ lahko neposredno izračunamo
 z množenjem treh matrik: matrike za prehod skozi ukrivljeno vstopno 
-ploskev, matrike za premik in matrike za prehod skozi ukrivljeno izstopno ploskev:
+ploskev, matrike za premik znotraj leče in matrike za prehod skozi 
+ukrivljeno izstopno ploskev, pri čemer naj bo $n_1 = 1$:
 \beq
 M = 
 \left[\begin{array}{cc}
@@ -842,20 +827,19 @@ M =
 \left[\begin{array}{cc}
 1& 0\\
 \frac{1-n}{nR_1}&\frac{1}{n}
-\end{array}\right]
+\end{array}\right]\!\!.
 \label{eq:02_52}
 \eeq
-Pri tem smo privzeli, da je leča v zraku in $n_1 = 1$.
-
 Matriko za prehod pa lahko izračunamo še na podlagi podobnosti 
-s sistemom dveh leč. Razdelimo debelo lečo
+s sistemom dveh leč. Debelo lečo razdelimo
 na tri dele: vstopno plankonveksno lečo, plast stekla in izstopno plankonkavno lečo.
-Goriščni razdalji leč potem zapišemo kot (enačba~\ref{eq:goriscna}):
+Goriščni razdalji leč zapišemo z uporabo enačbe~(\ref{eq:goriscna}), pri čemer upoštevamo, 
+da je krivinski radij ravne stranice neskončen:
 \beq
-\frac{1}{f_1} = (n-1)\frac{1}{R_1}\qquad \mathrm{in} \qquad \frac{1}{f_2} = (n-1)\frac{-1}{R_2}.
+\frac{1}{f_1} = (n-1)\frac{1}{R_1}\qquad \mathrm{in} \qquad \frac{1}{f_2} = -(n-1)\frac{1}{R_2}.
 \label{eq:02_53}
 \eeq
-Pri vmesnemu prehodu skozi plast stekla moramo upoštevati njegov
+Pri vmesnemu prehodu skozi steklo moramo upoštevati tudi njegov
 lomni količnik. Na splošno se pri prehodu žarka skozi plast snovi debeline $d$
 z lomnim količnikom $n$ matrika zapiše kot:
 \beq
@@ -876,9 +860,9 @@ M =
 1& \frac{d}{n}\\
 0&1
 \end{array}\right]\!\!.
-\label{eq:02_54}
+\label{eq:02_54a}
 \eeq
-Vidimo, da se efektivna dolžina poti skrajša za faktor $n$.
+Efektivna dolžina poti skozi snov je torej skrajšana za faktor $n$.
 
 Ugotovitve vstavimo v enačbo za lečje (enačba~\ref{eq:02_54}) in dobimo:
 \beq
@@ -887,7 +871,7 @@ M =
 1-\frac{d}{nf_1}& \frac{d}{n}\\
 -\frac{1}{f_2}-\frac{1}{f_1}+\frac{d}{nf_1f_2}&1-\frac{d}{nf_2}
 \end{array}\right]\!\!.
-\label{eq:02_53}
+\label{eq:02_53a}
 \eeq
 Hitro lahko preverimo, da dobimo isti rezultat, če zmnožimo matrike v enačbi~(\ref{eq:02_52}).
 Prav tako hitro preverimo tudi, da je izračunana matrika za debelo lečo v limitnem 
@@ -907,3 +891,18 @@ Bolj zanimiva je obravnava krogelnih zrcal. Tudi
 mikroskop, daljnogled, spektroskop, oko, korekcijska očala. Kaj astronomskega? Nujno dodati.
 
 
+Poglejmo za konec še pogoj, pri katerem so izhodni žarki iz sistema 
+vzporedni z optično osjo. Da to velja pri vseh vstopnih $x$, mora biti 
+element matrike $C$ enak nič in:
+\beq
+s = f_1 + f_2.
+\label{eq:02_57}
+\eeq
+Povečava takega sistema je z upoštevanjem enačbe~(\ref{eq:02_57}) enaka:
+\beq
+\frac{x_2}{x_1} = 1 - \frac{s}{f_1} = \frac{f_2}{f_1}.
+\label{eq:02_58}
+\eeq
+Postavitev dveh leč na oddaljenost, ki je enaka vsoti goriščnih razdalj
+leč, je praktično zelo pomembna, saj predstavlja postavitev leč pri 
+daljnogledu oziroma teleskopu.
