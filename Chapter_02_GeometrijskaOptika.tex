@@ -566,25 +566,27 @@ Pri tem moramo paziti na vrstni red zapisa matrik.}
 \label{fig:01_MMM}
 \end{figure}
 
-\section{Leče in zrcala}
+\section{Preslikave z lečami in zrcali}
 Uporabimo matrike ABCD za izračun prehoda svetlobe skozi tanko lečo. Matriko
-za prehod skozi lečo zapišemo kot produkt dveh matrik: prve, ki opiše
-prehod skozi prvo ukrivljeno ploskev s krivinskim polmerom $R_1$, 
+za prehod zapišemo kot produkt dveh matrik: prve, ki opiše
+prehod skozi prvo ukrivljeno ploskev s krivinskim radijem $R_1$, 
 in druge, ki opiše prehod skozi izhodno ukrivljeno ploskev s 
-krivinskim radijem $R_2$. Oglejmo si primer bikonveksne leče,
-za katero je krivinski radij prve ploskve pozitiven, druge pa negativen
-(slika~\ref{fig:02_tankaleca}). Lomni količnik leče naj bo $n_2$ in 
-snovi okoli leče (navadno je to zrak) $n_1$.
+krivinskim radijem $R_2$. Za bikonveksno lečo, na primer, je 
+$R_1>0$ in $R_2<0$ (glej sliko~\ref{fig:02_tankaleca}). 
+Lomni količnik leče naj bo $n_2$ in snovi okoli leče 
+(navadno je to zrak) $n_1$. Zanima nas, kako se vektor $(x_1, \vartheta_1)$ 
+preslika v $(x_2, \vartheta_2)$.
 \begin{figure}[!h]
 \centering
-\def\svgwidth{70truemm} 
-%\input{slike/02_tankaleca.pdf_tex}
+\def\svgwidth{100truemm} 
+\input{slike/02_tankaleca.pdf_tex}
 \caption{K izračunu matrike ABCD za prehod skozi tanko bikonvkesno lečo}
 \label{fig:02_tankaleca}
 \end{figure}
 
-Ker smo privzeli, da je leča tanka, vmesne matrike za premik po prostoru 
-ne zapišemo. Dobimo:
+Izračunajmo najprej matriko za lečo. Ker smo privzeli, da je leča tanka, 
+vmesne matrike za premik po steklu ne zapišemo. Z upoštevanjem enačbe~(\ref{eq:02_44})
+dobimo:
 \beq
  M = \left[\begin{array}{cc}
 1& 0\\
@@ -600,17 +602,17 @@ ne zapišemo. Dobimo:
 \end{array}\right]\!\!.
 \label{eq:02_47}
 \eeq
-Vpeljimo nov parameter $f$, za katerega velja:
+Vpeljemo parameter $f$, za katerega velja:
 \beq
-\frac{1}{f} = \frac{n_2-n_1}{n_1}\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\!\!,
+\frac{1}{f} = -\frac{n_2-n_1}{n_1}\left(\frac{1}{R_2}-\frac{1}{R_1}\right)\!\!.
 \label{eq:02_48}
 \eeq
-tako da spodnji levi element matrike zapišemo kot $-1/f$. Pomen tega parametra
-bomo spoznali v nadaljevanju.
+Element matrike $C$ potem zapišemo kot $-1/f$. Pomen tega parametra
+bomo še spoznali.
 
-Uporabimo zdaj matriko za izračun prehoda svetlobe skozi lečo. Naj žarek izhaja iz 
+Uporabimo izračunano matriko za opis prehoda svetlobe skozi lečo. Naj žarek izhaja iz 
 predmeta, ki je na oddaljenosti $a$ od leče, opazujemo pa ga na razdalji
-$b$ za lečo. Za prehod žarka moramo zmnožiti tri matrike: matriko za 
+$b$ za lečo. Za celotno pot žarka moramo zmnožiti tri matrike: matriko za 
 premik do leče, matriko za prehod skozi lečo in matriko za premik do opazovalca.
 Dobimo:
 \beq
@@ -635,46 +637,8 @@ M =
 \end{array}\right]\!\!.
 \label{eq:02_49}
 \eeq
-
-Če želimo, da na desni strani leče nastane prava slika predmeta, se morajo vsi
-žarki, ki izhajajo iz ene točke predmeta (neodvisno od njihovega naklona), zbrati
-v eni točki. Ta zahteva je izpolnjena le ob pogoju, da je element $B = 0$
-in velja:
-\boxeq{eq:PreslikavaLeca}{
-\frac{1}{f} = \frac{1}{a}+\frac{1}{b}.
-}
-Dobili smo enačbo leče.
-
-Razmerje med velikostjo slike $x_2$ in velikostjo predmeta $x_1$ določa
-element matrike $A$, ki ga z upoštevanjem enačbe~(\ref{eq:PreslikavaLeca})
-zapišemo kot:
-\beq
-A= 1-\frac{b}{f} = 1 - b\left(\frac{1}{a}+\frac{1}{b}\right) = -\frac{b}{a}.
-\label{eq:02_50}
-\eeq
-Povečava leče je tako:
-\boxeq{eq:PovecavaLece}{
-\frac{x_2}{x_1} =-\frac{b}{a},
-}
-pri čemer negativni predznak pomeni obrnjeno sliko 
-(glej sliko~\ref{fig:02_slikazaleco}).
-\begin{figure}[!h]
-\centering
-\def\svgwidth{70truemm} 
-%\input{slike/02_slikazaleco.pdf_tex}
-\caption{Nastanek prave (levo) in navidezne (desno) slike pri prehodu
-skozi tanko bikonveksno lečo}
-\label{fig:02_slikazaleco}
-\end{figure}
-
-Če je $a<f$, je po enačbi~(\ref{eq:PreslikavaLeca}) vrednost $b$ negativna. 
-Žarki desno od leče se ne sekajo, temveč se sekajo podaljški 
-žarkov levo od leče. Slika predmeta je tako le navidezna in je
-ne moremo projicirati na zaslon. Povečava take slike je pozitivna, 
-kar pomeni, da je navidezna slika pravilno obrnjena. 
-
-Za konec poglejmo še pomen parametra $f$, ki smo ga vpeljali z enačbo~(\ref{eq:02_48}).
-Poglejmo, v kaj se preslika žarek, ki na poljubni oddaljenosti od osi $x$ vpada na lečo 
+Najprej poiščimo pomen parametra $f$, ki smo ga vpeljali z enačbo~(\ref{eq:02_48}).
+Poglejmo, v kaj se preslika žarek, ki na poljubni oddaljenosti od osi $x_1$ vpada na lečo 
 vzporedno z optično osjo $z$:
 \beq
 \left[\begin{array}{c}
@@ -686,27 +650,67 @@ x_2\\
 -\frac{1}{f}&1-\frac{a}{f}
 \end{array}\right] \cdot
 \left[\begin{array}{c}
-x\\
+x_1\\
 0
 \end{array}\right] = 
 \left[\begin{array}{c}
-\left(1-\frac{b}{f}\right)x\\
--\frac{x}{f}
+\left(1-\frac{b}{f}\right)x_1\\
+-\frac{x_1}{f}
 \end{array}\right]\!\!.
 \label{eq:02_51}
 \eeq
-Da bo lega slike neodvisna od $x$ in se bodo vsi vzporedni žarki zbrali 
-v eni točki, mora veljati $1-b/f = 0$ in $b=f$. Parameter $f$ torej 
-prestavlja goriščno razdaljo leče. 
-
-Ker navadno obravnavamo lečo v zraku, lahko poenostavljeno zapišemo goriščno
-razdaljo leče kot:
+Da se vsi vzporedni žarki pri poljubnem $x_1$ zberejo 
+v eni točki, mora veljati $1-b/f = 0$ in $b=f$. Vzporedni
+žarki se torej zberejo na oddaljenosti $f$ od leče, zato 
+parameter $f$ prestavlja goriščno razdaljo leče. 
+Ker navadno obravnavamo lečo v zraku, enačbo~(\ref{eq:02_48})
+poenostavljeno zapišemo  kot:
 \boxeq{eq:goriscna}{
 \frac{1}{f} = \left(n-1\right)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\!\!,
 }
 pri čemer je $n$ lomni količnik stekla, iz katerega je leča narejena.
 
-Opisani izračun je bil narejen na primeru bikonveksne leče, ampak velja
+Vrnimo se k izračunani matriki (enačba~\ref{eq:02_49}).
+Da na desni strani leče nastane slika predmeta, se morajo 
+žarki, ki izhajajo iz ene točke predmeta na levi, zbrati
+v eni točki na desni strani leče, neodvisno od njihovega naklona.
+Ta zahteva je izpolnjena le ob pogoju, da je element matrike prehoda $B = 0$ in velja:
+\boxeq{eq:PreslikavaLeca}{
+\frac{1}{f} = \frac{1}{a}+\frac{1}{b}.
+}
+Dobili smo enačbo leče, ki povezuje lego predmeta z lego njegove slike.
+Razmerje med velikostima slike $x_2$ in predmeta $x_1$ določa
+element matrike $A$, ki ga z upoštevanjem enačbe~(\ref{eq:PreslikavaLeca})
+zapišemo kot:
+\beq
+A= 1-\frac{b}{f} = 1 - b\left(\frac{1}{a}+\frac{1}{b}\right) = -\frac{b}{a}.
+\label{eq:02_50}
+\eeq
+Povečava leče je tako enaka:
+\boxeq{eq:PovecavaLece}{
+\frac{x_2}{x_1} =-\frac{b}{a},
+}
+pri čemer negativni predznak pomeni obrnjeno sliko 
+(glej sliko~\ref{fig:02_slikazaleco}).
+\begin{figure}[!ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/02_slikazaleco.pdf_tex}
+\caption{Kadar je predmet bolj oddaljen od leče kot je goriščna razdalja ($a>f$),
+nastane obrnjena prava slika desno od leče. 
+V tem primeru sta $a,b>0$ (levo). Če je predmet blizu leče in velja $a<f$,
+nastane pokočna navidezna slika na isti strani, kot je predmet. V tem primeru velja $a>0$ in $b<0$.}
+\label{fig:02_slikazaleco}
+\end{figure}
+
+Če je predmet blizu leče in velja $a<f$, je po enačbi~(\ref{eq:PreslikavaLeca}) 
+vrednost $b$ negativna. 
+Žarki desno od leče se ne sekajo, temveč se sekajo podaljški 
+žarkov levo od leče. Slika predmeta je tako le navidezna in je
+ne moremo projicirati na zaslon. Povečava take slike je pozitivna, 
+kar pomeni, da je navidezna slika pravilno obrnjena.
+
+Opisani izračun je bil narejen na primeru bikonveksne leče, vendar velja
 povsem splošno za poljubno tanko lečo. Paziti moramo le na predznake krivinskih
 radijev vstopne in izstopne ploskve. Če je ena stranica leče ravna, je 
 njen krivinski radij neskončen. 
