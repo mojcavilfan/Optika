@@ -566,7 +566,8 @@ Pri tem moramo paziti na vrstni red zapisa matrik.}
 \label{fig:01_MMM}
 \end{figure}
 
-\section{Preslikave z lečami in zrcali}
+\section{Preslikave z lečami}
+\label{chap:lecje}
 Uporabimo matrike ABCD za izračun prehoda svetlobe skozi tanko lečo. Matriko
 za prehod zapišemo kot produkt dveh matrik: prve, ki opiše
 prehod skozi prvo ukrivljeno ploskev s krivinskim radijem $R_1$, 
@@ -751,7 +752,7 @@ M =
 \eeq
 Izračunajmo goriščno razdaljo takega sistema in lego gorišča
 na desni strani. Za opis  žarkov desno
-od sistema je treba matriko prehoda pomnožiti še z matriko premika. 
+od sistema je treba matriko prehoda pomnožiti še z matriko premika za $d$. 
 
 Naj bodo vpadni žarki vzporedni z optično osjo in jih zapišemo 
 v obliki vektorja $(x_1,0)$. Izhodne žarke potem izračunamo kot:
@@ -877,32 +878,318 @@ Hitro lahko preverimo, da dobimo isti rezultat, če zmnožimo matrike v enačbi~
 Prav tako hitro preverimo tudi, da je izračunana matrika za debelo lečo v limitnem 
 primeru $d \to 0$ enaka matriki za prehod skozi tanko lečo. 
 \end{example}
+
+\begin{remark}
+Vsi izračuni so bili narejeni v obosnem 
+približku, v katerem je smer žarka le malo odstopala od smeri optične osi. V praksi se lahko 
+zgodi, da ta pogoj ni izpolnjen in preslikani žarki se ne sekajo v isti točki. Ta pojav opišemo
+kot napako leče. Poleg navedenega je še vrsta drugih razlogov, na primer nepravilnost leče 
+ali odvisnost lomnega količnika leče od valovne dolžine, ki vodijo do popačenja slike. 
+Marsikatero od teh nepravilnost lahko odpravimo tako, da namesto ene same leče uporabimo 
+zapleten sestav leč, ki deluje podobno kot ena idealna leča. Fotografski objektivi so 
+tako navadno sestavljeni iz vsaj treh do štirih leč, zapletenejši tudi več kot petnajstih.
+\end{remark}
  
-\subsection*{Odboj svetlobe na zrcalih}
+\section{Odboj svetlobe na zrcalih}
 Obravnavajmo na kratko še odboj svetlobe na zrcalih. Pri ravnih zrcalih je 
-preprosto. Vse slike posamezne točke se po odboju zberejo v eni točki, navidezna slika, 
-ki pri tem nastane, pa je enako velika in enako obrnjena kot predmet.
+preprosto. Vse slike posamezne točke se po odboju zberejo v eni točki, 
+navidezna slika, ki pri tem nastane, pa je enako velika in enako obrnjena kot predmet.
+Matrika ABCD, ki opiše odboj od takega zrcala, je identiteta. Pri tem se moramo
+seveda zavedati, da žarek po odboju spremeni smer in z njim tudi os $z$.
 
-Bolj zanimiva je obravnava krogelnih zrcal. Tudi 
+Poiščimo še matriko za odboj od ukrivljenega zrcala. Naj bo krivinski radij zrcala
+$R$, pri čemer za konkanvna zrcala, pri katerih sta predmet in krivinsko središče
+na isti strani zrcala, velja $R>0$. Pri odboju na zrcalu se lega žarka ne spremeni,
+in $x_2 = x_1$. Od tod takoj izračunamo prva dva elementa matrike ABCD: $A = 1$ in 
+$B=0$. Pri transformaciji kota si pomagamo s sliko~\ref{fig:02_zrcalo}. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{100truemm} 
+%\input{slike/02_zrcalo.pdf_tex}
+\caption{K izračunu matrike ABCD za oodboj na kroglastem zrcalu}
+\label{fig:02_zrcalo}
+\end{figure}
+Naj bo $\alpha$ kot med optično osjo in zveznico med središčem krožnice in točko, 
+v kateri vpada žarek na zrcalo. Žarek naj se širi pod kotom $\vartheta$, tako da
+je vpadni kot glede na normalo na zrcalo enak $\vartheta_1 - \alpha$. Kot, pod katerim 
+se žarek obije glede na vodoravnico naj bo $\vartheta_2$, tako da je odbojni kot glede
+na normalo na zrcalo enak $\vartheta_2 + \alpha$. Po odbojnem zakonu sta vpadni in odbojni
+kot enaka, zato:
+\beq
+\vartheta_1 - \alpha = \vartheta_2+\alpha.
+\label{eq:02_60}
+\eeq
+Za majhne vrenosti velja $\alpha \approx x/R$, od koder sledi:
+\beq
+\vartheta_2 = \vartheta_1 - \frac{2}{R}x.
+\label{eq:02_61a}
+\eeq
+Od tod lahko razberemo elementa matrike $C = -2/R$ in $D = 1$. Celotna matrika za odboj 
+na zrcalu je potem:
+\begin{equation}
+ M = \left[\begin{array}{cc}
+1& 0\\
+-\frac{2}{R}&1
+\end{array}\right]\!\!.
+ \label{eq:02_62}
+\end{equation}
+Naj žarek vpada na zrcalo v smeri vzporedno z optično osjo $(x_1, 0)$:
+\begin{equation}
+\left[\begin{array}{c}
+x_2\\
+\vartheta_2
+\end{array}\right]
+= \left[\begin{array}{cc}
+1& 0\\
+-\frac{2}{R}&1
+\end{array}\right]\cdot
+\left[\begin{array}{c}
+x_1\\
+0
+\end{array}\right] = 
+\left[\begin{array}{c}
+x_1\\
+-\frac{2x_1}{R}
+\end{array}\right]\!\!.
+ \label{eq:02_63}
+\end{equation}
+Žarek tik po odboju svoje lege ne spremeni, spremeni pa svojo smer.
+Ker je usmerjen proti gorišču, je podobno kot
+pri obravnavi leče njegova smer $\vartheta_2 = -x_1/f$. 
+Od tod razberemo goriščno razdaljo krogelnega zrcala kot:
+\boxeq{eq:02_zrcalof}{
+f = \frac{R}{2}.
+}
+Preslikajmo še poljuben predmet, ki je na razdalji $a$ od temena zrcala in poiščimo
+njegovo sliko na mestu $b$:
+\beq
+M = 
+\left[\begin{array}{cc}
+1& b\\
+0&1
+\end{array}\right]\cdot
+\left[\begin{array}{cc}
+1& 0\\
+-\frac{2}{R}&1
+\end{array}\right]
+\cdot
+\left[\begin{array}{cc}
+1& a\\
+0&1
+\end{array}\right]
+= 
+\left[\begin{array}{cc}
+1-\frac{2b}{R}& a+b-\frac{2ab}{R}\\
+-\frac{2}{R}&1-\frac{2a}{R}
+\end{array}\right]\!\!.
+\label{eq:02_64}
+\eeq
+Da po odboju nastane ostra slika predmeta, mora biti element matrike $B=0$ 
+(glej enačbo~\ref{eq:PreslikavaLeca}). To velja, kadar je izpolnjen pogoj:
+\boxeq{eq:PreslikavaZrcalo}{
+\frac{1}{f} = \frac{2}{R} = \frac{1}{a}+\frac{1}{b}.
+}
+Pri konkavnem zrcalu je $R>0$, vrednosti $a$ in $b$ pa sta pozitivni, če sta 
+na isti strani kot krožno središče. Za predmete, ki so od zrcala oddaljeni več 
+kot gorišče, je vrednost $b$ pozitivna, slika, ki nastane pa prava in obrnjena. 
+Za predmete, za katere velja $a<f$, se odbiti žarki ne sekajo, zato prava slika
+ne nastane. Navidezna slika nastane, kjer se sekajo podaljški odbitih žarkov 
+(slika~\ref{fig:02_zrcaloodboj}).
+\begin{figure}[!ht]
+\centering
+\def\svgwidth{140truemm} 
+%\input{slike/02_zrcaloodboj.pdf_tex}
+\caption{Kadar je predmet bolj oddaljen od zrcala kot je goriščna razdalja ($a>f$),
+nastane na isti strani zrcala obrnjena prava slika. 
+V tem primeru sta $a,b>0$ (levo). Če je predmet blizu leče in velja $a<f$,
+nastane pokočna navidezna slika na drugi strani zrcala. V tem primeru velja $a>0$ in $b<0$.}
+\label{fig:02_zrcaloodboj}
+\end{figure}
+Povsem enako kot pri lečah izračunamo tudi povečavo zrcala. Element matrike $A$
+preoblikujemo z upoštevanjem enačbe~(\ref{eq:PreslikavaZrcalo}) in dobimo:
+\boxeq{eq:PovecavaZrcala}{
+\frac{x_2}{x_1} =-\frac{b}{a}.
+}
+Gornji izračun je bil narejen na primeru konkavnega zrcala. Vendar so rezultati
+povsem splošni in veljajo za vsa ukrivljena zrcala, pri čemer
+je krivinski radij konveksnih zrcal negativen, krivinski radij ravnih zrcal pa je 
+neskončen in matrika preslikave identiteta. 
 
+Z vpeljavo matrike za preslikavo z zrcalom lahko na preprost način v izračun
+poti žarka v obosnem približku vključimo tudi zrcala. Vendar ne pozabimo, da se
+pri odboju na zrcalu spremeni smer optične osi, kar moramo upoštevati v nadaljnjem računu.
 
-\section{Optične naprave}
+\section{Preproste optične naprave}
+Za konec si oglejmo še delovanje nekaterih optičnih naprav. Obravnavali jih bomo 
+v najpreprostejši, a zato najbolj nazorni obliki. Izhajamo iz sestava dveh leč, ki 
+smo jih obravnavali v razdelku~\ref{chap:lecje}. 
 
-mikroskop, daljnogled, spektroskop, oko, korekcijska očala. Kaj astronomskega? Nujno dodati.
-
-
-Poglejmo za konec še pogoj, pri katerem so izhodni žarki iz sistema 
-vzporedni z optično osjo. Da to velja pri vseh vstopnih $x$, mora biti 
-element matrike $C$ enak nič in:
+\subsection*{Razširjevalec snopov}
+Spomnimo se matričnega zapisa prehoda skozi sistem dveh leč z goriščnima razdaljama
+$f_1$ in $f_2$, ki sta na medsebojni razdalji $s$ (enačba~\ref{eq:02_54}). Poiščimo
+pogoj, pri katerem so tako vpadni kot izhodni žarki iz sistema vzporedni z optično osjo.
+Da je ta pogoj izpolnjen pri vseh vstopnih $x$, mora biti 
+element prehodne matrike $C$ enak nič:
+\beq
+C = -\frac{1}{f_1}-\frac{1}{f_2} + \frac{s}{f_1f_2} = 0,
+\label{eq:02_65}
+\eeq
+od koder sledi:
 \beq
 s = f_1 + f_2.
 \label{eq:02_57}
 \eeq
+Vzporedni vpadni žarki izhajajo kot vzporedni žarki, kadar goriščni ravnini leč sovpadata.
 Povečava takega sistema je z upoštevanjem enačbe~(\ref{eq:02_57}) enaka:
 \beq
-\frac{x_2}{x_1} = 1 - \frac{s}{f_1} = \frac{f_2}{f_1}.
+\frac{x_2}{x_1} = A = 1 - \frac{s}{f_1} = \frac{f_2}{f_1}.
 \label{eq:02_58}
 \eeq
-Postavitev dveh leč na oddaljenost, ki je enaka vsoti goriščnih razdalj
-leč, je praktično zelo pomembna, saj predstavlja postavitev leč pri 
-daljnogledu oziroma teleskopu.
+Če je goriščna razdalja druge leče večja od goriščne razdalje prve leče, 
+lahko širino snopa vzporednih vpadajočih žarkov močno povečamo -- žarek razširimo.
+Tako napravo zato imenujemo razširjevalec snopov in je zelo uporabna v optičnih laboratorijih.
+
+\subsection*{Teleskop in daljnogled}
+Teleskop in daljnogled uporabljamo za opazovanje zelo oddaljenih predmetov, 
+zato lahko privzamemo, da vpadajo žarki s teh predmetov na optični sistem praktično vzporedno. 
+Naj bo zorni kot, pod katerim vidimo oddaljen predmet brez teleskopa, ena $\vartheta_1$.
+Da so vzporedni tudi izhodni žarki, uporabimo lečje, pri katerem je razdalja med 
+lečama enaka vsoti goriščnih razdalj obeh leč. Vstopno lečo imenujemo objektiv, 
+izstopno lečo pa okular. Pravo sliko, ki nastane po prehodu objektiva
+opazujemo z okularjem, nastala slika pa je v tej preprosti izvedbi obrnjena. 
+
+Poiščimo še povečavo takega preprostega teleskopa. Vpadni žarek, ki gre skozi središče
+objektiva, je enak $(0,\vartheta_1)$. Izračunajmo izhodni žarek po prehodu skozi 
+optični sistem, ki ga v splošnem opisuje matrika (enačba~\ref{eq:02_54}). Dobimo:
+\beq
+\left[\begin{array}{c}
+x_2\\
+\vartheta_2
+\end{array}\right] = 
+\left[\begin{array}{cc}
+1-\frac{f_1+f_2}{f_1}& f_1+f_2\\
+-\frac{1}{f_1}-\frac{1}{f_2}+\frac{f_1+f_2}{f_1f_2}&1-\frac{f_1+f_2}{f_2}
+\end{array}\right] 
+\cdot
+\left[\begin{array}{c}
+0\\
+\vartheta_1
+\end{array}\right]  = 
+\left[\begin{array}{c}
+(f_1+f_2) \vartheta_1\\
+-\frac{f_1}{f_2}\vartheta_1
+\end{array}\right]\!\!.
+\label{eq:02_66}
+\eeq
+Zorni kot, pod katerim vidimo izhodne žarke $\vartheta_2$ je enak vstopnemu zornemu kotu, 
+pomnoženemu z razmerjem goriščnih razdalj leč:
+\boxeq{eq:teleskop}{
+\vartheta_2 = -\frac{f_1}{f_2}\vartheta_1.
+}
+Če je goriščna razdalja objektiva $f_1$ večja
+kot goriščna razdalja okularja $f_2$, vidimo oddaljen predmet povečan.
+Negativni predznak pri razmerju pomeni, da vidimo sliko obrnjeno na glavo. 
+
+V praksi so teleskopi precej bolj zapleteni. Lahko so sestavljeni iz kombinacije
+konveksnih in konkavnih leč, skoraj vedno pa vsebujejo tudi zrcala. 
+
+\subsection*{Mikroskop}
+Za opazovanje majnih predmetov uporabimo mikroskop. Preprost mikroskop je sestavljen
+iz dveh leč: objektiva, ki je bliže predmetu, in okularja, ki je bliže očesu. Obe leči 
+naj bosta zbiralni z goriščnima razdaljama $f_1$ in $f_2$ na oddaljenosti $s$. Predmet
+postavimo blizu objektivu, vendar dovolj daleč, da velja $a>f_1$. Za objektivom 
+nastane prava, povečana in obrnjena slika predmeta. Nastalo sliko opazujemo z okularjem, 
+tako da so izhodni žarki vzporedni in izhajajo iz sistema pod kotom $\vartheta_2$. Gorišče
+okularja mora ležati v ravnini, v kateri nastane slika od objektiva.
+
+Izračunajmo še povečavo preprostega mikroskopa, sestavljena iz dveh zbiralnih leč. Izhajamo
+iz matrike za prehod skozi sistem (enačba~\ref{eq:02_54}). Vstopni žarek izberemo vzporeden
+z optično osjo $(x_1, 0)$, izhodni pa naj bo $(0, \vartheta_2)$. Dobimo:
+\beq
+\left[\begin{array}{c}
+0\\
+\vartheta_2
+\end{array}\right] = 
+\left[\begin{array}{cc}
+1-\frac{s}{f_1}& s\\
+-\frac{1}{f_1}-\frac{1}{f_2}+\frac{s}{f_1f_2}&1-\frac{s}{f_2}
+\end{array}\right] 
+\cdot
+\left[\begin{array}{c}
+x_1\\
+0
+\end{array}\right]  = 
+\left[\begin{array}{c}
+\left(1-\frac{s}{f_1}\right)x_1\\
+\left(\frac{s}{f_1f_2}-\frac{1}{f_1}-\frac{1}{f_2}\right)x_1
+\end{array}\right]\!\!.
+\label{eq:02_67}
+\eeq
+Vpeljemo $d$ kot razdaljo med notranjimi gorišči mikroskopa
+$d= s -f_1-f_2$ in izračunamo zorni kot, pod katerim opazujemo predmet:
+\beq
+\vartheta_2 = \frac{dx_1}{f_1f_2}.
+\label{eq:02_69}
+\eeq
+Povečavo mikroskopa vpeljemo glede na zorni kot, pod katerim 
+normalno vidimo predmet s prostim očesom, to je:
+\beq
+\vartheta_0 = \frac{x_1}{a_0},
+\label{eq:02_70}
+\eeq
+pri čemer je po dogovoru normalna vidna razdalja $a_0 = 25~\si{cm}$.
+Povečava mikroskopa je potem razmerje zornih kotov:
+\beq
+\frac{\vartheta_2}{\vartheta_0} = \frac{da_0}{f_1f_2}.
+\eeq
+
+\subsection*{Oko in korekcijska očala}
+Človeško oko ima na vstopni strani bikonveksno lečo, ki vpadno 
+svetlobo zbere na mrežnici. Goriščna razdalja očesne leče je 
+okoli $2~\si{cm}$, vendar je njena goriščna razdalja spremenljiva, 
+da se lahko prilagaja za opazovanje tako bližnjih kot oddaljenih
+predmetov. 
+
+Če slika predmeta, ki nastane po prehodu skozi očesno lečo,
+ne nastane točno na mrežnici, oseba potrebuje korekcijska očala.
+Daljnovidnost nastopi, kadar slika preslikanih predmetov nastane
+za mrežnico. Oseba oddaljene predmete vidi ostro, očesna leča 
+pa ne more imeti dovolj kratke goriščne razdalje, da bi ostro
+videla predmete na majhnih razdaljah. Vid popravimo z očali z 
+zbiralno lečo. Po drugi strani pri kratkovidnih osebah slika
+oddaljenih predmetov nastane pred mrežnico, saj očesna leča 
+ne more doseči dovolj velikih goriščnih razdalj. Vid popravimo
+z razpršilno lečo. 
+
+\begin{remark}
+ Kadar govorimo o vidu in korekcijskih očalih, navadno vpreljemo
+ še eno praktično fizikalno količino. Namesto goriščne razdalje
+ leče $f$ vpeljemo inverzno goriščno razdaljo, ki jo imenujemo 
+ lomnost$\mathcal{D}$. Ker smo pri sestavu leč seštevali inverzne
+ vrednosti goriščnih razdalj, lomnost leč preprosto seštejemo. 
+ Enota za lomnost je dioptrija, pri čemer velja $1~\mathrm{dioptrija} = 
+ 1~\si{m}^{-1}$.
+\end{remark}
+
+\subsection*{Primeri leč in zrcal}
+Fotografije pojavov:
+
+- kozarci, posode, žlica
+
+- novoletne bunčice
+
+- vzvratno/zunanje zrcalo na avtu
+
+- ukrivljeno cestno ogledalo/kolo, 
+
+- kozmetično ogledalo
+
+- lupa (npr foto bankovca)
+
+- leča svetilnik (ED)
+
+- Glen coe (avto)
+
+- peephole (ED)
+
+- kapljica vode deluje kot leča, pixli na zaslonu?
