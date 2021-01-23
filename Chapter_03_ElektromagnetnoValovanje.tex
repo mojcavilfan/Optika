@@ -1,7 +1,7 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Svetloba kot elektromagnetno valovanje}
-V tem poglavju bomo prešli na valovni opis svetlobe in jo 
+V tem poglavju bomo prešli z geometrijskega  na valovni opis svetlobe in jo 
 obravnavali kot elektromagnetno valovanje. Iz Maxwellovih enačb
 bomo izpeljali valovno enačbo in poiskali njene rešitve.
 Zapisali bomo energijski tok
@@ -10,11 +10,11 @@ bomo zapisali še valovno enačbo v prevodni snovi in vpeljali
 kompleksni lomni količnik. 
 
 \section{Valovna enačba v neprevodni snovi}
-Obravnavajmo prehod svelobe skozi homogeno, izotropno in neprevodno snov, 
+Obravnavajmo širjenje svetlobe po homogeni, izotropni in neprevodni snovi, 
 v kateri ni prostih nabojev in električnih tokov. Na splošno elektromagnetno polje
 opišemo z jakostjo  $\mathbf{E}$ in gostoto električnega polja $\mathbf{D}$
-ter gostoto $\mathbf{B}$ in jakostjo magnetnega polja $\mathbf{H}$. Te količine
-med seboj niso neodvisne. Za količine električnega polja velja:
+ter gostoto $\mathbf{B}$ in jakostjo magnetnega polja $\mathbf{H}$. Te vektorske
+količine med seboj niso neodvisne. Za količine električnega polja velja:
 \beq
 \mathbf{D} = \varepsilon \varepsilon_0 \mathbf{E},
 \label{eq:DE}
@@ -42,13 +42,16 @@ enačbe:
 \nabla\cdot\mathbf{D} & =\varrho_{e}\label{eq:Maxwell3} \qquad \mathrm{in}\\
 \nabla\cdot\mathbf{B} & =0.\label{eq:Maxwell4}
 }
-\begin{remark}
-Prvo enačbo imenujemo tudi Amp\`{e}rov zakon, drugo Faradayev indukcijski zakon,
-tretjo Gaussov zakon in četrto po analogiji Gaussov zakon za magnetno polje.
-\end{remark}
 
 Enačbe smo zaradi splošnosti zapisali v celotni obliki. Mi bomo 
-obravnavali le primer, ko sta $\mathbf{j}_e$ in $\varrho_e$ enaka nič.  
+obravnavali le primer, ko sta gostota električnega toka $\mathbf{j}_e$ in 
+gostota prostih nabojev $\varrho_e$ enaki nič.  
+
+\begin{remark}
+Prvo od zapisanih Maxwellovih enačb imenujemo tudi Amp\`{e}rov zakon,
+drugo Faradayev indukcijski zakon,
+tretjo Gaussov zakon in četrto po analogiji Gaussov zakon za magnetno polje.
+\end{remark}
 
 Izhajamo iz enačbe~(\ref{eq:Maxwell2}) in na njej naredimo rotor:
 \beq
@@ -77,8 +80,8 @@ saj sta neodvisna. Upoštevamo enačbo~(\ref{eq:HB}) in Amp\`{e}rov zakon (enač
 \times \mathbf{H}\right) = - \mu \mu_0 \frac{\partial}{\partial t}\frac{\partial \mathbf{D}}{\partial t}.
 \label{eq:03_04}
 \eeq
-Izrazimo še gostoto električnega polja z jakostjo (enačba~\ref{eq:DE}) in izenačimo z 
-izračunano levo stranjo enačbe (enačba~\ref{eq:03_03}). Potem zapišemo valovno enačbo:
+Izrazimo še gostoto električnega polja z jakostjo (enačba~\ref{eq:DE}) in izraz izenačimo z 
+izračunano levo stranjo enačbe (enačba~\ref{eq:03_03}). Dobimo valovno enačbo:
 \boxeq{eq:valovnaE}{
 \nabla^2\mathbf{E} - \varepsilon \varepsilon_0 \mu \mu_0 \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0.
 }
@@ -123,7 +126,8 @@ narišemo, pri čemer se zaradi nazornosti omejimo na valovanje, ki potuje v sme
 Ob danem trenutku (pri izbranem $t$) je odvisnost električnega polja od
 koordinate prikazana na sliki~\ref{fig:03_sinus}. Podobno lahko narišemo tudi 
 sinusno odvisnost od časa na danem mestu (pri izbranem $z$). 
-\begin{figure}[ht]
+
+\begin{figure}[!h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/03_sinus.pdf_tex}
