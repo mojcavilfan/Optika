@@ -121,27 +121,31 @@ $\mathbf{k}$ označuje valovni vektor,
 $\omega$ krožno frekvenco in $\delta$ konstantno fazo
 valovanja. 
 
-Potujoče sinusno valovanje, kakršnega opisuje enačba~(\ref{eq:ravnival}), preprosto
-narišemo, pri čemer se zaradi nazornosti omejimo na valovanje, ki potuje v smeri $z$. 
-Ob danem trenutku (pri izbranem $t$) je odvisnost električnega polja od
-koordinate prikazana na sliki~\ref{fig:03_sinus}. Podobno lahko narišemo tudi 
-sinusno odvisnost od časa na danem mestu (pri izbranem $z$). 
+Poglejmo naprej krajevno in časovno odvisnost zapisane rešitve. Če se zaradi nazornosti 
+omejimo na valovanje, ki potuje v smeri $z$, sinusno valovanje, ki ga opisuje 
+enačba~(\ref{eq:ravnival}) preprosto narišemo. Ob danem trenutku (pri izbranem $t$) je odvisnost 
+velikosti jakosti električnega polja od koordinate sinusna in prikazana na sliki~\ref{fig:03_sinus}.  
 
+Vpeljemo valovno dolžino valovanja $\lambda$ kot krajevno periodo sinusnega vala. Potem s
+slike razberemo zvezo $k\lambda = 2\pi$, ki jo uporabimo za izračun velikosti valovnega
+vektorja, imenovanega tudi valovno število:
+\boxeq{eq:valovnivektor}{
+k = \frac{2\pi}{\lambda}.
+}
+Podobno lahko narišemo tudi sinusno odvisnost od časa na danem mestu (pri izbranem $z$).
+Časovna perioda je $t_0$, namesto krožne frekvence pa pogosto uporabimo frekvenco valovanja,
+za katero velja $\nu = 1/t_0 = \omega/2\pi$. 
 \begin{figure}[!h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/03_sinus.pdf_tex}
-\caption{Jakost električnega polja kot sinusno potujoče valovanje ob nekem izbranem času.}
+\caption{Spreminjanje velikosti jakosti električnega polja vzdolž smeri $z$ pri ravnem valu 
+ob nekem trenutku.}
 \label{fig:03_sinus}
 \end{figure}
 
-Iz slike razberemo
-zvezo $k\lambda = 2\pi$, ki jo uporabimo za izračun velikosti valovnega
-vektorja:
-\boxeq{eq:valovnivektor}{
-k = \frac{2\pi}{\lambda}.
-}
-Vrnimo se k nastavku in celotno fazo, torej argument kotne funkcije, označimo s $\phi$:
+Vrnimo se k nastavku (enačba~\ref{eq:ravnival}) in fazo oziroma
+argument kotne funkcije, označimo s $\phi$:
 \beq
 \phi = \mathbf{k}\cdot \mathbf{r} - \omega t + \delta.
 \label{eq:03_06}
@@ -162,6 +166,7 @@ so vzporedne s $\mathbf{k}$. Zapisana rešitev predstavlja ravni val.
 faze (valovne fronte) ravnine, pravokotne na valovni vektor $\mathbf{k}$.}
 \label{fig:03_ravnival}
 \end{figure}
+\vglue-5truemm
 \begin{remark}
 Jakost elektičnega polja je realna količina, kar je razvidno tudi iz zapisa (enačba~\ref{eq:ravnival}). 
 V računih pogosto uporabljamo kompleksni zapis, to je brez omejitve na realni del. To lahko 
@@ -172,20 +177,19 @@ realni del izračunane jakosti električnega polja.
 
 \subsection*{Fazna hitrost}
 Fazna hitrost je hitrost premikanja ploskev konstantne faze oziroma valovnih front. 
-Če sledimo valovni ploskvi, je odvod faze po času konstanten in iz enačbe~(\ref{eq:03_06}) 
+Če sledimo valovni ploskvi, je odvod faze $\phi$ po času konstanten in iz enačbe~(\ref{eq:03_06}) 
 dobimo:
 \beq
 \frac{d\phi}{dt}= \mathbf{k}\cdot \frac{d\mathbf{r}}{dt} - \omega = 0.
 \label{eq:03_09}
 \eeq
-Zanima nas potovanje v smeri vzdolž $\mathbf{k}$, 
+Zanima nas potovanje v smeri vektorja $\mathbf{k}$, 
 zato lahko zapišemo $\mathbf{k}\cdot \mathbf{r} = kr$. Hitrost premikanja ploskev
 konstantne faze oziroma fazna hitrost je potem enaka:
 \beq
 v_f = \frac{dr}{dt} = \frac{\omega}{k}.
 \label{eq:03_10}
 \eeq
-Pri tem je $k$ velikost valovnega vektorja, ki jo imenujemo valovno število.
 Poiščimo zvezo med $\omega$ in $k$ in izračunajmo fazno hitrost.
 
 Nastavek 
@@ -212,7 +216,7 @@ Odvajajmo nastavek (enačba~\ref{eq:ravnival}) še dvakrat po času:
 \frac{\partial^2 \mathbf{E}}{\partial t^2} = - \omega^2 \mathbf{E}.
 \label{eq:03_13}
 \eeq
-Iz valovne enačbe tako dobimo zvezo:
+Iz valovne enačbe (enačba~\ref{eq:valovnaE}) tako dobimo zvezo:
 \beq
 -k^2 \mathbf{E} + \varepsilon\varepsilon_0\mu\mu_0 \omega^2 \mathbf{E} = 0
 \quad \Longrightarrow \quad
@@ -225,7 +229,7 @@ v_f = \frac{\omega}{k} = \frac{1}{\sqrt{\varepsilon_0\mu_0}}\frac{1}{\sqrt{\vare
 \label{eq:fazna}
 \eeq
 Kadar se elektromagnetno valovanje širi v praznem prostoru, sta $\varepsilon = 1$ in $\mu=1$. 
-Označimo s $c_0$ hitrost elektromagnetnega valovanja -- in s tem tudi svetlobe -- v praznem prostoru:
+Hitrost elektromagnetnega valovanja -- in s tem tudi svetlobe -- v praznem prostoru označimo s $c_0$:
 \boxeq{eq:c0}{
 c_0 = \frac{1}{\sqrt{\varepsilon_0\mu_0}}.
 }
@@ -247,28 +251,27 @@ valovanja spreminja. Pri izračunu lomnega količnika moramo zato upoštevati vr
 dielektričnosti pri krožni frekvenci vidne svetlobe, kar je $\omega \sim 3 \times 10^{15}~\si{s}^{-1}$. 
 \end{remark}
 
-% \begin{table}[ht]
-%  \centering
-%  \small
-% \begin{tabular}{|l|c||l|c|} \hline  
-%       Snov & $n$ & Snov & $n$ \\ \hline
-%       zrak & 1,00027 & glicerol & 1,47\\ \hline
-%       voda & 1,33 & steklo & 1,4 -- 1,9\\ \hline 
-%       led & 1,31 & safir & 1,77\\ \hline
-%       etanol & 1,36 & diamant & 2,42\\ 
-% \hline 
-% \end{tabular}
-%   \caption{Lomni količniki nekaterih izbranih snovi}
-% \label{table:n}
-% \end{table}
+\begin{table}[ht]
+ \centering
+ \small
+\begin{tabular}{|l|c||l|c|} \hline  
+      Snov & $n$ & Snov & $n$ \\ \hline
+      zrak & 1,00027 & glicerol & 1,47\\ \hline
+      voda & 1,33 & steklo & 1,4 -- 1,9\\ \hline 
+      led & 1,31 & safir & 1,77\\ \hline
+      etanol & 1,36 & diamant & 2,42\\ 
+\hline 
+\end{tabular}
+  \caption{Lomni količniki nekaterih izbranih snovi}
+\label{table:n}
+\end{table}
 
 Vrnimo se k hitrosti svetlobe. Z upoštevanjem enačbe~(\ref{eq:valovnivektor})
 izraz za $c$ preoblikujemo:
 \begin{equation}
- c = \frac{\omega}{k} = \frac{2 \pi \nu}{2 \pi/\lambda},
+ c = \frac{\omega}{k} = \frac{2 \pi \nu}{2 \pi/\lambda}.
  \label{eq:03_17}
 \end{equation}
-pri čemer smo vpeljali frekvenco $\nu = \omega/2\pi$. 
 Sledi:
 \boxeq{eq:nulambda}{
 c = \nu \lambda.
@@ -281,6 +284,13 @@ $\lambda_0$, potem je v snovi z lomnim količnikom $n$ valovna dolžina enaka:
 \lambda = \frac{\lambda_0}{n}.
 \label{eq:03_18}
 \eeq
+\vglue-6truemm
+\begin{remark}
+Valovna dolžina vidne svetlobe v praznem prostoru sega od okoli $350~\si{nm}$, kar
+vidimo kot temno vijolično barvo, do okoli $780~\si{nm}$, kar zaznamo kot temno rdečo 
+barvo. Tem valovnim dolžinam ustrezajo frekvence od približno 
+$4\times10^{14}~\si{s}^{-1}$ do približno $9\times10^{14}~\si{s}^{-1}$.
+\end{remark}
 
 \subsection*{Smeri vektorjev $\mathbf{E}$, $\mathbf{B}$ in $\mathbf{k}$}
 Nadaljujmo z obravnavo elektromagnetnega valovanja v homogeni in izotropni snovi. 
@@ -309,8 +319,7 @@ e^{i\mathbf{k}\cdot \mathbf{r} - i\omega t + i\delta}\nonumber\\
 i\, \mathbf{E} \cdot \mathbf{k} = 0.
 \label{eq:03_21}
 \end{align}
-Pogoj, da je skalarni produkt jakosti električnega polja in valovnega vektorja enak nič, 
-je izpolnjen, kadar je:
+Skalarni produkt jakosti električnega polja in valovnega vektorja je enak nič, kadar je:
 \boxeq{eq:Ekperp}{
 \mathbf{E} \perp \mathbf{k}.
 }
@@ -357,7 +366,7 @@ polja $\mathbf{B}$:
 \boxeq{eq:EBort}{
 \mathbf{B}\perp \mathbf{E}.
 }
-S tem smo pokazali, da so v elektromagntnem valovanju v izotropni snovi
+S tem smo pokazali, da so v elektromagnetnem valovanju v izotropni snovi
 vsi trije vektorji $\mathbf{E}$, $\mathbf{B}$ in $\mathbf{k}$
 med seboj paroma pravokotni. Navadno velja dogovor, da je 
 $\mathbf{E}\parallel x$, $\mathbf{B}\parallel y$ in $\mathbf{k}\parallel z$.
@@ -372,8 +381,7 @@ $\mathbf{E}\parallel x$, $\mathbf{B}\parallel y$ in $\mathbf{k}\parallel z$.
 \subsection*{Razmerje med $\mathbf{E}_0$ in $\mathbf{B}_0$}
 Zdaj poznamo smeri vektorjev $\mathbf{E}$ in $\mathbf{B}$ v ravnem valu, poiskati moramo
 še razmerja med njunimi amplitudami. Izhajamo iz enačbe~(\ref{eq:EkB}), upoštevamo
-medsebojno pravokotnost vektorjev, pokrajšamo časovno-krajevni del v eksponentu
-in dobimo zvezo med amplitudami:
+ortogonalnost vektorjev in dobimo zvezo med amplitudami:
 \beq
 k E_0 = \omega B_0 \quad \Longrightarrow \quad E_0 = B_0 \frac{\omega}{k}.
 \label{eq:03_24}
