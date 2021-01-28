@@ -643,70 +643,86 @@ Enačbi~(\ref{eq:circx} in \ref{eq:circy}) opisujeta krožnico v ravnini $xy$,
 kar je značilnost krožno polariziranega valovanja. Vektor jakosti
 električnega polja se v tem primeru v ravnini $xy$ suče v nasprotni 
 smeri urinega kazalca.
+
+Kadar je $\delta = -\pi/2$, zapišemo valovanje v izhodiščni ravnini kot:
+\beq
+E_x = E_0 \cos (\omega t)
+\label{eq:circxy}
+\eeq
+in 
+\beq
+E_y = - E_0 \sin (\omega t),
+\label{eq:circxy2}
+\eeq
+vektor jakosti električnega polja pa se suče v smeri urinega kazalca.
+
+V literaturi ni povsem enotnega dogovora o poimenovanju krožne polarizacije. 
+Mi bomo uporabljali definicijo, ki se najpogosteje uporablja v optiki, to
+je s stališča opazovalca. Če opazovalec gleda v smeri proti izvoru valovanja 
+(v našem primeru je to vzdolž smeri $-z$), smer urinega kazalca opisuje desno 
+cirkularno polarizirano valovanje, nasprotna smer urinega kazalca pa levo 
+cirkularno polarizirano valovanje (slika~\ref{fig:03_cirkpol}).
+Enačbi~(\ref{eq:circx}) in (\ref{eq:circy}) s pozitivnim
+$\delta$ torej v skladu z našim dogovorom opisujeta levo cirkularno 
+polarizirano valovanje, enačbi~(\ref{eq:circxy}) in (\ref{eq:circxy2}) 
+z negativnim $\delta$ pa desno cirkularno polarizirano valovanje. 
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/03_cirkpol.pdf_tex}
-\caption{Pri krožno ali cirkularno polariziranem valovanju vrh vektorja
+\caption{Pri krožno polariziranem valovanju vrh vektorja
 jakosti električnega polja opisuje krožnico, ki se v izhodiščni ravnini
 lahko vrti v smeri urinega kazalca, kar ustreza desno krožno polariziranem valovanju (a),
 ali v nasprotni smeri, kar ustreza levo krožno polariziranem valovanju (b). 
-Prikaz polja desno krožno polariziranega vala pri $t=0$ (c).}
+Prikaz polja desno krožno polariziranega vala ob nekem trenutku (c).}
 \label{fig:03_cirkpol}
 \end{figure}
 
-V literaturi ni enotnega dogovora o poimenovanju krožne polarizacije. 
-Mi bomo uporabljali definicijo s stališča opazovalca.
-Če opazovalec gleda v smeri proti izvoru valovanja (v našem primeru je 
-to vzdolž smeri $-z$) in palec desne roke usmeri v izvor, smer prstov desne 
-roke kaže smer desno cirkularno polariziranega valovanja. 
-Nasprotna smer opisuje levo cirkularno polarizirano valovanje.
-
-Zgornji zapis (enačbi~\ref{eq:circx} in \ref{eq:circy}) s pozitivnim
-$\delta$ torej v skladu z našim dogovorom opisuje levo cirkularno 
-polarizirano valovanje, zapis z negativnim $\delta$ pa desno 
-cirkularno polarizirano valovanje. 
-
-Pri navedenem dogovoru moramo biti pozorni na tri stvari:
-\begin{enumerate}
- \item Elektromagnetno valovanje zapišemo z eksponentom oblike 
- $\exp(i\mathbf{k}\cdot \mathbf{r} - i\omega t + i\delta)$ in ne 
- $\exp(i\omega t -i\mathbf{k}\cdot \mathbf{r} + i\delta)$.
- Pri naši izbiri zapisa pozitivna vrednost faznega zamika $\delta$ pomeni 
- zaostajanje, negativna pa prehitevanje, saj ima isti predznak kot časovni člen. 
- \item Časovni potek vektorja električnega polja opazujemo na izbranem mestu 
- in ne trenutne slike ob izbranem času.
- \item Cirularnost definiramo s stališča opazovalca in ne s stališča 
- izvora -- torej v nasprotni smeri vektorja $\mathbf{k}$.
- \end{enumerate}
+\begin{remark}
+Pri dogovoru o levi/desni cirkularni polarizaciji moramo biti pozorni na tri stvari. 
+Prvič -- cirkularnost definiramo s stališča opazovalca, kar pomeni, da gledamo proti izvoru,
+in ne s stališča izvora, pri čemer bi gledali vzdolž širjenja svetlobe. Drugič --
+ravni val vpeljemo z odvisnostjo $(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta)$ in 
+ne $(\omega t - \mathbf{k}\cdot \mathbf{r} + \delta)$, kot lahko ponekod zasledimo v literaturi.
+Tretjič -- pri desni cirkularni polarizaciji se jakost polja suče v desno, če opazujemo 
+časovni potek vektorja na danem mestu (slika~\ref{fig:03_cirkpol}\,a), in v levo, 
+če opazujemo krajevni potek vektorja ob danem času (slika~\ref{fig:03_cirkpol}\,c). 
+\end{remark}
 
 \subsection*{Eliptična polarizacija}
-Najsplošnjejše je eliptično polarizirano valovanje, pri katerem 
-konica vektorja jakosti električnega polja v ravnini, pravokotni
-na smer širjenja svetlobe, orisuje elipso. 
+Pri eliptično polariziranem valovanju, ki je najsplošnejši primer polariziranega valovanja,
+konica vektorja jakosti električnega polja v ravnini, pravokotni na smer širjenja svetlobe, orisuje elipso. 
+Zapišemo ga kot:
+\beq
+\mathbf{E} (z, t) = E_{0x} \mathbf{e}_x \cos \left(kz - \omega t\right)
++ E_{0y} \mathbf{e}_y \cos \left(kz - \omega t + \delta\right)\!.
+\label{eq:elipticnapol}
+\eeq
+Kadar je fazni zamik med posameznima komponentama $\delta = \pm \pi/2$, razlikujeta
+pa se velikosti komponent, se lastni osi elipse ujemata s koordinatnima
+osema $x$ in $y$. Če pa je fazni zamik med komponentama poljuben, je elipsa
+zasukana glede na koordinatni sistem za nek kot $\vartheta$. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/03_elipspol.pdf_tex}
 \caption{Pri eliptično polariziranem valovanju vrh vektorja
-jakosti električnega polja opisuje elipso. Če je razni zamik med komponentama
-$\delta = \pi/2$, sta osi elipse vzporedne koordinatnima osema (a), sicer
+jakosti električnega polja opisuje elipso. Če je fazni zamik med komponentama
+$\delta = \pm \pi/2$, sta osi elipse vzporedni koordinatnima osema (a), sicer
 je elipsa zasukana (b). Z $a$ in $b$ označimo polosi elipse, $\vartheta$ pa je
 naklon elipse glede na os $x$.}
 \label{fig:03_elipspol}
 \end{figure}
 
-Kadar je fazni zamik med posameznima komponentama $\pm \pi/2$, razlikujeta
-pa se velikosti komponent, se lastni osi elipse ujemata s koordinatnima
-osema $x$ in $y$. Če pa je fazni zamik med komponentama poljuben, je elipsa
-zasukana glede na koordinatni sistem za nek kot $\vartheta$. Vrednost 
-kota $\vartheta$ lahko analitično izračunamo:
+Vrednost 
+kota $\vartheta$ lahko analitično izračunamo iz enačbe:
 \beq
 \tan (2\vartheta) = \frac{2E_{0x}E_{0y}\cos \delta}{E_{0x}^2 - E_{0y}^2},
 \label{eq:elipsatheta}
 \eeq
-pri čemer sta $E_{x0}$ in $E_{y0}$ amplitudi posameznih komponent, 
-$\delta$ pa je fazni zamik med njima.  Izračunamo lahko tudi 
+pri čemer sta $E_{x0}$ in $E_{y0}$ amplitudi posameznih komponent.
+Izračunamo lahko tudi 
 razmerje med kratko in dolgo osjo oziroma polosjo elipse:
 \beq
 \frac{b}{a} = \frac{-E_{0x}\sin \delta_1 \sin \vartheta + E_{0y}\sin\delta_2\cos 
