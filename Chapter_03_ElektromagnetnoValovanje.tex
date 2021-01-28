@@ -119,7 +119,7 @@ in
 Pri tem nastavku sta amplitudi valovanja $\mathbf{E}_0$ in $\mathbf{B}_0$ konstantni, 
 $\mathbf{k}$ označuje valovni vektor, 
 $\omega$ krožno frekvenco in $\delta$ konstantno fazo
-valovanja. 
+valovanja.
 
 Poglejmo naprej krajevno in časovno odvisnost zapisane rešitve. Če se zaradi nazornosti 
 omejimo na valovanje, ki potuje v smeri $z$, sinusno valovanje, ki ga opisuje 
@@ -248,7 +248,7 @@ n = \sqrt{\varepsilon}.
 \begin{remark}
 Ne smemo pozabiti, da se dielektričnost s frekvenco elektromagnetnega 
 valovanja spreminja. Pri izračunu lomnega količnika moramo zato upoštevati vrednost
-dielektričnosti pri krožni frekvenci vidne svetlobe, kar je $\omega \sim 3 \times 10^{15}~\si{s}^{-1}$. 
+dielektričnosti pri  frekvenci vidne svetlobe, kar je $\nu \sim 5 \times 10^{14}~\si{s}^{-1}$. 
 \end{remark}
 
 \begin{table}[ht]
@@ -277,7 +277,7 @@ Sledi:
 c = \nu \lambda.
 }
 Produkt frekvence in valovne dolžine je torej enak fazni hitrosti svetlobe. Ker 
-se v snovi hitrost svetlobe zmanjša, hkrati pa frekvenca ohranja, se torej 
+se v snovi hitrost svetlobe zmanjša, hkrati pa frekvenca ohranja, se 
 v snovi zmanjša valovna dolžina valovanja. Če je v praznem prostoru valovna dolžina
 $\lambda_0$, potem je v snovi z lomnim količnikom $n$ valovna dolžina enaka:
 \beq
@@ -305,7 +305,7 @@ Izhajamo iz Gaussovega zakona (enačba~\ref{eq:Maxwell3}) in upoštevamo zvezo m
 $\mathbf{D}$ in $\mathbf{E}$ (enačba~\ref{eq:DE}): 
 \beq
 \nabla \cdot \mathbf{D} = \nabla \cdot \left( \varepsilon \varepsilon_0 \mathbf{E}\right) 
-= \varepsilon \varepsilon_0 \left(\nabla \cdot \mathbf{E} \right).
+= \varepsilon \varepsilon_0 \left(\nabla \cdot \mathbf{E} \right)\!.
 \label{eq:03_20}
 \eeq
 Iz tega sledi, da je ob odsotnosti prostih nabojev ($\varrho_{e} = 0$) divergenca 
@@ -401,26 +401,23 @@ Z = \frac{E_0}{H_0} = \frac{E_0 \mu \mu_0}{B_0} = \mu \mu_0 c =
 \frac{\mu \mu_0}{\sqrt{\varepsilon \varepsilon_0 \mu \mu_0}} = \sqrt{\frac{\mu \mu_0}{\varepsilon \varepsilon_0}}.
 \label{eq:03_25}
 \eeq
-Enote za impedanco so:
-\beq
-\sqrt{\frac{\si{Vs/Am}}{\si{As/Vm}}} = \frac{\si{V}}{\si{A}} = \si{\ohm}.
-\label{eq:03_26}
-\eeq
-V vakuumu, kjer sta $\varepsilon = 1$ in $\mu= 1$, je impedanca $Z_v = 377~\si{\ohm}$.
+Hitro uvidimo, da je enota za impedanco $\si{\ohm}$. V vakuumu, 
+kjer sta $\varepsilon = 1$ in $\mu= 1$, je impedanca $Z_v = 377~\si{\ohm}$.
 
 \begin{remark}
 Poleg ravnih valov, ki predstavljajo enodimenzionalno rešitev valovne enačbe, poznamo
-tudi druge rešitve, na primer sferične ali cilindrične valove. Pri sferičnih so ploskve
-konstantne faze krogelne lupine, ki izhajajo radialno simetrično iz točke. V tem 
-primeru amplituda valovanja ni konstantna, ampak se zmanjšuje z oddaljenostjo 
-od izhodišča kot $A = E_0/r$. V primeru cilindričnih valov so ploskve konstatne
-faze valji, ki izhajajo iz izhodiščne premice. Tudi v tem primeru se amplituda
-z oddaljenostjo od izhodiščne premice spreminja: $A = E_0/\sqrt{r}$.  Če cilindrični 
-primer omejimo na eno ravnino (kar zaradi translacijske simetrije lahko naredimo), 
-dobimo rešitev dvodimenzionalne valovne enačbe v polarnih koordinatah. 
+tudi druge rešitve, na primer sferične (krogelne) ali cilindrične valove. Pri 
+sferičnih valovih so ploskve konstantne faze krogelne lupine, ki izhajajo radialno 
+simetrično iz točke izvora. Amplituda valovanja ni konstantna, ampak se zmanjšuje z oddaljenostjo 
+od izhodišča kot $A = E_0/r$. V primeru cilindričnih valov so ploskve konstantne
+faze valji, ki izhajajo iz izhodiščne premice. Tudi v tem primeru amplituda valovanja ni konstantna,
+ampak pojema z oddaljenostjo od izhodiščne premice: $A = E_0/\sqrt{r}$.  Če cilindrični 
+primer omejimo na eno ravnino, ki je pravokotna na izhodiščno premico (kar zaradi 
+translacijske simetrije lahko naredimo), dobimo rešitev dvodimenzionalne valovne enačbe 
+v polarnih koordinatah. 
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/03_sfericnival.pdf_tex}
 \caption{Valovne fronte sferičnega vala so krogelne lupine (a), valovne fronte
 cilindričnega vala pa valji (b).}
@@ -429,7 +426,7 @@ cilindričnega vala pa valji (b).}
 \end{remark}
 
 \section{Poyntingov vektor in energijski tok}
-Pomembna lastnost elektromagnetnega valovanja je prenos energije. V električnem
+Verjetno najpomembnejša lastnost elektromagnetnega valovanja je prenos energije. V električnem
 polju gostoto energije zapišemo kot:\footnote{Glej npr. J. Strnad, {\it Fizika, drugi del}, 
 DMFA-založništvo (2018).}
 \beq
@@ -441,50 +438,47 @@ in v magnetnem polju kot:
 w_B = \frac{1}{2\mu \mu_0} \mathbf{B}^2.
 \label{eq:03_28}
 \eeq
-Celotna gostota energije v prostoru je vsota obeh prispevkov:
+Celotna gostota energije elektromagnetnega valovanja v prostoru je vsota obeh prispevkov:
 \beq
 w_{EMV} = w_E + w_B = \frac{1}{2}\varepsilon \varepsilon_0 \mathbf{E}^2 + \frac{1}{2\mu \mu_0} \mathbf{B}^2.
 \label{eq:03_29}
 \eeq
 Vstavimo jakost električnega (enačba~\ref{eq:ravnival}) in gostoto magnetnega polja
-(enačba~\ref{eq:ravnivalB}). Sledi:
+(enačba~\ref{eq:ravnivalB}), pri čemer za fazni zamik valovanja izberemo $\delta=0$. Sledi:
 \beq
 w_{EMV} = \frac{1}{2}\varepsilon \varepsilon_0 \mathbf{E}_0^2 
-\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right)
-+ \frac{1}{2\mu \mu_0} \mathbf{B}_0^2 \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right).
+\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)
++ \frac{1}{2\mu \mu_0} \mathbf{B}_0^2 \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\!.
 \label{eq:03_30}
 \eeq
 Upoštevamo zvezo med amplitudama (enačba~\ref{eq:EBc}) in dobimo:
 \beq
 w_{EMV} = \left(\frac{1}{2}\varepsilon \varepsilon_0 E_0^2 + 
 \frac{1}{2\mu \mu_0} \frac{E_0^2}{c^2} \right) 
-\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right).
+\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\!.
 \label{eq:03_31}
 \eeq
 Vstavimo še izraz za hitrost valovanja (enačba~\ref{eq:fazna}) in vidimo,
-da sta prispevka električnega in magnetnega polja k gostoti energije po velikosti 
-enaka, poleg tega imata enako krajevno in časovno odvisnost:
+da sta prispevka električnega in magnetnega polja k gostoti energije elektromagnetnega valovanja
+po velikosti enaka, poleg tega imata enako krajevno in časovno odvisnost:
 \beq
 w_{EMV} = \left(\varepsilon \varepsilon_0 E_0^2  \right) 
-\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right).
+\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\!.
 \label{eq:03_32}
 \eeq
-
 Za vidno svetlobo je krožna frekvenca zelo velika 
 ($\omega \sim 3 \times 10^{15}~\si{s}^{-1}$), zato praktično vedno 
 zaznavamo povprečno energijo, ki je povprečena po času čez veliko 
-število nihanj. Ker je po dolgem času povprečje funkcije $\cos^2(x) = 1/2$, sledi:
+število nihanj. Ker je po dolgem času povprečje funkcije $\cos^2(x)$ enako $1/2$, sledi:
 \boxeq{eq:w}{
 \langle w \rangle = \frac{1}{2}\varepsilon \varepsilon_0 E_0^2. 
 }
-Gostota energijskega ali svetlobnega toka dobimo tako, da gostoto energije
+Gostoto energijskega ali svetlobnega toka dobimo tako, da gostoto energije
 pomnožimo s hitrostjo valovanja $c$. Čeprav gre za časovno povprečje gostote
 toka, ga navadno označujemo samo z $j$:
 \boxeq{eq:j}{
 j = \langle w \rangle c = \frac{1}{2}\varepsilon \varepsilon_0 E_0^2 c.
 }
-
-\begin{remark}
 V snoveh, za katere velja $\mu = 1$, je $n = \sqrt{\varepsilon}$. Potem izraz za gostoto
 energijskega toka zapišemo kot:
 \beq
@@ -492,15 +486,15 @@ j = \frac{1}{2}\varepsilon \varepsilon_0 E_0^2 \frac{c_0}{\sqrt{\varepsilon}} =
 \frac{1}{2}\sqrt{\varepsilon} \varepsilon_0 E_0^2 c_0 = \frac{1}{2} \varepsilon_0 E_0^2 c_0 n.
 \label{eq:03_33}
 \eeq
-\end{remark}
-
-V izotropnih snoveh se energijski tok širi v smeri žarkov in lahko zapišemo 
-$\mathbf{j}\parallel \mathbf{k}$. Splošnejši izraz, ki velja tudi v anizotropnih snoveh, je
+Na splošno gostoto energijskega toka zapišemo v vektorski obliki, saj je poleg velikosti
+pomembna tudi smer širjenja svetlobe. Velikost vektorja $\mathbf{j}$ določa 
+enačba~(\ref{eq:j}), za njegovo smer pa v izotropnih snoveh velja $\mathbf{j}\parallel \mathbf{k}$,
+saj se energijski tok v izotropnih snoveh širi v smeri žarkov. 
+Splošnejši izraz, ki velja tudi v anizotropnih snoveh, je
 zapis s Poyntingovim vektorjem $\mathbf{S}$. Vpeljemo ga kot:
 \boxeq{eq:Poyntingov}{
 \mathbf{S} = \mathbf{E}\times\mathbf{H}.
 }
-
 Preverimo, da je v izotropni snovi $\mathbf{S} = \mathbf{j}$, kot smo ga zapisali 
 v enačbi~(\ref{eq:j}). Vpeljemo najprej vektor $\mathbf{s}$, ki je enotski vektor
 v smeri valovnega vektorja, in predstavlja smer potovanja energije:
@@ -511,23 +505,27 @@ v smeri valovnega vektorja, in predstavlja smer potovanja energije:
 Zapišemo:
 \begin{align}
 \mathbf{S}= &\, \mathbf{E}\times \mathbf{H} = \left( \mathbf{E}_0\times \mathbf{H}_0 \right)
-\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right) \\
-= & \left(  \mathbf{E}_0 \times \frac{E_0}{Z}\mathbf{e}_H \right) 
-\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right) = 
-\left(  \mathbf{e}_E \times \mathbf{e}_H \right)\frac{E_0^2}{Z} 
-\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right)
-\\
-= &\, \mathbf{s}\, \frac{E_0^2}{Z} \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta\right).
+\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right) \\
+= & \left( \mathbf{E}_0 \times \frac{B_0}{\mu\mu_0}\mathbf{e}_H \right) 
+\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right) = 
+\left(\mathbf{e}_E \times \mathbf{e}_H \right)E_0\frac{E_0}{c\mu\mu_0} 
+\cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\\
+= &\, \mathbf{s}\, \varepsilon \varepsilon_0 E_0^2\,c\, \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\!.
 \label{eq:03_35}
 \end{align}
-Povprečni Poyntingov vektor je potem z upoštevanjem enačbe~(\ref{eq:03_25}):
+Pri tem smo zapisali enotska vektorja v smeri električnega in magnetnega polja 
+$\mathbf{e}_E$ in $\mathbf{e}_H$ in upoštevali enačbo~(\ref{eq:fazna}). 
+Povprečni Poyntingov vektor je potem:
 \beq
-\mathbf{S} = \mathbf{s}\,\frac{1}{2} E_0^2 
-\frac{\sqrt{\varepsilon \varepsilon_0}}{\sqrt{ \mu \mu_0}}  = 
-\mathbf{s}\, \frac{1}{2} \varepsilon \varepsilon_0 E_0^2 \frac{c_0}{n}  = 
+\mathbf{S} =  
 \mathbf{s}\, \frac{1}{2}\varepsilon \varepsilon_0 E_0^2 c.
 \label{eq:03_36}
 \eeq
+Celotno moč, ki se pretoči skozi dano ploskev v prostoru, izračunamo kot 
+integral gostote svetlobnega toka po ploskvi:
+\boxeq{eq:P}{
+P = \int \mathbf{j}\cdot d\mathbf{S}.
+}
 
 \begin{remark}
 Spomnimo se, da se pri krogelnih in cilindričnih valovih amplituda valovanja
@@ -546,24 +544,25 @@ transverzalno, zato zanj velja $\mathbf{E} \perp \mathbf{k}$. Orientacijo
 vektorja $\mathbf{E}$ v ravnini, ki je pravokotna na smer
 širjenja svetlobe, imenujemo polarizacija.
 
-Če se svetloba širi v smeri $z$, leži tako vektor $\mathbf{E}$ v ravnini $xy$. 
-Na splošno ga lahko razstavimo na dve komponenti, ki naj bosta
-vzporedni koordinatnim osem $x$ in $y$. Potem jakost električnega
-polja zapišemo:
+Če se svetloba širi v smeri $z$, leži vektor $\mathbf{E}$ v ravnini $xy$. 
+Na splošno ga lahko razstavimo na dve komponenti $E_x$ in $E_y$, ki sta
+vzporedni koordinatnima osema $x$ in $y$. Jakost električnega
+polja zapišemo kot:
 \beq
 \mathbf{E} = E_{0x} \mathbf{e}_x \cos \left(kz - \omega t\right) + 
-E_{0y} \mathbf{e}_y \cos \left(kz - \omega t + \delta\right).
+E_{0y} \mathbf{e}_y \cos \left(kz - \omega t + \delta\right)\!.
 \label{eq:03_37}
 \eeq
-Pri tem absolutni fazni zamik valovanja ni pomemben, zato smo ga 
+Pri tem absolutni fazni zamik valovanja ni pomemben in smo ga 
 pri zapisu izpustili, ključna pa je razlika v fazi med obema 
 komponentama $\delta$.
 
 Če se fazni zamik med obema komponentama $\delta(t)$ s časom 
 naključno spreminja na intervalu $0<\delta <2\pi$, pravimo, da je 
-svetloba nepolarizirana. Smer vektorja $\mathbf{E}$ v časovnem 
+svetloba nepolarizirana. Smer vektorja $\mathbf{E}$ pri nepolariziranem
+valovanju v časovnem 
 poteku na izbranem mestu (na primer pri $z=0$) naključno preskakuje med
-različnimi smermi z enako verjetnostjo v ravnini $xy$.
+različnimi smermi v ravnini $xy$ z enako verjetnostjo.
 
 V primeru polarizirane svetlobe ima $\delta$ ves čas konstantno 
 vrednost oziroma vrednost, ki je poznana in počasi se spreminjajoča 
@@ -573,31 +572,30 @@ polarizacije: linearno, krožno (cirkularno) in eliptično polarizacijo.
 Poglejmo jih podrobneje.
 
 \subsection*{Linearno polarizirano valovanje}
-Elektromagnetno valovanje je linearno polarizirano, kadar se smer jakosti
-električnega polja ohranja. To se zgodi, ko obe komponentni nihata
+Elektromagnetno valovanje je linearno polarizirano, kadar je smer vektorja
+jakosti električnega polja konstantna. To se zgodi, ko obe komponentni nihata
 ali v fazi ali v protifazi in je fazna razlika med komponentama vektorja 
-jakosti elektičnega polja enaka večkratniku $\pi$. 
+jakosti elektičnega polja enaka večkratniku števila $\pi$. 
 
 Zapišimo fazno razliko kot $\delta = N\pi$, pri čemer je $N$ celo število. 
 Glede na sodost števila $N$ lahko ločimo dva primera -- v prvem sta obe pozitivni komponenti
-vektorja $\mathbf{E}$ v fazi, v drugem pa nihata z ravno nasproto fazo, kar je ekvivaletno 
+vektorja $\mathbf{E}$ v fazi, v drugem pa nihata z nasproto fazo, kar je ekvivaletno 
 zamenjavi predznaka ene od komponent (glej sliko~\ref{fig:03_linpol}). 
 
-Z enačbo linearno polarizacijo na danem mestu $z$ in ob danem trenutku $t$ zapišemo
+Linearno polarizacijo na danem mestu $z$ in ob danem trenutku $t$ zapišemo
 kot:
 \beq
 \mathbf{E} (z, t) = \left( E_{0x} \mathbf{e}_x \pm E_{0y} \mathbf{e}_y \right)
-\cos \left(kz - \omega t\right),
+\cos \left(kz - \omega t\right)\!,
 \label{eq:03_38}
 \eeq
 v izhodišču pri $z=0$ pa kot:
 \beq
 \mathbf{E} (z=0, t) = \left( E_{0x} \mathbf{e}_x \pm E_{0y} \mathbf{e}_y \right)
-\cos \left(\omega t\right).
+\cos \left(\omega t\right)\!.
 \label{eq:03_39}
 \eeq
-Tudi tukaj smo izpustili absolutni fazni zamik celotnega valovanja. 
-Velikosti komponent $E_{x0}$ in $E_{y0}$ se na splošno razlikujeta, njuno razmerje
+Velikosti komponent $E_{x0}$ in $E_{y0}$ se na splošno razlikujeta in njuno razmerje
 določa kot nagiba polarizacije glede na os $x$. Če je ena od komponent enaka nič, je 
 polarizacija poravnana s koordinatno osjo sistema.
 
@@ -627,12 +625,11 @@ Na splošno zapišemo krožno polarizirano valovanje
 na danem mestu $z$ in ob danem času $t$ kot:
 \beq
 \mathbf{E} (z, t) = E_{0} \mathbf{e}_x \cos \left(kz - \omega t\right)
-\pm E_{0} \mathbf{e}_y \sin \left(kz - \omega t\right)\!\!,
+\pm E_{0} \mathbf{e}_y \sin \left(kz - \omega t\right)\!.
 \label{eq:03_40}
 \eeq
-pri čemer smo ponovno izpustili absolutno fazo valovanja. 
 Poglejmo cirkularno polarizirano valovanje v izhodišču pri $z=0$ za 
-$\delta = \pi/2$. Komponenta v smeri $x$ je potem:
+$\delta = \pi/2$. Komponenta v smeri $x$ je:
 \beq
 E_x = E_0 \cos (-\omega t) = E_0 \cos (\omega t),
 \label{eq:circx}
