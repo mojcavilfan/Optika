@@ -713,6 +713,7 @@ $\delta = \pm \pi/2$, sta osi elipse vzporedni koordinatnima osema (a), sicer
 je elipsa zasukana (b). Z $a$ in $b$ označimo polosi elipse, $\vartheta$ pa je
 naklon elipse glede na os $x$.}
 \label{fig:03_elipspol}
+\vglue-3truemm
 \end{figure}
 
 Vrednost 
@@ -722,24 +723,21 @@ kota $\vartheta$ lahko analitično izračunamo iz enačbe:
 \label{eq:elipsatheta}
 \eeq
 pri čemer sta $E_{x0}$ in $E_{y0}$ amplitudi posameznih komponent.
-Izračunamo lahko tudi 
-razmerje med kratko in dolgo osjo oziroma polosjo elipse:
+Izračunamo še
+razmerje med kratko in dolgo polosjo elipse:
 \beq
-\frac{b}{a} = \frac{-E_{0x}\sin \delta_1 \sin \vartheta + E_{0y}\sin\delta_2\cos 
-\vartheta}{E_{0x}\cos \delta_1 \cos \vartheta + E_{0y}\cos\delta_2\sin\vartheta}.
+\frac{b}{a} = \frac{E_{0y}\sin\delta\cos \vartheta}{E_{0x}\cos \vartheta + E_{0y}\cos\delta\sin\vartheta}.
 \label{eq:elipsaba}
 \eeq
-\begin{remark}
 Hitro uvidimo, da sta linearna in krožna polarizacija zgolj posebna
 primera eliptične polarizacije: v prvem primeru je elipsa sploščena v daljico, 
 v drugem primeru pa razširjena v krožnico. 
-\end{remark} 
 
 Splošno eliptično polarizirano valovanje lahko vedno
 zapišemo kot vsoto dveh med seboj pravokotnih
 linearno polariziranih valovanj z upoštevanjem pravega faznega zamika med njima.
 Podobno lahko splošno polaziracijo valovanja zapišemo tudi kot vsoto 
-dveh nasprotno ročnih krožno polariziranih valovanj.
+dveh nasprotno usmerjenih krožno polariziranih valovanj.
 
 \subsection*{Jonesovi vektorji in matrike}
 Najpriročnejši zapis polarizacije je z dvodimenzionalnimi 
@@ -759,9 +757,8 @@ E_{0y} e^{i \delta}\\
 \end{array}\right]\!\!,
 \label{eq:03_41}
 \eeq
-pri čemer ne upoštevamo absolutne faze valovanja.
-
-Pri zapisu polarizacije krajevno-časovni del v eksponentu izpustimo, saj 
+pri čemer ne upoštevamo absolutne faze valovanja. 
+Pri vektorskem zapisu polarizacije krajevno-časovni del v eksponentu izpustimo, saj 
 je za obe komponenti enak. Poleg tega vektor navadno normiramo in 
 polarizacijo zapišemo z vektorjem:
 \boxeq{eq:Jones}{
@@ -771,7 +768,7 @@ E_{0x}\\
 E_{0y} e^{i \delta}\\
 \end{array}\right]\!\!,
 }
-ki ga imenujemo Jonesov vektor. 
+ki ga imenujemo Jonesov vektor, po ameriškem fiziku Robertu Clarku Jonesu (1916-2004).
 
 Zapišimo nekaj naznačilnejših Jonesovih vektorjev. Za svetlobo, ki 
 je linearno polarizarna v smeri $x$, je Jonesov vektor oblike:
@@ -811,8 +808,7 @@ J = \frac{1}{\sqrt{2}}\left[\begin{array}{c}
 Zapišimo še Jonesov vektor za cirkularno polarizirano
 valovanje. Za tako valovanje sta komponenti po velikosti enaki $E_0$, 
 razlikujeta pa se v fazi za $\pm \pi/2$. 
-Po dogovoru je valovanje polarizirano desno ročno, če je predznak 
-faznega zamika negativen. Potem Jonesov vektor zapišemo kot:
+Po dogovoru desno cirkularno polarizirano valovanje zapišemo kot:
 \beq
 J = \frac{1}{\sqrt{E_{0x}^2+E_{0y}^2}}
 \left[\begin{array}{c}
@@ -831,7 +827,7 @@ e^{-i \pi/2}\\
 \end{array}\right]\!\!.
 \label{eq:03_46}
 \eeq
-Za levo cirkularno polarizirano valovanje je potem Jonesov
+Za levo cirkularno polarizirano valovanje je Jonesov
 vektor:
 \beq
 J = \frac{1}{\sqrt{2}}
@@ -844,15 +840,15 @@ i\\
 
 Pristop z uporabo Jonesovih vektorjev postane uporaben pri prehodu
 polariziranega valovanja skozi optične komponente, ki vplivajo na 
-polarizacijo svetlobe oziroma jo spreminjajo. Komponente opišemo z tako
+polarizacijo svetlobe oziroma jo spreminjajo. Komponente opišemo s tako
 imenovanimi Jonesovimi matrikami, ki delujejo na Jonesove vektorje. 
 Prednost takega pristopa je pri zapletenih sistemih, v katerih
-na polarizacijo deluje več optičnih elementov zaporedoma, saj
+na polarizacijo deluje več optičnih elementov zapored, saj
 matrike za te optične elemente preprosto množimo.
 
 Na splošno je izhodna polarizacija $J_2$ enaka produktu
 matrike $M$, ki predstavlja optični element,
-in vhodni polarizaciji $J_1$:
+in vektorja, ki opisuje vhodno polarizacijo $J_1$:
 \beq
 J = \left[\begin{array}{c}
 J_{2x}\\
@@ -872,9 +868,9 @@ J_{1y}\\
 Najpreprostješi
 primer opičnega elementa, ki vpliva na polarizacijo valovanja,
 je zagotovo linearni polarizator. Ta prepušča
-polarizacijo vzdolž prepustne smeri polarizatorja, komponento, ki
-je pravotkona na prepustno smer, pa povsem ustavi. Matrika za
-linearni polarizator s prepustno smerjo $x$ zapišemo kot:
+polarizacijo vzdolž prepustne smeri, komponento, ki
+je nanjo pravokotna, pa povsem zaustavi. Matrika za
+linearni polarizator s prepustno smerjo $x$ je:
 \beq
 M = \left[\begin{array}{cc}
 1 & 0 \\
@@ -921,7 +917,7 @@ J_{1x} \pm J_{1y}\\
 \frac{J_{1x}\pm J_{1y}}{2}\left[\begin{array}{c}
 1\\
 \pm 1\\
-\end{array}\right]\!!.
+\end{array}\right]\!\!.
 \label{eq:03_51}
 \eeq
 Poglejmo še cirkularne polarizatorje, ki iz poljubne
@@ -966,9 +962,13 @@ J_{1x} \pm i J_{1y}\\
 \begin{remark}
 Linearni polarizatorji so navadno narejeni iz snovi, v
 katerih je absorpcija za dve ortogonalni polarizaciji izrazito različna.
-Ta pojav imenujemo linearni dikroizem. Podobno so cirkularni polarizatorji
-narejeni iz snovi z močnim cirkularnim dikroizmom, pri katerem je absorpcija
-za eno cirkularno polarizacijo izrazito večja kot za drugo.
+Ta pojav imenujemo linearni dikroizem. Najpogosteje se uporablja
+tanka folija iz polivinil alkohola. Folijo med izdelavo raztegnejo v
+eni smeri, da se dolge molekule polimera uredijo, nato pa na folijo
+dodajo jod. Svetlobo, ki je polarizirana vzporedno z dolgimi molekulami,
+premikanje jodovih elektronov vzdolž molekul zaduši. Premikanje v prečni
+smeri ni mogoče, zato je svetloba, polarizirana pravokotno na dolge
+molekule, prepuščena. 
 \end{remark}
 
 Omenimo še eno vrsto pomembnih optičnih elementov, ki vplivajo na optično
@@ -985,11 +985,10 @@ M = e^{\pm i\pi/2}
 \label{eq:03_55}
 \eeq
 pri čemer vodilni eksponenti člen pogosto izpuščamo. 
-Tak element spremeni desno cirkularno polariziran val v levo cirkularno polarizirano
+Tak element spremeni desno cirkularno polarizirano valovanje v levo cirkularno polarizirano
 in obratno, linearno polarizirano valovanje pa prezrcali čez os koordinatnega sistema.
 
-Ploščica $\lambda/4$ med komponentama povzroči fazni zamik $\pi/2$. Odvisno od
-orientacije hitre osi ploščico opišemo z matriko:
+Ploščico $\lambda/4$, ki med komponentama povzroči fazni zamik $\pi/2$, opišemo z matriko:
 \beq
 M = e^{\pm i\pi/4}
 \left[\begin{array}{cc}
@@ -998,17 +997,17 @@ M = e^{\pm i\pi/4}
 \end{array}\right]\!\!,
 \label{eq:03_56}
 \eeq
-pri čemer zgornji predznak velja za hitro os v smeri $y$ in spodnji 
-za hitro os v smeri $x$. Ta optični element na splošno iz vpadne linearne
+pri čemer velja zgornji predznak, če je hitra os v smeri $y$, in spodnji predznak, kadar
+je hitra os v smeri $x$. Ta optični element na splošno iz vpadne linearne
 polarizacije naredi elipično. Če je vpadna polarizacija vzporedna z
 lastnima osema ploščice, se linearna polarizacija ohranja, če pa je
-zasukana pod kotom $45^\circ$, nastane krožno polarizirano valovanje. 
+zasukana pod kotom $45^\circ$, nastane iz linearnega krožno polarizirano valovanje. 
 
-Zaenkrat smo zapisali le take optične elemente, katerih osi so poravnane z osmi
+Zaenkrat smo zapisali matrike le za optične elemente, katerih osi so poravnane z osmi
 koordinatnega sistema. Če želimo obravnavati elemente pod poljubnimi koti, 
-ustrezno Jonesovo matriko izračunamo tako, da prvotno matriko zasučemo:
+ustrezno Jonesovo matriko izračunamo tako, da prvotno matriko zasučemo za ustrezen kot $\vartheta$:
 \beq
-M(\vartheta) = R(\vartheta) \cdot M (0) R(\vartheta)^{T},
+M(\vartheta) = R(\vartheta) \cdot M (0) \cdot R(\vartheta)^{T},
 \label{eq:03_57}
 \eeq
 pri čemer je matrika $R$ matrika rotacije:
@@ -1016,7 +1015,7 @@ pri čemer je matrika $R$ matrika rotacije:
 R = \left[\begin{array}{cc}
 \cos \vartheta & -\sin\vartheta \\
 \sin \vartheta & \cos \vartheta\\
-\end{array}\right]\!\!,
+\end{array}\right]\!\!.
 \label{eq:03_58}
 \eeq
 
@@ -1044,9 +1043,15 @@ J_2 = M_N \cdot M_{N-1} \dots M_2 \cdot M_1 \cdot J_1.
 \label{eq:03_60}
 \eeq
 
+\begin{example}{\bf Izdelava cirkularnega polarizatorja.}
+Večina cirkularnih polarizatorjev je narejena kot kombinacija 
+ploščice $\lambda/4$ in linearnega polarizatorja. 
+\end{example}
+
+
 \begin{example}{\bf Odboj cirkularno polarizirane svetlobe.}
 Poglejmo, kako se od navadnega zrcala odbija cirkularno
-polarizirana svetloba. Zapišimo skupno matriko za prehod in odboj,
+polarizirana svetloba. Zapišimo skupno matriko,
 ki je produkt matrike za cirkularni polarizator, zrcalo in ponovno
 cirkularni polarizator:
 \beq
