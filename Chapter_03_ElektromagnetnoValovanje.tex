@@ -495,7 +495,7 @@ zapis s Poyntingovim vektorjem $\mathbf{S}$. Vpeljemo ga kot:
 \boxeq{eq:Poyntingov}{
 \mathbf{S} = \mathbf{E}\times\mathbf{H}.
 }
-Preverimo, da je v izotropni snovi $\mathbf{S} = \mathbf{j}$, kot smo ga zapisali 
+Preverimo, da je v izotropni snovi $\langle\mathbf{S}\rangle = \mathbf{j}$, kot smo ga zapisali 
 v enačbi~(\ref{eq:j}). Vpeljemo najprej vektor $\mathbf{s}$, ki je enotski vektor
 v smeri valovnega vektorja, in predstavlja smer potovanja energije:
 \beq
@@ -517,10 +517,12 @@ Pri tem smo zapisali enotska vektorja v smeri električnega in magnetnega polja
 $\mathbf{e}_E$ in $\mathbf{e}_H$ in upoštevali enačbo~(\ref{eq:fazna}). 
 Povprečni Poyntingov vektor je potem:
 \beq
-\mathbf{S} =  
-\mathbf{s}\, \frac{1}{2}\varepsilon \varepsilon_0 E_0^2 c.
+\langle\mathbf{S}\rangle =  
+\mathbf{s}\, \frac{1}{2}\varepsilon \varepsilon_0 E_0^2 c
 \label{eq:03_36}
 \eeq
+in je enak gostoti svetlobnega toka (enačba~\ref{eq:j}).
+
 Celotno moč, ki se pretoči skozi dano ploskev v prostoru, izračunamo kot 
 integral gostote svetlobnega toka po ploskvi:
 \boxeq{eq:P}{
@@ -1044,48 +1046,63 @@ J_2 = M_N \cdot M_{N-1} \dots M_2 \cdot M_1 \cdot J_1.
 \eeq
 
 \begin{example}{\bf Izdelava cirkularnega polarizatorja.}
-Večina cirkularnih polarizatorjev je narejena kot kombinacija 
-ploščice $\lambda/4$ in linearnega polarizatorja. 
-\end{example}
-
-
-\begin{example}{\bf Odboj cirkularno polarizirane svetlobe.}
-Poglejmo, kako se od navadnega zrcala odbija cirkularno
-polarizirana svetloba. Zapišimo skupno matriko,
-ki je produkt matrike za cirkularni polarizator, zrcalo in ponovno
-cirkularni polarizator:
+\label{ex_circ}
+Večina cirkularnih polarizatorjev je narejena iz linearnega polarizatorja, ki 
+je zasukan za kot $45^\circ$, in ploščice $\lambda/4$. Izračunajmo prehodno 
+matriko za tak sistem:
 \beq
-M= \frac{1}{2}\left[\begin{array}{cc}
-1 & i \\
--i & 1\\
-\end{array}\right]\cdot 
+M = 
+\frac{e^{i\pi/4}}{2}
 \left[\begin{array}{cc}
 1 & 0 \\
-0 & -1\\
+0 & i\\
 \end{array}\right]
-\cdot 
+\cdot
 \left[\begin{array}{cc}
-1 &  i \\
--i & 1\\
-\end{array}\right]=
-\left[\!\!\begin{array}{cc}
-0 & 0\\
-0 & 0\\
+1 & 1 \\
+1 & 1\\
+\end{array}\right] = \frac{e^{i\pi/4}}{2}
+\left[\begin{array}{cc}
+1 & 1 \\
+i & i\\
 \end{array}\right]\!\!.
-\label{eq:03_64}
 \eeq
-Rezultat nas ne preseneča, saj zrcalo krožno polariziranemu valovanju
-spremeni ročnost. Ko npr. desno ročno polarizirano valovanje vpade
-na zrcalo, se od njega odbije levo ročno, tega pa prvotni cirkularni 
-polarizator ne prepušča.
+Opisana kombinacija elementov iz poljubne vpadne svetlobe $(E_x, E_y)$ naredi
+levo cirkularno polarizano valovanje:
+\beq
+\left[\begin{array}{cc}
+1 & 1 \\
+i & i\\
+\end{array}\right]\cdot 
+\left[\begin{array}{c}
+E_x\\
+E_y\\
+\end{array}\right] = (E_x+E_y)
+\left[\begin{array}{c}
+1\\
+i\\
+\end{array}\right]\!\!.
+\eeq
+Desni cirkularni polarizator naredimo tako, da vstopni linearni polarizator
+zasušemo za $90^\circ$.
 \end{example}
 
 \begin{example}{\bf Optični izolator.} 
+\label{ex_izolator}
 Naj nepolarizirana svetloba vpada na linearni polarizator, 
 nato pa skozi ploščico $\lambda/4$ na zrcalo, od katerega
 se odbije in vrne po isti poti nazaj. Izračunajmo intenziteto
-prepuščene svetlobe, če je prepustna smer linearnega polarizatorja
+izhodne svetlobe, če je prepustna smer linearnega polarizatorja
 zasukana za kot $45\si{\degree}$ glede na osi $x$ in $y$. 
+\vglue-5truemm
+\begin{figure}[h!]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/03_optizo.pdf_tex}
+\caption{Shema optičnega izolatorja, sestavljenega iz 
+linearnega polarizatorja in ploščice $\lambda/4$.}
+\label{fig:03_CirkularniOdboj}
+\end{figure}
 
 Celotna matrika za prehod in odboj je produkt matrik:
 \beq
@@ -1113,9 +1130,9 @@ Celotna matrika za prehod in odboj je produkt matrik:
 \eeq
 Srednja matrika predstavlja odboj od zrcala, pri katerem se os $x$ ohranja, 
 os $y$ pa se obrne. Ker se po odboju svetloba širi v nasprotno
-smer ($-z$), je linearni polarizator zasukan pod kotom $-45\si{\degree}$ 
-glede na prvotni koordinatni sistem. Izračunamo produkt matrik, 
-pri čemer zmnožimo najprej zunanja para:
+smer ($-z$), smo morali zapisati matriko za prehod linearnega polarizatorja,
+zasukanega za kot $-45\si{\degree}$ glede na prvotni koordinatni sistem. 
+Izračunamo produkt matrik, pri čemer zmnožimo najprej zunanja para, nato pa dobimo:
 \beq
  M = \frac{1}{4}\left[\begin{array}{cc}
 1 & -i \\
@@ -1129,19 +1146,7 @@ pri čemer zmnožimo najprej zunanja para:
 \left[\begin{array}{cc}
 1 &  1 \\
 i & i\\
-\end{array}\right]\!\!,
-\label{eq:03_62}
-\eeq
-nato pa še preostale matrike. Dobimo:
-\beq
- M = \frac{1}{4}\left[\!\!\begin{array}{cc}
-1 & -i \\
--1 & i\\
-\end{array}\right]\!\!\cdot 
-\left[\!\!\begin{array}{cc}
-1 & 1 \\
--i & -i\\
-\end{array}\right]\!\! =
+\end{array}\right] = 
 \left[\!\!\begin{array}{cc}
 0 & 0\\
 0 & 0\\
@@ -1150,44 +1155,67 @@ nato pa še preostale matrike. Dobimo:
 \eeq
 Produkt matrik je torej identično enak nič. Tak sestav imenujemo
 optični izolator, saj se ne odbije nič svetlobe, ne glede na vpadno 
-polarizacijo. Rezultat je v skladu s prejšnjim primerom, 
-saj kombinacija linearnega polarizatorja in ploščice $\lambda/4$
-deluje kot cirkularni polarizator.
+polarizacijo. 
+\end{example}
+
+\begin{example}{\bf Odboj cirkularno polariziranega valovanja.}
+V primeru~\ref{ex_circ} smo spoznali, da sestav linearnega polarizatorja, 
+zasukanega pod kotom $45^\circ$, in ploščice $\lambda/4$ deluje
+kot cirkularni polarizator. V prejšnjem primeru (primer~\ref{ex_izolator})
+pa smo pokazali, da cirkularno polarizirano valovanje po odboju 
+od zrcala ne prehaja več skozi prvotni cirukularni 
+polarizator. Zrcalo iz desno krožno polariziranega valovanja naredi
+levo krožno polarizirano valovanje in obratno, zato je odbita
+slika skozi cirkularni polarizator videti 
+temna (glej sliko~\ref{fig:03_CirkularniOdboj}). 
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=9truecm]{slike/03_CirkularniOdboj.jpg}
+\caption{Linearno polarizirano valovanje pri odboju ohranja polarizacijo (levo), 
+cirkularno polarizirano valovanje pa se pri odboju spremeni iz desno polariziranega
+v levo polarizirano in obratno. DODAJ SLIKO!}
+\label{fig:03_CirkularniOdboj}
+\end{figure}
 \end{example}
 
 \begin{example}{\bf Zamenjava optičnih elementov.}
-Cirkularni polarizator je sestavljen iz linearnega polarizatorja
-in ustrezno zaskuane ploščice $\lambda/4$. V enem primeru postavimo
+Poglejmo še učinek vrstnega reda optičnih elementov. Izberimo
+kombinacijo linearnega in cirkularnega polarizatorja. V enem primeru postavimo
 linearni polarizator pred cirkularnega, v drugem pa za njega. Razlika
 v prepuščeni svetlobi jasno kaže pomembnost vrstnega reda optičnih
 elementov in seveda tudi vrstnega reda zapisa matrik.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13truecm]{slike/03_VrstniRed.png}
-\caption{Učinek vpliva vrstnega reda cirkularnega in linearnega polarizatorja.}
+%\includegraphics[width=7truecm]{slike/02_photos_avto.jpg}\hfill
+%\includegraphics[width=7truecm]{slike/02_photos_cestno.jpg}
+\caption{Učinek vpliva vrstnega reda cirkularnega in linearnega polarizatorja.
+NOVI SLIKI!}
 \label{fig:03_VrtsniRed}
 \end{figure}
-
 \end{example}
 
 \section{Valovna enačba v prevodni snovi}
-Obravnavajmo še homogeno in izotropno snov, ki pa naj bo prevodna, ampak
-nenabita ($\varrho_e = 0$). Izhajamo
-iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}-\ref{eq:Maxwell4}) in zveze:
+Obravnavajmo za konec še valovno enačbo v prevodni snovi. Snov naj
+bo homogena, izotropna in nenabita ($\varrho_e = 0$). Izhajamo
+iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) in zveze:
 \beq
-\mathbf{j}_e = \sigma \mathbf{E}
+\mathbf{j}_e = \sigma \mathbf{E},
 \label{eq:03_65}
 \eeq
-Pri tem smo s $\sigma$ označili električno prevodnost. Tipična vrednost
+ki povezuje gostoto električnih tokov $\mathbf{j}_e $ in jakost 
+električnega polja $\mathbf{E}$. Sorazmernostni faktor, ki predstavlja 
+električno prevodnost, smo označili s $\sigma$. Tipična vrednost
 za kovine je $\sigma > 10^6/\si{\ohm\m}$ in za izolatorje 
 $\sigma < 10^{-6}/\si{\ohm\m}$. 
-Prevodnost snovi moramo upoštevati pri zapisu Amp\`{e}rovega zakona:
+Električne tokove moramo upoštevati pri zapisu Amp\`{e}rovega zakona 
+(enačba~\ref{eq:Maxwell1}):
 \beq
 \nabla\times\mathbf{H} =\frac{\partial\mathbf{D}}{\partial t}+\mathbf{j}_e = 
 \varepsilon \varepsilon_0 \frac{\partial\mathbf{E}}{\partial t}+\sigma \mathbf{E}.
 \label{eq:03_66}
 \eeq
-Tudi tokrat izhajamo iz Faradayevega zakona in na njem izvedemo operacijo rotorja:
+Izhajamo iz Faradayevega zakona (enačba~\ref{eq:Maxwell2}) in na njem izvedemo operacijo rotorja:
 \beq
 \nabla \times \left( \nabla \times  \mathbf{E}\right) = -\nabla\times \left(
 \frac{\partial \mathbf{B}}{\partial t}\right) = - \mu \mu_0 \frac{\partial }{\partial t}
@@ -1207,14 +1235,14 @@ Upoštevamo še enačbo~(\ref{eq:03_02}) in dobimo zvezo:
 \nabla^2\mathbf{E} =  \mu \mu_0\varepsilon \varepsilon_0 \frac{\partial^2\mathbf{E}}{\partial t^2}
 + \mu \mu_0 \sigma \frac{\partial \mathbf{E}}{\partial t}.
 }
-Zapisano enačbo imenujemo telegrafska enačba. Povsem analogno lahko izpeljemo tudi telegrafsko enačbo
+Zapisano enačbo imenujemo telegrafska enačba. Podobno izpeljemo tudi telegrafsko enačbo
 za gostoto magnetnega polja $\mathbf{B}$.
 
 Ker v telegrafski enačbi med drugim nastopa tudi prvi odvod po času, po analogiji z mehanskimi
 sistemi pričakujemo, da se valovanje v snovi duši oziroma slabi (atenuira). 
 Rešitev zato iščemo v obliki ravnega vala:
 \beq
-\mathbf{E}(\mathbf{r},t) = \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i\omega t + i\delta},
+\mathbf{E}(\mathbf{r},t) = \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i\omega t},
 \label{eq:03_68}
 \eeq
 pri čemer dopuščamo možnost kompleksnega valovnega vektorja, katerega imaginarni del
@@ -1245,16 +1273,15 @@ pri čemer je:
 \boxeq{eq:nkompleks2}{
 \mathcal{N}^2 = \varepsilon \mu + i \frac{\sigma \mu}{\varepsilon_0\omega}.
 }
-Kompleksni lomni količnik $\mathcal{N}$ zapišemo kot vsoto realnega in imaginarnega
-dela:
+Kompleksni lomni količnik $\mathcal{N}$ zapišemo kot vsoto realnega $n'$ in imaginarnega
+dela $n''$:
 \beq
 \mathcal{N}^2 = (n'+in'')^2 = n'^2 -n''^2 + 2i n'n''.
 \label{eq:03_72}
 \eeq
-Izračunajmo realni $n'$ in imaginarni del $n''$ kompleksnega lomnega 
-količnika. Označimo realni del $\mathcal{N}^2$ (enačba~\ref{eq:nkompleks2})
+Označimo realni del $\mathcal{N}^2$ (enačba~\ref{eq:nkompleks2})
 z $x = \varepsilon \mu$ in imaginarni del z $y = \sigma \mu/\varepsilon_0\omega$.  
-Rešujemo torej:
+Rešujemo torej enačbo:
 \beq
 x + iy = n'^2 -n''^2 + 2i n'n''.
 \label{eq:03_72a}
@@ -1298,14 +1325,14 @@ n''^2 = \frac{1}{2}\left(-\varepsilon \mu + \sqrt{(\varepsilon \mu)^2 +
 \left(\frac{\sigma \mu}{\varepsilon_0\omega}\right)^2}\right)\!\!.
 \label{eq:03_79}
 \eeq
-Pogosto nas zanimajo nemagnetne snovi, v katerih je $\mu=1$.
-Kvadrat realnega dela lomnega količnika je potem:
+Pogosto nas zanimajo nemagnetne snovi, v katerih je $\mu=1$. V takih
+snoveh se kvadrat realnega dela lomnega količnika poenostavi v :
 \beq
 n'^2 = \frac{1}{2}\left(\varepsilon + \sqrt{\varepsilon^2 + 
 \left(\frac{\sigma}{\varepsilon_0\omega}\right)^2}\right)\!\!,
 \label{eq:03_80}
 \eeq
-imaginarnega dela pa:
+kvadrat imaginarnega dela pa v:
 \beq
 n''^2 = \frac{1}{2}\left(-\varepsilon + \sqrt{\varepsilon^2 + 
 \left(\frac{\sigma}{\varepsilon_0\omega}\right)^2}\right)\!\!.
@@ -1315,8 +1342,8 @@ Vstavimo zdaj izračunani lomni količnik v nastavek za jakost električnega pol
 (enačba~\ref{eq:03_68}) in poglejmo
 primer, ko je $\mathbf{k} \parallel z$. Dobimo:
 \beq
-\mathbf{E} = \mathbf{E}_0 e^{ik_0\mathcal{N}z - i\omega t + i\delta} = 
-\mathbf{E}_0 e^{ik_0 n'z - i\omega t + i\delta} \cdot e^{-k_0n''z}.
+\mathbf{E} = \mathbf{E}_0 e^{ik_0\mathcal{N}z - i\omega t} = 
+\mathbf{E}_0 e^{ik_0 n'z - i\omega t} \cdot e^{-k_0n''z}.
 \label{eq:03_82}
 \eeq
 Zadnji člen opisuje eksponentno pojemanje amplitude polja z globino $z$ in ga pogosto
@@ -1332,41 +1359,44 @@ Potem lahko imaginarni del lomnega količnika zapišemo kot:
 n'' \approx \sqrt{\frac{\sigma}{2 \omega \varepsilon_0}}.
 \label{eq:03_84}
 \eeq
-Koeficient pojemanja oziroma slabljenja je:
+Parameter $\kappa$ je:
 \beq
 \kappa = k_0 n'' = \frac{\omega}{c_0} \sqrt{\frac{\sigma}{2 \omega \varepsilon_0}} = \sqrt{\frac{\mu_0 \omega \sigma}{2}}.
 \label{eq:03_85}
 \eeq
 Nazornejše je vpeljati vdorno globino:
 \beq
-d = \kappa^{-1} = \sqrt{\frac{2}{\mu_0 \omega \sigma}}.
+d = \kappa^{-1} = \sqrt{\frac{2}{\mu_0 \omega \sigma}},
 \label{eq:03_86}
 \eeq
+ki predstavlja karakteristično globino pojemanja električne poljske jakosti.
 V kovinah je zaradi velike prevodnosti vdorna globina zelo majhna. Večina elektromagnetnega
-valovanja oziroma izmeničnega toka zato teče po površini snovi. Ta pojav poznamo pod imenom
+valovanja oziroma izmeničnega toka zato teče po površini prevodnih snovi. Ta pojav poznamo pod imenom
 kožni pojav.
 
 \begin{example}{\bf Vdorna globina v bakru.}
 Specifična upornost bakra je $\xi = 0,017~\si{\ohm \milli\metre^2/\metre}$ in 
-prevodnost $\sigma = 1/\xi = 0,7 \times 10^8/\si{\ohm\metre}$. 
-Vdorna globina je odvisna od frekvence, zato izračunajmo nekaj primerov: 
+prevodnost $\sigma = 1/\xi = 58 \times 10^6/\si{\ohm\metre}$. 
+Vdorna globina je odvisna od frekvence elektro\-mag\-net\-nega valovanja, 
+zato izračunajmo nekaj primerov: 
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
 $\nu~[\si{Hz}]$ & $d~[\si{nm}]$\\ \hline
 50 & $\approx 10~\si{mm}$\\ \hline
-$10^6$ & $\approx 60~\si{\micro\metre}$\\ \hline
-$10^9$ & $\approx 0,6~\si{\micro\metre}$\\ \hline
-$10^{16}$ & $\approx 0,6~\si{\nano\metre}$\\ \hline
+$10^6$ & $\approx 100~\si{\micro\metre}$\\ \hline
+$10^{10}$ & $\approx 1~\si{\micro\metre}$\\ \hline
+$10^{15}$ & $\approx 3~\si{\nano\metre}$\\ \hline
 \end{tabular}
 \end{center}
 
-Vdorna globina za vidno svetlobo je v bakru torej manjša od nanometra. 
-To predstavlja velik problem pri izdelavi prozornih elektrod, 
+Vdorna globina za vidno svetlobo je v bakru torej nekaj nanometrov. 
+Izredno kratka vdorna globina v kovinah predstavlja velik problem pri izdelavi prozornih elektrod, 
 ki jih potrebujemo na primer za izdelavo sončnih celic
 ali tekočekristalnih zaslonov. Zato za ta namen navadno uporabljamo
 kovine z razmeroma majhno prevodnostjo (npr. indijev 
-kositrov oksid, ITO), pri katerih je dovoljena debelina
-plasti, ki jo nanesemo na steklo, razmeroma velika, tipično 
+kositrov oksid, ITO) in veliko vdorno globino. Debelina plasti, ki
+jo nanesemo na steklo in ki še prepušča večino vpadne svetlobe, je 
+v takih kovinah razmeroma velika, tipično 
 okoli $100~\si{nm}$. 
 \end{example}
