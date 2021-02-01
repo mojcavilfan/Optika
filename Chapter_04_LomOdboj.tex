@@ -1,14 +1,14 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Odboj in lom}
-Dva izmed najosnovnejših optičnih pojavov sta odboj in lom valovanja, ki vpada na mejo
-dveh sredstev. V tem poglavju bomo podrobneje spoznali, kako se svetloba odbije in lomi ter
+Dva izmed najosnovnejših optičnih pojavov sta odboj in lom valovanja ni meji
+dveh snovi. V tem poglavju bomo podrobneje spoznali, kako se svetloba odbije in lomi ter
 kako se pri tem spremenita amplituda in faza valovanja. Opisali bomo totalni odboj,
-vpeljali Brewstrov kot in na koncu na hitro spoznali še odboj svetlobe na meji s kovino.
+vpeljali Brewstrov kot in na koncu spoznali še odboj svetlobe na meji s kovino.
 
 \section{Robni pogoji na meji dveh dielektrikov}
-Že geometrijska optika pove, kako se svetloba na meji dveh sredstev odbija 
-in lomi. Vemo, da je odbojni kot enak vpadnemu (enačba~\ref{eq:odbojnizakon}), 
+Že geometrijska optika, ki temelji na Fermatovem teoremu, pove, kako se svetloba na 
+meji dveh snovi odbija in lomi. Vemo, da je odbojni kot enak vpadnemu (enačba~\ref{eq:odbojnizakon}), 
 smer lomljenega žarka pa je odvisna od lomnih količnikov snovi (enačba~\ref{eq:lomnizakon}). 
 Vendar geometrijska optika ne pove ničesar o amplitudah in fazah odbitega 
 in prepuščenega vala. Za to potrebujemo valovno obravnavo svetlobe. 
@@ -18,17 +18,28 @@ opisujejo elektromagnetno valovanje v snovi. Za obravnavo prehoda
 skozi mejo dveh snovi potrebujemo še ustrezne robne pogoje. Zapišimo jih
 za mejo med snovema z lomnima količnikoma
 $n_1$ in $n_2$. Na meji naj ne bo električnih tokov ali površinskih nabojev. 
-V prvi snovi naj bo gostota električnega polja enaka $\mathbf{D}_1$, v drugi 
-pa $\mathbf{D}_2$.
+V prvi snovi naj bo gostota električnega polja enaka $\mathbf{D}_1$ in v drugi 
+$\mathbf{D}_2$.
 
 Zapišimo Gaussov zakon (enačba~\ref{eq:Maxwell3}) v integralni obliki:
 \beq
 \oint \mathbf{D}\cdot d\mathbf{S} = 0.
 \label{eq:04_01}
 \eeq
-\begin{figure}[ht]
+Sklenjena ploskev, po kateri integriramo, naj bo kvader z dvema stranicama
+vzporednima mejni ploskvi (slika~\ref{fig:04_RP}\,a). 
+Ko gre višina kvadra $h \to 0$, ostaneta le še dva prispevka k integralu, to sta
+skalarna produkta na zgornji
+in spodnji ploskvi:
+\beq
+\mathbf{D}_1 \cdot \mathbf{s}_0 + \mathbf{D}_2 \cdot (-\mathbf{s}_0) = 0,
+\label{eq:04_02}
+\eeq
+pri čemer vektor $\mathbf{s}_0 $ opisuje normalo na ploskev kvadra in hkrati na mejno ravnino. 
+
+\begin{figure}[!ht]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{130truemm} 
 \input{slike/04_RP.pdf_tex}
 \caption{K izpeljavi robnih pogojev na meji dveh snovi. Prvi robni pogoj je ohranitev
 pravokotne komponente $\mathbf{D}$ (a), drugi pa ohranitev tangentne komponente 
@@ -36,27 +47,19 @@ $\mathbf{E}$ (b).}
 \label{fig:04_RP}
 \end{figure}
 
-Sklenjena ploskev, po kateri integriramo, naj bo kvader z dvema stranicama
-vzporednima mejni ploskvi (slika~\ref{fig:04_RP}\,a). 
-Ko gre višina kvadra $h \to 0$, ostaneta le še dva prispevka k integralu:
-\beq
-\mathbf{D}_1 \cdot \mathbf{s}_0 + \mathbf{D}_2 \cdot (-\mathbf{s}_0) = 0,
-\label{eq:04_02}
-\eeq
-pri čemer vektor $\mathbf{s}_0 $ opisuje normalo na ploskev kvadra in hkrati
-tudi normalo na mejno ravnino. Sledi:
+Sledi:
 \boxeq{eq:RPD}{
 \left( \mathbf{D}_2-\mathbf{D}_1 \right) \cdot \mathbf{s}_0 = 0 \qquad \mathrm{oziroma} \qquad
 D_{1\perp} = D_{2\perp}.
 }
-Pri prehodu skozi mejo dveh snovi se torej ohranja normalna komponenta gostote
-električnega polja. Povsem enak račun lahko naredimo za gostoto magnetnega polja, 
+Pri prehodu skozi mejo dveh snovi se ohranja normalna komponenta gostote
+električnega polja. Povsem enak račun naredimo za gostoto magnetnega polja, 
 če izhajamo iz enačbe:
 \beq
 \oint \mathbf{B}\cdot d\mathbf{S} = 0.
 \label{eq:04_03}
 \eeq
-Pri prehodu skozi mejo dveh snovi se tako ohranja normalna komponeneta
+Pri prehodu skozi mejo dveh snovi se tako ohranja normalna komponenta
 gostote magnetnega polja:
 \boxeq{eq:RPB}{
 \left( \mathbf{B}_2-\mathbf{B}_1 \right) \cdot \mathbf{s}_0 = 0 \qquad 
@@ -64,8 +67,7 @@ gostote magnetnega polja:
 }
 
 Naredimo zdaj še pravokotno zanko, ki leži v ravnini, pravokotni na mejo dveh 
-sredstev (slika~\ref{fig:04_RP}\,b). Zanko 
-lahko vedno izberemo tako, da leži v ravnini, ki jo tvorita vektorja normale na 
+snovi (slika~\ref{fig:04_RP}\,b). Zanko izberemo v ravnini, ki jo tvorita vektorja normale na 
 mejo $\mathbf{s}_0$ in jakosti električnega polja $\mathbf{E}$. 
 Zapišemo Faradayev zakon (enačba~\ref{eq:Maxwell2}) v integralni obliki, pri 
 čemer integriramo po sklenjeni zanki:
@@ -73,13 +75,13 @@ Zapišemo Faradayev zakon (enačba~\ref{eq:Maxwell2}) v integralni obliki, pri
 \oint \mathbf{E}\cdot d\mathbf{l} = - \frac{\partial}{\partial t}\int \mathbf{B}\cdot d\mathbf{S}.
 \label{eq:04_04}
 \eeq
-Višino zanke naredimo kar se da majhno ($h \to 0$), zato ostaneta le še 
-integrala po zgornji in spodnji stranici:
+Višino zanke naredimo kar se da majhno ($h \to 0$), zato na levi strani ostaneta le še 
+integrala po zgornji in spodnji stranici, integral na desni strani pa gre proti 0. Dobimo:
 \beq
 \mathbf{E}_1 \cdot d\mathbf{l} - \mathbf{E}_2 \cdot d\mathbf{l} = 0.
 \label{eq:04_05}
 \eeq
-Ohranja se torej projekcija vektorja jakosti električnega polja na mejo. 
+Ohranja se torej projekcija vektorja jakosti električnega polja na mejo med snovema. 
 Ker je vektor $d\mathbf{l}$ vzporeden z mejo, vektor $d\mathbf{s}_0$ pa 
 pravokoten nanjo, lahko zgornji izraz zapišemo kot:
 \boxeq{eq:RPE}{
@@ -92,18 +94,24 @@ jakosti magnetnega polja:
 \left( \mathbf{H}_2-\mathbf{H}_1 \right) \times \mathbf{s}_0 = 0 \qquad \mathrm{oziroma} \qquad
 H_{1\parallel} = H_{2\parallel}.
 }
+Tako smo zapisali štiri robne pogoje za ohranitev komponent gostote in jakosti električnega
+in magnetnega polja na meji dveh snovi. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/04_RP2.pdf_tex}
+\caption{Na meji snovi se ohranja normalna komponenta $\mathbf{D}_\perp$ in tangentna komponenta 
+$\mathbf{E}_\parallel$.}
+\label{fig:04_RP2}
+\end{figure}
 
 \section{Odbojni in lomni zakon}
-Zamislimo si ravno potujoče sinusno elektromagnetno valovanje, ki vpada na mejo dveh snovi
-z lomnima količnikoma $n_1$ in $n_2$. Vemo, da se vpadno valovanje razdeli na odbito in prepuščeno (lomljeno) valovanje. Zanima nas, kakšne lastnosti morata imeti odbito in prepuščeno valovanje, da zadostita robnim pogojem. 
-\begin{figure}[ht]
-\centering
-\def\svgwidth{120truemm} 
-\input{slike/04_lom.pdf_tex}
-\caption{K izpeljavi odboja in loma na meji dveh snovi (a). Pri odboju in lomu
-se ohranja komponenta valovnega vektorja, ki je vzporedna z mejno ploskvijo (b).}
-\label{fig:04_lom}
-\end{figure}
+Zamislimo si ravno potujoče sinusno elektromagnetno valovanje, 
+ki vpada na mejo dveh snovi z lomnima količnikoma $n_1$ in $n_2$. 
+Vemo, da se vpadno valovanje razdeli na odbito in prepuščeno (lomljeno) 
+valovanje. Zanima nas, kakšne lastnosti imata odbito in prepuščeno 
+valovanje, da zadostita robnim pogojem (enačbe~\ref{eq:RPD}, \ref{eq:RPB}, 
+\ref{eq:RPE} in \ref{eq:RPH}). 
 
 Naj žarek svetlobe vpada na mejno ravnino pod kotom $\alpha$ glede na normalo na mejo (glej
 sliko~\ref{fig:04_lom}). Njegov valovni vektor naj bo $\mathbf{k}_i$, 
@@ -114,7 +122,7 @@ je $k_i = \omega_i n_1/c_0$. Vpadni val na splošno zapišemo kot:
 \mathbf{E}_i = \mathbf{E}_{0i} e^{i\mathbf{k}_i\cdot \mathbf{r} - i \omega_i t + i \delta_i}.
 \label{eq:04_06}
 \eeq
-Podobno zapišemo odbiti val z valovnim vektorjem $\mathbf{k}_r$, 
+Odbiti val zapišemo z valovnim vektorjem $\mathbf{k}_r$, 
 krožno frekvenco $\omega_r$, fazo $\delta_r$ in amplitudo $\mathbf{E}_{0r}$: 
 \beq
 \mathbf{E}_r = \mathbf{E}_{0r} e^{i\mathbf{k}_r\cdot \mathbf{r} - i \omega_r t + i \delta_r}
@@ -126,6 +134,15 @@ krožno frekvenco $\omega_t$, fazo $\delta_t$ in amplitudo $\mathbf{E}_{0t}$:
 \mathbf{E}_t = \mathbf{E}_{0t} e^{i\mathbf{k}_t\cdot \mathbf{r} - i \omega_i t + i \delta_t}.
 \label{eq:04_08}
 \eeq
+\begin{figure}[!h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/04_lom.pdf_tex}
+\caption{K izpeljavi odboja in loma na meji dveh snovi (a). Pri odboju in lomu
+se ohranja komponenta valovnega vektorja, ki je vzporedna z mejno ploskvijo (b).}
+\label{fig:04_lom}
+\end{figure}
+
 Mejo med snovema postavimo v ravnino $z=0$. Iz robnega pogoja za ohranitev tangentne
 komponente vektorja $\mathbf{E}$ (enačba~\ref{eq:RPE}) dobimo zvezo:
 \beq
@@ -139,38 +156,40 @@ oziroma izpisano:
 \mathbf{E}_{0t\parallel} e^{ik_{tx}x+ik_{ty}y - i \omega_i t + i \delta_t}.
 \label{eq:04_10}
 \eeq
-Pri tem smo upoštevali $z=0$. Zapisana zveza mora veljati 
+Zapisana zveza mora veljati 
 ob vseh časih $t$ in za vse vrednosti $x$ in $y$. Vzemimo najprej $x=y=0$ in $t=0$. 
 Od tod sledi, da so vse fazne enake in $\delta_i = \delta_r = \delta_t$.
 Drugi pogoj poglejmo pri $x=y=0$ in poljubnem času $t>0$. Robni pogoj 
 je izpolnjen le v primeru, da velja 
 \boxeq{eq:omegakonst}{
 \omega_i =
-\omega_r = \omega_t
+\omega_r = \omega_t,
 }
-in se torej frekvenca pri odboju in lomu ohranja. 
+kar pomeni, da se frekvenca valovanja pri odboju in lomu ohranja. 
 
 Obravnavajmo zdaj primer $t=0$ pri poljubnem paru $x,y$ oziroma vektorju $\mathbf{r}$
-v mejni ravnini. Da bo lahko robni pogoj izpolnjen za vsak $\mathbf{r}$,
+v mejni ravnini. Da bo robni pogoj izpolnjen za vsak $\mathbf{r}$,
 mora veljati:
 \beq
-\mathbf{k}_i\cdot \mathbf{r} = \mathbf{k}_r\cdot \mathbf{r} = \mathbf{k}_t\cdot \mathbf{r} = \mathrm{konst.}
+\mathbf{k}_i\cdot \mathbf{r} = \mathbf{k}_r\cdot \mathbf{r} = 
+\mathbf{k}_t\cdot \mathbf{r} = \mathrm{konst.}
 \label{eq:04_11}
 \eeq
-Iz tega sledi, da so projekcije vseh treh valovnih vektorjev na mejno
-ravnino enake. Pomembnejša je ugotovitev, da ležijo valovni vektorji vpadnega, odbitega
+Iz tega sledi pomembna ugotovitev, da ležijo valovni vektorji vpadnega, odbitega
 in lomljenega valovanja vedno v eni ravnini. Imenujemo jo vpadna ravnina. 
-
 Navadno izberemo, da je vpadna ravnina ravnina $xz$. Potem zapišemo 
 valovne vektorje vpadne, odbite in prepuščene svetobe kot:
 \begin{align}
 \mathbf{k}_i  =& \left( \sin\alpha, 0, \cos \alpha\right) \frac{\omega}{c_0} n_1, \label{eq:04_12}\\
-\mathbf{k}_r  =& \left( \sin\tilde{\alpha}, 0, -\cos \tilde{\alpha}\right) \frac{\omega}{c_0} n_1,\label{eq:04_13}\\
+\mathbf{k}_r  =& \left( \sin\tilde{\alpha}, 0, -\cos \tilde{\alpha}\right) 
+\frac{\omega}{c_0} n_1\label{eq:04_13} \qquad \mathrm{in}\\
 \mathbf{k}_t  =& \left( \sin\beta, 0, \cos \beta\right) \frac{\omega}{c_0} n_2.\label{eq:04_14}
 \end{align}
-Pri tem smo poleg vpadnega kota $\alpha$ vpeljali še odbojni kot $\alpha'$ in lomni
-kot $\beta$. Iz enačbe~(\ref{eq:04_11}) neposredno sledi, da se mora ohranjati komponenta
-valovnega vektorja, ki je vzporedna z mejno ravnino:
+Poleg vpadnega kota $\alpha$ smo vpeljali še odbojni kot $\tilde{\alpha}$ in lomni
+kot $\beta$. 
+
+Iz enačbe~(\ref{eq:04_11}) sledi, da so projekcije vseh treh valovnih vektorjev na mejno
+ravnino enake (slika~\ref{fig:04_lom}\,b) in velja:
 \beq
 k_{ix} = k_{rx} = k_{tx}.
 \label{eq:04_15}
@@ -178,10 +197,10 @@ k_{ix} = k_{rx} = k_{tx}.
 Najprej poglejmo prvo enakost ($k_{ix} = k_{rx}$). Vstavimo komponenti valovnih
 vektorjev (enačbi~\ref{eq:04_12} in \ref{eq:04_13}) in dobimo:
 \beq
-\frac{\omega}{c_0} n_1 \sin \alpha  =  \frac{\omega}{c_0} n_1 \sin\tilde{\alpha},
+\frac{\omega}{c_0} n_1 \sin \alpha  =  \frac{\omega}{c_0} n_1 \sin\tilde{\alpha}.
 \label{eq:04_16}
 \eeq
-od koder sledi odbojni zakon, ki pravi, da je odbojni kot enak vpadnemu:
+Od tod sledi odbojni zakon, ki pravi, da je odbojni kot enak vpadnemu:
 \boxeq{eq:odbojni}{
 \tilde\alpha = \alpha.
 }
@@ -204,11 +223,11 @@ uskladimo še amplitude jakosti električnih polj. Preden izpeljemo
 zveze, ki povezujejo razmerja med amplitudami, vpeljimo koordinatni sistem
 in se dogovorimo o oznaki polarizacij.
 
-Za obravnavo izberemo dve ortogonalni linearni polarizaciji, saj lahko potem
+Za obravnavo izberemo dve ortogonalni linearni polarizaciji, saj lahko
 poljubno polarizacijo sestavimo kot kombinacijo teh dveh.
 Mejna ravnina naj bo kot do zdaj ravnina $xy$, os $z$ pa naj bo obrnjena navzdol. 
-V prvem primeru naj bo jakost elektičnega polja
-vpadne, odbite in prepuščene svetlobe vzporedna z osjo $y$ in tako pravokotna
+V prvem primeru naj bo jakost električnega polja
+vpadne, odbite in prepuščene svetlobe vzporedna z osjo $y$ in torej pravokotna
 na vpadno ravnino (slika~\ref{fig:04_tetm}\,a). 
 Tako valovanje imenujemo transverzalno električno (TE) valovanje. 
 V literaturi pogosto najdemo oznaki $s$ (kot {\it senkrecht}, pravokotno) ali $\sigma$.
@@ -220,13 +239,14 @@ V literaturi pogosto najdemo oznaki $s$ (kot {\it senkrecht}, pravokotno) ali $\
 \caption{V primeru transverzalne električne (TE) polarizacije leži jakost
 električnega polja pravokotno na vpadno ravnino (a),
 pri transverzalni magnetni (TM) polarizaciji pa leži jakost električnega
-polja v vpadni ravnini (b).}
+polja v vpadni ravnini (b). Jakost električnega polja je označena z rdečimi
+puščicami, gostota magnetnega polja pa z modrimi.}
 \label{fig:04_tetm}
 \end{figure}
 
 V drugem primeru ležijo jakosti električnega polja v 
 vpadni ravnini (slika~\ref{fig:04_tetm}\,b), gostote magnetnega polja 
-pa so pravokotne na njih. To polarizacijo zato poimenujemo 
+pa so pravokotne nanjo. To polarizacijo zato poimenujemo 
 transverzalna magnetna (TM) polarizacija. Uporabljajo se tudi oznake
 $p$ (kot {\it parallel}, vzporedno) ali $\pi$. 
 Omenjena primera bomo obravnavali ločeno, začenši s TE polarizacijo. V 
@@ -235,15 +255,17 @@ obeh primerih se bomo omejili na izotropne in nemagnetne snovi ($\mu=1$).
 \section{Fresnelove enačbe za transverzalno električno valovanje}
 Osnovna zahteva na meji dveh snovi je izpolnjevanje robnih
 pogojev, po katerih se na meji ohranja tangentna komponenta jakosti električnega
-polja. Ker so vse tri jakosti vzporedne z osjo $y$, velja preprosta zveza:
+polja. Ker so pri TE polariziranem valovanju 
+vse tri jakosti (vpadna, odbita in prepuščena) vzporedne z osjo $y$, velja preprosta zveza:
 \beq
-E_{0i} + E_{0r}= E_{0t}
+E_{0i} + E_{0r}= E_{0t}.
 \label{eq:04_19}
 \eeq
-Pri tem smo upoštevali, da je polje v prvi snovi superpozicija vpadnega in odbitega
+Pri tem smo upoštevali, da je polje v prvi snovi vsota vpadnega in odbitega
 polja, v drugi snovi pa je samo prepuščeno valovanje. Drugi robni pogoj, ki zahteva
 ohranitev normalne komponente gostote električnega polja (enačba~\ref{eq:RPD}) je 
 vedno izpolnjen, saj je ta komponenta v obeh snoveh identično enaka nič. 
+
 Tretji robni pogoj (enačba~\ref{eq:RPH}) zahteva
 ohranitev tangentne komponente jakosti magnetnega polja. Privzamemo, da
 sta snovi nemagnetni $\mu=1$ in dobimo:
@@ -254,35 +276,18 @@ sta snovi nemagnetni $\mu=1$ in dobimo:
 Upoštevajoč zvezo med amplitudama električnega in magnetnega 
 polja $E_0 = B_0 c = B_0 c_0/n$  (enačba~\ref{eq:EBc}) zapišemo robni pogoj kot:
 \beq
--E_{0i}n_1\cos \alpha + E_{0r}n_1\cos \alpha = -E_{0t}n_2\cos \beta,
+- E_{0i}n_1\cos \alpha + E_{0r}n_1\cos \alpha = - E_{0t}n_2\cos \beta.
 \label{eq:04_21}
 \eeq 
-oziroma:
-\beq
-n_1 E_{0i} \cos \alpha  -n_1 E_{0r}\cos \alpha = n_2 E_{0t}\cos \beta.
-\label{eq:04_22}
-\eeq
-Na koncu zapišemo še četrti robni pogoj, ohranitev normalne komponente
-gostote magnetnega polja (enačba~\ref{eq:RPB}):
-\beq
-B_{0i} \sin \alpha  + B_{0r}\sin \alpha = B_{0t}\sin \beta.
-\label{eq:04_23}
-\eeq
-Ponovno uporabimo zvezo med amplitudami (enačba~\ref{eq:EBc}) in dobimo:
-\beq
-n_1  \sin \alpha \left( E_{0i} + E_{0r} \right) = n_2 E_{0t} \sin \beta.
-\label{eq:04_24}
-\eeq
-Upoštevamo še lomni zakon (enačba~\ref{eq:04_18}) in dobimo:
-\beq
-E_{0i} + E_{0r} = E_{0t}.
-\label{eq:04_25}
-\eeq
-Ta pogoj je ekvivalenten prvemu pogoju (enačba~\ref{eq:04_19}). Iz robnih
-pogojev tako dobimo dve neodvisni enačbi (enačbi~\ref{eq:04_19} in \ref{eq:04_22}) 
-za tri neznake: $E_{0i}$, $E_{0r}$ in $E_{0t}$. Navadno izrazimo amplitudi
+Hiter račun pokaže, da je četrti robni pogoj, ki predstavlja ohranitev 
+normalne komponente gostote magnetnega polja (enačba~\ref{eq:RPB}), 
+ekvivalenten prvemu pogoju (enačba~\ref{eq:04_19}) in ne da nove informacije. 
+
+Iz robnih
+pogojev tako dobimo dve neodvisni enačbi (enačbi~\ref{eq:04_19} in \ref{eq:04_21}), 
+ki povezujeta tri neznake: $E_{0i}$, $E_{0r}$ in $E_{0t}$. Navadno izrazimo amplitudi
 odbitega in prepuščenega valovanja z amplitudo vpadnega valovanja in tako določimo 
-relativno amplitudo odbite in prepuščene svetlobe. Izračunajmo ju.
+relativni amplitudi odbite in prepuščene svetlobe. Izračunajmo ju.
 
 Najprej pomnožimo enačbo~(\ref{eq:04_19}) z $n_2 \cos \beta$ in od nje odštejemo
 enačbo~(\ref{eq:04_22}). Dobimo:
