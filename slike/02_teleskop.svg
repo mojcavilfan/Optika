@@ -1121,8 +1121,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.79492187"
-     inkscape:cx="734.05434"
+     inkscape:zoom="0.89364266"
+     inkscape:cx="734.8456"
      inkscape:cy="153.52827"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -1272,72 +1272,6 @@
        id="path3453-3-5-1-1-06-4-12"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <text
-       id="text1075-0-2-2-6-6-6-5-8"
-       y="263.04617"
-       x="148.1082"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       xml:space="preserve"><tspan
-         style="font-size:6.3499999px;stroke-width:0.26458332"
-         y="263.04617"
-         x="148.1082"
-         id="tspan1073-6-6-0-0-2-1-3-7"
-         sodipodi:role="line">$s=f_1+f_2$</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="323.7561"
-       y="225.26717"
-       id="text1075-0-2-8-3"><tspan
-         sodipodi:role="line"
-         id="tspan1073-6-6-6-6"
-         x="323.7561"
-         y="225.26717"
-         style="font-size:6.3499999px;stroke-width:0.26458332">$z$</tspan></text>
-    <text
-       id="text1075-0-2-2-6-6-6-5-72"
-       y="209.7287"
-       x="148.304"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       xml:space="preserve"><tspan
-         style="font-size:6.3499999px;stroke-width:0.26458332"
-         y="209.7287"
-         x="148.304"
-         id="tspan1073-6-6-0-0-2-1-3-72"
-         sodipodi:role="line">$f_1$</tspan></text>
-    <text
-       id="text1075-0-2-2-6-6-6-5-72-6"
-       y="209.25323"
-       x="203.53549"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       xml:space="preserve"><tspan
-         style="font-size:6.3499999px;stroke-width:0.26458332"
-         y="209.25323"
-         x="203.53549"
-         id="tspan1073-6-6-0-0-2-1-3-72-2"
-         sodipodi:role="line">$f_2$</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="71.076706"
-       y="224.01306"
-       id="text1075-0-1-75-2-9-5-9-5-8"><tspan
-         sodipodi:role="line"
-         id="tspan1073-6-8-92-8-7-3-1-0-9"
-         x="71.076706"
-         y="224.01306"
-         style="font-size:6.3499999px;stroke-width:0.26458332">$\vartheta_1$</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="251.01422"
-       y="227.61407"
-       id="text1075-0-1-75-2-9-5-9-5-8-3"><tspan
-         sodipodi:role="line"
-         id="tspan1073-6-8-92-8-7-3-1-0-9-6"
-         x="251.01422"
-         y="227.61407"
-         style="font-size:6.3499999px;stroke-width:0.26458332">$\vartheta_2$</tspan></text>
     <g
        id="g191"
        transform="matrix(1,0,0,-1,0,427.76653)">
@@ -1388,6 +1322,75 @@
          id="path3453-3-5-2-7-3-2-6-0"
          d="M 195.9934,246.58622 V 214.29681"
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.49999988;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker18155-7-5-9-9-6)" />
+    </g>
+    <g
+       id="g199">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="148.1082"
+         y="263.04617"
+         id="text1075-0-2-2-6-6-6-5-8"><tspan
+           sodipodi:role="line"
+           id="tspan1073-6-6-0-0-2-1-3-7"
+           x="148.1082"
+           y="263.04617"
+           style="font-size:6.3499999px;stroke-width:0.26458332">$s=f_1+f_2$</tspan></text>
+      <text
+         id="text1075-0-2-8-3"
+         y="225.26717"
+         x="323.7561"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           y="225.26717"
+           x="323.7561"
+           id="tspan1073-6-6-6-6"
+           sodipodi:role="line">$z$</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="148.304"
+         y="209.7287"
+         id="text1075-0-2-2-6-6-6-5-72"><tspan
+           sodipodi:role="line"
+           id="tspan1073-6-6-0-0-2-1-3-72"
+           x="148.304"
+           y="209.7287"
+           style="font-size:6.3499999px;stroke-width:0.26458332">$f_1$</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="203.53549"
+         y="209.25323"
+         id="text1075-0-2-2-6-6-6-5-72-6"><tspan
+           sodipodi:role="line"
+           id="tspan1073-6-6-0-0-2-1-3-72-2"
+           x="203.53549"
+           y="209.25323"
+           style="font-size:6.3499999px;stroke-width:0.26458332">$f_2$</tspan></text>
+      <text
+         id="text1075-0-1-75-2-9-5-9-5-8"
+         y="224.01306"
+         x="71.076706"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           y="224.01306"
+           x="71.076706"
+           id="tspan1073-6-8-92-8-7-3-1-0-9"
+           sodipodi:role="line">$\vartheta_1$</tspan></text>
+      <text
+         id="text1075-0-1-75-2-9-5-9-5-8-3"
+         y="227.61407"
+         x="251.01422"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           y="227.61407"
+           x="251.01422"
+           id="tspan1073-6-8-92-8-7-3-1-0-9-6"
+           sodipodi:role="line">$\vartheta_2$</tspan></text>
     </g>
   </g>
 </svg>

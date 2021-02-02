@@ -1,17 +1,17 @@
-%\chapterimage{Geometrijska.jpg} % Chapter heading image
+\chapterimage{04_Odboj.jpg} % Chapter heading image
 
 \chapter{Odboj in lom}
-Dva izmed najosnovnejših optičnih pojavov sta odboj in lom valovanja ni meji
+Dva izmed najosnovnejših optičnih pojavov sta odboj in lom valovanja na meji
 dveh snovi. V tem poglavju bomo podrobneje spoznali, kako se svetloba odbije in lomi ter
 kako se pri tem spremenita amplituda in faza valovanja. Opisali bomo totalni odboj,
 vpeljali Brewstrov kot in na koncu spoznali še odboj svetlobe na meji s kovino.
 
 \section{Robni pogoji na meji dveh dielektrikov}
 Že geometrijska optika, ki temelji na Fermatovem teoremu, pove, kako se svetloba na 
-meji dveh snovi odbija in lomi. Vemo, da je odbojni kot enak vpadnemu (enačba~\ref{eq:odbojnizakon}), 
+meji dveh snovi odbija in lomi. Odbojni kot je enak vpadnemu (enačba~\ref{eq:odbojnizakon}), 
 smer lomljenega žarka pa je odvisna od lomnih količnikov snovi (enačba~\ref{eq:lomnizakon}). 
-Vendar geometrijska optika ne pove ničesar o amplitudah in fazah odbitega 
-in prepuščenega vala. Za to potrebujemo valovno obravnavo svetlobe. 
+Vendar geometrijska optika ne pove ničesar o amplitudah in fazah valovanj.
+Za to potrebujemo valovno obravnavo svetlobe. 
 
 Izhajamo iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), ki 
 opisujejo elektromagnetno valovanje v snovi. Za obravnavo prehoda
@@ -32,11 +32,11 @@ Ko gre višina kvadra $h \to 0$, ostaneta le še dva prispevka k integralu, to s
 skalarna produkta na zgornji
 in spodnji ploskvi:
 \beq
-\mathbf{D}_1 \cdot \mathbf{s}_0 + \mathbf{D}_2 \cdot (-\mathbf{s}_0) = 0,
+\mathbf{D}_1 \cdot \mathbf{s}_0\, S+ \mathbf{D}_2 \cdot (-\mathbf{s}_0)\,S = 0,
 \label{eq:04_02}
 \eeq
-pri čemer vektor $\mathbf{s}_0 $ opisuje normalo na ploskev kvadra in hkrati na mejno ravnino. 
-
+pri čemer vektor $\mathbf{s}_0 $ opisuje normalo na ploskev kvadra in hkrati na mejno ravnino, $S$ pa je 
+ploščina posamezne ploskve.
 \begin{figure}[!ht]
 \centering
 \def\svgwidth{130truemm} 
@@ -230,7 +230,7 @@ V prvem primeru naj bo jakost električnega polja
 vpadne, odbite in prepuščene svetlobe vzporedna z osjo $y$ in torej pravokotna
 na vpadno ravnino (slika~\ref{fig:04_tetm}\,a). 
 Tako valovanje imenujemo transverzalno električno (TE) valovanje. 
-V literaturi pogosto najdemo oznaki $s$ (kot {\it senkrecht}, pravokotno) ali $\sigma$.
+V literaturi zasledimo tudi oznaki $s$ (kot {\it senkrecht}, pravokotno) ali $\sigma$.
 
 \begin{figure}[ht]
 \centering
@@ -267,8 +267,8 @@ ohranitev normalne komponente gostote električnega polja (enačba~\ref{eq:RPD})
 vedno izpolnjen, saj je ta komponenta v obeh snoveh identično enaka nič. 
 
 Tretji robni pogoj (enačba~\ref{eq:RPH}) zahteva
-ohranitev tangentne komponente jakosti magnetnega polja. Privzamemo, da
-sta snovi nemagnetni $\mu=1$ in dobimo:
+ohranitev tangentne komponente jakosti magnetnega polja. Ob privzetku, da
+sta snovi nemagnetni, dobimo:
 \beq
 -B_{0i}\cos \alpha + B_{0r}\cos \alpha = -B_{0t}\cos \beta.
 \label{eq:04_20}
@@ -289,8 +289,8 @@ ki povezujeta tri neznake: $E_{0i}$, $E_{0r}$ in $E_{0t}$. Navadno izrazimo ampl
 odbitega in prepuščenega valovanja z amplitudo vpadnega valovanja in tako določimo 
 relativni amplitudi odbite in prepuščene svetlobe. Izračunajmo ju.
 
-Najprej pomnožimo enačbo~(\ref{eq:04_19}) z $n_2 \cos \beta$ in od nje odštejemo
-enačbo~(\ref{eq:04_22}). Dobimo:
+Pomnožimo enačbo~(\ref{eq:04_19}) z $n_2 \cos \beta$ in ji prištejmo
+enačbo~(\ref{eq:04_21}). Dobimo:
 \beq
 \left( n_2 \cos \beta-n_1 \cos \alpha\right) E_{0i} + 
 \left( n_2 \cos \beta+n_1 \cos \alpha\right) E_{0r} = 0.
@@ -299,11 +299,11 @@ enačbo~(\ref{eq:04_22}). Dobimo:
 Vpeljemo amplitudno odbojnost $r = E_{0r}/E_{0i}$ 
 kot razmerje odbite in vpadne amplitude valovanja. Iz enačbe~(\ref{eq:04_26}) sledi:
 \boxeq{eq:TEr}{
-r  = \frac{n_1 \cos \alpha - n_2 \cos \beta}
+r_\mathrm{TE}  = \frac{n_1 \cos \alpha - n_2 \cos \beta}
 {n_1 \cos \alpha + n_2 \cos \beta},
 }
-pri čemer $\alpha$ in $\beta$ označujeta vpadni in lomni kot. Izraz za $r$
-lahko z porabo lomnega zakona preoblikujemo:
+pri čemer $\alpha$ in $\beta$ označujeta vpadni in lomni kot. Izraz za amplitudno odbojnost
+$r$ z uporabo lomnega zakona (enačba~\ref{eq:04_18}) preoblikujemo:
 \beq
 r = \frac{\frac{n_1}{n_2} \cos \alpha - \cos \beta}{\frac{n_1}{n_2} \cos \alpha - \cos \beta} = 
 \frac{\frac{\sin \beta}{\sin \alpha} \cos \alpha - \cos \beta}
@@ -322,13 +322,14 @@ t = \frac{E_{0t}}{E_{0i}} = \frac{E_{0i} + E_{0r}}{E_{0i}} = 1+ r.
 \eeq
 Amplitudna prepustnost je tako:
 \boxeq{eq:TEt}{
-t = 1+r = \frac{2n_1\cos \alpha}{n_1 \cos \alpha + n_2 \cos \beta}.
+t_\mathrm{TE} = 1+r = \frac{2n_1\cos \alpha}{n_1 \cos \alpha + n_2 \cos \beta}.
 }
 
 \section{Fresnelove enačbe za transverzalno magnetno valovanje}
-Izračunajmo še amplitudno odbdojnost in prepustnost za 
-transverzalno magnetno polarizirano valovanje. Tudi v tem primeru začnemo
-z robnimi pogoji. Na meji dveh sredstev se ohranja tangentna 
+Izračun amplitudne odbojnosti in prepustnosti za 
+transverzalno magnetno polarizirano valovanje začnemo podobno kot za 
+TE polarizirano valovanje, to je z ustreznimi robnimi pogoji. 
+Na meji dveh snovi se ohranja tangentna 
 komponenta jakosti magnetnega polja (enačba~\ref{eq:RPH}):
 \beq
 H_{0i} + H_{0r}= H_{0t}.
@@ -348,28 +349,15 @@ E_{0i}n_1 + E_{0r}n_1= E_{0t}n_2.
 \eeq
 Drugi robni pogoj (enačba~\ref{eq:RPB}), ki pravi, da se ob prehodu v drugo snov ohranja
 pravokotna komponenta gostote magnetnega polja, je prav tako izpolnjen, saj je $B_{\perp}=0$. 
-Iz tretjega robnega pogoja, ohranitve tangentne komponente jakosti
-električnega polja (enačba~\ref{eq:RPE}), sledi:
+Iz ohranitve tangentne komponente jakosti
+električnega polja (enačba~\ref{eq:RPE}) sledi:
 \beq
 E_{0i} \cos \alpha - E_{0r}\cos \alpha = E_{0t}\cos \beta.
 \label{eq:04_32}
 \eeq
 Predznak jakosti električnega polja smo zapisali v skladu s sliko~\ref{fig:04_tetm}. 
-Za vajo lahko zapišemo še četrti robni pogoj, ki pomeni ohranitev normalne 
-komponenete gostote električnega polja $D_\perp$ (enačba~\ref{eq:RPD}):
-\beq
-D_{0i}\sin \alpha - D_{0r}\sin \alpha = D_{0t}\sin \beta.
-\label{eq:04_33}
-\eeq
-Upoštevamo, da je $D_0 = \varepsilon \varepsilon_0 E_0 = \varepsilon_0 n^2 E_0$ in
-zapišemo:
-\beq
-E_{0i} n_1^2 \sin \alpha - E_{0r} n_1^2 \sin \alpha  = 
-E_{0t} n_2^2 \sin \beta = E_{0t} n_1 n_2 \sin \alpha.
-\label{eq:04_34}
-\eeq
-Pri tem smo upoštevali lomni zakon. Po krajšanju dobimo enačbo, 
-ki je enaka prvemu robnemu pogoju in ne da nove informacije. 
+Za vajo bi lahko zapisali še četrti robni pogoj, vendar tudi v tem primeru ne bi dobili nove informacije.
+
 Ostaneta dve enačbi za tri neznanke in ponovno lahko
 izrazimo amplitudi odbite in prepuščene svetlobe z amplitudo vpadne. 
 Enačbo (\ref{eq:04_31}) pomnožimo s $\cos \beta$, enačbo~(\ref{eq:04_32}) pa z $n_2$:
@@ -386,7 +374,7 @@ n_2 \cos \alpha \right) = 0.
 Od tod izračunamo amplitudno odbojnost $r = E_{0r}/E_{0i}$, ki je 
 razmerje med odbito in vpadno amplitudo jakosti električnega polja:
 \boxeq{eq:TMr}{
-r = \frac{n_2 \cos \alpha - n_1 \cos \beta}{n_2 \cos \alpha + n_1 \cos \beta}.
+r_\mathrm{TM} = \frac{n_2 \cos \alpha - n_1 \cos \beta}{n_2 \cos \alpha + n_1 \cos \beta}.
 }
 Tudi ta izraz lahko predelamo z upoštevanjem lomnega zakona:
 \beq
@@ -397,35 +385,35 @@ r = \frac{\frac{n_2}{n_1} \cos \alpha - \cos \beta}{\frac{n_2}{n_1} \cos \alpha 
 {\sin \alpha \cos \alpha + \cos \beta \sin \beta}.
 \label{eq:04_38}
 \eeq
-To lahko zapišemo z dvojnimi koti:
+Izraz preoblikujemo z vpeljavo dvojnih kotov:
 \beq
-r = \frac{\sin(2\alpha) - \sin(2\beta)}{\sin(2\alpha) + \sin(2\beta)},
+r = \frac{\sin(2\alpha) - \sin(2\beta)}{\sin(2\alpha) + \sin(2\beta)} = \frac{2\cos(\alpha+\beta )\sin(\alpha-\beta )}
+{2\sin(\alpha+\beta )\cos(\alpha-\beta )}
 \label{eq:04_39}
 \eeq
-nato pa razliko in vsoto sinusov zapišemo kot produkt in dobimo:
+in dobimo:
 \beq
-r = \frac{2\cos(\alpha+\beta )\sin(\alpha-\beta )}
-{2\sin(\alpha+\beta )\cos(\alpha-\beta )} = \frac{\tan(\alpha-\beta )}{\tan(\alpha+\beta )}.
+r =\frac{\tan(\alpha-\beta )}{\tan(\alpha+\beta )}.
 \label{eq:04_40}
 \eeq
 Amplitudno prepustnost $t = E_{0t}/E_{0i}$ 
 izračunamo iz enačbe~(\ref{eq:04_31}):
 \boxeq{eq:TMt}{
-t = \frac{n_1}{n_2}\left(1+r \right) = 
+t_\mathrm{TM} = \frac{n_1}{n_2}\left(1+r \right) = 
 \frac{2 n_1 \cos \alpha}{n_2 \cos \alpha + n_1 \cos \beta}.
 }
 
-\begin{example}{\bf Amplitudni odbojnost in prepustnost pri pravokotnem vpadu.} 
-Izračunali smo amplitudni odbojnosti $r$ in prepustnosti $t$ za obe med seboj 
-pravokotni polarizaciji TE in TM. Poglejmo zdaj najpreprostejši primer, pri katerem
+\begin{example}{\bf Amplitudna odbojnost in amplitudna prepustnost pri pravokotnem vpadu.} 
+Izračunali smo amplitudni odbojnosti $r$ in amplitudni prepustnosti $t$ za obe med seboj 
+pravokotni polarizaciji TE in TM. Poglejmo najprej najpreprostejši primer, pri katerem
 svetloba vpada pravokotno na mejo snovi. V tem primeru so vpadni, odbojni in 
-lomni kot enaki in $\alpha = \tilde{\alpha} = \beta = 0$. Za TE polarizacijo dobimo:
+lomni kot enaki in $\alpha = \tilde{\alpha} = \beta = 0$. Za TE polarizirano valovanje dobimo:
 \beq
 r_{\mathrm{TE}} = \frac{n_1 -n_2}{n_1+n_2} \qquad \mathrm{in} \qquad
 t_{\mathrm{TE}} = \frac{2n_1}{n_1+n_2},
 \label{eq:04_42}
 \eeq
-za TM polarizacijo pa:
+za TM polarizirano valovanje pa:
 \beq
 r_{\mathrm{TM}} = \frac{n_2 -n_1}{n_2+n_1} \qquad \mathrm{in} \qquad
 t_{\mathrm{TM}} = \frac{2n_1}{n_1+n_2}.
@@ -444,11 +432,12 @@ Odbojnost je z upoštevanjem privzete smeri tako enaka za obe polarizaciji
 V poskusih nas navadno zanima energijski tok valovanja. Gostoto energijskega
 toka na splošno zapišemo kot (enačba~\ref{eq:j}):
 \beq
-j = \frac{1}{2} \varepsilon_0^2 E_0^2 c_0 n.
+j = \frac{1}{2} \varepsilon_0E_0^2 c_0 n.
 \label{eq:04_44}
 \eeq
-Odbojnost $\mathcal{R}$ vpeljemo kot razmerje med gostotama energijskih
-tokov odbite in vpadne svetlobe:
+Odbojnost $\mathcal{R}$ vpeljemo kot razmerje med odbito in vpadno svetlobno močjo oziroma
+kot razmerje med gostotama energijskih
+tokov odbite $j_r$ in vpadne svetlobe $j_i$:
 \beq
 \mathcal{R} = \frac{j_r}{j_i} = \frac{\frac{1}{2}\varepsilon_0 E_{0r}^2 c_0 n_1}
 {\frac{1}{2}\varepsilon_0 E_{0i}^2 c_0 n_1} = \left(\frac{E_{0r}}{E_{0i}}\right)^2\!\!.
@@ -458,14 +447,24 @@ V razmerju jakosti električnega polja prepoznamo amplitudno odbojnost in zapiš
 \boxeq{eq:TEMR}{
 \mathcal{R} = |r|^2.
 }
-Ker odbita in vpadna svetloba potujeta po isti snovi, je odbojnost kar 
-enaka kvadratu razmerja amplitud polj. 
 
-Izračunajmo še prepustnost $\mathcal{T}$, ki je razmerje med gostotama svetlobnih
-tokov prepuščene in vpadne svetlobe. Pri zapisu je treba biti pazljiv, saj je 
-treba upoštevati projekcijo povprečnega Poyntingovega vektorja. Zato zapišemo: 
+Izračunajmo še prepustnost $\mathcal{T}$, ki je razmerje med prepuščeno in vpadno svetlobno 
+močjo. To razmerje ni enako razmerju gostot svetlobih tokov, saj se zaradi
+spremenjene smeri valovanja spremeni velikost ploskve, skozi
+katero se pretoči vpadna svetlobna moč $P$.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/04_coscos.pdf_tex}
+\caption{Pri prehodu skozi mejo se zaradi loma spremeni velikost
+ploskve, skozi katero se pretaka vpadna svetlobna moč.}
+\label{fig:04_coscos}
+\end{figure}
+
+Zapišemo: 
 \beq
-\mathcal{T} = \frac{j_t}{j_i} = \frac{\frac{1}{2}\varepsilon_0 E_{0t}^2 c_0 n_2}
+\mathcal{T} = \frac{P_t}{P_i} = \frac{j_t}{j_i}\frac{S\cos \beta}{S\cos \alpha} =
+\frac{\frac{1}{2}\varepsilon_0 E_{0t}^2 c_0 n_2}
 {\frac{1}{2}\varepsilon_0 E_{0i}^2 c_0 n_1} \frac{\cos\beta}{\cos\alpha}= 
 \left(\frac{E_{0t}}{E_{0i}}\right)^2 \frac{n_2\cos\beta}{n_1\cos\alpha}.
 \label{eq:04_46}
@@ -475,25 +474,12 @@ Prepustnost je torej enaka:
 \mathcal{T} = |t|^2 \frac{n_2\cos\beta}{n_1\cos\alpha}.
 }
 
-Izračunajmo vsoto odbojnosti in prepustnosti na primeru TE polariziranega valovanja:
-\begin{align}
-\mathcal{R}+ \mathcal{T}=&
-\left(\frac{n_1 \cos \alpha - n_2 \cos \beta}{n_1 \cos \alpha + n_2 \cos \beta}\right)^2+
-\frac{4n_1n_2\cos \alpha \, \cos \beta}{\left(n_1 \cos \alpha + n_2 \cos \beta\right)^2}\\ =& 
-\frac{n_1^2 \cos^2\alpha + n_2^2\cos^2\beta -2 n_1n_2 \cos \alpha \cos \beta + 
-4n_1n_2\cos\alpha \cos \beta}{\left(n_1 \cos \alpha + n_2 \cos \beta\right)^2}\\ = &
-\frac{n_1^2 \cos^2\alpha + n_2^2\cos^2\beta +2 n_1n_2 \cos \alpha \cos \beta}
-{n_1^2 \cos^2\alpha + n_2^2\cos^2\beta +2 n_1n_2 
-\cos \alpha \cos \beta} = 1.
-\label{eq:04_47}
-\end{align}
-Če povzamemo:
+Kratek  račun pokaže, da med odbojnostjo $\mathcal{R}$ in prepustnostjo $\mathcal{T}$ velja zveza:
 \boxeq{eq:TEMRT}{
 \mathcal{R}+\mathcal{T} = 1.
 }
-Rezultat je seveda pričakovan, saj opisuje ohranitev energije. Pogosto je najbolj
-priročno izračunati odbojnost, nato pa z uporabo enačbe~(\ref{eq:TEMRT})
-preprosto še prepustnost. 
+Rezultat je seveda pričakovan, saj opisuje ohranitev energije. Pogosto je najpriročneje
+izračunati odbojnost, nato pa z uporabo enačbe~(\ref{eq:TEMRT}) še prepustnost. 
 
 Opozorimo še enkrat, da je pri izračunu prepustnosti treba upoštevati tudi 
 spremembo lomnega količnika in kota širjenja svetlobe, zato:
@@ -511,15 +497,19 @@ in dobimo:
 \label{eq:04_49}
 \eeq
 Ob pravokotnem vpadu na steklo se $4~\%$ svetlobe odbije, ostala 
-svetloba je prepuščena.
+svetloba je prepuščena. Če želimo izračunati odbojnost na stekleni plošči, 
+moramo seveda upoštevati, da se svetloba odbija
+na obeh mejah steklo/zrak -- prvič, ko vstopi v steklo, in drugič, ko iz stekla
+izstopi.
 \end{example}
 
 \section{Prehod v optično gostejšo snov}
-Najprej si oglejmo prehajanje svetlobe iz snovi z manjšim lomnim
-količnikom v snov z večjim lomni količnikom ($n_1<n_2$). To je na primer
-primer odboja in loma pri vpadu svetlobe iz zraka v vodo ali steklo. 
+Najprej obravnavajmo prehajanje svetlobe iz snovi z manjšim lomnim
+količnikom v snov z večjim lomni količnikom ($n_1<n_2$), na primer
+iz zraka v vodo ali iz zraka v steklo. Uporabimo
+Fresnelove enačbe in izračunajmo  odbojnosti in prepustnosti za obe polarizaciji. 
 
-Narišimo najprej amplitudno odbojnost in prepustnost za TE polarizacijo v odvisnosti
+Začnimo z amplitudno odbojnostjo in amplitudno prepustnostjo za TE polarizacijo v odvisnosti
 od vpadnega kota (slika~\ref{fig:04_redte}\,a). 
 Iz enačbe~(\ref{eq:TEr}) sledi, da je amplitudna odbojnost $r_\mathrm{TE}$
 za vse kote negativna. Njena velikost se zvezno spreminja od začetne vrednosti
@@ -527,11 +517,12 @@ pri pravokotnem vpadu do vrednosti $-1$, ko se vpadni kot približuje $90\si{\de
 Negativni predznak pri kotu $\alpha =0$ pomeni, da se svetloba pri 
 pravokotnem vpadu na optično gostejše sredstvo vedno odbije z nasprotno fazo, ne 
 glede na njeno polarizacijo.
+
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/04_redte.pdf_tex}
-\caption{Odvisnost amplitudne odbojnosti in prepustnosti (a) ter odbojnosti in 
+\caption{Odvisnost amplitudne odbojnosti in amplitudne prepustnosti (a) ter odbojnosti in 
 prepustnosti (b) za TE polarizirano valovanje v odvisnosti od vpadnega kota $\alpha$}
 \label{fig:04_redte}
 \end{figure}
@@ -539,36 +530,45 @@ prepustnosti (b) za TE polarizirano valovanje v odvisnosti od vpadnega kota $\al
 Amplitudna prepustnost $t_\mathrm{TE}$, ki jo izračunamo kot $t=r+1$, je za vse
 vpadne kote pozitivna in pojema od največje vrednosti pri pravokotnem vpadu
 do vrednosti $0$, ko se vpadni kot približuje $90\si{\degree}$. 
+
 Odbojnost $\mathcal{R}_\mathrm{TE}$, ki jo izračunamo kot kvadrat amplitudne odbojnosti,
 je prikazana na sliki~\ref{fig:04_redte}\,b. Vrednost je po pričakovanju 
 vedno pozitivna in narašča od neke začetne vrednosti pri pravokotnem
-vpadu do vrednosti $1$, ko se vpadi kot približuje $90\si{\degree}$. Prepustnost
+vpadu do vrednosti $1$, ko se vpadni kot približuje $90\si{\degree}$. Prepustnost
 $\mathcal{T}_\mathrm{TE}$ izračunamo po enačbi $\mathcal{T} = 1 -\mathcal{R}$. 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=10truecm]{slike/04_OdbojFoto.jpg}
+\includegraphics[width=7truecm]{slike/04_OdbojFoto.jpg}\hfill
+\includegraphics[width=7truecm]{slike/04_Douro.jpeg}
 \caption{Odboj na vodni gladini. Pri majhnih vpadnih kotih je odbojnost
-majhna, zato vidimo dno, pri večjih
-vpadnih kotih postane odbojnost tako velika, da vidimo samo še odboj.}
+majhna, zato vidimo dno korita, pri večjih
+vpadnih kotih postane odbojnost tako velika, da vidimo samo še odboj (levo).
+Mirna rečna gladina pri velikih vpadnih kotih deluje kot zrcalo (desno).}
 \label{fig:04_OdbojFoto}
 \end{figure}
 
 Poglejmo še primer transverzalne magnetne polarizacije. Narišemo odvisnost
-$r$ in $t$ od vpadnega kota (slika~\ref{fig:04_redtm}\,a). Zaradi začetne 
-izbire smeri odbite jakosti električnega polja je predznak pri pravokotnem vpadu drugačen kot pri 
-polarizaciji TE in je pozitiven. Z naraščajočim vpadnim kotom se amplitudna
-odbojnost zmanjšuje in doseže vrednost $r=-1$ ko se vpadni kot
-približuje $\alpha = 90\si{\degree}$. Vidimo, da pri nekem kotu zavzame  
-vrednost $r = 0$. Pri tem kotu, imenujemo ga Brewstrov kot $\alpha_B$, 
-je odbojnost za TM polarizacijo enaka nič. To ima pomembno in uporabno
+amplitudne odbojnosti $r$ in amplitudne prepustnosti $t$ od vpadnega kota 
+(slika~\ref{fig:04_redtm}\,a). Zaradi začetne izbire smeri odbite jakosti
+električnega polja je predznak pri pravokotnem vpadu drugačen kot pri 
+polarizaciji TE in je pozitiven, čeprav se faza valovanja obrne. 
+Z naraščajočim vpadnim kotom se amplitudna
+odbojnost zmanjšuje in doseže vrednost $r=-1$, ko se vpadni kot
+približuje $\alpha = 90\si{\degree}$. 
+
+Vidimo, da pri nekem kotu zavzame  
+vrednost $r = 0$. Vpadni kot, pri katerem je odbojnost za TM polarizirano
+valovanje enaka nič, imenujemo Brewstrov kot $\alpha_B$. Ta pojav ima pomembno in uporabno
 posledico, da je celotno TM polarizirano valovanje pri Brewstrovem kotu prepuščeno. 
 Ker amplitudna odbojnost pri Brewstrovem kotu zamenja predznak, se pri tem
-kotu tudi spremeni faza odbite svetlobe. 
+kotu tudi spremeni faza odbite svetlobe: pri kotih $\alpha < \alpha_B$ se valovanje
+odbije z nasprotno fazo, pri kotih $\alpha > \alpha_B$ pa se TM polarizirano
+valovanje odbije z isto fazo.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/04_redtm.pdf_tex}
-\caption{Odvisnost amplitudne odbojnosti in prepustnosti (a) ter odbojnosti in 
+\caption{Odvisnost amplitudne odbojnosti in amplitudne prepustnosti (a) ter odbojnosti in 
 prepustnosti (b) za TM polarizirano valovanje v odvisnosti od vpadnega kota $\alpha$. Kot
 $\alpha_B$ označuje Brewstrow kot.}
 \label{fig:04_redtm}
@@ -578,10 +578,12 @@ Odbojnost in prepustnost TM polariziranega valovanja sta prikazani na
 sliki~\ref{fig:04_redtm}\,b. Odbojnost od začetne vrednosti pri $\alpha=0$
 pojema z naraščajočim vpadnim kotom do vrednosti 0, ki jo doseže pri 
 Brewstrovem vpadnem kotu $\alpha_B$. Nato odbojnost strmo naraste z naraščajočim vpadnim
-kotom do vrednosti 1. Prepustnost je enaka $\mathcal{T} = 1- \mathcal{R}$.
+kotom do vrednosti 1. Pri velikih vpadnih kotih je zato
+gladka meja z optično gostejšo snovjo videti kot zrcalo. Prepustnost preprosto izračunamo 
+kot $\mathcal{T} = 1- \mathcal{R}$.
 
 \subsection*{Brewstrov kot}
-Brewstrov kot smo vpeljali kot kot, pri katerem je odbojnost
+Brewstrov kot smo vpeljali kot vpadni kot, pri katerem je odbojnost
 TM polariziranega valovanja enaka nič. Poglejmo, pri katerem
 vpadnem kotu se to zgodi. Amplitudna odbojnost $r$ je po enačbi~(\ref{eq:04_40})
 enaka:
@@ -594,76 +596,111 @@ naraste v neskončnost. Ker je števec vedno različen od nič -- saj
 sta po lomnem zakonu vpadni in lomni kot vedno različna -- je pri 
 vrednosti $\alpha + \beta = \pi/2$ odbojnost enaka nič.
 Izračunamo $\sin \beta = \sin (\pi/2-\alpha) = \cos \alpha$. 
-Iz lomnega zakona sledi:
+Iz lomnega zakona (enačba~\ref{eq:04_18}) sledi:
 \beq
 n_1 \sin \alpha= n_2 \sin \beta= n_2 \cos \alpha.
 \label{eq:04_51}
 \eeq
-Za Brewstrov kot velja:
+Za Brewstrov kot tako velja:
 \boxeq{eq:Brewstrovkot}{
 \tan \alpha_B = \frac{n_2}{n_1}.
 }
-Pri prehodu zrak/steklo je $\alpha_B = 56,3\si{\degree}$ in na meji
-steklo/zrak $\alpha_B = 33,6\si{\degree}$. 
+Pri prehodu iz zraka v steklo je $\alpha_B = 56\si{\degree}$ in na prehodu
+iz zraka v vodo $\alpha_B = 53\si{\degree}$. 
 
-Če torej osvetljujemo mejno ploskev z nepolarizirano svetlobo, se 
+Še enkrat povzemimo pomen Brewstrovega kota: odbojnost za TM polarizirano
+valovanje je enaka nič, prepustnost za TM polarizirano valovanje pa enaka 1. Če 
+torej TM polarizirana svetloba vpada na mejo pod Brewstrovim kotom, je vsa svetloba
+prepuščena. Kadar pa osvetljujemo mejno ploskev z nepolarizirano svetlobo, se 
 pri kotu $\alpha_B$ od mejne ploskve odbije samo TE polarizirano
 valovanje, TM pa je v celoti prepuščeno. Na ta preprost način
-iz nepolarizirane svetlobe dobimo linearno polarizirano valovanje. 
-
+iz nepolarizirane svetlobe dobimo linearno polarizirano valovanje.
+\vglue-5truemm
 \begin{remark}
 Pri Brewstrovem kotu je odbojnost TM polariziranega valovanja točno 
 enaka nič, vendar je tudi pri kotih, ki so blizu $\alpha_B$, 
 odbojnost precej manjša kot za TE polarizirano valovanje. 
-To s pridom uporabljamo pri polarizacijskih sončnih očalih. Ker
-se od površine, na primer vodne gladine, zasnežene pokrajine
-ali gladke ceste, odbije razmero malo TM polariziranega valovanja, 
+To s pridom uporabljamo pri polarizacijskih sončnih očalih ali fotografskih
+filtrih. Ker se od površine, na primer vodne gladine, zasnežene pokrajine
+ali gladke ceste, odbije razmeroma malo TM polariziranega valovanja, 
 je odbita svetloba pretežno TE linearno polarizirana. Če sončna
-očala delujejo kot polarizator, ki TE polarizirane svetlobe
-ne prepušča, je prepuščene zelo malo odbite svetlobe.
-\end{remark}
+očala ali fotografski filter delujejo kot polarizator, ki TE polarizirane 
+svetlobe ne prepušča, bistveno zmanjšamo količino odbite svetlobe in 
+``bleščanje'' površine. Sončna očala so linearni polarizatorji, večina 
+fotografskih polarizacijskih filtrov pa je cirkularnih polarizatorjev,
+saj bi vstopna linearna polarizacija motila delovanje svetlomera.
 \begin{figure}[ht]
 \centering
-%\includegraphics[width=10truecm]{slike/04_PolarizacijaFoto.jpg}
-\caption{DODAJ SLIKO ODBOJ POLARIZATOR}
-\label{fig:04_PolarizacijaFoto}
+\includegraphics[width=7truecm]{slike/04_photos_voda1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/04_photos_voda2.jpg}
+\caption{Odsev na vodni gladini preprečuje, da bi videli v globino vode (levo).
+Ker je odbita svetloba pretežno linearno polarizirana, jo s polarizacijskim 
+filtrom lahko zaustavimo in tako vidimo dno potoka (desno).}
+\label{fig:04_odsevvoda}
 \end{figure}
 
-\begin{remark}
-Fotoaparati imajo cirkularni filter - zakaj, kakšen vpliv, kakšna korist.
-\end{remark}
 \begin{figure}[ht]
 \centering
-%\includegraphics[width=10truecm]{slike/04_MavricaFoto.jpg}
-\caption{DODAJ SLIKO MAVRICE S POLARIZACIJSKIM FILTROM}
+\includegraphics[width=5truecm]{slike/04_photos_zmaj2.jpg}\qquad \qquad
+\includegraphics[width=5truecm]{slike/04_photos_zmaj1.jpg}
+\caption{Odsev v izložbenem oknu (levo) in isti motiv, slikan s polarizacijskim 
+filtrom (desno), ki omogoča pogled v izložbo.}
+\label{fig:04_odsevzmaj}
+\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/04_photos_grad1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/04_photos_grad2.jpg}
+\caption{Odsev v luži (levo) in isti motiv, slikan s polarizacijskim filtrom (desno). 
+Polarizirano odbito svetlobo zaustavi fotografski filter, zato odsev ni več viden,
+vidno pa je dno luže.}
+\label{fig:04_odsevgrad}
+\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=14truecm]{slike/Mavrica.jpeg}
+\caption{NOVA SLIKA! Mavrica nastane z odbojem svetlobe v dežnih kapljicah. Ker je odbojni
+kot blizu Brewsterjevega kota, je mavrica pretežno polarizirana, kar pokažemo z linearnim 
+polarizatorjem.}
 \label{fig:04_MavricaFoto}
 \end{figure}
+\end{remark}
 
 \section{Prehod v optično redkejšo snov}
 Pri prehodu v snov z manjšim lomnim količnikom pride do novih zanimivih pojavov.
 Primer tega je prehod svetlobe iz vode ali stekla v zrak, ko je $n_1>n_2$.
 Izhajamo iz lomnega zakona (enačba~\ref{eq:04_18}) in zapišemo lomni kot:
 \beq
-\beta = \arcsin \left(\frac{n_1}{n_2}\sin \alpha\right).
+\beta = \arcsin \left(\frac{n_1}{n_2}\sin \alpha\right)\!\!.
 \label{eq:04_52}
 \eeq
 Pri določeni vrednosti vpadnega kota $\alpha_m$ 
 argument doseže vrednost $1$ in lomni kot
-postane enak $\beta = 90\si{\degree}$. Za večje vpadne kote 
-$\alpha> \alpha_m$ enačba nima več rešitve. Takrat govorimo o totalnem 
+postane enak $\beta = 90\si{\degree}$. Za vpadne kote, ki so večji od 
+mejnega in za katere velja
+$\alpha> \alpha_m$, enačba nima več rešitve. Takrat govorimo o totalnem 
 ali popolnem odboju. Mejni kot totalnega odboja izračunamo kot:
 \boxeq{eq:totalni}{
-\alpha_m = \arcsin\left(\frac{n_2}{n_1}\right).
+\alpha_m = \arcsin\left(\frac{n_2}{n_1}\right)\!\!.
 }
 V steklu z lomnim količnikom $n_1=1,5$ je mejni kot totalnega odboja
 enak $\alpha_m = 41,8\si{\degree}$, v vodi z lomnim količnikom 
 $n_1 = 1,33$ pa $\alpha_m = 48,7\si{\degree}$.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/04_totalni.pdf_tex}
+\caption{Svetloba vpada iz snovi z večjim lomnim količnikom v snov z manjšim lomnim količnikom.
+Pri vpadnih kotih, ki so večji od mejnega kota totalnega odboja $\alpha_m$, se svetloba totalno odbije (a). Pri računu
+si pomagamo s sliko loma (b).}
+\label{fig:04_totalni}
+\end{figure}
 
 Izračunajmo odbojnost in prepustnost najprej za TE polarizacijo.
 Po enačbi~(\ref{eq:TEr}) je:
 \beq
-r = \frac{n_1 \cos \alpha - n_2 \sqrt{1 - (\sin \alpha~ n_1/n_2)^2}}
-{n_1 \cos \alpha + n_2 \sqrt{1 - (\sin \alpha~n_1/n_2)^2}}.
+r = \frac{n_1 \cos \alpha - n_2 \sqrt{1 - (\sin \alpha \cdot n_1/n_2)^2}}
+{n_1 \cos \alpha + n_2 \sqrt{1 - (\sin \alpha \cdot n_1/n_2)^2}}.
 \label{eq:04_53}
 \eeq
 Za vrednosti vpadnega kota $\alpha > \alpha_m$ je argument korena
@@ -680,7 +717,7 @@ pri čemer je:
 \eeq
 Potem izračunamo odbojnost $\mathcal{R}$:
 \beq
-\mathcal{R} = |r|^2 = \frac{n_1 \cos \alpha -i n_2\kappa}{n_1 \cos \alpha -i n_2\kappa}
+\mathcal{R} = |r|^2 = \frac{n_1 \cos \alpha -i n_2\kappa}{n_1 \cos \alpha +i n_2\kappa}
 \cdot \frac{n_1 \cos \alpha +i n_2\kappa}{n_1 \cos \alpha -i n_2\kappa} = 1.
 \label{eq:04_56}
 \eeq
@@ -690,24 +727,26 @@ in vsa vpadna svetloba se odbije. Za smer odbitega žarka velja odbojni zakon.
 \centering
 \includegraphics[width=10truecm]{slike/04_TotalniOdbojFoto.jpg}
 \caption{Totalni odboj na gladini akvarija}
+\vglue-5truemm
 \label{fig:04_TotalniFoto}
 \end{figure}
 
-Narišimo zdaj amplitudni odbojnost in prepustnost za TE valovanje 
+Narišimo amplitudno odbojnost in amplitudno prepustnost za TE valovanje 
 (slika~\ref{fig:04_goste}\,a). 
 Ker je $n_1>n_2$, je amplitudna odbojnost pri pravokotnem vpadu pozitivna. 
 Pri pravokotnem vpadu svetlobe na optično redkejšo snov se torej
-faza ohranja. Amplitudna odbojnost z naraščajočim vpadnim kotom narašča do mejnega kota totalnega
-odboja, pri katerem naraste do $r=1$. Prepustnost, ki jo izračunamo
+faza ohranja. Amplitudna odbojnost z naraščajočim vpadnim kotom narašča 
+do vrednosti $r=1$, ki jo doseže pri mejnem kotu totalnega odboja. 
+Prepustnost, ki jo izračunamo
 kot $t = 1+r$, zavzame pri pravokotnem vpadu vrednost nekaj nad 1,
-nato pa narašča do vrednosti $t=2$, ki jo doseže pri mejnem kotu totalnega
-odboja. To, da je prepustnost večja od 1, nas ne sme motiti, saj gre
+nato pa narašča do vrednosti $t=2$, ki jo doseže pri $\alpha = \alpha_m$. 
+To, da je prepustnost večja od 1, nas ne sme motiti, saj gre za
 razmerje med amplitudami valovanja in ne med energijskimi tokovi.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/04_goste.pdf_tex}
-\caption{Odvisnost amplitudne odbojnosti in prepustnosti (a) ter odbojnosti in 
+\caption{Odvisnost amplitudne odbojnosti in amplitudne prepustnosti (a) ter odbojnosti in 
 prepustnosti (b) za TE polarizirano valovanje v odvisnosti od vpadnega kota $\alpha$. 
 Pri kotih, ki so večji od mejnega kota $\alpha_m$, se svetloba totalno odbije.}
 \label{fig:04_goste}
@@ -716,47 +755,48 @@ Pri kotih, ki so večji od mejnega kota $\alpha_m$, se svetloba totalno odbije.}
 Na sliki (slika~\ref{fig:04_goste}\,b) sta prikazani še odbojnost $\mathcal{R}$ 
 in prepustnost $\mathcal{T}$. Odbojnost od neke začetne vrednosti homogeno
 narašča do $1$ pri mejnem kotu totalnega odboja. Za vse vpadne kote $\alpha$, ki
-so večji od mejnega kota totalnega odboja, je odbojnost $\mathcal{R} = 1$ in 
+so večji od mejnega kota totalnega odboja $\alpha_m$, je odbojnost $\mathcal{R} = 1$ in 
 prepustnost $\mathcal{T} = 0$.
 
 Za TM polarizacijo amplitudna odbojnost, ki homogeno
-narašča od začetne negativne vrenosti do 1 pri mejnem
-kotu totalnega odboja, pri Brewstrovem kotu zavzame vrednost 0. 
+narašča od začetne negativne vrednosti do 1 pri mejnem
+kotu totalnega odboja, pri Brewstrovem kotu zavzame vrednost 0 (slika~\ref{fig:04_gostm}\,a). 
 Tako sta pri prehodu TM polariziranega valovanja v optično redkejšo
 snov pomembna dva kota: Brewstrov kot $\alpha_B$ in mejni kot totalnega odboja $\alpha_m$.
-Pri prvem je odbojnost enaka nič, pri drugem pa 1. 
+Pri prvem je odbojnost enaka nič, pri drugem pa 1. Amplitudna prepustnost $t$ pri mejnemu kotu 
+totalnega odboja doseže vrednost $t>2$, 
+saj v enačbi~(\ref{eq:TMt}) nastopa še razmerje lomnih količnikov, ki je 
+večje od 1. 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/04_gostm.pdf_tex}
-\caption{Odvisnost amplitudne odbojnosti in prepustnosti (a) ter odbojnosti in 
+\caption{Odvisnost amplitudne odbojnosti in amplitudne prepustnosti (a) ter odbojnosti in 
 prepustnosti (b) za TM polarizirano valovanje v odvisnosti od vpadnega kota $\alpha$. 
-Pri kotih, ki so večji od mejnega kota $\alpha_m$, se svetloba totalno odbije.}
+Pri kotih, ki so večji od mejnega kota $\alpha_m$, se svetloba totalno odbije. Kot $\alpha_m$
+označuje Brewstrov kot.}
 \label{fig:04_gostm}
 \end{figure}
 
+Odbojnost in prepustnost sta prikazani na sliki~\ref{fig:04_gostm}\,b. Po pričakovanju 
+odbojnost z naraščajočim kotom pojema do vrednosti 0, ki jo zavzame pri Brewstrovem kotu, 
+nato pa strmo naraste do vrednosti 1, ki jo doseže pri mejnem kotu totalnega odboja. Pri večjih
+kotih je odbojnost enaka 1. Prepustnost je navečja pri Brewstrovem kotu, nato pa strmo
+pade do vrednosti 0 pri totalnem odboju.
+
 \begin{remark}
-Če z žarkom svetlobe posvetimo v tanko plast, katere lomni količnik je večji od 
-lomnega količnika okolice, lahko svetlobo ``ujamemo'' v tanko plast. Zaradi
-zaporednih totalnih odbojev namreč svetlobni žarek ostaja v tanki plasti in se 
-širi praktično brez izgub. Tako lahko razložimo delovanje optičnih vlaken, 
-po katerih svetloba potuje na zalo dolge razdalje in so nepogrešljivi
-pri modernih telekomunikacijah. DODAJ SHEMO IN SLIKO!
+Če z žarkom svetlobe posvetimo v tanko plast z lomnim količnikom večjim od 
+lomnega količnika okolice, lahko svetlobo ``ujamemo''. Zaradi
+zaporednih totalnih odbojev namreč svetlobni žarek ostaja ujet v tanki plasti in se 
+širi praktično brez izgub. Tako lahko na preprost način razložimo delovanje optičnih vlaken, 
+po katerih svetloba potuje na zalo dolge razdalje. Optična vlakna so nepogrešljiva
+pri modernih telekomunikacijah.
 \end{remark}
 
 \section{Evanescento polje}
 Do totalnega odboja pride pri prehodu svetlobe iz optično gostejše 
 v optično redkejšo snov. Odbojnost je pri kotih, ki so večji od mejnega kota,
 enaka 1. Poglejmo pojav podrobneje.
-\begin{figure}[ht]
-\centering
-\def\svgwidth{140truemm} 
-\input{slike/04_totalni.pdf_tex}
-\caption{Svetloba vpada iz optično gostejše v optično redkejšo snov. Pri kotih,
-ki so večji od mejnega kota totalnega odboja $\alpha_m$, se svetloba totalno odbije (a). Pri računu
-si pomagamo s sliko loma (b).}
-\label{fig:04_totalni}
-\end{figure}
 
 Naj svetloba vpada na ravno mejo dveh neprevodnih, homogenih 
 in izotropnih snovi, za kateri velja $n_1>n_2$. 

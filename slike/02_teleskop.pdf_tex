@@ -60,6 +60,5 @@
     \put(0.57527821,0.19909339){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$f_2$\end{tabular}}}}%
     \put(0.14617652,0.15127877){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\vartheta_1$\end{tabular}}}}%
     \put(0.72908607,0.13961325){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\vartheta_2$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{02_teleskop.pdf}}%
   \end{picture}%
 \endgroup%
