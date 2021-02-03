@@ -791,12 +791,28 @@ zaporednih totalnih odbojev namreč svetlobni žarek ostaja ujet v tanki plasti 
 širi praktično brez izgub. Tako lahko na preprost način razložimo delovanje optičnih vlaken, 
 po katerih svetloba potuje na zalo dolge razdalje. Optična vlakna so nepogrešljiva
 pri modernih telekomunikacijah.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/04_vlakno.pdf_tex}
+\caption{Shema optičnega vlakna z lomnim količnikom $n_1$, ki je večji od lomnega količnika
+okolice. Pri dovolj velikih vpadnih kotih se žarek svetlobe na stenah totalno odbije in svetloba
+praktično brez izgub potuje po vlaknu.}
+\label{fig:04_vlakno}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/04_vlakno.pdf_tex}
+\caption{Akrilni valj deluje kot optično vlakno, po katerem potuje svetloba.}
+\label{fig:04_vlaknomodel}
+\end{figure}
 \end{remark}
 
 \section{Evanescento polje}
-Do totalnega odboja pride pri prehodu svetlobe iz optično gostejše 
-v optično redkejšo snov. Odbojnost je pri kotih, ki so večji od mejnega kota,
-enaka 1. Poglejmo pojav podrobneje.
+Povedali smo, da se pri totalnem odboju vsa vpadna svetloba odbije. Izračunajmo
+zdaj jakost električnega polja na obeh straneh meje med snovema.
 
 Naj svetloba vpada na ravno mejo dveh neprevodnih, homogenih 
 in izotropnih snovi, za kateri velja $n_1>n_2$. 
@@ -815,19 +831,17 @@ Poglejmo primer TE polariziranega valovanja. Valovni
 vektor prepuščenega valovanja je enak (slika~\ref{fig:04_totalni}\,b):
 \beq
 \mathbf{k}_t = \left( k_0 n_2 \sin \beta, 0, k_0 n_2 \cos \beta \right) = 
-\left( k_0 n_1 \sin \alpha, 0, i k_0 n_2 \kappa \right).
+\left( k_0 n_1 \sin \alpha, 0, i k_0 n_2 \kappa \right)\!.
 \label{eq:04_62}
 \eeq
-Pri tem smo uporabili lomni zakon za izračun komponente $x$. Komponenta $z$ 
-postane pri kotih, ki so večji od mejnega kota totalnega odboja, imaginarna. 
+Pri tem smo za izračun komponente $x$ uporabili lomni zakon (enačba~\ref{eq:04_18}). 
+Komponenta $z$ postane pri kotih, ki so večji od mejnega kota totalnega odboja, imaginarna. 
 Ustrezno smo namesto $\cos \beta$ zapisali $i\kappa$. 
-
-Prepuščeno valovanje v drugi snovi pri totalnem odboju zapišemo kot:
+Prepuščeno valovanje v drugi snovi (snovi z manjšim lomnim količnikom) 
+pri totalnem odboju z upoštevanjem enačbe~(\ref{eq:04_62}) zapišemo kot:
 \begin{align}
 \mathbf{E}_t =& \mathbf{E}_{0t} e^{i k_0 n_2 x \sin \beta }
  e^{i k_0 n_2 z\cos \beta} e^{-i \omega t} \nonumber\\
- =& \mathbf{e}_{y} E_{0t}  e^{i k_0 n_1 x\sin \alpha }
- e^{-i \omega t} e^{i k_0 n_2 (i\kappa) z} \nonumber\\
  =& \mathbf{e}_{y} E_{0t}  e^{i k_0 n_1 x\sin \alpha}
  e^{-i \omega t} e^{- \varkappa z},
  \label{eq:04_63}
@@ -837,41 +851,30 @@ pri čemer smo vpeljali:
 \varkappa = k_0 n_2 \kappa.
 \label{eq:kappatot}
 \eeq
-\begin{remark}
-Povsem enak račun lahko naredimo tudi za TM polarizirano valovanje in dobimo:
-\beq
-\varkappa_\mathrm{TM} = k_0 n_1 \kappa.
-\label{eq:kappatotTM}
-\eeq
-\end{remark}
-
-Iz enačbe~(\ref{eq:04_63}) sledi, da amplituda jakosti električnega polja 
-eksponentno pojema z oddaljenostjo od mejne ploskve. Temu eksponentno pojemajočemu
-polju v snovi z manjšim lomnim količnikom pravimo evanescnetno polje 
-oziroma evanescentno valovanje. Realno komponento jakosti električnega polja 
-zapišemo kot:
+Eksponentno pojemajočemu polju v snovi z manjšim 
+lomnim količnikom pravimo evanescentno polje in ga v realni obliki zapišemo kot:
 \beq
 \mathbf{E}_t = \mathbf{e}_{y} E_{0t} e^{- \varkappa z}
-\cos \left( k_0 n_1 x\sin \alpha -\omega t\right). 
+\cos \left( k_0 n_1 x\sin \alpha -\omega t\right)\!. 
 \label{eq:04_64}
 \eeq
-Valovne fronte torej potujejo v smeri $x$, amplituda pa pojema
-eksponentno v smeri $z$. 
+Valovne fronte evanescentnega polja potujejo v smeri $x$, 
+amplituda pa pojema eksponentno v smeri $z$. 
 
-Odbito polje je pri totalnem odboju do faze natačno enako vpadnemu, le smer $k_z$ se spremeni. 
-Fazni zamik zaenkrat zanemarimo in celotno polje v snovi z večjim lomnim količnikom zapišemo kot:
+Izračunajmo še odbito polje pri totalnem odboju, ki je  do faze natančno 
+enako vpadnemu, le smer $k_z$ se spremeni. Zaenkrat zanemarimo fazni zamik
+in polje v snovi z večjim lomnim količnikom zapišemo kot vsoto vpadnega
+in odbitega valovanja:
 \begin{align}
-\mathbf{E}_1 =& \mathbf{e}_{y} E_{0i} e^{ik_x x}e^{ik_z z -i \omega t} +
-\mathbf{e}_{y} E_{0r} e^{ik_x x}e^{-ik_z z -i \omega t} \nonumber\\
-=& \mathbf{e}_{y} E_{0} \left(
+\mathbf{E}_1 =& \mathbf{e}_{y} E_{0} \left(
 e^{ik_0n_1x\sin \alpha}e^{ik_0n_1z\cos \alpha}+
 e^{ik_0n_1x\sin \alpha}e^{-ik_0n_1z\cos \alpha }\right) e^{-i \omega t} \nonumber\\
-=& \mathbf{e}_{y} E_{0} e^{ik_0n_1x\sin \alpha -i\omega t} 2 
+=& 2\mathbf{e}_{y} E_{0} e^{ik_0n_1x\sin \alpha -i\omega t} 
 \cos \left(k_0 n_1z\cos \alpha \right).
  \label{eq:04_65}
 \end{align}
-Potem zapišemo realni del celotne jakosti električnega polja v snovi z večjim lomnim 
-količnikom (prvi snovi):
+Realni del celotne jakosti električnega polja v snovi z večjim lomnim 
+količnikom (prvi snovi) je:
 \boxeq{eq:ev1}{
 \mathbf{E}_1 = 2 \mathbf{e}_{y} E_{0} 
 \cos \left(k_0 n_1z\cos \alpha\right)\cdot 
@@ -881,10 +884,11 @@ in v snovi z manjšim lomnim količnikom (drugi snovi):
 \boxeq{eq:ev2}{
 \mathbf{E}_2 = 2\mathbf{e}_{y} E_{0} 
 e^{-\kappa z} 
-\cos \left(k_0 n_1\sin \alpha x-\omega t\right).
+\cos \left(k_0 n_1 x \sin \alpha-\omega t\right).
 }
 Pri tem smo upoštevali zvezo $E_{0t} = 2E_{0i} = 2E_0$, ki sledi neposredno iz 
 robnih pogojev pri $z=0$.
+
 V prvi snovi se pojavi torej interferenčno modulirano polje v smeri osi $z$,
 valovne fronte pa se širijo v smeri osi $x$.  V drugi snovi nastane
 evanescentno polje, pri katerem valovne fronte potujejo v smeri osi $x$, 
@@ -892,8 +896,9 @@ amplituda polja pa pojema eksponentno v smeri $z$ (glej sliko~\ref{fig:04_simula
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
+\includegraphics{slike/04_evanescentno.jpg}
 %\input{slike/04_simulacija.pdf_tex}
-\caption{DODAJ SLIKO SIMULACIJA Električna poljska jakost pri navadnem (a) in totalnem (b) odboju.
+\caption{NOVA SLIKA! Električna poljska jakost pri navadnem (a) in totalnem (b) odboju.
 V snovi z manjšim lomnim količnikom se v prvem primeru svetloba razširja
 kot valovanje, v drugem primeru pa se pojavi eksponetno pojemajoče -- evanescentno
 polje.}
@@ -1128,6 +1133,15 @@ da zavzame pri $z=0$ enako vrednost. Tudi v prvi snovi je
 različno od nič le povprečje komponente $x$, povprečje komponente v smeri $z$ pa je enako nič. Za razliko
 od druge snovi, kjer intenziteta pojema eksponentno, se v prvi snovi intenziteta spreminja oscilatorno. 
 \end{example}
+
+\begin{remark}
+Povsem enak račun lahko naredimo tudi za TM polarizirano valovanje in dobimo:
+\beq
+\varkappa_\mathrm{TM} = k_0 n_1 \kappa.
+\label{eq:kappatotTM}
+\eeq
+\end{remark}
+
 
 Izračunajmo še vdorno globino $d_v$ evanescentnega polja v snovi z manjšim lomnim količnikom. Vpeljemo jo kot inverz 
 parametra $\varkappa$. Spomnimo se, da smo parameter $\varkappa$ vpeljali kot (enačba~\ref{eq:kappatot}):
