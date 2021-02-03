@@ -666,7 +666,7 @@ polarizatorjem.}
 \end{figure}
 \end{remark}
 
-\section{Prehod v optično redkejšo snov}
+\section{Prehod v optično redkejšo snov in totalni odboj}
 Pri prehodu v snov z manjšim lomnim količnikom pride do novih zanimivih pojavov.
 Primer tega je prehod svetlobe iz vode ali stekla v zrak, ko je $n_1>n_2$.
 Izhajamo iz lomnega zakona (enačba~\ref{eq:04_18}) in zapišemo lomni kot:
@@ -805,8 +805,25 @@ praktično brez izgub potuje po vlaknu.}
 \centering
 \def\svgwidth{130truemm} 
 \input{slike/04_vlakno.pdf_tex}
-\caption{Akrilni valj deluje kot optično vlakno, po katerem potuje svetloba.}
+\caption{NOVA SLIKA! Akrilni valj deluje kot optično vlakno, po katerem potuje svetloba.}
 \label{fig:04_vlaknomodel}
+\end{figure}
+\end{remark}
+
+\begin{remark}
+Lomni količnik diamanta je razmeroma velik (okoli 2,4), zato je mejni kot 
+totalnega odboja razmeroma majhen ($\alpha_m \approx 25\si{\degree}$). Diamanti so praviloma
+obrušeni tako, da se vpadna svetloba na spodnjih ploskvah totalno odbije, kar da diamantom značilen
+lesk. Velik lomni količnik pomeni veliko območje vpadnih kotov svetlobe, pod katerim se 
+diamant blešči, zato so diamanti še posebej priljubljeni za izdelavo nakita.
+\vglue-0.3truecm
+\begin{figure}[!h]
+\centering
+\includegraphics[height=3.7truecm]{slike/04_diamant.png}\qquad
+\includegraphics[height=3.7truecm]{slike/04_nakit.jpg}\hfill
+\caption{Diamanti so brušeni tako, da se na spodnjih ploskvah vpadna svetloba totalno odbije (levo), 
+kar jih naredi še posebej privlačne za nakit (Foto: Vera Kratochvil, PublicDomainPictures).}
+\label{fig:04_diamanti}
 \end{figure}
 \end{remark}
 
@@ -837,7 +854,7 @@ vektor prepuščenega valovanja je enak (slika~\ref{fig:04_totalni}\,b):
 Pri tem smo za izračun komponente $x$ uporabili lomni zakon (enačba~\ref{eq:04_18}). 
 Komponenta $z$ postane pri kotih, ki so večji od mejnega kota totalnega odboja, imaginarna. 
 Ustrezno smo namesto $\cos \beta$ zapisali $i\kappa$. 
-Prepuščeno valovanje v drugi snovi (snovi z manjšim lomnim količnikom) 
+Prepuščeno valovanje v snovi z manjšim lomnim količnikom 
 pri totalnem odboju z upoštevanjem enačbe~(\ref{eq:04_62}) zapišemo kot:
 \begin{align}
 \mathbf{E}_t =& \mathbf{E}_{0t} e^{i k_0 n_2 x \sin \beta }
@@ -874,138 +891,47 @@ e^{ik_0n_1x\sin \alpha}e^{-ik_0n_1z\cos \alpha }\right) e^{-i \omega t} \nonumbe
  \label{eq:04_65}
 \end{align}
 Realni del celotne jakosti električnega polja v snovi z večjim lomnim 
-količnikom (prvi snovi) je:
+količnikom je:
 \boxeq{eq:ev1}{
 \mathbf{E}_1 = 2 \mathbf{e}_{y} E_{0} 
 \cos \left(k_0 n_1z\cos \alpha\right)\cdot 
 \cos \left(k_0 n_1x\sin \alpha-\omega t\right)
 }
-in v snovi z manjšim lomnim količnikom (drugi snovi):
+in v snovi z manjšim lomnim količnikom:
 \boxeq{eq:ev2}{
 \mathbf{E}_2 = 2\mathbf{e}_{y} E_{0} 
-e^{-\kappa z} 
+e^{-\varkappa z} 
 \cos \left(k_0 n_1 x \sin \alpha-\omega t\right).
 }
 Pri tem smo upoštevali zvezo $E_{0t} = 2E_{0i} = 2E_0$, ki sledi neposredno iz 
 robnih pogojev pri $z=0$.
 
-V prvi snovi se pojavi torej interferenčno modulirano polje v smeri osi $z$,
-valovne fronte pa se širijo v smeri osi $x$.  V drugi snovi nastane
-evanescentno polje, pri katerem valovne fronte potujejo v smeri osi $x$, 
-amplituda polja pa pojema eksponentno v smeri $z$ (glej sliko~\ref{fig:04_simulacija}).
+Iz enačb~(\ref{eq:ev1} in \ref{eq:ev2}) je jasno vidno, da valovanje pri totalnem
+odboju potuje vzporedno z osjo $x$. V smeri osi $z$ je valovanje na vpadni 
+strani meje interferenčno modulirano, na nasprotni strani meje pa eksponentno
+pojemajoče (glej sliko~\ref{fig:04_simulacija}).
 \begin{figure}[ht]
 \centering
-\def\svgwidth{140truemm} 
-\includegraphics{slike/04_evanescentno.jpg}
-%\input{slike/04_simulacija.pdf_tex}
-\caption{NOVA SLIKA! Električna poljska jakost pri navadnem (a) in totalnem (b) odboju.
+\includegraphics[width=140truemm]{slike/04_sim_lom.png}
+\caption{Intenziteta valovanja ob 
+danem trenutku pri navadnem odboju (levo) in totalnem odboju (desno).
 V snovi z manjšim lomnim količnikom se v prvem primeru svetloba razširja
 kot valovanje, v drugem primeru pa se pojavi eksponetno pojemajoče -- evanescentno
 polje.}
 \label{fig:04_simulacija}
 \end{figure}
 
-Izračunajmo še Poyntingov vektor v snoveh za primer totalnega odboja. 
-Račun pokaže (glej primer~\ref{primer:04_S}), da 
-ima v obeh snoveh Poyntingov vektor samo komponento vzdolž osi $x$,
-vzdolž osi $z$ pa ne. To pomeni, da kljub temu da je električno polje v snovi z manjšim lomnim 
-količnikom različno od nič, je gostota energijskega toka v smeri
-pravokotno na mejno ploskev enaka nič. 
+Izračunajmo še Poyntingov vektor na obeh straneh meje za primer totalnega odboja. 
+Račun pokaže, da ima v obeh snoveh Poyntingov vektor samo komponento vzdolž osi $x$,
+vzdolž osi $z$ pa ne (glej primer~\ref{primer:04_S}). To pomeni, da se energija pri totalnem odboju širi 
+vzdolž meje med snovema, v smeri pravokotno na mejo pa ne.  
 
 \begin{example}{\bf Energijski tok pri totalnem odboju.}
 \label{primer:04_S}
-Izračunajmo Poyntingov vektor pri totalnem odboju v snovi z manjšim lomnim količnikom (snovi 2). 
-Računamo za primer TE polariziranega valovanja in najprej zapišemo jakost električnega polja:
-\beq
-\mathbf{E} = 
-\left[
-\begin{array}{c}
-0\\
-E_{0t} e^{ik_xx-i\omega t}e^{-\varkappa z}\\
-0\\
-\end{array}
-\right] = 
-E_{0t} e^{ik_xx-i\omega t-\varkappa z}
-\left[
-\begin{array}{c}
-0\\
-1\\
-0\\
-\end{array}
-\right]\!\!.
-  \label{eq:04_66}
-\eeq
-Iz Maxwellove enačbe (enačba~\ref{eq:Maxwell2}):
-\beq
-\nabla \times \mathbf{E} = - \frac{\partial B}{\partial t} = -\mu_0 
-\frac{\partial \mathbf{H}}{\partial t} = \mu_0 i \omega \mathbf{H}
- \label{eq:04_67}
-\eeq
-izpeljemo vektor jakosti magnetnega polja:
-\beq
-\mathbf{H} = \frac{-iE_{0t}}{\mu_0 \omega} \left|
-\begin{array}{ccc}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
-\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-0&e^{ik_xx-i\omega t-\varkappa z}& 0 \\
-\end{array}
-\right|.
- \label{eq:04_68}
-\eeq
-Sledi:
-\beq
-\mathbf{H} =
-\frac{-iE_{0t}}{\mu_0 \omega} 
-\left[
-\begin{array}{c}
--\varkappa  e^{ik_xx-i\omega t-\varkappa z}\\
-0\\
-ik_x e^{ik_xx-i\omega t-\varkappa z}\\
-\end{array}
-\right] = 
-\frac{E_{0t}}{\mu_0 \omega} 
-e^{ik_xx-i\omega t-\varkappa z}
-\left[
-\begin{array}{c}
-i\varkappa\\
-0\\
-k_x \\
-\end{array}
-\right]\!\!.
-\label{eq:04_69}
-\eeq
-Zdaj lahko izračunamo Poyntingov vektor (enačba~\ref{eq:Poyntingov}):
-\beq
-\mathbf{S} = \mathbf{E}\times \mathbf{H}^* = \frac{E_{0t}^2 e^{2\varkappa z }}{\mu_0 \omega} 
-\left[
-\begin{array}{c}
-0\\
-1\\
-0\\
-\end{array}
-\right] \times 
-\left[
-\begin{array}{c}
--i\varkappa\\
-0\\
-k_x \\
-\end{array}
-\right]
- = 
-\frac{E_{0t} e^{-2\varkappa z }}{\mu_0 \omega}
-\left[
-\begin{array}{c}
-k_x\\
-0\\
-i \kappa \\
-\end{array}
-\right]\!\!.
- \label{eq:04_70}
-\eeq
-Ker je komponenta $z$ Poyntingovega vektorja imaginarna, se svetloba v smeri $z$ ne razširja. 
-
-Pojav je mogoče lažje razumljiv, če zapišemo vektorje v realni obliki. Jakost električnega
-polja (enačba~\ref{eq:04_66}) potem zapišemo kot:
+Izračunajmo Poyntingov vektor pri totalnem odboju v snovi z manjšim 
+lomnim količnikom (snovi 2). Obravnavajmo TE polarizirano valovanje in 
+zaradi nazornosti računajmo v realni obliki. Jakost električnega
+polja (enačba~\ref{eq:04_64}) potem zapišemo kot:
 \beq
 \mathbf{E} = 
 E_{0t} e^{-\varkappa z}\cos(k_xx-\omega t)
@@ -1042,16 +968,16 @@ Najprej izračunamo levo stran enačbe:
 \eeq
 Sledi:
 \beq
-\frac{\partial \mathbf{H}}{\partial t} = \frac{-E_{0t} e^{-\varkappa z}}{\mu_0} \left[
+\frac{\partial \mathbf{H}}{\partial t} = \frac{E_{0t} e^{-\varkappa z}}{\mu_0} \left[
 \begin{array}{c}
-\varkappa  \cos \left(k_xx-\omega t\right) \\
+-\varkappa  \cos \left(k_xx-\omega t\right) \\
 0\\
--k_x \sin \left(k_xx-\omega t\right)\\
+k_x \sin \left(k_xx-\omega t\right)\\
 \end{array}
-\right]
+\right]\!\!.
 \label{eq:04_74}
 \eeq
-in 
+Z integracijo po času izračunamo jakost magnetnega polja:
 \beq
 \mathbf{H} = \frac{E_{0t}e^{-\varkappa z}}{\mu_0} \left[
 \begin{array}{c}
@@ -1059,7 +985,7 @@ in
 0\\
 k_x  \int\sin \left(k_xx-\omega t\right) dt\\
 \end{array}
-\right] = -
+\right] = 
 \frac{E_{0t}e^{-\varkappa z}}{\mu_0} \left[
 \begin{array}{c}
 \frac{\varkappa}{\omega}  \sin \left(k_xx-\omega t\right)\\
@@ -1078,7 +1004,7 @@ E_{0t}e^{-\varkappa z} \left[ \begin{array}{c}
                         0 \\
                        \end{array}\right]
 \times
-\frac{-E_{0t}}{\mu_0\omega}e^{-\varkappa z}\left[
+\frac{E_{0t}e^{-\varkappa z}}{\mu_0\omega}\left[
 \begin{array}{c}
 \varkappa \sin \left(k_xx-\omega t\right)\\
 0\\
@@ -1090,7 +1016,7 @@ k_x \cos \left(k_xx-\omega t\right) \\
 Dobimo:
 \beq
 \mathbf{S} 
-= - \frac{E_{0t}^2}{\mu_0\omega}e^{-2\varkappa z}\left[
+= \frac{E_{0t}^2}{\mu_0\omega}e^{-2\varkappa z}\left[
 \begin{array}{c}
 k_x\cos^2 \left(k_xx-\omega t\right)\\
 0\\
@@ -1099,8 +1025,7 @@ k_x\cos^2 \left(k_xx-\omega t\right)\\
 \right]\!\!.
 \label{eq:04_77}
 \eeq
-PREDZNAKI NAROBE?
-Pri energijskem toku na zanima časovno povprečje Poyntingovega vektorja:
+Pri energijskem toku nas zanima časovno povprečje Poyntingovega vektorja:
 \beq
 \langle \mathbf{S}\rangle = \frac{E_{0t}^2}{\mu_0\omega}e^{-2\varkappa z}\left[
 \begin{array}{c}
@@ -1111,40 +1036,33 @@ k_x/2\\
 \right]\!\!.
 \label{eq:04_78}
 \eeq
-Iz zapisanega vidimo, da je energijski tok v zmeri $z$ enak nič -- pravokotno na mejno 
-ploskev se torej energija ne prenaša. 
+Iz zapisanega vidimo, da je energijski tok v smeri $z$ enak nič -- pravokotno na mejno 
+ploskev se torej energija pri totalnem odboju ne prenaša. 
 
-Kaj pa v smeri vzporedno z mejno ploskvijo? Izračunana komponenta Poyntingovega vektorja je:
+V smeri vzporedno z mejno ploskvijo je izračunana komponenta Poyntingovega vektorja:
 \beq
 \langle \mathbf{S}_x\rangle = \frac{E_{0t}^2}{2\mu_0\omega}e^{-2\varkappa z}k_0 n_1\sin \alpha,
 \label{eq:04_79}
 \eeq
-pri čemer smo upoštevali, da je $k_x = k_0 n_1 \sin \alpha$. Če izraz pomnožimo v števcu in imenovalcu 
-z $\varepsilon_0$ in upoštevamo izraz za svetlobno hitrost, dobimo:
+pri čemer smo upoštevali, da je $k_x = k_0 n_1 \sin \alpha$. Izraz v števcu in imenovalcu pomnožimo 
+z $\varepsilon_0$, upoštevamo izraz za svetlobno hitrost (enačba~\ref{eq:c0}) in zvezo med krožno frekvenco
+in valovnim številom. Dobimo:
 \beq
-\langle \mathbf{S}_x\rangle = \frac{1}{2}\varepsilon_0 E_{0t}^2 e^{-2\varkappa z} c_0 n_1 \sin \alpha.
+\langle \mathbf{S}_x\rangle = \frac{1}{2}\varepsilon_0 E_{0t}^2 c_0 n_1  e^{-2\varkappa z} \sin \alpha.
 \label{eq:04_80}
 \eeq
 Dobili smo izraz za gostoto svetlobnega toka, ki pa je pomnožen s faktorjem $\sin \alpha$ in seveda eksponentno
-pojemajočim delom $\exp(-\varkappa z)$. 
+pojemajočim delom $\exp(-\varkappa z)$.
 
-Poyntingov vektor lahko izračunamo tudi v snovi z večjim lomnim količnikom (prvi snovi) in dobimo,
-da zavzame pri $z=0$ enako vrednost. Tudi v prvi snovi je
-različno od nič le povprečje komponente $x$, povprečje komponente v smeri $z$ pa je enako nič. Za razliko
-od druge snovi, kjer intenziteta pojema eksponentno, se v prvi snovi intenziteta spreminja oscilatorno. 
+Poyntingov vektor lahko izračunamo tudi na vpadni strani meje med snovema. Izračun pokaže, da
+je tudi na vpadni strani od nič različno le povprečje komponente $x$, povprečje komponente v smeri $z$ 
+pa je enako nič. Za razliko od eksponentnega pojemanja intenzitete v evanescentnem polju, se na
+vpadni strani intenziteta spreminja oscilatorno.
 \end{example}
 
-\begin{remark}
-Povsem enak račun lahko naredimo tudi za TM polarizirano valovanje in dobimo:
-\beq
-\varkappa_\mathrm{TM} = k_0 n_1 \kappa.
-\label{eq:kappatotTM}
-\eeq
-\end{remark}
-
-
-Izračunajmo še vdorno globino $d_v$ evanescentnega polja v snovi z manjšim lomnim količnikom. Vpeljemo jo kot inverz 
-parametra $\varkappa$. Spomnimo se, da smo parameter $\varkappa$ vpeljali kot (enačba~\ref{eq:kappatot}):
+Izračunajmo še vdorno globino $d_v$ evanescentnega polja v snovi z manjšim lomnim količnikom, ki 
+jo vpeljemo kot inverz parametra $\varkappa$. Spomnimo se, da je parameter $\varkappa$ za TE polarizirano
+valovanje enak (enačba~\ref{eq:kappatot}):
 \beq
 \varkappa = k_0 n_2 \kappa = k_0 n_2 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}.
 \label{eq:04_81}
@@ -1156,10 +1074,9 @@ d_v = \frac{1}{\varkappa} = \frac{\lambda_0}{2 \pi n_2 }\frac{1}{\sqrt{\left(\fr
 \label{eq:04_82}
 \eeq
 Odvisnost vdorne globine od vpadnega kota je prikazana na sliki~\ref{fig:04_vdorna}. Po pričakovanju
-se pri $\alpha = \alpha_m$ vdorna globina povečuje proti neskončnosti, saj preide v navaden lom, pri katerem
-je doseg v idealnem primeru neskončen. Pri $\alpha \to \pi/2$ vdorna
-globina pade na vrednost $d_v = \lambda_0/2\pi NA$, pri čemer je $NA = \sqrt{n_1^2-n_2^2}$ numerična odprtina
-ali numerična apertura.
+se pri $\alpha = \alpha_m$ vdorna globina povečuje proti neskončnosti, saj totalni odboj 
+preide v navaden lom, pri katerem je doseg v idealnem primeru neskončen. Pri $\alpha \to \pi/2$ vdorna
+globina pade na vrednost $d_v = \lambda_0/2\pi \sqrt{n_1^2-n_2^2}$.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{80truemm} 
@@ -1168,33 +1085,44 @@ ali numerična apertura.
 \label{fig:04_vdorna}
 \end{figure}
 
+\begin{remark}
+Celoten primer evanescentnega polja je bil narejen za TE polarizirano valovanje. Za TM polarizirano
+valovanje je postopek povsem analogen in tudi rezultati so podobni. Razlikuje se le vrednost
+parametra $\varkappa$, ki je za TM valovanje:
+\beq
+\varkappa_\mathrm{TM} = k_0 n_1 \kappa.
+\label{eq:kappatottm}
+\eeq
+\end{remark}
+
 \subsection*{Frustrirani totalni odboj}
 Izračunali smo evanescentno polje, to je električno polje, ki se pojavi pri totalnem odboju
 v snovi z manjšim lomnim količnikom. Pri tem smo privzeli, da je snov v smeri pravokotno
 na mejno ploskev neomejena. 
 
-Postavimo zdaj za to snov še eno plast snovi. Mejni ploskvi naj bosta vzporedni, lomni 
-količnik tretje snovi pa naj ima večji lomni količkik kot vmesna snov. Če je debelina
+Postavimo zdaj za to snov še eno plast tretje snovi. Mejni ploskvi naj bosta vzporedni, lomni 
+količnik tretje snovi pa naj ima večji lomni količnik kot vmesna snov. Če je debelina
 vmesne plasti razmeroma majhna, lahko pride to tuneliranja svetlobe iz vrhnje v spodnjo snov
 (slika~\ref{fig:04_tunel}). To je še zlasti opazno, kadar je debelina vmesne snovi po 
 velikosti primerljiva z vdorno globino evanescentnega polja. Takrat
 znaten delež vpadne svetlobe preide v spodnjo snov. Prepustnost takega ``tunela'' za svetlobo 
-spreminjamo z debelino ``prepovedane plasti'' oziroma debelino vmesne plasti ali s
-spreminjanjem vdorne debeline, kar dosežemo s spreminjanjem vpadnega kota.
+spreminjamo z debelino vmesne plasti ali s spreminjanjem vpadnega kota.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{70truemm} 
 \input{slike/04_tunel.pdf_tex}
-\caption{Kadar je debelina vmesne plasti majhna v primerjavi z vdorno globino svetlobe, 
+\caption{Kadar je debelina vmesne plasti z lomnim količnikom, ki je manjši od lomnega količnika
+zgornje in spodnje plasti ($n_1>n_2<n_3$), majhna v primerjavi z vdorno globino svetlobe, 
 svetloba tunelira skozi tanko plast. }
 \label{fig:04_tunel}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-%\includegraphics[width=10truecm]{slike/04_TunelFoto.jpg}
-\caption{DODAJ SLIKO PRSTNEGA ODTISA SKOZI KAZALEC}
-\label{fig:04_TunelFoto}
+\includegraphics[width=10truecm]{slike/04_FTIR.jpg}
+\caption{NOVA SLIKA: Svetloba se ob prehodu iz vode v zrak totalno odbije, zato prstov za kozarcem
+ne vidimo (levo). Ko se prsti dotaknejo kozarca, totalnega odboja ni več in prsti postanejo vidni (desno).}
+\label{fig:04_FTIRfoto}
 \end{figure}
 
 \begin{remark}
@@ -1203,25 +1131,28 @@ navadnem totalnem odboju se vsa svetloba odbije. Kadar je totalni odboj frustrir
 odbije le del svetlobe, del pa je prepuščen, pri čemer je intenziteta odbite
 svetlobe močno odvisna od širine vmesne tanke plasti oziroma na primeru čitalcev 
 od debeline zračne reže med steklom in prstom. Ker se zaradi vdolbin v vzorcu prstnega odtisa
-ta razdalja spreminja, se v obliki istega vzorca spreminja tudi intenziteta odbite svetlobe.
+ta razdalja spreminja, se v obliki istega vzorca spreminja tudi intenziteta odbite svetlobe,
+kar da sliko prstnega odtisa. 
 \end{remark} 
 
-\subsection*{Goos-H\"anchinin pojav}
+\begin{remark}
 Pri totalnem odboju se zgodi še en zanimiv pojav, ki ga imenujemo Goose--H\"anchenin pojav 
 (VPRAŠAJ LEKTORJA!) po nemških fizikih Hermannu Fritzu Gustavu Goosu (1883--1968) in Hildi
 H\"anchen (1919--2013).
-Ko se linearno polarizirano svetloba totalno odbije, odbiti žarek ne izhaja iz povsem iste točke, 
+Ko se linearno polarizirana svetloba totalno odbije, odbiti žarek ne izhaja iz povsem iste točke, 
 kot nanjo vpada vpadni žarek. Videti je, kot da se odbije od neke navidezne ravnine, ki leži v snovi
-z manjšim lomnim količnikom. Oddaljenost te navidezne odbojne ravnine je kar enaka vdorni globini in, 
+z manjšim lomnim količnikom. Oddaljenost te navidezne odbojne ravnine je kar enaka vdorni globini, 
 zato je vzporeden premik enak: $L = 2d_v\,\tan(\alpha)$.
+
 \begin{figure}[ht]
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/04_Goos.pdf_tex}
 \caption{Goos-H\"anchenin pojav pri totalnem odboju: totalno odbita svetloba izhaja iz druge točke, 
-kot na mejo snovi vpada svetloba. Videti je, kot da se odbije od navidezne ravnine.}
+kot vpada na mejo snovi vpada svetloba. Videti je, kot da se odbije od navidezne ravnine.}
 \label{fig:04_Goos}
 \end{figure}
+\end{remark}
 
 \section{Faza pri totalnem odboju}
 Poglejmo še, kaj se zgodi s fazo valovanja pri odboju. Pri navadnem odboju, pri katerem sta koeficienta

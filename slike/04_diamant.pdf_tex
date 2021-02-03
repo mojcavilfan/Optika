@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '04_vdorna.pdf' (pdf, eps, ps)
+%% Accompanies image file '04_diamant.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{320.4382973bp}%
+    \setlength{\unitlength}{250.12662506bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.64028022)%
+  \begin{picture}(1,0.53806574)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{04_vdorna.pdf}}%
-    \put(-0.05404108,0.58345315){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$d_v$\end{tabular}}}}%
-    \put(0.64793447,0.0226099){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha$\end{tabular}}}}%
-    \put(0.30640595,0.0226099){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_m$\end{tabular}}}}%
-    \put(-0.0046628,0.02095179){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
-    \put(0.96906322,0.02095179){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$90^\circ$\end{tabular}}}}%
-    \put(-0.18492989,0.12975341){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{\lambda_0}{2\pi \sqrt{n_1^2-n_2^2}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{04_diamant.pdf}}%
+    \put(0.07763656,0.41162536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$35^\circ$\end{tabular}}}}%
+    \put(0.07763541,0.3282564){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$41^\circ$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
