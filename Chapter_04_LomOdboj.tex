@@ -781,7 +781,7 @@ označuje Brewstrov kot.}
 Odbojnost in prepustnost sta prikazani na sliki~\ref{fig:04_gostm}\,b. Po pričakovanju 
 odbojnost z naraščajočim kotom pojema do vrednosti 0, ki jo zavzame pri Brewstrovem kotu, 
 nato pa strmo naraste do vrednosti 1, ki jo doseže pri mejnem kotu totalnega odboja. Pri večjih
-kotih je odbojnost enaka 1. Prepustnost je navečja pri Brewstrovem kotu, nato pa strmo
+kotih je odbojnost enaka 1. Prepustnost je največja pri Brewstrovem kotu, nato pa strmo
 pade do vrednosti 0 pri totalnem odboju.
 
 \begin{remark}
@@ -789,7 +789,7 @@ pade do vrednosti 0 pri totalnem odboju.
 lomnega količnika okolice, lahko svetlobo ``ujamemo''. Zaradi
 zaporednih totalnih odbojev namreč svetlobni žarek ostaja ujet v tanki plasti in se 
 širi praktično brez izgub. Tako lahko na preprost način razložimo delovanje optičnih vlaken, 
-po katerih svetloba potuje na zalo dolge razdalje. Optična vlakna so nepogrešljiva
+po katerih svetloba potuje na zelo dolge razdalje. Optična vlakna so nepogrešljiva
 pri modernih telekomunikacijah.
 \begin{figure}[ht]
 \centering
@@ -803,9 +803,9 @@ praktično brez izgub potuje po vlaknu.}
 
 \begin{figure}[ht]
 \centering
-\def\svgwidth{130truemm} 
-\input{slike/04_vlakno.pdf_tex}
-\caption{NOVA SLIKA! Akrilni valj deluje kot optično vlakno, po katerem potuje svetloba.}
+\includegraphics[width=13truecm]{slike/04_vlakno_model.jpg}
+\caption{V akrilni valj se svetlobi žarek ujame s totalnim odbojem podobno kot se žarek
+ujame v optično vlakno.}
 \label{fig:04_vlaknomodel}
 \end{figure}
 \end{remark}
@@ -906,17 +906,22 @@ e^{-\varkappa z}
 Pri tem smo upoštevali zvezo $E_{0t} = 2E_{0i} = 2E_0$, ki sledi neposredno iz 
 robnih pogojev pri $z=0$.
 
-Iz enačb~(\ref{eq:ev1} in \ref{eq:ev2}) je jasno vidno, da valovanje pri totalnem
-odboju potuje vzporedno z osjo $x$. V smeri osi $z$ je valovanje na vpadni 
-strani meje interferenčno modulirano, na nasprotni strani meje pa eksponentno
-pojemajoče (glej sliko~\ref{fig:04_simulacija}).
+Na sliki~\ref{fig:04_simulacija} je prikazana primerjava med valovanjem
+pri navadnem lomu in valovanjem pri totalnem odboju. V prvem primeru (levo) se
+na vpadni strani pojavi interferenca med
+vpadnim in šibkejšim odbitim žarkom, na drugi strani meje pa se prepuščeni val nemoteno
+širi. V primeru totalnega odboja (desno) na vpadni strani interferirata 
+vpadni in odbiti žarek z enako amplitudo, na drugi strani meje pa polje pojema 
+eksponentno z oddaljenostjo od meje med snovema. Valovanje na obeh straneh meje
+potuje vzporedno z osjo $x$. 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=140truemm]{slike/04_sim_lom.png}
+\def\svgwidth{140truemm} 
+\input{slike/04_sim_lom.pdf_tex}
 \caption{Intenziteta valovanja ob 
 danem trenutku pri navadnem odboju (levo) in totalnem odboju (desno).
-V snovi z manjšim lomnim količnikom se v prvem primeru svetloba razširja
-kot valovanje, v drugem primeru pa se pojavi eksponetno pojemajoče -- evanescentno
+V snovi z manjšim lomnim količnikom ($n_2$) se v prvem primeru svetloba razširja
+kot valovanje, v drugem primeru pri večjem vpadnem kotu pa se pojavi eksponetno pojemajoče evanescentno
 polje.}
 \label{fig:04_simulacija}
 \end{figure}
@@ -944,11 +949,13 @@ E_{0t} e^{-\varkappa z}\cos(k_xx-\omega t)
 \right]\!\!.
  \label{eq:04_71}
 \eeq
-Jakost magnetnega polja izračunamo iz Maxwellove enačbe (enačba~\ref{eq:Maxwell2}):
+Jakost magnetnega polja izračunamo iz Maxwellove enačbe (enačba~\ref{eq:Maxwell2}), pri 
+čemer se omejimo na nemagnetne snovi:
 \beq
 \nabla \times \mathbf{E} = -\mu_0 \frac{\partial \mathbf{H}}{\partial t}.
 \label{eq:04_72}
 \eeq
+
 Najprej izračunamo levo stran enačbe:
 \beq
 \nabla \times \mathbf{E} = \left|
@@ -995,7 +1002,8 @@ k_x  \int\sin \left(k_xx-\omega t\right) dt\\
 \right]\!\!.
 \label{eq:04_75}
 \eeq
-Zdaj lahko izračunamo Poyntingov vektor (enačba~\ref{eq:Poyntingov}):
+Zdaj lahko izračunamo Poyntingov vektor kot vektorski produkt jakost
+električnega in magnetnega polja (enačba~\ref{eq:Poyntingov}):
 \beq
 \mathbf{S} = \mathbf{E} \times \mathbf{H} = 
 E_{0t}e^{-\varkappa z} \left[ \begin{array}{c}
@@ -1109,22 +1117,13 @@ znaten delež vpadne svetlobe preide v spodnjo snov. Prepustnost takega ``tunela
 spreminjamo z debelino vmesne plasti ali s spreminjanjem vpadnega kota.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/04_tunel.pdf_tex}
 \caption{Kadar je debelina vmesne plasti z lomnim količnikom, ki je manjši od lomnega količnika
 zgornje in spodnje plasti ($n_1>n_2<n_3$), majhna v primerjavi z vdorno globino svetlobe, 
 svetloba tunelira skozi tanko plast. }
 \label{fig:04_tunel}
 \end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=10truecm]{slike/04_FTIR.jpg}
-\caption{NOVA SLIKA: Svetloba se ob prehodu iz vode v zrak totalno odbije, zato prstov za kozarcem
-ne vidimo (levo). Ko se prsti dotaknejo kozarca, totalnega odboja ni več in prsti postanejo vidni (desno).}
-\label{fig:04_FTIRfoto}
-\end{figure}
-
 \begin{remark}
 Na podlagi frustriranega totalnega odboja delujejo optični čitalci prstnih odtisov. Pri 
 navadnem totalnem odboju se vsa svetloba odbije. Kadar je totalni odboj frustriran, se 
@@ -1135,15 +1134,31 @@ ta razdalja spreminja, se v obliki istega vzorca spreminja tudi intenziteta odbi
 kar da sliko prstnega odtisa. 
 \end{remark} 
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=5.5truecm]{slike/04_TIRF1.jpg}\qquad \qquad
+\includegraphics[width=5.5truecm]{slike/04_TIRF2.jpg}
+\caption{Svetloba se ob prehodu iz vode v zrak na zadnji steni steklene vaze 
+totalno odbije, zato tam vidimo vijolično dno (levo). Ko ob zadnjo steno prislonimo
+navlaženo mrežasto tkanino, na mestih stika totalnega odboja ni več in svetloba prehaja
+skozi mejo kljub vpadnemu kotu, večjemu od mejnega kota totalnega odboja (desno).
+Podobno delujejo čitalci prstnih odtisov.}
+\label{fig:04_FTIRfoto}
+
+\end{figure}
 \begin{remark}
 Pri totalnem odboju se zgodi še en zanimiv pojav, ki ga imenujemo Goose--H\"anchenin pojav 
-(VPRAŠAJ LEKTORJA!) po nemških fizikih Hermannu Fritzu Gustavu Goosu (1883--1968) in Hildi
-H\"anchen (1919--2013).
-Ko se linearno polarizirana svetloba totalno odbije, odbiti žarek ne izhaja iz povsem iste točke, 
-kot nanjo vpada vpadni žarek. Videti je, kot da se odbije od neke navidezne ravnine, ki leži v snovi
-z manjšim lomnim količnikom. Oddaljenost te navidezne odbojne ravnine je kar enaka vdorni globini, 
+po nemških fizikih Hermannu Fritzu Gustavu Goosu (1883--1968) in Hildi H\"anchen (1919--2013).
+Ko se linearno polarizirana svetloba totalno odbije, odbita svetloba ne izhaja iz 
+povsem iste točke, kot nanjo vpada. Videti je, kot da se svetloba odbije od neke 
+navidezne ravnine, ki leži v snovi z manjšim lomnim količnikom. 
+Oddaljenost te navidezne odbojne ravnine je kar enaka vdorni globini, 
 zato je vzporeden premik enak: $L = 2d_v\,\tan(\alpha)$.
 
+Pojava z opisom poti enega žarka svetlobe ne moremo pojasniti, temveč moramo
+obravnavati snop svetlobe, sestavljen iz več žarkov. Žarki vpadajo na mejo pod rahlo
+različnimi vpadnimi koti, zato imajo po odboju rahlo različno fazo. Skupni 
+učinek faznih zakasnitev je tak, kot bi se žarek navidezno vzdolžno premaknil. 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{70truemm} 
@@ -1151,26 +1166,32 @@ zato je vzporeden premik enak: $L = 2d_v\,\tan(\alpha)$.
 \caption{Goos-H\"anchenin pojav pri totalnem odboju: totalno odbita svetloba izhaja iz druge točke, 
 kot vpada na mejo snovi vpada svetloba. Videti je, kot da se odbije od navidezne ravnine.}
 \label{fig:04_Goos}
-\end{figure}
+\vglue-5truemm\end{figure}
 \end{remark}
 
 \section{Faza pri totalnem odboju}
-Poglejmo še, kaj se zgodi s fazo valovanja pri odboju. Pri navadnem odboju, pri katerem sta koeficienta
-amplitudne odbojnosti za obe polarizaciji realna, ni težav. Pogledati moramo samo predznak $r$. Pri odboju na 
-optično gostejšem sredstvu se faza TE polariziranega valovanja spremeni za $\pi$, faza TM polariziranega
-valovanja pa pri Brewstrovem kotu preskoči s $\pi$ na 0. Pri vpadu na optično redkejšo snov se faza
-TE polarizacije ohranja, faza TM polarizacije pa pri Brewstrovem kotu preskoči s $\pi$ na 0.  
+Poglejmo še, kaj se zgodi s fazo valovanja pri odboju na meji dveh snovi. 
+Pri navadnem odboju, pri katerem sta koeficienta
+amplitudne odbojnosti za obe polarizaciji realna, ni težav. 
+Pogledati moramo samo predznak $r$ v Fresnelovih enačbah (enačbi~\ref{eq:TEr} 
+in \ref{eq:TMr}). Pri odboju na 
+optično gostejšem sredstvu se faza TE polariziranega valovanja 
+spremeni za $\pi$, faza TM polariziranega
+valovanja pa pri Brewstrovem kotu preskoči s $\pi$ na 0. 
+Pri vpadu na optično redkejšo snov se faza
+TE polarizacije ohranja, faza TM polarizacije pa pri 
+Brewstrovem kotu preskoči z 0 na $\pi$.  
 
 Zanimivejša je faza pri totalnem odboju. V prejšnjem razdelku smo spoznali atenuacijski koeficient
 $\varkappa$, ki je močno odvisen od vpadnega kota in tudi od polarizacije valovanja (enačbi~\ref{eq:kappatot} 
-in \ref{eq:kappatotTM}):
+in \ref{eq:kappatottm}):
 \beq
 \varkappa_{\mathrm{TE}}= k_0 n_2 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1} 
 \qquad \mathrm{in}\qquad
 \varkappa_{\mathrm{TM}}= k_0 n_1 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}.
 \label{eq:04_83}
 \eeq
-Valovanje v obliki evansecentnega vala vdira v snov z manjšim lomnim količnikom, zato
+Valovanje v obliki evanescentnega vala vdira v snov z manjšim lomnim količnikom, zato
 pri oboju doživi fazni zamik. Ker je fazni zamik neposredno povezan z atenuacijskim
 koeficientom oziroma vdorno globino, je odvisen od vpadnega kota $\alpha$ in polarizacije svetlobe. 
 
@@ -1178,9 +1199,9 @@ koeficientom oziroma vdorno globino, je odvisen od vpadnega kota $\alpha$ in pol
 Izračunajmo najprej fazo za TE polarizirano valovanje. Izhajamo iz amplitudne odbojnosti (enačba~\ref{eq:04_61})
 in kompleksni števili v števcu in imenovalcu zapišemo v polarni obliki:
 \beq
-r = \frac{n_1 \cos \alpha - i n_2 \kappa}{n_1 \cos \alpha + i n_2 \kappa} = 
-\frac{\sqrt{n_1^2\cos^2 \alpha + n_2^2 \kappa^2}\,e^{-i\delta/2}}{\sqrt{n_1^2\cos^2 \alpha + n_2^2 \kappa^2}\,e^{+i\delta/2}}
-= e^{-i\delta},
+r_\mathrm{TE} = \frac{n_1 \cos \alpha - i n_2 \kappa}{n_1 \cos \alpha + i n_2 \kappa} = 
+\frac{\sqrt{n_1^2\cos^2 \alpha + n_2^2 \kappa^2}\,e^{-i\delta_\mathrm{TE}/2}}{\sqrt{n_1^2\cos^2 \alpha + n_2^2 \kappa^2}\,e^{+i\delta_\mathrm{TE}/2}}
+= e^{-i\delta_\mathrm{TE}},
 \label{eq:04_84}
 \eeq
 pri čemer je:
@@ -1194,24 +1215,26 @@ Pri $\alpha = \alpha_m$ je vrednost $\delta=0$, pri vpadnem kotu $\alpha \to 90\
 fazni zamik odbitega valovanja $\delta = \pi$. Vmesna odvisnost je prikazana na sliki~\ref{fig:04_faza}.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/04_faza.pdf_tex}
-\caption{Fazna zamika totalno odbite svetlobe v odvisnosti od vpadnega kota $\alpha$ za obe polarizaciji in 
-njuna razlika $\Delta$.}
+\caption{Fazna zamika totalno odbite svetlobe in 
+njuna razlika $\Delta$ v odvisnosti od vpadnega kota $\alpha$ za obe polarizaciji.}
 \label{fig:04_faza}
 \end{figure}
 
 Podoben rezultat dobimo tudi za TM polarizirano valovanje, le da sta lomna količnika $n_1$ in $n_2$
-zamenjana. Tako dobimo:
+zamenjana. Tako velja:
 \beq
 \delta_\mathrm{TM}= 2\arctan\frac{n_1\kappa}{n_2 \cos \alpha} = 2\arctan\frac{n_1 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}}{n_2 \cos \alpha}.
 \label{eq:04_86}
 \eeq
 Ker je predpogoj za totalni odboj $n_1 > n_2$, so vrednosti faznega zamika za 
 TM polarizacijo vedno večje od faznega zamika za TE polarizirano
-valovanje. Velja namreč:
+valovanje. 
+
+Velja namreč:
 \beq
-\tan \delta_\mathrm{TM} = \left(\frac{n_1}{n_2}\right)^2 \tan \delta_\mathrm{TE}
+\tan \frac{\delta_\mathrm{TM}}{2} = \left(\frac{n_1}{n_2}\right)^2 \tan \frac{\delta_\mathrm{TE}}{2}
 \label{eq:04_87}
 \eeq
 in posledično:
@@ -1220,36 +1243,44 @@ in posledično:
 \label{eq:04_88}
 \eeq
 Če je razmerje lomnih količnikov dovolj veliko, lahko razlika faznih zamikov doseže vrednost, ki je
-večja od $\pi/4$. To se, na primer, zgodi pri totalnem odboju na meji med steklom in zrakom. 
+večja od $\pi/4$. To se, na primer, lahko zgodi pri totalnem odboju na meji med steklom in zrakom. 
 Kadar je fazna razlika med obema polarizacijama pri odboju tako velika, lahko  z dvema zaporednima
-totalnima odbojema dosežemo fazni zamik med TE in TM polariziranim valovanjem, ki je enak $\pi/2$. 
-Optični element, v katerem pride do dveh zaporednih totalnih odbojev torej lahko deluje kot ploščica
-$\lambda/4$. S štirimi totalnimi odboji dobimo fazni zamik $\pi$ in učinek ploščice $\lambda/2$. Tovrstni
-retarderji se imenujejo Fresnelovi rombi. Glavna prednost je, da je njihov učinek neodvisen od 
-valovne dolžine $\lambda$, saj ta ne nastopa eksplicitno v izrazu za $\Delta$. 
+totalnima odbojema pri nekem vpadnem kotu $\alpha$
+dosežemo fazni zamik med TE in TM polariziranim valovanjem, ki je enak $\pi/2$. 
+Optični element, v katerem pride do dveh zaporednih totalnih odbojev, torej lahko deluje kot ploščica
+$\lambda/4$. S štirimi totalnimi odboji dobimo fazni zamik $\pi$ in učinek ploščice $\lambda/2$. Tovrstni optični elementi se imenujejo Fresnelovi rombi. 
+Njihova glavna prednost je v tem, da delujejo neodvisno od 
+valovne dolžine $\lambda$, saj ta ne nastopa eksplicitno v izrazu za $\Delta$. Popravke 
+višjega reda, na primer odvisnost lomnega količnika od valovne dolžine, tukaj zanemarimo.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/04_Fresneltot.pdf_tex}
-\caption{Fresnelov romb, ki deluje kot ploščica $\lambda/4$. PREVERI ORIENTACIJO CIRKULARNE POLARIZACIJE!}
+\caption{V Fresnelovem rombu se vpadna svetloba dvakrat totalno odbije, pri čemer
+se med polarizacijama pojavi zamik $\pi/2$. Iz vpadne linearne polarizacije pod kotom 
+$45\si{\degree}$ nastane krožno polarizirano valovanje in Fresnelov romb deluje 
+kot ploščica $\lambda/4$. Romb je narejen tako, da je iskan fazni 
+zamik dosežen pri pravokotnem vpadu.}
 \label{fig:04_Fresneltot}
 \end{figure}
 
 \section{Odboj na kovinah}
 Zanimivo vprašanje je, kako se Fresnelove enačbe spremenijo, če je snov, 
-na katero vpada svetloba, prevodna. V tem primeru
+na katero svetloba vpada, prevodna. V tem primeru
 vemo, da polje pojema z globino zaradi notranjih električnih tokov. 
-Po analogiji s totalnim odbojem pričakujemo, da bo odbojnost na meji zato večja. 
+Po analogiji s totalnim odbojem, pri katerem evanescentno polje prav tako
+pojema z globino, pričakujemo, da bo odbojnost na meji velika. 
 
-Ker je zaradi meje simetrija prostora zlomljena le v smeri osi $z$, tudi v tem primeru polje
-lahko pojema le z globino, to je s koordinato $z$. Omejimo se zaenkrat na TE polarizirano valovanje, ki 
-ga v prevodni snovi zapišemo:
+Ker je zaradi meje simetrija prostora zlomljena le v smeri osi $z$, polje
+lahko pojema le z globino, to je s koordinato $z$. 
+Omejimo se zaenkrat na TE polarizirano valovanje, ki 
+ga v prevodni snovi zapišemo kot:
 \beq
 \mathbf{E}_2 = \mathbf{e}_y E_{0t} e^{i(k_z+i\varkappa)z} e^{ik_xx-i\omega t}.
 \label{eq:04_89}
 \eeq
 Komponenta valovnega vektorja, ki je vzporedna z mejno ploskvijo, je zaradi
-robnih pogojev enaka v obeh snoveh. Zapišemo jo kot: $k_x = k_0 n_1 \sin \alpha$. 
+robnih pogojev enaka na obeh straneh meje. Zapišemo jo kot: $k_x = k_0 n_1 \sin \alpha$. 
 
 Za opis valovanja v prevodni snovi moramo namesto valovne enačbe uporabiti telegrafsko enačbo 
 (enačba~\ref{eq:telegrafska}). Kompleksno valovno število izrazimo s 
