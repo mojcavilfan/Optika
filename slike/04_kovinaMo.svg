@@ -25,8 +25,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3384766"
-     inkscape:cx="381.38733"
+     inkscape:zoom="2.1410397"
+     inkscape:cx="381.85439"
      inkscape:cy="103.31951"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -36,7 +36,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1159"
+     inkscape:window-height="999"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -112,12 +112,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="54.497204"
+       x="57.672207"
        y="148.00627"
        id="text9029-56-2-3-0-1-7-2-3"><tspan
          sodipodi:role="line"
          id="tspan9027-2-7-6-6-8-9-0-7"
-         x="54.497204"
+         x="57.672207"
          y="148.00627"
          style="font-size:6.3499999px;stroke-width:0.26458332">$\mathcal{R}_\mathrm{TM}$</tspan></text>
     <text

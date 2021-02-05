@@ -1287,33 +1287,31 @@ Za opis valovanja v prevodni snovi moramo namesto valovne enačbe uporabiti tele
 kompleksnim lomnim količnikom $\mathcal{N}$ (enačba~\ref{eq:nkompleks2}):
 \beq
 |\tilde{\mathbf{k}}|^2 = k_x^2 + (k_z+i\varkappa)^2 = k_0^2 \mathcal{N}^2  = 
-k_0^2 \left(\varepsilon_2 + \frac{i\sigma_2}{\varepsilon_0 \omega}\right),
+k_0^2 \left(\varepsilon_2 + \frac{i\sigma_2}{\varepsilon_0 \omega}\right)\!\!,
 \label{eq:04_90}
 \eeq
 pri čemer $\epsilon_2$ in $\sigma_2$ označujeta dielektričnost in električno
-prevodnost druge snovi. Iz tega sledi:
+prevodnost druge (prevodne) snovi. Iz tega sledi:
 \beq
 \frac{k_x^2+k_z^2 - \varkappa^2}{k_0^2} + \frac{2 i \varkappa k_z}{k_0^2} = \varepsilon_2 + 
 \frac{i \sigma_2}{\varepsilon_0 \omega}.
 \label{eq:04_91}
 \eeq
-Iz enačbe izračunamo $k_z$ in $\varkappa$. To naredimo tako, da $k_x^2$ nesemo na drugo stran in 
-dobimo:
+Parametra $k_z$ in $\varkappa$ izračunamo iz enačbe:
 \beq
-k_z^2 - \varkappa^2+ 2 i \kappa k_z= k_0^2 \varepsilon_2 - k_x^2 + i\frac{k_0^2\sigma_2}{\varepsilon_0 \omega}.
+k_z^2 - \varkappa^2+ 2 i \varkappa k_z= k_0^2 \varepsilon_2 - k_x^2 + i\frac{k_0^2\sigma_2}{\varepsilon_0 \omega}.
 \label{eq:04_92}
 \eeq
-Nato postopamo podobno, kot smo 
-to naredili pri izračunu kompleksnega lomnega količnika. Dobimo:
+Postopamo podobno, kot pri izračunu kompleksnega lomnega količnika, in dobimo:
 \beq
-k_z^2 = \frac{1}{2}\left(\sqrt{(k_0^2\varepsilon_2-k_x^2)^2 + \left(\frac{\sigma k_0^2}{\varepsilon_0 \omega}\right)^2}
-+ (k_0^2\varepsilon_2-k_x^2)^2 \right)
+k_z^2 = \frac{1}{2}\left(\sqrt{\left(k_0^2\varepsilon_2-k_x^2\right)^2 + \left(\frac{\sigma_2 k_0^2}{\varepsilon_0 \omega}\right)^2}
++ k_0^2\varepsilon_2-k_x^2 \right)
 \label{eq:04_93}
 \eeq
 in 
 \beq
-\varkappa^2 = \frac{1}{2}\left(\sqrt{(k_0^2\varepsilon_2-k_x^2)^2 + \left(\frac{\sigma k_0^2}{\varepsilon_0 \omega}\right)^2}
-- (k_0^2\varepsilon_2-k_x^2)^2 \right)\!\!.
+\varkappa^2 = \frac{1}{2}\left(\sqrt{\left(k_0^2\varepsilon_2-k_x^2\right)^2 + \left(\frac{\sigma_2 k_0^2}{\varepsilon_0 \omega}\right)^2}
+- k_0^2\varepsilon_2+k_x^2\right)\!\!.
 \label{eq:04_94}
 \eeq
 Celotno komponento valovnega vektorja v smeri $z$ v prevodni snovi potem zapišemo kot vsoto 
@@ -1323,27 +1321,31 @@ realnega in imaginarnega dela:
 \label{eq:04_95}
 \eeq
 Zapišimo robne pogoje, po katerih se ohranjata tangentni komponenti jakosti
-električnega in magnetnega polja (enačbi~\ref{eq:RPE} in \ref{eq:RPH}):
+električnega in magnetnega polja (enačbi~\ref{eq:RPE} in \ref{eq:RPH}).Prva enačba
+je preprosta:
 \beq
-E_{0i} + E_{0r} = E_{0t}
+E_{0i} + E_{0r} = E_{0t}.
 \label{eq:04_97}
 \eeq
-in 
+Drugo enačbo dobimo z upoštevanjem Faradayevega zakona (enačba~\ref{eq:Maxwell2}).
+Izvrednotimo časovni odvod magnetnega polja in dobimo zvezo: $\nabla \times \mathbf{E}
+= i \omega \mu_0 \mathbf{H}$. Na meji se ohranja tangentna komponenta $H_x$ (glej
+sliko~\ref{fig:04_tetm}), zato
+se na meji ohranja odvod jakosti električnega polja $dE/dz$:
 \beq
 -ik_{1z}E_{0i} + ik_{1z}E_{0r}= -(ik_{2z}+\varkappa)E_{0t}.
 \label{eq:04_98}
 \eeq
-Prvo enačbo pomnožimo s $\tilde{k}_z$ in enačbi odštejemo, da eliminiramo neznanko $E_{0t}$. Izračunamo
-amplitudno odbojnost:
+Eliminiramo neznanko $E_{0t}$ in izračunamo amplitudno odbojnost:
 \boxeq{eq:Kovinar}{
-r = \frac{E_{0r}}{E_{0i}} = \frac{k_{z1}-k_{z2}-i \varkappa}{k_{z1}+k_{z2}+i\varkappa}.
+r = \frac{E_{0r}}{E_{0i}} = \frac{k_{1z}-k_{2z}-i \varkappa}{k_{1z}+k_{2z}+i\varkappa}.
 }
 Tak rezultat je pričakovan. Spomnimo se amplitudne odbojnosti za navadni neprevodni primer
 (enačba~\ref{eq:TEr}):
 \beq
 r = \frac{n_1 \cos \alpha - n_2 \cos \beta}{n_1 \cos \alpha + n_2 \cos \beta} = 
 \frac{k_0 n_1 \cos \alpha - k_0 n_2 \cos \beta}{k_0 n_1 \cos \alpha + k_0 n_2 \cos \beta} = 
-\frac{k_{z1}-k_{z2}}{k_{z1}+k_{z2}}.
+\frac{k_{1z}-k_{2z}}{k_{1z}+k_{2z}}.
 \label{eq:04_96}
 \eeq
 V primeru prevodne snovi je izraz povsem enak, le da namesto
@@ -1355,33 +1357,37 @@ Temu ustrezno lahko rezultat razumemo kot neko vmesno rešitev, ki delno spominj
 na navadni odboj, vendar ima večjo odbojnost. Kovine zato dobro odbijajo svetlobo
 in se ``bleščijo''. 
  
-Za TE polarizirano valovanje zapišemo amplitudno odbojnost:
+Zapišimo amplitudno odbojnost za TE polarizirano valovanje še drugače:
 \boxeq{eq:04_99}{
 r_\mathrm{TE} = \frac{n_1 \cos \alpha - \mathcal{N}_2 \cos
 \beta}{n_1 \cos \alpha + \mathcal{N}_2 \cos \beta}.
 }
+Pri tem je $\cos \beta$ kompleksno število, določeno formalno 
+z lomnim zakonom $n_1 \sin \alpha = \mathcal{N}_2 \sin \beta$.
 Sklepamo, da po analogiji amplitudno odbojnost za TM polarizirano valovanje zapišemo kot: 
 \boxeq{eq:04_100}{
 r_\mathrm{TM} = \frac{\mathcal{N}_2 \cos \alpha - n_1
 \cos \beta}{\mathcal{N}_2 \cos \alpha + n_1 \cos \beta}.
 }
-Pri tem je tudi $\cos \beta$ kompleksno število, določeno formalno 
-z zvezo $n_1 \sin \alpha = \mathcal{N}_2 \sin \beta$.
+
 
 Odbojnost $\mathcal{R}$, ki jo izračunamo kot:
 \beq
-\mathcal{R} = |r|^2.
+\mathcal{R} = |r|^2,
 \label{eq:04_100a}
 \eeq
-je prikazana na sliki~\ref{fig:04_kovina}. Intenziteta odbite svetlobe za TM polarizacijo 
-na prevodnih snoveh nikoli ne pade na nič, se pa pri določenih kotih občutno
-zmanjša. 
+je prikazana na sliki~\ref{fig:04_kovina}. Odbojnost za TE polarizacijo
+homogeno narašča z naraščajočim vpadnim kotom 
+od neke začetne vrednosti pri pravokotnem vpadu do 1. 
+Intenziteta TM polarizacije na prevodnih snoveh 
+nikoli ne pade na nič, se pa pri določenih kotih občutno
+zmanjša (analog Brewsterjevem kotu pri odboju na neprevodnih snoveh).
 \begin{figure}[ht]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{70truemm} 
 \input{slike/04_kovinaMo.pdf_tex}
 \caption{Odbojnost na prevodni snovi v odvisnosti od vpadnega kota za TE in TM polarizirano
-valovanje. Primer je narisan za molibden.}
+valovanje. Primer je narisan za molibden z $n'=3,70$ in $n''=3,55$.}
 \label{fig:04_kovina}
 \end{figure}
 
@@ -1397,23 +1403,20 @@ Izračunamo še odbojnost:
 \mathcal{R} = |r|^2 = \frac{(n_1 -n_2')^2 +n_2''^2}{(n_1 +n_2')^2 +n_2''^2}.
 \label{eq:04_102}
 \eeq
-Če je druga snov kovina z zelo veliko prevodnostjo, tako da velja $\sigma/\varepsilon_0 \omega \gg \varepsilon$
-in $n''> n'$, lahko izraz še poenostavimo. Zanemarimo realni del lomnega količnika kovine $n_2'$
+Kadar je realni del $n'$ lomnega količnika zelo majhen, lahko izraz še poenostavimo 
 in dobimo:
 \beq
 \mathcal{R} = \frac{n_1^2 +n_2''^2}{n_1^2 +n_2''^2} = 1.
 \label{eq:04_103}
 \eeq
-Snovi z veliko prevodnostjo torej vso vpadno svetlobo odbijejo. Ravne spolirane površine kovin
-delujejo kot zrcalo!
+Snovi z majhnim realnim delom lomnega količnika $n'$ torej vso vpadno 
+svetlobo odbijejo. Primera takih kovin sta srebro ($n'=0,15$ in $n''=3,9$)
+in aluminij ($n'=1,3$ in $n''=7,3$). Obe kovini zato uporabljamo za izdelavo
+zrcal.
 \begin{figure}[ht]
 \centering
 %\includegraphics[width=10truecm]{slike/04_KovinaFoto.jpg}
-\caption{DODAJ SLIKO KOVINE Gladka površina dobro prevodno kovine odbija vso vpadno svetlobo.}
+\caption{Gladka površina dobro prevodnih kovin odbija praktično 
+vso vpadno svetlobo, zato jih uporabljamo za izdelavo zrcal.}
 \label{fig:04_KovinaFoto}
 \end{figure}
-
-lom svetlobe, črte pod vodo; odboj ljubljanica, mavrica pol filter; sončna očala, 
-odsev od jezera, ljubljanica, luža za totalni odboj, pogled v vitrino skozi okno, skozi steklo
-od avta. 
-sipanje: megla žarki svetlobe; tyndall aleševi vzorci, opal?
