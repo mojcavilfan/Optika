@@ -74,6 +74,5 @@
     \put(0.2739705,0.00818279){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_m$\end{tabular}}}}%
     \put(0.79593124,0.0080596){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_m$\end{tabular}}}}%
     \put(0.04235695,0.21388114){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{04_gostm.pdf}}%
   \end{picture}%
 \endgroup%
