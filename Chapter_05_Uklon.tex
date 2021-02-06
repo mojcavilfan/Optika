@@ -1,79 +1,91 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Uklon}
-Kadar svetloba vpada na oviro, katere velikost je primerljiva z valovno 
-dolžino svetlobe, ali se širi skozi podobno veliko odprtino v zaslonu, 
-opazimo enega najbolj značilnih pojavov valovne optike -- uklon.
-V geometrijski optiki se svetloba širi po ravnih črtah, ki po 
-najkrajši poti povezujejo začetno in končno točko. V tej sliki nastane
-za oviro ostra senca, v katero se svetloba ne širi. Po uklonski teoriji
-pa svetloba seže tudi v območje sence. Poleg tega, da se valovanje širi
-v območje geometrijske sence za ovirami, se v njem pojavijo tudi ojačitve
-in oslabitve oziroma pri svetlobi svetla in temna območja. Ta pojav
-je posledica interference, ki jo bomo podrobneje obravnavali v
-naslednjem poglavju. 
-\section{Uklonski integral}
-Pri obravnavi uklona zanemarimo vektorsko naravo polja oziroma
-polarizacijo in jakost električneva polja obravnavamo kot skalarno količino
-$E(\mathrm{r},t)$.
+V tem poglavju bomo spoznali enega najznačilnejših pojavov valovne 
+optike -- uklon. Zapisali bomo splošni uklonski integral in obravnavali
+dva približka, Fraunhoferjevega in Fresnelovega. Z izračunom 
+bomo pojasnili značilne uklonske slike in zapisali uklonsko
+omejeno ločljivost optičnih naprav. Na koncu poglavja sledi matematično
+zahtevnejša izpeljava Kirchhoffovega uklonskega integrala. 
 
-Naj ravno sinusno potujoče valovanje vpada na zaslon, v katerem je odprtina.
-Tak zaslon imenujemo objektni zaslon. Zanima nas uklonska slika, ki nastane
+\section{Uklonski integral}
+Svetloba se uklanja, kadar vpada na oviro, katere velikost je primerljiva z valovno  
+dolžino svetlobe, ali se širi skozi podobno veliko odprtino v zaslonu. 
+V geometrijski optiki se svetloba širi po ravnih črtah, ki po 
+najkrajši poti povezujejo začetno in končno točko. V tej sliki za oviro 
+nastane ostra senca, v katero se svetloba ne širi. Po uklonski teoriji
+svetloba seže deloma tudi v območje sence. Poleg tega, da se valovanje širi
+v območje geometrijske sence za ovirami, se v njem pojavijo ojačitve
+in oslabitve, ki predstavljajo značilne uklonske slike.
+
+Naj ravno sinusno potujoče valovanje vpada na zaslon, v katerem je majhna odprtina.
+Ta zaslon imenujemo objektni zaslon. Iščemo uklonsko sliko, ki nastane
 za odprtino na tako imenovanem opazovalnem zaslonu (glej sliko~\ref{fig:05_shema}).
+Pri tem  zanemarimo vektorsko naravo polja oziroma
+polarizacijo in jakost električnega polja obravnavamo kot skalarno količino.
+
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_shema.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{90truemm} 
+\input{slike/05_skica01.pdf_tex}
+\caption{Ravni valovi vpadajo na objektni zaslon, v katerem je odprtina. 
+Na opazovalnem zaslonu v točki $P_0$ opazujemo jakost električnega polja v
+odvisnosti od vpadnega polja v točki $P$.}
 \label{fig:05_shema}
 \end{figure}
 
-Iščemo vrednost jakosti elekktričnega polja v točki $P_0$ na opazovalnem zaslonu, 
-do katere vodi vektor $\mathrm{r}_0$, v odvisnosti of vrednosti polja v točki $P$
-na objektnem zaslonu, do katerega vodi vektor $\mathrm{r}$. 
+Naša naloga je poiskati jakost električnega polja v točki $P_0$ na opazovalnem zaslonu, 
+do katere vodi vektor $\mathbf{r}_0$, v odvisnosti od vrednosti polja v točki $P$
+na objektnem zaslonu, do katerega vodi vektor $\mathbf{r}$.
 
-Po Huygensovem načelu iz točke $P$ izhaja krogelno valovanje, katerega
-amplitudo določa polje, ki vpada na objektni zaslon. Če je vpadno valovanje
-ravno valovanje, velja $E(r) = E_0$ za vsak $\mathbf{r}$. Za nastanek slike
-v točki na opazovalnem zaslonu moramo sešteti prispevke sekundarnih
-polj po vseh točkah objektnega zaslona. Uklonsko sliko v točki $P_0$ 
-tako z enačbo zapišemo kot:
+Po Huygensovem načelu iz vsake točke $P$ v odprtini izhaja sekundarno krogelno valovanje, 
+katerega amplitudo določa polje, ki vpada na objektni zaslon. Če je vpadno valovanje
+ravni val, velja $E(\mathbf{r}) = E_0$ za vsak $\mathbf{r}$. Za nastanek slike
+v točki $P_0$  na opazovalnem zaslonu seštejemo prispevke sekundarnih
+polj iz vseh točk odprtine v objektnem zaslonu. 
+
+Uklonsko sliko v točki $P_0$ tako z enačbo zapišemo kot:
 \boxeq{eq:05_01}{
-E_{P0} = E (\mathbf{r}_0) = \int_A\!\!\int \frac{i}{\lambda} E_0 \left( \frac{e^{ikR(\mathbf{r})}}{R(\mathbf{r})}\right) dS.
+E_{P0} = E (\mathbf{r}_0) = \int_A \frac{i}{\lambda} E_0~\frac{e^{ikR(\mathbf{r})}}{R(\mathbf{r})}~ dS,
 }
-Pri tem integriramo po celotni površini odprtine $A$, del v oklepaju predstavlja
-krajevni del krogelnih valov, $\lambda$ pa je valovna dolžina vpadne svetlobe
+pri čemer integriramo po celotni površini odprtine $A$. Ulomek v integralu predstavlja
+krajevni del krogelnih valov, $\lambda$ pa je valovna dolžina vpadne svetlobe. Predfaktor
+v obliki $i/\lambda$ bomo izpeljali v razdelku~\ref{chap:Kirchhoff}.
 \begin{remark}
-Prvotno je uklonski integral zapisal Fresnel, tako da je namesto predfaktorja 
-$i/\lambda$ zapisal eksperimentalno določeno konstanto. Predfaktor v zapisani
-obliki je izpeljal Kirchhoff (glej izpeljavo v razdelku~\ref{chap:Kirchhoff}). 
-Popolnejši zapis je oblike $i \chi(\mathbf{r})/\lambda$,
+Uklonski integral je prvotno zapisal Fresnel, vendar je namesto predfaktorja 
+$i/\lambda$ uvedel eksperimentalno določeno konstanto. Predfaktor $i/\lambda$ je 
+izpeljal Kirchhoff. Popolnejši zapis predfaktorja je oblike $i \chi(\mathbf{r})/\lambda$,
 pri čemer $\chi$ predstavlja smerni faktor. Kadar je značilna razsežnost odprtine v 
-objektnem zaslonu $d$ bistveno manjša od oddaljenosti do zaslona, 
-je $\chi \approx 1$.
+objektnem zaslonu $d$ bistveno manjša od oddaljenosti do opazovalnega zaslona, 
+je $\chi \approx 1$ in predfaktor se prevede na zapisano obliko. 
 \end{remark}
-Namesto integracije sekundarnega polja samo na območju odprtine $A$, lahko vpeljemo
+
+Namesto integracije sekundarnega valovanja po območju odprtine $A$, lahko vpeljemo
 tako imenovano aperturno funkcijo $f(\mathbf{r})$. Njena vrednost je na mestu odprtine enaka $1$,
 sicer je enaka $0$. Zapis z aperturno funkcijo omogoči integracijo po celotni dvodimenzionalni
 ploskvi, ki opisuje objektni zaslon. Zapis je uporaben tudi za splošen primer, ko je zaslon
-delno prozoren in delno prepušča svetlobo. Polje v ravnini objektnega zaslona potem zapišemo:
+delno prozoren in le delno prepušča svetlobo. Polje v ravnini objektnega zaslona potem zapišemo kot:
 \beq
 E(\mathbf{r}) = f(\mathbf{r})E_0.
 \label{eq:05_02}
 \eeq
-Določimo zdaj koordinatni sistem na objektni in opazovani ravnini. Objektno ravnino
-opišemo kot ravnino s koordinatama $x$ in $y$, opazovalno ravnino pa kot ravnino
+Določimo koordinatni sistem na objektni in opazovalni ravnini, ki ju bomo potrebovali
+za izračun uklonskega integrala. Objektno ravnino
+opišemo kot ravnino s koordinatama $x$ in $y$, vzporedno opazovalno ravnino pa kot ravnino
 s koordinatama $\xi$ in $\eta$. Izhodišči obeh koordinatnih sistemov naj ležita 
-na skupni osi $z$, ki jo imenujemo optična os sistema (glej sliko~\ref{fig:05_koordinate}).
+na skupni osi $z$, ki jo imenujemo optična os sistema (glej sliko~\ref{fig:05_koordinate})
+in je pravokotna na obe ravnini.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
-%\input{slike/05_koordinate.pdf_tex}
-\caption{SLIKA}
+\input{slike/05_koordinate.pdf_tex}
+\caption{Optična os sistema (os $z$) povezuje središči obeh ravnin, objektne ($x,y$) in 
+opazovalne ($\xi, \eta$). Razdalja med točko v odprtini $P$ in točko na opazovalnem zaslonu $P_0$
+je $R$.}
 \label{fig:05_koordinate}
 \end{figure}
 
-Točko $P$ na objektnem zaslonu potem opišemo s krajevnim vektorjem:
+Točko $P$ na objektnem zaslonu opišemo s krajevnim vektorjem:
 \beq
 P: \mathbf{r} = (x,y,0),
 \label{eq:05_03}
@@ -86,24 +98,21 @@ P_0: \mathbf{r}_0 = (\xi,\eta,z_0).
 Uporabimo uklonski integral (enačba~\ref{eq:05_01}) in zapišemo:
 \boxeq{eq:05_05}{
 E(\xi, \eta, z_0) = \frac{i}{\lambda} \int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) E_0 \left(\frac{e^{ikR}}{R}\right) dx dy.
+\int_{-\infty}^{\infty} f(x,y) E_0~\frac{e^{ikR}}{R}~ dx\,dy.
 }
-V izrazu za krogelne valove nastopa razdalja $R$ med točjo $P$ in $P_0$, za
+V izrazu za krogelne valove nastopa razdalja $R$ med točkama $P$ in $P_0$, za
 katero velja:
 \beq
 R = \sqrt{(\xi-x)^2 + (\eta - y)^2 + z_0^2}.
 \label{eq:05_06}
 \eeq
+
+Natančna obravnava uklonskega integrala je zelo zahtevna, zato se poslužujemo približkov.
 Glede na to, kako natančno obravnavamo izraz za $R = R(x,y,\xi, \eta, z_0)$ v uklonskem
 integralu (enačba~\ref{eq:05_05}), ločimo med različnimi uklonskimi približki. Najbolj 
 znana sta Fraunhoferjev in Fresnelov približek, ki ju bomo podrobneje spoznali v nadaljevanju.
 
 \section{Fraunhoferjev uklon}
-Izhajamo iz uklonskega integrala (enačba~\ref{eq:05_05}):
-\beq
-E(\xi, \eta, z_0) = \frac{i}{\lambda} \int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) E_0 \left(\frac{e^{ikR}}{R}\right) dx dy.
-\eeq
 V Fraunhoferjevem približku uklona, ki ga poenostavljeno imenujemo
 Fraunhoferjev uklon, razvijemo razdaljo $R$ med točko v odprtini
 in točko na zaslonu do prvega reda. Zapišemo:
