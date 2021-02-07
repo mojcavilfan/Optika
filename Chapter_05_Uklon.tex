@@ -110,28 +110,21 @@ R = \sqrt{(\xi-x)^2 + (\eta - y)^2 + z_0^2}.
 Natančna obravnava uklonskega integrala je zelo zahtevna, zato se poslužujemo približkov.
 Glede na to, kako natančno obravnavamo izraz za $R = R(x,y,\xi, \eta, z_0)$ v uklonskem
 integralu (enačba~\ref{eq:05_05}), ločimo med različnimi uklonskimi približki. Najbolj 
-znana sta Fraunhoferjev in Fresnelov približek, ki ju bomo podrobneje spoznali v nadaljevanju.
+znana sta Fraunhoferjev in Fresnelov približek.
 
 \section{Fraunhoferjev uklon}
-V Fraunhoferjevem približku uklona, ki ga poenostavljeno imenujemo
-Fraunhoferjev uklon, razvijemo razdaljo $R$ med točko v odprtini
-in točko na zaslonu do prvega reda. Zapišemo:
+O Fraunhoferjevem uklonu oziroma natančneje Fraunhoferjevem uklonskem približku govorimo,
+kadar razdaljo $R$ med točko v odprtini in točko na zaslonu v uklonskem integralu 
+(enačba~\ref{eq:05_05}) razvijemo do prvega reda. Zapišemo:
 \beq
-R = \sqrt{(\xi-x)^2 + (\eta - y)^2 + z_0^2} \approx
+R = \sqrt{(\xi-x)^2 + (\eta - y)^2 + z_0^2} =
 \sqrt{\xi^2+\eta^2 +z_0^2 - 2\xi x - 2 \eta y + x^2 + y^2}.
 \label{eq:05_07}
 \eeq
-Naj bo:
-\beq
-R_0 = \xi^2 + \eta^2 + z_0^2.
-\label{eq:05_08}
-\eeq
-Uporabimo razvoj korenske funkcije do prvega reda:
-\beq
-\sqrt{1+x}\approx 1 + \frac{x}{2} + \dots,
-\label{eq:05_09}
-\eeq
-višje člene v razvoju pa zanemarimo. Razvijemo in upoštevamo le linearne člene:
+Vpeljemo $R_0$ kot razdaljo od izhodišča do točke na zaslonu, za katero velja 
+$R_0^2 = \xi^2 + \eta^2 + z_0^2$ (glej sliko~\ref{fig:05_koordinate}). Nato korensko
+funkcijo razvijemo do prvega reda in ohranimo le člene, ki so linearni v $x$ in $y$. 
+Dobimo:
 \beq
 R = \sqrt{R_0^2 \left(1 - \frac{2\xi x}{R_0^2} - \frac{2\eta y}{R_0^2} + \frac{x^2+y^2}{R_0^2}
 \right)} \approx 
@@ -144,15 +137,23 @@ R_0 - \frac{\xi x}{R_0} - \frac{\eta y}{R_0}.
 \frac{e^{ikR}}{R} \approx \frac{e^{ikR_0} e^{-ik\xi x /R_0} e^{-ik\eta y/R_0}}{R_0}.
 \label{eq:05_11}
 \eeq
-Ker se člen v imenovalcu spreminja znatno počasneje kot v števcu, lahko odvisnost od koordinat
-$x$, $y$, $\xi$ in $\eta$ v imenovalcu zanemarimo. 
+Ker je odvisnost od koordinat $x$, $y$, $\xi$ in $\eta$ v imenovalcu znatno 
+šibkejša kot v števcu, smo jo v imenovalcu zanemarili. 
 
-Vpeljemo še smerna oziroma uklonska kota:
+Enačba~(\ref{eq:05_05}) se z upoštevanjem razvoja prepiše v:
+\boxeq{eq:Fraunhofer}{
+E(\xi, \eta, z_0) = \frac{i}{\lambda} 
+\frac{E_0 e^{ikR_0}}{R_0}
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} 
+f(x,y)~ e^{-ik\xi x /R_0} e^{-ik\eta y/R_0} dx\,dy.
+}
+
+Vpeljemo še smerna oziroma uklonska kota, za katera privzamemo, da sta majhna:
 \beq
 \sin \vartheta_\xi \approx \vartheta_\xi = \frac{\xi}{R_0}
 \qquad \mathrm{in}
 \qquad
-\sin \vartheta_\eta \approx \vartheta_\eta = \frac{\eta}{R_0}
+\sin \vartheta_\eta \approx \vartheta_\eta = \frac{\eta}{R_0},
 \label{eq:05_13}
 \eeq
 ter z njimi povezani prostorski frekvenci:
@@ -163,62 +164,77 @@ ter z njimi povezani prostorski frekvenci:
 \omega_\eta = k \vartheta_\eta.
 \label{eq:05_14}
 \eeq
-Potem zapišemo uklonski integral v Fraunhoferjevem približku kot:
+Pogosto naredimo še približek $R_0 \approx z_0$, s katerim uklonski integral 
+v Fraunhoferjevem približku zapišemo kot:
 \boxeq{eq:Fraunhoferjev}{
-E(\omega_\xi,\omega_\eta) = \frac{i}{\lambda} \frac{E_0 e^{ikR_0}}{R_0}
+E(\omega_\xi,\omega_\eta) = \frac{i}{\lambda} \frac{E_0 e^{ikz_0}}{z_0}
 \int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) e^{-i\omega_\xi x} e^{-i \omega_\eta y} dx dy.
+\int_{-\infty}^{\infty} f(x,y) e^{-i\omega_\xi x} e^{-i \omega_\eta y} dx\, dy.
 }
-Pogosto naredimo še približek $R_0 \approx z_0$. 
 
 Iz enačbe~(\ref{eq:Fraunhoferjev}) je razvidno, 
-da je uklonska slika nekega objekta v Fraunhoferjevem uklonskem približku
-enaka 2D Fourierovi transformiranki aperturne funkcije tega objekta. 
+da je uklonska slika objekta v Fraunhoferjevem uklonskem približku
+enaka 2D Fourierevi transformiranki aperturne funkcije tega objekta. 
 
+\begin{remark}
+Uklonski integral smo zapisali za splošno aperturno funkcijo $f(x,y)$. Ta lahko
+opisuje odprtino v zaslonu ali pa oviro, na katero svetloba vpada. 
+Babinetovo načelo (po francoskem fiziku Jacquesu Babinetu, 1794--1872) pravi, 
+da je uklonska slika ovire enaka uklonski sliki odprtine v zaslonu, 
+ki je enake oblike in enake velikosti kot ovira. 
+\end{remark}
 
 \subsection*{Fresnelovo število}
-Poiščimo kriterij, ki bo določil, kdaj lahko uporabimo navedeni približek. Spomnimo se, da smo
-v razvoju izraza za $R$ zanemarili kvadratni člen (enačba~\ref{eq:05_10}). Ta člen v izrazu
-za sferične valove nastopa v členu $\exp(ik(x^2 + y^2)/2R_0)$ in torej prinaša nek dodatni fazni 
-zamik. Da bo res zanemarljiv, mora za vsako vrednost $x$ in $y$ veljati:
+Poiščimo kriterij, ki določa, kdaj lahko uporabimo navedeni približek. Spomnimo se, da smo
+v razvoju izraza za $R$ zanemarili kvadratni člen (enačba~\ref{eq:05_10}), ki 
+nastopa v obliki $\exp(ik(x^2 + y^2)/2R_0)$ in torej prinaša nek dodatni fazni zamik. 
+Da je ta člen res zanemarljiv, mora za vse vrednosti $x$ in $y$ znotraj odprtine veljati:
 \beq
 \frac{k(x^2+y^2)}{2R_0} \ll 2 \pi.
 \label{eq:05_15}
 \eeq
 Privzamemo, da je $(x^2+y^2)_\mathrm{max} = d^2$, pri čemer $d$ meri karakteristično razsežnost 
-odprtine v objektnem zaslonu. Sledi
+odprtine v objektnem zaslonu. Sledi:
 \beq
 \frac{kd^2}{2R_0}  = \frac{2\pi}{\lambda}\frac{d^2}{2R_0}\ll 2 \pi.
 \label{eq:05_16}
 \eeq
-Vpeljemo Fresnelovo število $F$:
+Vpeljemo Fresnelovo število $F$ kot:
 \beq
-F  = \frac{d^2}{\lambda R_0}
+F  = \frac{d^2}{\lambda R_0}.
 \label{eq:05_17}
 \eeq
-in Fraunhoferjev približek je veljaven, kadar
+Fraunhoferjev uklonski približek je veljaven, kadar velja:
 \beq
 F \ll 1. 
 \label{eq:05_18}
 \eeq
-Pogoj je ekvivalenten zahtevi, da je 
+Pogoj je ekvivalenten zahtevi, da je: 
 \beq
 R_0 \gg \frac{d^2}{\lambda}.
 \label{eq:05_19}
 \eeq
-Tipične vrednosti $R_0 \approx z_0$  morajo biti dosti večje od dimenzij odprtine, zato 
-Fraunhoferjevem približku rečemo tudi približek daljnjega polja. 
- 
+Tipične vrednosti $R_0 \approx z_0$  morajo biti za veljavnost Fraunhoferjevega 
+približka dosti večje od dimenzij odprtine, zato 
+Fraunhoferjevemu približku rečemo tudi približek daljnjega polja. 
+
+\begin{example}{\bf Veljavnost Fraunhoferjevega približka.}
+Naj bo valovna dolžina vpadne svetlobe $\lambda=500~\si{nm}$. Če je tipična 
+razsežnost odprtine $d = 1~\si{\micro\metre}$, je veljavnost 
+Fraunhoferjevega približka pri oddaljenosti od zaslona 
+$R\gg 2~\si{\micro\metre}$. Pri razsežnosti
+$d = 10~\si{\micro\metre}$ velja $R\gg 200~\si{\micro\metre}$, 
+pri $d = 100~\si{\micro\metre}$ velja $R\gg 2~\si{\centi\metre}$ in 
+pri $d = 1~\si{\milli\metre}$ velja Fraunhoferjev približek za
+$R\gg 2~\si{\metre}$. Pri majhnih odprtinah je torej Fraunhoferjev približek
+preprosto izpolniti, že pri milimetrskih odprtinah
+pa mora biti zaslon oddaljen vsaj nekaj metrov. 
+\end{example}
+
+\begin{remark}
 Preden obravnavamo primere Fraunhoferjevega uklona, si oglejmo še interpretacijo 
 približnosti Fraunhoferjevega približka. Če si zamislimo enodimenzionalno režo, 
 ki se razteza v smemi osi $x$. 
-\begin{figure}[ht]
-\centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_priblizek.pdf_tex}
-\caption{SLIKA}
-\label{fig:05_priblizek}
-\end{figure}
 
 Fazni zamik sekundarnih sferičnih valov, ki izvirajo z območja reže, se spreminja kot
 \beq
@@ -233,19 +249,14 @@ Fazni zamik sekundarnih sferičnih valov, ki izvirajo z območja reže, se sprem
 \eeq
 Zapis ustreza ravnemu valovanju. Za $R_0 \gg d^2/\lambda$ se uklonjeno valovanje manifestira
 kot del ravnega valovanja. 
-
-\begin{example}{\bf Veljavnost Fraunhoferjevega približka.}
-Naj bo valovna dolžina svetlobe $\lambda = 500~\si{nm}$. Če je tipična 
-razsežnost odprtine $d = 1~\si{\micro\metre}$, mora biti za veljavnost 
-Fraunhoferjevega približka oddaljenost od zaslona 
-$R\gg 2~\si{\micro\metre}$. Pri razsežnosti
-$d = 10~\si{\micro\metre}$ mora veljati $R\gg 200~\si{\micro\metre}$, 
-pri $d = 100~\si{\micro\metre}$ mora biti $R\gg 2~\si{\centi\metre}$ in 
-pri $d = 1~\si{\milli\metre}$ velja Fraunhoferejev približek pri 
-$R\gg 2~\si{\metre}$. Pri majhnih odprtinah je torej Fraunhoferjev približek
-preprosto izpolniti, že pri milimetrsih odprtinah
-pa mora biti zaslon oddaljen vsaj nekaj metrov. 
-\end{example}
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/05_priblizek.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_priblizek}
+\end{figure}
+\end{remark}
 
 Za veljavnost Fraunhoferjevega približka mora biti torej zaslon zelo
 oddaljen od odprtine, na kateri se svetloba uklanja. Vendar za opazovanje 
