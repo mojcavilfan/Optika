@@ -231,54 +231,58 @@ preprosto izpolniti, že pri milimetrskih odprtinah
 pa mora biti zaslon oddaljen vsaj nekaj metrov. 
 \end{example}
 
-\begin{remark}
 Preden obravnavamo primere Fraunhoferjevega uklona, si oglejmo še interpretacijo 
-približnosti Fraunhoferjevega približka. Če si zamislimo enodimenzionalno režo, 
-ki se razteza v smemi osi $x$. 
-
-Fazni zamik sekundarnih sferičnih valov, ki izvirajo z območja reže, se spreminja kot
+Fraunhoferjevega približka. Zamislimo si enodimenzionalno režo, ki se razteza v smeri 
+osi $x$. Fazni zamik sekundarnih sferičnih valov, ki izvirajo iz reže pri danem $x$ 
+in se zberejo v eni točki na zaslonu, se po enačbi~(\ref{eq:05_11}) spreminja z lego $x$ kot:
 \beq
-\Delta \Phi = \frac{k \xi x}{R_0}.
+\Delta \phi = \frac{k \xi x}{R_0}.
 \label{eq:05_20}
 \eeq
-Če opazujemo vrednost $\Delta \Phi(x)$ valov, ki potujejo v smeri $\vartheta_\xi \approx
-\xi/R_0$ glede na os $z$, vidimo, da velja 
+Primerjamo to z faznim zamikov ravnih valov, ki potujejo v smeri $\vartheta_\xi \approx
+\xi/R_0$ glede na os $z$:
 \beq
-\Delta \Phi = k \varphi_\xi x.
+\Delta \phi = k x \vartheta_\xi.
 \label{eq:05_21}
 \eeq
-Zapis ustreza ravnemu valovanju. Za $R_0 \gg d^2/\lambda$ se uklonjeno valovanje manifestira
-kot del ravnega valovanja. 
+Vidimo, da sta fazna zamika (enačbi~\ref{eq:05_20} in \ref{eq:05_21}) enaka. 
+V Fraunhoferjevem približku je torej uklonjeno valovanje
+enako ravnim valovom, ki se širijo pod kotom $\vartheta_\xi$ 
+(skica~\ref{fig:05_ravnivalovi}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_priblizek.pdf_tex}
-\caption{SLIKA}
-\label{fig:05_priblizek}
+\def\svgwidth{75truemm} 
+\input{slike/05_ravnivalovi.pdf_tex}
+\caption{V Fraunhoferjevem približku so uklonjeni valovi ravni valovi. Približek
+velja za velike oddaljenosti od zaslona, zato mu pravimo tudi približek
+daljnjega polja.}
+\label{fig:05_ravnivalovi}
 \end{figure}
-\end{remark}
 
-Za veljavnost Fraunhoferjevega približka mora biti torej zaslon zelo
+Za veljavnost Fraunhoferjevega približka mora biti zaslon zelo
 oddaljen od odprtine, na kateri se svetloba uklanja. Vendar za opazovanje 
 Fraunhoferjevega uklona ni nujno, da zaslon postavimo zelo daleč za objektno ravnino.
 Namesto tega lahko za objektni zaslon postavimo zbiralno lečo in uklonsko sliko opazujemo
 v njeni goriščni ravnini. Zbiralna leča namreč snop vzporednih žarkov zbere v eni 
-točki v goriščni ravnini leče. 
+točki v goriščni ravnini leče. Na podoben način na vpadni strani z lečo razširimo
+svetlobo, ki izhaja iz točkastega svetila, in dosežemo enakomerno osvetlitev
+objektnega zaslona z vpadnim snopom ravnih valov.
+Dodatno lahko z ustreznim spektralnim filtrom ustvarimo 
+monokromatsko valovanje.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_2DFourier.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{80truemm} 
+\input{slike/05_2DFourier.pdf_tex}
+\caption{Ravne valove, ki nastanejo pri Fraunhoferjevi uklonski sliki, lahko opazujemo v
+veliki oddaljenosti, ali pa jih zberemo z lečo v goriščni ravnini. Tako v goriščni
+ravnini nastane 2D-Fouriereva transformirana aperturne funkcije.}
 \label{fig:05_2DFourier}
+\vglue-5truemm
 \end{figure}
-Pri računu smo tudi privzeli, da je optično polje, ki vpade na objektni zaslon $xy$ povsod 
-konstantno in enako $E_0$. Tudi to v eksperimentu dosežemo z uporabo leče. 
-Svetlobo, ki izhaja iz točkastega svetila, lahko namreč kolimiramo z lečo (in z ustreznim
-spektralnim filtrom ustvarimo monokromatsko valovanje), tako da izvor postavimo 
-v gorišče leče.
+
 \begin{remark}
-Opisani sistem je analogna naprava za izračun 2D-Fourierove transformacije nekega 
-delno prozornega objekta ali vzorca. /pattern recognition?/
+Opisani sistem je analogna naprava za izračun 2D-Fouriereve transformacije izbranega 
+delno prozornega objekta ali vzorca.
 \end{remark}
 
 \begin{example}{\bf Fraunhoferjev uklon na reži debeline $d$.}
