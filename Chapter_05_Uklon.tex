@@ -259,15 +259,16 @@ daljnjega polja.}
 \label{fig:05_ravnivalovi}
 \end{figure}
 
-Za veljavnost Fraunhoferjevega približka mora biti zaslon zelo
-oddaljen od odprtine, na kateri se svetloba uklanja. Vendar za opazovanje 
-Fraunhoferjevega uklona ni nujno, da zaslon postavimo zelo daleč za objektno ravnino.
-Namesto tega lahko za objektni zaslon postavimo zbiralno lečo in uklonsko sliko opazujemo
-v njeni goriščni ravnini. Zbiralna leča namreč snop vzporednih žarkov zbere v eni 
-točki v goriščni ravnini leče. Na podoben način na vpadni strani z lečo razširimo
-svetlobo, ki izhaja iz točkastega svetila, in dosežemo enakomerno osvetlitev
+Za veljavnost Fraunhoferjevega približka mora biti opazovalni zaslon zelo
+oddaljen od odprtine, na kateri se svetloba uklanja. Tej nepraktični 
+postavitvi se lahko izognemo, če za objektni zaslon postavimo zbiralno 
+lečo in uklonsko sliko opazujemo v njeni goriščni ravnini (slika~\ref{fig:05_2DFourier}). 
+Zbiralna leča namreč snop vzporednih žarkov zbere v eni 
+točki v goriščni ravnini leče. Na podoben način na vpadni strani svetlobo, ki 
+izhaja iz točkastega svetila v gorišču leče, preslikamo v snop vzporednih žarkov (kolimiramo)
+in dosežemo enakomerno osvetlitev
 objektnega zaslona z vpadnim snopom ravnih valov.
-Dodatno lahko z ustreznim spektralnim filtrom ustvarimo 
+Z dodatim ustreznim spektralnim filtrom ustvarimo 
 monokromatsko valovanje.
 \begin{figure}[ht]
 \centering
@@ -275,7 +276,7 @@ monokromatsko valovanje.
 \input{slike/05_2DFourier.pdf_tex}
 \caption{Ravne valove, ki nastanejo pri Fraunhoferjevi uklonski sliki, lahko opazujemo v
 veliki oddaljenosti, ali pa jih zberemo z lečo v goriščni ravnini. Tako v goriščni
-ravnini nastane 2D-Fouriereva transformirana aperturne funkcije.}
+ravnini nastane 2D-Fouriereva transformiranka aperturne funkcije.}
 \label{fig:05_2DFourier}
 \vglue-5truemm
 \end{figure}
@@ -285,99 +286,157 @@ Opisani sistem je analogna naprava za izračun 2D-Fouriereve transformacije izbr
 delno prozornega objekta ali vzorca.
 \end{remark}
 
-\begin{example}{\bf Fraunhoferjev uklon na reži debeline $d$.}
+\begin{example}{\bf Fraunhoferjev uklon na reži širine $d$.}
 Obravnavajmo uklon svetlobe z valovno dolžino $\lambda$, ki v obliki ravnih valov 
-vpada na zaslon z režo debeline $d$. Uklonsko sliko na oddaljenem opazovalnem zaslonu
+vpada na zaslon z režo širine $d$. Uklonsko sliko na oddaljenem opazovalnem zaslonu
 izračunamo iz enačbe~(\ref{eq:Fraunhoferjev}), pri čemer je funkcija $f(x)$ enaka 1 za
-$-d/2<x<d/2$, sicer je 0. Dobimo:
+$-d/2<x<d/2$, sicer je 0. Integral po smeri $y$ in ostale predfaktorje združimo
+v konstanto $K$ in zapišemo:
 \beq
-E(\omega_\xi) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}
-\int_{-d/2}^{d/2} e^{-i\omega_\xi x} dx \approx \frac{i}{\lambda}
-\frac{\tilde{E}_0 e^{ikz}}{z}\frac{1}{-i\omega_\xi}\left(e^{-i\omega_\xi d/2}- e^{i\omega_\xi d/2}\right),
+E(\omega_\xi) = K \int_{-d/2}^{d/2} e^{-i\omega_\xi x} dx \approx
+\frac{K}{-i\omega_\xi}\left(e^{-i\omega_\xi d/2}- e^{i\omega_\xi d/2}\right)\!\!.
 \label{eq:05_22}
 \eeq
-od koder z upoštevanjem izrazov za $\sin(x)$ in $k$ sledi:
+Z upoštevanjem izraza za $\sin(x)$ dobimo:
 \beq
-E(\omega_\xi) = \frac{i}{\lambda}
-\frac{\tilde{E}_0 e^{ikz}}{z}\frac{2}{\omega_\xi} \sin\left(\omega_\xi d/2\right) = 
-\frac{id}{\lambda}
-\frac{\tilde{E}_0 e^{ikz}}{z}
+E(\omega_\xi) = \frac{2K}{\omega_\xi} \sin\left(\omega_\xi d/2\right) = 
+Kd\,
 \frac{\sin\left(\omega_\xi d/2\right)}{\omega_\xi d/2}.
 \label{eq:05_23}
 \eeq
 Gostota svetlobnega toka uklonjene svetlobe na opazovalnem zaslonu je tako:
 \boxeq{eq:uklon1reza}{
-j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin(\vartheta)/2\right)}{kd\sin(\vartheta)/2}\right)^2,
+j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin \vartheta/2\right)}{kd\sin\vartheta/2}\right)^2\!\!,
 }
-pri čemer so $k$ valovno število, $d$ debelina reže in $\vartheta$ uklonski kot. Gostoto
+pri čemer so $k$ valovno število, $d$ širina reže in $\vartheta$ uklonski kot. Gostoto
 toka smo normirali, tako da je v smeri naravnost (pri $\vartheta = 0$) enaka $j_0$.
+Relativna intenziteta uklonjene svetlobe v odvisnosti od uklonskega kota $\vartheta$ 
+je prikazana na sliki~\ref{fig:05_1Reza}.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_1Reza.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{90truemm} 
+\input{slike/05_Fraunhofer_1.pdf_tex}
+\caption{Zgoraj: simulacija uklonske slike laserskega snopa na eni uklonski reži. Spodaj:
+Odvisnost relativne intenzitete uklonjene svetlobe v odvisnosti od uklonskega kota.}
 \label{fig:05_1Reza}
+\end{figure}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=90truemm]{slike/05_photos_Fraunhofer.jpg}
+\caption{Fotografija Fraunhoferjeve uklonske slike na eni reži}
+\label{fig:05_FranuhoferFoto}
 \end{figure}
 
 V smeri naprej je intenziteta uklonjene svetlobe največja, nato z naraščajočim
-kotom pojema, dokler ne doseže vrednosti 0. Pri večjih kotih ponovno naraste, vendar 
-je njena intenziteta znatno manjša kot v osrednjem vrhu. Uklonske kote, pri 
+kotom pojema, dokler ne doseže vrednosti 0. Pri večjih kotih se pojavijo stranski
+vrhovi, vendar je njihova intenziteta znatno manjša kot v osrednjem vrhu. 
+
+Uklonske kote, pri 
 katerih se pojavijo oslabitve, izračunamo preprosto iz enačbe~(\ref{eq:uklon1reza}), tako da
 števec postavimo na nič. Sledi:
 \beq
-kd \sin(\vartheta)/2 = N\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{N\lambda}{d},
+kd \sin \vartheta/2 = N\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{N\lambda}{d},
 \label{eq:05_24}
 \eeq
-pri čemer je $N$ celo število. Lego in intenziteto vrhov je treba določiti numerično. 
+pri čemer je $N$ celo število. Lego vrhov je treba določiti numerično, saj 
+vrhovi ne ležijo točno na sredini med dvema oslabitvama. Povejmo še, da 
+se z naraščajočo širino reže $d$ uklonski vrhovi gostijo in uklonska slika oža
+(slika~\ref{fig:05_Rezad}\,a). Po drugi strani se pri zelo ozkih režah uklonski 
+vrhovi razširijo in celotna uklonska slika seže globoko v območje sence 
+(slika~\ref{fig:05_Rezad}\,b).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/05_Fraunhofer_d.pdf_tex}
+\caption{Shema Fraunhoferjeve uklonske slike na eni reži. 
+Širša reža da razmeroma ozke vrhove in ozko
+uklonsko sliko (a), ozka reža pa široke uklonske vrhove, ki sežejo globoko v območje 
+geometrijske sence (b).}
+\label{fig:05_Rezad}
+\end{figure}
+\vglue-5truemm
+
+\end{example}
+
+\begin{example}{\bf Fraunhoferjev uklon na pravokotni reži.}
+ V prejšnjem primeru smo obravnavali enodimenzionalni primer uklona, v tem
+ primeru pa integral razširimo v dve dimenziji. Ker sta integrala v izrazu
+ za uklonsko sliko (enačba~\ref{eq:Fraunhoferjev}) povsem ekvivalentna, 
+ lahko rezultat preprosto zapišemo. Za pravokotno režo z merama 
+ $a$ v smeri $x$ in $b$ v smeri $y$ uklonsko sliko zapišemo kot:
+ \beq
+ j = j_0 \left(\frac{\sin\left(ka\sin \vartheta_\xi/2\right)}{ka\sin\vartheta_\xi/2}\right)^2
+ \left(\frac{\sin\left(kb\sin \vartheta_\eta/2\right)}{kb\sin\vartheta_\eta/2}\right)^2\!\!,
+ \eeq
+ pri čemer smo izhodišče postavili na sredino odprtine. Uklonski vzorec
+ je prikazan na sliki~\ref{fig:05_pravokot}.
+ \begin{figure}[ht]
+\centering
+\centering
+\includegraphics[width=100truemm]{slike/05_pravokot.png}
+\caption{Simulacija uklonske slike na pravokotni reži
+za razmerje stranic $a:b = 1:2$.}
+\label{fig:05_pravokot}
+\end{figure}
+\vglue-5truemm
+
 \end{example}
 
 \begin{example}{\bf Fraunhoferjev uklon na sistemu $N$ vzporednih rež.}
 Naj bo v objektni ravnini $N$ vzporednih rež debeline $d$, perioda ponavljanja
-rež pa naj bo $D$.
+rež pa naj bo $D$. Izračunajmo uklonsko sliko, ki nastane na opazovalnem zaslonu.
 
 Podobno kot smo izračunali uklonsko sliko na eni reži, izračunamo tudi uklonsko sliko
-na več vzporedih režah. Prepustnostna funkcija $f$ je tako enaka 1 v vsaki reži, med
-režami in zunaj območja rež pa je enaka 0.
+na več vzporedih režah. Prepustnostna funkcija $f$ je enaka 1 v vsaki reži, med
+režami in zunaj območja rež pa je enaka 0. Zapišemo:
 \beq
-E(\omega_\xi) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}
+E(\omega_\xi) = K
 \left( \int_{-d/2}^{d/2} e^{-i\omega_\xi x} dx + \int_{D-d/2}^{D+d/2} e^{-i\omega_\xi x} dx +
-\int_{2D-d/2}^{2D+d/2} e^{-i\omega_\xi x} dx + ... \right).
+\int_{2D-d/2}^{2D+d/2} e^{-i\omega_\xi x} dx + ... \right)\!\!.
 \label{eq:05_25}
 \eeq
 Integrale izračunamo in dobimo:
 \beq
-E(\omega_\xi) = \frac{i}{-i\omega_\xi \lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}
-\left(e^{-i\omega_\xi d/2}- e^{i\omega_\xi d/2} \right) \left(1 + e^{-i\omega_xi D} + 
-e^{-i\omega_xi 2 D} + ...\right).
+E(\omega_\xi) = \frac{K}{-i\omega_\xi}
+\left(e^{-i\omega_\xi d/2}- e^{i\omega_\xi d/2} \right) \left(1 + e^{-i\omega_\xi D} + 
+e^{-i\omega_\xi 2 D} + ...\right)\!.
 \label{eq:05_26}
 \eeq
-Sledi:
+Geometrijsko vrsto v oklepaju seštejemo, uporabimo izraz za sinus in dobimo:
 \beq
-E(\omega_\xi) = \frac{id}{\lambda} \frac{\tilde{E}_0 e^{ikR_0}}{R_0}\frac{e^{-iN\omega_\xi D/2}}
-{e^{-i\omega_\xi D/2}}
-\frac{\sin(\omega_\xi d/2)}{\omega_\xi d/q} 
+E(\omega_\xi) = Kd
+\frac{e^{-iN\omega_\xi D/2}} {e^{-i\omega_\xi D/2}}
+\frac{\sin(\omega_\xi d/2)}{\omega_\xi d/2} 
 \frac{\sin(N\omega_\xi D/2)}{\sin(\omega_\xi D/2)}.
 \label{eq:05_27}
 \eeq
 Gostota svetlobnega toka uklonjene svetlobe na opazovalnem zaslonu je tako:
 \boxeq{eq:uklonNrez}{
-j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin(\vartheta)/2\right)}{kd\sin(\vartheta)/2}\right)^2
-\left(\frac{\sin\left(NkD\sin(\vartheta)/2\right)}{\sin\left(kD\sin(\vartheta)/2\right)}\right)^2.
+j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\vartheta/2}\right)^2
+\left(\frac{\sin\left(NkD\sin\vartheta/2\right)}{\sin\left(kD\sin\vartheta/2\right)}\right)^2\!\!.
 }
-Prvi oklepaj imenujemo strukturni faktor $S(\vartheta)$ in določa ovojnico uklonske slike. Enak je uklonski
-sliki za eno samo režo debeline $d$. Drugi oklepaj imenujemo mrežni faktor $M(\vartheta)$ in je odvisen od 
-razporeditve rež. 
+Prvi oklepaj imenujemo strukturni faktor $S(\vartheta)$ in določa ovojnico 
+uklonske slike. Enak je uklonski sliki za eno samo režo debeline $d$ 
+(enačba~\ref{eq:uklon1reza}). 
+Drugi oklepaj imenujemo mrežni faktor $M(\vartheta)$ in je odvisen od števila
+in razporeditve rež (glej sliko~\ref{fig:05_Nrez}). 
+
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_Nrez.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{140truemm} 
+\input{slike/05_Fraunhofer_N.pdf_tex}
+\caption{Fraunhoferjeva uklonska slika na $N$ vzporednih režah. 
+Primer je narisan za $N=5$ rež in $D=3d$. Strukturni faktor $S$ (modra) je 
+enak kot uklonska slika ene reže. Produkt med strukturnim faktorjem in mrežnim
+faktorjem $M$ (zelena) da celotno uklonsko sliko (rdeča). Nad izračunano
+uklonsko sliko je simulacija uklonske slike laserskega snopa na enaki uklonski oviri.
+Parameter $x = d\sin \vartheta/\lambda$.}
 \label{fig:05_Nrez}
 \end{figure}
 
-Glavne vrhove v uklonski sliki dobimo, kadar je imenovalec ulomka enak nič:
+Glavne vrhove v uklonski sliki dobimo, kadar je imenovalec mrežnega faktorja enak nič:
 \beq
-kD \sin(\vartheta)/2 = n\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{n\lambda}{D},
+kD \sin\vartheta/2 = n\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{n\lambda}{D},
 \label{eq:05_28}
 \eeq
 pri čemer je $n$ celo število. Med posamičnimi glavnimi vrhovi se pojavijo še manjši
@@ -390,11 +449,9 @@ NkD \sin(\vartheta)/2 = m\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{m\
 pri čemer je $m$ celo število. Med dvema glavnima vrhoma je tako v splošnem
 $N-2$ stranskih vrhov. Pri izračunu amplitude vrhov moramo upoštevati
 tudi strukturni faktor, torej ovojnico. 
-
-Prvi primer na sliki~\ref{fig:05_Nrez} prikazuje uklonsko sliko za primer $N = 6$ in 
-$D=4d$. Med dvema glavnima vrhoma so štirje stranski vrhovi. Z upoštevanjem amplitude
-envelope ugotovimo, da vsak četri (preveri!) glavni vrh izgine zaradi minimuma envelope.
 \end{example}
+
+Dodaj fotografijo uklona na kvadratni mreži - blago. 
 
 \begin{example}{\bf Fraunhoferjev uklon na okrogli odprtini s polmerom $a$.}
 Kot naslednji primer si oglejmo Fraunhoferjev uklon na okrogli odprtini s polmerom $a$. 
