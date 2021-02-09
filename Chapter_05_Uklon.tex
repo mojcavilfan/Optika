@@ -434,11 +434,10 @@ Parameter $x = d\sin \vartheta/\lambda$.}
 \label{fig:05_Nrez}
 \end{figure}
 
-Glavne vrhove v uklonski sliki dobimo, kadar je imenovalec mrežnega faktorja enak nič:
-\beq
-kD \sin\vartheta/2 = n\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{n\lambda}{D},
-\label{eq:05_28}
-\eeq
+Glavne vrhove v uklonski sliki dobimo, kadar je imenovalec mrežnega faktorja enak nič in velja:
+\boxeq{eq:05_28}{
+kD \sin\vartheta/2 = n\pi \qquad \mathrm{in} \qquad D \sin \vartheta = n\lambda,
+}
 pri čemer je $n$ celo število. Med posamičnimi glavnimi vrhovi se pojavijo še manjši
 stranski vrhovi. Poiščemo jih med zaporednimi minimumi, ki jih določajo ničle števca
 ulomka:
@@ -447,8 +446,44 @@ NkD \sin(\vartheta)/2 = m\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{m\
 \label{eq:05_29}
 \eeq
 pri čemer je $m$ celo število. Med dvema glavnima vrhoma je tako v splošnem
-$N-2$ stranskih vrhov. Pri izračunu amplitude vrhov moramo upoštevati
-tudi strukturni faktor, torej ovojnico. 
+$N-2$ stranskih vrhov. Pri izračunu amplitude posameznih vrhov moramo upoštevati
+tudi strukturni faktor, torej ovojnico.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/05_Fraunhofer_2.pdf_tex}
+\caption{Fraunhoferjeva uklonska slika na dveh vzporednih režah $N=2$ za $D=4d$. 
+Produkt med strukturnim faktorjem $S$ (modra) in mrežnim
+faktorjem $M$ (zelena) da celotno uklonsko sliko (rdeča). Pod simulacijo uklonske 
+slike laserskega snopa je fotografija uklonske slike.}
+\label{fig:05_2rezi}
+\end{figure}
+
+Poglejmo še limito v primeru zelo tankih rež. Strukturni faktor, ki opisuje uklon na 
+eni sami reži, se močno razširi in v limiti $d\to 0$ velja $S(\vartheta) \to 1$. Envelopa
+tako postane konstantna in amplituda vrhov v tem primeru ne pojema več z naraščajočim 
+$\vartheta$. Uklonska slika je tako enaka mrežnemu faktorju (glej sliko~\ref{fig:05_Nrez}, modra črta).
+\begin{figure}[ht]
+\centering
+%\includegraphics[width=80truemm]{slike/05_photos_cd.jpg}
+\caption{Primer zelo velikega števila zelo tankih rež je zgoščenka (CD). Če z nje odstranimo
+odbojno kovinsko plast, ostane prozorna plastična ploščica z zapisom, na katerem se uklanja 
+vpadna laserska svetloba. Različne valovne dolžine se uklanjajo pod različnimi koti, kar
+da zgoščenkam značilen mavrični videz.}
+\label{fig:05_uklon_cd}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+%\includegraphics[width=80truemm]{slike/05_photos_ruta.jpg}
+\caption{V dveh dimenzijah uklonsko sliko v smeri $x$ pomnožimo z enako uklonsko sliko v smeri $y$.
+Na sliki je primer uklona na gosto tkani svileni ruti.}
+\label{fig:05_uklon_ruta}
+\end{figure}
+
+
+
+
 \end{example}
 
 Dodaj fotografijo uklona na kvadratni mreži - blago. 
