@@ -445,8 +445,8 @@ ulomka:
 NkD \sin(\vartheta)/2 = m\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{m\lambda}{ND},
 \label{eq:05_29}
 \eeq
-pri čemer je $m$ celo število. Med dvema glavnima vrhoma je tako v splošnem
-$N-2$ stranskih vrhov. Pri izračunu amplitude posameznih vrhov moramo upoštevati
+pri čemer je $m$ celo število. Med dvema glavnima vrhoma je na splošno
+$N-2$ stranskih vrhov. Pri izračunu amplitude vrhov moramo upoštevati
 tudi strukturni faktor, torej ovojnico.
 \begin{figure}[ht]
 \centering
@@ -457,6 +457,7 @@ Produkt med strukturnim faktorjem $S$ (modra) in mrežnim
 faktorjem $M$ (zelena) da celotno uklonsko sliko (rdeča). Pod simulacijo uklonske 
 slike laserskega snopa je fotografija uklonske slike.}
 \label{fig:05_2rezi}
+\vglue-5truemm
 \end{figure}
 
 Poglejmo še limito v primeru zelo tankih rež. Strukturni faktor, ki opisuje uklon na 
@@ -465,28 +466,23 @@ tako postane konstantna in amplituda vrhov v tem primeru ne pojema več z naraš
 $\vartheta$. Uklonska slika je tako enaka mrežnemu faktorju (glej sliko~\ref{fig:05_Nrez}, modra črta).
 \begin{figure}[ht]
 \centering
-%\includegraphics[width=80truemm]{slike/05_photos_cd.jpg}
+\includegraphics[width=140truemm]{slike/05_photos_CD.JPG}
 \caption{Primer zelo velikega števila zelo tankih rež je zgoščenka (CD). Če z nje odstranimo
-odbojno kovinsko plast, ostane prozorna plastična ploščica z zapisom, na katerem se uklanja 
+odbojno kovinsko plast, ostane prozorna plastična ploščica z vrezanim zapisom, na katerem se uklanja 
 vpadna laserska svetloba. Različne valovne dolžine se uklanjajo pod različnimi koti, kar
 da zgoščenkam značilen mavrični videz.}
 \label{fig:05_uklon_cd}
+\vglue-5truemm
 \end{figure}
-
 \begin{figure}[ht]
 \centering
-%\includegraphics[width=80truemm]{slike/05_photos_ruta.jpg}
+\includegraphics[width=70truemm]{slike/05_photos_ruta.jpg}
 \caption{V dveh dimenzijah uklonsko sliko v smeri $x$ pomnožimo z enako uklonsko sliko v smeri $y$.
 Na sliki je primer uklona na gosto tkani svileni ruti.}
 \label{fig:05_uklon_ruta}
 \end{figure}
-
-
-
-
+\vglue-5truemm
 \end{example}
-
-Dodaj fotografijo uklona na kvadratni mreži - blago. 
 
 \begin{example}{\bf Fraunhoferjev uklon na okrogli odprtini s polmerom $a$.}
 Kot naslednji primer si oglejmo Fraunhoferjev uklon na okrogli odprtini s polmerom $a$. 
@@ -502,27 +498,38 @@ $q$ in $\phi$:
 \xi = q \cos \phi \qquad \mathrm{in} \qquad \eta = q \sin \phi. 
 \label{eq:05_31}
 \eeq
-Uklonski integral potem zapišemo kot:
+\begin{figure}[ht]
+\vglue-5truemm
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/05_koordinate_circ.pdf_tex}
+\caption{Za izračun uklona na okrogli odprtini vpeljemo polarna koordinatna sistema 
+($\varrho, \varphi$) na objektni ravnini in ($q, \phi$) na opazovalni ravnini.}
+\label{fig:05_koordinate_circ}
+\end{figure}
+
+Uklonski integral (enačba~\ref{eq:Fraunhoferjev}) v novih koordinatah zapišemo kot:
 \beq
 E(q,\phi,z_0) = \frac{i}{\lambda} \frac{E_0e^{ikR_0}}{R_0}\int_0^{2\pi} \int_0^a
 e^{-i\omega_\xi x}e^{-i\omega_\eta y}\varrho d\varrho d\varphi.
 \label{eq:05_32}
 \eeq
-Upoštevamo enačbe~(\ref{eq:05_13} in \ref{eq:05_14}) in zapišemo:
+Upoštevamo enačbe~(\ref{eq:05_13}, \ref{eq:05_14}, \ref{eq:05_30} in \ref{eq:05_31}) in zapišemo:
 \beq
-\omega_\xi x + \omega_\eta y= \frac{qk\cos \phi}{R_0} \varrho \cos\phi + \frac{qk\sin \phi}{R_0} \varrho \sin\phi = 
- \frac{qk\sin \phi}{R_0} \cos(\varphi - \phi).
+\omega_\xi x + \omega_\eta y= \frac{k}{R_0}q\cos \phi \varrho \cos\varphi + 
+\frac{k}{R_0}q\sin \phi \varrho \sin\varphi = 
+ \frac{k}{R_0} q\varrho\cos(\varphi - \phi).
 \label{eq:05_33}
 \eeq
-Zaradi simetrije lahko postavimo $\phi=0$ in zapišemo integral:
+Zaradi rotacijske simetrije lahko postavimo $\phi=0$ in zapišemo integral:
 \beq
-E(q,\phi,z_0) = \frac{i}{\lambda} \frac{E_0e^{ikR_0}}{R_0}\int_0^{2\pi} \int_0^a
-e^{-iqk\varrho \cos(\varphi)/R_0)} \varrho d\varrho d\varphi.
+E(q,z_0) = \frac{i}{\lambda} \frac{E_0e^{ikR_0}}{R_0}\int_0^{2\pi} \int_0^a
+e^{-ikq\varrho \cos\varphi/R_0} \varrho d\varrho d\varphi.
 \label{eq:05_34}
 \eeq
 Spomnimo se integralnega zapisa Besslovih funkcij prve vrste:
 \beq
-J_m(u) = \frac{(-1)^m}{2\pi} \int_0^{2\pi} e^{-iu\cos v }e^{imv}dv
+J_m(u) = \frac{1}{2\pi i^m} \int_0^{2\pi} e^{-iu\cos v }e^{imv}dv
 \label{eq:05_35}
 \eeq
 in rekurzijske zveze:
