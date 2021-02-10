@@ -476,9 +476,10 @@ da zgoščenkam značilen mavrični videz.}
 \end{figure}
 \begin{figure}[ht]
 \centering
+\includegraphics[width=70truemm]{slike/05_photos_perje.jpg}\hfill
 \includegraphics[width=70truemm]{slike/05_photos_ruta.jpg}
-\caption{V dveh dimenzijah uklonsko sliko v smeri $x$ pomnožimo z enako uklonsko sliko v smeri $y$.
-Na sliki je primer uklona na gosto tkani svileni ruti.}
+\caption{Uklon laserske svetlobe na ptičjem peresu (levo) in na gosto tkani svileni ruti (desno).
+Dvodimenzionalna uklonska slika je produkt uklonskih slik v smereh $x$ in $y$.}
 \label{fig:05_uklon_ruta}
 \end{figure}
 \vglue-5truemm
@@ -527,40 +528,43 @@ E(q,z_0) = \frac{i}{\lambda} \frac{E_0e^{ikR_0}}{R_0}\int_0^{2\pi} \int_0^a
 e^{-ikq\varrho \cos\varphi/R_0} \varrho d\varrho d\varphi.
 \label{eq:05_34}
 \eeq
-Spomnimo se integralnega zapisa Besslovih funkcij prve vrste:
+Spomnimo se integralnega zapisa Besslove funkcije prve vrste ničtega reda:
 \beq
-J_m(u) = \frac{1}{2\pi i^m} \int_0^{2\pi} e^{-iu\cos v }e^{imv}dv
+J_0(u) = \frac{1}{2\pi} \int_0^{2\pi} e^{-iu\cos v }dv
 \label{eq:05_35}
 \eeq
 in rekurzijske zveze:
 \beq
-\frac{d}{du}\left( u^m J_m(u)\right) = u^m J_{m-1}(u).
+\frac{d}{du}\left( u J_1(u)\right) = u J_{0}(u).
 \label{eq:05_36}
 \eeq
 Primerjamo enačbi~(\ref{eq:05_34}) in (\ref{eq:05_35}) in vpeljemo
-zveze $v = \varphi$, $m=0$ in $u = qk\varrho/R_0$. Pri računu integrala 
-upoštevamo izraza za Besslove funkcije (enačbe~\ref{eq:05_35} in \ref{eq:05_36}) 
-in dobimo:
+zvezi $v = \varphi$ in $u = kq\varrho/R_0$. Integriramo enačbo~(\ref{eq:05_34}) 
+najprej po $\varphi$ z upoštevanjem enačbe~(\ref{eq:05_35}), nato še po $\varrho$
+z upoštevanjem enačbe~(\ref{eq:05_36}). Dobimo:
 \beq
-E = \frac{i}{\lambda}\frac{E_0 e^{ikR_0}}{R_0} \pi a^2 \frac{2 J_1 (kqa/R_0}{kqa/R_0}.
+E = \frac{i}{\lambda}\frac{E_0 e^{ikR_0}}{R_0}~\pi a^2~\frac{2 J_1 (kqa/R_0)}{kqa/R_0}.
 \label{eq:05_37}
 \eeq
-Če vpeljemo še uklonski kot $\vartheta$ in zapišemo gostoto svetlobnega toka
+Vpeljemo uklonski kot $\vartheta \approx q/R_0$ in zapišemo gostoto svetlobnega toka
 uklonjene svetlobe:
 \boxeq{eq:uklonAiry}{
-j = j_0 \left(\frac{2J_1(ka\sin\vartheta}{ka\sin \vartheta}\right)^2.
+j = j_0 \left(\frac{2J_1(ka\sin\vartheta)}{ka\sin \vartheta}\right)^2\!\!.
 }
-Opisano odvisnost, ki jo imenujemo tudi Airyjev uklonski vzorec po angleškem
-matematiku in astronomu Siru Georgeu Biddellu Airyu, si poglejmo podrobneje. 
-Na opazovalnem zaslonu nastane rotacijsko simetrična uklonska slika, ki 
-jo imenujemo Airyjev disk. 
+Opisano uklonsko sliko imenujemo Airyjeva uklonska slika 
+in osrednji krog Airyjev disk 
+po angleškem matematiku in astronomu Siru Georgeu Biddellu Airyu (1801--1892). 
+Uklonska slika je  po pričakovanju rotacijsko simetrična.  
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_Airy.pdf_tex}
-\caption{SLIKA}
+\centering
+\includegraphics[width=7truecm]{slike/05_circ_sim.png}\hfill
+\includegraphics[width=7truecm]{slike/05_circ.JPG}
+\caption{Simulacija Fraunhoferjeve uklonske slike na okrogli odprtini in fotografija
+uklona na luknjici v papirju.}
 \label{fig:05_Airy}
 \end{figure}
+
 V smeri naravnost (na sredini Airyjevega diska) 
 je gostota svetlobnega toka enaka $j_0$, saj velja:
 \beq
@@ -569,37 +573,55 @@ je gostota svetlobnega toka enaka $j_0$, saj velja:
 \eeq
 Z naraščajočim uklonskim kotom intenziteta uklonjene svetlobe pojema, nato
 spet naraste in ponovno pojema ... Ničle uklonske slike so določene
-s pogojem, da je $J_1 = 0$ in se pojavijo pri vrednostih:
+z ničlami Besslove funkcije in se pojavijo pri vrednostih:
 \beq
-ka\sin\vartheta  \approx 3,83;~7,02;~10,17;~13,32 ...
+ka\sin\vartheta  \approx 3,83;~7,02;~10,17;~13,32~...
 \label{eq:05_40}
 \eeq
 Intenziteta stranskih obročev je razmeroma šibka, zato je najpomembnejši
-notranji krog uklonske slike. Polmer notranjega kroga oziroma diska 
-izračunamo iz zveze:
+notranji krog uklonske slike. Inteziteta prvega obroča je namreč le okoli $2~\%$ vršne
+intenzitete, ostali obroči pa so še občutno šibkejši.
+
+Polmer notranjega kroga (Airyjevega diska) $q_A$ izračunamo iz zveze:
 \beq
-ka q_A/R_0 = \frac{2\pi a q_A}{\lambda R_0} = 3,83
+ka\,q_A/R_0 = \frac{2\pi a}{\lambda}\frac{q_A}{R_0} = 3,83
 \label{eq:05_41}
 \eeq
 in dobimo:
 \beq
-q_A = \frac{3,83}{\pi}\frac{\lambda R_0}{2a} = 1,22 \frac{\lambda R_0}{2a}.
+q_A = \frac{3,83}{\pi}\frac{\lambda R_0}{2a} = 1,22~\frac{\lambda R_0}{2a}.
 \label{eq:05_42}
 \eeq
+
+Po Babinetovem načelu nastane enaka uklonska slika, če se svetloba uklanja
+na okrogli odprtini v zaslonu ali na okroglem predmetu. Primer majhnih okroglih
+predmetov, ki jih v velikem številu najdemo v naravi, so oblaki. Ko na primer svetloba
+s Sonca ali z Lune vpada na plast drobnih kapljic v ozračju, se na njih uklanja in pojavi se
+tako imenovana korona. Podoben pojav opazimo na zarošenem oknu. 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=70truemm]{slike/05_photos_svetilka.jpg}\hfill
+\includegraphics[width=70truemm]{slike/05_photos_luc.jpg}
+\caption{Svetloba s svetilke se uklanja na drobnih kapljicah na zarošenem oknu (levo). Če je svetloba
+bela, se različne barve uklanjajo pod različnimi koti in vidimo barvne obroče (desno).}
+\label{fig:05_uklon_svetilka}
+\end{figure}
+\vglue-5truemm
+
 \end{example}
 
 \section{Ločljivost optičnih naprav}
-Pri optičnih napravah pogosto svetloba potuje skozi lečo in 
-nato vpade na svetlobni detektor. Leča pri tem deluje
-kot okrogla odprtina s polmerom $a$, svetloba pa se na njej
-uklanja.
+Pri optičnih napravah (na primer mikroskopu ali daljnogledu) 
+svetloba potuje skozi leče in nato vpade na svetlobni detektor. Leče pri tem delujejo
+kot okrogle odprtine, na katerih se svetloba uklanja, kar omejuje ločljivost 
+optičnih naprav.
 
-Poglejmo primer zelo oddaljenega točkastega predmeta, ki ga 
-preslikamo z lečo z goriščno razdaljo $f$ in premerom $D$. Slika predmeta 
-nastane v goriščni ravnini, zato je $R_0=f$. Zaradi uklona potem 
-točkasti predmet na detektorju vidimo kot okrogel disk s polmerom
+Poglejmo najpreprostejši primer ene same leče z goriščno razdaljo $f$ in premerom $D$,
+skozi katero opazujemo zelo oddaljen točkast predmet. Slika predmeta 
+nastane v goriščni ravnini, zato je $R_0=f$. Zaradi uklona točkasti predmet na 
+detektorju po enačbi~(\ref{eq:05_42}) vidimo kot okrogel disk s polmerom $q$:
 \beq
-q_A \approx 1,22 \frac{f\lambda}{D} = 1,22 \lambda \frac{f}{D} = 0,61 \frac{\lambda}{NA},
+q \approx q_A = 1,22~\frac{f\lambda}{D} = 1,22~\frac{\lambda}{D/f} = 0,61~\frac{\lambda}{NA},
 \label{eq:05_43}
 \eeq
 pri čemer je numerična apertura $NA$ razmerje med polmerom leče $D/2$
@@ -610,43 +632,77 @@ NA = \frac{D/2}{f}.
 \eeq
 Značilne vrednosti za numerično aperturo so $NA \lesssim 1$.
 
-Če opazujemo dve oddaljeni točkasti telesi, bo v opazovalni ravnini vsako
-od njih ustvarilo Airyjev disk. Kadar se diska začneta prekrivati, teles
-na sliki ne moremo več ločiti. Ta pojav omejuje ločljivost optičnih naprav
-in ga poglejmo podrobneje. 
+Opazujmo dve oddaljeni točkasti telesi skozi lečo z numerično aperturo $NA$. 
+V opazovalni ravnini vsako od njiju ustvari svoj Airyjev disk. Kadar se začneta osrednja
+kroga uklonske slike med seboj prekrivati, teles na sliki ne moremo več ločiti. Kriterij, ki določa,
+ali dva objekta na sliki še ločimo med seboj, imenujemo
+Rayleighev kriterij ločljivosti po angleškemu fiziku Lordu Rayleighu (1842--1919). 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/05_locljivost.pdf_tex}
+\caption{Ko se uklonski sliki dveh točkastih predmetov prekrivata, ju ne moremo več ločiti.
+Najmanjši kot $\alpha$, pri katerem predmeta še ločimo, določa ločljivost naprave.}
+\label{fig:05_locljivost}
+\end{figure}
 
-Kriterij, ki določa, ali dva objekta na sliki še ločimo med seboj, imenujemo
-Rayleighev kriterij ločljivosti po angleškemu fiziku Lordu Rayleighu. Kriterij
-pravi, da objekta ločimo, če velja:
+\begin{figure}[ht]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/05_locljivost2.pdf_tex}
+\caption{Po Rayleighevem kriteriju sliki dveh teles ločimo, če je razdalja med
+njunima središčema večja (levo) ali enaka polmeru Airyjevega diska (sredina). Če 
+sta sliki teles bliže, ju ne ločimo (desno).}
+\label{fig:05_locljivost2}
+\end{figure}
+
+Rayleighev kriterij pravi, da objekta ločimo, če velja:
 \beq
-\Delta q_A \geq 1,22 \frac{\lambda}{NA} \gtrsim \lambda.
-\label{eq:05_45}
-\eeq
-Najmanjša razlika zornih kotov:
-\beq
-\Delta \alpha_{\mathrm{min}} = 
-\frac{\Delta q_{A\mathrm{min}}}{f} \gtrsim 1,22 \frac{\lambda}{D}.
+\alpha \ge \alpha_{\mathrm{min}} = 
+\frac{q_{A}}{f} = 1,22~\frac{\lambda}{D}.
 \label{eq:05_46}
 \eeq
-Večjo kotno ločljivost optičnih naprav, na primer teleskopov, torej 
+Manjši minimalni zorni kot in s tem večjo kotno 
+ločljivost optičnih naprav, na primer teleskopov, torej
 dosežemo pri manjših valovnih dolžinah svetlobe in večjih lečah.
 
+Na podoben način izračunamo tudi ločljivost optičnih mikroskopov. Ker
+je pri mikroskopih predmet blizu goriščne razdalje, je najmanjši 
+razmik med točkama, ki ju še ločeno opazujemo, enak:
+\beq
+d_\mathrm{min} = \alpha_{\mathrm{min}} f = 1,22~\frac{\lambda f}{D} = 
+0,61~\frac{\lambda}{NA} \sim \lambda.
+\label{eq:05_46aa}
+\eeq
+Ločljivost mikroskopov je tako približno enaka 
+valovni dolžini svetlobe, s katero opazujemo predmet: 
+$d_\mathrm{min} \sim \lambda$.
+
+\begin{remark}
+Ločljivost optičnih naprav izboljšamo z uporabo krajše valovne dolžine svetlobe.
+Z modro svetlobo tako lahko opazujemo manjše predmete
+kot z rdečo. Uporaba krajše valovne dolžine med drugim omogoča zgostitev 
+zapisa na zgoščenkah. Z navadne zgoščenke (CD) beremo podatke z valovno 
+dolžino $780~\si{\nano\metre}$, z zgoščenke DVD z valovno dolžino
+$650~\si{\nano\metre}$ in z Blu-ray plošč s svetlobo z valovno dolžino
+$405~\si{\nano\metre}$, kar omogoča gostejši zapis večje količine podatkov.
+Dodatno se pri novejših tehnologijah uporablja lečo z večjo numerično
+aperturo, kar zmanjša polmer laserske pike
+z $800~\si{\nano\metre}$ na $250~\si{\nano\metre}$.
+\end{remark}
+
 \begin{example}{\bf Ločljivost teleskopa.}
-S teleskopom, ki ima premer leče $D=5~\si{m}$, opazujemo
-Luno, ki je od Zemlje oddaljena $L = 384 000~\si{km}$. Če je 
-valovna dolžina svetlobe $500~\si{nm}$, ocenimo velikost podrobnosti
-na Luninem površju, ki jih še ločimo.
+S teleskopom, ki ima lečo s premerom $D=5~\si{m}$,
+opazujemo Luno, ki je od Zemlje oddaljena $L = 384\,000~\si{km}$. 
+Ocenimo velikost podrobnosti na Luninem površju, ki jih še ločimo
+s svetlobo z valovno dolžino $500~\si{nm}$. 
 
 Iz enačbe~(\ref{eq:05_46}) ocenimo:
 \beq
-\Delta l = 1,22 \frac{\lambda}{D} L \approx 50~\si{m}.
+d_\mathrm{min} = 1,22~\frac{\lambda}{D} L \approx 50~\si{m}.
 \label{eq:05_47}
 \eeq
 \end{example}
-
-Na podoben način izračunamo tudi ločljivost optičnih mikroskopov. Ker
-tam pri njih predmet blizu goriščne razdalje, je ločljivost
-teh naprav približno enaka valovni dolžini svetlobe $\Delta l \approx \lambda$.
 
 \section{Fresnelov uklon}
 Doslej smo predpostavili, da je optično polje, ki vpade na objektni zaslon $xy$ povsod 
