@@ -219,6 +219,7 @@ približka dosti večje od dimenzij odprtine, zato
 Fraunhoferjevemu približku rečemo tudi približek daljnjega polja. 
 
 \begin{example}{\bf Veljavnost Fraunhoferjevega približka.}
+\label{ex:fh}
 Naj bo valovna dolžina vpadne svetlobe $\lambda=500~\si{nm}$. Če je tipična 
 razsežnost odprtine $d = 1~\si{\micro\metre}$, je veljavnost 
 Fraunhoferjevega približka pri oddaljenosti od zaslona 
@@ -705,8 +706,9 @@ d_\mathrm{min} = 1,22~\frac{\lambda}{D} L \approx 50~\si{m}.
 \end{example}
 
 \section{Fresnelov uklon}
-Doslej smo predpostavili, da je optično polje, ki vpade na objektni zaslon $xy$ povsod 
-konstantno in enako $E_0$. Obravnavajmo zdaj primer, ko je svetloba, 
+Doslej smo predpostavili, da je optično polje, ki vpada na objektni zaslon $xy$, povsod 
+konstantno in enako $E_0$ (slika~\ref{fig:05_shema}). 
+Obravnavajmo zdaj primer, ko je svetloba, 
 ki vpada na objektni zaslon, funkcija kraja $E_0 = E_0(x,y)$. 
 
 Naj izvor svetlobe $S$, ki oddaja krogelno valovanje, leži v ravnini 
@@ -715,11 +717,15 @@ naj bo enaka $z_0'$ (slika~\ref{fig:05_Fresnel}).
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
-%\input{slike/05_Fresnel.pdf_tex}
-\caption{SLIKA}
+\input{slike/05_Fresnel_koor.pdf_tex}
+\caption{Svetloba izvira iz točke $S$ v ravnini $x'y'$ in vpada na objektno ravnino $xy$ na 
+oddaljenosti $z_0'$. V opazovalni ravnini $\xi\eta$ opazujemo uklonsko
+sliko odprtine oziroma predmeta.}
 \label{fig:05_Fresnel}
+\vglue-3truemm
 \end{figure}
-Polje v točki $P$ v objektni ravnini potem zapišemo kot 
+
+Polje v točki $P$ v objektni ravnini zapišemo kot 
 \beq
 E_0 (x,y,0) = \tilde{E}_0 \frac{e^{ikR'}}{R'}.
 \label{eq:05_65}
@@ -727,100 +733,115 @@ E_0 (x,y,0) = \tilde{E}_0 \frac{e^{ikR'}}{R'}.
 Uklonski integral (enačba~\ref{eq:05_05}) se potem zapiše kot:
 \beq
 E(\xi, \eta, z_0) = \frac{i}{\lambda} \tilde{E}_0 \int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) E_0 \left(\frac{e^{ikR'}}{R'}\right) \left(\frac{e^{ikR}}{R}\right) dx dy.
+\int_{-\infty}^{\infty} f(x,y)~\frac{e^{ikR'}}{R'}~\frac{e^{ikR}}{R}~dx\,dy.
 \label{eq:05_66}
 \eeq
-Izraza za $R$ in $R'$ razvijemo v Taylorjevo vrsto:
+Izraz za $R$ razvijemo v Taylorjevo vrsto (enačba~\ref{eq:05_10}) in dobimo:
 \beq
-R^2 = (x-\xi)^2 + (y-\eta)^2 + z_0^2 \approx 
-R_0 - \frac{x\xi}{R_0} - \frac{y\eta}{R_0} + \frac{x^2+y^2}{2R_0} + ...
+R\approx R_0 - \frac{\xi x}{R_0} - \frac{\eta y}{R_0} + \frac{x^2+y^2}{2R_0} + ...
 \label{eq:05_67}
 \eeq
-Pri Fraunhoferjevem uklonu smo upoštevali prve tri člene, četrtega pa smo zanemarili.
-Pri Fresnelovem uklonu upoštevamo tudi četrti člen v razvoju. 
+Pri Fraunhoferjevem uklonu smo upoštevali prve tri člene v razvoju, 
+četrtega, kvad\-rat\-ne\-ga pa smo zanemarili. V Fresnelovem uklonskem 
+približku upoštevamo tudi kvadratni člen. 
 
-Zapišemo razdaljo $R$ malo drugače:
+Zapišimo razdaljo $R$ drugače:
 \beq
-R^2 = z_0^2 + (x-\xi)^2+(y-\eta)^2 = z_0^2 \left(1+ \frac{(x-\xi)^2+(y-\eta)^2}{z_0^2}\right).
-\label{eq:05_68}
+R  = \sqrt{z_0^2 + (x-\xi)^2 + (y-\eta)^2} \approx z_0 + \frac{(x-\xi)^2+(y-\eta)^2}{2z_0}
+\label{eq:05_75a}
 \eeq
-Vpeljemo parameter $d^2 = (x-\xi)^2+(y-\eta)^2$ in izraz razvijemo
+in podobno $R'$:
 \beq
-R = z_0^2 \left(1+\frac{d^2}{z_0^2}\right) \approx z_0 + \frac{d^2}{2z_0} + ...
+R'  = \sqrt{z_0'^2 + (x-x')^2 + (y-y')^2} \approx z_0' + \frac{(x-x')^2+(y-y')^2}{2z_0'}.
+\label{eq:05_75}
+\eeq
+Razvoja vstavimo v uklonski integral (enačba~\ref{eq:05_66}) in dobimo Fresnelov uklonski približek:
+\boxeq{eq:Fresnel}{
+E(\xi, \eta, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ik(z_0'+z_0)}}{z_0'\,z_0} 
+\int\!\!\!\!\!\int_{-\infty}^{\infty} f(x,y)\,e^{\frac{ik}{2z_0'}((x-x')^2+(y-y')^2)} 
+e^{\frac{ik}{2z_0}((x-\xi)^2+(y-\eta)^2)}\, dx\,dy.
+}
+Pri tem smo $R$ in $R'$ v imenovalcu ulomka 
+nadomestili z $z_0$ in $z_0'$ in ju postavili 
+pred integral, saj je odvisnost razmeroma šibka.
+
+Zapisani izraz Fresnelovega uklona (enačba~\ref{eq:Fresnel}) je za analitično 
+računanje precej zahtevnejši od Fraunhoferjevega uklona 
+(enačba~\ref{eq:Fraunhofer}), zato bomo obravnavali
+le dva primera: Fresnelove conske plošče in uklon na pravokotni reži oziroma ostrem robu. Preden se lotimo primerov, poglejmo še veljavnost Fresnelovega približka.
+
+Izhajamo iz enačbe~(\ref{eq:05_75a}) in 
+vpeljemo parameter $d^2 = (x-\xi)^2+(y-\eta)^2$. Potem velja:
+\beq
+R \approx z_0 + \frac{1}{2}\frac{d^2}{z_0} - \frac{1}{8}\frac{d^4}{z_0^3} + ...
 \label{eq:05_69}
 \eeq
-Členi, ki smo jih zanemarili v razvoju, so zanemarljivi, če velja
-odprtine:
+V Fresnelovem približku smo obdržali prva dva člena, višje člene pa 
+smo zanemarili. To lahko naredimo, če za vse vrednosti $x$ in $y$ v odprtini velja:
 \beq
 k\left( \frac{1}{8}\frac{d^4}{z_0^3}\right) \ll 2\pi.
 \label{eq:05_70}
 \eeq
 Pogoj preoblikujemo v:
 \beq
-\frac{d^4}{z_0^4} \ll \frac{8\lambda}{z_0}.
+\left(\frac{d}{z_0}\right)^4 \ll \frac{8\lambda}{z_0}.
 \label{eq:05_71}
 \eeq
-Kadar je zapisani pogoj izpolnjen, je Fresnelov približek veljaven.
-
-\begin{example}
-Naj bo razdalja med objektnim in opazovalnim zaslonom $z_0=1~\si{m}$ in 
-valovna dolžina svetlobe $500~\si{nm}$. 
-Pogoj za Fresnelov približek
-uklona je izpolnjen, kadar je:
+Fresnelov približek je veljaven, kadar je izpolnjen zgornji pogoj.
+\begin{example}{\bf Veljavnost Fresnelovega približka.}
+Naj na odprtino s polmerom $d=1~\si{mm}$ vpada svetloba
+z valovno dolžino $500~\si{nm}$. Izračunajmo oddaljenost
+od zaslona $z_0$, pri kateri je izpolnjen pogoj za Fresnelov
+uklonski približek. Iz enačbe~(\ref{eq:05_71}) sledi:
 \beq
-\frac{d^4}{z_0^4} \ll 8\frac{500~\si{nm}}{1~\si{m}} = 4\cdot 10^{-6},
-\label{eq:05_72}
-\eeq
-kar pomeni, da mora za veljavnost približka veljati:
-\beq
-d\ll z_0 \sqrt[4]{4\cdot 10^{-6}} \approx 4~\si{mm}.
+z_0\gg \sqrt[3]{d^4/8\lambda} \approx 6~\si{mm}.
 \label{eq:05_73}
 \eeq
-Izračunajmo še Fresnelovo število (enačba~\ref{eq:05_17}):
+Spomnimo se, da je pogoj za veljavnost Fraunhoferjevega
+približka (Primer~\ref{ex:fh}) pri enakem polmeru odprtine 
+$z_0 \gg 2~\si{\metre}$. 
+Izračunajmo še Fresnelovo število (enačba~\ref{eq:05_17})
+za $z_0=6~\si{mm}$:
 \beq
-F = \frac{d^2}{\lambda R_0} \ll \frac{16 \times 10^{-6}~\si{m}^2}{500~\si{nm} \cdot 1~\si{m}} \approx 30. 
+F = \frac{d^2}{\lambda R_0} \approx 300. 
 \label{eq:05_74}
 \eeq
+Fresnelovo število $F\gg1$, kar potrjuje veljavnost Fresnelovega približka.
 \end{example}
 
-Podobno kot smo razvili $R$ (enačba~\ref{eq:05_69}), razvijemo tudi $R'$:
-\beq
-R' \approx z_0' + \frac{1}{2}\frac{(x-x')^2+(y-y')^2}{2z_0'}.
-\label{eq:05_75}
-\eeq
-Oba izraza vstavimo v uklonski integral (enačba~\ref{eq:05_66}) in dobimo:
-\boxeq{eq:05_76}{
-E(\xi, \eta, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int
-\int_{-\infty}^{\infty} f(x,y) e^{\frac{ik}{2z_0'}((x-x')^2+(y-y')^2)} e^{\frac{ik}{2z_0}((x-\xi)^2+(y-\eta)^2)}  dx dy
-}
-Pri tem smo člene v imenovalcu ulomka pred integralom približali z $z_0'$ in $z_0$. Zapisani izraz
-Fresnelovega približka je za analitično računanje precej zahtevnejši kot Fraunhoferjev uklon. Zato bomo obravnavali
-le dva primera: Fresnelove conske plošče in uklon na pravokotni reži oziroma ostrem robu.
-
 \begin{example}{\bf Fresnelova conska plošča.}
-V objektni ravnini imamo okroglo odprtino s polmerom $a$. Oz $z$ naj poteka skozi središče odprtine. 
-Točkasti izvor svetlobe leži na osi $z$ v razdalji $z_0'$ pred odprtino. Zanima nas intenziteta
-svetlobe na osi $z$ v razdalji $z_0$ za odprtino.
+Izračunajmo najpreprostejši primer Fresnelovega uklona na 
+okrogli odprtini s polmerom $a$. Točkasti izvor svetlobe naj leži na 
+optični osi $z$, ki je hkrati simetrala odprtine, na 
+razdalji $z_0'$ pred odprtino. Opazujemo uklon
+na optični osi na oddaljenosti $z_0$ za odprtino (slika~\ref{fig:05_FresCona}).
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_FresCona.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{100truemm} 
+\input{slike/05_FresCona.pdf_tex}
+\caption{K računu Fresnelovega uklona, ko izvor in 
+detektor ležita na osi okrogle odprtine}
 \label{fig:05_FresCona}
 \end{figure}
 
-Izhajamo iz enačbe~\ref{eq:05_76} in vstavimo $x'=y'=0$ in $\xi = \eta = 0$. Dobimo:
+Izhajamo iz enačbe za Fresnelov uklon~(\ref{eq:Fresnel}) in vstavimo 
+$x'=y'=0$ in $\xi = \eta = 0$. Dobimo:
 \beq
-E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) e^{(ik/2z_0')(x^2+y^2)} e^{(ik/2z_0)(x^2+y^2)} dx dy
+E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 
+e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{-\infty}^{\infty}
+\int_{-\infty}^{\infty} f(x,y)\,
+e^{\frac{ik}{2z_0'}(x^2+y^2)} e^{\frac{ik}{2z_0}(x^2+y^2)} dx\, dy.
 \label{eq:05_77}
 \eeq
-Integral računamo v cilindričnih koordinatah in vpeljemo $\varrho = \sqrt{x^2 + y^2}$ ter
+Zaradi rotacijske simetrije računamo v cilindričnih koordinatah in 
+vpeljemo $\varrho = \sqrt{x^2 + y^2}$ ter
 \beq
-dx dy = 2 \pi \varrho d\varrho.
+dx\,dy = \varrho d\varrho d\varphi,
 \label{eq:05_78}
 \eeq
-Funkcija $f=1$ za $\varrho \leq a$, sicer je enaka 0. Dobimo:
+pri čemer je $\varphi$ polarni kot. Aperturna funkcija $f=1$ 
+za $\varrho \leq a$, sicer velja $f= 0$. Integriramo po kotu $\varphi$ 
+in dobimo:
 \beq
 E(0,0, z_0) = \frac{2\pi i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{0}^{a}
 e^{\frac{ik\varrho^2}{2}\left(\frac{1}{z_0'}+\frac{1}{z_0}\right)}\varrho d\varrho.
@@ -828,35 +849,44 @@ e^{\frac{ik\varrho^2}{2}\left(\frac{1}{z_0'}+\frac{1}{z_0}\right)}\varrho d\varr
 \eeq
 Vpeljemo:
 \beq
-\frac{1}{L} = \frac{1}{z_0'} + \frac{1}{z_0} \qquad \mathrm{in} \qquad z_0'z_0 = L(z_0'+z_0).
+\frac{1}{L} = \frac{1}{z_0'} + \frac{1}{z_0} \qquad \mathrm{in~~izrazimo} \qquad z_0'z_0 = L(z_0'+z_0).
 \label{eq:05_80}
 \eeq
-Izračunamo integral:
+Izračunamo še integral:
 \beq
 \int_0^a e^{ik\varrho^2/2L}\varrho d\varrho = \frac{L}{ik}\left(e^{ika^2/2L}-1\right) = 
-\frac{2L}{k}e^{ika^2/4L} \sin\left(\frac{ka^2}{4L}\right).
+\frac{2L}{k}e^{ika^2/4L} \sin\left(\frac{ka^2}{4L}\right)
 \label{eq:05_81}
 \eeq
-Za gostoto energijskega toka $j$ dobimo:
+in zapišemo jakost električnega polja:
 \beq
-j = 4 j_0 \sin\left(\frac{ka^2}{4L}\right),
+E(0,0, z_0) = \frac{2\pi i}{\lambda} \frac{\tilde{E}_0 e^{ik(z_0'+z_0)}}{L(z_0'+z_0)} 
+\frac{2L}{k}e^{ika^2/4L} \sin\left(\frac{ka^2}{4L}\right)\!\!.
+\label{eq:05_81a}
+\eeq
+Gostota energijskega toka $j$ je potem:
+\beq
+j = 4 j_0 \sin^2\left(\frac{ka^2}{4L}\right)\!\!,
 \label{eq:05_82}
 \eeq
-pri čemer smo z $j_0$ označili gostoto toka, kakršna bi bila na mestu opazovanja, 
+pri čemer $j_0$ označuje gostoto toka, kakršna bi bila na mestu opazovanja, 
 če ne bi bilo zaslona:
 \beq
-j_0 = \frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
+j_0 = \frac{1}{2}\varepsilon_0 c \frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
 \label{eq:05_83}
 \eeq
+Odvisnost relativne gostote svetlobnega toka na danem mestu od polmera odprtine
+$a$ je prikazana na sliki~\ref{fig:05_FresCona2}. 
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_FresCona2.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{90truemm} 
+\input{slike/05_Fresnel_fcja.pdf_tex}
+\caption{Odvisnost gostote svetlobnega toka na danem mestu v odvisnosti od polmera
+okrogle odprtine, na kateri se svetloba uklanja. Gostoto toka merimo glede na
+gostoto toka, ki bi bila na istem mestu, če ovire ne bi bilo.}
 \label{fig:05_FresCona2}
 \end{figure}
-Na sliki~\ref{fig:05_FresCona2} je narisana odvisnost gostote svetlobnega toka na danem 
-mestu od polmera odprtine $a$. Vidimo, da je največja vrednost, ki jo doseže $j$
+Vidimo, da je največja vrednost, ki jo doseže $j$
 štirikratnik intenzitete $j_0$, ki bi bila na mestu mestu opazovanja brez zaslona. 
 Polmer $a_1$, pri katerem doseže vrednost $j$ prvi maksimum, imenujemo polmer
 prve Fresnelove cone in je enak:
@@ -966,7 +996,7 @@ ravniki, ki je pravokotna na zveznico med točkama $S$ in $P_0$.
 \label{fig:05_FresPravokot}
 \end{figure}
 
-Uklonski integral (enačba~\ref{eq:05_76}) je potem:
+Uklonski integral (enačba~\ref{eq:Fresnel}) je potem:
 \beq
 E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{x_1}^{x_2}
 \int_{y_1}^{y_2} e^{\frac{ik(x^2+y^2)}{2L}}  dx dy
