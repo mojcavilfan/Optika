@@ -864,102 +864,125 @@ E(0,0, z_0) = \frac{2\pi i}{\lambda} \frac{\tilde{E}_0 e^{ik(z_0'+z_0)}}{L(z_0'+
 \frac{2L}{k}e^{ika^2/4L} \sin\left(\frac{ka^2}{4L}\right)\!\!.
 \label{eq:05_81a}
 \eeq
-Gostota energijskega toka $j$ je potem:
-\beq
+Gostota energijskega toka uklonjene svetlobe v točki $P_0$ je potem:
+\boxeq{eq:05_82}{
 j = 4 j_0 \sin^2\left(\frac{ka^2}{4L}\right)\!\!,
-\label{eq:05_82}
-\eeq
+}
 pri čemer $j_0$ označuje gostoto toka, kakršna bi bila na mestu opazovanja, 
 če ne bi bilo zaslona:
 \beq
 j_0 = \frac{1}{2}\varepsilon_0 c \frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
 \label{eq:05_83}
 \eeq
-Odvisnost relativne gostote svetlobnega toka na danem mestu od polmera odprtine
+Odvisnost gostote svetlobnega toka $j$ od polmera odprtine
 $a$ je prikazana na sliki~\ref{fig:05_FresCona2}. 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/05_Fresnel_fcja.pdf_tex}
-\caption{Odvisnost gostote svetlobnega toka na danem mestu v odvisnosti od polmera
-okrogle odprtine, na kateri se svetloba uklanja. Gostoto toka merimo glede na
-gostoto toka, ki bi bila na istem mestu, če ovire ne bi bilo.}
+\caption{Odvisnost gostote svetlobnega toka $j$ na danem mestu v odvisnosti od polmera
+okrogle odprtine $a$, na kateri se svetloba uklanja. Gostoto toka merimo glede na
+gostoto toka $j_0$, ki bi bila na istem mestu, če ovire ne bi bilo. Polmeri $a_N$ označujejo
+polmere posameznih Fresnelovih con.}
 \label{fig:05_FresCona2}
 \end{figure}
-Vidimo, da je največja vrednost, ki jo doseže $j$
-štirikratnik intenzitete $j_0$, ki bi bila na mestu mestu opazovanja brez zaslona. 
-Polmer $a_1$, pri katerem doseže vrednost $j$ prvi maksimum, imenujemo polmer
-prve Fresnelove cone in je enak:
+Največja vrednost, ki jo doseže $j$, je štirikratnik intenzitete $j_0$. Prvič to 
+vrednost doseže pri polmeru $a_1$, ki ga imenujemo polmer
+prve Fresnelove cone. Izračunamo ga iz pogoja:
 \beq
-\frac{ka_1^2}{4L} = \frac{\pi}{2} \qquad \mathrm{in} \qquad a_1  = \sqrt{\lambda L}.
-\label{eq:05_84}
+\frac{ka_1^2}{4L} = \frac{\pi}{2}\qquad \mathrm{in} \qquad a_1  = \sqrt{\lambda L}.
+\label{eq:05_84a}
 \eeq
-Prva Fresnelova cona svetlobo svetlobo torej zbira in deluje kot zbiralna leča. 
-Sekundarni krogelni valovi, ki izhajajo iz območja znotraj prve Fresnelove cone, 
-se seštevajo. Poglejmo račun za primer odprtine v velikosti prve Fresnelove
-cone in $z_0' \to \infty$ oziroma $L = z_0$. 
-\begin{figure}[ht]
-\centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_FresCona3.pdf_tex}
-\caption{SLIKA}
-\label{fig:05_FresCona3}
-\end{figure}
+Z naraščajočim polmerom intenziteta gostota svetlobnega toka pojema do minimuma, 
+ki ga doseže pri vrednosti $a_2$. Zanj velja:
+\beq
+\frac{ka_2^2}{4L} = \pi \qquad \mathrm{in} \qquad a_2 = \sqrt{2\lambda L}.
+\eeq
+Kolobar z notranjim polmerom $a_1 = \sqrt{\lambda L}$ in zunanjim polmerom 
+$a_2 = \sqrt{2\lambda L}$ imenujemo druga Fresnelova cona. 
 
-Potem velja:
-\beq
-R^2 = z_0^2 + a_1^2 = z_0^2 + \lambda z_0.
-\label{eq:05_85}
-\eeq
-Fazni zamik za žarek oziroma valovanje, ki izvira iz roba cone, je:
-\beq
-\phi_1 = kR = k\sqrt{z_0^2+\lambda z_0}.
-\label{eq:05_86}
-\eeq
-Fazni zamik za valovanje iz sredine cone pa je:
-\beq
-\phi_0 = kz_0.
-\label{eq:05_87}
-\eeq
-Dokler je fazna zakasnitev med žarki iz sredine in žarki z roba odprtine
-manjša od $\pi$ oziroma razlika v dolžini poti manjša od $\lambda/2$, 
-se žarki seštevajo in intenziteta na mestu $z_0$ narašča. Preverimo, ali 
-se ta ugotovitev ujema s pogojem za prvo Fresnelovo cono:
-\beq
-R - z = \sqrt{z_0^2 + \lambda z_0} - z_0  \approx z_0 + \frac{\lambda}{2} - z_0 = \frac{\lambda}{2}.
-\label{eq:05_88}
-\eeq
-Če polmer odprtine povečamo na območje $a>a_1$, se pojavijo valovi v protifazi in 
-prispevki iz sredine odprtine in z roba odprtine se odštevajo. Zato z naraščajočim
-polmerom intenziteta svetlobe pojema. Minimum doseže pri $a_2$, za katerega velja:
-\beq
-\frac{ka_2^2}{4L} = \pi
-\label{eq:05_89}
-\eeq
-in $a_2 = \sqrt{2\lambda L}$. Kolobar z notranjim polmerom 
-$a_1 = \sqrt{\lambda L}$ in zunanjim polmerom $a_2 = \sqrt{2\lambda L}$
-imenujemo druga Fresnelova cona. Na splošno je N-ta Fresnelova cona
-kolobar, ki ga omejujeta polmera $a_{N-1}$ in $a_N$:
+Na splošno je $N$-ta Fresnelova cona kolobar, ki ga omejujeta polmera $a_{N-1}$ in $a_N$:
 \beq
 a_{N-1} = \sqrt{(N-1)\lambda L} < a < a_{N} = \sqrt{N \lambda L}.
 \label{eq:05_90}
 \eeq
-V tretji Fresnelovi coni $j$ spet narašča, nato v območju $a_3 - a_4$ spet pojema ...
+V zaporednih kolobarjih gostota svetlobnega toka izmenično narašča in pojema, razlike med
+polmeri kolobarjev pa so vedno manjše. 
 
-{\bf Fresnelova uklonska leča}: Če ohranimo v ravnini $xy$ le tiste kolobarje oziroma
-cone, ki so ali samo lihe ali samo sode, se prispevki vseh con seštevajo. Taka
-naprava (conska plošča) zbira svetlobo na podoben način kot klasična leča. Gostota 
-svetlobnega toka v točki $P_0$ je pri uporabi conske plošče dosti večja, kot bi bila 
-v primeru, če bi izvor svetlobe točko osvetljeval neposredno. Tovrstne plošče so
-uporabne za zabiranje svetlobe, kadar nimamo možnosti izdelave leč (na primer 
-leče za žarke X. Glavna slabost Fresnelovih uklonskih leč je njihova kromatična
-aberacija -- odvisnost goriščne razdalje od valovne dolžine svetlobe $f= f(L)$.
-Goriščno razdaljo lahko izračunamo, da upoštevamo $z_0'\to \infty$:
+\begin{remark}
+Oscilirajočo odvisnost intenzitete dobimo tudi, če namesto polmera odprtine 
+spreminjamo lego točke $P_0$. Argument funkcije $\sin$ namreč prek parametra $L$
+vsebuje koordinato $z_0$. S spreminjanjem lege opazovalne točke vzdolž optične osi
+se tako izmenično pojavljajo ojačitve in oslabitve. 
+\end{remark}
+
+Poglejmo podrobneje faze žarkov, ki izhajajo iz odprtine. Omejimo se
+na primer $z_0' \to \infty$ oziroma $L = z_0$. Potem za žarke, ki so v 
+odprtini od optične osi oddaljeni za $a$, velja (slika~\ref{fig:05_FresCona3}):
 \beq
-\frac{1}{z_0'}+ \frac{1}{z_0}= \frac{1}{z_0} = \frac{1}{L} = \frac{1}{f},
+R^2 = z_0^2 + a^2.
+\label{eq:05_85}
+\eeq
+Fazna zakasnitev takega valovanja v točki $P_0$ je:
+\beq
+\phi_a = kR = k\sqrt{z_0^2+a^2}.
+\label{eq:05_86}
+\eeq
+fazna zakasnitev valovanja iz sredine cone pa je:
+\beq
+\phi_0 = kz_0.
+\label{eq:05_87}
+\eeq
+Fazna razlika med valovanjem iz točke na oddaljenosti $a$ in valovanjem 
+iz sredine je enaka:
+\beq
+\Delta \phi = \phi_a - \phi_0 = k\sqrt{z_0^2+a^2} - kz_0 \approx kz_0 + k \frac{a^2}{2z_0} - kz_0 = \frac{ka^2}{2z_0}.
+\label{eq:05_87b}
+\eeq
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/05_FresFaza.pdf_tex}
+\caption{Pot, ki jo prepotuje valovanje od točke na razdalji $a$ do točke $P_0$, je enaka $R$ (levo).
+Prispevki sekundarnih polj se seštevajo za $\Delta \phi < \pi$, nato se začnejo prispevki odštevati in 
+polje zmanjševati (sredina). Fresnelova conska plošča s conami 1, 2, 5 in 7 (desno).}
+\label{fig:05_FresCona3}
+\end{figure}
+Dokler je razlika faz manjša od $\pi$, se prispevki sekundarnih krogelnih valov iz odprtine
+seštevajo (slika~\ref{fig:05_FresCona3}). 
+Največja intenziteta svetlobe je tako dosežena pri $\Delta \phi = \pi$ in velja:
+\beq
+\frac{ka_\mathrm{max}^2}{2z_0} = \pi \qquad \mathrm{in} \qquad a_\mathrm{max} = 
+\sqrt{\frac{2\pi z_0}{k}} = \sqrt{z_0 \lambda}. 
+\label{eq:05_87c}
+\eeq
+Izračunana vrednost polmera, do katerega intenziteta svetlobe na danem mestu narašča, je po pričakovanju enaka 
+polmeru prve Fresnelove cone $a_\mathrm{max} = a_1$.  
+
+Če polmer odprtine povečamo na območje $a>a_1$, 
+se pojavijo prispevki v protifazi. Prispevki iz prve cone in iz dodanega kolobarja se med seboj 
+odštevajo, zato se intenziteta uklonjene svetlobe zmanjšuje. Ko fazni zamik doseže $2\pi$ (kar se zgodi
+ravno pri $a_2$), se prispevki spet seštevajo in intenziteta narašča. 
+
+Ker Fresnelova uklonska plošča s polmerom $a_1$ intenziteto svetlobe v 
+točki $P_0$ poveča glede na primer brez plošče, pomeni, da vpadno svetlobo zbere in 
+torej deluje kot zbiralna leča.  
+
+\subsection*{Fresnelova uklonska leča}
+Spoznali smo, da se prispevki sekundarnih valov iz posameznih Fresnelovih con izmenično
+seštevajo in odštevajo. Če ohranimo v ravnini $xy$ le tiste kolobarje, ki so ali samo 
+lihi ali samo sodi, se prispevki vseh obstoječih con seštevajo (slika~\ref{fig:05_FresCona3}). 
+Gostota svetlobnega toka v točki $P_0$ je pri uporabi conske plošče tako dosti večja, kot bi bila 
+v primeru, če bi izvor svetlobe točko osvetljeval neposredno. Izračunajmo goriščno razdaljo 
+take zbiralne leče. 
+
+Goriščno razdaljo uklonske leče izračunamo iz pogoja, da nastane slika 
+žarkov, ki na lečo vpadajo iz neskončnosti ($z_0'\to \infty$), pri $z_0 = f$:
+\beq
+\frac{1}{L} = \frac{1}{z_0'}+ \frac{1}{z_0}= \frac{1}{z_0} = \frac{1}{f},
 \label{eq:05_91}
 \eeq
-od koder sledi:
+od koder z uporabo enačbe~(\ref{eq:05_84a}) sledi:
 \beq
 f = \frac{a_1^2}{\lambda}.
 \label{eq:05_92}
@@ -979,6 +1002,10 @@ Od tod sledi:
 f = \frac{a_1^2}{\lambda} = \frac{2 \overline{a}\Delta a}{\lambda}.
 \label{eq:05_95}
 \eeq
+Tovrstne plošče so
+uporabne za zabiranje svetlobe, kadar nimamo možnosti izdelave leč (na primer 
+leče za žarke X. Glavna slabost Fresnelovih uklonskih leč je njihova kromatična
+aberacija -- odvisnost goriščne razdalje od valovne dolžine svetlobe $f= f(L)$.
 \end{example}
 
 \begin{example}{\bf Fresnelov uklon na robu in pravokotni reži.}
