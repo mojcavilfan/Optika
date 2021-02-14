@@ -373,7 +373,6 @@ geometrijske sence (b).}
  je prikazan na sliki~\ref{fig:05_pravokot}.
  \begin{figure}[ht]
 \centering
-\centering
 \includegraphics[width=100truemm]{slike/05_pravokot.png}
 \caption{Simulacija uklonske slike na pravokotni reži
 za razmerje stranic $a:b = 1:2$.}
@@ -834,11 +833,7 @@ e^{\frac{ik}{2z_0'}(x^2+y^2)} e^{\frac{ik}{2z_0}(x^2+y^2)} dx\, dy.
 \label{eq:05_77}
 \eeq
 Zaradi rotacijske simetrije računamo v cilindričnih koordinatah in 
-vpeljemo $\varrho = \sqrt{x^2 + y^2}$ ter
-\beq
-dx\,dy = \varrho d\varrho d\varphi,
-\label{eq:05_78}
-\eeq
+vpeljemo $\varrho = \sqrt{x^2 + y^2}$ ter $dx\,dy = \varrho d\varrho d\varphi$,
 pri čemer je $\varphi$ polarni kot. Aperturna funkcija $f=1$ 
 za $\varrho \leq a$, sicer velja $f= 0$. Integriramo po kotu $\varphi$ 
 in dobimo:
@@ -874,7 +869,7 @@ pri čemer $j_0$ označuje gostoto toka, kakršna bi bila na mestu opazovanja,
 j_0 = \frac{1}{2}\varepsilon_0 c \frac{\tilde{E}_0^2}{(z_0'+z_0)^2}.
 \label{eq:05_83}
 \eeq
-Odvisnost gostote svetlobnega toka $j$ od polmera odprtine
+Odvisnost gostote svetlobnega toka v točki $P_0$ od polmera odprtine
 $a$ je prikazana na sliki~\ref{fig:05_FresCona2}. 
 \begin{figure}[ht]
 \centering
@@ -886,6 +881,7 @@ gostoto toka $j_0$, ki bi bila na istem mestu, če ovire ne bi bilo. Polmeri $a_
 polmere posameznih Fresnelovih con.}
 \label{fig:05_FresCona2}
 \end{figure}
+
 Največja vrednost, ki jo doseže $j$, je štirikratnik intenzitete $j_0$. Prvič to 
 vrednost doseže pri polmeru $a_1$, ki ga imenujemo polmer
 prve Fresnelove cone. Izračunamo ga iz pogoja:
@@ -898,22 +894,22 @@ ki ga doseže pri vrednosti $a_2$. Zanj velja:
 \beq
 \frac{ka_2^2}{4L} = \pi \qquad \mathrm{in} \qquad a_2 = \sqrt{2\lambda L}.
 \eeq
-Kolobar z notranjim polmerom $a_1 = \sqrt{\lambda L}$ in zunanjim polmerom 
-$a_2 = \sqrt{2\lambda L}$ imenujemo druga Fresnelova cona. 
-
+Kolobar z notranjim polmerom $a_1$ in zunanjim polmerom 
+$a_2$ imenujemo druga Fresnelova cona. 
 Na splošno je $N$-ta Fresnelova cona kolobar, ki ga omejujeta polmera $a_{N-1}$ in $a_N$:
 \beq
 a_{N-1} = \sqrt{(N-1)\lambda L} < a < a_{N} = \sqrt{N \lambda L}.
 \label{eq:05_90}
 \eeq
-V zaporednih kolobarjih gostota svetlobnega toka izmenično narašča in pojema, razlike med
-polmeri kolobarjev pa so vedno manjše. 
-
+V zaporednih kolobarjih gostota svetlobnega toka izmenično narašča in pojema. Razlike med
+polmeri kolobarjev so vedno manjše, njihove ploščine pa so enake.
+\vglue-3truemm
 \begin{remark}
 Oscilirajočo odvisnost intenzitete dobimo tudi, če namesto polmera odprtine 
 spreminjamo lego točke $P_0$. Argument funkcije $\sin$ namreč prek parametra $L$
 vsebuje koordinato $z_0$. S spreminjanjem lege opazovalne točke vzdolž optične osi
-se tako izmenično pojavljajo ojačitve in oslabitve. 
+se tako na osi izmenično pojavljajo ojačitve in oslabitve. Na splošno velja, da se 
+Fresnelova uklonska slika spreminja z oddaljenostjo od zaslona.
 \end{remark}
 
 Poglejmo podrobneje faze žarkov, ki izhajajo iz odprtine. Omejimo se
@@ -941,16 +937,20 @@ iz sredine je enaka:
 \eeq
 \begin{figure}[ht]
 \centering
-\def\svgwidth{140truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/05_FresFaza.pdf_tex}
 \caption{Pot, ki jo prepotuje valovanje od točke na razdalji $a$ do točke $P_0$, je enaka $R$ (levo).
-Prispevki sekundarnih polj se seštevajo za $\Delta \phi < \pi$, nato se začnejo prispevki odštevati in 
-polje zmanjševati (sredina). Fresnelova conska plošča s conami 1, 2, 5 in 7 (desno).}
+Prispevki sekundarnih polj se seštevajo za $\Delta \phi < \pi$,  pri večjih fazni razlikah
+se začnejo prispevki odštevati in skupno polje zmanjševati (sredina).}
 \label{fig:05_FresCona3}
+\vglue-5truemm
 \end{figure}
-Dokler je razlika faz manjša od $\pi$, se prispevki sekundarnih krogelnih valov iz odprtine
-seštevajo (slika~\ref{fig:05_FresCona3}). 
-Največja intenziteta svetlobe je tako dosežena pri $\Delta \phi = \pi$ in velja:
+
+Dokler je razlika faz manjša od $\pi$, se prispevki sekundarnih krogelnih valov iz odprtine k jakosti
+električnega polja seštevajo, saj imajo vsi isti predznak (slika~\ref{fig:05_FresCona3}). Pri valovanjih,
+katerih fazni zamik se od osrednjega razlikuje za več kot za $\pi$, kaže jakost električnega polja
+v nasprotno smer in celotno polje se zmanjšuje. Največja intenziteta svetlobe je tako dosežena pri 
+$\Delta \phi = \pi$. Velja:
 \beq
 \frac{ka_\mathrm{max}^2}{2z_0} = \pi \qquad \mathrm{in} \qquad a_\mathrm{max} = 
 \sqrt{\frac{2\pi z_0}{k}} = \sqrt{z_0 \lambda}. 
@@ -958,123 +958,174 @@ Največja intenziteta svetlobe je tako dosežena pri $\Delta \phi = \pi$ in velj
 \eeq
 Izračunana vrednost polmera, do katerega intenziteta svetlobe na danem mestu narašča, je po pričakovanju enaka 
 polmeru prve Fresnelove cone $a_\mathrm{max} = a_1$.  
-
 Če polmer odprtine povečamo na območje $a>a_1$, 
-se pojavijo prispevki v protifazi. Prispevki iz prve cone in iz dodanega kolobarja se med seboj 
-odštevajo, zato se intenziteta uklonjene svetlobe zmanjšuje. Ko fazni zamik doseže $2\pi$ (kar se zgodi
-ravno pri $a_2$), se prispevki spet seštevajo in intenziteta narašča. 
-
-Ker Fresnelova uklonska plošča s polmerom $a_1$ intenziteto svetlobe v 
-točki $P_0$ poveča glede na primer brez plošče, pomeni, da vpadno svetlobo zbere in 
-torej deluje kot zbiralna leča.  
+se pojavijo prispevki v protifazi. Prispevki iz dodanega kolobarja imajo nasprotni predznak, zato se 
+intenziteta uklonjene svetlobe zmanjšuje. Ko fazni zamik doseže $2\pi$ (kar se zgodi
+ravno pri $a_2$), se prispevki spet seštevajo in intenziteta ponovno narašča. 
+ \begin{figure}[ht]
+\centering
+\includegraphics[width=40truemm]{slike/05_Fresnel_circ_k11_r1.png}\qquad
+\includegraphics[width=40truemm]{slike/05_Fresnel_circ_k11_r07.png}\qquad
+\includegraphics[width=40truemm]{slike/05_Fresnel_circ_k10_r1.png}\qquad
+\caption{Simulacija uklonske slike na okrogli odprtini v Fresnelovem približku (levo).
+Če spremenimo polmer odprtine (sredina) ali oddaljenost opazovalne ravnine (desno),
+se uklonska slika spremeni. Črtkana črta označuje velikost odprtine.}
+\label{fig:05_cirkularna_sim}
+\end{figure}
 
 \subsection*{Fresnelova uklonska leča}
 Spoznali smo, da se prispevki sekundarnih valov iz posameznih Fresnelovih con izmenično
 seštevajo in odštevajo. Če ohranimo v ravnini $xy$ le tiste kolobarje, ki so ali samo 
-lihi ali samo sodi, se prispevki vseh obstoječih con seštevajo (slika~\ref{fig:05_FresCona3}). 
-Gostota svetlobnega toka v točki $P_0$ je pri uporabi conske plošče tako dosti večja, kot bi bila 
-v primeru, če bi izvor svetlobe točko osvetljeval neposredno. Izračunajmo goriščno razdaljo 
-take zbiralne leče. 
+lihi ali samo sodi, se prispevki iz vseh obstoječih con le seštevajo (slika~\ref{fig:05_FresCona3}) in
+gostota svetlobnega toka v točki $P_0$ je dosti večja, kot bi bila 
+v primeru, če bi izvor svetlobe točko osvetljeval neposredno. Conska plošča torej 
+deluje kot zbiralna leča. Izračunajmo njeno goriščno razdaljo. 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=40truemm]{slike/05_FresLeca.png}
+\caption{Shema Fresnelove uklonske leče, ki je sestavljena iz lihih Fresnelovih con. }
+\label{fig:05_lecaFr}
+\end{figure}
 
 Goriščno razdaljo uklonske leče izračunamo iz pogoja, da nastane slika 
-žarkov, ki na lečo vpadajo iz neskončnosti ($z_0'\to \infty$), pri $z_0 = f$:
+žarkov, ki na lečo vpadajo iz neskončnosti ($z_0'\to \infty$), pri $z_0 = f$. Izhajamo 
+iz enačbe~(\ref{eq:05_80}) in dobimo:
 \beq
-\frac{1}{L} = \frac{1}{z_0'}+ \frac{1}{z_0}= \frac{1}{z_0} = \frac{1}{f},
+\frac{1}{L} = \frac{1}{z_0'}+ \frac{1}{z_0}= \frac{1}{z_0} = \frac{1}{f}\qquad \mathrm{oziroma}\qquad L=f.
 \label{eq:05_91}
 \eeq
-od koder z uporabo enačbe~(\ref{eq:05_84a}) sledi:
+Z uporabo enačbe~(\ref{eq:05_84a}) izračunamo goriščno razdaljo leče:
 \beq
 f = \frac{a_1^2}{\lambda}.
 \label{eq:05_92}
 \eeq
-Goriščno razdaljo conske leče z velikim številom plošč lahko tudi izračunamo:
+Kadar je Fresnelova conska plošča sestavljena iz zelo velikega števila Fresnelovih con, za izračun goriščne
+razdalje zadošča, da poznamo polmer največjega kolobarja in približno razliko med polmeri zunanjih kolobarjev. Poglejmo, zakaj.
+
+Upoštevamo izraz za polmer $N$-tega kolobarja (enačba~\ref{eq:05_90}) in zapišemo:  
 \beq
-a_{N+1}^2 - a_N^2 = \lambda (N+1)L - \lambda NL = \lambda L. 
+a_{N+1}^2 - a_N^2 = \lambda (N+1)L - \lambda NL = \lambda L = a_1^2. 
 \label{eq:05_93}
 \eeq
 Po drugi strani velja:
 \beq
-a_{N+1}^2 - a_N^2 = \left(a_{N+1}+a_N\right)\left(a_{N+1}- a_N\right) = 2\overline{a}\Delta a.
+a_{N+1}^2 - a_N^2 = \left(a_{N+1}+a_N\right)\left(a_{N+1}- a_N\right) \approx 2a_N\Delta a_N.
 \label{eq:05_94}
 \eeq
 Od tod sledi:
 \beq
-f = \frac{a_1^2}{\lambda} = \frac{2 \overline{a}\Delta a}{\lambda}.
+f = \frac{a_1^2}{\lambda} = \frac{2 a_N\Delta a_N}{\lambda}.
 \label{eq:05_95}
 \eeq
-Tovrstne plošče so
-uporabne za zabiranje svetlobe, kadar nimamo možnosti izdelave leč (na primer 
-leče za žarke X. Glavna slabost Fresnelovih uklonskih leč je njihova kromatična
-aberacija -- odvisnost goriščne razdalje od valovne dolžine svetlobe $f= f(L)$.
+V izrazu za goriščno razdaljo Fresnelovih uklonskih leč neposredno nastopa valovna dolžina svetlobe, 
+zato so za belo svetlobo zaradi velike kromatične aberacije praktično neuporabne. Uporablja se jih
+predvsem za zbiranje svetlobe, kadar nimamo možnosti izdelave navadnih leč, na primer za rentgenske
+žarke.
 \end{example}
 
-\begin{example}{\bf Fresnelov uklon na robu in pravokotni reži.}
-Kot drugi primer uporabe Fresnelovega uklonskega približka 
-izračunajmo uklonsko sliko na ostrem robu oziroma na pravokotni 
-reži. Oz $z$ izberemo tako, da točkasti izvor svetlobe $S$ in
+\begin{example}{\bf Fresnelov uklon na pravokotni reži.}
+Kot drugi primer uporabe Fresnelovega uklonskega približka izračunajmo uklonsko sliko 
+na pravokotni reži. Oz $z$ izberemo tako, da točkasti izvor svetlobe $S$ in
 opazovalna točka $P_0$  ležita na njej, pravokotna reža s
 koordinatami $x_1<x<x_2$ in $y_1<y<y_2$ pa naj leži v objektni
-ravniki, ki je pravokotna na zveznico med točkama $S$ in $P_0$.
+ravniki, ki je pravokotna na zveznico med točkama $S$ in $P_0$ (slika~\ref{fig:05_FresPravokot}).
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_FresPravokot.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{100truemm} 
+\input{slike/05_Fres_kv_koor.pdf_tex}
+\caption{K računu Fresnelovega uklona, ko izvor in detektor ležita na optični osi, v objektni ravnini
+pa je kvadratna odprtina.}
 \label{fig:05_FresPravokot}
 \end{figure}
 
-Uklonski integral (enačba~\ref{eq:Fresnel}) je potem:
+Fresnelov uklonski integral (enačba~\ref{eq:Fresnel}) za primer, ko izvor in detektor ležita
+na optični osi, zapišemo kot:
 \beq
-E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} \int_{x_1}^{x_2}
-\int_{y_1}^{y_2} e^{\frac{ik(x^2+y^2)}{2L}}  dx dy
+E(0,0, z_0) = \frac{i}{\lambda} \frac{\tilde{E}_0 e^{ikz_0'+ikz_0}}{z_0'z_0} 
+\int_{x_1}^{x_2}\!\!\!\int_{y_1}^{y_2} e^{\frac{ik(x^2+y^2)}{2L}}  dx\,dy,
 \label{eq:05_96}
 \eeq
-oziroma:
+pri čemer je $L$ določen z enačbo~(\ref{eq:05_80}).
+
+Osredotočimo se na dvojni integral, 
+ki ga zapišemo v obliki:
 \beq
 E(P_0) \propto \int_{u_1}^{u_2} e^{i\frac{\pi}{2}u^2} du
 \int_{v_1}^{v_2} e^{i\frac{\pi}{2}v^2} dv,
 \label{eq:05_97}
 \eeq
- pri čemer smo uvedli novi spremenljivki:
- \beq
- u = \sqrt{\frac{k}{\pi L}}x \qquad \mathrm{in} \qquad v = \sqrt{\frac{k}{\pi L}}y.
- \label{eq:05_98}
- \eeq
- Zapisana integrala izrazimo s Fresnelovima integraloma $S(x)$ in $C(x)$.
+pri čemer sta spremenljivki, ki smo jih uvedli, enaki:
+\beq
+u = \sqrt{\frac{k}{\pi L}}\,x \qquad \mathrm{in} \qquad v = \sqrt{\frac{k}{\pi L}}\,y.
+\label{eq:05_98}
+\eeq
+Zapisana integrala (enačba~\ref{eq:05_97}) izrazimo s Fresnelovima integraloma $C(u)$ in $S(u)$.
+
 \begin{remark}
 Fresnelova integrala sta oblike:
 \beq
 C(u) = \int_0^u \cos\left(\frac{1}{2}\pi x^2\right) dx \qquad \mathrm{in} \qquad 
-S(v) = \int_0^v \sin\left(\frac{1}{2}\pi x^2\right) dx. 
+S(u) = \int_0^u \sin\left(\frac{1}{2}\pi x^2\right) dx. 
 \label{eq:05_99}
 \eeq
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_CS.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{140truemm} 
+\input{slike/05_FresC.pdf_tex}
+\caption{Fresnelova integrala $C(u)$ in $S(u)$}
 \label{fig:05_CS}
 \end{figure}
-To sta dve transcedentni funkciji, ki ju moramo izračunati numerično. Tipične
-vrednosti so $C(-\infty) = -1/2$; $C(0) = 0$; $C(\infty) = 1/2$ in enako za $S$, 
-pri čemer sta obe funkciji lihi. Skupaj ju združimo v integral:
+Funkciji $C(u)$ in $S(u)$ sta transcendentni funkciji, ki ju moramo izračunati 
+numerično (slika~\ref{fig:05_CS}). Obe funkciji sta lihi in $C(0)=S(0)=0$. 
+V limitnih primerih velja $C(\infty) = 1/2$ in $C(-\infty) = -1/2$ ter enako za $S$. 
+Integral, ki ga moramo izračunati, izrazimo s Fresnelovima integraloma: 
 \beq
-\int_{0}^{u} e^{i\frac{\pi}{2}u^2} du = C(u)+iS(u) = \frac{1+i}{2}\erf \left(\frac{\sqrt{\pi}(1-i)u}{2}\right).
+\int_{0}^{u} e^{i\frac{\pi}{2}u^2} du = C(u)+iS(u).
 \label{eq:05_100}
 \eeq
 \end{remark}
-
-Fresnelovo uklonsko sliko na pravokotni odprtini torej zapišemo kot:
+\vglue4truemm
+Fresnelovo uklonsko sliko (enačba~\ref{eq:05_97}) na pravokotni odprtini s Fresnelovima
+integraloma zapišemo kot:
 \beq
 E(P_0) \propto \left( C(u) + iS(u) \right) \left|_{u_1}^{u_2} \cdot 
 \left( C(v) + iS(v) \right) \right|_{v_1}^{v_2}.
 \label{eq:05_101}
 \eeq
+Primer Fresnelove uklonske slike na kvadratni odprtini, ki je postavljena simetrično
+glede na optično os, je prikazan na sliki~\ref{fig:05_FrKv}.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=50truemm]{slike/05_FresKvadrat.png}
+\caption{Fresnelova uklonska slika na kvadratni odprtini na danem mestu. 
+Črtkana črta označuje velikost odprtine.}
+\label{fig:05_FrKv}
+\end{figure}
+Kot je značilno za Fresnelov uklon, se uklonska slika na kvadratni odprtini spreminja
+z oddaljenostjo od odprtine. 
 
-Na osnovi rezultata lahko obravnavamo tudi uklon na ravnem robu. 
-To ustreza enodimenzionalnemu primeru $x_1 \to \infty$ oziroma $u_1 \to \infty$
-in $x_2 = d$ oziroma $u_2  = d\sqrt{k/\pi L}$. Uklonska slika
-je potem:
+Na povsem enak način kot smo izračunali Fresnelovo uklonsko sliko na pravokotni odprtini,
+izračunamo uklonsko sliko na reži. Pri računu se omejimo
+na le eno dimenzijo in en integral. Na sliki~\ref{fig:05_FrReza} je prikazanih nekaj 
+primerov Fresnelovih uklonskih slik za reže različnih širin. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/05_Fresnek_Reza.pdf_tex}
+\caption{Fresnelova uklonska slika na reži za različne širine rež. Uklonska slika
+zelo ozke reže je podobna Fraunhoferjevi uklonski sliki, pri večjih se od Fraunhoferjeve 
+znatno razlikuje. Črtkana črta označuje velikost odprtine. Desno so simulirane uklonske
+slike na režah.}
+\label{fig:05_FrReza}
+\end{figure}
+
+\end{example}
+
+\begin{example}{\bf Fresnelov uklon na ostrem robu.}
+Izračunajmo še Fresnelovo uklonsko sliko, ki nastane na ostrem ravnem robu. Primer
+lahko obravnavamo kot uklon na reži, pri čemer eno mejo integracije postavimo v neskončnost:
+$x_1 \to \infty$ oziroma $u_1 \to \infty$. Druga meja naj bo $x_2 = d$ oziroma 
+$u_2  = d\sqrt{k/\pi L}$. Fresnelova uklonska slika je v splošnem:
 \beq
 E(P_0) \propto C(u_2) + i S(u_2) + \frac{1}{2} + i \frac{1}{2},
 \label{eq:05_102}
