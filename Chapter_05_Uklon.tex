@@ -1118,56 +1118,72 @@ znatno razlikuje. Črtkana črta označuje velikost odprtine. Desno so simuliran
 slike na režah.}
 \label{fig:05_FrReza}
 \end{figure}
+\vglue5truemm
 
 \end{example}
 
 \begin{example}{\bf Fresnelov uklon na ostrem robu.}
 Izračunajmo še Fresnelovo uklonsko sliko, ki nastane na ostrem ravnem robu. Primer
 lahko obravnavamo kot uklon na reži, pri čemer eno mejo integracije postavimo v neskončnost:
-$x_1 \to \infty$ oziroma $u_1 \to \infty$. Druga meja naj bo $x_2 = d$ oziroma 
-$u_2  = d\sqrt{k/\pi L}$. Fresnelova uklonska slika je v splošnem:
+$x_1 \to -\infty$ oziroma $u_1 \to -\infty$. Druga meja naj bo $x_2 = d$ oziroma 
+$u_2  = d\sqrt{k/\pi L}$. Fresnelova uklonska slika v točki na optični osi 
+je v splošnem (enačba~\ref{eq:05_101}):
 \beq
-E(P_0) \propto C(u_2) + i S(u_2) + \frac{1}{2} + i \frac{1}{2},
+E(P_0) \propto \left( C(u) + iS(u) \right) \left|_{-\infty}^{u_2} = 
+C(u_2) + i S(u_2) + 1/2 + i/2,
 \label{eq:05_102}
 \eeq
 od koder sledi:
 \beq
-j(P_0) \propto |E(P_0)|^2  \propto \left(C(u_2) + \frac{1}{2}\right)^2 + \left(S(u_2) + \frac{1}{2}\right)^2.
+j(P_0) \propto |E(P_0)|^2  \propto \left(C(u_2) + \frac{1}{2}\right)^2 + \left(S(u_2) + \frac{1}{2}\right)^2\!\!.
 \label{eq:05_103}
 \eeq
-Zanima nas odvinost $j(d)$. Namesto da pri izračunu zaslon miruje in spreminjamo opazovalno
-točko $P_0$ vzdolž osi $\xi$, točko $P_0$ ohranjamo in si mislimo, da se premika rob zaslona 
-v smeri osi $x$, pri čemer negativne vrednosti $d$ ustrezajo geometrijski senci. 
+Zapisana gostota svetlobnega toka opisuje vrednost na danem mestu na optični osi. 
+Celotno uklonsko sliko na robu dobimo tako, da namesto premikanja opazovalne točke $P_0$ vzdolž osi 
+$\xi$, točko $P_0$ ohranjamo na optični osi in premikamo rob zaslona 
+v smeri osi $x$. Pri tem negativne vrednosti $d$ ustrezajo geometrijski senci. 
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_FresRob.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{140truemm} 
+\input{slike/05_Fresnel_rob.pdf_tex}
+\caption{Fresnelova uklonska slika na ostrem robu. Intenziteta v odvisnosti od lege (levo),
+simulacija (desno zgoraj) in fotografija (desno spodaj).}
 \label{fig:05_FresRob}
 \end{figure}
+Fresnelova uklonska slika je prikazana na sliki~\ref{fig:05_FresRob}, pri čemer navpična
+črtkana črta označuje lego roba. Slika v odprtini je oscilirajoča in se v veliki oddaljenosti
+od roba približuje vrednosti $j_0$. V senci intenziteta hitro pojema, na robu je vrednost
+$0,25 j_0$.  
 
 \begin{remark}
-Fresnelova integrala $C(u)$ in $S(u)$  lahko prikažemo grafično tako, da narišemo
+Danes uklonske slike računamo numerično, nekoč pa so uporabljali tabele ali 
+grafično upodobitev. Nazorna grafična predstavitev Fresnelovih 
+integralov $C(u)$ in $S(u)$, ki jih uporabimo za izračun uklonske slike 
+na pravokotnih odprtinah, režah ali na robu, je v obliki Eulerjeve ali Cornujeve spirale. 
+Fresnelova integrala prikažemo grafično tako, da narišemo
 krivuljo v parametrični obliki $C(t), S(t)$ v 2D-ravnini. 
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
-%\input{slike/05_Cornu.pdf_tex}
-\caption{SLIKA}
+\def\svgwidth{80truemm} 
+\input{slike/05_Fresnel_Cornu.pdf_tex}
+\caption{Cornujeva spirala za izračun Fresnelovega uklonskega približka}
 \label{fig:05_Cornu}
 \end{figure}
-Poglejmo nekaj lasnosti te parametrične krivulje, ki jo imenujemo tudi Cornujeva oziroma
-Eulerjeva spirala. Pri vrednosti $t\to \infty$ je vrednost $(1/2, 1/2)$ in pri 
-$t\to -\infty$ je vrednost $(-1/2, -1/2)$. 
-Dolžina krivulje? Strmina krivulje? Ukrivljenost krivulje je sorazmerna z dolžino
-trajektorije (poti). 
+
+Poglejmo za primer Fresnelov uklon na ostrem robu. Intenziteta je sorazmerna vsoti 
+kvadratov razlik integralov v končni in začetni točki (enačba~\ref{eq:05_103}). 
+Začetna točka je v $(-1/2, -1/2)$ pri $u \to -\infty$, končna pa pri $u_2$.
+Z spreminjajočim $u_2$ se končna točka daljice premika po spirali, zato njena 
+dolžina, ki opisuje intenziteto valovanja, nekaj časa narašča, nato pojema in 
+ponovno narašča (zelena črta) ... Spreminjanje dolžine daljice 
+opiše uklonsko sliko v odprtini. Uklon v senci dobimo pri negativnih vrednostih 
+parametra $u_2$, pri katerih se dolžina hitro približuje ničli (modra črta). 
 \end{remark}
 \end{example}
 
-
 \section{*Izpeljava Kirchhoffovega uklonskega integrala}
 \label{chap:Kirchhoff}
-Poglejmo še matematično izpeljavo uklonskega integrala (enačba~\ref{eq:05_01})
+Poglejmo za konec še matematično izpeljavo uklonskega integrala (enačba~\ref{eq:05_01})
 in najprej ponovimo Greenov teorem, ki izhaja iz Gaussovega stavka. Naj bo 
 $\mathbf{W}(\mathbf{r})$ poljubno zvezno in zvezno odvedljivo vektorsko
 polje. Gaussov stavek pravi, da je intergal po sklenjeni ploskvi enak
