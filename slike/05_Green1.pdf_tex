@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '05_Fresnel_rob.pdf' (pdf, eps, ps)
+%% Accompanies image file '05_Green1.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1301.19529724bp}%
+    \setlength{\unitlength}{543.85243814bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,15 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.22370833)%
+  \begin{picture}(1,0.78501687)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.19003706,-0.003053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
-    \put(0.34393512,-0.003053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$5$\end{tabular}}}}%
-    \put(0.49109665,-0.00305304){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$d$\end{tabular}}}}%
-    \put(0.02312527,-0.003053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-5$\end{tabular}}}}%
-    \put(0.00999682,0.20711005){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{j}{j_0}$\end{tabular}}}}%
-    \put(0.01661413,0.01788592){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
-    \put(0.01528964,0.15143304){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(-0.01599399,0.05025884){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0,25$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{05_Fresnel_rob.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{05_Green1.pdf}}%
+    \put(0.44446238,0.15106242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$V$\end{tabular}}}}%
+    \put(0.7672529,0.5212475){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{n}$\end{tabular}}}}%
+    \put(0.73844652,0.72579916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S$\end{tabular}}}}%
+    \put(0.35637561,0.35104492){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varepsilon$\end{tabular}}}}%
+    \put(0.3483921,0.42162906){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_0$\end{tabular}}}}%
+    \put(0.44397891,0.38255011){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S_\varepsilon$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
