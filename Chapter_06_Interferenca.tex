@@ -1,25 +1,59 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Interferenca}
-Uklon in interferenca sta pravzaprav manifestacija enega in istega pojava 
--- superpozicije optičnega polja. Pri poglavju o uklonu
-so nas zanimale predvsem uklonski vzorci oziroma slike. V poglavju
-o interferenci pa se bomo bolj posvetili aplikacijam, interferometrom.
+Spoznali bomo, da sta uklon in interferenca zelo povezana in pravzaprav
+manifestacija istega pojava -- seštevanja različnih prispevkov valovanj k 
+skupnemu optičnemu polju. V poglavju o uklonu so nas zanimali predvsem uklonski 
+vzorci, v poglavju o interferenci pa se bomo osredotočili na interferometrijo 
+in pojave na tankih plasteh.
 
-'Interferometry' is a measurement method using the phenomenon of interference of waves (usually light, radio or sound waves). The measurements may include those of certain characteristics of the waves themselves and the materials that the waves interact with. In addition, interferometry is used to describe the techniques that use light waves for the study of changes in displacement. This displacement measuring interferometry is extensively used for calibration and mechanical stage motion control in precision machining.
+\section{Interferenca in interferometrija}
+O interferenci govorimo, kadar je na danem mestu v prostoru jakost električnega polja
+sestavljena iz več prispevkov iz različnih valovanj. Ta valovanja se na splošno
+lahko razlikujejo v smeri širjenja, amplitudi, frekvenci, fazi ali polarizaciji. 
 
-By using two light beams (usually by splitting one beam into two), an interference pattern can be formed when these two beams superpose. Because the wavelength of the visible light is very short, small changes in the differences in the optical paths (distance travelled) between the two beams can be detected (as these differences will produce noticeable changes in the interference pattern). Hence, the optical interferometry has been a valuable measurement technique for more than a hundred years. Its accuracy has later been improved with the invention of lasers. 
+V obravnavi inteference se omejimo le na valovanja, ki imajo enako frekvenco (oziroma
+se frekvence valovanj je malo razlikujejo), enako polarizacijo in konstantno fazo. 
+Če bi prva zahteva ne bila izpolnjena, bi se svetlobno valovanje na danem mestu zelo
+hitro spreminjalo in zaznali bi lahko le povprečno sliko. Zahteva po isti polarizaciji
+mora biti izpolnjena, saj sicer valovanji ne interferirata. V računu to pomeni skalarno 
+obravnavno jakosti električnega polja. Slednja zahteva o konstantni fazi 
+je povezana s koherenco valovanja, ki jo bomo podrobneje obravnavali v 
+poglavju~\ref{chap:Koherenca}. 
 
-Interferometers are widely used in science and industry for the measurement of small displacements, refractive index changes and surface irregularities. 
+Najpreprostejši interferenčni poskusi so taki, pri katerih vpadni snop svetlobe
+razdelimo na več delov. To lahko naredimo z delitvijo po valovni fronti ali delitvijo 
+po amplitudi. V obeh primerih je pogoj po isti frekvenci, polarizaciji in fazi izpolnjen, 
+seveda pa se valovanji razlikujeta v dodatnem faznem zamiku, ki ga pridobita po delitvi.
+Dodatni fazni zamik (in z njim celotna interferenčna slika) je močno odvisen od dolžine
+poti, ki jo del prvotnega snopa vpadne svetlobe prepotuje. V odvisnosti od faznega zamika
+se na opazovalnem zaslonu pojavijo ojačitve (konstruktivna inferferenca) ali oslabitve 
+(destruktivna interferenca). Ker je valovna dolžina svetlobe zelo majhna, že majhne 
+spremembe faznega zamika povzročijo velike spremembe interferenčnega vzorca. 
 
-\section{Interferenca}
-Električno polje obravnavajmo kot skalarno količino. V eksperimentih
-to realiziramo tako, da uporabimo polarizirano valovanje, pri čemer
-imajo so vsa valovanja enako polarizirana. Valovanje je potem v splošnem 
-$E= E(\mathbf{r},t)$. 
+Z opazovanjem interferenčnih vzorcev lahko zelo natančno določimo fazni zamik med
+dvema deloma valovanja in s tem pridobimo podatke o valovanju samem, o snovi, po 
+kateri se širi valovanje, ali o oddaljenosti predmeta, od katerega se je svetloba odbila. 
+Zato interferometrijo, kot imenujemo metodo, ki temelji na opazovanju interference,
+s pridom uporabljamo med drugim za izredno natačne meritve dolžine, 
+oddaljenosti, lomnega količnika snovi oziroma njegovih sprememb ali odstopanj v frekvenci. 
+Interferenčne meritve so ene najnatančnejših in zato zelo uporabnih na veliko področjih:
+od prvotne opustitve obstanka etra prek izredno natačnih meritev gladkosti površine do
+opazovanja gravitacijskih valov. 
 
-Izračunajmo naprej interferenčni vzorec dveh ravnih valovanj z enako
-polarizacijo in enako frekvenco. Valovanji zapišemo kot:
+V laboratorijih in industrijskih aplikacijah navadno za vir svetlobe uporabljamo laser, zato
+je interferenčna slika sestavljena iz svetlih in temnih območij. V naravi interferenco
+navadno opazujemo z belo dnevno svetlobo, kar da predmetom, na primer plasti olja na vodi ali
+milnemu mehurčku, značilno mavrično obarvanost.
+
+Zapišimo preprost primer interference matematično. Jakost električnega polja
+obravnavajmo kot skalarno količino (se omejimo na eno polarizacijo), ki je na splošno
+funkcija kraja in časa: $E= E(\mathbf{r},t)$. 
+
+Naj imata obe vpadni valovanji enako frekvenco in pripadajoče valovno število $k$.
+Izhodiščna faza valovanj naj bo enaka in jo lahko brez izgube splošnosti 
+postavimo na 0, amplitudi posameznih valovanj pa označimo z $E_{10}$ in $E_{20}$. 
+Valovanji potem zapišemo kot:
 \beq
 E_1 = E_{10} e^{i\mathbf{k}_1 \cdot \mathbf{r} - i \omega t + i \delta_1}
 \qquad \mathrm{in} \qquad
@@ -166,7 +200,7 @@ oddaljenosti $r_1, r_2 \gg D$ velja:
 pri čemer je $\vartheta$ kot med osjo $z$ in zveznico med točko na sredini med režama in
 izbrano točko na opazovalnem zaslonu. Uporabimo enačbo~(\ref{eq:06_09}) in dobimo:
 \beq
-j = 4 j_0 \cos^2\left(\frac{\Delta \Phi}{2}\right) = 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right).
+j = 4 j_0 \cos^2\left(\frac{\Delta \phi}{2}\right) = 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right).
 \label{eq:06_17}
 \eeq
 
@@ -198,24 +232,116 @@ je periodičen s periodo ponavljanja $\Delta \xi_0$. Izračunajmo jo. Velja:
 \label{eq:06_19}
 \eeq
 Za majhne kote $\vartheta$ velja 
+\beq
+k D \Delta \vartheta = k D \frac{\Delta \xi_0}{z_0} = 2 \pi,
+\label{eq:06_20}
+\eeq
+od koder sledi:
+\beq
+\Delta \xi_0 = \frac{\lambda z_0}{D}.
+\label{eq:06_21}
+\eeq
+Bliže kot so reže, bolj razmaknjeni so uklonski vrhovi, kar je seveda v skladu
+z uklonsko sliko na velikem številu rež. 
+
+Za $D=1~\si{\micro\metre}$ je na oddaljenosti $z_0 = 1~\si{m}$ razmik med ojačitvami
+$\Delta \xi_0 = 0,5~\si{m}$, medtem ko je pri $D = 1~\si{mm}$ 
+vrednost $\Delta \xi_0 = 0,5~\si{mm}$. 
+
+Pokažimo, da je dobljeni rezultat ekvivalenten ristemu, ki smo ga izpeljali pri
+obravnavi Fraunhoferjevega uklona v petem poglavju. Za sistem $N$ rež širine $d$
+s periodo ponavljanja $D$ je veljalo (enačba~\ref{eq:uklonNrez}):
+\beq
+j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\vartheta/2}\right)^2
+\left(\frac{\sin\left(NkD\sin\vartheta/2\right)}{\sin\left(kD\sin\vartheta/2\right)}\right)^2\!\!.
+\label{eq:06_22}
+\eeq
+Če so reže ze ozke in $d\to 0$, je strukturni faktor enak 1 in intenziteta vrhov z oddaljenostjo
+os optične osi ne pojema. V primeru dveh ozkih rež, je 
+\beq
+j = j_0 \frac{\sin^2(NkD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
+j_0 \frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{×\sin^2(kD \sin\vartheta/2)}
+ = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}{2},
+\label{eq:06_23}
+\eeq
+kar je enako enačbi~(\ref{eq:06_17}).
+
+\begin{remark}
+Oglejmo si še nekaj alternativnih postavitev interferometrov z delitvijo žarka. Pri Youngovem
+eksperimentu se namreč težko izognemo težavam, povezanim s končno širino reže $d$. Njegovi
+sodobniki so poskušali podoben interferenčni vzorec ustvariti nad druge načine. Prvi primer
+je Lloydovo zrcalo, pri katerem interferirajo žarki, ki pridejo neposredno od izvora svetlobe, 
+in žarki, ki se odbijejo od zrcala. Drugi primer sta Fresnelovi zrcali, pri katerih interferirata
+sva snopa svetlobe, ki se odbijata vsak od svojega zrcala. Tretja postavitev, ki jo omenimo,
+je s Fresnelovo biprizmo. Svetloba, ki izhaja iz enega svetila, se na Fresnelovi biprizmi
+lomi, lomljena žarka pa med seboj interferirata.
+\end{remark}
+
+\section{Interferenca z delitvijo amplitude}
+Najznačilnejši primer interferometra z delitvijo amplitude je Michelsonov interferometer.
+Vpadno svetlobo s polprepustnim zrcalom razdelimo na dva snopa, ki se odbijeta vsak od 
+svojega zrcala in interferirata na detektorju. S premikanjem enega od zrcal spreminjamo
+zakasnitev med žarkoma in na detektorju se izmenično pojavljajo ojačitve in oslabitve.
+Gostota svetlobnega toka na detektorju je (enačba~):
+\beq
+j = 4j_0 \cos^2(\Delta \phi/2),
+\label{eq:06_24}
+\eeq
+pri čemer je $\Delta \phi = k_0(l_1-l_2)$....
+
+
+\section{Interferenca na tanki plasti}
+Do zdaj smo obravnavali interferenco, pri kateri je bilo skupno valovanje sestavljeno iz le 
+dveh prispevkov. Zdaj si oglejmo primer interference, ki nastane kot vsota zelo velikega 
+števila delnih valovanj. 
+
+Naj ravno valovanje vpada na tanko plast snovi z lomnim količnikom $n_2$, lomni količnik 
+okolice pa naj bo enak $n_1$, pri čemer se omejimo na primer TE polariziranega valovanja.
+Ob vpadu na plast se del svetlobe odbije, del pa lomi v snov po lomnem zakonu (enačba~) 
+z amplitudo, ki jo določa Fresnelova enačba (). Prepuščeni val potuje po plasti do meje
+na drugi strani, kjer je ga ponovno nekaj odbije, del pa je prepuščen v smeri, ki 
+je enaka vpadni smeri. Odbiti del valovanja potuje 
+do vpadne meje, kjer se deloma odbije, del pa ga izhaja na vpadni strani ... 
+
+Jakost prepuščenega električnega polja je tako sestavljena iz velikega števila prispevkov, ki 
+izhajajo v isti smeri, njihove amplitude pa so vedno manjše. Ker izhodni žarki 
+izhajajo na različnih točkah, jih navadno z zbiralno lečo preslikamo v eno točko. Pri pravokotnem
+vpadu na tanko plast teh težav ni. 
+
+Zanima nas gostota prepuščenega svetlobnega toka $j$ v odvisnosti od 
+lomnih količnikov $n_1$ in $n_2$, vpadnega kota $\alpha$ in debeline plasti $d$. 
+
+Najprej z lomnim zakonom izračunamo kot $\beta$, pod katerim se širi svetloba v plasti:
+\beq
+\sin\beta = \frac{n_1}{n_2}\sin\alpha.
+\label{eq:06_25}
+\eeq
+Amplitudna odbojnost $r$ in prepustnot $t$ na prvi meji sta enaka (enačba~):
+\beq
+r_{12} = \frac{n_1\cos \alpha - n_2\cos \beta}{n_1\cos \alpha + n_2\cos \beta}\qquad 
+\mathrm{in}\qquad t_{12} = 1+r_{12},
+\label{eq:06_26}
+\eeq
+na drugi meji pa:
+\beq
+r_{21} = \frac{n_2\cos \beta - n_1\cos \alpha}{n_2\cos \beta + n_1\cos \alpha}\qquad 
+\mathrm{in}\qquad t_{21} = 1+r_{21}.
+\label{eq:06_27}
+\eeq
+Vidimo, da velja $r_{12} = r_{21}$. Ko poznamo vse koeficiente, lahko zapišemo
+posamezne prispevke jakosti električnega polja na prepuščeni strani:
+\begin{align}
+E_1 &= E_0\,t_{12}\,t_{21},\\
+E_2 &= E_0\,t_{12}\,r_{21}\,r_{21}\,e^{i\phi}\,t_{21},\\
+E_3 &= E_0\,t_{12}\,r_{21}\,r_{21}\,e^{i\phi}\,r_{21}\,r_{21}\,e^{i\phi}\,t_{21},\\
+itd.
+\label{eq:06_29}
+\end{align}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-\section{Delitev amplitude}
-\section{Tanka plast}
 \section{Fabry-Perotov interferometer}
 \section{Večplastni nanosi}
 \section{Uporaba interference}
