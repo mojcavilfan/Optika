@@ -485,12 +485,12 @@ Izračun naklona žarka po prehodu je malo bolj zapleten. Za zapis lomnega
 zakona moramo namreč vpeljati kote glede na normalo na
 mejo. Vpadni kot je tako $\alpha = \vartheta_1 + \varphi$, lomni kot pa 
 $\beta = \vartheta_2 + \varphi$ (glej sliko~\ref{fig:02_ABCD3}).
-S slike razberemo, da velja zveza:
+Privzamemo, da je ukrivljenost meje dovolj majhna oziroma da so žarki
+dovolj blizu optične osi, da velja zveza:
 \begin{equation}
- \sin \varphi = \frac{x_1}{R} \approx \varphi,
+ \sin \varphi = \frac{x_1}{R} \approx \varphi.
  \label{eq:02_40}
 \end{equation}
-pri čemer smo privzeli, da so žarki blizu optične osi. 
 \begin{figure}[!h]
 \centering
 \def\svgwidth{70truemm} 
@@ -701,7 +701,7 @@ Negativni predznak pomeni, da je slika predmeta desno od leče obrnjena na glavo
 \caption{Kadar je predmet bolj oddaljen od leče kot je goriščna razdalja ($a>f$),
 nastane obrnjena prava slika desno od leče. 
 V tem primeru sta $a,b>0$ (levo). Če je predmet blizu leče in velja $a<f$,
-nastane pokočna navidezna slika na isti strani, kot je predmet. V tem primeru velja $a>0$ in $b<0$.}
+nastane pokončna navidezna slika na isti strani, kot je predmet. V tem primeru velja $a>0$ in $b<0$.}
 \label{fig:02_slikazaleco}
 \end{figure}
 
@@ -913,7 +913,7 @@ $B=0$. Pri transformaciji kota si pomagamo s sliko~\ref{fig:02_zrcalo}.
 Naj bo $\alpha$ kot med optično osjo in zveznico med središčem krožnice in točko, 
 v kateri vpada žarek na zrcalo. Vpadni žarek naj se širi pod kotom $\vartheta_1$, tako da
 je vpadni kot glede na normalo na zrcalo enak $\alpha -\vartheta_1$. Kot, pod katerim 
-se žarek obije glede na vodoravnico naj bo $-\vartheta_2$, tako da je odbojni kot glede
+se žarek odbije glede na vodoravnico naj bo $-\vartheta_2$, tako da je odbojni kot glede
 na normalo na zrcalo enak $\vartheta_2 - \alpha$. Po odbojnem zakonu sta vpadni in odbojni
 kot enaka, zato:
 \beq
@@ -1003,7 +1003,7 @@ moramo podaljške žarkov in slika nastane na mestu, kjer se sekajo podaljški o
 \caption{Kadar je predmet bolj oddaljen od zrcala kot je goriščna razdalja ($a>f$),
 nastane na isti strani zrcala obrnjena prava slika. 
 V tem primeru sta $a,b>0$ (levo). Če je predmet blizu zrcala in velja $a<f$,
-nastane pokočna navidezna slika na drugi strani zrcala. V tem primeru velja $a>0$ in $b<0$.}
+nastane pokončna navidezna slika na drugi strani zrcala. V tem primeru velja $a>0$ in $b<0$.}
 \label{fig:02_zrcaloodboj}
 \end{figure}
 
@@ -1104,7 +1104,7 @@ konveksnih in konkavnih leč, skoraj vedno pa vsebujejo tudi zrcala, saj je izde
 velikih ukrivljenih zrcal preprostejša od izdelave velikih leč. 
 
 \subsection*{Mikroskop}
-Za opazovanje majnih predmetov uporabimo mikroskop. Preprost mikroskop je sestavljen
+Za opazovanje majhnih predmetov uporabimo mikroskop. Preprost mikroskop je sestavljen
 iz dveh leč: objektiva, ki je bliže predmetu, in okularja, ki je bliže očesu 
 (slika~\ref{fig:02_mikroskop}). Obe leči 
 naj bosta zbiralni z goriščnima razdaljama $f_1$ in $f_2$ na oddaljenosti $s$. Predmet
@@ -1146,7 +1146,7 @@ x_1\\
 Vpeljemo $d$ kot razdaljo med notranjimi gorišči mikroskopa
 $d= s -f_1-f_2$ in izračunamo zorni kot, pod katerim opazujemo predmet:
 \beq
-\vartheta_2 = \frac{dx_1}{f_1f_2}.
+\vartheta_2 = \frac{x_1 d}{f_1f_2}.
 \label{eq:02_69}
 \eeq
 Povečavo mikroskopa vpeljemo glede na zorni kot, pod katerim 
@@ -1158,7 +1158,7 @@ normalno vidimo predmet s prostim očesom, to je:
 pri čemer je po dogovoru normalna vidna razdalja $a_0 = 25~\si{cm}$.
 Povečava mikroskopa je potem razmerje zornih kotov:
 \beq
-\frac{\vartheta_2}{\vartheta_0} = \frac{da_0}{f_1f_2}.
+\frac{\vartheta_2}{\vartheta_0} = \frac{a_0d}{f_1f_2}.
 \eeq
 
 \subsection*{Oko in korekcijska očala}

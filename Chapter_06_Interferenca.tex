@@ -128,13 +128,14 @@ Interferenčni vzorec dveh enako močnih snopov svetlobe zavzame vrednosti med 0
 in $4j_0$, kar pomeni, da je kontrast takega vzorca enak 1. 
 \begin{figure}[ht]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{75truemm} 
 \input{slike/06_vidljivost.pdf_tex}
 \vglue3truemm
 \caption{Interferenca dveh valovanj z različnima intenzitetama. 
 Vrednost skupne gostote svetlobnega toka v odvisnosti od faznega 
 zamika med vpadnima valovanjima oscilira med najmanjšo in največjo vrednostjo.}
 \label{fig:06_kontrast}
+\vglue-5truemm
 \end{figure}
 
 Kako pa je z ohranitvijo energijskega toka? Povprečni energijski 
@@ -144,39 +145,43 @@ tok čez veliko območje prostora je (enačba~\ref{eq:06_09}):
 \label{eq:06_10}
 \eeq
 kar je po pričakovanju enako gostoti energijskega toka dveh vpadnih valovanj. 
-Pri interferenci se torej energijski tok ohranja, pride pa do preporazdelitve energije.
+Pri interferenci se torej energijski tok ohranja, vendar se energija prerazporedi.
 
-Poglejmo interferenco dveh valovanj, ki pod kotom vpadata eno glede na drugo
-in  ju zapišemo kot:
-\beq
-E_1 = e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
-E_1 = e^{-ik_x x} e^{ik_z z}e^{-i\omega t},
-\label{eq:06_12}
-\eeq
-pri čemer sta vektorja:
+Poglejmo za primer interferenco dveh valovanj z enakima intenzitetama, 
+ki pod kotom vpadata eno glede na drugo. 
+Njuna valovna vektorja zapišemo kot:
 \beq
 \mathbf{k}_1 = (k_x,0, k_z) \qquad \mathrm{in} \qquad \mathbf{k}_2 = (-k_x,0, k_z).
 \label{eq:06_13}
 \eeq
-\begin{figure}[ht]
-\centering
-\def\svgwidth{120truemm} 
-%\input{slike/06_interferenca.pdf_tex}
-\caption{SLIKA}
-\label{fig:06_interferenca}
-\end{figure}
-
+Valovanji sta potem oblike:
+\beq
+E_1 = e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
+E_2 = e^{-ik_x x} e^{ik_z z}e^{-i\omega t}.
+\label{eq:06_12}
+\eeq
 Interferenca teh dveh valovanj da:
 \beq
 E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_x x}+e^{-ik_x x} \right) = 
 E_0 e^{ik_z z -i\omega t } 2 \cos(k_x x).
 \label{eq:06_14}
 \eeq
-Interferenčni vzorec, ki ga opazujemo, je:
+Interferenčni vzorec, ki ga zaznamo, je potem enak:
 \beq
 j = 4 j_0 \cos^2(k_x x).
 \label{eq:06_15}
 \eeq
+\vglue-5truemm
+\begin{figure}[!h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/06_interferenca_1.pdf_tex}
+\caption{Interferenca dveh ravnih valov, ki pod kotom vpadata eno na drugo (levo). Na mestu, kjer
+se valovanji seštejeta, se pojavijo ojačitve, vmes so oslabitve. Intenziteta interferenčnega vzorca
+ima značilne bele črte na mestu oslabitev, potujoče rdeče in modre liste z leve slike pa se 
+na detektorju izpovprečijo (desno).}
+\label{fig:06_int}
+\end{figure}
 
 \section{Interferenca z delitvijo valovne fronte}
 V večini interferometričnih ustvarimo interferenco z enim samim snopom svetlobe, 
@@ -188,11 +193,10 @@ Najpomembnejši primer interference z delitvijo valovne fronte je nedvomno
 Youngov poskus (1801), ki je angleškega fizika Thomasa Younga vodil do spoznanja,
 da je svetloba transverzalno valovanje. Pri tem poskusu vpadno valovanje iz 
 monokromatskega izvora simetrično usmerimo na zaslon, v katerem sta dve enaki ozki
-reži in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovTorej potrebujemoanje mora biti 
+reži in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovanje mora biti 
 koherentno. Več o tej lastnosti valovanja 
-bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Uklonsko sliko 
-pravzaprav že poznamo, saj jo lahko izračunamo s Fraunhoferjevim 
-uklonskim približkom.
+bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Poiščimo lego ojačitev in oslabitev
+na oddaljenem zaslonu.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
@@ -273,7 +277,7 @@ os optične osi ne pojema. V primeru dveh ozkih rež, je
 \beq
 j = j_0 \frac{\sin^2(NkD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
 j_0 \frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{×\sin^2(kD \sin\vartheta/2)}
- = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}{2},
+ = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}\right){2},
 \label{eq:06_23}
 \eeq
 kar je enako enačbi~(\ref{eq:06_17}).
@@ -357,7 +361,7 @@ E_{N+1} &= E_0\,t_{12}\,\left(r_{21}\,r_{21}\right)^N\,e^{iN\phi}\,t_{21}\\
 \def\svgwidth{140truemm} 
 %\input{slike/06_.pdf_tex}
 \caption{SLIKA}
-\label{fig:05_Nrez}
+\label{fig:06_Nrez}
 \end{figure}
 
 Pri tem smo upoštevali tudi fazni zamik zaradi dodatne prepotovane poti v plasti:
