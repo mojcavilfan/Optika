@@ -1,58 +1,64 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Interferenca}
-Spoznali bomo, da sta uklon in interferenca zelo povezana in pravzaprav
-manifestacija istega pojava -- seštevanja različnih prispevkov valovanj k 
-skupnemu optičnemu polju. V poglavju o uklonu so nas zanimali predvsem uklonski 
+Spoznali bomo, da sta uklon in interferenca tesno povezana in pravzaprav
+manifestacija istega pojava -- seštevanja  valovanj v 
+skupno optično polje. V poglavju o uklonu so nas zanimali predvsem uklonski 
 vzorci, v poglavju o interferenci pa se bomo osredotočili na interferometrijo 
 in pojave na tankih plasteh.
 
 \section{Interferenca in interferometrija}
-O interferenci govorimo, kadar je na danem mestu v prostoru jakost električnega polja
-sestavljena iz več prispevkov iz različnih valovanj. Ta valovanja se na splošno
-lahko razlikujejo v smeri širjenja, amplitudi, frekvenci, fazi ali polarizaciji. 
+O interferenci govorimo, kadar je na danem mestu v 
+prostoru jakost električnega polja sestavljena iz 
+več valovanj. Seštevanje 
+dveh ali več valovanj ponekod vodi
+do ojačevanja svetlobe (konstruktivna interferenca), 
+drugod pa do oslabitev (destruktivna interferenca). 
+Vzorci izmenjujočih se ojačitev in oslabitev sestavljajo
+značilno interferenčno sliko.
 
-V obravnavi inteference se omejimo le na valovanja, ki imajo enako frekvenco (oziroma
-se frekvence valovanj je malo razlikujejo), enako polarizacijo in konstantno fazo. 
-Če bi prva zahteva ne bila izpolnjena, bi se svetlobno valovanje na danem mestu zelo
-hitro spreminjalo in zaznali bi lahko le povprečno sliko. Zahteva po isti polarizaciji
-mora biti izpolnjena, saj sicer valovanji ne interferirata. V računu to pomeni skalarno 
-obravnavno jakosti električnega polja. Slednja zahteva o konstantni fazi 
-je povezana s koherenco valovanja, ki jo bomo podrobneje obravnavali v 
-poglavju~\ref{chap:Koherenca}. 
+Elektromagnetna valovanja se na splošno razlikujejo 
+v smeri širjenja, amplitudi, frekvenci, fazi ali polarizaciji. 
+Spoznali bomo, da se interferenčna slika pojavi le pri valovanjih z enako
+polarizacijo, konstantno (ali zelo počasi se spreminjajočo)
+začetno fazo in enako (oziroma približno enako) frekvenco. 
+Če se frekvenci valovanj ne ujemata, se svetlobno valovanje na 
+danem mestu zelo hitro spreminja in slika, ki jo zaznamo, se izpovpreči.
+Zahteva o konstantni fazi je povezana s koherenco valovanja, 
+ki jo bomo podrobneje obravnavali v poglavju~\ref{chap:Koherenca}. 
 
 Najpreprostejši interferenčni poskusi so taki, pri katerih vpadni snop svetlobe
-razdelimo na več delov. To lahko naredimo z delitvijo po valovni fronti ali delitvijo 
-po amplitudi. V obeh primerih je pogoj po isti frekvenci, polarizaciji in fazi izpolnjen, 
-seveda pa se valovanji razlikujeta v dodatnem faznem zamiku, ki ga pridobita po delitvi.
-Dodatni fazni zamik (in z njim celotna interferenčna slika) je močno odvisen od dolžine
-poti, ki jo del prvotnega snopa vpadne svetlobe prepotuje. V odvisnosti od faznega zamika
-se na opazovalnem zaslonu pojavijo ojačitve (konstruktivna inferferenca) ali oslabitve 
-(destruktivna interferenca). Ker je valovna dolžina svetlobe zelo majhna, že majhne 
-spremembe faznega zamika povzročijo velike spremembe interferenčnega vzorca. 
+razdelimo na več delov. To lahko naredimo z delitvijo po valovni fronti
+ali z delitvijo po amplitudi. V obeh primerih so zahteve po isti frekvenci, 
+polarizaciji in fazi izpolnjene, seveda pa se valovanji razlikujeta 
+v dodatnem faznem zamiku, ki ga pridobita po delitvi.
+Dodatni fazni zamik in z njim povezana interferenčna slika 
+sta močno odvisna od dolžine poti, ki jo del prvotnega snopa 
+vpadne svetlobe prepotuje. Ker je valovna dolžina svetlobe zelo majhna, že majhne 
+spremembe v dolžini poti oziroma zakasnitvi žarka povzročijo velike spremembe 
+interferenčnega vzorca. 
 
 Z opazovanjem interferenčnih vzorcev lahko zelo natančno določimo fazni zamik med
 dvema deloma valovanja in s tem pridobimo podatke o valovanju samem, o snovi, po 
-kateri se širi valovanje, ali o oddaljenosti predmeta, od katerega se je svetloba odbila. 
+kateri se širi valovanje, ali o oddaljenosti predmeta, od katerega se svetloba odbija. 
 Zato interferometrijo, kot imenujemo metodo, ki temelji na opazovanju interference,
 s pridom uporabljamo med drugim za izredno natačne meritve dolžine, 
 oddaljenosti, lomnega količnika snovi oziroma njegovih sprememb ali odstopanj v frekvenci. 
-Interferenčne meritve so ene najnatančnejših in zato zelo uporabnih na veliko področjih:
+Interferenčne meritve so ene najnatančnejših in so zato zelo uporabne na veliko področjih:
 od prvotne opustitve obstanka etra prek izredno natačnih meritev gladkosti površine do
 opazovanja gravitacijskih valov. 
 
 V laboratorijih in industrijskih aplikacijah navadno za vir svetlobe uporabljamo laser, zato
 je interferenčna slika sestavljena iz svetlih in temnih območij. V naravi interferenco
-navadno opazujemo z belo dnevno svetlobo, kar da predmetom, na primer plasti olja na vodi ali
+navadno opazujemo z belo dnevno svetlobo, kar da snovem, na primer plasti olja na vodi ali
 milnemu mehurčku, značilno mavrično obarvanost.
 
-Zapišimo preprost primer interference matematično. Jakost električnega polja
-obravnavajmo kot skalarno količino (se omejimo na eno polarizacijo), ki je na splošno
-funkcija kraja in časa: $E= E(\mathbf{r},t)$. 
-
-Naj imata obe vpadni valovanji enako frekvenco in pripadajoče valovno število $k$.
-Izhodiščna faza valovanj naj bo enaka in jo lahko brez izgube splošnosti 
-postavimo na 0, amplitudi posameznih valovanj pa označimo z $E_{10}$ in $E_{20}$. 
+\newpage
+Zapišimo preprost primer interference dveh ravnih valov z enako frekvenco. Valovna
+vektorja valovanj označimo s $\mathbf{k}_1$ in $\mathbf{k}_2$, fazi valovanj z 
+$\delta_1$ in $\delta_2$ ter njuni realni amplitudi z $E_{10}$ in $E_{20}$. Ker imajo 
+valovanja, ki interferirajo, isto polarizacijo,
+za račun interference zadošča skalarna oblika električnega polja.
 Valovanji potem zapišemo kot:
 \beq
 E_1 = E_{10} e^{i\mathbf{k}_1 \cdot \mathbf{r} - i \omega t + i \delta_1}
@@ -60,78 +66,98 @@ E_1 = E_{10} e^{i\mathbf{k}_1 \cdot \mathbf{r} - i \omega t + i \delta_1}
 E_2 = E_{20} e^{i\mathbf{k}_2 \cdot \mathbf{r} - i \omega t + i \delta_2}.
 \label{eq:06_01}
 \eeq
-Pri tem privzamemo, da sta $E_{10}$ in $E_{20}$ realni števili. Celotno
-električno polje je potem:
+Celotno
+električno polje je vsota obeh prispevkov:
 \beq
 E = E_1 + E_2 = E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t},
 \label{eq:06_02}
 \eeq
 pri čemer sta $\phi_{1,2} = \mathbf{k}_{1,2} \cdot \mathbf{r} + \delta_{1,2}$. 
-Zanima nas gostota svetlobnega toka $j$, ki je enaka:
+Gostota svetlobnega toka $j$ je enaka (enačba~\ref{eq:j}):
 \beq
-j = \left|\langle \mathbf{S}\rangle \right| = \frac{1}{2}\varepsilon \varepsilon_0 |E|^2c
+j = \frac{1}{2}\varepsilon \varepsilon_0 |E|^2c,
 \label{eq:06_03}
 \eeq
-in 
+zato velja
 \beq
 j \propto (E_1+E_2)(E_1^*+E_2^*)  = 
 \left( E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t}\right)
-\left( E_{10} e^{-i\phi_1 + i \omega t} + E_{20} e^{-i\phi_2 + i \omega t}\right).
+\left( E_{10} e^{-i\phi_1 + i \omega t} + E_{20} e^{-i\phi_2 + i \omega t}\right)\!.
 \label{eq:06_04}
 \eeq
-Dobimo:
+Sledi:
 \beq
-j \propto E_{10}^2 + E_{20}^2 + E_{10}E_{20} \left(e^{i\phi_1-i\phi_2}+ e^{-i\phi_1+i\phi_2}\right)
+j \propto E_{10}^2 + E_{20}^2 + E_{10}E_{20} \left(e^{i\phi_1-i\phi_2}+ e^{-i\phi_1+i\phi_2}\right)\!.
 \label{eq:06_05}
 \eeq
-in 
-\beq
+Eksponente v oklepaju izrazimo s kotno funkcijo in dobimo:
+\boxeq{eq:06_06}{
 j = j_1 + j_2 + 2\sqrt{j_1 j_2} \cos(\Delta \phi),
-\label{eq:06_06}
-\eeq
+}
 pri čemer sta $j_1$ in $j_2$ gostoti svetlobnih tokov prvega in drugega delnega valovanja,
 $\Delta \phi$ pa označuje razliko faz $\phi_1-\phi_2$. Le kadar je ta razlika neodvisna
-od časa, lahko v eksperimentu izmerimo tudi tretji člen v enačbi~(\ref{eq:06_06}). Sicer se 
-ta člen pri meritvi izpovpreči. V odvisnosti od (časovno neodvisnega) $\Delta \phi$,  
-gostota svetlobnega toka zavzema vrednosti:
+od časa oziroma se s časom zelo počasi spreminja, v eksperimentu poleg prvih dveh členov
+v enačbi~(\ref{eq:06_06}) opazimo tudi tretjega. V nasprotnem primeru se tretji člen 
+izpovpreči in intenziteta na opazovalnem zaslonu je enaka vsoti intenzitet posameznih 
+delnih valovanj. Interference v tem primeru ne vidimo. 
+
+Če je $\Delta \phi$ neodvisen od časa, gostota svetlobnega toka na opazovalnem zaslonu $j$
+zavzema vrednosti $j_\mathrm{min}<j<j_\mathrm{max}$, za katere velja:
 \beq
-\left(\sqrt{j_1}- \sqrt{j_2}\right)^2 < j < \left(\sqrt{j_1} +\sqrt{j_2}\right)^2.
+\left(j_1+j_2 -2\sqrt{j_1 j_2}\right) < j < \left(j_1+j_2 -2\sqrt{j_1 j_2}\right)
 \label{eq:06_07}
 \eeq
-\begin{figure}[ht]
-\centering
-\def\svgwidth{120truemm} 
-%\input{slike/06_kontrast.pdf_tex}
-\caption{SLIKA}
-\label{fig:06_kontrast}
-\end{figure}
-
+oziroma zapisano drugače:
+\beq
+\left(\sqrt{j_1}- \sqrt{j_2}\right)^2 < j < \left(\sqrt{j_1} +\sqrt{j_2}\right)^2\!\!.
+\label{eq:06_07a}
+\eeq
 Vpeljemo vidljivost ali kontrast interferenčnega vzorca:
 \beq
 v = \frac{j_\mathrm{max}- j_\mathrm{min}}{j_\mathrm{max}+ j_\mathrm{min}},
 \label{eq:06_08}
 \eeq
-ki lahko zavzema vrednosti med 0 in 1.
-
-V posebnem primeru, ko sta amplitudi obeh valovanj enaki $E_{01} = E_{02} = E_0$ in velja 
-$j_1 = j_2 = j_0$, dobimo:
+ki lahko zavzema vrednosti med 0 in 1. V posebnem primeru, 
+ko sta amplitudi obeh valovanj enaki in je $j_1 = j_2 = j_0$, je skupna gostota 
+svetlobnega toka enaka (enačba~\ref{eq:06_06}):
 \beq
-j = 2j_0 + 2j_0 \cos (\Delta \phi) = 4j_0 \cos^2 (\Delta \phi/2)
+j = 2j_0 + 2j_0 \cos (\Delta \phi) = 4j_0 \cos^2 (\Delta \phi/2).
 \label{eq:06_09}
 \eeq
 Interferenčni vzorec dveh enako močnih snopov svetlobe zavzame vrednosti med 0 
 in $4j_0$, kar pomeni, da je kontrast takega vzorca enak 1. 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/06_vidljivost.pdf_tex}
+\vglue3truemm
+\caption{Interferenca dveh valovanj z različnima intenzitetama. 
+Vrednost skupne gostote svetlobnega toka v odvisnosti od faznega 
+zamika med vpadnima valovanjima oscilira med najmanjšo in največjo vrednostjo.}
+\label{fig:06_kontrast}
+\end{figure}
 
-Kako pa je z ohranitvijo energijskega toka? Pri interferenci se energijski 
-tok seveda ohranja, pride le do preporazdelitve energije. Povprečni energijski 
-tok čez veliko območje prostora pa je 
+Kako pa je z ohranitvijo energijskega toka? Povprečni energijski 
+tok čez veliko območje prostora je (enačba~\ref{eq:06_09}):
 \beq
-\langle j \rangle = \frac{1}{2}(4j_0) = 2j_0,
+\langle j \rangle = \langle 4j_0 \cos^2 (\Delta \phi/2) \rangle  = \frac{1}{2}(4j_0) = 2j_0,
 \label{eq:06_10}
 \eeq
-kar ustreza gostoti energijskega toka začetnih dveh valovanj. 
+kar je po pričakovanju enako gostoti energijskega toka dveh vpadnih valovanj. 
+Pri interferenci se torej energijski tok ohranja, pride pa do preporazdelitve energije.
 
-Poglejmo interferenco dveh valovanj, ki pod kotom vpadata eno glede na drugo.
+Poglejmo interferenco dveh valovanj, ki pod kotom vpadata eno glede na drugo
+in  ju zapišemo kot:
+\beq
+E_1 = e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
+E_1 = e^{-ik_x x} e^{ik_z z}e^{-i\omega t},
+\label{eq:06_12}
+\eeq
+pri čemer sta vektorja:
+\beq
+\mathbf{k}_1 = (k_x,0, k_z) \qquad \mathrm{in} \qquad \mathbf{k}_2 = (-k_x,0, k_z).
+\label{eq:06_13}
+\eeq
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
@@ -139,30 +165,16 @@ Poglejmo interferenco dveh valovanj, ki pod kotom vpadata eno glede na drugo.
 \caption{SLIKA}
 \label{fig:06_interferenca}
 \end{figure}
-Potem prvo valovanje zapišemo kot:
-\beq
-E_1 = e^{ik_\perp x} e^{ik_z z}e^{-i\omega t}
-\label{eq:06_11}
-\eeq
-in drugo kot:
-\beq
-E_1 = e^{-ik_\perp x} e^{ik_z z}e^{-i\omega t},
-\label{eq:06_12}
-\eeq
-pri čemer sta vektorja:
-\beq
-\mathbf{k}_1 = (k_\perp,0, k_z) \qquad \mathrm{in} \qquad \mathbf{k}_2 = (-k_\perp,0, k_z).
-\label{eq:06_13}
-\eeq
+
 Interferenca teh dveh valovanj da:
 \beq
-E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_\perp x}+e^{-ik_\perp x} \right) = 
-E_0 e^{ik_z z -i\omega t } 2 \cos(k_\perp x).
+E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_x x}+e^{-ik_x x} \right) = 
+E_0 e^{ik_z z -i\omega t } 2 \cos(k_x x).
 \label{eq:06_14}
 \eeq
 Interferenčni vzorec, ki ga opazujemo, je:
 \beq
-j = 4 j_0 \cos^2(k_\perp x).
+j = 4 j_0 \cos^2(k_x x).
 \label{eq:06_15}
 \eeq
 
@@ -334,11 +346,46 @@ posamezne prispevke jakosti električnega polja na prepuščeni strani:
 E_1 &= E_0\,t_{12}\,t_{21},\\
 E_2 &= E_0\,t_{12}\,r_{21}\,r_{21}\,e^{i\phi}\,t_{21},\\
 E_3 &= E_0\,t_{12}\,r_{21}\,r_{21}\,e^{i\phi}\,r_{21}\,r_{21}\,e^{i\phi}\,t_{21},\\
-itd.
+&...\\
+E_{N+1} &= E_0\,t_{12}\,\left(r_{21}\,r_{21}\right)^N\,e^{iN\phi}\,t_{21}\\
+&...
 \label{eq:06_29}
 \end{align}
 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+%\input{slike/06_.pdf_tex}
+\caption{SLIKA}
+\label{fig:05_Nrez}
+\end{figure}
 
+Pri tem smo upoštevali tudi fazni zamik zaradi dodatne prepotovane poti v plasti:
+\beq
+\phi = k_0 2d \cos \beta n_2.
+\label{eq:06_31}
+\eeq
+Dodaj izpeljavo, skico. 
+Celotno polje zapišemo kot vsoto vseh teh prispevkov:
+\begin{align}
+E_t &= E_1+E_2+E_3+... + E_N + ... \\
+& E_0\, t_{12}\,t_{21}\,\left(1 + r_{21}^2 e^{i\phi} + r_{21}^4 e^{2i\phi} + r_{21}^6 e^{3i\phi} + ... \right).
+\label{eq:06_30}
+\end{align}
+Geometrijsko vrsto lahko seštejemo in za prepuščeno polje dobimo:
+\beq
+E_t = \frac{E_0 t_{21}t_{12}}{1-r_{21}^2e^{i\phi}} = E_0 t.
+\label{eq:06_32}
+\eeq
+Zanima nas gostota prepuščenega energijskega toka glede na vpadno. Ker sta lomni količnik snovi
+in smer širjenja svetlobe na izhodni strani enaka kot na vpadni, je prepustnost $T$ kar enaka $|t|^2$.
+Uporabimo enačbo~(\ref{eq:06_32}) in upoštevamo zveze med amplitudnimi prepustnostmi in odbojnostmi:
+$t_{21} = 1+r_{21} = 1-r_{12}$ in $t_{12} = 1+r_{12}$. Vpeljemo odbojnost $R = r_{12}^2 = R$.
+Prepustnost je tako:
+\beq
+T
+\label{eq:06_33}
+\eeq
 
 
 
