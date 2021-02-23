@@ -145,7 +145,7 @@ ob nekem trenutku.}
 \end{figure}
 
 Vrnimo se k nastavku (enačba~\ref{eq:ravnival}) in fazo oziroma
-argument kotne funkcije, označimo s $\phi$:
+argument kotne funkcije označimo s $\phi$:
 \beq
 \phi = \mathbf{k}\cdot \mathbf{r} - \omega t + \delta.
 \label{eq:03_06}
@@ -201,9 +201,9 @@ Za komponento v smeri $x$ dobimo:
 \frac{\partial^2E_x}{\partial z^2} \nonumber \\
 &= \left(\frac{\partial^2}{\partial x^2} + 
 \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}\right) \left(
-E_{0x} \exp\left( ik_xx+ik_yy+ik_zz -i\omega t + \delta\right) \right)\nonumber \\
-&= \left( -k_x^2 -k_y^2-k_z^2\right) E_{0x} \exp\left( ik_xx+ik_yy+ik_zz -i\omega t + \delta\right)\nonumber \\
-&= -k^2 E_{0x} \exp\left( ik_xx+ik_yy+ik_zz -i\omega t + \delta\right) = -k^2 E_x.
+E_{0x} \exp\left( ik_xx+ik_yy+ik_zz -i\omega t + i\delta\right) \right)\nonumber \\
+&= \left( -k_x^2 -k_y^2-k_z^2\right) E_{0x} \exp\left( ik_xx+ik_yy+ik_zz -i\omega t + i\delta\right)\nonumber \\
+&= -k^2 E_{0x} \exp\left( ik_xx+ik_yy+ik_zz -i\omega t + i\delta\right) = -k^2 E_x.
 \label{eq:03_11}
 \end{align}
 Podoben izračun naredimo še za ostali komponenti in združeno zapišemo:
@@ -342,7 +342,7 @@ Nato izračunamo rotor jakosti električnega polja:
 \nabla \times \mathbf{E} = 
 \left|
 \begin{array}{ccc}
-\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\mathbf{e}_x & \mathbf{e}_y & \mathbf{e}_z\\
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
 E_{x} & E_{y} & E_{z}
 \end{array}\right|
@@ -361,21 +361,22 @@ Rezultat vstavimo v enačbo~(\ref{eq:03_22}) in dobimo:
 \mathbf{k}\times \mathbf{E} = \omega \mathbf{B}.
 \label{eq:EkB}
 \eeq
-Sledi, ortogonalnost jakosti električnega $\mathbf{E}$ in gostote magnetnega
+Sledi ortogonalnost jakosti električnega $\mathbf{E}$ in gostote magnetnega
 polja $\mathbf{B}$:
 \boxeq{eq:EBort}{
 \mathbf{B}\perp \mathbf{E}.
 }
 S tem smo pokazali, da so v elektromagnetnem valovanju v izotropni snovi
 vsi trije vektorji $\mathbf{E}$, $\mathbf{B}$ in $\mathbf{k}$
-med seboj paroma pravokotni. Navadno velja dogovor, da je 
-$\mathbf{E}\parallel x$, $\mathbf{B}\parallel y$ in $\mathbf{k}\parallel z$.
+med seboj paroma pravokotni. Navadno velja dogovor, da svetloba potuje
+vzdolž osi $z$, $\mathbf{E}$ kaže vzdolž osi $x$ in $\mathbf{B}$ vzdolž osi $y$.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/03_orto.pdf_tex}
 \caption{Elektromagnetno valovanje v izotropni snovi je transverzalno.}
 \label{fig:03_orto}
+\vglue-4truemm
 \end{figure}
 
 \subsection*{Razmerje med $\mathbf{E}_0$ in $\mathbf{B}_0$}
@@ -402,7 +403,7 @@ Z = \frac{E_0}{H_0} = \frac{E_0 \mu \mu_0}{B_0} = \mu \mu_0 c =
 \label{eq:03_25}
 \eeq
 Hitro uvidimo, da je enota za impedanco $\si{\ohm}$. V vakuumu, 
-kjer sta $\varepsilon = 1$ in $\mu= 1$, je impedanca $Z_v = 377~\si{\ohm}$.
+kjer sta $\varepsilon = 1$ in $\mu= 1$, je impedanca $Z_0 = 377~\si{\ohm}$.
 
 \begin{remark}
 Poleg ravnih valov, ki predstavljajo enodimenzionalno rešitev valovne enačbe, poznamo
@@ -427,28 +428,32 @@ cilindričnega vala pa valji (b).}
 
 \section{Poyntingov vektor in energijski tok}
 Verjetno najpomembnejša lastnost elektromagnetnega valovanja je prenos energije. V električnem
-polju gostoto energije zapišemo kot:\footnote{Glej npr. J. Strnad, {\it Fizika, drugi del}, 
-DMFA-založništvo (2018).}
+polju gostoto energije zapišemo kot:\footnote{Glej npr. R. Podgornik in A. Vilfan, {\it Elektromagnetno polje}, 
+DMFA-založništvo (2012).}
 \beq
-w_E = \frac{1}{2}\varepsilon \varepsilon_0 \mathbf{E}^2
+w_E = \frac{1}{2} \left(\mathbf{E}\cdot \mathbf{D}\right) = 
+\frac{1}{2} \varepsilon \varepsilon_0 \left(\mathbf{E}\cdot \mathbf{E}\right)
+= \frac{1}{2}\varepsilon \varepsilon_0 |\mathbf{E}|^2
 \label{eq:03_27}
 \eeq
 in v magnetnem polju kot: 
 \beq
-w_B = \frac{1}{2\mu \mu_0} \mathbf{B}^2.
+w_B = \frac{1}{2} \left(\mathbf{B}\cdot \mathbf{H}\right) = 
+\frac{1}{2\mu \mu_0} \mathbf{B}\cdot \mathbf{B} = 
+\frac{1}{2\mu \mu_0} |\mathbf{B}|^2.
 \label{eq:03_28}
 \eeq
 Celotna gostota energije elektromagnetnega valovanja v prostoru je vsota obeh prispevkov:
 \beq
-w_{EMV} = w_E + w_B = \frac{1}{2}\varepsilon \varepsilon_0 \mathbf{E}^2 + \frac{1}{2\mu \mu_0} \mathbf{B}^2.
+w_{EMV} = w_E + w_B = \frac{1}{2}\varepsilon \varepsilon_0 |\mathbf{E}|^2 + \frac{1}{2\mu \mu_0} |\mathbf{B}|^2.
 \label{eq:03_29}
 \eeq
 Vstavimo jakost električnega (enačba~\ref{eq:ravnival}) in gostoto magnetnega polja
 (enačba~\ref{eq:ravnivalB}), pri čemer za fazni zamik valovanja izberemo $\delta=0$. Sledi:
 \beq
-w_{EMV} = \frac{1}{2}\varepsilon \varepsilon_0 \mathbf{E}_0^2 
+w_{EMV} = \frac{1}{2}\varepsilon \varepsilon_0 E_0^2 
 \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)
-+ \frac{1}{2\mu \mu_0} \mathbf{B}_0^2 \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\!.
++ \frac{1}{2\mu \mu_0} B_0^2 \cos^2 \left(\mathbf{k}\cdot \mathbf{r} - \omega t\right)\!.
 \label{eq:03_30}
 \eeq
 Upoštevamo zvezo med amplitudama (enačba~\ref{eq:EBc}) in dobimo:
@@ -597,7 +602,7 @@ v izhodišču pri $z=0$ pa kot:
 \cos \left(\omega t\right)\!.
 \label{eq:03_39}
 \eeq
-Velikosti komponent $E_{x0}$ in $E_{y0}$ se na splošno razlikujeta in njuno razmerje
+Velikosti komponent $E_{0x}$ in $E_{0y}$ se na splošno razlikujeta in njuno razmerje
 določa kot nagiba polarizacije glede na os $x$. Če je ena od komponent enaka nič, je 
 polarizacija poravnana s koordinatno osjo sistema.
 
@@ -764,7 +769,7 @@ Pri vektorskem zapisu polarizacije krajevno-časovni del v eksponentu izpustimo,
 je za obe komponenti enak. Poleg tega vektor navadno normiramo in 
 polarizacijo zapišemo z vektorjem:
 \boxeq{eq:Jones}{
-J = \frac{1}{\sqrt{E_{0x}^2+E_{0y}^2}}
+\mathbf{J} = \frac{1}{\sqrt{E_{0x}^2+E_{0y}^2}}
 \left[\begin{array}{c}
 E_{0x}\\
 E_{0y} e^{i \delta}\\
@@ -775,7 +780,7 @@ ki ga imenujemo Jonesov vektor, po ameriškem fiziku Robertu Clarku Jonesu (1916
 Zapišimo nekaj naznačilnejših Jonesovih vektorjev. Za svetlobo, ki 
 je linearno polarizarna v smeri $x$, je Jonesov vektor oblike:
 \beq
-J = \left[\begin{array}{c}
+\mathbf{J} = \left[\begin{array}{c}
 1\\
 0\\
 \end{array}\right]\!\!.
@@ -783,7 +788,7 @@ J = \left[\begin{array}{c}
 \eeq
 Podobno svetlobo, ki je linearno polarizirana v smeri $y$, zapišemo kot:
 \beq
-J = \left[\begin{array}{c}
+\mathbf{J} = \left[\begin{array}{c}
 0\\
 1\\
 \end{array}\right]\!\!.
@@ -793,7 +798,7 @@ J = \left[\begin{array}{c}
 enotskega vektorja na osi $x$ in $y$. Za nagib $45\si{\degree}$ je
 Jonesov vektor:
 \beq
-J = \frac{1}{\sqrt{2}}\left[\begin{array}{c}
+\mathbf{J} = \frac{1}{\sqrt{2}}\left[\begin{array}{c}
 1\\
 1\\
 \end{array}\right]
@@ -801,7 +806,7 @@ J = \frac{1}{\sqrt{2}}\left[\begin{array}{c}
 \eeq
 in za nagib v smeri $-45\si{\degree}$:
 \beq
-J = \frac{1}{\sqrt{2}}\left[\begin{array}{c}
+\mathbf{J} = \frac{1}{\sqrt{2}}\left[\begin{array}{c}
 1\\
 -1\\
 \end{array}\right]\!\!.
@@ -812,7 +817,7 @@ valovanje. Za tako valovanje sta komponenti po velikosti enaki $E_0$,
 razlikujeta pa se v fazi za $\pm \pi/2$. 
 Po dogovoru desno cirkularno polarizirano valovanje zapišemo kot:
 \beq
-J = \frac{1}{\sqrt{E_{0x}^2+E_{0y}^2}}
+\mathbf{J} = \frac{1}{\sqrt{E_{0x}^2+E_{0y}^2}}
 \left[\begin{array}{c}
 E_{0x}\\
 E_{0y} e^{i \delta}\\
@@ -832,7 +837,7 @@ e^{-i \pi/2}\\
 Za levo cirkularno polarizirano valovanje je Jonesov
 vektor:
 \beq
-J = \frac{1}{\sqrt{2}}
+\mathbf{J} = \frac{1}{\sqrt{2}}
 \left[\begin{array}{c}
 1\\
 i\\
@@ -848,11 +853,11 @@ Prednost takega pristopa je pri zapletenih sistemih, v katerih
 na polarizacijo deluje več optičnih elementov zapored, saj
 matrike za te optične elemente preprosto množimo.
 
-Na splošno je izhodna polarizacija $J_2$ enaka produktu
+Na splošno je izhodna polarizacija $\mathbf{J}_2$ enaka produktu
 matrike $M$, ki predstavlja optični element,
-in vektorja, ki opisuje vhodno polarizacijo $J_1$:
+in vektorja, ki opisuje vhodno polarizacijo $\mathbf{J}_1$:
 \beq
-J = \left[\begin{array}{c}
+\mathbf{J}_2 = \left[\begin{array}{c}
 J_{2x}\\
 J_{2y}\\
 \end{array}\right] = 
@@ -863,7 +868,7 @@ M_{21}& M_{22}\\
 \left[\begin{array}{c}
 J_{1x}\\
 J_{1y}\\
-\end{array}\right]\!\!.
+\end{array}\right] = M \cdot \mathbf{J}_1.
 \label{eq:03_48}
 \eeq
 
@@ -904,7 +909,7 @@ Preprosto lahko preverimo, da je poljubno vpadno valovanje s komponentnama
 $E_x$ in $E_y$ po prehodu skozi tak polarizator polarizirano 
 pod kotom $\pm45\si{\degree}$:
 \beq
-J = \frac{1}{2}\left[\begin{array}{cc}
+\mathbf{J} = \frac{1}{2}\left[\begin{array}{cc}
 1 & \pm 1 \\
 \pm 1 & 1\\
 \end{array}\right]\cdot 
@@ -942,7 +947,7 @@ i & 1\\
 \eeq
 Tudi to hitro preverimo z računom:
 \beq
-J = \frac{1}{2}\left[\begin{array}{cc}
+\mathbf{J} = \frac{1}{2}\left[\begin{array}{cc}
 1 & \pm i \\
 \mp i & 1\\
 \end{array}\right]\cdot 
@@ -1001,7 +1006,7 @@ M = e^{\pm i\pi/4}
 \eeq
 pri čemer velja zgornji predznak, če je hitra os v smeri $y$, in spodnji predznak, kadar
 je hitra os v smeri $x$. Ta optični element na splošno iz vpadne linearne
-polarizacije naredi elipično. Če je vpadna polarizacija vzporedna z
+polarizacije naredi eliptično. Če je vpadna polarizacija vzporedna z
 lastnima osema ploščice, se linearna polarizacija ohranja, če pa je
 zasukana pod kotom $45^\circ$, nastane iz linearnega krožno polarizirano valovanje. 
 
@@ -1041,13 +1046,13 @@ svetloba vpade najprej, napišemo najbližje Jonesovemu vektorju za vpadno svetl
 torej skrajno desno. Polarizacija svetlobe, ki prehaja skozi sistem, 
 v katerem si elementi sledijo od 1 do $N$, je enaka:
 \beq
-J_2 = M_N \cdot M_{N-1} \dots M_2 \cdot M_1 \cdot J_1.
+\mathbf{J}_N = M_N \cdot M_{N-1} \dots M_2 \cdot M_1 \cdot \mathbf{J}_1.
 \label{eq:03_60}
 \eeq
 
 \begin{example}{\bf Izdelava cirkularnega polarizatorja.}
 \label{ex_circ}
-Večina cirkularnih polarizatorjev je narejena iz linearnega polarizatorja, ki 
+Cirkularni polarizatorji so navadno narejeni iz linearnega polarizatorja, ki 
 je zasukan za kot $45^\circ$, in ploščice $\lambda/4$. Izračunajmo prehodno 
 matriko za tak sistem:
 \beq
@@ -1084,7 +1089,7 @@ i\\
 \end{array}\right]\!\!.
 \eeq
 Desni cirkularni polarizator naredimo tako, da vstopni linearni polarizator
-zasušemo za $90^\circ$.
+zasučemo za $90^\circ$.
 \end{example}
 
 \begin{example}{\bf Optični izolator.} 

@@ -147,17 +147,14 @@ tok čez veliko območje prostora je (enačba~\ref{eq:06_09}):
 kar je po pričakovanju enako gostoti energijskega toka dveh vpadnih valovanj. 
 Pri interferenci se torej energijski tok ohranja, vendar se energija prerazporedi.
 
-Poglejmo za primer interferenco dveh valovanj z enakima intenzitetama, 
-ki pod kotom vpadata eno glede na drugo. 
-Njuna valovna vektorja zapišemo kot:
-\beq
-\mathbf{k}_1 = (k_x,0, k_z) \qquad \mathrm{in} \qquad \mathbf{k}_2 = (-k_x,0, k_z).
-\label{eq:06_13}
-\eeq
+\begin{example}{\bf Interferenca dveh ravnih valovanj}.
+Opazujmo interferenco dveh ravnih valovanj z enakima intenzitetama, ki pod kotom 
+vpadata eno glede na drugo. Njuna valovna vektorja zapišemo kot:
+$\mathbf{k}_1 = (k_x,0, k_z)$ in $\mathbf{k}_2 = (-k_x,0, k_z)$.
 Valovanji sta potem oblike:
 \beq
-E_1 = e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
-E_2 = e^{-ik_x x} e^{ik_z z}e^{-i\omega t}.
+E_1 = E_0 e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
+E_2 = E_0 e^{-ik_x x} e^{ik_z z}e^{-i\omega t}.
 \label{eq:06_12}
 \eeq
 Interferenca teh dveh valovanj da:
@@ -166,12 +163,12 @@ E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_x x}+e^{-ik_x x} \right) =
 E_0 e^{ik_z z -i\omega t } 2 \cos(k_x x).
 \label{eq:06_14}
 \eeq
-Interferenčni vzorec, ki ga zaznamo, je potem enak:
+Interferenčni vzorec, ki ga zaznamo, je enak:
 \beq
 j = 4 j_0 \cos^2(k_x x).
 \label{eq:06_15}
 \eeq
-\vglue-5truemm
+\vglue-7truemm
 \begin{figure}[!h]
 \centering
 \def\svgwidth{130truemm} 
@@ -181,7 +178,35 @@ se valovanji seštejeta, se pojavijo ojačitve, vmes so oslabitve. Intenziteta i
 ima značilne bele črte na mestu oslabitev, potujoče rdeče in modre liste z leve slike pa se 
 na detektorju izpovprečijo (desno).}
 \label{fig:06_int}
+\vglue-5truemm
 \end{figure}
+
+\end{example}
+
+\begin{example}{\bf Interferenca dveh krožnih valovanj}.
+Poglejmo še interferenco dveh krožnih valovanj v ravnini. 
+Valovanji sta v ravnini $xy$ oblike:
+\beq
+E_1 \propto \exp\left( ik\sqrt{x^2+y^2}\right)  e^{-i\omega t} \qquad \mathrm{in} \qquad 
+E_2 \propto \exp\left( ik\sqrt{(x-d)^2+y^2}\right)  e^{-i\omega t},
+\label{eq:06_16a}
+\eeq
+pri čemer je $d$ razmik med točkastima izvoroma. Pojemanja amplitude
+z oddaljenostjo od izvora nismo zapisali. Nekaj primerov interferenčnih vzorcev, ki 
+nastanejo pri različnih razmikih $d$, je narisanih na sliki~\ref{fig:06_intkrog}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140truemm]{slike/06_interferenca_krog.png}
+\caption{Interferenca dveh krožnih valov za različne razmike med točkastima izvoroma. Kjer sta
+valovanji iz faze (destruktivna interferenca), se pojavijo bele črte, ker sta valovanji v fazi
+(konstruktivna interferenca), se pojavijo ojačitve. Z naraščajočim razmikom se ojačitve in oslabitve
+gostijo.}
+\label{fig:06_intkrog}
+\vglue-5truemm
+\end{figure}
+
+\end{example}
 
 \section{Interferenca z delitvijo valovne fronte}
 V večini interferometričnih ustvarimo interferenco z enim samim snopom svetlobe, 
@@ -274,12 +299,12 @@ j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\varthe
 \eeq
 Če so reže ze ozke in $d\to 0$, je strukturni faktor enak 1 in intenziteta vrhov z oddaljenostjo
 os optične osi ne pojema. V primeru dveh ozkih rež, je 
-\beq
-j = j_0 \frac{\sin^2(NkD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
-j_0 \frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{×\sin^2(kD \sin\vartheta/2)}
- = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}\right){2},
-\label{eq:06_23}
-\eeq
+% \beq
+% j = j_0 \frac{\sin^2(NkD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
+% j_0 \frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{×\sin^2(kD \sin\vartheta/2)}
+%  = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}\right){2},
+% \label{eq:06_23}
+% \eeq
 kar je enako enačbi~(\ref{eq:06_17}).
 
 \begin{remark}

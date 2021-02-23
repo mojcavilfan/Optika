@@ -54,9 +54,9 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{06_interferenca_1.pdf}}%
-    \put(0.0478835,0.02171287){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_1$\end{tabular}}}}%
+    \put(0.93850144,0.11164126){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_2$\end{tabular}}}}%
     \put(0.47944009,0.05941359){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_2$\end{tabular}}}}%
-    \put(0.687695,0.07634744){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_1$\end{tabular}}}}%
-    \put(0.93850143,0.11164126){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_2$\end{tabular}}}}%
+    \put(0.68769501,0.07634744){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_1$\end{tabular}}}}%
+    \put(0.04788351,0.02171286){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_1$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
