@@ -209,29 +209,34 @@ gostijo.}
 \end{example}
 
 \section{Interferenca z delitvijo valovne fronte}
-V večini interferometričnih ustvarimo interferenco z enim samim snopom svetlobe, 
+V večini interferometričnih naprav in pri večini interferenčnih poskusov
+ustvarimo interferenco z enim samim snopom svetlobe, 
 ki ga razdelimo na dva dela. To lahko naredimo na dva načina: lahko razdelimo
 valovno fronto valovanja (npr. Youngov poskus) ali pa razdelimo amplitudo
 valovanja (npr. Michelsonov interferometer). 
 
 Najpomembnejši primer interference z delitvijo valovne fronte je nedvomno
-Youngov poskus (1801), ki je angleškega fizika Thomasa Younga vodil do spoznanja,
-da je svetloba transverzalno valovanje. Pri tem poskusu vpadno valovanje iz 
-monokromatskega izvora simetrično usmerimo na zaslon, v katerem sta dve enaki ozki
-reži in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovanje mora biti 
-koherentno. Več o tej lastnosti valovanja 
-bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Poiščimo lego ojačitev in oslabitev
+Youngov poskus (1801), na podlagi katerega je angleški fizik Thomas Young
+spoznal, da je svetloba transverzalno valovanje. Pri tem poskusu vpadno valovanje iz 
+monokromatskega izvora  
+simetrično usmerimo na zaslon, v katerem sta dve enaki ozki
+reži, in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovanje mora biti 
+kar se da koherentno. Young je to dosegel tako, da je vpadno svetlobo najprej 
+speljal skozi tanko režo in jo šele nato usmeril na zaslon z dvema režama. 
+Več o koherenci bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Poiščimo lego ojačitev in oslabitev
 na oddaljenem zaslonu.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
-%\input{slike/06_Young.pdf_tex}
-\caption{SLIKA}
+\input{slike/06_Young.pdf_tex}
+\caption{Pri Youngovem poskusu svetloba prehaja ozko režo in vpada simetrično na dve ozki
+reži. Na oddaljenem zaslonu opazujemo interferenco.}
 \label{fig:06_Young}
 \end{figure}
 
-Naj bodo $z_0$ razdalja od objektnega zaslona do opazovalnega zaslona, $D$ razdalja 
-med središčema rež, $r_1$ razdalja med sredino prve reže in izbrano točko na zaslonu
+Naj bodo $z_0$ razdalja od objektnega zaslona z dvema režama 
+do opazovalnega zaslona, $D$ razdalja med središčema rež, 
+$r_1$ razdalja med sredino prve reže in izbrano točko na zaslonu
 ter $r_2$ razdalja med sredino druge reže in točko na zaslonu. Potem za velike 
 oddaljenosti $r_1, r_2 \gg D$ velja:
 \beq
@@ -239,14 +244,17 @@ oddaljenosti $r_1, r_2 \gg D$ velja:
 \label{eq:06_16}
 \eeq
 pri čemer je $\vartheta$ kot med osjo $z$ in zveznico med točko na sredini med režama in
-izbrano točko na opazovalnem zaslonu. Uporabimo enačbo~(\ref{eq:06_09}) in dobimo:
+izbrano točko na opazovalnem zaslonu. Uporabimo enačbo~(\ref{eq:06_09}) in za gostoto 
+svetlobnega toka na zaslonu dobimo:
 \beq
-j = 4 j_0 \cos^2\left(\frac{\Delta \phi}{2}\right) = 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right).
+j = 4 j_0 \cos^2\left(\frac{\Delta \phi}{2}\right) = 4j_0 \cos^2\left(\frac{k\Delta r}{2}\right) = 
+4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right)\!\!.
 \label{eq:06_17}
 \eeq
 
 V točkah, kjer se prispevka obeh valovanj seštevata, nastopi tako imenovana
-konstruktivna interferenca in na zaslonu opazimo ojačitve. Pogoj za ojačitev zapišemo kot:
+konstruktivna interferenca in na zaslonu opazimo ojačitve. Izhajajoč iz enačbe~(\ref{eq:06_17})
+pogoj za ojačitev zapišemo kot:
 \beq
 \frac{kD\sin \vartheta}{2} = N\pi,
 \label{eq:06_18}
@@ -254,20 +262,19 @@ konstruktivna interferenca in na zaslonu opazimo ojačitve. Pogoj za ojačitev z
 pri čemer je $N$ celo število. Od tod izračunamo pogoj za kote $\vartheta_\mathrm{max}$, pri katerih
 se pojavijo vrhovi:
 \boxeq{eq:InterferencaMax}{
-D \sin\vartheta = N \lambda.
+D \sin\vartheta_\mathrm{max} = N \lambda.
 }
-Ker je leva stran enačbe enaka razliki poti od rež do točke na zaslonu, je zapis preprosto razumeti:
-razlika poti od središč rež do točke na zaslonu mora biti enaka večkratniku valovne dolžine valovanja.
+Ker je leva stran enačbe enaka razliki poti od rež do točke na zaslonu, je zapis preprosto razumeti. 
+Ojačitve se pojavijo, kjer je razlika poti od središč rež do točke na zaslonu enaka večkratniku 
+valovne dolžine valovanja.
 
 V vmesnih točkah, kjer se prispevka valovanj odštevata, je destruktivna
-interferenca in na zaslonu opazimo oslabitve (temne proge). Podobno kot za ojačitve
-zapišemo pogoj za oslabitve:
+interferenca in na zaslonu opazimo oslabitve (temne proge). Pogoj za oslabitve je:
 \boxeq{eq:InterferencaMin}{
-D \sin\vartheta = \left(N + \frac{1}{2}\right)\lambda.
+D \sin\vartheta_\mathrm{min} = \left(N + \frac{1}{2}\right)\lambda.
 }
-
 Vzorec, ki se pojavi v daljnjem polju oziroma na oddaljenem zaslonu,
-je periodičen s periodo ponavljanja $\Delta \xi_0$. Izračunajmo jo. Velja:
+je za majhne kote periodičen s periodo ponavljanja $\Delta \xi_0$. Izračunajmo jo. Velja:
 \beq
 \Delta \left(\frac{kD\sin \vartheta}{2}\right) = \pi.
 \label{eq:06_19}
@@ -282,46 +289,65 @@ od koder sledi:
 \Delta \xi_0 = \frac{\lambda z_0}{D}.
 \label{eq:06_21}
 \eeq
-Bliže kot so reže, bolj razmaknjeni so uklonski vrhovi, kar je seveda v skladu
-z uklonsko sliko na velikem številu rež. 
-
-Za $D=1~\si{\micro\metre}$ je na oddaljenosti $z_0 = 1~\si{m}$ razmik med ojačitvami
+Bliže kot so reže (manjši $D$), bolj razmaknjeni so uklonski vrhovi (večji $\Delta \xi_0$),
+kar je seveda v skladu z uklonsko sliko. Za $D=1~\si{\micro\metre}$ je na oddaljenosti 
+$z_0 = 1~\si{m}$ razmik med ojačitvami
 $\Delta \xi_0 = 0,5~\si{m}$, medtem ko je pri $D = 1~\si{mm}$ 
 vrednost $\Delta \xi_0 = 0,5~\si{mm}$. 
 
-Pokažimo, da je dobljeni rezultat ekvivalenten ristemu, ki smo ga izpeljali pri
-obravnavi Fraunhoferjevega uklona v petem poglavju. Za sistem $N$ rež širine $d$
-s periodo ponavljanja $D$ je veljalo (enačba~\ref{eq:uklonNrez}):
+Pokažimo, da je dobljeni rezultat (enačba~\ref{eq:06_17}) enak tistemu, 
+ki smo ga izpeljali pri obravnavi Fraunhoferjevega uklona v petem poglavju. 
+Za sistem $N$ rež širine $d$ s periodo ponavljanja $D$ je veljalo 
+(enačba~\ref{eq:uklonNrez}):
 \beq
 j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\vartheta/2}\right)^2
 \left(\frac{\sin\left(NkD\sin\vartheta/2\right)}{\sin\left(kD\sin\vartheta/2\right)}\right)^2\!\!.
 \label{eq:06_22}
 \eeq
-Če so reže ze ozke in $d\to 0$, je strukturni faktor enak 1 in intenziteta vrhov z oddaljenostjo
-os optične osi ne pojema. V primeru dveh ozkih rež, je 
-% \beq
-% j = j_0 \frac{\sin^2(NkD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
-% j_0 \frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{×\sin^2(kD \sin\vartheta/2)}
-%  = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}\right){2},
-% \label{eq:06_23}
-% \eeq
+Uporabimo zapisano enačbo na primeru, ko je $N=2$, reži pa sta tako ozki, da lahko 
+privzamemo $d\to 0$. Potem je strukturni faktor (prvi oklepaj) enak $1$ in 
+intenziteta vrhov z oddaljenostjo od optične osi $z$ ne pojema. Ostane:
+\beq
+j = j_0~\frac{\sin^2(2kD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
+j_0~\frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{\sin^2(kD \sin\vartheta/2)},
+\eeq
+pri čemer smo uporabili izraz za zapis dvojnega kota. Ulomek krajšamo in dobimo:
+\beq
+j = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}{2}\right)\!\!,
+\label{eq:06_23}
+\eeq
 kar je enako enačbi~(\ref{eq:06_17}).
 
 \begin{remark}
 Oglejmo si še nekaj alternativnih postavitev interferometrov z delitvijo žarka. Pri Youngovem
 eksperimentu se namreč težko izognemo težavam, povezanim s končno širino reže $d$. Njegovi
 sodobniki so poskušali podoben interferenčni vzorec ustvariti nad druge načine. Prvi primer
-je Lloydovo zrcalo, pri katerem interferirajo žarki, ki pridejo neposredno od izvora svetlobe, 
+je Lloydovo zrcalo (1834), pri katerem interferirajo žarki, ki pridejo neposredno od izvora svetlobe, 
 in žarki, ki se odbijejo od zrcala. Drugi primer sta Fresnelovi zrcali, pri katerih interferirata
 sva snopa svetlobe, ki se odbijata vsak od svojega zrcala. Tretja postavitev, ki jo omenimo,
 je s Fresnelovo biprizmo. Svetloba, ki izhaja iz enega svetila, se na Fresnelovi biprizmi
 lomi, lomljena žarka pa med seboj interferirata.
+
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/06_Lloyd.pdf_tex}
+\caption{Različne postavitve za opazovanje interference: Lloydovo zrcalo (a), Fresnelovi
+zrcali (b) in Fresnelova biprizma (c). Črtkane črte označujejo navidezne izvore svetlobe.}
+\label{fig:06_Lloyd}
+\end{figure}
+\vskip1truecm
 \end{remark}
 
 \section{Interferenca z delitvijo amplitude}
+Amplitudno delitev valovanja dosežemo s polprepustnimi zrcali. Kot že ime pove, taka
+zrcala del vpadne svetlobe odbijejo in del prepustijo. 
 Najznačilnejši primer interferometra z delitvijo amplitude je Michelsonov interferometer.
-Vpadno svetlobo s polprepustnim zrcalom razdelimo na dva snopa, ki se odbijeta vsak od 
-svojega zrcala in interferirata na detektorju. S premikanjem enega od zrcal spreminjamo
+Z njim je Michelson pokazal, da je hitrost svetlobe v smeri gibanja Zemlje enaka hitrosti
+svetlobe v smeri pravokotno na smer gibanja in tako ovrgel teorijo o obstoju etra. 
+
+V Michelsonovem interferometru vpadno svetlobo s polprepustnim zrcalom razdelimo 
+na dva snopa. Delna snopa usmerimo na  vsak od svojega zrcala in interferirata na detektorju. S premikanjem enega od zrcal spreminjamo
 zakasnitev med žarkoma in na detektorju se izmenično pojavljajo ojačitve in oslabitve.
 Gostota svetlobnega toka na detektorju je (enačba~):
 \beq

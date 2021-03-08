@@ -54,10 +54,10 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{06_vidljivost.pdf}}%
-    \put(0.02668417,0.36011121){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j$\end{tabular}}}}%
-    \put(0.99401987,-0.03202537){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \phi$\end{tabular}}}}%
-    \put(0.97868836,0.32236939){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{max}$\end{tabular}}}}%
-    \put(0.97742415,0.06202537){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{min}$\end{tabular}}}}%
-    \put(0.97829674,0.19290594){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_1+j_2$\end{tabular}}}}%
+    \put(0.02668417,0.3601112){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j$\end{tabular}}}}%
+    \put(0.99401988,-0.03202538){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \phi$\end{tabular}}}}%
+    \put(0.97868836,0.32236938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{max}$\end{tabular}}}}%
+    \put(0.97742415,0.06202536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{min}$\end{tabular}}}}%
+    \put(0.97829674,0.19290593){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_1+j_2$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
