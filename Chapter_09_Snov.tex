@@ -6,14 +6,66 @@ v najpreprostejši obliki opišemo z lomnim količnikom. Spoznali bomo
 odvisnost lomnega količnika od frekvence vpadnega valovanja, zapisali
 lomni količni za prevodne snovi, opisali optično aktivnost in Faradayev 
 pojav.
- 
-\section{Lomni količnik}
-V drugem poglavju smo vpeljali lomni količnik kot razmerje med hitrostjo
-svetlobe v vakuumu in hitrostjo svetlobe v snovi (enačba~\ref{eq:c}):
+
+\section{Fazna in grupna hitrost}
+V tretjem poglavju smo zapisali najpreprostejšo rešitev valovne enačbe
+v neomejenem prostoru v obliki ravnih valov. Izračunali smo fazno hitrost,
+to je hitrost premikanja ploskev konstantne faze oziroma valovnih front in
+jo zapisali kot razmerje (enačba~\ref{eq:03_10}):
+\beq
+v_f = \frac{\omega}{k}.
+\label{eq:09_25}
+\eeq
+Fazno hitrost navadno označimo s $c$ in jo zapišemo kot (enačba~\ref{eq:c}):
 \beq
 c = \frac{c_0}{n}.
 \label{eq:09_01}
 \eeq
+Razmerje med hitrostjo svetlobe v vakuumu in hitrostjo svetlobe v snovi
+opisuje lomni količnik $n$. Na splošno je lomni količnik odvisen 
+od snovi, po kateri se svetloba širi in tudi od frekvence vpadne svetlobe.
+
+Obravnavajmo zdaj dva ravna vala z enakima amplitudama in malo različnima 
+frekvencama $\omega_1=\omega + \Delta \omega$ in $\omega_2=\omega - \Delta \omega$, 
+ki potujeta v isti smeri. Vsota obeh valovanj je:
+\beq
+E = E_0 \cos (k_1x-\omega_1 t)+ E_0 \cos (k_2x-\omega_2 t)=
+E_0 \cos\left((k-\Delta k)x-(\omega + \Delta \omega)t\right) 
++ E_0 \cos\left((k+\Delta k)x-(\omega - \Delta \omega)t\right). 
+\label{eq:09_23}
+\eeq
+Z uporabo adicijskih izrekov za kotne funkcije izraz preoblikujemo v:
+\beq
+E = 2\cos \left(kx - \omega t \right)\cos \left(\Delta kx - \Delta \omega t \right) 
+\label{eq:09_24}
+\eeq
+Skupno valovanje je torej valovanje z osrednjo krožno frekvenco $\omega$, 
+ki pa je amplitudno modulirano s krožno frekvenco $\Delta \omega$ (slika~\ref{}).
+Pri takem valovanju, ki si ga lahko predstavljamo kot zaporedje potujočih sunkov,
+lahko določimo dve različni hitrosti. Prva je hitrost premikanja ploskev konstantne
+faze oziroma premikanja vrhov hitre modulacije. Ta hitrost je fazna hitrost in
+jo izračunamo z znane enačbe~(\ref{eq:09_25}). Druga hitrost pa je hitrost, s katero
+se premikajo vrhovi počasne modulacije oziroma posamezni sunki. To hitrost imenujemo
+grupna hitrost in jo izračunamo kot $v_g=\Delta \omega/\Delta k$ oziroma v limiti:
+\boxeq{eq:09_24}{
+v_g = \frac{\partial\omega}{\partial k}.
+}
+Izraz za grupno hitrost smo sicer izpeljali na primeru valovanja, sestavljenega iz dveh
+valovanj, vendar velja na splošno za razširjanje sunkov svetlobe. Z grupno hitrostjo
+se tako širi informacija, ki jo lahko prenašamo s svetlobo.
+
+Če je lomni količnik konstanten in $\omega = k c_0/n$, sta fazna in grupna hitrost enaki.
+V primeru, da je lomni količnik funkcija frekvence valovanja, se fazna in grupna hitrost
+razlikujeta. Praviloma je grupna hitrost manjša od fazne, obstajajo pa tudi izjeme, ki
+jih bomo spoznali v prihodnjem razdelku.
+
+
+
+
+Guenther str 263 in celo poglavje!
+
+
+\section{Lomni količnik}
 Zapisali smo, da je lomni količnik odvisen od snovi, po kateri se svetloba širi, 
 in tudi od frekvence vpadne svetobe. Odvisnost lomnega količnika od
 frekvence vpadnega elektromagnetnega valovanja imenujemo disperzija. 
@@ -146,15 +198,82 @@ Dobimo:
 V plazmi se elektroni prosto gibljejo, zato sta v tem primeru $k=0$ in $\gamma = 0$. 
 Za opis plazme tako ostane le še frekvenca $\omega_p$, od tod ime plazemska frekvenca. \end{remark}
 
-
-
-
-
-
-
-
+Kompleksni lomni količnik $\mathcal{N}$ razdelimo na realni $n'$ in imaginarni del $n''$ in 
+zapišemo:
+\beq
+\mathcal{N}^2 = (n'+n'')^2 = n'^2-n''^2+2in'n'' =  1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}.
+\label{eq:09_17}
+\eeq
+Izenačimo realni in imaginarni del leve in desne strani enačbe in dobimo:
+\beq
+n'^2 -n''^2 = \varepsilon' = 1 + \frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
+\omega^2\right)^2 + \gamma^2 \omega^2}
+\label{eq:09_18}
+\eeq
+ter 
+\beq
+2n'n'' = \varepsilon'' = \frac{\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
+\omega^2\right)^2 + \gamma^2 \omega^2}.
+\label{eq:09_19}
+\eeq
+Zapisali smo sistem dveh enačb za realni in imaginarni del lomnega količnika. Rešujemo ga podobno, kot
+smo reševali sistem enačb za lomni količnik v prevodni snovi (enačbe~\ref{eq:nkompleks2} in \ref{eq:03_72})
+z rešitvami v obliki enačb~(\ref{eq:03_76} in \ref{eq:03_77}). Rešitvi sta v obliki:
+\beq
+n'^2 = \frac{1}{2}\left(\varepsilon'+\sqrt{\varepsilon'^2 + \varepsilon''^2}\right)
+\label{eq:09_20}
+\eeq
+in
+\beq
+n''^2 = \frac{1}{2}\left(-\varepsilon'+\sqrt{\varepsilon'^2 + \varepsilon''^2}\right)\!,
+\label{eq:09_21}
+\eeq
+pri čemer sta $\varepsilon'$ in $\varepsilon''$ podana z enačbama~(\ref{eq:09_18} in \ref{eq:09_19}).
 
 \section{Disperzija}
+V prejšnjem razdelku smo na preprostem modelu izpeljali frekvenčno odvisnost realnega in imaginarnega
+dela lomnega količnika. Izrazi so razmeroma zapleteni, zato se navadno poslužimo približkov. Prvi naj 
+bo približek redkega plina. 
+
+V redkem plinu vrednost lomnega količnika le malo odstopa od lomnega količnika vakuuma 
+in $\mathcal{N} \approx 1$. Ker je odstopanje lomnega količnika majhno, lahko kvadratni koren v izrazu
+za lomni količnik (enačba~\ref{eq:09_17}) razvijemo in dobimo:
+\beq
+\mathcal{N} = \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \approx
+1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
+\omega^2\right)^2 + \gamma^2 \omega^2} + \frac{1}{2}\frac{\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
+\omega^2\right)^2 + \gamma^2 \omega^2}.
+\label{eq:09_22}
+\eeq
+\begin{figure}[h!]
+\centering
+\def\svgwidth{100truemm} 
+%\input{slike/09_nkompleks.pdf_tex}
+\caption{Odvisnost realnega in imaginarnega dela in imaginarnega dela lomnega količnika od frekvence
+vpadne svetlobe v preprostem Lorentzovem modelu}
+\label{fig:09_nkompelks}
+\end{figure}
+Poglejmo najprej realni del lomnega količnika (slika~\ref{fig:09_nkompelks}\,a). Bolj kot vrednost
+lomnega količnika samega je pomemben odvod lomnega količnika po krožni frekvenci, saj ta nastopa v izrazu
+za grupno hitrost valovanja. 
+
+Vidimo, da je odvod
+lomnega količnika od frekvence 
+
+disperizaja v vlaknih.
+
+
+vlanka
+mavrica
+prizma
+
+odvisnosti
+viglviglvigl razlozi resonance, uv, elektronske... 
+primeri
+
+n< 1x xray ionosphere
+
+
 \section{Prevodne snovi}
 \section{Optični metamateriali}
 \section{Optična aktivnost}
