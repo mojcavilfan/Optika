@@ -12,31 +12,32 @@ V tretjem poglavju smo zapisali najpreprostejšo rešitev valovne enačbe
 v neomejenem prostoru v obliki ravnih valov. Izračunali smo fazno hitrost,
 to je hitrost premikanja ploskev konstantne faze oziroma valovnih front in
 jo zapisali kot razmerje (enačba~\ref{eq:03_10}):
-\beq
-v_f = \frac{\omega}{k}.
-\label{eq:09_25}
-\eeq
+\boxeq{eq:09_25}{
+v_f = \frac{\omega}{k}
+}
 Fazno hitrost navadno označimo s $c$ in jo zapišemo kot (enačba~\ref{eq:c}):
 \beq
 c = \frac{c_0}{n}.
 \label{eq:09_01}
 \eeq
-Razmerje med hitrostjo svetlobe v vakuumu in hitrostjo svetlobe v snovi
-opisuje lomni količnik $n$. Na splošno je lomni količnik odvisen 
+Pri tem lomni količnik $n$ označuje razmerje med hitrostjo svetlobe v 
+vakuumu in hitrostjo svetlobe v snovi. Na splošno je lomni količnik odvisen 
 od snovi, po kateri se svetloba širi in tudi od frekvence vpadne svetlobe.
 
 Obravnavajmo zdaj dva ravna vala z enakima amplitudama in malo različnima 
 frekvencama $\omega_1=\omega + \Delta \omega$ in $\omega_2=\omega - \Delta \omega$, 
 ki potujeta v isti smeri. Vsota obeh valovanj je:
-\beq
-E = E_0 \cos (k_1x-\omega_1 t)+ E_0 \cos (k_2x-\omega_2 t)=
-E_0 \cos\left((k-\Delta k)x-(\omega + \Delta \omega)t\right) 
-+ E_0 \cos\left((k+\Delta k)x-(\omega - \Delta \omega)t\right). 
+\begin{align}
+E &= E_0 \cos (k_1x-\omega_1 t)+ E_0 \cos (k_2x-\omega_2 t) \nonumber\\
+&= E_0 \cos\left((k-\Delta k)x-(\omega + \Delta \omega)t\right) 
++ E_0 \cos\left((k+\Delta k)x-(\omega - \Delta \omega)t\right)\nonumber \\
+&= E_0 \cos\left((kx - \omega t) -(\Delta k x-\Delta \omega t\right)
++ E_0 \cos\left((k x - \omega t) + (\Delta k x- \Delta \omega t)  \right)\!. 
 \label{eq:09_23}
-\eeq
+\end{align}
 Z uporabo adicijskih izrekov za kotne funkcije izraz preoblikujemo v:
 \beq
-E = 2\cos \left(kx - \omega t \right)\cos \left(\Delta kx - \Delta \omega t \right) 
+E = 2\cos \left(kx - \omega t \right)\cos \left(\Delta kx - \Delta \omega t \right)\!.
 \label{eq:09_24}
 \eeq
 Skupno valovanje je torej valovanje z osrednjo krožno frekvenco $\omega$, 
@@ -48,30 +49,34 @@ jo izračunamo z znane enačbe~(\ref{eq:09_25}). Druga hitrost pa je hitrost, s 
 se premikajo vrhovi počasne modulacije oziroma posamezni sunki. To hitrost imenujemo
 grupna hitrost in jo izračunamo kot $v_g=\Delta \omega/\Delta k$ oziroma v limiti:
 \boxeq{eq:09_24}{
-v_g = \frac{\partial\omega}{\partial k}.
+v_g = \frac{d\omega}{d k}.
 }
 Izraz za grupno hitrost smo sicer izpeljali na primeru valovanja, sestavljenega iz dveh
-valovanj, vendar velja na splošno za razširjanje sunkov svetlobe. Z grupno hitrostjo
-se tako širi informacija, ki jo lahko prenašamo s svetlobo.
+valovanj, vendar velja na splošno za razširjanje sunkov svetlobe. Informacija,
+ki jo prenašajo sunki svetlobe, po snovi torej potuje z grupno hitrostjo.
 
-Če je lomni količnik konstanten in $\omega = k c_0/n$, sta fazna in grupna hitrost enaki.
-V primeru, da je lomni količnik funkcija frekvence valovanja, se fazna in grupna hitrost
-razlikujeta. Praviloma je grupna hitrost manjša od fazne, obstajajo pa tudi izjeme, ki
-jih bomo spoznali v prihodnjem razdelku.
-
-
-
-
-Guenther str 263 in celo poglavje!
-
+Vstavimo zvezo med valovnim številom in krožno frekvenco $k=\omega n /c_0$ v izraz za 
+grupno hitrost in dobimo:
+\beq
+v_g = \frac{d\omega}{dk } = \left(\frac{dk}{d\omega}\right)^{-1} = \left( \frac{d}{d\omega}\left( 
+\frac{\omega n }{c_0}\right)\!\right)^{-1}\!\!.
+\label{eq:09_25}
+\eeq
+Upoštevamo, da je lomni količnik na splošno odvisen od frekvence valovanja, in zapišemo:
+\beq
+v_g = \left(\frac{n}{c_0} + \frac{\omega}{c_0 }\frac{dn}{d\omega}\right)^{-1} = 
+\frac{c_0}{n+\omega \frac{dn}{d\omega}}.
+\label{eq:09_26}
+\eeq
+V izrazu za grupno hitrost nastopa odvod lomnega količnika po krožni frekvenci vpadnega
+valovanja. Če je lomni količnik konstanten, je odvod enak nič in takrat sta fazna in grupna 
+hitrost enaki. Na skoraj celotnem spektralnem območju je odvod pozitiven, zato je na splošno
+grupna hitrost manjša od fazne.
 
 \section{Lomni količnik}
-Zapisali smo, da je lomni količnik odvisen od snovi, po kateri se svetloba širi, 
-in tudi od frekvence vpadne svetobe. Odvisnost lomnega količnika od
-frekvence vpadnega elektromagnetnega valovanja imenujemo disperzija. 
-Izračunajmo disperzijsko odvisnost na preprostem modelu. 
-
-Obravnavajmo nemagnetne snovi, za katere je $\mu = 1$, torej 
+Odvisnost lomnega količnika od frekvence vpadnega 
+elektromagnetnega valovanja bomo izračunali na preprostem modelu. 
+Omejimo se na nemagnetne snovi, za katere je $\mu = 1$, kar pomeni, da
 za izračun frekvenčne odvisnosti lomnega količnika zadošča, če 
 poznamo $\varepsilon(\omega)$. Snov naj bo sestavljena iz $N$
 identičnih atomov oziroma molekul, ki so enakomerno porazdeljeni
@@ -88,7 +93,7 @@ Poleg elastične sile naj na negativno nabito kroglico med
 premikanjem deluje tudi sila dušenja, ki opisuje absorpcijo svetlobe
 v snovi. V klasični sliki si lahko
 zamislimo, da je ravnovesna razdalja med kroglicama enaka $x_r$, 
-v bolj realističnem modelu, v katerem elektron opišemo kot oblak, 
+v bolj realističnem modelu, v katerem elektron opišemo kot oblak okoli jedra, 
 pa je ravnovesna razdalja enaka 0. Ker je razlika le v konstanti, 
 to na končni rezultat ne vpliva.
 
@@ -112,7 +117,8 @@ Pike označujejo časovne odvode.
 \begin{remark}
 Pri zapisu Lorentzovega modela smo privzeli, da je elektično polje, 
 ki ga čuti atom, enako vpadnemu električnemu polju. 
-To velja, dokler je atom sam. Če pa je obdan z ostalimi atomi, 
+To velja, dokler je atom sam oziroma snov sestavlja redek plin. Če pa je 
+atom v snovi obdan z ostalimi atomi, 
 čuti tudi njihov vpliv in pravilno bi bilo upoštevati skupni vpliv, ki 
 ga zapišemo s tako imenovanim lokalnim poljem. 
 Kako izračunamo lokalno polje bomo spoznali na koncu razdelka. 
@@ -157,7 +163,8 @@ je enaka celotnemu dipolnemu momentu na enoto volumna:
 Z upoštevanjem enačb~(\ref{eq:09_07} in \ref{eq:09_08}) zapišemo 
 električno polarizacijo v snovi kot:
 \beq
-\mathbf{P} = -e_0 x~\mathbf{e}_x\varrho = \frac{e_0^2\varrho/m}{\omega_0^2 - \omega^2 - i\gamma \omega} E_0 \mathbf{e}_x e^{-i\omega t}.
+\mathbf{P} = -e_0 x~\mathbf{e}_x\varrho = \frac{e_0^2\varrho/m}{\omega_0^2 
+- \omega^2 - i\gamma \omega} E_0 \mathbf{e}_x e^{-i\omega t}.
 \label{eq:09_10}
 \eeq
 Inducirano električno polarizacijo lahko povežemo z drugimi količinami, 
@@ -169,7 +176,7 @@ zapišemo kot:
 \label{eq:09_11}
 \eeq
 Od tod sledi linearna zveza med električno polarizacijo in jakostjo
-električnega poljal v snovi:
+električnega polja v snovi:
 \beq
 \mathbf{P} = \varepsilon \varepsilon_0 \mathbf{E} - \varepsilon_0 \mathbf{E} = 
 \varepsilon_0 (\epsilon-1) \mathbf{E}.
@@ -229,10 +236,14 @@ n''^2 = \frac{1}{2}\left(-\varepsilon'+\sqrt{\varepsilon'^2 + \varepsilon''^2}\r
 \label{eq:09_21}
 \eeq
 pri čemer sta $\varepsilon'$ in $\varepsilon''$ podana z enačbama~(\ref{eq:09_18} in \ref{eq:09_19}).
+Odvisnost lomnega količninka od frekvence vpadnega elektromagnetnega valovanja, zaradi katere
+se fazna in grupna hitrost valovanja v snovi razlikujeta, imenujemo disperzija.
 
 \section{Disperzija}
-V prejšnjem razdelku smo na preprostem modelu izpeljali frekvenčno odvisnost realnega in imaginarnega
-dela lomnega količnika. Izrazi so razmeroma zapleteni, zato se navadno poslužimo približkov. Prvi naj 
+Na preprostem modelu smo izpeljali lomni količnik snovi in pokazali,
+kako se njegov realni in imaginarni del
+spreminjata s frekvenco vpadnega elektromegnetnega valovanja. Ker so izrazi
+razmeroma zapleteni, se navadno poslužimo približkov. Prvi naj 
 bo približek redkega plina. 
 
 V redkem plinu vrednost lomnega količnika le malo odstopa od lomnega količnika vakuuma 
@@ -241,7 +252,7 @@ za lomni količnik (enačba~\ref{eq:09_17}) razvijemo in dobimo:
 \beq
 \mathcal{N} = \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \approx
 1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
-\omega^2\right)^2 + \gamma^2 \omega^2} + \frac{1}{2}\frac{\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
+\omega^2\right)^2 + \gamma^2 \omega^2} + \frac{1}{2}\frac{i\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2}.
 \label{eq:09_22}
 \eeq
@@ -253,16 +264,106 @@ za lomni količnik (enačba~\ref{eq:09_17}) razvijemo in dobimo:
 vpadne svetlobe v preprostem Lorentzovem modelu}
 \label{fig:09_nkompelks}
 \end{figure}
-Poglejmo najprej realni del lomnega količnika (slika~\ref{fig:09_nkompelks}\,a). Bolj kot vrednost
-lomnega količnika samega je pomemben odvod lomnega količnika po krožni frekvenci, saj ta nastopa v izrazu
-za grupno hitrost valovanja. 
 
-Vidimo, da je odvod
-lomnega količnika od frekvence 
+Poglejmo najprej realni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,a). Pri majhnih vrednostih
+je lomni količnik večji od 1, njegova velikost pa je odvisna od razmerja med plazemsko in lastno frekvenco.
+V bližini lastne frekvence $\omega_0$ lomni količnik strmo naraste, nato strmo pade in se z naraščajočo
+frekvenco počasi približuje vrednosti 1. Vidimo, da je v skoraj celotnem spektralnem območju odvod
+lomnega količnika po frekvenci pozitiven (območje normalne disperzije), razen v ozkem območju v bližini l
+astne frekvence, kjer je odvod negativen (območje anomalne disperzije). Za zelo velike frekvence vpadne
+svetlobe (na primer za rentgensko svetlobo) je lomni količnik zelo blizu 1.
+
+Poglejmo še imaginarni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,b). Ta je večinoma enak nič,
+kar pomeni, da snov vpadne svetlobe ne absorbira, razen v bližini lastne frekvence. V bližini 
+lastne frekvence, kjer je disperzija anomalna, se torej vpadna svetloba močno absorbira. 
+
+Za večino snovi je lastna frekvenca v območju UV svetlobe, se pravi pri frekvencah, ki 
+so večje od vidne svetlobe. Območje vidne svetlobe je tako za večino (vse?) prozorne snovi,
+ki svetlobe ne absorbirajo, v območju normalne disperzije. 
+
+V dejanski snovi oziroma atomskem/molekulskem sistemu je lahko več resonanc. Vsaki
+od njih ustreza neka resonančna frekvenca $\omega_{0j}$ in ustrezni koeficient
+dušenja $\gamma_j$. Potem vse prispevke zapišemo kot vsoto posameznih prispevkov 
+z ustreznimi amplitudami $f_j$:
+\beq
+\varepsilon = \mathcal{N}^2 = 1+ \sum_j \frac{f_j \omega_{pj}^2}{\omega_{0j}^2 - \omega^2 - i\gamma_j\omega}.
+\label{eq:09_27}
+\eeq
+V praksi za navedeni izraz uporabimo različne približke, ki v danem frekvenčnem
+območju dovolj dobro opišejo odvisnost lomnega količnika. V prozornih snoveh lahko 
+dušenje, ki na splošno povzroča absorpcijo, povsem zanemarimo in privzamemo $\gamma_j = 0$ za 
+vsak $j$. V tem približku dobimo:
+\beq
+\mathcal{N}^2 = n'^2 = 1+ \sum_j \frac{f_j \omega_{pj}^2}{\omega_{0j}^2 - \omega^2}.
+\label{eq:09_28}
+\eeq
+Če namesto krožne frekvence vstavimo valovno dolžino svetlobe, dobimo:
+\beq
+n'^2 = 1 + \sum_j \frac{f_j \omega_{pj}^2\lambda_{oj}^2\lambda^2}{\lambda^2 - \lambda_{0j}^2}.
+\label{eq:09_29}
+\eeq
+Kadar je valovna dolžina vpadne svetlobe razmeroma blizu eni lastni frekvenci in daleč
+od ostalih, lahko prispevke ostalih lastnih frekvenc upoštevamo le v konstanti in ostane:
+\boxeq{eq:09_30}{
+n'^2(\lambda) = A + \sum_j \frac{G_j \lambda^2}{\lambda^2 - \lambda_{0j}^2}.
+}
+Približek je leta 1872 zapisal nemški fizik Wolfgang von Sellmeier, zato ga danes
+imenujemo Sellmeierjeva enačba. Ta zveza se pogosto uporablja za opis disperzije $n(\lambda)$
+v prozornih snoveh. 
+
+\begin{example}
+ Primeri koeficientov za disperzijo
+ primer n<1, ionosfera.
+\end{example}
+
+\subsection*{Popravek lokalnega polja v gosti snovi}
+Do zdaj smo obravnavali redko snov, v kateri so bili atomi oziroma molekule v snovi
+dovolj oddaljeni, da niso čutili medsebojnega vpliva. 
+Zato smo v preprostem Lorentzovem modelu za polje, ki ga čuti oblak elektronov, 
+vzeli kar polje vpadne svetlobe. Če pa je izbrana molekula obdana z drugimi 
+molekulami, ki se pod vplivom zunanjega električnega polja ravno tako polarizirajo, se  
+električno polje na mestu izbrane molekule spremeni. Za izračun tako imenovanega 
+lokalnega polja moramo upoštevati tudi okoliško polarizacijo.
+
+Ponovno se omejimo le na eno smer, zato lahko vektorski zapis izpustimo in dobimo:
+\beq
+\tilde{E} = E + \frac{P}{3\varepsilon_0}.
+\label{eq:09_31}
+\eeq
+Prvi člen predstavlja jakost električnega polja vpadne svetlobe, drugi člen 
+pa opisuje polarizacijsko polje zaradi okoliških molekul. Z uporabo zveze
+$P = \varepsilon_0 (\varepsilon -1) E$ dobimo:
+\beq
+\tilde{E} = E + \frac{\varepsilon_0 (\varepsilon -1) E}{3\varepsilon_0} = \frac{\epsilon + 2}{3}E.
+\label{eq:09_32}
+\eeq
+Pri izračunu inducirane polarizacije vseh dipolov v snovi moramo zaradi 
+vpliva sosednjih molekul upoštevati $\tilde{E}$. Sledi:
+\beq
+P = \frac{\frac{e_0^2}{m}\varrho_N \frac{\varepsilon+2}{3}E_0 e^{-i\omega t}}{\omega_0^2 - \omega^2 -i\gamma \omega} = \varepsilon_0 (\varepsilon -1) E_) e^{-i\omega t}.
+\label{eq:09_33}
+\eeq
+Od tod izračunamo zvezo:
+\beq
+\frac{\varepsilon -1 }{\varepsilon+2} = \frac{\mathcal{N}^2-1}{\mathcal{N}^2+2} = 
+\frac{\omega_p^2/3}{\omega_0^2 - \omega^2 - i\gamma \omega}.
+\label{eq:09_34}
+\eeq
+Če je krožna frekvenca vpadne svetlobe daleč od lastnih frekvenc, lahko dušenje zanemarimo in 
+izraz preoblikujemo v:
+\beq
+\frac{\varepsilon -1 }{\varepsilon+2} = \frac{\mathcal{N}^2-1}{\mathcal{N}^2+2} = 
+\frac{\omega_p^2}{3\left(\omega_0^2 - \omega^2\right)}.
+\label{eq:09_35}
+\eeq
+Zapisani izraz imenujemo Lorentz-Lorenzova zveza po danskem matematiku Ludvigu Lorenzu 
+(1829--1891) in nizozemskemu fiziku Hendriku Lorentzu. 
+\begin{remark}
+ Lorentz-Lorenzova zveza je tesno povezana s Clausius-Mossottijevo zvezo, ki opisuje
+ zvezo med dielektrično konstanto snovi z atomsko polarizirnostjo $\alpha$.
+\end{remark}
 
 disperizaja v vlaknih.
-
-
 vlanka
 mavrica
 prizma
@@ -275,8 +376,240 @@ n< 1x xray ionosphere
 
 
 \section{Prevodne snovi}
+Elektrone v kovini obravnavamo po Drudejevem modelu prostega elektronskega plina
+v mreži nepremičnih pozitivnih nabojev. Ker so v tem modelu elektroni prosti,
+je konstanta vzmeti $k=0$ in tako lastna frekvenca $\omega_0=0$. Dobimo:
+\beq
+\mathcal{N}^2 = 1 + \frac{\omega_p^2}{-\omega^2 -i \gamma \omega} = 1- 
+\frac{\omega_p^2}{\omega^2+i\gamma \omega}.
+\label{eq:09_36}
+\eeq
+Če zanemarimo tudi električno upornost, ki ga opisuje koficient dušenja, dobimo
+preprosto zvezo:
+\beq
+\mathcal{N} \approx \sqrt{1- \frac{\omega_p^2}{\omega^2}}.
+\label{eq:09_37}
+\eeq
+Za vrednosti $\omega < \omega_p$ je lomni količnik povsem imaginaren in svetloba se v snovi
+močno absorbira. Za krožne frekvence $\omega > \omega_p$ pa je lomni količnik realen 
+in snov prozorna. 
+
+Za na primer zlato je plazemska frekvenca pri okoli $500~\si{\nano\meter}$, v območju
+vidne svetlobe torej, za srebro pa v ultravijoličnem območju pri okoli $320~\si{\nano\meter}$. 
+Pri srebru je tako lomni količnik za celoten spekter vidne svetlobe imaginaren, zato se celoten 
+spekter precej svetlobe enakomerno odbija. Pri zlatu je lomni količnik za del vidnega spektra realen in za
+del vidnega spektra imaginaren. Rdeča in rumena barva se zato v snovi močno absorbirata, kar
+je za zunanjega opazovalca videti, kot da se odbijeta. Modra svetloba v zlatu občuti
+realni lomni količnik in se zato dosti manj odbija od površine kot rdeča in rumena. Ta
+lastnost daje zlatu značilno rumeno-rdečkasto barvo. 
+
+
 \section{Optični metamateriali}
+Videli smo, da je v bližini resonanc ali v kovini pri $\omega <\omega_p$ vrednost $\mathcal{N}^2 <0$.
+Lomni kolilčnik je zato povsem imaginaren. To se zgodi, ko je $\varepsilon'<0$. Dielektričnost
+snovi ima negativno vrednost. Zanimive pojave dobimo, če hkrati velja tudi $\mu'<0$. Produkt
+obeh je potem pozitiven in se lahko izognemo absorpciji. Vendar takrat velja drugačen
+predznak za $\mathcal{N}$. Če denimo povsem zanemarimo dušenje ($\varepsilon''=0$, $\mu''=0$), 
+potem velja $\varepsilon=\varepsilon'$ in $\mu  = \mu'$.
+V navadnih snoveh velja:
+\beq
+\varepsilon >0, \mu > 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
+\qquad \Rightarrow \qquad n = \sqrt{\varepsilon\mu}. 
+\label{eq:09_37}
+\eeq
+Lahko pa velja tudi:
+\beq
+\varepsilon <0, \mu < 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
+\qquad \Rightarrow \qquad n = -\sqrt{\varepsilon\mu}<0. 
+\label{eq:09_38}
+\eeq
+Snovi, ki imajo na istem frekvenčnem območju $\varepsilon<0$ in $\mu<0$, v naravi ne 
+obstajajo. Lahko pa jih naredimo z nanostrukturiranimi kompozitnimi materiali. Imenujemo
+jih metamateriali. 
+
+V takih snoveh je posebej zanimiv lom svetlobe. Zapišemo lomni zakon:
+\beq
+n_1 \sin\alpha = n_2 \sin\beta,
+\label{eq:09_39}
+\eeq
+pri čemer velja $n_1>0$ in $n_2<0$, zato je pri pozitivenm vpadnem kotu $\alpha >0$
+lomni kotni $\beta <0$. V snovi z negativnim lomnim količnikom imata valovni vektor
+$\mathbf{k}$ in Poyntingov vektor $\mathbf{S}$ nasprotni smeri.
+
 \section{Optična aktivnost}
-%\section{Dikroizem}
+Optična aktivnost je pojav, pri katerem se linearno polarizirani svetlobi po prehodu
+skozi snov zasuče smer nihanja električnega polja $\mathbf{E}$. Če je vpadna svetloba na primer
+linearno polarizirana vzdolž osi $x$, se po prehodu skozi snov smer linearne polarizacije
+zasuče za kot $\Delta \varphi$ glede na $x$ os. Naj se svetloba širi vzdolž osi $z$.
+
+Vpadno polarizacijo v opisanem primeru podaja Jonesov vektor:
+\beq
+\mathbf{J}_{in} = 
+\left[\begin{array}{c}
+1\\
+0\\
+\end{array}\right]\!\!.
+\label{eq:09_39}
+\eeq
+Zasukano izhodno polarizacijo potem zapišemo kot:
+\beq
+\mathbf{J}_{out} = 
+\left[\begin{array}{c}
+\cos \Delta \varphi\\
+\sin \Delta \varphi\\
+\end{array}\right]\!\!.
+\label{eq:09_40}
+\eeq
+Gledano s stališča opazovalca (palec desne roke usmerimo proti izvoru) opazovana
+snov polarizacijo zasuče v levo glede na začetno smer, zato tako snov imenujemo
+levo sučna snov. 
+
+Kemijsko ozadje:
+Optično aktivne snovi so sestavljene iz molekul s kiralnimi centri. Tipično je 
+to ogljikov atom, ki ima pripete štiri različne kemijske skupine. Ta asimetrični
+ogljik naredi molekulo kiralno. Kiralne molekule obstajajo v dveh konfiguracijah,
+ki ju ne moremo pretvoriti iz ene v drugo zgolj z vrtenjem, ampak samo z zrcalno
+transformacijo, Ti dve konformaciji se imenujeta enantiomera oziroma
+optična izomera (tudi stereo-izomera). Mešanica obeh izomerov v razmerju 50:50
+se imenuje racemat. 
+
+Kot referenčni material uporabljamo glicer-aldehid. To je ena od presnovnih 
+vrst sladkorja (monosaharoza). L-gliceraldehid suše polarizacijo v desno; L-GA
+suče polarizacijo v levo. 
+
+Večina aminokislin, ki jh najdemo v naravi, so L-aminokisline. Vrsta glukoze 
+dekstroza je dobila ime zaradi svoje sučnosti. 
+
+Večino lastnosti, povezanih z optično aktivnostjo, lahko opišemo s tem, da rečemo,
+da gre za snov z različnima vrednostima lomnega količnika za desno in levo krožno
+polarizirano valovanje. Če ozračimo desno cirkularno polarizirano z D in levo z L,
+potem velja:
+\boxeq{eq:09_41}{
+n_D \neq n_L.
+}
+Linearno polarizirano valovanje lahko zapišemo kot vsoto dveh cirkularno polariziranih
+valovanj. Pred vpadom na snov je tako:
+\beq
+\mathbf{J}_{in} = 
+\left[\begin{array}{c}
+1\\
+0\\
+\end{array}\right] = 
+\frac{1}{2}
+\left[\begin{array}{c}
+1\\
+-i\\
+\end{array}\right]
++ 
+\frac{1}{2}
+\left[\begin{array}{c}
+1\\
+i\\
+\end{array}\right]\!\!.
+\label{eq:09_42}
+\eeq
+Po prehodu skozi snov različno sučni komponenti občutita različna lomna količnika
+in imata zato ob prehodu snovi z dolžino $L$ različni fazi:
+\beq
+\mathbf{J}_{out}  = 
+\frac{1}{2}
+\left[\begin{array}{c}
+1\\
+-i\\
+\end{array}\right]e^{ik_0n_D L}
++ 
+\frac{1}{2}
+\left[\begin{array}{c}
+1\\
+i\\
+\end{array}\right]e^{ik_0n_L L}\!\!.
+\label{eq:09_43}
+\eeq
+Zadnji izraz preoblikujemo:
+\beq
+\mathbf{J}_{out}  = \frac{1}{2} e^{ik_0n_D L/2}e^{ik_0n_L L/2}
+\left(
+\left[\begin{array}{c}
+1\\
+-i\\
+\end{array}\right]e^{ik_0n_D L/2} e^{-ik_0n_L L/2}+
+\left[\begin{array}{c}
+1\\
+i\\
+\end{array}\right]e^{-ik_0n_D L/2} e^{ik_0n_L L/2}
+\right)\!\!.
+\label{eq:09_44}
+\eeq
+Vpeljemo povprečni lomni količnik $\overline{n} = (n_L + n_D)/2$ in razliko
+med lomnima količnikoma $\Delta n = n_L-n_D$. Enačbo~(\ref{eq:09_44}) preobilkujemo:
+\beq
+\mathbf{J}_{out}  = \frac{1}{2} e^{ik_0\overline{n} L}
+\left(
+\left[\begin{array}{c}
+1\\
+-i\\
+\end{array}\right]e^{-ik_0 \Delta n L/2}+
+\left[\begin{array}{c}
+1\\
+i\\
+\end{array}\right]e^{ik_0\Delta n L/2}
+\right)\!\!.
+\label{eq:09_45}
+\eeq
+Sledi:
+\beq
+\mathbf{J}_{out}  = \frac{1}{2} e^{ik_0\overline{n} L}
+\left[\begin{array}{c}
+2 \cos(k_0 \Delta n L/2)\\
+2 \sin(k_0 \Delta n L/2)\\
+\end{array}\right] = 
+e^{ik_0\overline{n} L}
+\left[\begin{array}{c}
+\cos(\Delta \varphi)\\
+\sin(\Delta \varphi)\\
+\end{array}\right]\!\!,
+\label{eq:09_46}
+\eeq
+pri čemer je:
+\beq
+\Delta \varphi = k_0 \Delta n L/2.
+\label{eq:09_47}
+\eeq
+Izhodna svetloba je torej linearno polarizirana, vednar zasukana za kot 
+$\Delta \varphi$ glede na vstopno linearno polarizacijo. Pri tem je kot zasuka enak:
+\boxeq{eq:09_48}{
+\Delta \varphi = \frac{1}{2}k_0 L (n_L-n_D).
+}
+PREGLEJ PREDZNAKE!
+Če velja $n_D>n_L$, potem snov polarizacijo suče v levo, sicer v desno. Za tipične
+raztopine sladkorja je $\Delta n \sim 10^{-4}$.
+
+Fenomenološko zapišemo:
+\beq
+\Delta \varphi = \beta L,
+\label{eq:09_49}
+\eeq
+pri čemer je $\beta = \beta (\lambda)$. Parameter $\beta$ je specifična sučnost snovi,
+podana v enotah $\si{\degree}/\si{mm}$. Referenčna valovna dolžina je pri $\lambda = 589,3~\si{nm}$
+(črta natrijevega dubleta). Za raztopine je $\beta$ po definiciji podana pri raztopini v vodi
+v razmerju 1:100 in temperaturi $T = 20~\si{\degree}C$. Primera vrednosti sta za dekstrozo
+$\beta = 0,53~\si{\degree}/\si{mm}$ in za kremen $\beta = 21,6~\si{\degree}/\si{mm}$.
+
+Pogosto se razlika med desno in levo krožno polariziranim valovanjem pojavi ne le v realnem, 
+temveč tudi v imaginarnem delu lomnega količnika. Takšna snov eno cirkularno polarizacijo močneje
+absorbira, drugo pa šibkeje. V tem primeru govorimo o cirkularnem dikroizmu snovi. Cirkularni
+dikroizem (CD) v odvisnosti od valovne dolžine merimo z metodo CD spektroskopije.
+
 \section{Faradayev pojav}
+Faradayev ali tudi magneto-optični pojav opisuje pojav optične aktivnosti, ki 
+
+
+
+\begin{example}{\bf Izpeljava Faradayevega pojava na Lorentzovem modelu}
+Uporabimo Lorentzov model, brez sile dušenja, ampak z zunanjim magnetnim poljem.
+\end{example}
+
+
+
+
 Uporabo dodaj in primere.
