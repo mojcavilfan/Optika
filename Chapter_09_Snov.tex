@@ -12,7 +12,7 @@ V tretjem poglavju smo zapisali najpreprostejšo rešitev valovne enačbe
 v neomejenem prostoru v obliki ravnih valov. Izračunali smo fazno hitrost,
 to je hitrost premikanja ploskev konstantne faze oziroma valovnih front in
 jo zapisali kot razmerje (enačba~\ref{eq:03_10}):
-\boxeq{eq:09_25}{
+\boxeq{eq:09_25a}{
 v_f = \frac{\omega}{k}
 }
 Fazno hitrost navadno označimo s $c$ in jo zapišemo kot (enačba~\ref{eq:c}):
@@ -48,7 +48,7 @@ faze oziroma premikanja vrhov hitre modulacije. Ta hitrost je fazna hitrost in
 jo izračunamo z znane enačbe~(\ref{eq:09_25}). Druga hitrost pa je hitrost, s katero
 se premikajo vrhovi počasne modulacije oziroma posamezni sunki. To hitrost imenujemo
 grupna hitrost in jo izračunamo kot $v_g=\Delta \omega/\Delta k$ oziroma v limiti:
-\boxeq{eq:09_24}{
+\boxeq{eq:09_24a}{
 v_g = \frac{d\omega}{d k}.
 }
 Izraz za grupno hitrost smo sicer izpeljali na primeru valovanja, sestavljenega iz dveh
@@ -415,7 +415,7 @@ V navadnih snoveh velja:
 \beq
 \varepsilon >0, \mu > 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
 \qquad \Rightarrow \qquad n = \sqrt{\varepsilon\mu}. 
-\label{eq:09_37}
+\label{eq:09_37m}
 \eeq
 Lahko pa velja tudi:
 \beq
@@ -449,7 +449,7 @@ Vpadno polarizacijo v opisanem primeru podaja Jonesov vektor:
 1\\
 0\\
 \end{array}\right]\!\!.
-\label{eq:09_39}
+\label{eq:09_40}
 \eeq
 Zasukano izhodno polarizacijo potem zapišemo kot:
 \beq
@@ -458,7 +458,7 @@ Zasukano izhodno polarizacijo potem zapišemo kot:
 \cos \Delta \varphi\\
 \sin \Delta \varphi\\
 \end{array}\right]\!\!.
-\label{eq:09_40}
+\label{eq:09_41}
 \eeq
 Gledano s stališča opazovalca (palec desne roke usmerimo proti izvoru) opazovana
 snov polarizacijo zasuče v levo glede na začetno smer, zato tako snov imenujemo
@@ -484,7 +484,7 @@ Večino lastnosti, povezanih z optično aktivnostjo, lahko opišemo s tem, da re
 da gre za snov z različnima vrednostima lomnega količnika za desno in levo krožno
 polarizirano valovanje. Če ozračimo desno cirkularno polarizirano z D in levo z L,
 potem velja:
-\boxeq{eq:09_41}{
+\boxeq{eq:09_42}{
 n_D \neq n_L.
 }
 Linearno polarizirano valovanje lahko zapišemo kot vsoto dveh cirkularno polariziranih
@@ -506,7 +506,7 @@ valovanj. Pred vpadom na snov je tako:
 1\\
 i\\
 \end{array}\right]\!\!.
-\label{eq:09_42}
+\label{eq:09_43}
 \eeq
 Po prehodu skozi snov različno sučni komponenti občutita različna lomna količnika
 in imata zato ob prehodu snovi z dolžino $L$ različni fazi:
@@ -523,7 +523,7 @@ in imata zato ob prehodu snovi z dolžino $L$ različni fazi:
 1\\
 i\\
 \end{array}\right]e^{ik_0n_L L}\!\!.
-\label{eq:09_43}
+\label{eq:09_44}
 \eeq
 Zadnji izraz preoblikujemo:
 \beq
@@ -538,7 +538,7 @@ Zadnji izraz preoblikujemo:
 i\\
 \end{array}\right]e^{-ik_0n_D L/2} e^{ik_0n_L L/2}
 \right)\!\!.
-\label{eq:09_44}
+\label{eq:09_45}
 \eeq
 Vpeljemo povprečni lomni količnik $\overline{n} = (n_L + n_D)/2$ in razliko
 med lomnima količnikoma $\Delta n = n_L-n_D$. Enačbo~(\ref{eq:09_44}) preobilkujemo:
@@ -554,7 +554,7 @@ med lomnima količnikoma $\Delta n = n_L-n_D$. Enačbo~(\ref{eq:09_44}) preobilk
 i\\
 \end{array}\right]e^{ik_0\Delta n L/2}
 \right)\!\!.
-\label{eq:09_45}
+\label{eq:09_46}
 \eeq
 Sledi:
 \beq
@@ -568,16 +568,16 @@ e^{ik_0\overline{n} L}
 \cos(\Delta \varphi)\\
 \sin(\Delta \varphi)\\
 \end{array}\right]\!\!,
-\label{eq:09_46}
+\label{eq:09_47}
 \eeq
 pri čemer je:
 \beq
 \Delta \varphi = k_0 \Delta n L/2.
-\label{eq:09_47}
+\label{eq:09_48}
 \eeq
 Izhodna svetloba je torej linearno polarizirana, vednar zasukana za kot 
 $\Delta \varphi$ glede na vstopno linearno polarizacijo. Pri tem je kot zasuka enak:
-\boxeq{eq:09_48}{
+\boxeq{eq:09_49}{
 \Delta \varphi = \frac{1}{2}k_0 L (n_L-n_D).
 }
 PREGLEJ PREDZNAKE!
@@ -587,7 +587,7 @@ raztopine sladkorja je $\Delta n \sim 10^{-4}$.
 Fenomenološko zapišemo:
 \beq
 \Delta \varphi = \beta L,
-\label{eq:09_49}
+\label{eq:09_50}
 \eeq
 pri čemer je $\beta = \beta (\lambda)$. Parameter $\beta$ je specifična sučnost snovi,
 podana v enotah $\si{\degree}/\si{mm}$. Referenčna valovna dolžina je pri $\lambda = 589,3~\si{nm}$
@@ -601,15 +601,132 @@ absorbira, drugo pa šibkeje. V tem primeru govorimo o cirkularnem dikroizmu sno
 dikroizem (CD) v odvisnosti od valovne dolžine merimo z metodo CD spektroskopije.
 
 \section{Faradayev pojav}
-Faradayev ali tudi magneto-optični pojav opisuje pojav optične aktivnosti, ki 
+Faradayev ali tudi magneto-optični pojav opisuje pojav optične aktivnosti, ki jo v sicer
+optično neaktivni snovi dobimo s tem, da snov postavimo v zunanje magnetno polje. Za razliko 
+od intrinzične oziroma naravne optične aktivnosti, ki polarizacijo vedno zasuče v sisto smer (ne 
+glede na smer potovanja svetlobe skozi snov), je zasuk pri Faradayevem pojavu odvisen od smeri 
+potovanja svetlobe glede na smer statičnega zunanjega magnetnega polja $\mathbf{B}_0$. 
 
+Kot zasuka polarizacije zapišemo kot:
+\beq
+\Delta \varphi = \frac{1}{2}k_0 L (n_L-n_D) = V L B_0,
+\label{eq:09_51}
+\eeq
+pri čemer so $L$ dolžina prepotovane poti po snovi, $B_0$ gostota zunanjega magnetnega polja in
+$V$ Verdetova konstakta, imenovana po francoskem fiziku \'{E}milu Verdetu (1824--1866).
+Tipične vrednosti Verdetove konstante $V$ so zelo majhne in so močno odvisne od valovne dolžine
+vpadne svetlobe. Snov z največjo vrednostjo je terbijev galijev granat (TGG) z vrednostjo 
+$V = -134~\si{\radian}/\si{Tm}$ pri valovni dolžini $633~\si{nm}$. Že pri valovni dolžini
+$1064~\si{nm}$ vrednost pade na $V = -40~\si{\radian}/\si{Tm}$.
 
+Faradayev pojav lahko pojasnimo v Lorentzovim modelom dveh kroglic, ki ju izpostavimo elektromagnetnemu
+valovanju. Zamislimo si, da pozitivno nabita kroglica miruje, negativno nabita pa zaradi prisotnosti
+cirkularno polariziranega valovanj kroži okoli nje. Kroženje poteka v magnetnem polju. V odvisnosti
+od smeri kroženja se pojavi magnetna sila, ki enkrat deluje v smeri proti središču kroženja, drugič
+pa v smeri stran od središča kroženja. To povzroči spremembo efektivne vzmeti, ki kroglici povezuje med seboj. 
+
+Magnetna sila, ki deluje na kroglico, je 
+\beq
+\mathbf{F}_B = e \mathbf{v}\times \mathbf{B} = -e_0 \mathbf{v}\times \mathbf{B}_0 
+\label{eq:09_52}
+\eeq
+Za desno cikrularno polarizirano vpadno valovanje je ta sila drugačna kot za desno, zato je navidezna
+konstanta vzmeti drugačna. To pomeni, da imamo dve lastni frekvenci (Zeemanov pojav). Pri izbrani
+frekvenci smo od ene lastne frekvence bolj, od druge pa manj oddaljeni, kar prinese razliko v lomnem
+količniku. 
+
+Če zanemarimo dušenje, lahko enačbo gibanja zapišemo:
+\beq
+\ddot{\mathbf{r}} + \omega_0 \mathbf{r} = -\frac{e}{m}\left(\mathbf{E}+ \dot{\mathbf{r}}\times \mathbf{B}_0\right),
+\label{eq:09_53}
+\eeq
+pri čemer $\mathbf{r}$ označuje lego elektrona v ravnini $xy$, električno polje je $\mathbf{E} = (E_x(t), E_y(t), 0)$, 
+magnetno polje pa $\mathbf{B}_0 = (0, 0, B_0)$.
+
+Enačbo zapišemo po komponentah in dobimo sistem enačb:
+\begin{align}
+\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \label{eq:09_52a} \\
+\ddot{y} - \frac{e_0}{m} \dot{x} B_0 + \omega_0^2 y &= -\frac{e_0}{m}E_y.
+\label{eq:09_52b}
+\end{align}
+Rešitev enačb (glej primer) da:
+\beq
+P = \frac{\varrho_N e_0^2/m E_0}{\omega_0^2 - \omega^2 \pm eB_0\omega/m}.
+\label{eq:09_54}
+\eeq
+Inducirana polarizacija in z njo tudi lomni količnik je tako odvisna od smeri krožne polarizacije 
+vpadnega valovanja. 
 
 \begin{example}{\bf Izpeljava Faradayevega pojava na Lorentzovem modelu}
 Uporabimo Lorentzov model, brez sile dušenja, ampak z zunanjim magnetnim poljem.
+Newtonov zakon brez sile dušenja zapišemo:
+\beq
+m\ddot{\mathbf{r}} = -k \mathbf{r}-e \mathbf{E} -e \dot{\mathbf{r}}\times \mathbf{B}_0.
+\label{eq:09_55}
+\eeq
+Pri tem vektor $\mathbf{r}$ označuje lego elektona v ravnini $\mathbf{r} = (x,y,0)$. Konstanta
+$k$ je konstanta vzmeti, ki jo bomo izrazili z lastno frekvenco nihanja $\omega^2 = k/m$, $m$
+je masa elektrona, $e$ njegov naboj, jakost elektičnega polja je $\mathbf{E} = (E_x, E_y, 0)$
+in magnetnega polja $\mathbf{B}_0 = (0,0,B_0)$, torej vzdolž smeri širjenja svetlobe. 
+Izračunajmo najprej vektorski produkt hitrosti in magnetnega polja:
+\beq
+\dot{\mathbf{r}} \times \mathbf{B}_0 = 
+\left|
+\begin{array}{ccc}
+\mathbf{e}_x & \mathbf{e}_y & \mathbf{e}_z\\
+\dot{x} & \dot{y} & \dot{z}\\
+0 & 0 & B_{0}
+\end{array}\right|
+= 
+\left[
+\begin{array}{c}
+\dot{y} B_0\\
+-\dot{x} B_0\\
+0
+\end{array}\right]\!\!.
+\eeq
+Gibalno enačbo potem prepišemo v:
+\beq
+\left(\ddot{x},\ddot{y},0\right) + \omega_0^2 (x,y,0)= -\frac{e_0}{m}(E_x, E_y, 0) - 
+\frac{e_0}{m}\left( \dot{y}B_0, -\dot{x} B_0, 0\right).
+\eeq
+Razstavimo jo po komponentah in dobimo sistem enačb:
+\begin{align}
+\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \\
+\ddot{y} - \frac{e_0}{m} \dot{x} B_0 + \omega_0^2 y &= -\frac{e_0}{m}E_y.
+\end{align}
+Sistem rešujemo tako, da drugo enačbo pomnožimo z $i$. Enačbi najprej seštejmo in uvedemo
+spremenljivko $x + iy = z$. Dobimo:
+\beq
+\ddot{x} + i\ddot{y} -i \frac{e_0}{m}B_0 (\dot{x} + i\dot{y}) + \omega_0^2 (x+iy) = -\frac{e_0}{m}(E_x+iE_y).
+\eeq
+Če sta amplitudi $E_x$ in $E_y$ enaki, vsota $E_x+iE_y$ opisuje levo krožno polarizirano valovanje $E_L$. 
+Enačbo poenostavljeno zapišemo kot:
+\beq
+\ddot{z} -i \gamma_{ef}\dot{z} + \omega_0^2 z = -\frac{e_0}{m}E_L.
+\eeq
+Drugič zapisani enačbi odštejmo in uvedemo novo spremeljivko $x-iy=w$. Dobimo:
+\beq
+\ddot{w} +i \gamma_{ef}\dot{w} + \omega_0^2 w = -\frac{e_0}{m}E_D.
+\eeq
+Z vpeljavo novih spremeljivk smo tako enačbi razklopili. 
+Rešitev enačb iščem v obliki $z = z_0 e^{-i\omega t}$ in $w = w_0 e^{-i\omega t}$, pri čemer
+je $\omega$ frekvenca vpadne svetlobe. Vstavimo nastavek za $z$ in $w$ in dobimo reštev za amplitudi oblike:
+\beq
+z_0 = \frac{-e_0 E_0/m}{\omega_0^2 - \omega^2 + i\gamma_{ef}\omega} \qquad \mathrm{in} \qquad 
+w_0 = \frac{-e_0 E_0/m}{\omega_0^2 - \omega^2 - i\gamma_{ef}\omega}.
+\eeq
+Linearna polarizacija v snovi (ki se vrti skupaj z vpadnim električnim poljem $\mathbf{E}$, je potem
+$P = -e_0 z \varrho_N = \varepsilon_0 (\varepsilon-1)E$, od koder izračunamo lomni količnik:
+\beq
+\mathcal{N}_L^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 + i\gamma_{ef}\omega} \qquad \mathrm{in}
+\qquad 
+\mathcal{N}_D^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 - i\gamma_{ef}\omega}.
+\eeq
+Pri tem $\omega_p$ označuje plazemsko frekvenco $\omega_p = \varrho_N e_0^2/m\varepsilon_0$.
+
 \end{example}
+Uporaba Faradayevega pojava za optične izolatorje (optične diode). Svetlobo v eno smer prepuščajo, 
+v drugo pa ne.
 
-
-
-
-Uporabo dodaj in primere.
+Foto praktikuma? Rotacija svetlobe? Foto sladkor v vodi.
