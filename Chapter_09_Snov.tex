@@ -1,62 +1,98 @@
-%\chapterimage{Geometrijska.jpg} % Chapter heading image
+\chapterimage{09_Snov.jpg} % Chapter heading image
 
 \chapter{Interakcija svetlobe s snovjo}
-V tem poglavju se bomo posvetili interakciji svetlobe s snovjo, ki jo 
-v najpreprostejši obliki opišemo z lomnim količnikom. Spoznali bomo 
-odvisnost lomnega količnika od frekvence vpadnega valovanja, zapisali
-lomni količni za prevodne snovi, opisali optično aktivnost in Faradayev 
-pojav.
+V tem poglavju bomo podrobneje obravnavali interakcijo svetlobe s snovjo, ki jo 
+v najpreprostejši obliki opišemo z lomnim količnikom. Na poenostavljenem modelu
+bomo spoznali odvisnost lomnega količnika od frekvence vpadnega valovanja in pojasnili
+posledice disperzije. Zapisali bomo tudi lomni količni za prevodne snovi ter
+opisali dva zanimiva pojava: optično aktivnost in Faradayev pojav.
 
 \section{Fazna in grupna hitrost}
-V tretjem poglavju smo zapisali najpreprostejšo rešitev valovne enačbe
-v neomejenem prostoru v obliki ravnih valov. Izračunali smo fazno hitrost,
-to je hitrost premikanja ploskev konstantne faze oziroma valovnih front in
-jo zapisali kot razmerje (enačba~\ref{eq:03_10}):
+V tretjem poglavju smo zapisali osnovno rešitev valovne enačbe
+v neomejenem prostoru (enačba~\ref{eq:valovnaE}) v obliki ravnih valov 
+(enačba~\ref{eq:ravnival}). Izračunali smo fazno hitrost,
+to je hitrost premikanja ploskev konstantne faze oziroma valovnih front, in
+jo zapisali kot razmerje krožne frekvence vpadne svetlobe 
+in valovnega števila (enačba~\ref{eq:03_10}):
 \boxeq{eq:09_25a}{
 v_f = \frac{\omega}{k}
 }
-Fazno hitrost navadno označimo s $c$ in jo zapišemo kot (enačba~\ref{eq:c}):
+Fazno hitrost svetlobe navadno označimo s $c$ in jo zapišemo kot (enačba~\ref{eq:c}):
 \beq
 c = \frac{c_0}{n}.
 \label{eq:09_01}
 \eeq
 Pri tem lomni količnik $n$ označuje razmerje med hitrostjo svetlobe v 
-vakuumu in hitrostjo svetlobe v snovi. Na splošno je lomni količnik odvisen 
-od snovi, po kateri se svetloba širi in tudi od frekvence vpadne svetlobe.
+vakuumu $c_0$ in hitrostjo svetlobe v snovi $c$. Na splošno je lomni količnik odvisen 
+od snovi, po kateri se svetloba širi, in tudi od frekvence vpadne svetlobe.
 
-Obravnavajmo zdaj dva ravna vala z enakima amplitudama in malo različnima 
-frekvencama $\omega_1=\omega + \Delta \omega$ in $\omega_2=\omega - \Delta \omega$, 
-ki potujeta v isti smeri. Vsota obeh valovanj je:
+Obravnavajmo dve ravni valovanji z enakima amplitudama $E_0$, ki potujeta v isti smeri vzdolž
+osi~$z$. Njuni frekvenci naj se le malo razlikujeta, zato ju zapišimo kot: 
+$\omega_1=\omega + \Delta \omega$ in $\omega_2=\omega - \Delta \omega$, pripadajoči
+valovni števili naj bosta: $k_1 = k + \Delta k $ in $k_2 = k - \Delta k$. 
+Vsoto teh dveh valovanj zapišemo kot:
 \begin{align}
-E &= E_0 \cos (k_1x-\omega_1 t)+ E_0 \cos (k_2x-\omega_2 t) \nonumber\\
-&= E_0 \cos\left((k-\Delta k)x-(\omega + \Delta \omega)t\right) 
-+ E_0 \cos\left((k+\Delta k)x-(\omega - \Delta \omega)t\right)\nonumber \\
-&= E_0 \cos\left((kx - \omega t) -(\Delta k x-\Delta \omega t\right)
-+ E_0 \cos\left((k x - \omega t) + (\Delta k x- \Delta \omega t)  \right)\!. 
+E &= E_0 \cos (k_1z-\omega_1 t)+ E_0 \cos (k_2z-\omega_2 t) \nonumber\\
+&= E_0 \cos\left((k+\Delta k)z-(\omega + \Delta \omega)t\right) 
++ E_0 \cos\left((k-\Delta k)z-(\omega - \Delta \omega)t\right)\nonumber \\
+&= E_0 \cos\left((kz - \omega t) +(\Delta k z-\Delta \omega t\right)
++ E_0 \cos\left((k z - \omega t) - (\Delta k z- \Delta \omega t)  \right)\!. 
 \label{eq:09_23}
 \end{align}
-Z uporabo adicijskih izrekov za kotne funkcije izraz preoblikujemo v:
+Z uporabo adicijskega izreka za kotne funkcije:
 \beq
-E = 2\cos \left(kx - \omega t \right)\cos \left(\Delta kx - \Delta \omega t \right)\!.
+\cos\alpha + \cos \beta = 2 \cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2}
+\eeq
+izraz preoblikujemo v:
+\beq
+E = 2\cos \left(kz - \omega t \right)\cos \left(\Delta kz - \Delta \omega t \right)\!.
 \label{eq:09_24}
 \eeq
-Skupno valovanje je torej valovanje z osrednjo krožno frekvenco $\omega$, 
-ki pa je amplitudno modulirano s krožno frekvenco $\Delta \omega$ (slika~\ref{}).
-Pri takem valovanju, ki si ga lahko predstavljamo kot zaporedje potujočih sunkov,
-lahko določimo dve različni hitrosti. Prva je hitrost premikanja ploskev konstantne
+Vsota teh dveh valovanj je torej potujoče valovanje v smeri $z$ s frekvenco, ki je 
+enaka osrednji krožni frekvenci $\omega$, in valovnim številom, ki je enako 
+osrednjemu valovnemu števiku $k$. Valovanje je amplitudno modulirano 
+s krožno frekvenco $\Delta \omega$ (slika~\ref{fig:09_utripanje}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/09_vsota.pdf_tex}
+\caption{Dve valovanji z različnimi frekvencami (modra in zelena, levo) se seštejeta
+v amplitudno modulirano valovanje (desno).}
+\label{fig:09_utripanje}
+\end{figure}
+
+Pri valovanju, ki predstavlja zaporedje potujočih sunkov, lahko določimo dve
+različni hitrosti. Prva je hitrost premikanja ploskev konstantne
 faze oziroma premikanja vrhov hitre modulacije. Ta hitrost je fazna hitrost in
-jo izračunamo z znane enačbe~(\ref{eq:09_25}). Druga hitrost pa je hitrost, s katero
-se premikajo vrhovi počasne modulacije oziroma posamezni sunki. To hitrost imenujemo
-grupna hitrost in jo izračunamo kot $v_g=\Delta \omega/\Delta k$ oziroma v limiti:
+jo izračunamo iz znane enačbe~(\ref{eq:09_25a}). Druga hitrost pa je hitrost, s katero
+se premikajo vrhovi počasne modulacije oziroma posamezni sunki. Izračunamo jo
+iz enačbe~(\ref{eq:09_24}) in dobimo 
+\beq
+v_g=\frac{z}{t} = \frac{\Delta \omega}{\Delta k}.
+\eeq
+Hitrost premikanja sunkov imenujemo grupna hitrost in jo 
+v limiti majhnih frekvenčnih razlik zapišemo kot:
 \boxeq{eq:09_24a}{
 v_g = \frac{d\omega}{d k}.
 }
+
 Izraz za grupno hitrost smo sicer izpeljali na primeru valovanja, sestavljenega iz dveh
 valovanj, vendar velja na splošno za razširjanje sunkov svetlobe. Informacija,
 ki jo prenašajo sunki svetlobe, po snovi torej potuje z grupno hitrostjo.
+\vglue5truemm
+\begin{figure}[ht]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/09_disperzija2.pdf_tex}
+\caption{Posnetki potujočega amplitudno moduliranega valovanja ob različnih časih.
+Potovanje posameznega vala označuje zelena pika, ki se premika z fazno hitrostjo. Potovanje
+amplitudne modulacije označuje modra pika in ta se premika z grupno 
+hitrostjo. Vidimo, da sta v narisanem primeru fazna in grupna hitrost različni.}
+\label{fig:09_disperzija}
+\end{figure}
 
 Vstavimo zvezo med valovnim številom in krožno frekvenco $k=\omega n /c_0$ v izraz za 
-grupno hitrost in dobimo:
+grupno hitrost (enačba~\ref{eq:09_24a}) in dobimo:
 \beq
 v_g = \frac{d\omega}{dk } = \left(\frac{dk}{d\omega}\right)^{-1} = \left( \frac{d}{d\omega}\left( 
 \frac{\omega n }{c_0}\right)\!\right)^{-1}\!\!.
@@ -68,17 +104,20 @@ v_g = \left(\frac{n}{c_0} + \frac{\omega}{c_0 }\frac{dn}{d\omega}\right)^{-1} =
 \frac{c_0}{n+\omega \frac{dn}{d\omega}}.
 \label{eq:09_26}
 \eeq
-V izrazu za grupno hitrost nastopa odvod lomnega količnika po krožni frekvenci vpadnega
-valovanja. Če je lomni količnik konstanten, je odvod enak nič in takrat sta fazna in grupna 
-hitrost enaki. Na skoraj celotnem spektralnem območju je odvod pozitiven, zato je na splošno
-grupna hitrost manjša od fazne.
+V zapisanem izrazu za grupno hitrost nastopa odvod lomnega količnika po krožni frekvenci vpadnega
+valovanja. Če je lomni količnik konstanten in neodvisen od frekvence, je odvod enak nič in 
+takrat sta fazna in grupna hitrost enaki. Na splošno je odvod različen od nič in v naslednjem razdelku
+spoznali, da je za večino snovi odvod na celotnem spektralnem območju vidne svetlobe pozitiven.
+Na splošno zato velja, da je za vidno svetlobo grupna hitrost manjša od fazne.
 
 \section{Lomni količnik}
 Odvisnost lomnega količnika od frekvence vpadnega 
 elektromagnetnega valovanja bomo izračunali na preprostem modelu. 
 Omejimo se na nemagnetne snovi, za katere je $\mu = 1$, kar pomeni, da
-za izračun frekvenčne odvisnosti lomnega količnika zadošča, če 
-poznamo $\varepsilon(\omega)$. Snov naj bo sestavljena iz $N$
+za izračun frekvenčne odvisnosti lomnega količnika zadošča poznati 
+$\varepsilon(\omega)$. 
+
+Naj bo snov sestavljena iz $N$
 identičnih atomov oziroma molekul, ki so enakomerno porazdeljeni
 po prostoru s prostornino $V$. Za opis posameznega atoma ali molekule uporabimo 
 klasični model oscilatorja, ki ga imenujemo Lorentzov model 
@@ -86,7 +125,7 @@ po nizozemskem fiziku Hendriku Lorentzu (1853--1928).
 
 Zamislimo si, da atom oziroma molekulo sestavljata kroglica 
 pozitivnega naboja, ki miruje v izhodišču pri $x=0$, in kroglica
-(oblak) negativnega naboja na oddaljenosti $x$. Med njima naj 
+(oblak) negativnega naboja na neki ravnovesni oddaljenosti. Med njima naj 
 deluje privlačna sila, ki jo v klasičnem modelu opišemo z vzmetjo
 s konstanto vzmeti $k$. 
 Poleg elastične sile naj na negativno nabito kroglico med 
@@ -96,35 +135,41 @@ zamislimo, da je ravnovesna razdalja med kroglicama enaka $x_r$,
 v bolj realističnem modelu, v katerem elektron opišemo kot oblak okoli jedra, 
 pa je ravnovesna razdalja enaka 0. Ker je razlika le v konstanti, 
 to na končni rezultat ne vpliva.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/09_Lorentz.pdf_tex}
+\caption{Preprost Lorentzov model atoma. Zaradi vpadnega 
+elektromagnetnega valovanja elektron vzbujeno niha.
+}
+\label{fig:09_Lorentz}
+\vglue-5truemm
+\end{figure}
 
-Naj na tak model atoma (ali molekule) vpade elektromagnetno valovanje. Ker je 
+Naj na tak model atoma ali molekule vpada elektromagnetno valovanje. Ker je 
 valovna dolžina svetlobe bistveno večja od atoma, lahko privzamemo, da
-je električno polje po velikost znotraj atoma homogeno. Za negativno nabito
-kroglico zapišemo Newtonov zakon, pri čemer upoštevamo silo vzmeti, silo 
-dušenja in silo v električnem polju, pri čemer se omejimo na polarizacijo 
-polja v smeri $x$:
+je električno polje po velikosti znotraj celotnega atoma homogeno in enako $E$.
+Za negativno nabito kroglico (elektron) zapišemo Newtonov zakon, pri čemer upoštevamo silo vzmeti, silo 
+dušenja in silo v električnem polju. Omejimo se na polarizacijo 
+polja v smeri $x$ in zapišemo:
 \beq
-m \ddot{x} = -kx -\gamma m \dot{x} - e_0 E,
+m \ddot{x} = -kx -\gamma m \dot{x} - e_0 E.
 \label{eq:09_02}
 \eeq
-pri čemer so $m$ masa negativno nabite kroglice, $\gamma$ koeficient dušenja
-in 
-\beq
-E = E_0 e^{-i\omega t}.
-\label{eq:09_03}
-\eeq
-Pike označujejo časovne odvode.
+Pri tem so $m$ masa negativno nabite kroglice, $\gamma$ koeficient dušenja
+in $E = E_0\,e^{-i\omega t}$.
+
 \begin{remark}
 Pri zapisu Lorentzovega modela smo privzeli, da je elektično polje, 
 ki ga čuti atom, enako vpadnemu električnemu polju. 
-To velja, dokler je atom sam oziroma snov sestavlja redek plin. Če pa je 
+To velja, dokler je atom sam oziroma snov sestavlja redek plin. Če je 
 atom v snovi obdan z ostalimi atomi, 
 čuti tudi njihov vpliv in pravilno bi bilo upoštevati skupni vpliv, ki 
 ga zapišemo s tako imenovanim lokalnim poljem. 
-Kako izračunamo lokalno polje bomo spoznali na koncu razdelka. 
+Kako izračunamo lokalno polje, bomo spoznali v naslednjem razdelku. 
 \end{remark}
 
-Vpeljemo lastno krožno oziroma resonančno frekvenco $\omega_0 = k/m$ in 
+Vpeljemo lastno krožno frekvenco $\omega_0 = k/m$ in 
 enačbo prepišemo v:
 \beq
 \ddot{x} + \gamma \dot{x} + \omega_0^2 x  = - \frac{e_0}{m} E_0 e^{-i \omega t}.
@@ -132,56 +177,56 @@ enačbo prepišemo v:
 \eeq
 Rešujemo jo z nastavkom:
 \beq
-x(t) = x_0(\omega) e^{-i\omega t},
+x(t) = x_0 e^{-i\omega t},
 \label{eq:09_05}
 \eeq
-pri čemer $x_0$ opisuje amplitudo nihanja. Dobimo:
+pri čemer $x_0$ opisuje amplitudo nihanja, odvisno od $\omega$. Vstavimo nastavek 
+(enačba~\ref{eq:09_05}) v enačbo~(\ref{eq:09_04}) in dobimo:
 \beq
 -\omega^2 x_0 - i \omega \gamma x_0 + \omega_0^2 x_0  = - \frac{e_0}{m} E_0.
 \label{eq:09_06}
 \eeq
-Od tod izrazimo amplitudo v odvisnosti od frekvence vpadnega valovanja:
+Od tod izrazimo amplitudo nihanja v odvisnosti od frekvence vpadnega valovanja:
 \beq
 x_0 = \frac{-e_0/m~E_0}{\omega_0^2 - \omega^2 - i\gamma \omega}.
 \label{eq:09_07}
 \eeq
+V zapisanem izrazu prepoznamo značilno resonančno odvisnost dušenega nihala. 
 
-Razmik med lego pozitivno in negativno nabite kroglice $x$ povzroči pojav
-dipolnega momenta $\mathbf{p}$:
+Vpadno električno polje izmakne negativno nabito kroglico iz ravnovesne 
+lege, kar povzroči nastanek dipolnega momenta $\mathbf{p}$:
 \beq
-\mathbf{p} = -e_0 x~ \mathbf{e}_x.
+\mathbf{p} = -e_0\,x\,\mathbf{e}_x.
 \label{eq:09_08}
 \eeq
 Prehod iz mikroskopskega opisa z dipolnim momentom posameznega atoma 
 v makroskopski opis naredimo z upoštevanjem gostote atomov v snovi 
-$\varrho = N/V$. Vpeljemo inducirano električno polarizacijo $P$, ki 
+$\varrho = N/V$. Vpeljemo inducirano električno polarizacijo $\mathbf{P}$, ki 
 je enaka celotnemu dipolnemu momentu na enoto volumna:
 \beq
-\mathbf{P} = \frac{\mathbf{p}N}{V} = \mathbf{p}\varrho. 
+\mathbf{P} = \frac{\mathbf{p}N}{V} = \mathbf{p}\,\varrho. 
 \label{eq:09_09}
 \eeq
 Z upoštevanjem enačb~(\ref{eq:09_07} in \ref{eq:09_08}) zapišemo 
 električno polarizacijo v snovi kot:
 \beq
-\mathbf{P} = -e_0 x~\mathbf{e}_x\varrho = \frac{e_0^2\varrho/m}{\omega_0^2 
-- \omega^2 - i\gamma \omega} E_0 \mathbf{e}_x e^{-i\omega t}.
+\mathbf{P} = -e_0\,x\,\mathbf{e}_x\,\varrho = \frac{e_0^2\,\varrho/m}{\omega_0^2 
+- \omega^2 - i\gamma \omega}\,\mathbf{e}_x\,E_0\,e^{-i\omega t}.
 \label{eq:09_10}
 \eeq
-Inducirano električno polarizacijo lahko povežemo z drugimi količinami, 
-s katerimi opišemo električno polje v snovi. Gostoto električnega polja
-zapišemo kot:
-\beq
-\mathbf{D} = \varepsilon \varepsilon_0 \mathbf{E} = 
-\varepsilon_0 \mathbf{E} + \mathbf{P}.
-\label{eq:09_11}
-\eeq
-Od tod sledi linearna zveza med električno polarizacijo in jakostjo
+Spomnimo se, da lahko inducirano električno polarizacijo izrazimo z jakostjo
 električnega polja v snovi:
 \beq
-\mathbf{P} = \varepsilon \varepsilon_0 \mathbf{E} - \varepsilon_0 \mathbf{E} = 
-\varepsilon_0 (\epsilon-1) \mathbf{E}.
+\mathbf{P} = \varepsilon_0 (\epsilon-1) \mathbf{E}.
 \label{eq:09_12}
 \eeq
+\vglue-5truemm
+\begin{remark}
+Gornji zapis je linearni približek zveze med električno polarizacijo in 
+jakostjo električnega polja. Pri velikih vpadnih jakostih električnega polja linearna zveza 
+med ne velja in pojavijo se nelinearni optični pojavi. Nelinearna optika presega okvir te knjige.
+\end{remark}
+
 Enačbo~(\ref{eq:09_12}) primerjamo z enačbo~(\ref{eq:09_10}) in dobimo:
 \beq
 \varepsilon= 1 + \frac{e_0^2\varrho/\varepsilon_0 m}{\omega_0^2 - \omega^2 - i\gamma \omega}.
