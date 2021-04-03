@@ -298,13 +298,13 @@ bo približek redkega plina.
 
 V redkem plinu vrednost lomnega količnika le malo odstopa od lomnega količnika vakuuma 
 in $\mathcal{N} \approx 1$. Lomni količnik (enačba~\ref{eq:09_17}) zato lahko razvijemo in dobimo:
-\beq
-\mathcal{N} = \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \approx
-1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
+\begin{align}
+\mathcal{N} =& \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \\
+\approx& 1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2} + \frac{i}{2}\frac{\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2}.
 \label{eq:09_22}
-\eeq
+\end{align}
 \begin{figure}[h!]
 \centering
 \def\svgwidth{140truemm} 
@@ -339,9 +339,16 @@ Po enačbi~(\ref{eq:09_26}) to pomeni, da je grupna hitrost vpadne vidne
 svetlobe vedno manjša od fazne hitrosti. 
 
 Poglejmo še imaginarni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,b), ki 
-opisuje absorpcijo svetlobe. Ta je večinoma enak nič, razen v bližini lastne frekvence. 
+opisuje absorpcijo svetlobe. Večinoma je enak nič, razen v bližini lastne frekvence. 
 V območju anomalne disperzije, v katerem je grupna hitrost večja od fazne, se 
-torej vpadna svetloba močno absorbira.
+torej vpadna svetloba močno absorbira. 
+
+\begin{remark}
+Vpadna svetloba se lahko absorbira zaradi različnih pojavov. To so lahko 
+elektronski prehodi (tipično v vidnem ali ultravijoličnem delu spektra), 
+vzbujanje vibracijskih stanj v snovi (infrardeč del spektra) ali 
+vzbujanje rotacijskih stanj (v mikrovalovnem delu spektra).
+\end{remark}
 
 Disperzijo smo pojasnili na preprostem Lorentzovem modelu.
 V dejanski snovi oziroma atomskem/molekulskem sistemu je navadno več resonanc, pri čemer
@@ -359,7 +366,6 @@ z ustreznimi amplitudami $f_j$:
 \caption{Primer disperzije realnega dela lomnega količnika za Lorentzov model 
 z več lastnimi resonancami. Senčeni del označuje območje vidne svetlobe, 
 za katero velja normalna disperzija.}
-\vskip-1truecm
 \label{fig:09_disp_multi}
 \end{figure}
 
@@ -382,39 +388,76 @@ od ostalih, lahko prispevke ostalih lastnih frekvenc upoštevamo le v konstanti 
 n'^2(\lambda) = A + \sum_j \frac{G_j \lambda^2}{\lambda^2 - \lambda_{0j}^2}.
 }
 Približek je leta 1872 zapisal nemški fizik Wolfgang von Sellmeier, zato ga danes
-imenujemo Sellmeierjeva enačba. Ta zveza se pogosto uporablja za opis disperzije $n(\lambda)$
-v prozornih snoveh. 
+imenujemo Sellmeierjeva enačba. Ta zveza se pogosto uporablja za opis disperzije 
+lomenga količnika $n(\lambda)$ v prozornih snoveh. 
 
-\begin{example}
- Primeri koeficientov za disperzijo
- primer n<1, ionosfera.
+Še preprostejši približek je Cauchyjev približek, ki ga imenujemo po francoskem matematiku
+in fiziku Augustin-Louisu Cauchyju (1789--1857). Uporabimo ga lahko, kadar je izbrano spektralno
+območje dovolj daleč od resonanc. Poleg tega upoštevamo, da se lomni količnik le malo 
+razlikuje od 1, in zapišemo:
+\boxeq{eq:09_30a}{
+n = A + \frac{B}{\lambda^2}.
+}
+
+\begin{example}{\bf Cauchyjev približek za lomni količnik.}
+Najpreprostejši opis odvisnosti lomnega količnika od valovne dolžine vpadne svetlobe
+je Cauchyjev približek. Čeprav smo zvezo izračunali za redke pline, velja v vidnem
+območju dovolj dobro tudi
+za gostejše trdne snovi. Nekaj parametrov $A$ in $B$ za izračun lomnega količnika
+je podanih v tabeli:
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+snov& $A$ & $B (\si{\micro\metre}^2)$\\ \hline 
+taljeno kremenovo steklo & 1,4580 & 0,00354\\ \hline
+kronsko steklo K5 & 1,5220 & 0,00459\\ \hline
+svinčevo steklo SF10 & 1,7280 & 0,01342\\ \hline
+\end{tabular}
+\end{center}
+\end{example}
+
+\begin{example}{\bf Lomni količnik ionosfere.}
+V preprostem Lorentzovem modelu smo zapisali, da je za frekvence vpadne svetlobe,
+ki so večje od resonančne frekvence, lomni količnik manjši od 1. Ker ima večina
+snovi resonanco v ultravijoličnem območju, je za vidno svetlobo lomni količnik
+vedno večji od 1. Izjema, za katero to ne velja, je ionosfera. 
+
 \end{example}
 
 \subsection*{Popravek lokalnega polja v gosti snovi}
-Do zdaj smo obravnavali redko snov, v kateri so bili atomi oziroma molekule v snovi
-dovolj oddaljeni, da niso čutili medsebojnega vpliva. 
-Zato smo v preprostem Lorentzovem modelu za polje, ki ga čuti oblak elektronov, 
-vzeli kar polje vpadne svetlobe. Če pa je izbrana molekula obdana z drugimi 
-molekulami, ki se pod vplivom zunanjega električnega polja ravno tako polarizirajo, se  
-električno polje na mestu izbrane molekule spremeni. Za izračun tako imenovanega 
-lokalnega polja moramo upoštevati tudi okoliško polarizacijo.
+Do zdaj smo obravnavali redko snov, v kateri so atomi oziroma molekule
+dovolj oddaljeni, da ne čutijo medsebojnega vpliva. 
+Zato smo v preprostem Lorentzovem modelu za polje, ki ga čuti elektron, 
+vzeli kar polje vpadne svetlobe $E$. Če pa je izbrana molekula obdana
+z drugimi molekulami, ki se pod vplivom zunanjega električnega polja 
+ravno tako polarizirajo, se  električno polje na mestu izbrane 
+molekule spremeni. Za izračun tako imenovanega lokalnega polja $\tilde{E}$
+moramo upoštevati tudi okoliško polarizacijo.
 
-Ponovno se omejimo le na eno smer, zato lahko vektorski zapis izpustimo in dobimo:
+Lokalnega polja na tem mestu ne bomo izračunali (glej npr. Born in Wolf, {\it
+Principles of Optics}), zapišimo le, da velja:
 \beq
-\tilde{E} = E + \frac{P}{3\varepsilon_0}.
+\tilde{E} = E + \frac{P}{3\varepsilon_0},
 \label{eq:09_31}
 \eeq
-Prvi člen predstavlja jakost električnega polja vpadne svetlobe, drugi člen 
-pa opisuje polarizacijsko polje zaradi okoliških molekul. Z uporabo zveze
+pri čemer smo se omejili le na eno smer, zato smo vektorski zapis opustili. 
+Prvi člen v enačbi~(\ref{eq:09_31}) predstavlja jakost električnega 
+polja vpadne svetlobe, drugi člen pa opisuje polarizacijsko 
+polje zaradi okoliških molekul. Z uporabo zveze
 $P = \varepsilon_0 (\varepsilon -1) E$ dobimo:
 \beq
-\tilde{E} = E + \frac{\varepsilon_0 (\varepsilon -1) E}{3\varepsilon_0} = \frac{\epsilon + 2}{3}E.
+\tilde{E} = E + \frac{\varepsilon_0 (\varepsilon -1) E}{3\varepsilon_0} = 
+\frac{\epsilon + 2}{3}E.
 \label{eq:09_32}
 \eeq
-Pri izračunu inducirane polarizacije vseh dipolov v snovi moramo zaradi 
-vpliva sosednjih molekul upoštevati $\tilde{E}$. Sledi:
+Jakost lokalnega polja je tako sorazmerna jakosti vpadnega polja. 
+
+Pri izračunu inducirane polarizacije vseh dipolov v snovi (enačba~\ref{eq:09_10}) 
+moramo zaradi vpliva sosednjih molekul upoštevati $\tilde{E}$. Sledi:
 \beq
-P = \frac{\frac{e_0^2}{m}\varrho_N \frac{\varepsilon+2}{3}E_0 e^{-i\omega t}}{\omega_0^2 - \omega^2 -i\gamma \omega} = \varepsilon_0 (\varepsilon -1) E_) e^{-i\omega t}.
+P = \frac{e_0^2\,\varrho/m}{\omega_0^2 - \omega^2 -i\gamma \omega}
+\frac{\varepsilon+2}{3}\,E_0\,e^{-i\omega t}
+= \varepsilon_0 (\varepsilon -1) E_0\,e^{-i\omega t}.
 \label{eq:09_33}
 \eeq
 Od tod izračunamo zvezo:
@@ -434,16 +477,47 @@ Zapisani izraz imenujemo Lorentz-Lorenzova zveza po danskem matematiku Ludvigu L
 (1829--1891) in nizozemskemu fiziku Hendriku Lorentzu. 
 \begin{remark}
  Lorentz-Lorenzova zveza je tesno povezana s Clausius-Mossottijevo zvezo, ki opisuje
- zvezo med dielektrično konstanto snovi z atomsko polarizirnostjo $\alpha$.
+ zvezo med dielektrično konstanto snovi z atomsko polarizirnostjo $\alpha$:
+ \beq
+\frac{\varepsilon -1 }{\varepsilon+2} = \frac{\varrho\alpha}{3 \varepsilon_0},
+\label{eq:09_35a}
+\eeq
+pri čemer je $\varrho$ število molekul na volumsko enoto. 
 \end{remark}
+
+\begin{example}{\bf Disperzija v steklu in v vodi.}
+Verjetno najbolj poznana posledica disperzije v steklu je razklon bele svetlobe
+na prizmi. S tem poskusom je Newton v drugi polovici sedemnajstega stoletja
+pokazal, da je bela svetloba sestavljena iz svetlob različnih barv. Ko
+svetloba vpade na prizmo, se lomi po lomnem zakonu. Ker je lomni kot odvisen
+od valovne dolžine svetlobe, se svetloba različnih barv lomi pod različnimi
+koti in ob izhodu iz prizme se snop prej bele svetlobe razkloni v različne
+barve.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=7truecm]{slike/09_prizma.jpg}\hfill
+\includegraphics[width=7truecm]{slike/09_prizma.jpg}
+\caption{Razklon sončne svetlobe na prizmi}
+\label{fig:09_prizma}
+\end{figure}
+ 
+Drugi pomemben primer disperzije je mavrica, ki nastane zaradi
+disperzije v dežnih kapljicah vode. Ko sončeva svetloba vpade
+na kapljice v zraku, se svetloba različnih valovnih dolžin 
+lomi pod različnimi koti, in različne barve svetlobe izhajajo
+iz kapljic pod različnimi koti. 
+\begin{figure}[ht]
+\centering
+%\includegraphics[width=7truecm]{slike/09_mavrica_shema.jpg}\hfill
+\includegraphics[width=7truecm]{slike/09_mavrica_photo.jpg}
+\caption{Mavrica}
+\label{fig:09_mavrica}
+\end{figure}
+
+\end{example}
 
 disperizaja v vlaknih.
 vlanka
-mavrica
-prizma
-
-odvisnosti
-viglviglvigl razlozi resonance, uv, elektronske... 
 primeri
 
 n< 1x xray ionosphere
