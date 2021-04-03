@@ -132,8 +132,9 @@ Poleg elastične sile naj na negativno nabito kroglico med
 premikanjem deluje tudi sila dušenja, ki opisuje absorpcijo svetlobe
 v snovi. V klasični sliki si lahko
 zamislimo, da je ravnovesna razdalja med kroglicama enaka $x_r$, 
-v bolj realističnem modelu, v katerem elektron opišemo kot oblak okoli jedra, 
-pa je ravnovesna razdalja enaka 0. Ker je razlika le v konstanti, 
+v bolj realističnem modelu, v katerem elektron opišemo kot oblak okoli jedra,
+pa je ravnovesna razdalja enaka 0. Podobno velja tudi za molekule, ki 
+nimajo dipolnega momenta. Ker je razlika le v konstanti, 
 to na končni rezultat ne vpliva.
 \begin{figure}[ht]
 \centering
@@ -224,20 +225,21 @@ električnega polja v snovi:
 \begin{remark}
 Gornji zapis je linearni približek zveze med električno polarizacijo in 
 jakostjo električnega polja. Pri velikih vpadnih jakostih električnega polja linearna zveza 
-med ne velja in pojavijo se nelinearni optični pojavi. Nelinearna optika presega okvir te knjige.
+ne velja in treba je upoštevati tudi višje člene v razvoju z višjimi potencami polja. Ti
+opisujejo nelinearne optične pojave, kar presega okvir te knjige.
 \end{remark}
 
 Enačbo~(\ref{eq:09_12}) primerjamo z enačbo~(\ref{eq:09_10}) in dobimo:
 \beq
-\varepsilon= 1 + \frac{e_0^2\varrho/\varepsilon_0 m}{\omega_0^2 - \omega^2 - i\gamma \omega}.
+\varepsilon= 1 + \frac{e_0^2\,\varrho/\varepsilon_0 m}{\omega_0^2 - \omega^2 - i\gamma \omega}.
 \label{eq:09_13}
 \eeq
-Vpeljemo še plazemsko frekvenco:
+Vpeljemo še tako imenovano plazemsko frekvenco:
 \beq
-\omega_p = \sqrt{\frac{e_0^2 \varrho }{\varepsilon_0 m}}
+\omega_p = \sqrt{\frac{e_0^2\,\varrho }{\varepsilon_0 m}}
 \label{eq:09_14}
 \eeq
-in upoštevamo zvezo med na splošno kompleksnim lomnim količnikom:
+in upoštevamo zvezo med dielektričnostjo in na splošno kompleksnim lomnim količnikom:
 \beq
 \varepsilon = \mathcal{N}^2.
 \label{eq:09_15}
@@ -247,13 +249,15 @@ Dobimo:
 \varepsilon = \mathcal{N}^2 = 1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}.
 }
 \begin{remark}
-V plazmi se elektroni prosto gibljejo, zato sta v tem primeru $k=0$ in $\gamma = 0$. 
-Za opis plazme tako ostane le še frekvenca $\omega_p$, od tod ime plazemska frekvenca. \end{remark}
+V plazmi se elektroni prosto gibljejo in niso vezani na atome,
+zato za opis elektronov v plazmi velja $k=0$ in $\gamma = 0$. Za opis njihovega
+gibanja ostane le še krožna frekvenca $\omega_p$, od tod ime plazemska frekvenca.
+\end{remark}
 
 Kompleksni lomni količnik $\mathcal{N}$ razdelimo na realni $n'$ in imaginarni del $n''$ in 
 zapišemo:
 \beq
-\mathcal{N}^2 = (n'+n'')^2 = n'^2-n''^2+2in'n'' =  1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}.
+\mathcal{N}^2 = (n'+in'')^2 = n'^2-n''^2+2in'n'' =  1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}.
 \label{eq:09_17}
 \eeq
 Izenačimo realni in imaginarni del leve in desne strani enačbe in dobimo:
@@ -268,9 +272,9 @@ ter
 \omega^2\right)^2 + \gamma^2 \omega^2}.
 \label{eq:09_19}
 \eeq
-Zapisali smo sistem dveh enačb za realni in imaginarni del lomnega količnika. Rešujemo ga podobno, kot
-smo reševali sistem enačb za lomni količnik v prevodni snovi (enačbe~\ref{eq:nkompleks2} in \ref{eq:03_72})
-z rešitvami v obliki enačb~(\ref{eq:03_76} in \ref{eq:03_77}). Rešitvi sta v obliki:
+Zapisali smo sistem dveh enačb za realni in imaginarni del lomnega količnika. Rešujemo ga podobno kot
+sistem enačb za lomni količnik v prevodni snovi (enačbe~\ref{eq:nkompleks2} in \ref{eq:03_72})
+z rešitvami v obliki enačb~(\ref{eq:03_76} in \ref{eq:03_77}). Rešitvi sta tako:
 \beq
 n'^2 = \frac{1}{2}\left(\varepsilon'+\sqrt{\varepsilon'^2 + \varepsilon''^2}\right)
 \label{eq:09_20}
@@ -281,59 +285,84 @@ n''^2 = \frac{1}{2}\left(-\varepsilon'+\sqrt{\varepsilon'^2 + \varepsilon''^2}\r
 \label{eq:09_21}
 \eeq
 pri čemer sta $\varepsilon'$ in $\varepsilon''$ podana z enačbama~(\ref{eq:09_18} in \ref{eq:09_19}).
-Odvisnost lomnega količninka od frekvence vpadnega elektromagnetnega valovanja, zaradi katere
+Realni in imaginarni del lomnega količnika sta tako odvisna od frekvence vpadnega valovanja. 
+Odvisnost lomnega količnika od frekvence vpadnega elektromagnetnega valovanja, zaradi katere
 se fazna in grupna hitrost valovanja v snovi razlikujeta, imenujemo disperzija.
 
 \section{Disperzija}
 Na preprostem modelu smo izpeljali lomni količnik snovi in pokazali,
 kako se njegov realni in imaginarni del
-spreminjata s frekvenco vpadnega elektromegnetnega valovanja. Ker so izrazi
+spreminjata s frekvenco vpadnega elektromagnetnega valovanja. Ker so izrazi
 razmeroma zapleteni, se navadno poslužimo približkov. Prvi naj 
 bo približek redkega plina. 
 
 V redkem plinu vrednost lomnega količnika le malo odstopa od lomnega količnika vakuuma 
-in $\mathcal{N} \approx 1$. Ker je odstopanje lomnega količnika majhno, lahko kvadratni koren v izrazu
-za lomni količnik (enačba~\ref{eq:09_17}) razvijemo in dobimo:
+in $\mathcal{N} \approx 1$. Lomni količnik (enačba~\ref{eq:09_17}) zato lahko razvijemo in dobimo:
 \beq
 \mathcal{N} = \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \approx
 1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
-\omega^2\right)^2 + \gamma^2 \omega^2} + \frac{1}{2}\frac{i\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
+\omega^2\right)^2 + \gamma^2 \omega^2} + \frac{i}{2}\frac{\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2}.
 \label{eq:09_22}
 \eeq
 \begin{figure}[h!]
 \centering
-\def\svgwidth{100truemm} 
-%\input{slike/09_nkompleks.pdf_tex}
-\caption{Odvisnost realnega in imaginarnega dela in imaginarnega dela lomnega količnika od frekvence
-vpadne svetlobe v preprostem Lorentzovem modelu}
-\label{fig:09_nkompelks}
+\def\svgwidth{140truemm} 
+\input{slike/09_real_im_n.pdf_tex}
+\caption{Odvisnost realnega (a) in imaginarnega dela (b) lomnega količnika od 
+frekvence vpadne svetlobe v preprostem Lorentzovem modelu. Osenčen del na levi 
+sliki označuje območje anomalne disperzije.}
+\label{fig:09_nkompleks}
 \end{figure}
 
-Poglejmo najprej realni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,a). Pri majhnih vrednostih
-je lomni količnik večji od 1, njegova velikost pa je odvisna od razmerja med plazemsko in lastno frekvenco.
-V bližini lastne frekvence $\omega_0$ lomni količnik strmo naraste, nato strmo pade in se z naraščajočo
-frekvenco počasi približuje vrednosti 1. Vidimo, da je v skoraj celotnem spektralnem območju odvod
-lomnega količnika po frekvenci pozitiven (območje normalne disperzije), razen v ozkem območju v bližini l
-astne frekvence, kjer je odvod negativen (območje anomalne disperzije). Za zelo velike frekvence vpadne
-svetlobe (na primer za rentgensko svetlobo) je lomni količnik zelo blizu 1.
+Poglejmo najprej realni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,a). 
+Pri majhnih vrednostih je lomni količnik nekoliko večji od 1, 
+njegova velikost pa je odvisna od razmerja med plazemsko in lastno frekvenco.
+V bližini lastne frekvence $\omega_0$ lomni količnik naraste, nato strmo pade, potem pa 
+začne ponovno naraščati in se počasi približuje vrednosti 1. V skoraj celotnem 
+spektralnem območju je tako odvod lomnega količnika po frekvenci pozitiven 
+(območje normalne disperzije), razen v ozkem območju v bližini lastne 
+frekvence $\omega_0$, kjer je odvod negativen (območje anomalne disperzije). 
+Za zelo velike frekvence vpadne svetlobe je lomni količnik praktično enak 1.
 
-Poglejmo še imaginarni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,b). Ta je večinoma enak nič,
-kar pomeni, da snov vpadne svetlobe ne absorbira, razen v bližini lastne frekvence. V bližini 
-lastne frekvence, kjer je disperzija anomalna, se torej vpadna svetloba močno absorbira. 
+Izkaže se, da za praktično vse snovi lastna frekvenca $\omega_0$
+leži v ultravijoličnem delu spektra, torej pri frekvencah, ki so večje od
+frekvenc vidne svetlobe. Posledično je lomni količnik za vidno svetlobo 
+vedno večji od 1.
 
-Za večino snovi je lastna frekvenca v območju UV svetlobe, se pravi pri frekvencah, ki 
-so večje od vidne svetlobe. Območje vidne svetlobe je tako za večino (vse?) prozorne snovi,
-ki svetlobe ne absorbirajo, v območju normalne disperzije. 
+Odvod lomnega količnika po frekvenci vpadne svetlobe $dn/d\omega >0$
+je za vse frekvence, razen v bližini $\omega_0$, pozitiven. 
+Ker so frekvence vidne svetlobe manjše od lastnih frekvenc, je tudi celotna
+vidna svetloba v območju normalne disperzije, kar pomeni, da z naraščajočo
+frekvenco (in pojemajočo valovno dolžino) lomni količnik narašča. 
+Po enačbi~(\ref{eq:09_26}) to pomeni, da je grupna hitrost vpadne vidne 
+svetlobe vedno manjša od fazne hitrosti. 
 
-V dejanski snovi oziroma atomskem/molekulskem sistemu je lahko več resonanc. Vsaki
-od njih ustreza neka resonančna frekvenca $\omega_{0j}$ in ustrezni koeficient
+Poglejmo še imaginarni del lomnega količnika (slika~\ref{fig:09_nkompleks}\,b), ki 
+opisuje absorpcijo svetlobe. Ta je večinoma enak nič, razen v bližini lastne frekvence. 
+V območju anomalne disperzije, v katerem je grupna hitrost večja od fazne, se 
+torej vpadna svetloba močno absorbira.
+
+Disperzijo smo pojasnili na preprostem Lorentzovem modelu.
+V dejanski snovi oziroma atomskem/molekulskem sistemu je navadno več resonanc, pri čemer
+vsaki od njih ustrezata neka resonančna frekvenca $\omega_{0j}$ in koeficient
 dušenja $\gamma_j$. Potem vse prispevke zapišemo kot vsoto posameznih prispevkov 
 z ustreznimi amplitudami $f_j$:
 \beq
 \varepsilon = \mathcal{N}^2 = 1+ \sum_j \frac{f_j \omega_{pj}^2}{\omega_{0j}^2 - \omega^2 - i\gamma_j\omega}.
 \label{eq:09_27}
 \eeq
+\begin{figure}[h!]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/09_disp_multi.pdf_tex}
+\caption{Primer disperzije realnega dela lomnega količnika za Lorentzov model 
+z več lastnimi resonancami. Senčeni del označuje območje vidne svetlobe, 
+za katero velja normalna disperzija.}
+\vskip-1truecm
+\label{fig:09_disp_multi}
+\end{figure}
+
 V praksi za navedeni izraz uporabimo različne približke, ki v danem frekvenčnem
 območju dovolj dobro opišejo odvisnost lomnega količnika. V prozornih snoveh lahko 
 dušenje, ki na splošno povzroča absorpcijo, povsem zanemarimo in privzamemo $\gamma_j = 0$ za 
