@@ -479,7 +479,8 @@ Zapisani izraz imenujemo Lorentz-Lorenzova zveza po danskem matematiku Ludvigu L
 pri čemer je $\varrho$ število molekul na volumsko enoto. 
 \end{remark}
 
-\begin{example}{\bf Disperzija v steklu in v vodi.}
+\begin{example}
+\vglue-2truemm{\bf Disperzija v steklu in v vodi.}
 Verjetno najbolj poznana posledica disperzije v steklu je razklon bele svetlobe
 na prizmi. S tem poskusom je Newton v drugi polovici sedemnajstega stoletja
 pokazal, da je bela svetloba sestavljena iz svetlob različnih barv. Ko bela
@@ -490,73 +491,105 @@ barve.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=7truecm]{slike/09_prizma.jpg}\hfill
-\includegraphics[width=7truecm]{slike/09_prizma.jpg}
-\caption{Razklon sončne svetlobe na prizmi}
+\includegraphics[width=7truecm]{slike/09_prizma_disp.png}
+\caption{Razklon sončne (bele) svetlobe na prizmi: Fotografija razklonjenega
+snopa svetlobe (levo) in shematski prikaz učinka disperzije na prehod svetlobe
+skozi prizmo (desno). Podobno sliko najdemo na naslovnici albuma 
+{\it The Dark Side of the Moon} britanske zasedbe Pink Floyd.}
 \label{fig:09_prizma}
 \end{figure}
- 
+\vglue-2truemm
 Drugi pomemben primer disperzije je mavrica, ki nastane zaradi
 disperzije v dežnih kapljicah vode. Ko bela svetloba s Sonca vpade
 na kapljice v zraku, se svetloba različnih valovnih dolžin 
-lomi pod različnimi koti, in različne barve svetlobe izhajajo
-iz kapljic pod različnimi koti. 
+lomi pod različnimi koti. Po odboju na zadnji strani kapljice 
+zato različne barve svetlobe izhajajo iz kapljic pod različnimi koti, 
+kar vidimo kot mavrico.
 \begin{figure}[ht]
 \centering
-%\includegraphics[width=7truecm]{slike/09_mavrica_shema.jpg}\hfill
-\includegraphics[width=7truecm]{slike/09_mavrica_photo.jpg}
-\caption{Mavrica}
+\includegraphics[width=7truecm]{slike/09_mavrica_photo.jpg}\hfill
+\includegraphics[width=7truecm]{slike/09_mavrica_disp.png}
+\caption{Fotografija mavrice (levo) in shematski prikaz nastanka
+mavrice (desno). Mavrica prvega reda nastane ob enkratnem
+odboju svetlobe v kapljici, mavrica drugega reda pa z dvakratnim.
+Vrstni red barv v mavrici drugega reda je obrnjen glede na 
+red barv v mavrici prvega reda. Mavrica prvega reda se pojavi pri 
+kotih okoli $41$--$42\si{\degree}$ glede na vpadno svetlobo, mavrica drugega
+reda pa pri okoli $50$--$53\si{\degree}$. Med obema mavricama je značilen 
+temnejši pas, tako imenovan Aleksandrov pas.}
 \label{fig:09_mavrica}
 \end{figure}
+\vglue-5truemm
 \end{example}
 
 \begin{example}{\bf Disperzija v optičnih vlaknih.}
 Disperzija igra zelo pomembno vlogo pri prenosu signalov
 po optičnih vlaknih. Informacija po vlaknih potuje
 v obliki kratkih sunkov svetlobe, ki imajo neko
-končno spektralno širino. Zaradi disperzije v vlaknih 
-posamezne spektralne komponente sunka svetlobe
-potujejo z malenkost različnimi hitrostmi, zaradi 
-česar se sunek med prehodom skozi vlakno podaljša. 
-Če so vpadni sunki svetlobe zelo kratki in si hitro sledijo,
-se med prehodom skozi vlakno tako podaljšajo, da jih na izhodu
-ne ločimo več in informacija se izgubi. 
-Disperzija v optičnih vlaknih zato omejuje količino 
-podatkov, ki jih lahko po vlaknu prenašamo v časovni enoti,
-in veliko razvoja je posvečenega zmanjšanju disperzije.
+končno spektralno širino. Posamezne spektralne 
+komponente sunkov svetlobe zaradi disperzije 
+potujejo z malenkost različnimi hitrostmi in sunki se 
+med prehodom skozi vlakno podaljšajo. Ko je podaljšanje
+tako veliko, da posameznih sunkov ne razločimo več, 
+se informacija izgubi.  
+Disperzija v optičnih vlaknih tako omejuje količino 
+podatkov, ki jih lahko po vlaknu prenašamo v časovni enoti.
 \end{example}
 
 \section{Prevodne snovi}
-Elektrone v kovini obravnavamo po Drudejevem modelu prostega elektronskega plina
-v mreži nepremičnih pozitivnih nabojev. Ker so v tem modelu elektroni prosti,
-je konstanta vzmeti $k=0$ in tako lastna frekvenca $\omega_0=0$. Dobimo:
+%valovna enačba, glej poglavje;
+%odboj na kovini, glej poglavje.
+
+Elektrone v prevodnih snoveh oziroma kovinah
+obravnavamo po Drudejevem modelu prostega elektronskega plina
+v mreži nepremičnih pozitivnih nabojev. V tem modelu so elektroni prosti,
+zato je konstanta vzmeti $k=0$ in lastna frekvenca $\omega_0=0$. Izhajamo 
+iz splošne enačbe za izračun kompleksnega lomnega količnika $\mathcal{N}$
+(enačba~\ref{eq:09_16}) in dobimo:
 \beq
 \mathcal{N}^2 = 1 + \frac{\omega_p^2}{-\omega^2 -i \gamma \omega} = 1- 
 \frac{\omega_p^2}{\omega^2+i\gamma \omega}.
 \label{eq:09_36}
 \eeq
-Če zanemarimo tudi električno upornost, ki ga opisuje koficient dušenja, dobimo
-preprosto zvezo:
-\beq
+Pri tem smo z $\omega$ označili krožno frekvenco vpadne svetlobe, z
+$\omega_p$ pa plazemsko frekvenco, podano z enačbo~(\ref{eq:09_14}). 
+Koeficient dušenja $\gamma$ opisuje električno upornost, ki jo v dobrih
+prevodnikih lahko zanemarimo. Lomni količnik potem izračunamo kot:
+\boxeq{eq:09_36a}{
 \mathcal{N} \approx \sqrt{1- \frac{\omega_p^2}{\omega^2}}.
 \label{eq:09_37}
-\eeq
-Za vrednosti $\omega < \omega_p$ je lomni količnik povsem imaginaren in svetloba se v snovi
+}
+Za vrednosti $\omega < \omega_p$ je lomni količnik imaginaren in svetloba se v snovi
 močno absorbira. Za krožne frekvence $\omega > \omega_p$ pa je lomni količnik realen 
-in snov prozorna. 
+in snov prozorna. Ključni parameter pri odzivu prevodnikov je tako plazemska frekvenca. 
 
-Za na primer zlato je plazemska frekvenca pri okoli $500~\si{\nano\meter}$, v območju
-vidne svetlobe torej, za srebro pa v ultravijoličnem območju pri okoli $320~\si{\nano\meter}$. 
-Pri srebru je tako lomni količnik za celoten spekter vidne svetlobe imaginaren, zato se celoten 
-spekter precej svetlobe enakomerno odbija. Pri zlatu je lomni količnik za del vidnega spektra realen in za
-del vidnega spektra imaginaren. Rdeča in rumena barva se zato v snovi močno absorbirata, kar
-je za zunanjega opazovalca videti, kot da se odbijeta. Modra svetloba v zlatu občuti
-realni lomni količnik in se zato dosti manj odbija od površine kot rdeča in rumena. Ta
-lastnost daje zlatu značilno rumeno-rdečkasto barvo. 
-
+Plazemska frekvenca za srebro je v ultravijoličnem delu spektra 
+pri okoli $320~\si{\nano\meter}$, za zlato pa pri okoli $500~\si{\nano\meter}$.
+Lomni količnik srebra je tako za celoten spekter vidne svetlobe imaginaren in odbojnost
+vidne svetlobe je približno enaka za vse valovne dolžine. Pri zlatu je lomni 
+količnik za del vidnega spektra z daljšimi valovnimi dolžinami realen, pri 
+krajših valovnih dolžinah pa je imaginaren. Rdeča in rumena barva se zato v zlatu 
+ne moreta razširjati in ko bela svetloba vpade na zlato, se rdeča in rumena svetloba
+od njega odbijeta. To da zlatu značilno rdečkasto-rumeno barvo. Za modre odtenke
+svetlobe je lomni količnik zlata realen, zato se znatno šibkeje odbijajo od površine.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=7truecm]{slike/09_zlato.jpg}\hfill
+\includegraphics[width=7truecm]{slike/09_pirit.jpg}
+\caption{Ploščica $91,6~\%$ (22-karatnega) in košček $83,3~\%$ (20-karatnega) zlata (levo). 
+Podobno zlatorumeno barvo ima tudi pirit FeS$_2$ (desno).}
+\label{fig:09_zlato}
+\end{figure}
 
 \section{Optični metamateriali}
-Videli smo, da je v bližini resonanc ali v kovini pri $\omega <\omega_p$ vrednost $\mathcal{N}^2 <0$.
-Lomni kolilčnik je zato povsem imaginaren. To se zgodi, ko je $\varepsilon'<0$. Dielektričnost
+Posebna vrsta snovi so metamateriali. To so snovi, ki jih v naravi ne najdemo (so umetno
+ustvarjene), zaradi njihove natančno načrtovane in zapletene strukture pa delujejo na 
+vpadno elektromagnetno valovanje drugače od navadnih snovi. Za optiko so najbolj zanimivi
+metamateriali, ki imajo na določenem frekvenčnem območju negativni lomni količnik.
+
+V prejšnjih razdelkih smo spoznali, da je v bližini resonanc ali v 
+kovini pri $\omega <\omega_p$ vrednost $\mathcal{N}^2 <0$.
+Lomni količnik je zato povsem imaginaren. To se zgodi, ko je $\varepsilon'<0$. Dielektričnost
 snovi ima negativno vrednost. Zanimive pojave dobimo, če hkrati velja tudi $\mu'<0$. Produkt
 obeh je potem pozitiven in se lahko izognemo absorpciji. Vendar takrat velja drugačen
 predznak za $\mathcal{N}$. Če denimo povsem zanemarimo dušenje ($\varepsilon''=0$, $\mu''=0$), 
