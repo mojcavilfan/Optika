@@ -516,10 +516,33 @@ Vrstni red barv v mavrici drugega reda je obrnjen glede na
 red barv v mavrici prvega reda. Mavrica prvega reda se pojavi pri 
 kotih okoli $41$--$42\si{\degree}$ glede na vpadno svetlobo, mavrica drugega
 reda pa pri okoli $50$--$53\si{\degree}$. Med obema mavricama je značilen 
-temnejši pas, tako imenovan Aleksandrov pas.}
+temnejši pas, tako imenovan Aleksandrov pas, po starogrškem mislelcu Aleksandru
+Afrodizijskemu ($\sim 200$).}
 \label{fig:09_mavrica}
 \end{figure}
 \vglue-5truemm
+\end{example}
+
+\begin{example}{\bf Kromatična aberacija leče.}
+Spoznali smo, da je goriščna razdalja leče odvisna
+od lomnega količnika snovi, iz katere je leča narejena 
+(enačba~\ref{eq:goriscna}). Zaradi disperzije stekla
+je goriščna razdalja za različne valovne dolžine različna,
+kar pripelje do napake leče, imenovane kromatična
+aberacija leče. Na sliki je to opazno predvsem 
+ob robovih slike, kjer so slike videti barvno razmazane. 
+Napako zbiralne leče navadno odpravimo z dodatno razpršilno lečo, ki kompenzira
+disperzijo prve leče. Nastali sestav imenujemo akromatska leča.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=8truecm]{slike/09_aberacija.jpg}
+\caption{Slika je v sredini močne zbiralne leče ostra, ob robovih pa
+se vidi učinek disperzije: modri odtenki so premaknjeni proti sredini 
+leče, rdeči odtenki pa proti robu.}
+\label{fig:09_aberacija}
+\vglue-7truemm
+\end{figure}
+
 \end{example}
 
 \begin{example}{\bf Disperzija v optičnih vlaknih.}
@@ -537,11 +560,15 @@ podatkov, ki jih lahko po vlaknu prenašamo v časovni enoti.
 \end{example}
 
 \section{Prevodne snovi}
-%valovna enačba, glej poglavje;
-%odboj na kovini, glej poglavje.
+Potovanje svetlobe po prevodni snovi smo deloma že spoznali v 
+razdelku~\ref{section:35}, ko smo zapisali valovno enačbo 
+v prevodnih snoveh in izračunali lomni količnik.
+V naslednjem poglavju (razdelek~\ref{section:410}) 
+smo obravnavali odboj na prevodni snovi, zdaj pa si oglejmo odvisnost
+lomnega količnika kovin od valovne dolžine vpadne svetlobe v mikroskopskem
+modelu.
 
-Elektrone v prevodnih snoveh oziroma kovinah
-obravnavamo po Drudejevem modelu prostega elektronskega plina
+Obravnavajmo elektrone po Drudejevem modelu prostega elektronskega plina
 v mreži nepremičnih pozitivnih nabojev. V tem modelu so elektroni prosti,
 zato je konstanta vzmeti $k=0$ in lastna frekvenca $\omega_0=0$. Izhajamo 
 iz splošne enačbe za izračun kompleksnega lomnega količnika $\mathcal{N}$
@@ -580,44 +607,72 @@ svetlobe je lomni količnik zlata realen, zato se znatno šibkeje odbijajo od po
 Podobno zlatorumeno barvo ima tudi pirit FeS$_2$ (desno).}
 \label{fig:09_zlato}
 \end{figure}
+\begin{figure}[h!]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/09_kovine.pdf_tex}
+\caption{Odvisnosti odbojnosti na kovinah od valovne dolžine vpadne svetlobe. Odbojnost
+srebra je v vidnem delu spektra (osenčeno področje) praktično 
+neodvisna od valovne dolžine, podobno velja tudi za aluminij, zato sta kovini
+videti neobarvano. Odbojnosti bakra in zlata sta pri modrih odtenkih bistveno 
+manjši kot pri rdečih in rumenih, zato ima baker značilno rdečkasto barvo in zlato
+rumeno-rdečkasto barvo (Povzeto po E. Hecht, {\it Optics}, Pearson, 2017.)}
+\label{fig:09_kovine}
+\end{figure}
 
 \section{Optični metamateriali}
 Posebna vrsta snovi so metamateriali. To so snovi, ki jih v naravi ne najdemo (so umetno
-ustvarjene), zaradi njihove natančno načrtovane in zapletene strukture pa delujejo na 
+ustvarjene), zaradi svoje natančno načrtovane in zapletene strukture pa delujejo na 
 vpadno elektromagnetno valovanje drugače od navadnih snovi. Za optiko so najbolj zanimivi
 metamateriali, ki imajo na določenem frekvenčnem območju negativni lomni količnik.
 
-V prejšnjih razdelkih smo spoznali, da je v bližini resonanc ali v 
-kovini pri $\omega <\omega_p$ vrednost $\mathcal{N}^2 <0$.
-Lomni količnik je zato povsem imaginaren. To se zgodi, ko je $\varepsilon'<0$. Dielektričnost
-snovi ima negativno vrednost. Zanimive pojave dobimo, če hkrati velja tudi $\mu'<0$. Produkt
-obeh je potem pozitiven in se lahko izognemo absorpciji. Vendar takrat velja drugačen
-predznak za $\mathcal{N}$. Če denimo povsem zanemarimo dušenje ($\varepsilon''=0$, $\mu''=0$), 
-potem velja $\varepsilon=\varepsilon'$ in $\mu  = \mu'$.
-V navadnih snoveh velja:
+V tretjem poglavju smo spoznali, da je lomni količnik enak korenu dielektričnosti
+(enačba~\ref{eq:n}). Rezultat izhaja iz zveze $n^2 = \varepsilon \mu$, pri čemer smo 
+vzelo pozitivno vrednost korena. Druga rešitev, sicer precej bolj nenavadna, je negativna
+vrednost lomnega količnika $n = - \sqrt{\varepsilon \mu}$. To lahko dosežemo pri snoveh,
+za katere sta na določenem frekvenčnem območju hkrati $\varepsilon<0$ in $\mu<0$. 
+Ker je njun produkt pozitiven, se svetloba v snovi ne absorbira, njen lomni količnik 
+pa je negativen. V navadnih snoveh tako velja:
 \beq
 \varepsilon >0, \mu > 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
-\qquad \Rightarrow \qquad n = \sqrt{\varepsilon\mu}. 
+\qquad \Rightarrow \qquad n = \sqrt{\varepsilon\mu},
 \label{eq:09_37m}
 \eeq
-Lahko pa velja tudi:
+v metamaterialih pa:
 \beq
 \varepsilon <0, \mu < 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
 \qquad \Rightarrow \qquad n = -\sqrt{\varepsilon\mu}<0. 
 \label{eq:09_38}
 \eeq
-Snovi, ki imajo na istem frekvenčnem območju $\varepsilon<0$ in $\mu<0$, v naravi ne 
-obstajajo. Lahko pa jih naredimo z nanostrukturiranimi kompozitnimi materiali. Imenujemo
-jih metamateriali. 
+Metamaterialov v naravi ne najdemo, lahko pa jih za izbrane valovne dolžine naredimo z
+nanostrukturiranimi kompozitnimi materiali. Pri tem mora biti sestavni element kompozita
+bistveno manjši od valovne dolžine vpadne svetlobe, zato metamateriali tipično delujejo v 
+mikrovalovnem območju spektra.
 
-V takih snoveh je posebej zanimiv lom svetlobe. Zapišemo lomni zakon:
+V metamaterialih je posebej zanimiv lom svetlobe. Zapišemo lomni zakon 
+(enačba~\ref{eq:lomnizakon}):
 \beq
 n_1 \sin\alpha = n_2 \sin\beta,
 \label{eq:09_39}
 \eeq
-pri čemer velja $n_1>0$ in $n_2<0$, zato je pri pozitivenm vpadnem kotu $\alpha >0$
-lomni kotni $\beta <0$. V snovi z negativnim lomnim količnikom imata valovni vektor
-$\mathbf{k}$ in Poyntingov vektor $\mathbf{S}$ nasprotni smeri.
+pri čemer velja $n_1>0$ in $n_2<0$. Ko svetloba vpade na metamaterial pod vpadnim
+kotom $\alpha>0 $, je lomni kot $\beta <0$. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/09_meta.pdf_tex}
+\caption{Odboj in lom ob prehodu iz navadne snovi v metamaterial z negativnim lomnim
+količnikom. V metamaterialu sta smeri energijskega toka in valovnega vektorja nasprotni.}
+\label{fig:09_meta}
+\end{figure}
+
+Drugo zanimivo lastnost  metamaterialov spoznamo, če si ogledamo Poyntingov vektor. 
+Spomnimo se (enačba~\ref{eq:Poyntingov}), da velja zveza 
+$\mathbf{S} = \mathbf{E}\times \mathbf{B}$. Smer Poyntingovega vektorja določa smer
+energijskega toka in v navadnih snoveh je ta smer enaka smeri valovnega vektorja.
+V metamaterialih pa negativna vrednost konstant učinkuje enako, kot bi učinkovala
+sprememba predznaka magnetnega polja. Iz zveze za Poyntingov vektor sledi, da ima
+smer energijskega toka v metamaterialih nasprotno smer od smeri valovnega vektorja. 
 
 \section{Optična aktivnost}
 Optična aktivnost je pojav, pri katerem se linearno polarizirani svetlobi po prehodu
