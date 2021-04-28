@@ -111,6 +111,7 @@ spoznali, da je za večino snovi odvod na celotnem spektralnem območju vidne sv
 Na splošno zato velja, da je za vidno svetlobo grupna hitrost manjša od fazne.
 
 \section{Lomni količnik}
+\label{chap:lomni}
 Odvisnost lomnega količnika od frekvence vpadnega 
 elektromagnetnega valovanja bomo izračunali na preprostem modelu. 
 Omejimo se na nemagnetne snovi, za katere je $\mu = 1$, kar pomeni, da
@@ -584,7 +585,6 @@ Koeficient dušenja $\gamma$ opisuje električno upornost, ki jo v dobrih
 prevodnikih lahko zanemarimo. Lomni količnik potem izračunamo kot:
 \boxeq{eq:09_36a}{
 \mathcal{N} \approx \sqrt{1- \frac{\omega_p^2}{\omega^2}}.
-\label{eq:09_37}
 }
 Za vrednosti $\omega < \omega_p$ je lomni količnik imaginaren in svetloba se v snovi
 močno absorbira. Za krožne frekvence $\omega > \omega_p$ pa je lomni količnik realen 
@@ -668,28 +668,36 @@ količnikom. V metamaterialu sta smeri energijskega toka in valovnega vektorja n
 
 Drugo zanimivo lastnost  metamaterialov spoznamo, če si ogledamo Poyntingov vektor. 
 Spomnimo se (enačba~\ref{eq:Poyntingov}), da velja zveza 
-$\mathbf{S} = \mathbf{E}\times \mathbf{B}$. Smer Poyntingovega vektorja določa smer
+$\mathbf{S} = \mathbf{E}\times \mathbf{H}$. Smer Poyntingovega vektorja določa smer
 energijskega toka in v navadnih snoveh je ta smer enaka smeri valovnega vektorja.
 V metamaterialih pa negativna vrednost konstant učinkuje enako, kot bi učinkovala
 sprememba predznaka magnetnega polja. Iz zveze za Poyntingov vektor sledi, da ima
 smer energijskega toka v metamaterialih nasprotno smer od smeri valovnega vektorja. 
 
 \section{Optična aktivnost}
-Optična aktivnost je pojav, pri katerem se linearno polarizirani svetlobi po prehodu
-skozi snov zasuče smer nihanja električnega polja $\mathbf{E}$. Če je vpadna svetloba na primer
-linearno polarizirana vzdolž osi $x$, se po prehodu skozi snov smer linearne polarizacije
-zasuče za kot $\Delta \varphi$ glede na $x$ os. Naj se svetloba širi vzdolž osi $z$.
+Določene snovi imajo prav posebno sposobnost sukanja polarizacije vpadne svetlobe.
+Take snovi imenujemo optično aktivne snovi, pojav sukanja linearne polarizacije
+vpadne svetlobe ob prehodu skozi snov pa optična aktivnost.
+Optične aktivno snovi so kiralne, torej brez zrcalne simetrije, in so lahko
+v trdnem, tekočem ali plinastem stanju. Primeri optično aktivnih snovi
+so raztopine glukoze in fruktoze, aminokisline ter kremen.
 
-Vpadno polarizacijo v opisanem primeru podaja Jonesov vektor:
+Naj na optično aktivno snov v smeri osi $z$ 
+vpada svetloba, ki je linearno polarizirana vzdolž osi $x$ 
+(slika~\ref{fig:09_aktivnost}). Po 
+prehodu skozi snov se smer linearne polarizacije
+zasuče za kot $\Delta \varphi$ glede na os $x$, pri čemer je kot zasuka 
+odvisen od snovi in od dolžine poti skozi snov $L$. Z Jonesovimi
+vektorji vpadno polarizacijo v opisanem primeru zapišemo kot:
 \beq
 \mathbf{J}_{in} = 
 \left[\begin{array}{c}
 1\\
 0\\
-\end{array}\right]\!\!.
+\end{array}\right]\!\!,
 \label{eq:09_40}
 \eeq
-Zasukano izhodno polarizacijo potem zapišemo kot:
+zasukano izhodno polarizacijo pa kot:
 \beq
 \mathbf{J}_{out} = 
 \left[\begin{array}{c}
@@ -698,37 +706,72 @@ Zasukano izhodno polarizacijo potem zapišemo kot:
 \end{array}\right]\!\!.
 \label{eq:09_41}
 \eeq
-Gledano s stališča opazovalca (palec desne roke usmerimo proti izvoru) opazovana
-snov polarizacijo zasuče v levo glede na začetno smer, zato tako snov imenujemo
-levo sučna snov. 
+Gledano s stališča opazovalca (proti izvoru svetlobe)
+snov polarizacijo zasuče v levo glede na prvotno smer, zato tako snov imenujemo
+levosučna snov. Po dogovoru je kot zasuka za levosučne snovi negativen, za
+desnosučne pa pozitiven.
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/09_aktivnost.pdf_tex}
+\caption{Optično aktivne snovi sučejo smer vpadne linearne polarizacije. Na sliki
+je primer levosučne snovi, saj se po prehodu snovi polarizacija, gledano v smeri 
+izvora svetobe, zasuče v levo.}
+\label{fig:09_aktivnost}
+\vglue-7truemm
+\end{figure}
+ 
+\begin{remark}
+Optična aktivnost se v snoveh lahko pojavi zaradi vijačne kristalne strukture
+(kot v kremenu) ali zaradi kiralnih molekul, ki snov sestavljajo (na primer sladkorji). 
+Prvi mehanizem je vezan na točno določeno ureditev molekul, zato so 
+take snovi optično aktivne le v kristalni obliki. Staljen kremen, ki ob taljenju
+izgubi vijačno strukturo, je optično neaktiven. Po drugi strani snovi, ki so 
+optično aktivne zaradi kiralnih gradnikov, ostanejo optično aktivne, tudi 
+če jih stalimo, raztopimo v vodi ali izparimo.
 
-Kemijsko ozadje:
-Optično aktivne snovi so sestavljene iz molekul s kiralnimi centri. Tipično je 
-to ogljikov atom, ki ima pripete štiri različne kemijske skupine. Ta asimetrični
-ogljik naredi molekulo kiralno. Kiralne molekule obstajajo v dveh konfiguracijah,
-ki ju ne moremo pretvoriti iz ene v drugo zgolj z vrtenjem, ampak samo z zrcalno
-transformacijo, Ti dve konformaciji se imenujeta enantiomera oziroma
-optična izomera (tudi stereo-izomera). Mešanica obeh izomerov v razmerju 50:50
-se imenuje racemat. 
+Za kiralne molekule je značilno, da njene zrcalne slike ne moremo dobiti z rotacijo
+ali translacijo prvotne molekule, ampak je potrebna zrcalna preslikava. Asimetrija 
+se pojavi zaradi razporeditve atomov okoli tako imenovanega kiralnega centra. Navadno
+je to ogljikov atom, ki ima pripete štiri različne kemijske skupine.
+Dve možni konformaciji molekule imenujemo optična izomera 
+oziroma enantiomera (tudi stereoizomera), mešanico obeh izomerov v razmerju 50:50 pa
+racemat. Racemat je optično neaktiven.
 
-Kot referenčni material uporabljamo glicer-aldehid. To je ena od presnovnih 
-vrst sladkorja (monosaharoza). L-gliceraldehid suše polarizacijo v desno; L-GA
-suče polarizacijo v levo. 
+Čeprav sta si izomera neke snovi zelo podobna in imata enako molekulsko formulo, 
+je razlika med njima ključna. Tako so vse standardne aminokisline razen
+glicina optično aktivne in brez izjeme vse levosučne. Po drugi strani je skoraj 
+vsa glukoza v naravi desnosučna, prav tako tudi drugi enostavni sladkorji. Problem
+nastane pri umetni sintezi spojin, saj med kemijskimi reakcijami praviloma
+nastajata oba izomera v enaki količini. Če želimo nastale spojine uporabiti, na
+primer v farmaciji, ju je treba ločiti, saj imata lahko izomera povsem različen
+učinek: en zdravilen in drug škodljiv.
+\end{remark}
+\vglue-5truemm
+\begin{figure}[h]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/09_kiralna.pdf_tex}
+\caption{Ena najpreprostejših stabilnih kiralnih molekul je bromoklorofluorometan. Zrcalne
+slike molekule ne moremo dobiti z rotacijo ali translacijo prvotne, zato pravimo, 
+da je molekula kiralna. Kiralni center je ogljik.}
+\label{fig:09_kiralna}
+\end{figure}
 
-Večina aminokislin, ki jh najdemo v naravi, so L-aminokisline. Vrsta glukoze 
-dekstroza je dobila ime zaradi svoje sučnosti. 
-
-Večino lastnosti, povezanih z optično aktivnostjo, lahko opišemo s tem, da rečemo,
-da gre za snov z različnima vrednostima lomnega količnika za desno in levo krožno
-polarizirano valovanje. Če ozračimo desno cirkularno polarizirano z D in levo z L,
-potem velja:
+Sukanje linearne polarizacije v optično aktivnih snoveh preprosto pojasnimo
+z različnima lomnima količnikoma za levo in desno krožno polarizirano valovanje\footnote{~Optično 
+aktivnost zato imenujemo tudi cirkularni dvojni lom. Pri navadnem dvojnem lomu 
+(glej poglavje~\ref{chap:AnizotropneSnovi}) se razlikujeta lomna količnika za dve 
+ortogonalni linearni polarizaciji, pri cirkularnem dvojnem lomu pa se razlikujeta lomna
+količnika za dve nasproti krožni polarizaciji.}.
+Označimo desno cirkularno polarizacijo z D in levo z L. Snov je optično aktivna, če velja:
 \boxeq{eq:09_42}{
 n_D \neq n_L.
 }
-Linearno polarizirano valovanje lahko zapišemo kot vsoto dveh cirkularno polariziranih
+Linearno polarizirano valovanje zapišemo kot vsoto dveh cirkularno polariziranih
 valovanj. Pred vpadom na snov je tako:
 \beq
-\mathbf{J}_{in} = 
+\mathbf{J}_{1} = 
 \left[\begin{array}{c}
 1\\
 0\\
@@ -746,10 +789,11 @@ i\\
 \end{array}\right]\!\!.
 \label{eq:09_43}
 \eeq
-Po prehodu skozi snov različno sučni komponenti občutita različna lomna količnika
-in imata zato ob prehodu snovi z dolžino $L$ različni fazi:
+Po prehodu skozi snov različno krožno polarizirani komponenti 
+občutita različna lomna količnika in imata zato ob prehodu snovi z 
+dolžino $L$ različni fazi:
 \beq
-\mathbf{J}_{out}  = 
+\mathbf{J}_{2}  = 
 \frac{1}{2}
 \left[\begin{array}{c}
 1\\
@@ -760,12 +804,12 @@ in imata zato ob prehodu snovi z dolžino $L$ različni fazi:
 \left[\begin{array}{c}
 1\\
 i\\
-\end{array}\right]e^{ik_0n_L L}\!\!.
+\end{array}\right]e^{ik_0n_L L}.
 \label{eq:09_44}
 \eeq
-Zadnji izraz preoblikujemo:
+Izraz preoblikujemo in dobimo:
 \beq
-\mathbf{J}_{out}  = \frac{1}{2} e^{ik_0n_D L/2}e^{ik_0n_L L/2}
+\mathbf{J}_{2}  = \frac{1}{2} e^{ik_0n_D L/2}e^{ik_0n_L L/2}
 \left(
 \left[\begin{array}{c}
 1\\
@@ -779,9 +823,9 @@ i\\
 \label{eq:09_45}
 \eeq
 Vpeljemo povprečni lomni količnik $\overline{n} = (n_L + n_D)/2$ in razliko
-med lomnima količnikoma $\Delta n = n_L-n_D$. Enačbo~(\ref{eq:09_44}) preobilkujemo:
+med lomnima količnikoma $\Delta n = n_L-n_D$. Sledi:
 \beq
-\mathbf{J}_{out}  = \frac{1}{2} e^{ik_0\overline{n} L}
+\mathbf{J}_{2}  = \frac{1}{2} e^{ik_0\overline{n} L}
 \left(
 \left[\begin{array}{c}
 1\\
@@ -794,9 +838,9 @@ i\\
 \right)\!\!.
 \label{eq:09_46}
 \eeq
-Sledi:
+Eksponenta izrazimo s kotnima funkcijama in dobimo:
 \beq
-\mathbf{J}_{out}  = \frac{1}{2} e^{ik_0\overline{n} L}
+\mathbf{J}_{2}  = \frac{1}{2} e^{ik_0\overline{n} L}
 \left[\begin{array}{c}
 2 \cos(k_0 \Delta n L/2)\\
 2 \sin(k_0 \Delta n L/2)\\
@@ -813,99 +857,124 @@ pri čemer je:
 \Delta \varphi = k_0 \Delta n L/2.
 \label{eq:09_48}
 \eeq
-Izhodna svetloba je torej linearno polarizirana, vednar zasukana za kot 
-$\Delta \varphi$ glede na vstopno linearno polarizacijo. Pri tem je kot zasuka enak:
+Pokazali smo, da je izhodna svetloba linearno polarizirana, vendar zasukana za kot 
+$\Delta \varphi$ glede na vstopno linearno polarizacijo. Kot zasuka je enak:
 \boxeq{eq:09_49}{
-\Delta \varphi = \frac{1}{2}k_0 L (n_L-n_D).
+\Delta \varphi = \frac{\pi}{\lambda} L~(n_L-n_D),
 }
-PREGLEJ PREDZNAKE!
-Če velja $n_D>n_L$, potem snov polarizacijo suče v levo, sicer v desno. Za tipične
-raztopine sladkorja je $\Delta n \sim 10^{-4}$.
+pri čemer sta $L$ dolžina poti, ki jo svetloba prepotuje po snovi, in $\lambda$ valovna
+dolžina vpadne svetlobe. 
+Če velja $n_L>n_D$, desno krožno polarizirano valovanje potuje
+hitreje od levo krožno polariziranega. Po enačbi~(\ref{eq:09_49}) je v tem primeru kot 
+zasuka $\Delta \varphi$ pozitiven in snov desnosučna. 
+Razlika lomnih količnikov je navadno zelo majhna. V kremenu (pri 
+valovni dolžini $589~\si{nm}$) sta $n_D = 1,54420$ in $n_L = 1,54427$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/09_aktivnost_foto.pdf_tex}
+\caption{Raztopina sladkorja v vodi je optično aktivna. Ko jo postavimo med prekrižana
+polarizatorja, prepušča svetlobo (levo). Ker je zasuk polarizacije odvisen od valovne dolžine
+svetlobe, je pod različnimi koti polarizatorjev raztopina videti različnih barv (desno).}
+\label{fig:09_aktivnost-foto}
+\end{figure}
 
-Fenomenološko zapišemo:
+Pogosto se uporablja fenomenološki zapis:
 \beq
 \Delta \varphi = \beta L,
 \label{eq:09_50}
 \eeq
-pri čemer je $\beta = \beta (\lambda)$. Parameter $\beta$ je specifična sučnost snovi,
-podana v enotah $\si{\degree}/\si{mm}$. Referenčna valovna dolžina je pri $\lambda = 589,3~\si{nm}$
-(črta natrijevega dubleta). Za raztopine je $\beta$ po definiciji podana pri raztopini v vodi
-v razmerju 1:100 in temperaturi $T = 20~\si{\degree}C$. Primera vrednosti sta za dekstrozo
-$\beta = 0,53~\si{\degree}/\si{mm}$ in za kremen $\beta = 21,6~\si{\degree}/\si{mm}$.
-
+pri čemer je $\beta = \beta (\lambda)$ specifična sučnost snovi. Navadno je podana pri referenčni
+valovni dolžini $\lambda = 589,3~\si{nm}$, kar ustreza spektralni črti natrijevega dubleta. Pri 
+trdnih snoveh je optična aktivnost relativno velika in jo podajamo v enotah $\si{\degree}/\si{mm}$. Za 
+kremen je vrednost $\beta = 21,7\si{\degree}/\si{mm}$. V tekočinah je učinek
+navadno šibkejši, zato ga pogosto podajamo v enotah $\si{\degree}/\si{dm}$. V terpentinu
+je $\beta = -35\si{\degree}/\si{dm}$ in v nikotinu $\beta = -165\si{\degree}/\si{dm}$,
+pri čemer negativni znak pomeni, da sta snovi levosučni. Za raztopine je specifična sučnost
+podana pri koncentraciji $1~\si{g}/1~\si{cm}^3$ in temperaturi $T = 20~\si{\celsius}$. 
+Specifična sučnost za glukozo v vodi je $\beta = 53\si{\degree}/\si{dm}$.
+\vglue-5truemm
+\begin{remark}
 Pogosto se razlika med desno in levo krožno polariziranim valovanjem pojavi ne le v realnem, 
 temveč tudi v imaginarnem delu lomnega količnika. Takšna snov eno cirkularno polarizacijo močneje
-absorbira, drugo pa šibkeje. V tem primeru govorimo o cirkularnem dikroizmu snovi. Cirkularni
-dikroizem (CD) v odvisnosti od valovne dolžine merimo z metodo CD spektroskopije.
+absorbira kot drugo. V tem primeru govorimo o cirkularnem dikroizmu snovi. Merjenje cirkularnega
+dikroizma (CD) v odvisnosti od valovne dolžine vpadne svetlobe je osnova za CD spektroskopijo, ki
+se uporablja med drugim za določanje sekundarne strukture proteinov. 
+\vglue-5truemm
+\end{remark}
 
 \section{Faradayev pojav}
-Faradayev ali tudi magneto-optični pojav opisuje pojav optične aktivnosti, ki jo v sicer
-optično neaktivni snovi dobimo s tem, da snov postavimo v zunanje magnetno polje. Za razliko 
-od intrinzične oziroma naravne optične aktivnosti, ki polarizacijo vedno zasuče v sisto smer (ne 
-glede na smer potovanja svetlobe skozi snov), je zasuk pri Faradayevem pojavu odvisen od smeri 
-potovanja svetlobe glede na smer statičnega zunanjega magnetnega polja $\mathbf{B}_0$. 
+V prejšnjem razdelku smo spoznali kiralne snovi, ki so optično aktivne in sučejo smer
+linearne polarizacije zaradi svojih mikroskopskih ali strukturnih lastnosti. 
+Podobno obnašanje opazimo tudi v izotropnih dielektrikih, ki jih postavimo v vzdolžno
+magnetno polje. Pojav imenujemo magneto-optični oziroma Faradayev pojav
+po njegovem odkritelju Michaelu Faradayu. Za razliko 
+od intrinzične optične aktivnosti, ki polarizacijo vedno zasuče v sisto smer (na primer
+v desno glede na smer potovanja svetlobe skozi snov), je zasuk pri Faradayevem pojavu 
+odvisen od smeri potovanja svetlobe glede na smer statičnega zunanjega 
+magnetnega polja. Po dogovoru je zasuk pozitiven, če se polarizacija suče v 
+pozitivni smeri, gledano proti izvoru svetlobe.
+\vglue5truemm
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/09_faraday.pdf_tex}
+\caption{Faradayev pojav opisuje sukanje linearne polarizacije svetlobe v vzdolžnem mag\-net\-nem
+polju. Zasuk je premo sorazmeren gostoti polja in dolžini, ki jo svetloba prepotuje
+v magnetnem polju.}
+\label{fig:09_Faraday}
+\end{figure}
 
-Kot zasuka polarizacije zapišemo kot:
+Kot zasuka linearne polarizacije zapišemo kot:
+\boxeq{eq:09_51}{
+\Delta \varphi = V L B_0,
+}
+pri čemer so $L$ dolžina prepotovane poti po snovi, $B_0$ gostota zunanjega 
+magnetnega polja in $V$ sorazmernostna Verdetova konstanta, imenovana po francoskem 
+fiziku \'{E}milu Verdetu (1824--1866). Ker se vrednosti konstante močno 
+spreminjajo z valovno dolžino vpadne svetlobe in temperaturo snovi 
+(naraščajo z nižanjem temperature in krajšanjem valovne dolžine), jih navadno
+podajamo pri valovni dolžini natrijevega dubleta $\lambda = 589,3~\si{nm}$ in 
+temperaturi $300~\si{K}$.
+Nekaj vrednosti Verdetovih konstant je podanih v tabeli:
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+snov& $V~[\si{\degree/\tesla\metre}]$\\ \hline 
+voda & 218\\ \hline
+kremen & 277 \\ \hline
+NaCl& 598 \\ \hline
+ZnS & 3750 \\ \hline
+Terbijev galijev granat (TGG) & 9020 \\\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Izpeljava Faradayevega pojava na Lorentzovem modelu}
+Faradayev pojav lahko pojasnimo z Lorentzovim modelom snovi 
+(glej razdelek~\ref{chap:lomni}), ki jo izpostavimo zunanjemu 
+statičnemu magnetnemu polju in cirkularno polariziranem
+elektromagnetnem valovanju. Zaradi prisotnosti cirkularno 
+polariziranega valovanja negativna kroglica, ki predstavlja elektron, 
+kroži okoli mirujoče pozitivne kroglice. 
+
+Zapišemo Newtonov zakon za gibanje kroglice,
+pri čemer upoštevamo silo zunanjega magnetnega polja, zanemarimo pa dušenje. 
+Magnetna sila, ki deluje na premikajočo se kroglico, je 
 \beq
-\Delta \varphi = \frac{1}{2}k_0 L (n_L-n_D) = V L B_0,
-\label{eq:09_51}
-\eeq
-pri čemer so $L$ dolžina prepotovane poti po snovi, $B_0$ gostota zunanjega magnetnega polja in
-$V$ Verdetova konstakta, imenovana po francoskem fiziku \'{E}milu Verdetu (1824--1866).
-Tipične vrednosti Verdetove konstante $V$ so zelo majhne in so močno odvisne od valovne dolžine
-vpadne svetlobe. Snov z največjo vrednostjo je terbijev galijev granat (TGG) z vrednostjo 
-$V = -134~\si{\radian}/\si{Tm}$ pri valovni dolžini $633~\si{nm}$. Že pri valovni dolžini
-$1064~\si{nm}$ vrednost pade na $V = -40~\si{\radian}/\si{Tm}$.
-
-Faradayev pojav lahko pojasnimo v Lorentzovim modelom dveh kroglic, ki ju izpostavimo elektromagnetnemu
-valovanju. Zamislimo si, da pozitivno nabita kroglica miruje, negativno nabita pa zaradi prisotnosti
-cirkularno polariziranega valovanj kroži okoli nje. Kroženje poteka v magnetnem polju. V odvisnosti
-od smeri kroženja se pojavi magnetna sila, ki enkrat deluje v smeri proti središču kroženja, drugič
-pa v smeri stran od središča kroženja. To povzroči spremembo efektivne vzmeti, ki kroglici povezuje med seboj. 
-
-Magnetna sila, ki deluje na kroglico, je 
-\beq
-\mathbf{F}_B = e \mathbf{v}\times \mathbf{B} = -e_0 \mathbf{v}\times \mathbf{B}_0 
+\mathbf{F}_B = e \mathbf{v}\times \mathbf{B} = -e_0 \mathbf{v}\times \mathbf{B}_0,
 \label{eq:09_52}
 \eeq
-Za desno cikrularno polarizirano vpadno valovanje je ta sila drugačna kot za desno, zato je navidezna
-konstanta vzmeti drugačna. To pomeni, da imamo dve lastni frekvenci (Zeemanov pojav). Pri izbrani
-frekvenci smo od ene lastne frekvence bolj, od druge pa manj oddaljeni, kar prinese razliko v lomnem
-količniku. 
-
-Če zanemarimo dušenje, lahko enačbo gibanja zapišemo:
+pri čemer sta $\mathbf{v}$ trenutna hitrost gibanja kroglice in $e = -e_0$
+njen naboj. Newtonov zakon za negativno nabito kroglico zapišemo:
 \beq
-\ddot{\mathbf{r}} + \omega_0 \mathbf{r} = -\frac{e}{m}\left(\mathbf{E}+ \dot{\mathbf{r}}\times \mathbf{B}_0\right),
-\label{eq:09_53}
-\eeq
-pri čemer $\mathbf{r}$ označuje lego elektrona v ravnini $xy$, električno polje je $\mathbf{E} = (E_x(t), E_y(t), 0)$, 
-magnetno polje pa $\mathbf{B}_0 = (0, 0, B_0)$.
-
-Enačbo zapišemo po komponentah in dobimo sistem enačb:
-\begin{align}
-\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \label{eq:09_52a} \\
-\ddot{y} - \frac{e_0}{m} \dot{x} B_0 + \omega_0^2 y &= -\frac{e_0}{m}E_y.
-\label{eq:09_52b}
-\end{align}
-Rešitev enačb (glej primer) da:
-\beq
-P = \frac{\varrho_N e_0^2/m E_0}{\omega_0^2 - \omega^2 \pm eB_0\omega/m}.
-\label{eq:09_54}
-\eeq
-Inducirana polarizacija in z njo tudi lomni količnik je tako odvisna od smeri krožne polarizacije 
-vpadnega valovanja. 
-
-\begin{example}{\bf Izpeljava Faradayevega pojava na Lorentzovem modelu}
-Uporabimo Lorentzov model, brez sile dušenja, ampak z zunanjim magnetnim poljem.
-Newtonov zakon brez sile dušenja zapišemo:
-\beq
-m\ddot{\mathbf{r}} = -k \mathbf{r}-e \mathbf{E} -e \dot{\mathbf{r}}\times \mathbf{B}_0.
+m\ddot{\mathbf{r}} = -k \mathbf{r}-e_0 \mathbf{E} -e_0 \dot{\mathbf{r}}\times \mathbf{B}_0.
 \label{eq:09_55}
 \eeq
-Pri tem vektor $\mathbf{r}$ označuje lego elektona v ravnini $\mathbf{r} = (x,y,0)$. Konstanta
-$k$ je konstanta vzmeti, ki jo bomo izrazili z lastno frekvenco nihanja $\omega^2 = k/m$, $m$
-je masa elektrona, $e$ njegov naboj, jakost elektičnega polja je $\mathbf{E} = (E_x, E_y, 0)$
-in magnetnega polja $\mathbf{B}_0 = (0,0,B_0)$, torej vzdolž smeri širjenja svetlobe. 
+Pri tem vektor $\mathbf{r}$ označuje lego elektrona v ravnini $\mathbf{r} = (x,y,0)$. Konstanta
+$k$ je konstanta vzmeti, ki veže elektron na jedro in  jo bomo izrazili z lastno frekvenco 
+nihanja $\omega^2 = k/m$, $m$ je masa elektrona, jakost elektičnega polja je $\mathbf{E} = (E_x, E_y, 0)$,
+magnetnega polja pa $\mathbf{B}_0 = (0,0,B_0)$, torej vzdolž smeri širjenja svetlobe. 
 Izračunajmo najprej vektorski produkt hitrosti in magnetnega polja:
 \beq
 \dot{\mathbf{r}} \times \mathbf{B}_0 = 
@@ -922,30 +991,36 @@ Izračunajmo najprej vektorski produkt hitrosti in magnetnega polja:
 -\dot{x} B_0\\
 0
 \end{array}\right]\!\!.
+\label{eq:09_60}
 \eeq
-Gibalno enačbo potem prepišemo v:
+Gibalno enačbo (enačba~\ref{eq:09_55}) delimo z $m$ in prepišemo v:
 \beq
 \left(\ddot{x},\ddot{y},0\right) + \omega_0^2 (x,y,0)= -\frac{e_0}{m}(E_x, E_y, 0) - 
 \frac{e_0}{m}\left( \dot{y}B_0, -\dot{x} B_0, 0\right).
+\label{eq:09_61}
 \eeq
 Razstavimo jo po komponentah in dobimo sistem enačb:
 \begin{align}
-\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \\
+\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \label{eq:09_52a} \\
 \ddot{y} - \frac{e_0}{m} \dot{x} B_0 + \omega_0^2 y &= -\frac{e_0}{m}E_y.
+\label{eq:09_52b}
 \end{align}
 Sistem rešujemo tako, da drugo enačbo pomnožimo z $i$. Enačbi najprej seštejmo in uvedemo
 spremenljivko $x + iy = z$. Dobimo:
 \beq
 \ddot{x} + i\ddot{y} -i \frac{e_0}{m}B_0 (\dot{x} + i\dot{y}) + \omega_0^2 (x+iy) = -\frac{e_0}{m}(E_x+iE_y).
+\label{eq:09_62}
 \eeq
 Če sta amplitudi $E_x$ in $E_y$ enaki, vsota $E_x+iE_y$ opisuje levo krožno polarizirano valovanje $E_L$. 
 Enačbo poenostavljeno zapišemo kot:
 \beq
 \ddot{z} -i \gamma_{ef}\dot{z} + \omega_0^2 z = -\frac{e_0}{m}E_L.
+\label{eq:09_63}
 \eeq
 Drugič zapisani enačbi odštejmo in uvedemo novo spremeljivko $x-iy=w$. Dobimo:
 \beq
 \ddot{w} +i \gamma_{ef}\dot{w} + \omega_0^2 w = -\frac{e_0}{m}E_D.
+\label{eq:09_64}
 \eeq
 Z vpeljavo novih spremeljivk smo tako enačbi razklopili. 
 Rešitev enačb iščem v obliki $z = z_0 e^{-i\omega t}$ in $w = w_0 e^{-i\omega t}$, pri čemer
@@ -953,6 +1028,7 @@ je $\omega$ frekvenca vpadne svetlobe. Vstavimo nastavek za $z$ in $w$ in dobimo
 \beq
 z_0 = \frac{-e_0 E_0/m}{\omega_0^2 - \omega^2 + i\gamma_{ef}\omega} \qquad \mathrm{in} \qquad 
 w_0 = \frac{-e_0 E_0/m}{\omega_0^2 - \omega^2 - i\gamma_{ef}\omega}.
+\label{eq:09_65}
 \eeq
 Linearna polarizacija v snovi (ki se vrti skupaj z vpadnim električnim poljem $\mathbf{E}$, je potem
 $P = -e_0 z \varrho_N = \varepsilon_0 (\varepsilon-1)E$, od koder izračunamo lomni količnik:
@@ -960,11 +1036,35 @@ $P = -e_0 z \varrho_N = \varepsilon_0 (\varepsilon-1)E$, od koder izračunamo lo
 \mathcal{N}_L^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 + i\gamma_{ef}\omega} \qquad \mathrm{in}
 \qquad 
 \mathcal{N}_D^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 - i\gamma_{ef}\omega}.
+\label{eq:09_66}
 \eeq
 Pri tem $\omega_p$ označuje plazemsko frekvenco $\omega_p = \varrho_N e_0^2/m\varepsilon_0$.
 
-\end{example}
+
+
+
+
+
+
+Kroženje poteka v magnetnem polju. V odvisnosti
+od smeri kroženja se pojavi magnetna sila, ki enkrat deluje v smeri proti središču kroženja, drugič
+pa v smeri stran od središča kroženja. To povzroči spremembo efektivne vzmeti, ki kroglici povezuje med seboj. 
+Za desno cikrularno polarizirano vpadno valovanje je ta sila drugačna kot za desno, zato je navidezna
+konstanta vzmeti drugačna. To pomeni, da imamo dve lastni frekvenci (Zeemanov pojav). Pri izbrani
+frekvenci smo od ene lastne frekvence bolj, od druge pa manj oddaljeni, kar prinese razliko v lomnem
+količniku. 
+
+Rešitev enačb (glej primer) da:
+\beq
+P = \frac{\varrho_N e_0^2/m E_0}{\omega_0^2 - \omega^2 \pm eB_0\omega/m}.
+\label{eq:09_54}
+\eeq
+Inducirana polarizacija in z njo tudi lomni količnik je tako odvisna od smeri krožne polarizacije 
+vpadnega valovanja. 
+
+
+
+
+
 Uporaba Faradayevega pojava za optične izolatorje (optične diode). Svetlobo v eno smer prepuščajo, 
 v drugo pa ne.
-
-Foto praktikuma? Rotacija svetlobe? Foto sladkor v vodi.
