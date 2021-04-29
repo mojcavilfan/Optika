@@ -4,14 +4,14 @@
 V tem poglavju bomo podrobneje obravnavali interakcijo svetlobe s snovjo, ki jo 
 v najpreprostejši obliki opišemo z lomnim količnikom. Na poenostavljenem modelu
 bomo spoznali odvisnost lomnega količnika od frekvence vpadnega valovanja in pojasnili
-posledice disperzije. Zapisali bomo tudi lomni količni za prevodne snovi ter
+posledice disperzije. Zapisali bomo tudi lomni količnik za prevodne snovi ter
 opisali dva zanimiva pojava: optično aktivnost in Faradayev pojav.
 
 \section{Fazna in grupna hitrost}
 V tretjem poglavju smo zapisali osnovno rešitev valovne enačbe
 v neomejenem prostoru (enačba~\ref{eq:valovnaE}) v obliki ravnih valov 
 (enačba~\ref{eq:ravnival}). Izračunali smo fazno hitrost,
-to je hitrost premikanja ploskev konstantne faze oziroma valovnih front, in
+to je hitrost premikanja ploskev konstantne faze (valovnih front), in
 jo zapisali kot razmerje krožne frekvence vpadne svetlobe 
 in valovnega števila (enačba~\ref{eq:03_10}):
 \boxeq{eq:09_25a}{
@@ -45,26 +45,26 @@ Z uporabo adicijskega izreka za kotne funkcije:
 \eeq
 izraz preoblikujemo v:
 \beq
-E = 2\cos \left(kz - \omega t \right)\cos \left(\Delta kz - \Delta \omega t \right)\!.
+E = 2E_0 \cos \left(kz - \omega t \right)\cos \left(\Delta kz - \Delta \omega t \right)\!.
 \label{eq:09_24}
 \eeq
 Vsota teh dveh valovanj je torej potujoče valovanje v smeri $z$ s frekvenco, ki je 
 enaka osrednji krožni frekvenci $\omega$, in valovnim številom, ki je enako 
-osrednjemu valovnemu števiku $k$. Valovanje je amplitudno modulirano 
+osrednjemu valovnemu številu $k$. Valovanje je amplitudno modulirano 
 s krožno frekvenco $\Delta \omega$ (slika~\ref{fig:09_utripanje}).
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/09_vsota.pdf_tex}
-\caption{Dve valovanji z različnimi frekvencami (modra in zelena, levo) se seštejeta
-v amplitudno modulirano valovanje (desno).}
+\caption{Dve valovanji z različnima frekvencama (modra in zelena, levo) se seštejeta
+v amplitudno modulirano valovanje (rdeča, desno). Črna črta označuje ovojnico valovanja.}
 \label{fig:09_utripanje}
 \end{figure}
 
 Pri valovanju, ki predstavlja zaporedje potujočih sunkov, lahko določimo dve
 različni hitrosti. Prva je hitrost premikanja ploskev konstantne
-faze oziroma premikanja vrhov hitre modulacije. Ta hitrost je fazna hitrost in
-jo izračunamo iz znane enačbe~(\ref{eq:09_25a}). Druga hitrost pa je hitrost, s katero
+faze oziroma premikanja vrhov hitre modulacije. To je fazna hitrost, ki
+jo izračunamo iz znane enačbe~(\ref{eq:09_25a}). Druga pa je hitrost, s katero
 se premikajo vrhovi počasne modulacije oziroma posamezni sunki. Izračunamo jo
 iz enačbe~(\ref{eq:09_24}) in dobimo 
 \beq
@@ -76,8 +76,8 @@ v limiti majhnih frekvenčnih razlik zapišemo kot:
 v_g = \frac{d\omega}{d k}.
 }
 
-Izraz za grupno hitrost smo sicer izpeljali na primeru valovanja, sestavljenega iz dveh
-valovanj, vendar velja na splošno za razširjanje sunkov svetlobe. Informacija,
+Izraz za grupno hitrost smo izpeljali na primeru valovanja, sestavljenega iz dveh
+valovanj, vendar velja na splošno za potovanje sunkov svetlobe. Informacija,
 ki jo prenašajo sunki svetlobe, po snovi torej potuje z grupno hitrostjo.
 \vglue5truemm
 \begin{figure}[ht]
@@ -85,7 +85,7 @@ ki jo prenašajo sunki svetlobe, po snovi torej potuje z grupno hitrostjo.
 \def\svgwidth{130truemm} 
 \input{slike/09_disperzija2.pdf_tex}
 \caption{Posnetki potujočega amplitudno moduliranega valovanja ob različnih časih.
-Potovanje posameznega vala označuje zelena pika, ki se premika z fazno hitrostjo. Potovanje
+Potovanje posameznega vala, ki se premika z fazno hitrostjo, označuje zelena pika. Potovanje
 amplitudne modulacije označuje modra pika in ta se premika z grupno 
 hitrostjo. Vidimo, da sta v narisanem primeru fazna in grupna hitrost različni.}
 \label{fig:09_disperzija}
@@ -106,7 +106,7 @@ v_g = \left(\frac{n}{c_0} + \frac{\omega}{c_0 }\frac{dn}{d\omega}\right)^{-1} =
 \eeq
 V zapisanem izrazu za grupno hitrost nastopa odvod lomnega količnika po krožni frekvenci vpadnega
 valovanja. Če je lomni količnik konstanten in neodvisen od frekvence, je odvod enak nič in 
-takrat sta fazna in grupna hitrost enaki. Na splošno je odvod različen od nič in v naslednjem razdelku
+takrat sta fazna in grupna hitrost enaki. Na splošno je odvod različen od nič in v naslednjem razdelku bomo
 spoznali, da je za večino snovi odvod na celotnem spektralnem območju vidne svetlobe pozitiven.
 Na splošno zato velja, da je za vidno svetlobo grupna hitrost manjša od fazne.
 
@@ -119,16 +119,16 @@ za izračun frekvenčne odvisnosti lomnega količnika zadošča poznati
 $\varepsilon(\omega)$. 
 
 Naj bo snov sestavljena iz $N$
-identičnih atomov oziroma molekul, ki so enakomerno porazdeljeni
+enakih atomov ali molekul, ki so enakomerno porazdeljeni
 po prostoru s prostornino $V$. Za opis posameznega atoma ali molekule uporabimo 
-klasični model oscilatorja, ki ga imenujemo Lorentzov model 
+klasični model oscilatorja, ki ga imenujemo Lorentzev model 
 po nizozemskem fiziku Hendriku Lorentzu (1853--1928). 
 
-Zamislimo si, da atom oziroma molekulo sestavljata kroglica 
+Zamislimo si, da atom ali molekulo sestavljata kroglica 
 pozitivnega naboja, ki miruje v izhodišču pri $x=0$, in kroglica
 (oblak) negativnega naboja na neki ravnovesni oddaljenosti. Med njima naj 
 deluje privlačna sila, ki jo v klasičnem modelu opišemo z vzmetjo
-s konstanto vzmeti $k$. 
+s konstanto vzmeti $k$ (slika~\ref{fig:09_Lorentz}). 
 Poleg elastične sile naj na negativno nabito kroglico med 
 premikanjem deluje tudi sila dušenja, ki opisuje absorpcijo svetlobe
 v snovi. V klasični sliki si lahko
@@ -141,7 +141,7 @@ to na končni rezultat ne vpliva.
 \centering
 \def\svgwidth{60truemm} 
 \input{slike/09_Lorentz.pdf_tex}
-\caption{Preprost Lorentzov model atoma. Zaradi vpadnega 
+\caption{Preprost Lorentzev model atoma. Zaradi vpadnega 
 elektromagnetnega valovanja elektron vzbujeno niha.
 }
 \label{fig:09_Lorentz}
@@ -151,8 +151,9 @@ elektromagnetnega valovanja elektron vzbujeno niha.
 Naj na tak model atoma ali molekule vpada elektromagnetno valovanje. Ker je 
 valovna dolžina svetlobe bistveno večja od atoma, lahko privzamemo, da
 je električno polje po velikosti znotraj celotnega atoma homogeno in enako $E$.
-Za negativno nabito kroglico (elektron) zapišemo Newtonov zakon, pri čemer upoštevamo silo vzmeti, silo 
-dušenja in silo v električnem polju. Omejimo se na polarizacijo 
+Za negativno nabito kroglico (elektron) zapišemo Newtonov zakon, pri čemer 
+upoštevamo silo vzmeti, silo 
+dušenja in silo na naboj v električnem polju. Omejimo se na polarizacijo 
 polja v smeri $x$ in zapišemo:
 \beq
 m \ddot{x} = -kx -\gamma m \dot{x} - e_0 E.
@@ -162,13 +163,13 @@ Pri tem so $m$ masa negativno nabite kroglice, $\gamma$ koeficient dušenja
 in $E = E_0\,e^{-i\omega t}$.
 
 \begin{remark}
-Pri zapisu Lorentzovega modela smo privzeli, da je elektično polje, 
+Pri zapisu Lorentzevega modela smo privzeli, da je električno polje, 
 ki ga čuti atom, enako vpadnemu električnemu polju. 
-To velja, dokler je atom sam oziroma snov sestavlja redek plin. Če je 
+To velja, dokler je atom sam ali če snov sestavlja redek plin. Če je 
 atom v snovi obdan z ostalimi atomi, 
-čuti tudi njihov vpliv in pravilno bi bilo upoštevati skupni vpliv, ki 
+čuti tudi njihov vpliv, zato bi bilo pravilneje upoštevati skupni vpliv, ki 
 ga zapišemo s tako imenovanim lokalnim poljem. 
-Kako izračunamo lokalno polje, bomo spoznali v naslednjem razdelku. 
+Kako izračunamo vpliv lokalnega polja, bomo spoznali v naslednjem razdelku. 
 \end{remark}
 
 Vpeljemo lastno krožno frekvenco $\omega_0 = k/m$ in 
@@ -190,7 +191,7 @@ pri čemer $x_0$ opisuje amplitudo nihanja, odvisno od $\omega$. Vstavimo nastav
 \eeq
 Od tod izrazimo amplitudo nihanja v odvisnosti od frekvence vpadnega valovanja:
 \beq
-x_0 = \frac{-e_0/m~E_0}{\omega_0^2 - \omega^2 - i\gamma \omega}.
+x_0 = \frac{-e_0/m}{\omega_0^2 - \omega^2 - i\gamma \omega}~E_0.
 \label{eq:09_07}
 \eeq
 V zapisanem izrazu prepoznamo značilno resonančno odvisnost dušenega nihala. 
@@ -224,7 +225,7 @@ električnega polja v snovi:
 \eeq
 \vglue-5truemm
 \begin{remark}
-Gornji zapis je linearni približek zveze med električno polarizacijo in 
+Enačba~(\ref{eq:09_12}) je linearni približek zveze med električno polarizacijo in 
 jakostjo električnega polja. Pri velikih vpadnih jakostih električnega polja linearna zveza 
 ne velja in treba je upoštevati tudi višje člene v razvoju z višjimi potencami polja. Ti
 opisujejo nelinearne optične pojave, kar presega okvir te knjige.
@@ -251,7 +252,7 @@ Dobimo:
 }
 \begin{remark}
 V plazmi se elektroni prosto gibljejo in niso vezani na atome,
-zato za opis elektronov v plazmi velja $k=0$ in $\gamma = 0$. Za opis njihovega
+zato za njih velja $k=0$ in $\gamma = 0$. Za opis njihovega
 gibanja ostane le še krožna frekvenca $\omega_p$, od tod ime plazemska frekvenca.
 \end{remark}
 
@@ -261,7 +262,7 @@ zapišemo:
 \mathcal{N}^2 = (n'+in'')^2 = n'^2-n''^2+2in'n'' =  1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}.
 \label{eq:09_17}
 \eeq
-Izenačimo realni in imaginarni del leve in desne strani enačbe in dobimo:
+Izenačimo realni in imaginarni del leve in desne strani enačbe. Dobimo:
 \beq
 n'^2 -n''^2 = \varepsilon' = 1 + \frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2}
@@ -300,8 +301,8 @@ bo približek redkega plina.
 V redkem plinu vrednost lomnega količnika le malo odstopa od lomnega količnika vakuuma 
 in $\mathcal{N} \approx 1$. Lomni količnik (enačba~\ref{eq:09_17}) zato lahko razvijemo in dobimo:
 \begin{align}
-\mathcal{N} =& \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \\
-\approx& 1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
+\mathcal{N} &= \sqrt{1+ \frac{\omega_p^2}{\omega_0^2 - \omega^2 - i\gamma \omega}} \\
+&\approx 1 + \frac{1}{2}\frac{\left(\omega_0^2 - \omega^2\right)\omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2} + \frac{i}{2}\frac{\gamma \omega \omega_p^2}{\left(\omega_0^2 - 
 \omega^2\right)^2 + \gamma^2 \omega^2}.
 \label{eq:09_22}
@@ -311,7 +312,7 @@ in $\mathcal{N} \approx 1$. Lomni količnik (enačba~\ref{eq:09_17}) zato lahko 
 \def\svgwidth{140truemm} 
 \input{slike/09_real_im_n.pdf_tex}
 \caption{Odvisnost realnega (a) in imaginarnega dela (b) lomnega količnika od 
-frekvence vpadne svetlobe v preprostem Lorentzovem modelu. Osenčen del na levi 
+frekvence vpadne svetlobe v preprostem Lorentzevem modelu. Osenčen del na levi 
 sliki označuje območje anomalne disperzije.}
 \label{fig:09_nkompleks}
 \end{figure}
@@ -324,20 +325,29 @@ začne ponovno naraščati in se počasi približuje vrednosti 1. V skoraj celot
 spektralnem območju je tako odvod lomnega količnika po frekvenci pozitiven 
 (območje normalne disperzije), razen v ozkem območju v bližini lastne 
 frekvence $\omega_0$, kjer je odvod negativen (območje anomalne disperzije). 
-Za zelo velike frekvence vpadne svetlobe je lomni količnik praktično enak 1.
+Za zelo velike frekvence vpadne svetlobe je lomni količnik približno enak 1.
 
-Izkaže se, da za praktično vse snovi lastna frekvenca $\omega_0$
+Izkaže se, da za večino snovi lastna frekvenca $\omega_0$
 leži v ultravijoličnem delu spektra, torej pri frekvencah, ki so večje od
 frekvenc vidne svetlobe. Posledično je lomni količnik za vidno svetlobo 
 vedno večji od 1. Za zelo velike frekvence, na primer za rentgensko svetlobo,
 je lomni količnik manjši od 1. Lomni količnik kremena pri valovni 
 dolžini $0,5~\si{nm}$ je tako $0,9998$. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/09_stekla1.pdf_tex}
+\caption{Odvisnosti lomnega količnika od valovne dolžine za nekaj različnih vrst stekel. SF10
+ in F2 sta kremenovi stekli, BK7 pa je borosilikatno kronsko steklo. Osenčeni 
+ del označuje vidni del spektra.}
+\label{fig:09_stekla}
+\end{figure}
 
 Odvod lomnega količnika po frekvenci vpadne svetlobe $dn/d\omega >0$
 je za vse frekvence, razen v bližini $\omega_0$, pozitiven. 
-Ker so frekvence vidne svetlobe manjše od lastnih frekvenc, je tudi celotna
+Ker so frekvence vidne svetlobe manjše od lastnih frekvenc, je celotna
 vidna svetloba v območju normalne disperzije, kar pomeni, da z naraščajočo
-frekvenco (in pojemajočo valovno dolžino) lomni količnik narašča. 
+frekvenco lomni količnik narašča in z naraščajočo valovno dolžino pojema (slika~\ref{fig:09_stekla}). 
 Po enačbi~(\ref{eq:09_26}) to pomeni, da je grupna hitrost vpadne vidne 
 svetlobe vedno manjša od fazne hitrosti. 
 
@@ -353,7 +363,7 @@ vzbujanje vibracijskih stanj v snovi (infrardeč del spektra) ali
 vzbujanje rotacijskih stanj (v mikrovalovnem delu spektra).
 \end{remark}
 
-Disperzijo smo pojasnili na preprostem Lorentzovem modelu.
+Disperzijo smo pojasnili na preprostem Lorentzevem modelu.
 V dejanski snovi oziroma atomskem/molekulskem sistemu je navadno več resonanc, pri čemer
 vsaki od njih ustrezata neka resonančna frekvenca $\omega_{0j}$ in koeficient
 dušenja $\gamma_j$. Potem vse prispevke zapišemo kot vsoto posameznih prispevkov 
@@ -366,52 +376,54 @@ z ustreznimi amplitudami $f_j$:
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/09_disp_multi.pdf_tex}
-\caption{Primer disperzije realnega dela lomnega količnika za Lorentzov model 
+\caption{Primer disperzije realnega dela lomnega količnika za Lorentzev model 
 z več lastnimi resonancami. Senčeni del označuje območje vidne svetlobe, 
 za katero velja normalna disperzija.}
 \label{fig:09_disp_multi}
 \end{figure}
 
-V praksi za navedeni izraz uporabimo različne približke, ki v danem frekvenčnem
+V praksi za enačbo~(\ref{eq:09_27}) uporabimo različne približke, ki v danem frekvenčnem
 območju dovolj dobro opišejo odvisnost lomnega količnika. V prozornih snoveh lahko 
-dušenje, ki na splošno povzroča absorpcijo, povsem zanemarimo in privzamemo $\gamma_j = 0$ za 
+dušenje, ki na splošno povzroča absorpcijo, zanemarimo in privzamemo $\gamma_j = 0$ za 
 vsak $j$. V tem približku dobimo:
 \beq
 \mathcal{N}^2 = n'^2 = 1+ \sum_j \frac{f_j \omega_{pj}^2}{\omega_{0j}^2 - \omega^2}.
 \label{eq:09_28}
 \eeq
-Če namesto krožne frekvence vstavimo valovno dolžino svetlobe, dobimo:
+Namesto krožne frekvence lahko vstavimo valovno dolžino svetlobe in dobimo:
 \beq
 n'^2 = 1 + \sum_j \frac{f_j \omega_{pj}^2\lambda_{oj}^2\lambda^2}{\lambda^2 - \lambda_{0j}^2}.
 \label{eq:09_29}
 \eeq
-Kadar je valovna dolžina vpadne svetlobe razmeroma blizu eni lastni frekvenci in daleč
-od ostalih, lahko prispevke ostalih lastnih frekvenc upoštevamo le v konstanti in ostane:
+Kadar je valovna dolžina vpadne svetlobe razmeroma blizu ene lastne frekvence (a še vedno 
+dovolj daleč, da je v območju normalne disperzije), je navadno tako daleč
+od ostalih, da lahko prispevke ostalih lastnih frekvenc upoštevamo le v konstanti. Ostane:
 \boxeq{eq:09_30}{
 n'^2(\lambda) = A + \sum_j \frac{G_j \lambda^2}{\lambda^2 - \lambda_{0j}^2}.
 }
 Približek je leta 1872 zapisal nemški fizik Wolfgang von Sellmeier, zato ga danes
 imenujemo Sellmeierjeva enačba. Ta zveza se pogosto uporablja za opis disperzije 
-lomenga količnika $n(\lambda)$ v prozornih snoveh. 
+lomnega količnika $n(\lambda)$ v prozornih snoveh. 
 
-Še preprostejši približek je Cauchyjev približek, ki ga imenujemo po francoskem matematiku
+Še preprostejši je Cauchyjev približek, ki ga imenujemo po francoskem matematiku
 Augustin-Louisu Cauchyju (1789--1857). Uporabimo ga lahko, kadar je izbrano spektralno
 območje dovolj daleč od resonanc. Poleg tega upoštevamo, da se lomni količnik le malo 
 razlikuje od 1, in zapišemo:
 \boxeq{eq:09_30a}{
 n = A + \frac{B}{\lambda^2}.
 }
-
+\vglue3truemm
 \begin{example}{\bf Cauchyjev približek za lomni količnik.}
 Najpreprostejši opis odvisnosti lomnega količnika od valovne dolžine vpadne svetlobe
 je Cauchyjev približek. Čeprav smo zvezo izračunali za redke pline, velja v vidnem
 območju dovolj dobro tudi
 za gostejše trdne snovi. Nekaj parametrov $A$ in $B$ za izračun lomnega količnika
 je podanih v tabeli:
+\vglue2truemm
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
-snov& $A$ & $B (\si{\micro\metre}^2)$\\ \hline 
+snov& $A$ & $B~[\si{\micro\metre}^2]$\\ \hline 
 taljeno kremenovo steklo & 1,4580 & 0,00354\\ \hline
 kronsko steklo K5 & 1,5220 & 0,00459\\ \hline
 svinčevo steklo SF10 & 1,7280 & 0,01342\\ \hline
@@ -422,7 +434,7 @@ svinčevo steklo SF10 & 1,7280 & 0,01342\\ \hline
 \subsection*{Popravek lokalnega polja v gosti snovi}
 Do zdaj smo obravnavali redko snov, v kateri so atomi oziroma molekule
 dovolj oddaljeni, da ne čutijo medsebojnega vpliva. 
-Zato smo v preprostem Lorentzovem modelu za polje, ki ga čuti elektron, 
+Zato smo v preprostem Lorentzevem modelu za polje, ki ga čuti elektron, 
 vzeli kar polje vpadne svetlobe $E$. Če pa je izbrana molekula obdana
 z drugimi molekulami, ki se pod vplivom zunanjega električnega polja 
 ravno tako polarizirajo, se  električno polje na mestu izbrane 
@@ -438,7 +450,9 @@ Principles of Optics}), zapišimo le, da v izotropnih snoveh velja:
 pri čemer smo se omejili le na eno smer, zato smo vektorski zapis opustili. 
 Prvi člen v enačbi~(\ref{eq:09_31}) predstavlja jakost električnega 
 polja vpadne svetlobe, drugi člen pa opisuje polarizacijsko 
-polje zaradi okoliških molekul. Z uporabo zveze
+polje zaradi okoliških molekul. 
+
+Z uporabo zveze
 $P = \varepsilon_0 (\varepsilon -1) E$ dobimo:
 \beq
 \tilde{E} = E + \frac{\varepsilon_0 (\varepsilon -1) E}{3\varepsilon_0} = 
@@ -447,7 +461,7 @@ $P = \varepsilon_0 (\varepsilon -1) E$ dobimo:
 \eeq
 Jakost lokalnega polja je tako sorazmerna jakosti vpadnega polja. 
 
-Pri izračunu inducirane polarizacije vseh dipolov v snovi (enačba~\ref{eq:09_10}) 
+Pri izračunu inducirane polarizacije v snovi (enačba~\ref{eq:09_10}) 
 moramo zaradi vpliva sosednjih molekul upoštevati $\tilde{E}$. Sledi:
 \beq
 P = \frac{e_0^2\,\varrho/m}{\omega_0^2 - \omega^2 -i\gamma \omega}
@@ -468,10 +482,11 @@ izraz preoblikujemo v:
 \frac{\omega_p^2}{3\left(\omega_0^2 - \omega^2\right)}.
 \label{eq:09_35}
 \eeq
-Zapisani izraz imenujemo Lorentz-Lorenzova zveza po danskem matematiku Ludvigu Lorenzu 
+Zapisani izraz imenujemo Lorentz-Lorenzeva zveza po danskem matematiku Ludvigu Lorenzu 
 (1829--1891) in nizozemskemu fiziku Hendriku Lorentzu. 
+
 \begin{remark}
- Lorentz-Lorenzova zveza je tesno povezana s Clausius-Mossottijevo zvezo, ki opisuje
+ Lorentz-Lorenzeva zveza je tesno povezana s Clausius-Mossottijevo zvezo, ki opisuje
  zvezo med dielektrično konstanto snovi z atomsko polarizirnostjo $\alpha$:
  \beq
 \frac{\varepsilon -1 }{\varepsilon+2} = \frac{\varrho\alpha}{3 \varepsilon_0},
@@ -480,15 +495,21 @@ Zapisani izraz imenujemo Lorentz-Lorenzova zveza po danskem matematiku Ludvigu L
 pri čemer je $\varrho$ število molekul na volumsko enoto. 
 \end{remark}
 
-\begin{example}
-\vglue-2truemm{\bf Disperzija v steklu in v vodi.}
+Poglejmo, kako popravek lokalnega polja vpliva na izračunani lomni količnik. Ker je
+jakost polja v snovi sorazmerna z jakostjo vpadnega valovanja, gre le za popravek
+pri lastni krožni frekvenci snovi $\omega_0$. Ta se zaradi lokalnega polja malo
+spremeni, pri čemer glavna odvisnost lomnega količnika od frekvence vpadnega
+valovanja ostane enaka.
+\vglue3truemm
+\begin{example}{\bf Disperzija v steklu in v vodi.}
 Verjetno najbolj poznana posledica disperzije v steklu je razklon bele svetlobe
 na prizmi. S tem poskusom je Newton v drugi polovici sedemnajstega stoletja
 pokazal, da je bela svetloba sestavljena iz svetlob različnih barv. Ko bela
 svetloba vpade na prizmo, se lomi po lomnem zakonu. Ker je lomni kot odvisen
 od valovne dolžine svetlobe, se svetloba različnih barv lomi pod različnimi
 koti in ob izhodu iz prizme se snop prej bele svetlobe razkloni v različne
-barve.
+barve (sliki~\ref{fig:01_Newton} in \ref{fig:09_prizma}).
+
 \begin{figure}[ht]
 \centering
 \includegraphics[width=7truecm]{slike/09_prizma.jpg}\hfill
@@ -517,11 +538,11 @@ Vrstni red barv v mavrici drugega reda je obrnjen glede na
 red barv v mavrici prvega reda. Mavrica prvega reda se pojavi pri 
 kotih okoli $41$--$42\si{\degree}$ glede na vpadno svetlobo, mavrica drugega
 reda pa pri okoli $50$--$53\si{\degree}$. Med obema mavricama je značilen 
-temnejši pas, tako imenovan Aleksandrov pas, po starogrškem mislelcu Aleksandru
-Afrodizijskemu ($\sim 200$).}
+temnejši pas, tako imenovan Aleksandrov pas, po starogrškem mislecu Aleksandru
+Afrodizijskem ($\sim 200$).}
 \label{fig:09_mavrica}
 \end{figure}
-\vglue-5truemm
+
 \end{example}
 
 \begin{example}{\bf Kromatična aberacija leče.}
@@ -534,9 +555,9 @@ aberacija leče. Na sliki je to opazno predvsem
 ob robovih slike, kjer so slike videti barvno razmazane. 
 Napako zbiralne leče navadno odpravimo z dodatno razpršilno lečo, ki kompenzira
 disperzijo prve leče. Nastali sestav imenujemo akromatska leča.
-\begin{figure}[ht]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=8truecm]{slike/09_aberacija.jpg}
+\includegraphics[width=6truecm]{slike/09_aberacija.jpg}
 \caption{Slika je v sredini močne zbiralne leče ostra, ob robovih pa
 se vidi učinek disperzije: modri odtenki so premaknjeni proti sredini 
 leče, rdeči odtenki pa proti robu.}
@@ -558,6 +579,16 @@ tako veliko, da posameznih sunkov ne razločimo več,
 se informacija izgubi.  
 Disperzija v optičnih vlaknih tako omejuje količino 
 podatkov, ki jih lahko po vlaknu prenašamo v časovni enoti.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/09_disperzija.pdf_tex}
+\caption{Kratki sunki, ki vstopajo v optično vlakno, se zaradi 
+disperzije podaljšajo. Kadar je disperzija premočna, sunkov
+na izhodu ne zaznavamo več ločeno in informacija se izgubi.}
+\label{fig:09_disperzijafib}
+\end{figure}
+
 \end{example}
 
 \section{Prevodne snovi}
@@ -909,7 +940,7 @@ linearne polarizacije zaradi svojih mikroskopskih ali strukturnih lastnosti.
 Podobno obnašanje opazimo tudi v izotropnih dielektrikih, ki jih postavimo v vzdolžno
 magnetno polje. Pojav imenujemo magneto-optični oziroma Faradayev pojav
 po njegovem odkritelju Michaelu Faradayu. Za razliko 
-od intrinzične optične aktivnosti, ki polarizacijo vedno zasuče v sisto smer (na primer
+od intrinzične optične aktivnosti, ki polarizacijo vedno zasuče v isto smer (na primer
 v desno glede na smer potovanja svetlobe skozi snov), je zasuk pri Faradayevem pojavu 
 odvisen od smeri potovanja svetlobe glede na smer statičnega zunanjega 
 magnetnega polja. Po dogovoru je zasuk pozitiven, če se polarizacija suče v 
@@ -969,8 +1000,8 @@ zasuče za isti kot v isti smeri, zato je vpadni polarizator ne prepušča.}
 \label{fig:09_izolator}
 \end{figure}
 
-\subsection*{Izpeljava Faradayevega pojava z Lorentzovim modelom}
-Faradayev pojav lahko pojasnimo z Lorentzovim modelom snovi 
+\subsection*{Izpeljava Faradayevega pojava z Lorentzevim modelom}
+Faradayev pojav lahko pojasnimo z Lorentzevim modelom snovi 
 (glej razdelek~\ref{chap:lomni}), ki jo izpostavimo zunanjemu 
 statičnemu magnetnemu polju in cirkularno polariziranem
 elektromagnetnem valovanju. Zaradi prisotnosti cirkularno 
@@ -992,7 +1023,7 @@ m\ddot{\mathbf{r}} = -k \mathbf{r}-e_0 \mathbf{E} -e_0 \dot{\mathbf{r}}\times \m
 \eeq
 Pri tem vektor $\mathbf{r}$ označuje lego elektrona v ravnini $\mathbf{r} = (x,y,0)$. Konstanta
 $k$ je konstanta vzmeti, ki veže elektron na jedro in  jo bomo izrazili z lastno frekvenco 
-nihanja $\omega^2 = k/m$, $m$ je masa elektrona, jakost elektičnega polja je $\mathbf{E} = (E_x, E_y, 0)$,
+nihanja $\omega^2 = k/m$, $m$ je masa elektrona, jakost električnega polja je $\mathbf{E} = (E_x, E_y, 0)$,
 magnetnega polja pa $\mathbf{B}_0 = (0,0,B_0)$, torej vzdolž smeri širjenja svetlobe. 
 Pri tem je smer magnetne sile, ki deluje na kroglico, odvisna od smeri kroženja: 
 enkrat kaže proti središču in drugič stran od njega. Ker magnetna sila spremeni
@@ -1043,13 +1074,13 @@ Enačbo poenostavljeno zapišemo kot:
 \eeq
 pri čemer smo vpeljali ciklotronsko frekvenco $\omega_{c} = e_0B_0/m$.
 Drugič zapisani enačbi~(\ref{eq:09_52a} in \ref{eq:09_52b}) 
-odštejmo in uvedemo novo spremeljivko $x-iy=w$ ter desno krožno polarizirano valovanje $E_D = E_x-iE_y$.
+odštejmo in uvedemo novo spremenljivko $x-iy=w$ ter desno krožno polarizirano valovanje $E_D = E_x-iE_y$.
 Dobimo:
 \beq
 \ddot{w} +i \omega_{c}\dot{w} + \omega_0^2 w = -\frac{e_0}{m}E_D.
 \label{eq:09_64}
 \eeq
-Z vpeljavo novih spremeljivk smo enačbi~(\ref{eq:09_52a} in \ref{eq:09_52b}) razklopili. 
+Z vpeljavo novih spremenljivk smo enačbi~(\ref{eq:09_52a} in \ref{eq:09_52b}) razklopili. 
 Rešitev novih dveh enačb~(\ref{eq:09_63} in \ref{eq:09_64}) 
 iščemo v obliki $z = z_0 e^{-i\omega t}$ in $w = w_0 e^{-i\omega t}$, pri čemer
 je $\omega$ frekvenca vpadne svetlobe. Vstavimo nastavek za $z$ in $w$ in dobimo rešitev za amplitudi:
@@ -1068,7 +1099,7 @@ n_D^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 + \omega_{c}\omega}.
 \eeq
 Pri tem $\omega_p$ označuje plazemsko frekvenco $\omega_p = \sqrt{e_0^2 \varrho/\varepsilon_0 m}$. 
 Asimetrija magnetne sile, ki za eno krožno polarizirano valovanje kaže proti
-središču kroženja in za drugo strad od njega, torej povzroči, da sta lomna količnika
+središču kroženja in za drugo stran od njega, torej povzroči, da sta lomna količnika
 za krožno polarizirani valovanji različna. 
 Razlika lomnih količnikov, ki določa sukanje vpadne linearno polarizirane svetlobe,
 je odvisna od smeri magnetnega polja. Nasprotna smer magnetnega polja torej suče svetlobo
@@ -1088,6 +1119,5 @@ Sledi:
 \frac{\omega_c\omega}{\left(\omega_0^2 -\omega^2\right)^2 - \left(\omega_{c}\omega\right)^2}
 \approx \frac{\pi}{\lambda} \omega_p^2 \frac{\omega e_0 /m}{\left(\omega_0^2 -\omega^2\right)^2}~L~B_0.
 \eeq
-Tako smo na preprostem modelu pokazali približno linearno odvinost kota zasuka od zunanjega 
+Tako smo na preprostem modelu pokazali približno linearno odvisnost kota zasuka od zunanjega 
 magnetnega polja. 
-
