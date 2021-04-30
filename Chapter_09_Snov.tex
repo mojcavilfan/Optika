@@ -11,7 +11,7 @@ opisali dva zanimiva pojava: optično aktivnost in Faradayev pojav.
 V tretjem poglavju smo zapisali osnovno rešitev valovne enačbe
 v neomejenem prostoru (enačba~\ref{eq:valovnaE}) v obliki ravnih valov 
 (enačba~\ref{eq:ravnival}). Izračunali smo fazno hitrost,
-to je hitrost premikanja ploskev konstantne faze (valovnih front), in
+to je hitrost premikanja ploskev konstantne faze in
 jo zapisali kot razmerje krožne frekvence vpadne svetlobe 
 in valovnega števila (enačba~\ref{eq:03_10}):
 \boxeq{eq:09_25a}{
@@ -105,7 +105,7 @@ v_g = \left(\frac{n}{c_0} + \frac{\omega}{c_0 }\frac{dn}{d\omega}\right)^{-1} =
 \label{eq:09_26}
 \eeq
 V zapisanem izrazu za grupno hitrost nastopa odvod lomnega količnika po krožni frekvenci vpadnega
-valovanja. Če je lomni količnik konstanten in neodvisen od frekvence, je odvod enak nič in 
+valovanja. Če je lomni količnik neodvisen od frekvence, je odvod enak nič in 
 takrat sta fazna in grupna hitrost enaki. Na splošno je odvod različen od nič in v naslednjem razdelku bomo
 spoznali, da je za večino snovi odvod na celotnem spektralnem območju vidne svetlobe pozitiven.
 Na splošno zato velja, da je za vidno svetlobo grupna hitrost manjša od fazne.
@@ -276,7 +276,7 @@ ter
 \eeq
 Zapisali smo sistem dveh enačb za realni in imaginarni del lomnega količnika. Rešujemo ga podobno kot
 sistem enačb za lomni količnik v prevodni snovi (enačbe~\ref{eq:nkompleks2} in \ref{eq:03_72})
-z rešitvami v obliki enačb~(\ref{eq:03_76} in \ref{eq:03_77}). Rešitvi sta tako:
+z rešitvami v obliki enačb~(\ref{eq:03_76} in \ref{eq:03_77}). Rešitvi sta:
 \beq
 n'^2 = \frac{1}{2}\left(\varepsilon'+\sqrt{\varepsilon'^2 + \varepsilon''^2}\right)
 \label{eq:09_20}
@@ -312,7 +312,7 @@ in $\mathcal{N} \approx 1$. Lomni količnik (enačba~\ref{eq:09_17}) zato lahko 
 \def\svgwidth{140truemm} 
 \input{slike/09_real_im_n.pdf_tex}
 \caption{Odvisnost realnega (a) in imaginarnega dela (b) lomnega količnika od 
-frekvence vpadne svetlobe v preprostem Lorentzevem modelu. Osenčen del na levi 
+frekvence vpadne svetlobe v preprostem Lorentzevem modelu redkega plina. Osenčeni del na levi 
 sliki označuje območje anomalne disperzije.}
 \label{fig:09_nkompleks}
 \end{figure}
@@ -335,7 +335,7 @@ je lomni količnik manjši od 1. Lomni količnik kremena pri valovni
 dolžini $0,5~\si{nm}$ je tako $0,9998$. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/09_stekla1.pdf_tex}
 \caption{Odvisnosti lomnega količnika od valovne dolžine za nekaj različnih vrst stekel. SF10
  in F2 sta kremenovi stekli, BK7 pa je borosilikatno kronsko steklo. Osenčeni 
@@ -343,7 +343,7 @@ dolžini $0,5~\si{nm}$ je tako $0,9998$.
 \label{fig:09_stekla}
 \end{figure}
 
-Odvod lomnega količnika po frekvenci vpadne svetlobe $dn/d\omega >0$
+Odvod lomnega količnika po frekvenci vpadne svetlobe $dn/d\omega$
 je za vse frekvence, razen v bližini $\omega_0$, pozitiven. 
 Ker so frekvence vidne svetlobe manjše od lastnih frekvenc, je celotna
 vidna svetloba v območju normalne disperzije, kar pomeni, da z naraščajočo
@@ -390,7 +390,7 @@ vsak $j$. V tem približku dobimo:
 \mathcal{N}^2 = n'^2 = 1+ \sum_j \frac{f_j \omega_{pj}^2}{\omega_{0j}^2 - \omega^2}.
 \label{eq:09_28}
 \eeq
-Namesto krožne frekvence lahko vstavimo valovno dolžino svetlobe in dobimo:
+Namesto krožne frekvence lahko vstavimo tudi valovno dolžino svetlobe in dobimo:
 \beq
 n'^2 = 1 + \sum_j \frac{f_j \omega_{pj}^2\lambda_{oj}^2\lambda^2}{\lambda^2 - \lambda_{0j}^2}.
 \label{eq:09_29}
@@ -399,7 +399,7 @@ Kadar je valovna dolžina vpadne svetlobe razmeroma blizu ene lastne frekvence (
 dovolj daleč, da je v območju normalne disperzije), je navadno tako daleč
 od ostalih, da lahko prispevke ostalih lastnih frekvenc upoštevamo le v konstanti. Ostane:
 \boxeq{eq:09_30}{
-n'^2(\lambda) = A + \sum_j \frac{G_j \lambda^2}{\lambda^2 - \lambda_{0j}^2}.
+n'^2 = A + \sum_j \frac{G_j \lambda^2}{\lambda^2 - \lambda_{0j}^2}.
 }
 Približek je leta 1872 zapisal nemški fizik Wolfgang von Sellmeier, zato ga danes
 imenujemo Sellmeierjeva enačba. Ta zveza se pogosto uporablja za opis disperzije 
@@ -437,7 +437,7 @@ dovolj oddaljeni, da ne čutijo medsebojnega vpliva.
 Zato smo v preprostem Lorentzevem modelu za polje, ki ga čuti elektron, 
 vzeli kar polje vpadne svetlobe $E$. Če pa je izbrana molekula obdana
 z drugimi molekulami, ki se pod vplivom zunanjega električnega polja 
-ravno tako polarizirajo, se  električno polje na mestu izbrane 
+polarizirajo, se  električno polje na mestu izbrane 
 molekule spremeni. Za izračun tako imenovanega lokalnega polja $\tilde{E}$
 moramo upoštevati tudi okoliško polarizacijo.
 
@@ -459,7 +459,8 @@ $P = \varepsilon_0 (\varepsilon -1) E$ dobimo:
 \frac{\epsilon + 2}{3}E.
 \label{eq:09_32}
 \eeq
-Jakost lokalnega polja je tako sorazmerna jakosti vpadnega polja. 
+Jakost lokalnega polja je tako sorazmerna jakosti vpadnega polja, sorazmernostni
+faktor pa je odvisen od dielektričnosti snovi.
 
 Pri izračunu inducirane polarizacije v snovi (enačba~\ref{eq:09_10}) 
 moramo zaradi vpliva sosednjih molekul upoštevati $\tilde{E}$. Sledi:
@@ -514,7 +515,7 @@ barve (sliki~\ref{fig:01_Newton} in \ref{fig:09_prizma}).
 \centering
 \includegraphics[width=7truecm]{slike/09_prizma.jpg}\hfill
 \includegraphics[width=7truecm]{slike/09_prizma_disp.png}
-\caption{Razklon sončne (bele) svetlobe na prizmi: Fotografija razklonjenega
+\caption{Razklon sončne (bele) svetlobe na prizmi: fotografija razklonjenega
 snopa svetlobe (levo) in shematski prikaz učinka disperzije na prehod svetlobe
 skozi prizmo (desno). Podobno sliko najdemo na naslovnici albuma 
 {\it The Dark Side of the Moon} britanske zasedbe Pink Floyd.}
@@ -532,30 +533,31 @@ kar vidimo kot mavrico.
 \includegraphics[width=7truecm]{slike/09_mavrica_photo.jpg}\hfill
 \includegraphics[width=7truecm]{slike/09_mavrica_disp.png}
 \caption{Fotografija mavrice (levo) in shematski prikaz nastanka
-mavrice (desno). Mavrica prvega reda nastane ob enkratnem
-odboju svetlobe v kapljici, mavrica drugega reda pa z dvakratnim.
-Vrstni red barv v mavrici drugega reda je obrnjen glede na 
-red barv v mavrici prvega reda. Mavrica prvega reda se pojavi pri 
+mavrice (desno). Mavrica prvega reda (notranji kolobar) nastane ob enkratnem
+odboju svetlobe v kapljici, mavrica drugega reda (zunanji kolobar) pa z dvakratnim, 
+zato je vrstni red barv v njej obrnjen glede na mavrico prvega reda. 
+Mavrica prvega reda se pojavi pri 
 kotih okoli $41$--$42\si{\degree}$ glede na vpadno svetlobo, mavrica drugega
 reda pa pri okoli $50$--$53\si{\degree}$. Med obema mavricama je značilen 
 temnejši pas, tako imenovan Aleksandrov pas, po starogrškem mislecu Aleksandru
 Afrodizijskem ($\sim 200$).}
 \label{fig:09_mavrica}
 \end{figure}
-
 \end{example}
 
-\begin{example}{\bf Kromatična aberacija leče.}
+\begin{example}{\bf Kromatična aberacija leče.} Še en zanimiv primer 
+disperzije opazimo pri preslikavi z lečo. 
 Spoznali smo, da je goriščna razdalja leče odvisna
 od lomnega količnika snovi, iz katere je leča narejena 
 (enačba~\ref{eq:goriscna}). Zaradi disperzije stekla
 je goriščna razdalja za različne valovne dolžine različna,
 kar pripelje do napake leče, imenovane kromatična
-aberacija leče. Na sliki je to opazno predvsem 
+aberacija. Na sliki je to opazno predvsem 
 ob robovih slike, kjer so slike videti barvno razmazane. 
 Napako zbiralne leče navadno odpravimo z dodatno razpršilno lečo, ki kompenzira
 disperzijo prve leče. Nastali sestav imenujemo akromatska leča.
 \begin{figure}[h!]
+\vglue-3truemm
 \centering
 \includegraphics[width=6truecm]{slike/09_aberacija.jpg}
 \caption{Slika je v sredini močne zbiralne leče ostra, ob robovih pa
@@ -612,13 +614,13 @@ iz splošne enačbe za izračun kompleksnega lomnega količnika $\mathcal{N}$
 \eeq
 Pri tem smo z $\omega$ označili krožno frekvenco vpadne svetlobe, z
 $\omega_p$ pa plazemsko frekvenco, podano z enačbo~(\ref{eq:09_14}). 
-Koeficient dušenja $\gamma$ opisuje električno upornost, ki jo v dobrih
+Koeficient dušenja $\gamma$ opisuje električno upornost, ki jo v idealnih 
 prevodnikih lahko zanemarimo. Lomni količnik potem izračunamo kot:
 \boxeq{eq:09_36a}{
-\mathcal{N} \approx \sqrt{1- \frac{\omega_p^2}{\omega^2}}.
+n \approx \sqrt{1- \frac{\omega_p^2}{\omega^2}}.
 }
 Za vrednosti $\omega < \omega_p$ je lomni količnik imaginaren in svetloba se v snovi
-močno absorbira. Za krožne frekvence $\omega > \omega_p$ pa je lomni količnik realen 
+močno absorbira. Po drugi strani je za krožne frekvence $\omega > \omega_p$ lomni količnik realen 
 in snov prozorna. Ključni parameter pri odzivu prevodnikov je tako plazemska frekvenca. 
 
 Plazemska frekvenca za srebro je v ultravijoličnem delu spektra 
@@ -629,12 +631,12 @@ količnik za del vidnega spektra z daljšimi valovnimi dolžinami realen, pri
 krajših valovnih dolžinah pa je imaginaren. Rdeča in rumena barva se zato v zlatu 
 ne moreta razširjati in ko bela svetloba vpade na zlato, se rdeča in rumena svetloba
 od njega odbijeta. To da zlatu značilno rdečkasto-rumeno barvo. Za modre odtenke
-svetlobe je lomni količnik zlata realen, zato se znatno šibkeje odbijajo od površine.
+svetlobe je lomni količnik zlata realen, zato se modri odtenki znatno šibkeje odbijajo od površine.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=7truecm]{slike/09_zlato.jpg}\hfill
 \includegraphics[width=7truecm]{slike/09_pirit.jpg}
-\caption{Ploščica $91,6~\%$ (22-karatnega) in košček $83,3~\%$ (20-karatnega) zlata (levo). 
+\caption{Ploščica $91,6\%$ (22-karatnega) in košček $83,3\%$ (20-karatnega) zlata (levo). 
 Podobno zlatorumeno barvo ima tudi pirit FeS$_2$ (desno).}
 \label{fig:09_zlato}
 \end{figure}
@@ -642,7 +644,7 @@ Podobno zlatorumeno barvo ima tudi pirit FeS$_2$ (desno).}
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/09_kovine.pdf_tex}
-\caption{Odvisnosti odbojnosti na kovinah od valovne dolžine vpadne svetlobe. Odbojnost
+\caption{Odbojnosti na kovinah v odvisnosti od valovne dolžine vpadne svetlobe. Odbojnost
 srebra je v vidnem delu spektra (osenčeno področje) praktično 
 neodvisna od valovne dolžine, podobno velja tudi za aluminij, zato sta kovini
 videti neobarvano. Odbojnosti bakra in zlata sta pri modrih odtenkih bistveno 
@@ -650,6 +652,20 @@ manjši kot pri rdečih in rumenih, zato ima baker značilno rdečkasto barvo in
 rumeno-rdečkasto barvo (Povzeto po E. Hecht, {\it Optics}, Pearson, 2017.)}
 \label{fig:09_kovine}
 \end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=35truemm]{slike/09_2euro.jpg}
+\includegraphics[width=35truemm]{slike/09_1euro.jpg}
+\includegraphics[width=35truemm]{slike/09_50centov.jpg}
+\includegraphics[width=35truemm]{slike/09_5centov.jpg}
+\caption{Evrski kovanci so različnih barv, saj so narejeni iz različnih zlitin. Kovanec za 2~€ je 
+ob robu iz zlitine bakra in niklja, osrednji del pa je triplastna struktura nikelj-medenina, nikel, nikel-medenina. Kovanec za 1~€ je ob robu zlitina nikelj-medenina, osrednji del pa triplastna struktura
+nikel-baker, nikel, nikel-baker. Kovanec za 50~centov je iz tako imenovanega nordijskega 
+zlata ($89\%$ bakra, $5\%$ aluminija, $5\%$ cinka in $1\%$ kositra), kovanec za 5~centov pa je iz jekla, prevlečenega z bakrom. Z različnimi zlitinami lahko tako dosežemo ``zlat'' videz kovancev, medtem ko
+je čisti baker izrazito rdečkaste barve (Foto: Banka Slovenije).}
+\label{fig:09_kovanci}
+\end{figure}
+
 
 \section{Optični metamateriali}
 Posebna vrsta snovi so metamateriali. To so snovi, ki jih v naravi ne najdemo (so umetno
@@ -692,8 +708,9 @@ kotom $\alpha>0 $, je lomni kot $\beta <0$.
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/09_meta.pdf_tex}
-\caption{Odboj in lom ob prehodu iz navadne snovi v metamaterial z negativnim lomnim
-količnikom. V metamaterialu sta smeri energijskega toka in valovnega vektorja nasprotni.}
+\caption{Lom svetlobe ob prehodu iz navadne snovi v metamaterial z negativnim lomnim
+količnikom. V metamaterialu sta smeri energijskega toka $\mathbf{S}$ 
+in valovnega vektorja $\mathbf{k}$ nasprotni.}
 \label{fig:09_meta}
 \end{figure}
 
@@ -766,7 +783,7 @@ ali translacijo prvotne molekule, ampak je potrebna zrcalna preslikava. Asimetri
 se pojavi zaradi razporeditve atomov okoli tako imenovanega kiralnega centra. Navadno
 je to ogljikov atom, ki ima pripete štiri različne kemijske skupine.
 Dve možni konformaciji molekule imenujemo optična izomera 
-oziroma enantiomera (tudi stereoizomera), mešanico obeh izomerov v razmerju 50:50 pa
+oziroma enantiomera, mešanico obeh izomerov v razmerju 50:50 pa
 racemat. Racemat je optično neaktiven.
 
 Čeprav sta si izomera neke snovi zelo podobna in imata enako molekulsko formulo, 
@@ -874,12 +891,12 @@ Eksponenta izrazimo s kotnima funkcijama in dobimo:
 \mathbf{J}_{2}  = \frac{1}{2} e^{ik_0\overline{n} L}
 \left[\begin{array}{c}
 2 \cos(k_0 \Delta n L/2)\\
-2 \sin(k_0 \Delta n L/2)\\
+-2 \sin(k_0 \Delta n L/2)\\
 \end{array}\right] = 
 e^{ik_0\overline{n} L}
 \left[\begin{array}{c}
 \cos(\Delta \varphi)\\
-\sin(\Delta \varphi)\\
+-\sin(\Delta \varphi)\\
 \end{array}\right]\!\!,
 \label{eq:09_47}
 \eeq
@@ -916,7 +933,7 @@ Pogosto se uporablja fenomenološki zapis:
 \label{eq:09_50}
 \eeq
 pri čemer je $\beta = \beta (\lambda)$ specifična sučnost snovi. Navadno je podana pri referenčni
-valovni dolžini $\lambda = 589,3~\si{nm}$, kar ustreza spektralni črti natrijevega dubleta. Pri 
+valovni dolžini $\lambda = 589,3~\si{nm}$, kar ustreza spektralni črti natrijevega dubleta. V
 trdnih snoveh je optična aktivnost relativno velika in jo podajamo v enotah $\si{\degree}/\si{mm}$. Za 
 kremen je vrednost $\beta = 21,7\si{\degree}/\si{mm}$. V tekočinah je učinek
 navadno šibkejši, zato ga pogosto podajamo v enotah $\si{\degree}/\si{dm}$. V terpentinu
@@ -942,7 +959,7 @@ magnetno polje. Pojav imenujemo magneto-optični oziroma Faradayev pojav
 po njegovem odkritelju Michaelu Faradayu. Za razliko 
 od intrinzične optične aktivnosti, ki polarizacijo vedno zasuče v isto smer (na primer
 v desno glede na smer potovanja svetlobe skozi snov), je zasuk pri Faradayevem pojavu 
-odvisen od smeri potovanja svetlobe glede na smer statičnega zunanjega 
+odvisen od smeri zunanjega 
 magnetnega polja. Po dogovoru je zasuk pozitiven, če se polarizacija suče v 
 pozitivni smeri, gledano proti izvoru svetlobe.
 \vglue5truemm
