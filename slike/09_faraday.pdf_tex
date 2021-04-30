@@ -55,12 +55,12 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{09_faraday.pdf}}%
     \put(0.23972238,0.10093186){\color[rgb]{0,0,0}\rotatebox{-0.143689}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}}%
-    \put(0.12228007,0.22056314){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
+    \put(0.12228007,0.22056315){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
     \put(0.46504695,0.01770389){\color[rgb]{0,0,0}\rotatebox{-0.143689}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}}%
-    \put(0.86782963,0.0916143){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \varphi$\end{tabular}}}}%
+    \put(0.86670904,0.13755858){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \varphi$\end{tabular}}}}%
     \put(0.94965148,0.1009319){\color[rgb]{0,0,0}\rotatebox{-0.14368894}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}}%
-    \put(0.85338778,0.22056317){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
+    \put(0.85338778,0.22056318){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
     \put(0.3503849,0.13386865){\color[rgb]{0,0,0}\rotatebox{-0.14386739}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$I$\end{tabular}}}}}%
-    \put(0.46265737,0.14296597){\color[rgb]{0,0,0}\rotatebox{-0.14386738}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{B}$\end{tabular}}}}}%
+    \put(0.46265736,0.14296597){\color[rgb]{0,0,0}\rotatebox{-0.14386739}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{B}$\end{tabular}}}}}%
   \end{picture}%
 \endgroup%
