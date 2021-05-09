@@ -2,12 +2,196 @@
 
 \chapter{Optika v anizotropnih snoveh}
 \label{chap:AnizotropneSnovi}
-V tem poglavju bomo spoznali optične pojave v snoveh z optično anizotropijo. To
-pomeni, da imajo v različnih smereh različne lastnosti. V optično anizotrophih
-snoveh
+V tem poglavju bomo spoznali optične pojave v snoveh z optično anizotropijo, kar pomeni,
+da imajo v različnih smereh različne optične lastnosti. Spoznali bomo razliko med
+optično enoosnimi in optično dvoosnimi snovmi in poračunali prehod svetlobe skozi njih. 
+Na koncu poglavja bomo pogledali nekaj načinov uporabe in nastanka dvolomnosti.
 
+\section{Anizotropne snovi}
+Za anizotropne snovi je značilno, da imajo v različnih smereh različne lastnosti. To so lahko
+mehanske, toplotne, električne, magnetne, optične ... V optično anizotropnih snoveh je tako
+odziv snovi, to je inducirana električna polarizacija, odvisna ne le od smeri priključenega
+zunanjega polja, temveč tudi od njegove smeri. Za nazorno razumevanje se ponovno poslužimo
+Lorentzevega modela, ki smo ga podrobneje spoznali v prejšnjem poglavju. Zamislimo si, 
+da je negativno nabita kroglica, ki predstavlja elektron, vpeta v mrežo mirujočih sosednjih 
+pozitivnih nabojev z vzmetmi, ki imajo v eni smeri različno konstanto vzmeti kot v drugi 
+(slika~\ref{fig:10_model}).
+\begin{figure}[!h]
+\centering
+\def\svgwidth{90truemm} 
+%\input{slike/10_model.pdf_tex}
+\caption{Anizotropijo snovi lahko pojasnimo tudi z Lorenzevim modelom, v katerem so
+konstante vzmeti različne v raličnih smereh.}
+\label{fig:10_model}
+\end{figure}
+
+Osnovna posledica anizotropnega odziva je, da smer inducirane električne polarizacije $\mathbf{P}$
+ni več vzporedna smeri jakosti optičnega električnega polja $\mathbf{E}$. Posledično tudi 
+vektor gostote električnega polja $\mathbf{D}$ ni več vzporeden s smerjo $\mathbf{E}$. 
+Na splošno velja:
+\beq
+\mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P} = \varepsilon_0 \underline{\varepsilon} \mathbf{E}.
+\label{eq:10_001}
+\eeq
+Za opis anizotropnih snovi dielektričnost $\varepsilon$ ni skalar, ampak je tenzor drugega
+ranga.
+
+V nadaljevanju se bomo omejili na snovi, ki ne absorbirajo svetlobe in so zato njihovi 
+tenzorji dielektričnosti realni. S tem opisom zajamemo prozorne anizotropne snovi, ki so
+tipično minerali, na primer kalcit ali  sljuda. Zaradi povezave z energijo elektromagnetnega polja
+mora biti tenzor $\underline{\varepsilon}$ Hermitski in pozitivno definiten. To pomeni, da je 
+simetričen in ga lahko vedno diagonaliziramo. Vse njegove lastne vrednosti so realne in pozitivne. 
 
 \section{Lomni količnik}
+Obravnavajmo optično anizotropno neprevodno snov in njeno dielektričnost opišemo s tenzorjem. Zaradi
+enostavnosti se omejimo na snovi, za katere je $\mu = 1$. Naj na anizotropno snov vpada
+ravno potujoče sinusno valovanje z valovnim vektorjem $\mathbf{k}$. Naša naloga je poiskati
+lomni količnik snovi v odvisnosti od smeri valovnega vektorja ter od polarizacije vpadnega
+valovanja. 
+
+Uskladi s tretjim poglavjem in skrajšaj!
+
+Izhajamo iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), 
+pri čemer privzamemo, da sta gostoti nabojev in električnih tokov enaki nič. 
+Rešitev iščemo v obliki ravnih valov:
+\begin{align}
+ \mathbf{E} &= \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_002} \\
+ \mathbf{D} &= \mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_003}\\
+ \mathbf{B} &= \mu_0 \mathbf{H} = \mathbf{B}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t}.
+ \label{eq:10_004}
+\end{align}
+Iz Maxwellove enačbe~(\ref{eq:Maxwell4}) z upoštevanjem nastavkov dobimo:
+\beq
+\nabla \cdot \left(\mathbf{B}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
+i~\mathbf{k}\cdot \mathbf{B}_0 = 0 \qquad \Longrightarrow \qquad \mathbf{B}_0 \perp \mathbf{k}.
+\label{eq:10_005}
+\eeq
+Podobno iz enačbe~(\ref{eq:Maxwell3}) sledi:
+\beq
+\nabla \cdot \left(\mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
+i~\mathbf{k}\cdot \mathbf{D}_0 = 0 \qquad \Longrightarrow \qquad \mathbf{D}_0 \perp \mathbf{k}.
+\label{eq:10_006}
+\eeq
+Povsem na splošno sta torej vektorja $\mathbf{D}$ in $\mathbf{B}$ pravokotna na valovni vektor $\mathbf{k}$.
+Izhajajoč iz enačbe~(\ref{eq:Maxwell1}) dobimo:
+\beq
+\nabla \times \left(\mathbf{H}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
+i~\mathbf{k}\times \mathbf{H}_0 = \frac{\partial \mathbf{D}}{\partial t} = -i \omega \mathbf{D}.
+\label{eq:10_007}
+\eeq
+Od tod za nemagnetne snovi neposredno sledi:
+\beq
+\mathbf{k}\times \mathbf{B}_0 = - \mu_0 \omega \mathbf{D} \qquad \Longrightarrow \qquad \mathbf{B}_0 \perp \mathbf{D}_0.
+\label{eq:10_008}
+\eeq
+Trije vektorji $\mathbf{D}$, $\mathbf{B}$ in $\mathbf{k}$ so torej medseboj paroma pravokotni.
+
+Poglejmo še Faradayev zakon (enačbo~\ref{eq:Maxwell2}), iz katere sledi:
+\beq
+\nabla \times \left(\mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
+i~\mathbf{k}\times \mathbf{E}_0 = - \frac{\partial \mathbf{B}}{\partial t} = i \omega \mathbf{B}.
+\label{eq:10_009}
+\eeq
+Dobimo:
+\beq
+\mathbf{k}\times \mathbf{E}_0 = \omega \mu_0 \mathbf{H} \qquad \Longrightarrow \qquad \mathbf{E}_0 \perp \mathbf{H}_0.
+\label{eq:10_010}
+\eeq
+Spomnimo se še definicije Poyntinovega vektorja (enačba~\ref{eq:Poyntingov}):
+\beq
+\mathbf{S} = \mathbf{E} \times \mathbf{H},
+\label{eq:10_011}
+\eeq
+od koder, z upoštevanjem enačbe~(\ref{eq:10_010}), sledi medsebojna pravokotnost vektorjev $\mathbf{E}$, $\mathbf{H}$ in 
+$\mathbf{S}$. 
+
+A optično anizotropnih snoveh vektorja jakosti in gostote električnega polja nista vzporedna, zato tudi 
+valovni vektor in Poyntingov vektor nista vzporedna. Energija, ki potuje v smeri Poyntingovega vektorja, se
+torej v anizotropnih snoveh ne širi vzdolž valovnega vektorja. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{90truemm} 
+%\input{slike/10_koti.pdf_tex}
+\caption{V anizotropnih snoveh smer širjenja energije (Poyntingovega 
+vektorja) ni enaka smeri valovnega vektorja.}
+\label{fig:10_koti}
+\end{figure}
+
+V anizotropnih snoveh elektromagnetno valovanje ostaja transverzalno
+valovanje le s stališča vektorjev $\mathbf{D}$, $\mathbf{B}$ in 
+$\mathbf{k}$. Električna poljska jakost $\mathbf{E}$ pa pridobi 
+tudi longitudinalno komponento vzdolž smeri valovnega vektorja. 
+Zveza $\nabla \cdot \mathbf{D} = 0$ zato še vedno velja, zveza 
+$\nabla \cdot \mathbf{E} = 0$ pa ne več. Posledično tudi valovna
+enačba za jakost električnega polja, kakor smo je vajeni
+v izotropnih snoveh, v anizotropnih snoveh ne velja. Zapišimo 
+analogno enačbo za anizotropne snovi. 
+
+Izhajamo iz Maxwellove enačbe (\ref{eq:Maxwell2}) in na njej naredimo rotor:
+\beq
+\nabla \times \left( \nabla \times \mathbf{E} \right) = - \frac{\partial}{\partial t} 
+\left( \nabla \times \mathbf{B} \right) = -\mu_0 \frac{\partial}{\partial t} 
+\left( \nabla \times \mathbf{H} \right).
+\label{eq:10_012}
+\eeq
+Z upoštevanjem Maxwellove enačbe () dobimo:
+\beq
+\nabla \times \left( \nabla \times \mathbf{E} \right) = -\mu_0 \varepsilon_0 
+\frac{\partial^2}{\partial t^2} \left( \underline{\varepsilon}\,\mathbf{E} \right).
+\label{eq:10_013}
+\eeq
+Vstavimo nastavek za ravni val in dobimo:
+\beq
+i\mathbf{k}\times \left( i \mathbf{k} \times \mathbf{E}\right) = 
+\frac{\omega^2}{c_0^2}\underline{\varepsilon} \mathbf{E} = 
+k_0^2 \underline{\varepsilon} \mathbf{E},
+\label{eq:10_014}
+\eeq
+pri čemer smo vpeljali $k_0 = \omega / c_0$. Upoštevamo zvezo:
+\beq
+\mathbf{a}\times\left( \mathbf{b}\times \mathbf{c}\right) = \left(\mathbf{a}\cdot 
+\mathbf{c}\right) \mathbf{b} - \left(\mathbf{a}\cdot \mathbf{b}\right) \mathbf{c}
+\label{eq:10_015}
+\eeq
+in dobimo:
+\beq
+-\left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} + k^2 \mathbf{E} = k_0^2 \underline{\varepsilon} \mathbf{E}.
+\label{eq:10_016}
+\eeq
+Od tod dobimo vektorsko enačbo za jakost električnega polja:
+\boxeq{eq:10_017}{
+k^2 - k_0\underline{\varepsilon}\mathbf{E} = \left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k}.
+}
+V izotropni snovi je izraz na desni strani enačbe enak 0 in velja $k = k_0\sqrt{\varepsilon} = k_0 n$. V anizotropnih
+snoveh pa je ta izraz na splošno različen od nič. Tudi v anizotropnih snoveh lomni količnik
+definiramo na podoben način $\mathbf{k}= k_0 n \mathbf{s}$, pri čemer je $\mathbf{s}$ smerni vektor
+valovnih front.
+
+Ta vektorska enačba predstavlja tri skalarne enačbe za tri smeri. Za nadaljni izračun si izberemo,
+da so to smeri $x$, $y$ in $z$ v koordinatnem sistemu, v katerem je $\underline{\varepsilon}$ diagonalen.
+V izbranem koordinatnem sistemu tenzor dielektričnosti zapišemo kot:
+\beq
+\underline{\varepsilon} = 
+\left[\begin{array}{ccc}
+\varepsilon_{xx} & 0 & 0\\
+0& \varepsilon_{yy}& 0\\
+0& 0 & \varepsilon_{zz}\\
+\end{array}\right]\!\!.
+\label{eq:10_018}
+\eeq
+Enačbo~(\ref{eq:10_017}) zapišemo po komponentah in dobimo sistem treh enačb:
+\begin{align}
+\left(\mathbf{k}\cdot \mathbf{E}\right) k_x &= \left( k^2 -k_0^2 \varepsilon_{xx}\right) E_x \\
+\left(\mathbf{k}\cdot \mathbf{E}\right) k_y &= \left( k^2 -k_0^2 \varepsilon_{yy}\right) E_y \\
+\left(\mathbf{k}\cdot \mathbf{E}\right) k_y &= \left( k^2 -k_0^2 \varepsilon_{zz}\right) E_z 
+\label{eq:10_019}
+\end{align}
+
+
+
+
+
+
 \section{Ploskev valovnega vektorja}
 \section{Ploskev fazne in žarkovne hitrosti}
 \section{Optično enoosne snovi}
