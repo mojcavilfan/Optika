@@ -60,7 +60,9 @@ V lastnem koordinatnem sistemu ga potem zapišemo:
 0 & 0 & \varepsilon_{zz}\\
 \end{array}\right]\!\!.
 \eeq
-Če recimo svetloba vpada v smeri $z$, in ima torej jakost
+Navadno koordinatni sistem izberemo tako, da velja $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$. 
+
+Če vpada svetloba v smeri $z$, ima jakost
 elektičnega polja komponenti v smeri $E_x$ in $E_y$. 
 V lastnem sistemu potem električno polarizacijo zapišemo kot:
 \begin{align}
@@ -534,13 +536,158 @@ E_z
 \eeq
 Da je sistem enolično rešljiv, mora biti $\det M=0$. Determinante niti ne bomo izpisali
 za splošen primer, saj je razmeroma zapletena. Poglejmo pa primer, denimo, ko je 
-$\mathbf{k}= (k_x,k_y, 0)$
+$\mathbf{k}= (k_x,k_y, 0)$. V tem primeru se matrika $M$ precej poenostavi:
+\beq
+M = \left[\begin{array}{ccc}
+k_y^2- k_0^2\varepsilon_{xx} &  - k_xk_y & 0\\
+- k_xk_y & k_x^2- k_0^2\varepsilon_{yy} &0\\
+0& 0 & k_x^2+k_y^2  - k_0^2\varepsilon_{zz}\\
+\end{array}\right]\!\!,
+\eeq
+njena determinanta pa je:
+\beq
+\left(k_x^2+k_y^2 - k_0^2\varepsilon_{zz}\right) 
+\left((k_y^2- k_0^2\varepsilon_{xx})(k_x^2- k_0^2\varepsilon_{yy})-k_x^2k_y^2\right) = 0.
+\eeq
+Zapisana enačba ima več rešitev. Eno dobimo v primeru, da je prvi oklepaj enak 0:
+\beq
+k_x^2+k_y^2 = k_0^2\varepsilon_{zz}.
+\eeq
+Ta enačba opisuje krožnico s polmerom $k_0\varepsilon_{zz}$. Ustrezni lastni vektor jakosti
+električnea polja ima smer osi $z$.
 
+Drugo rešitev dobimo, kadar je drugi oklepaj v enačbi .. enak 0:
+\beq
+(k_y^2- k_0^2\varepsilon_{xx})(k_x^2- k_0^2\varepsilon_{yy})=k_x^2k_y^2.
+\eeq
+Člene zmnožimo, odštejemo enake člene in dobimo:
+\beq
+k_x^2 k_0^2 \varepsilon_{xx}+ k_y^2 k_0^2\varepsilon_{yy}= k_0^4 \varepsilon_{xx}\varepsilon_{yy}.
+\eeq
+Sledi:
+\beq
+\frac{k_x^2}{k_0^2 \varepsilon_{yy}}+ \frac{k_y^2}{k_0^2 \varepsilon_{xx}} = 1.
+\eeq
+Ta izraz opisuje elipso s polosjo $k_0\sqrt{\varepsilon_{yy}}$ v smeri $x$ in 
+$k_0\sqrt{\varepsilon_{xx}}$ v smeri $y$. 
 
+Podoben račun lahko naredimo tudi v ravninah $xz$ in $yz$, rezultata pa sta zelo podobna:
+v obeh primerih dobimo za rešitev eno krožnico in eno elipso. Če se držimo ustaljenega dogovora, 
+da velja $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$, potem se v ravninah $xy$ in $xy$
+krožnica in elipsa ne sekata, v ravnini $xz$ pa se sekata. 
 
+Zdaj smo izračunali rešitev sistema enačb v treh ravninah, v katerih so rešitve v obliki
+krožnic in elips. Na splošnem je rešitev enačbe 3D dvolistna ploskev, ki jo imenujemo
+ploskev valovnega vektorja. 
+
+Ploskev valovnega vektorja navadno predstavimo s preseki ploskve s tremi ortogonalnimi 
+ravninami (slika). Z rdečo so označeni krogi, z modro pa elipse. V ravnini $xz$, to je ravnina
+največje in najmanjše vrednosti dielektrične konstante, se krog in elipsa sekata. 
+V smeri presečišča so lomna količnika za vse polarizacije enaka, zato v tej 
+smeri snov deluje kot izotropna snov. Smer, v kateri sta lomna količnika za obe 
+polarizaciji enaka, imenujemo optična os.
+
+Optični osi sta v resnici dve, saj so razmere pri negativnih in pozitivnih vrednostih $\mathbf{k}$
+enake. Na splošno imamo torej v snovi dve optični osi, ki sta nagnjeni pod kotom $\vartheta$
+glede na os največje dielektrične konstante. Za tako snov pravimo, da je optično dvoosna. 
+
+\subsection*{Smer optične osi}
+Poiščimo smer optične osi v ravnini $xz$. V tej ravnini je $\mathbf{k}=(k_x, 0, k_z)$.
+Rešitev poiščemo kot presečišče krožnice (enačba) in elipse (enačba). Zapišemo:
+\beq
+k_x^2+k_z^2 = k_0^2 \varepsilon_{yy},
+\eeq
+od koder sledi:
+\beq
+(k_0 n s_x)^2 + (k_0 n s_z)^2 = k_0^2 \varepsilon_{yy}
+\eeq
+in 
+\beq
+n^2 (s_x^2+s_z^2) = \varepsilon_{yy} \qquad \Longrightarrow \qquad n = \sqrt{\varepsilon_{xx}}.
+\eeq
+Drugo rešitev dobimo iz enačbe elipse:
+\beq
+\frac{(k_0ns_x)^2}{k_0^2\varepsilon_{zz}} + \frac{(k_0ns_z)^2}{k_0^2\varepsilon_{xx}}=1,
+\eeq
+od tod pa:
+\beq
+\frac{s_x^2}{\varepsilon_{zz}} + \frac{(s_z)^2}{\varepsilon_{xx}}=\frac{1}{n^2} 
+\qquad \Longrightarrow \qquad
+\frac{1}{n} = \sqrt{\frac{s_x^2}{\varepsilon_{zz}} + \frac{(s_z)^2}{\varepsilon_{xx}}}.
+\eeq
+Naj bo smerni vektor $\mathbf{s}= (\sin\vartheta, 0, \cos\vartheta)$, pri čemer je kot
+$\vartheta$ kot med optično osjo in osjo $z$. Lomna količnika bosta enaka, če velja: 
+\beq
+\frac{\sin^2\vartheta}{\varepsilon_{zz}} + \frac{\cos^2\vartheta}{\varepsilon_{xx}}=
+\frac{1}{n^2} = \frac{1}{\varepsilon_{yy}}.  
+\eeq
+Od tod izračunamo $\vartheta$. 
+
+Hitro lahko razberemo, da je v primeru rotacijsko simetrične snovi, ko velja 
+$\varepsilon_{xx} = \varepsilon_{yy}\neq \varepsilon_{zz}$, rešitev $\vartheta =0$.
+V tem primeru je optičan os snovi ena sama in kaže v smeri rotacijske osi $z$. Optična
+indukatrisa je v tem primeru rotacijski elipsoid. Rečemo, da je snov optično enoosna. 
+
+Zanima nas tudi, kakšna je smer optičnega polja $\mathbf{E}$, ki ustreza eni in drugi rešitvi. 
+Smer dobimo tako, da dobljene vrednosti za $k_x$ in $k_z$ vstavimo nazaj v sistem enačb
+in poiščemo še ustrezno rešitev za $\mathbf{E}$.
+
+Za prej opisani primer $\mathbf{k}=(k_x, 0, k_z)$ dobimo, da prvi rešitvi, rešitvi s krožnico, 
+ustreza jakost električnega polja $\mathbf{E} = E_0 (0,1,0)$. To je optično polje, ki je 
+pravokotno na ravnino $xy$, kar hkrati predstavlja tangnetno smer na ploskev valovnega vektorja.
+
+Krajši račun pokaže, da drugi rešitvi, rešitvi z elipso, ustreza jakost optičnega polja $\mathbf{E}$,
+ki leži v ravnini $xz$ in je tangnetna na elipso. 
+
+Pri splošni vrednosti oziroma smeri valovnega vektorja v 3D je optično električno polje orientirano
+v dveh ortogonalnih tangentnih smereh glede na dvolistno ploskev valovnega vektorja. Vsaki
+vrednosti jakosti električnega polja ustreza vektor gostote električnega polja, ki je pravokotna
+na valovni vektor. Med vektorjema $E$ in $D$ je na splošno nek kot $\gamma$, ki je odvisen od $\vartheta$.
+
+Dokaz: Zapišimo matriko $M$ za primer valovnega vektorja $\mathbf{k}=(k_x, 0, k_z)$:
+\beq
+M\cdot \mathbf{E} = \left[\begin{array}{ccc}
+k_z^2- k_0^2\varepsilon_{xx} &  0& - k_xk_z \\
+0 & k_x^2 + k_z^2 - k_0^2\varepsilon_{yy} &0\\
+- k_xk_z & 0 & k_x^2- k_0^2\varepsilon_{zz}\\
+\end{array}\right] \cdot 
+\left[\begin{array}{c}
+E_x \\
+E_y \\
+E_z
+\end{array}\right]\!\!.
+\eeq
+Za rešitev s krožnico, je srednji člen enak nič, zato ima polje lahko poljubno komponento v smeri $y$, 
+ostali dve komponenti pa sta enaki nič. Smer jakosti električnega polja je pravokotna na ravnino $xz$.
+Za drugo rešitev z elipso mora biti komponenta v smeri $y$ enaka nič, tako da je 
+$\mathbf{E} = (E_x, 0, E_z)$, za preostali dve pa mora veljati:
+\beq
+\frac{E_z}{E_x} = -\frac{\varepsilon_{xx}}{\varepsilon_{zz}}\frac{k_x}{k_z},
+\eeq
+kar predstavlja tangentno smer na elipso. 
+
+To preprosto preverimo z računom. Zapišemo elipso:
+\beq
+\frac{k_z^2}{k_0^2 \varepsilon_{xx}}+ \frac{k_x^2}{k_0^2 \varepsilon_{zz}} = 1.
+\eeq
+Pišemo $X = k_x/k_0$ in $Z = k_z/k_0$
+in dobimo:
+\beq
+\varepsilon_{zz}Z^2 + \varepsilon_{xx}X^2 = \varepsilon_{xx}\varepsilon_{zz}.
+\eeq
+Izrazimo $Z= Z(X)$, da dobimo eksplicitni zapis elipse / ALI LAHKO IMPLICITNO ODVAJAMO/
+Tangnetno smer na elipso podaja odvod $dZ/dX$.  
+
+Dobimo ... isto. Poglej zvezek za vaje, kjer je to rešeno. S tem smo pokazali, da 
+je smer optičnega polja res tangentna na elipso v prostoru valovnega vektorja. 
 
 
 \section{Ploskev fazne in žarkovne hitrosti}
+Poleg ploskve valovnega vektorja obstajajo še druge reprezentacije obravnave
+elektromagnetnega valovanja v anizotropnih snoveh. Ena izmed njih je ploskev
+fazne hitrosti. Fazna hitrost (enačba) je $c = \omega/k$. 
+
+
 \section{Optično enoosne snovi}
 \section{Optične komponente na osnovi dvolomnih snovi}
 \section{Konoskopija}
