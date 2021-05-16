@@ -2,47 +2,72 @@
 
 \chapter{Optika v anizotropnih snoveh}
 \label{chap:AnizotropneSnovi}
-V tem poglavju bomo spoznali optične pojave v snoveh z optično anizotropijo, kar pomeni,
-da imajo v različnih smereh različne optične lastnosti. Spoznali bomo razliko med
-optično enoosnimi in optično dvoosnimi snovmi in poračunali prehod svetlobe skozi njih. 
-Na koncu poglavja bomo pogledali nekaj načinov uporabe in nastanka dvolomnosti.
+V tem poglavju bomo spoznali optično anizotropne snovi, katerih odziv na 
+vpadno svetlobo je odvisen od njene polarizacije. Opisali bomo 
+širjenje svetlobe skozi anizotropne snovi in pojasnili razliko med optično 
+enoosnimi in optično dvoosnimi snovmi. Spoznali bomo dvojni lom in 
+na koncu poglavja predstavili nekaj načinov uporabe tega zanimivega pojava.
 
 \section{Anizotropne snovi}
-Za anizotropne snovi je značilno, da imajo v različnih smereh različne lastnosti. To so lahko
-mehanske, toplotne, električne, magnetne, optične ... V optično anizotropnih snoveh je tako
-odziv snovi, to je inducirana električna polarizacija, odvisna ne le od smeri priključenega
-zunanjega polja, temveč tudi od njegove smeri. Za nazorno razumevanje se ponovno poslužimo
-Lorentzevega modela, ki smo ga podrobneje spoznali v prejšnjem poglavju. Zamislimo si, 
-da je negativno nabita kroglica, ki predstavlja elektron, vpeta v mrežo mirujočih sosednjih 
-pozitivnih nabojev z vzmetmi, ki imajo v eni smeri različno konstanto vzmeti kot v drugi 
-(slika~\ref{fig:10_model}).
+Do zdaj smo obravnavali izotropne snovi, v katerih je lomni količnik 
+snovi enak v vseh smereh in za vse polarizacije vpadne svetlobe. 
+Za anizotropne snovi pa je značilno, da imajo 
+v različnih smereh različne lastnosti, na primer mehanske, toplotne, 
+električne, magnetne, optične ... Primeri optično 
+anizotropnih snovi so kremen, kalcit, led, sljuda, tekoči kristali
+in tudi raztegnjeni polimerni vzorci, na primer celofan ali prozorni lepilni trak. 
+Optično anizotropne snovi najlaže prepoznamo po barvitih vzorcih med
+polarizatorjema, ki spreminjajo barvo, ko polarizatorja sučemo. 
+Zakaj je tako, bomo spoznali v nadaljevanju poglavja.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=7truecm]{slike/10_foto_nematik.jpg}\hfill
+\includegraphics[width=7truecm]{slike/10_foto_celofan.jpg}
+\caption{Kapljica tekočega kristala, ki je anizotropna tekočina, slikana pod 
+mikroskopom (levo) in ovitek iz celofana (desno). Oba vzorca sta bila postavljena
+med prekrižana polarizatorja.}
+\label{fig:10_nematik}
+\end{figure}
+
+Najznačilnejša optična lastnost anizotropnih snovi je odvisnost lomnega
+količnika od smeri širjenja svetlobe in njene polarizacije. Pojav
+je posledica odziva snovi na vpadno svetlobo, pri katerem smer in 
+velikost inducirane električne polarizacije določa struktura snovi.  
+Za nazorno razlago se ponovno poslužimo
+Lorentzevega modela, ki smo ga podrobneje spoznali v prejšnjem 
+poglavju (glej razdelek~\ref{chap:lomni}). 
+
+Zamislimo si negativno nabito kroglico, ki predstavlja elektron, vpeto v 
+mrežo mirujočih sosednjih kroglic, ki predstavljajo pozitivne ione kristala. 
+Vzmeti, ki kroglice medsebojno povezujejo, niso vse enake, ampak imajo različne 
+konstante vzmeti, odvisno od smeri (slika~\ref{fig:10_model}\,a). Ko na elektron
+vpade svetloba, ga sila električnega polja izmakne iz ravnovesne lege, tej sili 
+pa nasprotujejo sile vzmeti. Premik elektrona je večji v smeri šibkejše vzmeti, 
+zato dipolni moment, ki ga povzroči premik elektrona, ni vzporeden jakosti 
+vpadnega električnega
+polja. 
 \begin{figure}[!h]
 \centering
-\def\svgwidth{90truemm} 
-%\input{slike/10_model.pdf_tex}
-\caption{Anizotropijo snovi lahko pojasnimo tudi z Lorenzevim modelom, v katerem so
-konstante vzmeti različne v raličnih smereh.}
+\def\svgwidth{120truemm} 
+\input{slike/10_Lorentz_a.pdf_tex}
+\caption{Anizotropijo snovi lahko pojasnimo z Lorenzevim modelom, v katerem so
+konstante vzmeti, s katerimi je v snov vezan elektron, različne  in $k_1 \neq k_2 \neq k_3$ (a).
+V anizotropnih snoveh inducirana električna polarizacija $\mathbf{P}$ ni vzporedna 
+z jakosto električnega polja $\mathbf{E}$ (b).}
 \label{fig:10_model}
 \end{figure}
 
 Osnovna posledica anizotropnega odziva je, da smer inducirane električne polarizacije $\mathbf{P}$
-ni več vzporedna smeri jakosti optičnega električnega polja $\mathbf{E}$. Posledično tudi 
-vektor gostote električnega polja $\mathbf{D}$ ni več vzporeden s smerjo $\mathbf{E}$. 
-Na splošno velja:
+ v anizotropnih snoveh ni vzporedna smeri jakosti optičnega električnega polja $\mathbf{E}$ 
+(slika~\ref{fig:10_model}\,b). Posledično tudi 
+vektor gostote električnega polja $\mathbf{D}$ ni vzporeden s smerjo $\mathbf{E}$. 
+Linearni odziv snovi zapišemo kot:
 \beq
 \mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P} = \varepsilon_0 \underline{\varepsilon} \mathbf{E}.
 \label{eq:10_001}
 \eeq
-Za opis anizotropnih snovi dielektričnost $\varepsilon$ ni skalar, ampak je tenzor drugega
-ranga.
-
-V nadaljevanju se bomo omejili na snovi, ki ne absorbirajo svetlobe in so zato njihovi 
-tenzorji dielektričnosti realni. S tem opisom zajamemo prozorne anizotropne snovi, ki so
-tipično minerali, na primer kalcit ali  sljuda. Zaradi povezave z energijo elektromagnetnega polja
-mora biti tenzor $\underline{\varepsilon}$ Hermitski in pozitivno definiten. 
-To pomeni, da je  simetričen in ga lahko vedno diagonaliziramo. Vse njegove lastne vrednosti so realne in pozitivne.
-
-Tenzor dielektričnosti na splošno zapišemo kot:
+Vpeljali smo tenzor dielektričnosti $\underline{\varepsilon}$, ki je v anizotropnih snoveh na splošno 
+tenzor drugega ranga:
 \beq
 \underline{\varepsilon} = 
 \left[\begin{array}{ccc}
@@ -50,8 +75,19 @@ Tenzor dielektričnosti na splošno zapišemo kot:
 \varepsilon_{yx} & \varepsilon_{yy} & \varepsilon_{yz}\\
 \varepsilon_{zx} & \varepsilon_{zy} & \varepsilon_{zz}\\
 \end{array}\right]\!\!.
+\label{eq:10_002}
 \eeq
-V lastnem koordinatnem sistemu ga potem zapišemo:
+\begin{remark}
+Pri obravnavi se bomo omejili na prozorne optično neaktivne anizotropne snovi. 
+Ker dielektričnost nastopa v izrazu za energijo elektromagnetnega polja 
+(enačba~\ref{eq:03_27}), je zaradi ohranitve energije tenzor $\underline{\varepsilon}$ na splošno
+Hermitski in pozitivno definiten. V našem primeru to pomeni, da je 
+tenzor simetričen in ga lahko vedno diagonaliziramo, pri čemer so 
+vse njegove lastne vrednosti realne in pozitivne.
+\end{remark}
+
+Tenzor dielektričnosti diagonaliziramo in v lastnem koordinatnem 
+sistemu ga zapišemo kot:
 \beq
 \underline{\varepsilon} = 
 \left[\begin{array}{ccc}
@@ -59,95 +95,111 @@ V lastnem koordinatnem sistemu ga potem zapišemo:
 0 & \varepsilon_{yy} &0\\
 0 & 0 & \varepsilon_{zz}\\
 \end{array}\right]\!\!.
+\label{eq:10_003}
 \eeq
-Navadno koordinatni sistem izberemo tako, da velja $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$. 
+Po dogovoru koordinatni sistem navadno izberemo tako, da velja 
+$\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$.
 
-Če vpada svetloba v smeri $z$, ima jakost
-elektičnega polja komponenti v smeri $E_x$ in $E_y$. 
-V lastnem sistemu potem električno polarizacijo zapišemo kot:
+Na splošno so vse tri neničelne komponente diagonalnega tenzorja različne. 
+Pri snoveh z večjo stopnjo simetrije sta dve komponenti enaki ($\varepsilon_{xx} = 
+\varepsilon_{yy} \neq \varepsilon_{zz}$), v izotropnih snoveh pa so vse tri 
+neničelne komponente tenzorja enake. 
+
+\begin{example}{\bf Smeri jakosti električnega polja 
+in inducirane polarizacije v anizotropni snovi.}
+Naj na anizotropno snov vpada elektromagnetno valovanje vzdolž osi $z$. Jakost
+električnega polja na splošno leži v ravnini $xy$ in naj z osjo $x$ oklepa kot $\alpha$. 
+Po komponentah jo zapišemo kot $\mathbf{E} = (E_x, E_y, 0)$. 
+
+Iz enačbe~(\ref{eq:10_001}) sledi zveza:
+\beq
+\mathbf{P} = \varepsilon_0 \left(\underline{\varepsilon} - \underline{I}\right)\mathbf{E}
+\label{eq:10_004}
+\eeq
+Vstavimo vektor $\mathbf{E}$ in v lastnem koordinatnem sistemu tenzorja 
+dielektričnosti (enačba~\ref{eq:10_003}) inducirano električno polarizacijo zapišemo kot:
 \begin{align}
-P_x &= (\varepsilon_{xx}-1) \varepsilon_0 E_x \\
+P_x &= (\varepsilon_{xx}-1) \varepsilon_0 E_x \qquad \mathrm{in} \label{eq:10_005}\\
 P_y &= (\varepsilon_{yy}-1) \varepsilon_0 E_y.
+\label{eq:10_006}
 \end{align}
-Če je vpadni kot jakosti električnega polja $\alpha$, je kot
-inducirane polarizacije enak:
+Kot $\beta$, ki ga inducirana električna polarizacija oklepa z osjo $x$, izračunamo iz enačbe:
 \beq
 \tan \beta = \frac{P_y}{P_x} = \frac{(\varepsilon_{yy}-1)E_y}{(\varepsilon_{xx}-1)E_x}
  = \frac{\varepsilon_{yy}-1}{\varepsilon_{xx}-1}\tan \alpha.
 \eeq
+\end{example}
 
-\section{Lomni količnik}
-Obravnavajmo optično anizotropno neprevodno snov in njeno dielektričnost opišemo s tenzorjem. Zaradi
-enostavnosti se omejimo na snovi, za katere je $\mu = 1$. Naj na anizotropno snov vpada
-ravno potujoče sinusno valovanje z valovnim vektorjem $\mathbf{k}$. Naša naloga je poiskati
-lomni količnik snovi v odvisnosti od smeri valovnega vektorja ter od polarizacije vpadnega
-valovanja. 
+\section{Ravni val v anizotropni snovi}
+Poglejmo najprej, kako se po optično anizotropni snovi širi ravni val. 
+Obravnavajmo optično anizotropno neprevodno snov, katere dielektričnost 
+opišemo s tenzorjem $\underline{\varepsilon}$ (enačba~\ref{eq:10_003}). 
+Zaradi enostavnosti se omejimo na nemagnetne snovi, za katere je $\mu = 1$. 
+Naj na tako snov vpada ravno potujoče sinusno valovanje z 
+valovnim vektorjem $\mathbf{k}$.  
 
-Uskladi s tretjim poglavjem in skrajšaj!
-
-Izhajamo iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), 
+Za opis valovanja izhajamo iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), 
 pri čemer privzamemo, da sta gostoti nabojev in električnih tokov enaki nič. 
 Rešitev iščemo v obliki ravnih valov:
 \begin{align}
- \mathbf{E} &= \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_002} \\
- \mathbf{D} &= \mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_003}\\
+ \mathbf{E} &= \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_010} \\
+ \mathbf{D} &= \mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_011}\\
  \mathbf{B} &= \mu_0 \mathbf{H} = \mathbf{B}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t}.
- \label{eq:10_004}
+ \label{eq:10_012}
 \end{align}
-Iz Maxwellove enačbe~(\ref{eq:Maxwell4}) z upoštevanjem nastavkov dobimo:
-\beq
-\nabla \cdot \left(\mathbf{B}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
-i~\mathbf{k}\cdot \mathbf{B}_0 = 0 \qquad \Longrightarrow \qquad \mathbf{B}_0 \perp \mathbf{k}.
-\label{eq:10_005}
-\eeq
-Podobno iz enačbe~(\ref{eq:Maxwell3}) sledi:
+Iz Maxwellove enačbe~(\ref{eq:Maxwell3}) dobimo z upoštevanjem nastavkov:
 \beq
 \nabla \cdot \left(\mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
-i~\mathbf{k}\cdot \mathbf{D}_0 = 0 \qquad \Longrightarrow \qquad \mathbf{D}_0 \perp \mathbf{k}.
-\label{eq:10_006}
+i\,\mathbf{k}\cdot \mathbf{D} = 0 \qquad \Longrightarrow \qquad \mathbf{D} \perp \mathbf{k}.
+\label{eq:10_013}
+\eeq
+Podobno iz enačbe~(\ref{eq:Maxwell4}) sledi:
+\beq
+\nabla \cdot \left(\mathbf{B}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
+i\,\mathbf{k}\cdot \mathbf{B} = 0 \qquad \Longrightarrow \qquad \mathbf{B} \perp \mathbf{k}.
+\label{eq:10_014}
 \eeq
 Povsem na splošno sta torej vektorja $\mathbf{D}$ in $\mathbf{B}$ pravokotna na valovni vektor $\mathbf{k}$.
 Izhajajoč iz enačbe~(\ref{eq:Maxwell1}) dobimo:
 \beq
 \nabla \times \left(\mathbf{H}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
-i~\mathbf{k}\times \mathbf{H}_0 = \frac{\partial \mathbf{D}}{\partial t} = -i \omega \mathbf{D}.
-\label{eq:10_007}
+i\,\mathbf{k}\times \mathbf{H} = \frac{\partial \mathbf{D}}{\partial t} = -i \omega \mathbf{D}.
+\label{eq:10_015}
 \eeq
 Od tod za nemagnetne snovi neposredno sledi:
 \beq
-\mathbf{k}\times \mathbf{B}_0 = - \mu_0 \omega \mathbf{D} \qquad \Longrightarrow \qquad \mathbf{B}_0 \perp \mathbf{D}_0.
-\label{eq:10_008}
+\mathbf{k}\times \mathbf{B} = - \mu_0 \omega \mathbf{D} \qquad \Longrightarrow \qquad \mathbf{B} \perp \mathbf{D}.
+\label{eq:10_016}
 \eeq
-Trije vektorji $\mathbf{D}$, $\mathbf{B}$ in $\mathbf{k}$ so torej medseboj paroma pravokotni.
+Vektorji $\mathbf{D}$, $\mathbf{B}$ in $\mathbf{k}$ so torej medsebojno paroma pravokotni.
 
-Poglejmo še Faradayev zakon (enačbo~\ref{eq:Maxwell2}), iz katere sledi:
+Uporabimo nastavke (enačbe~\ref{eq:10_010}--\ref{eq:10_012})
+še v Faradayevem zakonu (enačbo~\ref{eq:Maxwell2}) in dobimo:
 \beq
 \nabla \times \left(\mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
-i~\mathbf{k}\times \mathbf{E}_0 = - \frac{\partial \mathbf{B}}{\partial t} = i \omega \mathbf{B}.
-\label{eq:10_009}
+i\,\mathbf{k}\times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t} = i \omega \mathbf{B}.
+\label{eq:10_017}
 \eeq
 Dobimo:
 \beq
-\mathbf{k}\times \mathbf{E}_0 = \omega \mu_0 \mathbf{H} \qquad \Longrightarrow \qquad \mathbf{E}_0 \perp \mathbf{H}_0.
-\label{eq:10_010}
+\mathbf{k}\times \mathbf{E} = \omega \mu_0 \mathbf{H} \qquad \Longrightarrow 
+\qquad \mathbf{E} \perp \mathbf{H}.
+\label{eq:10_018}
 \eeq
-Spomnimo se še definicije Poyntinovega vektorja (enačba~\ref{eq:Poyntingov}):
-\beq
-\mathbf{S} = \mathbf{E} \times \mathbf{H},
-\label{eq:10_011}
-\eeq
-od koder, z upoštevanjem enačbe~(\ref{eq:10_010}), sledi medsebojna pravokotnost vektorjev $\mathbf{E}$, $\mathbf{H}$ in 
-$\mathbf{S}$. 
+Upoštevamo še definicijo Poyntinovega vektorja 
+(enačba~\ref{eq:Poyntingov}) $\mathbf{S} = \mathbf{E} \times \mathbf{H}$, od koder
+sledi medsebojna pravokotnost vektorjev $\mathbf{E}$, $\mathbf{H}$ in $\mathbf{S}$.
 
-A optično anizotropnih snoveh vektorja jakosti in gostote električnega polja nista vzporedna, zato tudi 
-valovni vektor in Poyntingov vektor nista vzporedna. Energija, ki potuje v smeri Poyntingovega vektorja, se
-torej v anizotropnih snoveh ne širi vzdolž valovnega vektorja. 
+Ker v anizotropnih snoveh vektorja jakosti in gostote električnega 
+polja nista vzporedna, tudi valovni vektor in Poyntingov vektor nista 
+vzporedna. Energija, ki potuje v smeri Poyntingovega vektorja, se
+torej v anizotropnih snoveh ne širi vzdolž valovnega vektorja (slika~\ref{fig:10_koti}). 
 \begin{figure}[!h]
 \centering
-\def\svgwidth{90truemm} 
-%\input{slike/10_koti.pdf_tex}
-\caption{V anizotropnih snoveh smer širjenja energije (Poyntingovega 
-vektorja) ni enaka smeri valovnega vektorja.}
+\def\svgwidth{40truemm} 
+\input{slike/10_koti_Sk.pdf_tex}
+\caption{V anizotropnih snoveh smer Poyntingovega 
+vektorja $\mathbf{S}$ ni enaka smeri valovnega vektorja $\mathbf{k}$.}
 \label{fig:10_koti}
 \end{figure}
 
@@ -166,32 +218,32 @@ Izhajamo iz Maxwellove enačbe (\ref{eq:Maxwell2}) in na njej naredimo rotor:
 \nabla \times \left( \nabla \times \mathbf{E} \right) = - \frac{\partial}{\partial t} 
 \left( \nabla \times \mathbf{B} \right) = -\mu_0 \frac{\partial}{\partial t} 
 \left( \nabla \times \mathbf{H} \right).
-\label{eq:10_012}
+\label{eq:10_020}
 \eeq
 Z upoštevanjem Maxwellove enačbe () dobimo:
 \beq
 \nabla \times \left( \nabla \times \mathbf{E} \right) = -\mu_0 \varepsilon_0 
 \frac{\partial^2}{\partial t^2} \left( \underline{\varepsilon}\,\mathbf{E} \right).
-\label{eq:10_013}
+\label{eq:10_021}
 \eeq
 Vstavimo nastavek za ravni val in dobimo:
 \beq
 i\mathbf{k}\times \left( i \mathbf{k} \times \mathbf{E}\right) = 
 \frac{\omega^2}{c_0^2}\underline{\varepsilon} \mathbf{E} = 
 k_0^2 \underline{\varepsilon} \mathbf{E},
-\label{eq:10_014}
+\label{eq:10_022}
 \eeq
 pri čemer smo vpeljali $k_0 = \omega / c_0$. Upoštevamo zvezo:
 \beq
 \mathbf{a}\times\left( \mathbf{b}\times \mathbf{c}\right) = \left(\mathbf{a}\cdot 
 \mathbf{c}\right) \mathbf{b} - \left(\mathbf{a}\cdot \mathbf{b}\right) \mathbf{c}
-\label{eq:10_015}
+\label{eq:10_023}
 \eeq
 in dobimo:
 \beq
 -\left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} + k^2 \mathbf{E} = 
 k_0^2 \underline{\varepsilon} \mathbf{E}.
-\label{eq:10_016}
+\label{eq:10_024}
 \eeq
 Od tod dobimo vektorsko enačbo za jakost električnega polja:
 \boxeq{eq:10_017}{
@@ -280,14 +332,14 @@ k^2 \mathbf{E}-\frac{k^2 \mathbf{D}}{\varepsilon_0 n^2} =
 oziroma
 \beq
 \mathbf{E} - \frac{\mathbf{D}}{\varepsilon_0 n^2} = 
-\frac{\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}}{k^2} = \mathbf{E}_\parallel.
+\frac{\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}}{k^2} = \mathbf{E}_\myparallel.
 \eeq
 Pri tem smo desno stran enačbe izenačili s komponento jakosti električnega polja
-v smeri valovnega vektorja $E_\parallel$. Ker celotno jakost električnega
+v smeri valovnega vektorja $E_\myparallel$. Ker celotno jakost električnega
 polja zapišemo kot vsoto dveh komponent, ene vzporedne z valovnim
-vektorjem $E_\parallel$, in ene, pravokotne nanj $E_\perp$:
+vektorjem $E_\myparallel$, in ene, pravokotne nanj $E_\perp$:
 \beq
-\mathbf{E} = \mathbf{E}_\perp + \mathbf{E}_\parallel,
+\mathbf{E} = \mathbf{E}_\perp + \mathbf{E}_\myparallel,
 \eeq
 sklepamo, da velja:
 \beq
@@ -321,7 +373,7 @@ Od tod sledi:
 \mathbf{E}_1 \cdot \mathbf{D}_2 - \mathbf{E}_2 \cdot \mathbf{D}_1 = 0.
 \eeq
 Vemo, da je sta vektorja $\mathbf{D}$ pravokotna na smer valovnega vektorja $\mathbf{k}$,
-zato je $\mathbf{E}_\parallel \cdot \mathbf{D} = 0$. Potem velja:
+zato je $\mathbf{E}_\myparallel \cdot \mathbf{D} = 0$. Potem velja:
 \beq
 \mathbf{E}_{1\perp} \cdot \mathbf{D}_2 - \mathbf{E}_{2\perp} \cdot \mathbf{D}_1 =
 \frac{\mathbf{D}_1}{\varepsilon_0 n_1^2}\cdot \mathbf{D}_2 - 
@@ -522,7 +574,7 @@ ter
 \eeq
 Enačbe združimo v matriko $M$:
 \beq
-M\mathbf{E}=
+M\cdot \mathbf{E}=
 \left[\begin{array}{ccc}
 k_y^2+k_z^2 - k_0^2\varepsilon_{xx} &  - k_xk_y & - k_xk_z\\
 - k_xk_y & k_x^2+k_z^2 - k_0^2\varepsilon_{yy} &- k_yk_z\\
@@ -685,10 +737,374 @@ je smer optičnega polja res tangentna na elipso v prostoru valovnega vektorja.
 \section{Ploskev fazne in žarkovne hitrosti}
 Poleg ploskve valovnega vektorja obstajajo še druge reprezentacije obravnave
 elektromagnetnega valovanja v anizotropnih snoveh. Ena izmed njih je ploskev
-fazne hitrosti. Fazna hitrost (enačba) je $c = \omega/k$. 
+fazne hitrosti. Fazna hitrost (enačba) je 
+\beq
+c = \frac{c_0}{n} = \frac{\omega}{k} = \frac{\omega}{k_0n}.
+\eeq
+Valovni vektor je:
+\beq
+\mathbf{k} = k_0 n \mathbf{s} = k_0 \frac{c_0}{c}\mathbf{s}.
+\eeq
+Vpeljemo vektor fazne hitrosti:
+\beq
+\mathbf{c} = \mathbf{s}c = \frac{\mathbf{k}}{k}c.
+\eeq
+Potem lahko zapišemo:
+\beq
+\mathbf{k} = \frac{\mathbf{c}\omega}{c^2}
+\eeq
+oziroma po komnponentah:
+\beq
+k_x = c_x \frac{\omega}{c^2}; \qquad k_y = c_y \frac{\omega}{c^2}; \qquad k_z = c_z \frac{\omega}{c^2}. 
+\eeq
+Ta zapis vstavimo v matriko sistema enačb $M$ (enačba) in dobimo:
+\beq
+M=
+\left[\begin{array}{ccc}
+\left(\frac{c_y \omega}{c^2}\right)^2 +
+\left(\frac{c_z \omega}{c^2}\right)^2- \frac{\omega^2}{c_0^2}\varepsilon_{xx} &  
+- c_x c_y \frac{\omega^2}{c^4}
+& - c_x c_z \frac{\omega^2}{c^4}\\
+- c_x c_y\frac{\omega^2}{c^4} & 
+\left(\frac{c_x \omega}{c^2}\right)^2 \left(\frac{c_z \omega}{c^2}\right)^2- 
+\frac{\omega^2}{c_0^2}\varepsilon_{yy} &
+- c_y c_z \frac{\omega^2}{c^4}\\
+- c_x c_z \frac{\omega^2}{c^4}& 
+- c_y c_z \frac{\omega^2}{c^4} & 
+\left(\frac{c_x \omega}{c^2}\right)^2 + \left(\frac{c_y \omega}{c^2}\right)^2 - 
+\frac{\omega^2}{c_0^2}\varepsilon_{zz}\\
+\end{array}\right]\!\!.
+\eeq
+Tudi v tem pristopu mora biti determinanta matrike enaka nič, da ima sistem netrivialne rešitve.
+Rešitve enačbe $\det M = 0$ v prostoru $\mathbf{c} = (c_x, c_y, c_z)$ da ploskve četrtega reda, ki 
+jih imenujemo ploskve fazne hitrosti. V izbrani smeri $\mathbf{c}/c$ ponovno dobimo dve rešitvi. Opišemo
+oziroma izračunamo ju iz Fresnelove enačbe valovnih normal:
+\beq
+\sum_i \frac{s_i^2}{c-c_{ii}^2} = 0,
+\eeq
+pri čemer je $c_{ii} = c_0 /\sqrt{\varepsilon_{ii}}$. 
+
+Dokaz: Izhajamo iz Fresnelove enačbe za izračun lomnega količnika (enačba..). Enačbo z obeh strani pomnožimo
+z $n^2$ in dobimo:
+\beq
+\sum_i \frac{s_i^2 n^2}{n^2-\varepsilon_{ii}} = 1 = \sum_i s_i^2.
+\eeq
+Druga enakost velja, saj je vektor $\mathbf{s}$ normiran. Sledi:
+\beq
+\sum_i s_i^2 \left(\frac{n^2}{n^2-\varepsilon_{ii}}-1\right) = \sum_i \frac{\varepsilon_{ii}}{n^2 
+- \varepsilon_{ii}}s_i^2 = 0.
+\eeq
+Ker je lomni količnik vedno različnen od nič, lahko z njim pomnožimo in dobimo:
+\beq
+\sum_i \frac{-s_i^2}{\frac{1}{\varepsilon_{ii}}- \frac{1}{n^2}} = \sum_i \frac{s_i^2}{c^2-c_{ii}^2} = 0,
+\eeq
+s čimer smo dokazali trditev.
+
+Tretja možna reprezentacija je ploskev žarkovne hitrosti. Ta je povezana s hitrostjo
+širjenja energije elektromagnetnega valovanja. Kot že vemo, ima Poyntingov vektor
+v anizotropni snovi drugačno smer od valovnega vektorja $\mathbf{k}$. Temu ustrezno 
+definiramo žarkovno hitrost $\mathbf{u}$:
+\beq
+\mathbf{S} = \mathbf{E}\times \mathbf{H} = \langle w \rangle \mathbf{u}. 
+\eeq
+Žarkovna hitrost je potem po velikosti enaka:
+\beq
+u = \frac{S}{\langle w \rangle}.
+\eeq
+Ker valovni vektor in Poyntingov vektor v aniztropnih snoveh nista vzporedna in 
+je med njima nek kot $\gamma$, velja med žarkovno hitrostjo $u$ in fazno hitrostjo $c$
+zveza:
+\beq
+u = \frac{c}{\cos \gamma}.
+\eeq
+Energijski tok potuje v prostoru hitreje kot valovne fronte. (?). 
+
+Enačbo za ploskev $\mathbf{u}$ dobimo, če zvezo Ekk=k2E-keE zapišemo z D in iščemo ... VAJE.
 
 
 \section{Optično enoosne snovi}
+V lastnem sistemu tenzorja $\underline{\varepsilon}$, ki ga izberemo tako, da velja 
+$\varepsilon_{xx}< \varepsilon_{yy}< \varepsilon_{zz}$, v ravnini najmanjše in največje
+vrednosti $\varepsilon_{ii}$, torej v ravnini $xz$, na splošnem dobimo dve optični osi
+pod kotom $\vartheta$ glede na os $z$. Za svetlobo, ki se širi vzdolž ene od štirih možnih
+smeri vzdolž navedenih dveh optičnih osi, je lomni količnik neodvisen od polarizacije
+valovanja. Posledično je vzdolž teh smeri tudi fazna hitrost valovanja neodvisna od polarizacije. 
+
+V smeri optičnih osi se vpadna polarizacija elektromagnetnega valovanja nemoteno širi naprej,
+ne da bi se pri tem pretvarjala v drugo polarizacijo. To ne velja za Poyntingov vektor. Posledično
+opazimo zanimiv pojav razcepa polarizacije svetlobe, ki mu pravimo konični dvojni lom. 
+
+Snovi, ki imajo dve optični osi, imenujemo optično dvoosne snovi. Med tovrstne snovi sodijo
+monokristali s triklinsko, monoklinsko ali otrorobmsko mrežo. 
+
+Primer lomnih količnikov pri 590 nm:
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+ & $n_1 = \sqrt{\varepsilon_{xx}}$ & $n_2 = \sqrt{\varepsilon_{yy}}$ & $n_3 = \sqrt{\varepsilon_{zz}}$\\ \hline
+  sljuda & 1,563 & 1,596 & 1,601\\ \hline
+topaz & 1,618 & 1,620 & 1,627 \\ \hline
+\end{tabular}
+\end{center}
+
+V monokristalih z večjo simetrijo (s tetragonalno, trigonalno in heksagonalno mrežo) sta
+zaradi simetrije snovi dve od treh vrednosti $\varepsilon_{ii}$ enaki. Dogovorimo se, da sta 
+to vrednosti $\varepsilon_{xx} = \varepsilon_{yy}$. V tem primeru se obe optični osi združita
+v eno samo optično os, ki je usmerjena vdolž osi $z$. Tako snov imenujemo optično enoosno snov. 
+
+Poleg monokristalov lahko optično eno- ali dvoosne snovi najdemo tudi v tekočih kristalih in raznih
+drugih prozornih snoveh, če so podvržene mehanski napetosti ali zunanjem poljem.
+
+Optična indikatrisa v optično enoosnih snoveh je rotacijski elipsoid z rotacijsko osjo v smeri osi $z$. 
+V prostoru valovnega vektorja je posledično ena ploskev kar krogla, druga pa rotacijski elipsoid.
+Zaradi rotacijske  simetrije okoli osi $z$ lahko koordinatni sistem vedno izberemo tako, da
+komponenta valovnega vektorja, pravokotna na optično os $k_\perp$, kaže vzdož osi $x$. Splošno 
+torej lahko zapišemo $\mathbf{k} = (k_x, 0, k_z) = (k_\perp, 0, k_\myparallel)$. 
+Valovni vektor potem v ravnini zapišemo kot:
+\beq
+\mathbf{k} = \mathbf{k}_\perp + \mathbf{k}_\myparallel,
+\eeq
+ustrezni smerni vektor $\mathbf{s}= \mathbf{k}/(k_0n)$ pa kot:
+\beq
+\mathbf{s} = \mathbf{s}_\perp + \mathbf{s}_\myparallel.
+\eeq
+Temu ustrezno označimo tudi $\varepsilon_{xx} = \varepsilon_{yy} = \varepsilon_\perp$ in 
+$\varepsilon_{zz} = \varepsilon_\myparallel$. 
+
+Pri poljubni smeri valovnega vektorja tako obstojata dve rešitvi: ena na krožnici in druga
+na elipsi. Enačbo kroga opisuje zveza:
+\beq
+\frac{k_\perp^2/k_0^2}{\varepsilon_\perp}+ \frac{k_\myparallel^2/k_0^2}{\varepsilon_\perp} = 1.
+\eeq
+Od tod sledi:
+\beq
+k_\perp^2 + k_\myparallel^2 = k_0^2 \varepsilon_\perp
+\eeq
+in
+\boxeq{eq:redni}{
+n_r = \sqrt{\varepsilon_\perp}.
+}
+Temu lastnemu valovanju rečemo redni žarek. Njegov lomni količnik je neodvisen od smeri $\mathbf{s}$,
+njegova polarizacija pa je pravokotna na ravnino, ki jo določata smer optične osi in smer valovnega
+vektorja $\mathbf{s}$. Vektor jakosti elektičnega polja je pravokoten na vektor gostote elektičnega polja. 
+
+Druga rešitev je rešitev na elipsi, ki jo opisuje enačba:
+\beq
+\frac{k_\perp^2/k_0^2}{\varepsilon_\myparallel}+ \frac{k_\myparallel^2/k_0^2}{\varepsilon_\perp} = 
+\frac{n^2s_\perp^2}{\varepsilon_\myparallel}+ \frac{n^2s_\myparallel^2}{\varepsilon_\perp} = 
+1.
+\eeq
+Če zapišemo $s_\myparallel = \cos \vartheta$ in $s_\perp = \sin \vartheta$, pri čemer je 
+$\vartheta$ kot med optično osjo in smerjo valovnega vektorja, dobimo:
+\boxeq{eq:izredni}{
+\frac{\sin^2\vartheta}{n_\myparallel^2}+ \frac{\cos^2\vartheta}{n_\perp^2} = \frac{1}{n_i^2}.
+}
+Temu lastnemu valovanju pravimo izredni žarek. Njegov lomni količnik $n_i$ je odvisen od 
+smeri valovnega vektorja $\mathbf{s}$. 
+
+Zanima nas še smer vektorja $\mathbf{E}_i$. Vemo, da je ta smer tangnentna na elipso, ki jo 
+opisuje enačba za izredni žarek. Po drugi strani pa vemo, da je smer vektorja $\mathbf{D}_i$ pravokotna na
+smer valovnega vektorja. Izračunamo lahko kot $\gamma$ med vektorjema $\mathbf{E}_i$ in $\mathbf{D}_i$, za
+katerega velja:
+\beq
+\cos \gamma = \frac{\cos^2\vartheta /\varepsilon_\perp + \sin^2 \vartheta/\varepsilon_\myparallel}{
+\sqrt{\cos^2\vartheta /\varepsilon_\perp^2 + \sin^2 \vartheta/\varepsilon_\myparallel^2}}.
+\eeq
+
+Dokaz: Za gostoto električnega polja vemo, da je pravokotna na valovni vektor. Če je vektor
+$\mathbf{s} = (\sin\vartheta, 0, \cos\vartheta)$, potem je $\mathbf{D} = D_0(-\cos\vartheta, 0, 
+\sin\vartheta)$. Za električno poljsko jakost pa vemo, da ima tangento smer na elipso:
+\beq
+\frac{E_z}{E_x} = 0\frac{\varepsilon_\perp}{\varepsilon_\myparallel} \frac{s_\perp}{s_\myparallel}.
+\eeq
+Jakost električnega polja potem zapišemo kot:
+\beq
+\mathbf{E} = E (-\varepsilon_\myparallel s_\myparallel, 0, \varepsilon_\perp s_\perp) = 
+E (-\varepsilon_\myparallel \cos \vartheta, 0, \varepsilon_\perp \sin \vartheta).
+\eeq
+
+Za kot $\gamma$ velja:
+\beq
+\cos \gamma = \frac{\mathbf{E}\cdot \mathbf{D}}{ED} = \frac{\varepsilon_\myparallel \cos^2\vartheta
++ \varepsilon_\perp \sin^2\vartheta}{{\sqrt{\cos^2\vartheta}+ \sin^2\vartheta}
+\sqrt{\varepsilon_\myparallel^2 \cos^2\vartheta + \varepsilon_\perp^2 \sin^2\vartheta}},
+\eeq
+od koder sledi enačba (..). Vidimo, da sta pri kotih $\vartheta = 0$ in $\vartheta = 90\si{\degree}$
+vrednosti $\gamma=0$ in tako vektorja gostote in jakosti električnega polja vzporedna. 
+To je seveda razumljivo, saj sta to lastni osi sistema oziroma lastni osi tenzorja $\underline{\varepsilon}$.
+
+Primeri enoosnih snovi:
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+ & $n_\perp$ & $n_\myparallel$ & $\Delta n$\\ \hline
+kalcit & 1,658 & 1,486 & -0,172\\ \hline
+kremen & 1,544 & 1,553 & 0,009\\ \hline
+led & 1,309 & 1,313 & 0,004 \\ \hline
+\end{tabular}
+\end{center}
+Razliko med lomnima količnikoma imenujemo optična anizotropija. Vpeljemo
+$\Delta n = n_\myparallel - n_\perp$. Če je $\Delta n >0$, pravimo, da ima snov
+pozitivno anizotropijo, v nasprotnem primeru pa negativno anizotropijo. Snovi s kubično 
+simetrijo so optično izotropne. 
+
+\subsection*{Lom pri prehodu svetlobe iz izotropne v optično enoosno snov}
+Zamislimo si prehod ravnega potujočega elektromagnetnega valovanj iz izotropne snovi 
+z lomnim količnikom $n_0$ v anizotropno snov z ustreznima lomnima količnikoma $n_1$ in $n_2$.
+V skladu z robnimi pogoji za $\mathbf{E}$ na meji dveh snovi  mora še vedno veljati, 
+da se longitudinalna komponenta valovnega vektorja ohranja. Če je $\alpha$ vpadni kot,
+mora veljati:
+\beq
+k_0 n_0 \sin \alpha = k_0 n_1(\beta) \sin \beta_1 \qquad \mathrm{in} \qquad 
+k_0 n_0 \sin \alpha = k_0 n_2(\beta) \sin \beta_2.
+\eeq
+Iz tega sledi lomni zakon:
+\beq
+n_0 \sin \alpha = n_{1,2}(\beta)\sin\beta.
+\eeq
+Dobimo izraz, ki je podoben lomnemu zakonu, vendar je treba v tem primeru upoštevati,
+da je vrednost lomnega količnika v anizotropni snovi odvisna od lomnega kota $\beta$ --
+ter seveda tudi od polarizacije valovanja.
+
+Ob tem se moramo spomniti, da v anizotropni snovi smer širjenja energije, ki jo 
+podaja Poyntingov vektor $\mathbf{S}$, ni vzporedna s smerjo valovnega vektorja $\mathbf{k}$.
+Zanimiv primer je pravokotni vpad nepolarizirane svetlobe na anizotropno snov. Če
+ozek snop nepolarizirane svetlobe usmerimo na plast optično anizotropne snovi, se 
+energijski tok tega snopa v snovi razdeli na dva delna snopa, ki se širita
+v rahlo različnih smereh. Če je plast snovi dovolj debela, se delna snopa zaradi tega 
+prostorsko ločita. Na izstopni strani dobimo dva ločena razmaknjena 
+snopa, ki se širita v smeri pravokotno na mejo in sta medsebojno ortogonalno linearno
+polarizirana.
+
+
+Če ploščico optično dvoosne snovi položimo na vzorec, vzorec skozi ploščico vidimo
+dvojno. Premaknjeni sliki vzorca sta med seboj pravokotno linearno polarizirani.
+
+\begin{example}
+Posebni primer dvojnega loma je primer, ko leži optična os v vpadni ravnini. Izračun
+lomnih kotov $\beta_1$ in $\beta_2$ ter ustreznih lastnih polarizacij je v splošnem
+primeru, ko optična os enoosne snovi ne leži v vpadni ravnini in niti ni pravokotna nanjo,
+dokaj zapleten. Analitična obravnava je relativno preprosta le, če optična os leži v
+vpadni ravnini in je ali vzporedna ali pa pravokotna na mejo. Račun naredimo za primer,
+ko je optična os vzporedna z mejno ploskvijo.
+
+V tem primeru TE komponenta vpadne svetlobe predstavlja tisti del elektromagnetnega
+valovanja, ki se lomi kot redni žarek z lomnim količnikom $n_r$. Zato velja:
+\beq
+n_0 \sin\alpha = n_r \sin \beta_1 = \sqrt{\varepsilon_\perp}\sin\beta_1.
+\eeq
+Po drugi strani TM komponenta vpadne svetlobe predstavlja tisti del, ki se lomi
+kot izredni žarek z lomnim količnikom $n_i$. Zanj velja:
+\beq
+n_0 \sin \alpha = n_i(\beta_2)\sin\beta_2.
+\eeq
+Smer žarka je na optično os nagnjena pod kotom $\vartheta_2 = \pi/2-\beta_2$. 
+Zapišemo:
+\beq
+\frac{1}{n_i^2} = \frac{\sin^2(\pi/2-\beta_2)}{\varepsilon_\myparallel} + 
+\frac{\cos^2(\pi/2-\beta_2)}{\varepsilon_\perp} = 
+\frac{\cos^2\beta_2}{\varepsilon_\myparallel} + 
+\frac{\sin^2\beta_2}{\varepsilon_\perp}.
+\eeq
+Zapišemo lomni zakon:
+\beq
+n_0 \sin \alpha = n_i \sin\beta_2,
+\eeq
+pri čemer je lomni količnik:
+\beq
+n_i = \frac{1}{\sqrt{\cos^2\beta_2/\varepsilon_\myparallel + 
+\sin^2\beta_2/\varepsilon_\perp}}.
+\eeq
+Iz enačbe .. izračunamo lomni kot. Pri tem moramo biti pozorni, da je le vektor $\mathbf{D}$
+transverzalen na valovni vektor, vektor $\mathbf{E}$ pa ima tudi longitudinalno 
+komponento in oklepa z vektorjem $\mathbf{D}$ kot $\gamma$.
+
+Vstavimo izraz za lomni količnik v lomni zakon in ga kvadriramo:
+\beq
+n_0^2 \sin^2\alpha \left(\frac{\cos^2\beta_2}{\varepsilon_\myparallel} + 
+\frac{\sin^2\beta_2}{\varepsilon_\perp}\right) = \sin^2\beta_2.
+\eeq
+Z uporabo zveze med kotnimi funkcijami $\cos^2\varphi = 1 - \sin^2 \varphi$ dobimo:
+\beq
+\sin^2\beta_2 = 
+\frac{n_0^2 \sin^2\alpha}{\varepsilon_\myparallel} + 
+\left(\frac{n_0^2 \sin^2\alpha}{\varepsilon_\perp} - \frac{n_0^2 \sin^2\alpha}{\varepsilon_\myparallel}
+\right)\sin^2\beta_2.
+\eeq
+Sledi:
+\beq
+(\varepsilon_\myparallel - \varepsilon_\perp) n_0^2 \sin^2\alpha \sin^2\beta_2 + \varepsilon_\perp
+n_0^2 \sin^2\alpha = \varepsilon_\myparallel \varepsilon_\perp \sin^2\beta_2.
+\eeq
+Od tod izračunamo lomni kot za izredni žarek:
+\beq
+\sin\beta_2 = \frac{n_0 \sin \alpha}{\sqrt{\varepsilon_\myparallel - \left(\varepsilon_\myparallel
+/\varepsilon_\perp -1\right)n_0^2 \sin^2\alpha}}.
+\eeq
+\end{example}
+
 \section{Optične komponente na osnovi dvolomnih snovi}
+Dvolomne snovi so osnova za večino optičnih komponent, s katerimi učinkujemo na polarizacijo
+svetlobe, oziroma naprav, ki se odzivajo na vpadno elektromagnetno valovanje v odvisnosti
+od njegove polarizacije.
+
+\subsection*{Polarizatorji}
+Polarizatorje uporabimo, da iz nepolarizirane svetlobe ustvarijo  linearno polarizirano 
+svetlobo. Tak primer je Nicolova prizma, ki jo imenunjemo po škotskem geologu in fiziku
+Williamu Nicolu (1770--1851). Prizma temelji na dvolomnosti, da sta lomna količnika za 
+različni polarizaciji različna. Prizmo odrežemo pod takim kotom, da se ena lastna polarizacija
+ob vpadu na stranico totalno odbije, druga polarizacija pa je prepuščena. Kristal iz kalcita, 
+na primer, prerežemo in damo vmes plast prozornega kanadskega balzama z lomnim
+količnikom $n_0=1,55$.  Lomni količnik kalcita je $n_\perp = 1,658$, lomni količnik
+$n_\myparallel = 1,486$. Redni žarek se na meji med kristalom in vmesno plastjo 
+totalno odbije. Izredni žarek pa je prepuščen. In ker smo pri tem blizu Brewstrovega kota,
+je odbojnost za TM polarizacijo zelo majhna, tako da je praktično v celoti prepuščena. Na izhodu
+tako dobimo TM linearno polarizirano valovanje. 
+
+Drugi primer je Wollastonova prizma, poimenovana po angleškem kemiku in fiziku 
+Williamu Hyde Wollastonu (1766--1828). Prizmo naredimo tako, da kristal prerežemo po 
+diagonali in drugi del zasučemo glede na os prvega, tako da je optična os v drugem delu
+obrnjena pravokotno glede na optično os v prvem delu. Na meji med obema deloma se potem 
+valovanje razdeli na dve linearno polarizirani komponenti, ki zapustita prizmo vsaka v svoji
+smeri. 
+
+\subsection*{Retardacijske ploščice}
+Retardacijske ploščice med dvema ortogonalnima komponentama polarizacije ustvarijo
+fazni zamik (retardacijo). Njihov učinek opišemo z Jonesovo matriko:
+\beq
+M = 
+\left[\begin{array}{cc}
+e^{-i\Delta \Phi/2} & 0\\
+0 & e^{i\Delta \Phi/2}\\
+\end{array}\right]\!\!.
+\eeq
+Pri tem je $\Delta \Phi = k_0 L (n_i-n_r)$, kjer je $L$ dolžina kristala, $n_i$ in $n_r$
+pa označujeta redni in izredni lomni količnik snovi. Če je $\Delta \Phi= \pi/2$, taki 
+retardacijski ploščici pravimo ploščica $\lambda/4$. Taka ploščia iz linearne polarizacije
+naredi cirkularno polarizirano svetlobo. Kadar je fazni zamik $\pi$, gre za ploščico $\lambda/2$.
+
+\subsection*{Kompenzatorji}
+Retardacijske ploščice imajo željeno retardacijo le za določeno valovno dolžino. Če 
+želimo element, ki je uporaben za različne valovne dolžine, uporabimo tako imenovani
+kompenzator. Z njim lahko izničimo oz kompneziramo poljuben fazni zamik, do katerega pride
+v neki preiskovani snovi. Primer kompenzatorjev je Soleil-Babinetov kompenzator, v katerem
+retardacijo reguliramo s pomikanjnjem klinastega elementa iz anizotropne snovi. Poleg opisanega
+je še cela vrsta polarizatorjev in kompenzatorjev (Nomarski, Glan-Foucaul, Glan-Thompson, S{\'e}narmont, 
+Rochon).
+
 \section{Konoskopija}
+Konoskopija je eksperimentalna metoda za analizo in vizualizacijo optično anizotropnih snovi. 
+Navadno želimo izvedeti, ali je snov optično enoosna ali dvoosna ter določiti orientacijo 
+optičnih osi. Določimo lahko tudi glavne lomne količnike $n_1$, $n_2$ in $n_3$. 
+
+Med prekrižani polarizacijski foliji damo proučevano snov. Osvetlitev izvedemo s koničnim
+snopom svetlobe. Na opazovalnem zaslonu se pojavijo svetle in temne proge, odvisno
+od dvolomnosti snovi. Ločimo dve vrsti linij na zaslonu: to so lahko izogire, pri katerih vpadna
+polarizacija ustreza eni od lastnih polarizacij $\mathbf{D}_1$ ali $\mathbf{D}_2$, ali
+izokrome, pri katerih za dano valovno dolžino $\lambda$ dobimo fazni zamik $N2\pi$. 
+Če delamo poskus z belo svetlobo, so izokrome mavričnih barv, izogire pa so vedno temne.
+Trik: v eksperimentu lahko konično svetlobo dobimo tako, da z laserjem posvetimo
+na difuzor (na primer prosojni paus papir).
+
+
+
 \section{Inducirana anizotropija}
