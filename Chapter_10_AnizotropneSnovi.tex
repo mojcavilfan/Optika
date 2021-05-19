@@ -103,7 +103,7 @@ $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$.
 Na splošno so vse tri neničelne komponente diagonalnega tenzorja različne. 
 Pri snoveh z večjo stopnjo simetrije sta dve komponenti enaki ($\varepsilon_{xx} = 
 \varepsilon_{yy} \neq \varepsilon_{zz}$), v izotropnih snoveh pa so vse tri 
-neničelne komponente tenzorja enake. 
+neničelne komponente tenzorja enake in za opis snovi zadošča skalarna oblika dielektričnosti.
 
 \begin{example}{\bf Smeri jakosti električnega polja 
 in inducirane polarizacije v anizotropni snovi.}
@@ -131,9 +131,9 @@ Kot $\beta$, ki ga inducirana električna polarizacija oklepa z osjo $x$, izrač
 \end{example}
 
 \section{Ravni val v anizotropni snovi}
-Poglejmo najprej, kako se po optično anizotropni snovi širi ravni val. 
-Obravnavajmo optično anizotropno neprevodno snov, katere dielektričnost 
-opišemo s tenzorjem $\underline{\varepsilon}$ (enačba~\ref{eq:10_003}). 
+Poglejmo, kako se po optično anizotropni snovi širi ravni val. 
+Obravnavajmo neprevodno snov in njeno dielektričnost 
+zapišimo z realnim tenzorjem $\underline{\varepsilon}$ (enačba~\ref{eq:10_003}). 
 Zaradi enostavnosti se omejimo na nemagnetne snovi, za katere je $\mu = 1$. 
 Naj na tako snov vpada ravno potujoče sinusno valovanje z 
 valovnim vektorjem $\mathbf{k}$.  
@@ -142,8 +142,8 @@ Za opis valovanja izhajamo iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\re
 pri čemer privzamemo, da sta gostoti nabojev in električnih tokov enaki nič. 
 Rešitev iščemo v obliki ravnih valov:
 \begin{align}
- \mathbf{E} &= \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_010} \\
- \mathbf{D} &= \mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \label{eq:10_011}\\
+ \mathbf{E} &= \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t}, \label{eq:10_010}\\
+ \mathbf{D} &= \mathbf{D}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \qquad \mathrm{in}\label{eq:10_011}\\
  \mathbf{B} &= \mu_0 \mathbf{H} = \mathbf{B}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t}.
  \label{eq:10_012}
 \end{align}
@@ -174,189 +174,213 @@ Od tod za nemagnetne snovi neposredno sledi:
 Vektorji $\mathbf{D}$, $\mathbf{B}$ in $\mathbf{k}$ so torej medsebojno paroma pravokotni.
 
 Uporabimo nastavke (enačbe~\ref{eq:10_010}--\ref{eq:10_012})
-še v Faradayevem zakonu (enačbo~\ref{eq:Maxwell2}) in dobimo:
+še v Faradayevem zakonu (enačba~\ref{eq:Maxwell2}) in dobimo:
 \beq
 \nabla \times \left(\mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i \omega t} \right) = 
 i\,\mathbf{k}\times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t} = i \omega \mathbf{B}.
 \label{eq:10_017}
 \eeq
-Dobimo:
+Sledi:
 \beq
 \mathbf{k}\times \mathbf{E} = \omega \mu_0 \mathbf{H} \qquad \Longrightarrow 
 \qquad \mathbf{E} \perp \mathbf{H}.
 \label{eq:10_018}
 \eeq
-Upoštevamo še definicijo Poyntinovega vektorja 
-(enačba~\ref{eq:Poyntingov}) $\mathbf{S} = \mathbf{E} \times \mathbf{H}$, od koder
-sledi medsebojna pravokotnost vektorjev $\mathbf{E}$, $\mathbf{H}$ in $\mathbf{S}$.
+Iz definicije Poyntinovega vektorja (enačba~\ref{eq:Poyntingov}) 
+$\mathbf{S} = \mathbf{E} \times \mathbf{H}$ neposredno sledi medsebojna 
+pravokotnost vektorjev $\mathbf{E}$, $\mathbf{H}$ in $\mathbf{S}$.
 
-Ker v anizotropnih snoveh vektorja jakosti in gostote električnega 
-polja nista vzporedna, tudi valovni vektor in Poyntingov vektor nista 
-vzporedna. Energija, ki potuje v smeri Poyntingovega vektorja, se
+Ker v anizotropnih snoveh vektorja jakosti $\mathbf{E}$ in gostote električnega 
+polja $\mathbf{D}$ nista vzporedna, tudi valovni vektor $\mathbf{k}$ in Poyntingov vektor 
+$\mathbf{S}$ nista vzporedna. Energija, ki potuje v smeri Poyntingovega vektorja, se
 torej v anizotropnih snoveh ne širi vzdolž valovnega vektorja (slika~\ref{fig:10_koti}). 
+Ta ugotovitev bo imela zelo zanimive posledice.
 \begin{figure}[!h]
 \centering
 \def\svgwidth{40truemm} 
 \input{slike/10_koti_Sk.pdf_tex}
 \caption{V anizotropnih snoveh smer Poyntingovega 
-vektorja $\mathbf{S}$ ni enaka smeri valovnega vektorja $\mathbf{k}$.}
+vektorja $\mathbf{S}$ ni enaka smeri valovnega vektorja $\mathbf{k}$. Kot med 
+valovnim in Poyntingovim vektorjem je enak kotu med jakostjo in 
+gostoto električnega polja.}
 \label{fig:10_koti}
+\vglue-3truemm
 \end{figure}
 
 V anizotropnih snoveh elektromagnetno valovanje ostaja transverzalno
 valovanje le s stališča vektorjev $\mathbf{D}$, $\mathbf{B}$ in 
-$\mathbf{k}$. Električna poljska jakost $\mathbf{E}$ pa pridobi 
+$\mathbf{k}$. Električna poljska jakost $\mathbf{E}$ pridobi 
 tudi longitudinalno komponento vzdolž smeri valovnega vektorja. 
 Zveza $\nabla \cdot \mathbf{D} = 0$ zato še vedno velja, zveza 
-$\nabla \cdot \mathbf{E} = 0$ pa ne več. Posledično tudi valovna
-enačba za jakost električnega polja, kakor smo je vajeni
-v izotropnih snoveh, v anizotropnih snoveh ne velja. Zapišimo 
-analogno enačbo za anizotropne snovi. 
+$\nabla \cdot \mathbf{E} = 0$ pa ne več. Posledično valovna
+enačba za jakost električnega polja, kakršno poznamo
+v izotropnih snoveh (enačba~\ref{eq:valovnaE}), v anizotropnih snoveh ne velja.
 
-Izhajamo iz Maxwellove enačbe (\ref{eq:Maxwell2}) in na njej naredimo rotor:
+Izhajamo iz enačbe~(\ref{eq:Maxwell2}), na njej naredimo rotor in upoštevamo
+enačbo~(\ref{eq:Maxwell1}). Dobimo:
 \beq
 \nabla \times \left( \nabla \times \mathbf{E} \right) = - \frac{\partial}{\partial t} 
 \left( \nabla \times \mathbf{B} \right) = -\mu_0 \frac{\partial}{\partial t} 
-\left( \nabla \times \mathbf{H} \right).
-\label{eq:10_020}
-\eeq
-Z upoštevanjem Maxwellove enačbe () dobimo:
-\beq
-\nabla \times \left( \nabla \times \mathbf{E} \right) = -\mu_0 \varepsilon_0 
+\left( \nabla \times \mathbf{H} \right) = -\mu_0 \varepsilon_0 
 \frac{\partial^2}{\partial t^2} \left( \underline{\varepsilon}\,\mathbf{E} \right).
 \label{eq:10_021}
 \eeq
-Vstavimo nastavek za ravni val in dobimo:
+Vstavimo nastavek za ravni val (enačba~\ref{eq:10_010}):
 \beq
 i\mathbf{k}\times \left( i \mathbf{k} \times \mathbf{E}\right) = 
-\frac{\omega^2}{c_0^2}\underline{\varepsilon} \mathbf{E} = 
-k_0^2 \underline{\varepsilon} \mathbf{E},
+\frac{\omega^2}{c_0^2}\,\underline{\varepsilon}\,\mathbf{E} = 
+k_0^2\,\underline{\varepsilon}\,\mathbf{E},
 \label{eq:10_022}
 \eeq
-pri čemer smo vpeljali $k_0 = \omega / c_0$. Upoštevamo zvezo:
-\beq
-\mathbf{a}\times\left( \mathbf{b}\times \mathbf{c}\right) = \left(\mathbf{a}\cdot 
-\mathbf{c}\right) \mathbf{b} - \left(\mathbf{a}\cdot \mathbf{b}\right) \mathbf{c}
-\label{eq:10_023}
-\eeq
+pri čemer je $k_0 = \omega / c_0$. Upoštevamo zvezo $\mathbf{a}\times
+\left( \mathbf{b}\times \mathbf{c}\right) = \left(\mathbf{a}\cdot 
+\mathbf{c}\right) \mathbf{b} - \left(\mathbf{a}\cdot \mathbf{b}\right) \mathbf{c}$
 in dobimo:
 \beq
 -\left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} + k^2 \mathbf{E} = 
-k_0^2 \underline{\varepsilon} \mathbf{E}.
+k_0^2\,\underline{\varepsilon}\,\mathbf{E}.
 \label{eq:10_024}
 \eeq
-Od tod dobimo vektorsko enačbo za jakost električnega polja:
-\boxeq{eq:10_017}{
-k^2 \mathbf{E}- k_0\underline{\varepsilon}\mathbf{E} = \left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k}.
+Od tod sledi vektorska enačba za jakost električnega polja:
+\boxeq{eq:10_025}{
+k^2 \mathbf{E}- k_0^2\,\underline{\varepsilon}\,\mathbf{E} = \left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k}.
 }
-V izotropni snovi je izraz na desni strani enačbe enak 0 in velja $k = k_0\sqrt{\varepsilon} = k_0 n$. V anizotropnih
-snoveh pa je ta izraz na splošno različen od nič. Tudi v anizotropnih snoveh lomni količnik
-definiramo na podoben način $\mathbf{k}= k_0 n \mathbf{s}$, pri čemer je $\mathbf{s}$ smerni vektor
-valovnih front.
+V izotropni snovi je izraz na desni strani enačbe enak 0 
+in velja $k = k_0\sqrt{\varepsilon} = k_0 n$. 
 
-Ta vektorska enačba predstavlja tri skalarne enačbe za tri smeri. Za nadaljni izračun si izberemo,
-da so to smeri $x$, $y$ in $z$ v koordinatnem sistemu, v katerem je $\underline{\varepsilon}$ diagonalen.
-V izbranem koordinatnem sistemu tenzor dielektričnosti zapišemo kot:
-\beq
-\underline{\varepsilon} = 
-\left[\begin{array}{ccc}
-\varepsilon_{xx} & 0 & 0\\
-0& \varepsilon_{yy}& 0\\
-0& 0 & \varepsilon_{zz}\\
-\end{array}\right]\!\!.
-\label{eq:10_018}
-\eeq
-Enačbo~(\ref{eq:10_017}) zapišemo po komponentah in dobimo sistem treh enačb:
+Vektorska enačba~(\ref{eq:10_025}) predstavlja tri skalarne enačbe za tri 
+ortogonalne smeri. Naj bodo to smeri $x$, $y$ in $z$ v lastnem koordinatnem sistemu
+tenzorja $\underline{\varepsilon}$, tako da enačbo~(\ref{eq:10_025}) po komponentah 
+zapišemo kot:
 \begin{align}
-\left(\mathbf{k}\cdot \mathbf{E}\right) k_x &= \left( k^2 -k_0^2 \varepsilon_{xx}\right) E_x \\
-\left(\mathbf{k}\cdot \mathbf{E}\right) k_y &= \left( k^2 -k_0^2 \varepsilon_{yy}\right) E_y \\
+\left(\mathbf{k}\cdot \mathbf{E}\right) k_x &= 
+\left( k^2 -k_0^2 \varepsilon_{xx}\right) E_x, \label{eq:10_026}\\
+\left(\mathbf{k}\cdot \mathbf{E}\right) k_y &= 
+\left( k^2 -k_0^2 \varepsilon_{yy}\right) E_y \qquad \mathrm{in}\label{eq:10_027}\\
 \left(\mathbf{k}\cdot \mathbf{E}\right) k_y &= \left( k^2 -k_0^2 \varepsilon_{zz}\right) E_z.
-\label{eq:10_019}
+\label{eq:10_028}
 \end{align}
-Gornje enačbe množimo prvo s $k_x$, drugo s $k_y$ in tretjo s $k_z$ ter dobimo:
+Enačbe preuredimo in prvo množimo s $k_x$, drugo s $k_y$ in tretjo s $k_z$:
 \begin{align}
 \left(\mathbf{k}\cdot \mathbf{E}\right) 
-\frac{k_x^2}{k^2 - k_0^2 \varepsilon_{xx}} &= E_x k_x \\
+\frac{k_x^2}{k^2 - k_0^2 \varepsilon_{xx}} &= E_x k_x, \label{eq:10_029}\\
 \left(\mathbf{k}\cdot \mathbf{E}\right) 
-\frac{k_y^2}{k^2 - k_0^2 \varepsilon_{yy}} &= E_y k_y \\
+\frac{k_y^2}{k^2 - k_0^2 \varepsilon_{yy}} &= E_y k_y \qquad \mathrm{in} \label{eq:10_030}\\
 \left(\mathbf{k}\cdot \mathbf{E}\right) 
-\frac{k_z^2}{k^2 - k_0^2 \varepsilon_{zz}} &= E_z k_z. \\
-\label{eq:10_020}
+\frac{k_z^2}{k^2 - k_0^2 \varepsilon_{zz}} &= E_z k_z. \label{eq:10_031}
 \end{align}
 Enačbe seštejemo:
 \beq
 \left(\mathbf{k}\cdot \mathbf{E}\right)  
-\left(
-\sum_{j=1}^3 \frac{k_j^2}{k_0^2(n^2 - \varepsilon_{jj})}
-\right) = \left(\mathbf{k}\cdot \mathbf{E}\right).
-\label{eq:10_021}
+\sum_{j=x,y,z} \frac{k_j^2}{k_0^2(n^2 - \varepsilon_{jj})}
+ = \mathbf{k}\cdot \mathbf{E}.
+\label{eq:10_032}
 \eeq
-Ker vemo, da ima v anizotropni snovi optično polje tudi
-longitudinalno komponento, velja 
-$\left(\mathbf{k}\cdot \mathbf{E}\right) \neq 0$, zato lahko enačno
-na obeh straneh enačbe delimo s tem skalarnim produktom. Zapišemo 
-še smerni vektor valovnih front po komponentah $\mathbf{s} = (s_x, s_y, s_z)$
-in dobimo:
-\boxeq{eq:10_022}{
-\sum_{j=1}^3 \frac{s_j^2}{(n^2 - \varepsilon_{jj})} = \frac{1}{n^2}.
+Pri tem smo uporabili zvezo: $k = k_0 n$. Ker ima v anizotropni snovi 
+optično polje tudi longitudinalno komponento, je $\left(\mathbf{k}\cdot 
+\mathbf{E}\right) \neq 0$ in obe strani enačbe~(\ref{eq:10_032}) lahko 
+delimo s tem skalarnim produktom.
+Vpeljemo še smerni vektor $\mathbf{s} = (s_x, s_y, s_z)$ v smeri valovnega vektorja, 
+za katerega velja:
+\beq
+\mathbf{s} = \frac{\mathbf{k}}{k} = \frac{\mathbf{k}}{k_0n}.
+\label{eq:10_033}
+\eeq
+Enačbo~(\ref{eq:10_032}) potem prepišemo v:
+\boxeq{eq:10_034}{
+\frac{s_x^2}{n^2 - \varepsilon_{xx}}+ 
+\frac{s_y^2}{n^2 - \varepsilon_{yy}}+ 
+\frac{s_z^2}{n^2 - \varepsilon_{zz}}
+= \frac{1}{n^2}.
 }
 Zapisano enačbo imenujemo Fresnelova enačba za izračun lomnega 
-količnika v anizotropni snovi.
+količnika v anizotropni snovi. Zapisana enačba je videti 
+zapletena, vendar jo lahko z upoštevanjem zveze 
+$s_x^2+s_y^2+s_z^2 = 1$ prevedemo v kvadratno enačbo za $n^2$.
+Pri izbrani smeri valovnega vektorja $\mathbf{s}$ tako
+obstajata dve različni pozitivni rešitvi za $n$, ki 
+predstavljata dve različni vrednosti lomnega količnika za
+svetlobo z valovnim vektorjem v smeri $\mathbf{k}$.
+Označimo ti dve rešitvi z $n_1$ in $n_2$. 
 
-Kako uporabimo Fresnelovo enačbo? V snovi izberemo smer širjenja
-valovnih front. Ustrezni smerni vektor označimo s  $\mathbf{s}$
- in ga zapišemo v koordinatnem sistemu, v katerem je tenzor
- dielektričnosti diagonalen. Komponente vektorja $\mathbf{s}$ vstavimo
- v Fresnelovo enačbo. Dobimo enačbo četrtega reda za $n$ oziroma
- kvadratno enačbo za $n^2$. Obstajata dve različni pozitivni rešitvi
- za n, ki predstavljata dve možni vrednosti lomnega količnika za
- izbrano smer $\mathbf{s}$. Vsaki izmed njiju ustreza drugačna
- polarizacija elektromagnetnega valovanja oziroma druga smer vektorja
- $\mathbf{D}$. 
- Rešitvi Fresnelove enabe pri danem $\mathbf{s}$ imenujemo lastna lomna
- količnika in ju označimo z $n_1$ in $n_2$. Ustrezna vektorja $\mathbf{D}_{01}$
- in $\mathbf{D}_{02}$ imenujemo lastni polarizaciji. Pokazali bomo, 
- da za ti dve lastni polarizaciji velja $\mathbf{D}_{01} \perp \mathbf{D}_{02}$. 
+Vsaki od teh dveh rešitev za lomni količnik pri dani smeri valovnega 
+vektorja lahko poiščemo pripadajoč vektor gostote električnega polja
+$\mathbf{D}$. Ustrezna vektorja $\mathbf{D}_{1}$ in $\mathbf{D}_{2}$ 
+imenujemo lastni polarizaciji. V nadaljevanju bomo pokazali, da sta 
+lastni polarizaciji linearni in medsebojno pravokotni.
 
-Dokaz:
-Izhajamo iz enačbe za jakost električnega polja:
+Povzemimo še enkrat to pomembno ugotovitev: v anizotropnih snoveh se v dani smeri
+širita dve ravni valovanji, vsako s svojim lomnim količnikom 
+in svojo linearno polarizacijo, ki sta med seboj pravokotni. Pri obravnavni snovi
+moramo zato splošno vpadno valovanje razstaviti na dve lastni polarizaciji, vsako 
+od katerih potuje s svojo hitrostjo in pridobi svoj fazni zamik. Izhodna svetloba
+je zato na splošno eliptično polarizirana.
+
+\begin{example}{\bf Račun lomnih količnikov vzdolž lastne osi tenzorja dielektričnosti.}
+Izračunajmo za začetek najpreprostejši primer, ko se svetloba širi vzdolž ene od
+lastnih osi tenzorja dielektričnosti. Naj bo to os $x$, tako da je $\mathbf{k} = 
+(k,0,0)$. Naša naloga je določiti lomni količnik za posamezni lastni polarizaciji.
+
+Vstavimo izbrani valovni vektor v enačbo~(\ref{eq:10_025}) in dobimo za komponento $x$:
 \beq
-k^2 \mathbf{E} - k_0\underline{\varepsilon}\mathbf{E} = \left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}.
+k^2 E_x - k_0^2 \varepsilon_{xx}E_x = k^2 E_x,
+\label{eq:10_035}
 \eeq
-Upoštevamo zvezo $\mathbf{D}= \varepsilon_0 
-\underline{\varepsilon} \mathbf{E}$ in dobimo:
+od koder sledi, da mora biti $E_x = 0$. Drugi dve enačbi, ki ju zapišemo kot:
+\beq
+k^2 E_y - k_0^2 \varepsilon_{yy}E_y = 0 \qquad \mathrm{in} \qquad k^2 E_z - k_0^2 \varepsilon_{zz}E_z = 0,
+\label{eq:10_036}
+\eeq
+rešita tudi neničelni vrednosti jakosti električnega polja. 
+Z upoštevanjem zveze $k = k_0 n$ sledi, da je lomni količnik za 
+valovanje, polarizirano v smeri $y$, enak $n_1 = \sqrt{\varepsilon_{yy}}$ in 
+za valovanje, polarizirano v smeri $z$, enak $n_2 = \sqrt{\varepsilon_{zz}}$. 
+
+Kadar se valovanje širi v smeri, ki ni vzporedna z lastno osjo tenzorja
+dielektričnosti, je račun lomnih količnikov in polarizacij bolj zapleten in 
+ga bomo podrobneje obravnavali v naslednjem razdelku.
+\end{example}
+
+\begin{example}{\bf Račun lastnih polarizacij v anizotropni snovi.}
+Zapisali smo Fresnelovo enačbo (enačba~\ref{eq:10_034}) za lomna količnika
+in povedali, da vsakemu lomnemu količniku ustreza lastna polarizacija. Pokažimo, da
+sta lastni polarizaciji linearni in medsebojno pravokotni. 
+
+Izhajamo iz enačbe za jakost električnega polja (enačba~\ref{eq:10_025}):
+\beq
+k^2 \mathbf{E} - k_0\underline{\varepsilon}\,\mathbf{E} = 
+\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}.
+\label{eq:10_037}
+\eeq
+Vstavimo zvezi $\mathbf{D}= \varepsilon_0 
+\underline{\varepsilon}\,\mathbf{E}$ in $k=k_0n$. Dobimo:
 \beq
 k^2 \mathbf{E}-\frac{k^2 \mathbf{D}}{\varepsilon_0 n^2} = 
-\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}
+\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}.
+\label{eq:10_038}
 \eeq
-oziroma
+Enačbo delimo s $k^2$ in preuredimo, tako da jakost polja zapišemo kot vsoto dveh komponent:
 \beq
-\mathbf{E} - \frac{\mathbf{D}}{\varepsilon_0 n^2} = 
-\frac{\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}}{k^2} = \mathbf{E}_\myparallel.
+\mathbf{E} = \frac{\mathbf{D}}{\varepsilon_0 n^2} +
+\frac{\left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}}{k^2} = \mathbf{E}_\perp + \mathbf{E}_\myparallel.
+\label{eq:10_039}
 \eeq
-Pri tem smo desno stran enačbe izenačili s komponento jakosti električnega polja
-v smeri valovnega vektorja $E_\myparallel$. Ker celotno jakost električnega
-polja zapišemo kot vsoto dveh komponent, ene vzporedne z valovnim
-vektorjem $E_\myparallel$, in ene, pravokotne nanj $E_\perp$:
+Prvi člen v vsoti predstavlja komponento jakosti električnega polja, ki je pravokotna na valovni
+vektor (enačba~\ref{eq:10_013}), drugi člen pa komponento, ki je valovnemu vektorju vzporedna. 
+Sledi:
 \beq
-\mathbf{E} = \mathbf{E}_\perp + \mathbf{E}_\myparallel,
+\mathbf{D} = n^2 \varepsilon_0\mathbf{E}_\perp
+\label{eq:10_040}
 \eeq
-sklepamo, da velja:
+oziroma za dve lastni vrednosti $\mathbf{D}_{1} = n_1^2 \varepsilon_0\mathbf{E}_{1\perp}$ in 
+$\mathbf{D}_{2} = n_2^2 \varepsilon_0\mathbf{E}_{2\perp}$.
+
+Izračunajmo vrednosti izrazov:
 \beq
-\mathbf{E}_\perp = \frac{\mathbf{D}}{\varepsilon_0 n^2}.
-\eeq
-Od tod sledi:
-\beq
-\mathbf{D} = n^2 \varepsilon \mathbf{E}_\perp
-\eeq
-oziroma za dve različni lastni vrednosti:
-\beq
-\mathbf{D}_{1} = n_1^2 \varepsilon \mathbf{E}_{\perp 1} \qquad \mathrm{in} \qquad
-\mathbf{D}_{2} = n_2^2 \varepsilon \mathbf{E}_{\perp 2}. 
-\eeq
-Potem pogledamo izraza:
-\beq
-\mathbf{E}_1 \cdot \mathbf{D}_2 = \varepsilon_0 \sum_{ij} E_{1i}\varepsilon_{ij}E_{2j}
+\mathbf{E}_1 \cdot \mathbf{D}_2 = \mathbf{E}_1 \cdot \left(\varepsilon_0 
+\underline{\varepsilon}\,\mathbf{E}_2\right) =
+\varepsilon_0 \sum_{ij} E_{1i}\varepsilon_{ij}E_{2j}
+\label{eq:10_041}
 \eeq
 in 
 \beq
@@ -364,81 +388,101 @@ in
 \varepsilon_0 \sum_{ij} E_{1j}\varepsilon_{ij}E_{2i} = 
 \varepsilon_0 \sum_{ij} E_{1i}\varepsilon_{ji}E_{2j} = 
 \varepsilon_0 \sum_{ij} E_{1i}\varepsilon_{ij}E_{2j},
+\label{eq:10_042}
 \eeq
-pri čemer smo upoštevali tudi simetrijo tenzorja dielektričnosti $\varepsilon_{ij} = 
+pri čemer smo upoštevali simetrijo tenzorja dielektričnosti $\varepsilon_{ij} = 
 \varepsilon_{ji}$. 
 
 Od tod sledi:
 \beq
 \mathbf{E}_1 \cdot \mathbf{D}_2 - \mathbf{E}_2 \cdot \mathbf{D}_1 = 0.
+\label{eq:10_043}
 \eeq
-Vemo, da je sta vektorja $\mathbf{D}$ pravokotna na smer valovnega vektorja $\mathbf{k}$,
-zato je $\mathbf{E}_\myparallel \cdot \mathbf{D} = 0$. Potem velja:
+Vektorja jakosti električnega polja razstavimo na komponenti, nato pa upoštevamo,
+da sta vektorja $\mathbf{D}$ pravokotna na smer valovnega vektorja $\mathbf{k}$ in zato velja
+$\mathbf{E}_\myparallel \cdot \mathbf{D} = 0$. Ostane le še pravokotna komponenta jakosti
+polja, ki jo izrazimo iz enačbe~(\ref{eq:10_040}):
 \beq
 \mathbf{E}_{1\perp} \cdot \mathbf{D}_2 - \mathbf{E}_{2\perp} \cdot \mathbf{D}_1 =
 \frac{\mathbf{D}_1}{\varepsilon_0 n_1^2}\cdot \mathbf{D}_2 - 
-\frac{\mathbf{D}_2}{\varepsilon_0 n_2^2}\cdot \mathbf{D}_1 = 0,
+\frac{\mathbf{D}_2}{\varepsilon_0 n_2^2}\cdot \mathbf{D}_1 = 0.
+\label{eq:10_044}
 \eeq
-pri čemer smo upoštevali zvezo... Enačbo preoblikujemo in dobimo:
+Enačbo preoblikujemo in dobimo:
 \beq
 \frac{\mathbf{D}_1 \cdot \mathbf{D}_2}{\varepsilon_0}\left( \frac{1}{n_1^2} - 
 \frac{1}{n_2^2}\right) = 0.
+\label{eq:10_045}
 \eeq
-Če sta lomna količnika različna, je člen v oklepaju različen od nič in mora 
-biti za izpolnitev enačbe biti enak nič skalarni produkt gostot električnega
-polja. S tem zaključimo dokaz, da sta lastna vektorja $\mathbf{D}_1$ in 
-$\mathbf{D}_2$ med seboj pravokotna. 
+Če sta lastna lomna količnika $n_1$ in $n_2$ različna, je člen v oklepaju 
+različen od nič. Za zadostitev enačbe mora biti takrat enak nič skalarni produkt 
+gostot električnega polja, kar pomeni, da sta v anizotropni snovi lastna 
+vektorja $\mathbf{D}_1$ in $\mathbf{D}_2$ med seboj pravokotna. 
 
-V primeru, da sta lomna količnika $n_1$ in $n_2$ enaka, sta smeri gostote
-električnega polja poljubni saj je enačba... vedno izpolnjena. Navadno 
-izberemo ortogonalni smeri.
+V izotropni snovi, v kateri sta lomna količnika $n_1$ in $n_2$ enaka, je enačba
+vedno izpolnjena, zato sta lastni smeri gostote električnega polja poljubni. Iz
+praktičnih razlogov navadno izberemo ortogonalni smeri. 
+\end{example}
 
-Vidimo tudi, da so vektorji $\mathbf{D}_1$ in $\mathbf{D}_2$ ter razmerje med njima
-realni. To pomeni, da sta lastni polarizaciji linearni. 
-Konec dokaza.
+\begin{example}{\bf Upodobitev lomnega količnika z optično indikatriso.} Pri 
+določanju smeri lastnih vektorjev $\mathbf{D}_1$ in $\mathbf{D}_2$ ter 
+pripadajočih lomnih količnikov si lahko pomagamo z grafičnim pripomočkom, 
+imenovanim optična indikatrisa ali indeksni elipsoid. 
 
-V optično anizotropni snovi se lahko vzdolž izbrane smeri $\mathbf{s}$ 
-širita dve linearno polarizirani lastni valovanji, ki sta med seboj pravokotni. 
-Vsako od obeh valovanj ima svojo fazno hitrost $c_1= c_0/n_1$ in $c_2 = c_0/n_2$,
-ki ju določata lastna lomna količnika.
-
-Pri določanju smeri lastnih vektorjev $\mathbf{D}_1$ in $\mathbf{D}_2$ 
-ter ustreznih lomnih količnikov si lahko pomagamo z grafičnim pripomočkom, imenovanim
-optična indikatrisa oziroma indeksni elipsoid. 
-
-\subsection*{Optična indikatrisa}
-Optična indikatrisa oziroma indeksni elipsoid je povezan z grafično predstavitvijo
-tenzorja $\underline{\varepsilon}$. Kot vemo, lahko povprečno energijo oziroma
-energijsko gostoto elektromagnetnega valovanja v izotropni snovi zapišemo kot:
+Izhajamo iz enačbe za povprečno gostoto energije valovanja
+v izotropni snovi (enačba~\ref{eq:w}):
 \beq
 \langle w \rangle = \frac{1}{2} \varepsilon \varepsilon_0 E_0^2 = \frac{1}{2} 
-\left(\mathbf{D}_0 \cdot \mathbf{E}_0\right). 
+\mathbf{D}_0 \cdot \mathbf{E}_0. 
+\label{eq:10_046}
 \eeq
-V anizotropni snovi je izraz podoben, pri čemer moramo seveda upoštevati
+Za anizotropno snov je izraz podoben, vendar upoštevamo
 tenzorsko naravo dielektričnosti:
 \beq
-\langle w \rangle = \frac{1}{2} \left(\mathbf{D}_0 \cdot \mathbf{E}_0\right) = 
-\frac{1}{2}\left(\mathbf{D}_0 \cdot \underline{\varepsilon}^{-1} \cdot \mathbf{D}_0
-\right) \frac{1}{\varepsilon_0}.
+\langle w \rangle = \frac{1}{2} \mathbf{D}_0 \cdot \mathbf{E}_0 = 
+\frac{1}{2\varepsilon_0}\mathbf{D}_0 \cdot \left(\underline{\varepsilon}^{-1} \cdot \mathbf{D}_0
+\right)\!.
+\label{eq:10_047}
 \eeq
-V lastnem koordinatnem sistemu izraz izpišemo:
+V lastnem koordinatnem sistemu je inverzni tenzor oblike:
 \beq
-2 \varepsilon_0 \langle w \rangle = \frac{D_{x}}{\varepsilon_{xx}} + 
-\frac{D_{y}}{\varepsilon_{y}} + \frac{D_{z}}{\varepsilon_{zz}}.
+\underline{\varepsilon}^{-1} = 
+\left[\begin{array}{ccc}
+1/\varepsilon_{xx} & 0 & 0\\
+0 & 1/\varepsilon_{yy} &0\\
+0 & 0 & 1/\varepsilon_{zz}\\
+\end{array}\right]\!\!,
+\label{eq:10_048}
+\eeq
+zato lahko enačbo~(\ref{eq:10_047}) prepišemo v:
+\beq
+2 \varepsilon_0 \langle w \rangle = \frac{D_{x}^2}{\varepsilon_{xx}} + 
+\frac{D_{y}^2}{\varepsilon_{y}} + \frac{D_{z}^2}{\varepsilon_{zz}}.
 \eeq
 Če vpeljemo nove normirane koordinate:
-$\mathbf{r} = \frac{\mathbf{D}}{\sqrt{2 \varepsilon_0 \langle w\rangle}}$, 
+$\mathbf{r} = (x,y,z) = \mathbf{D}/\sqrt{2 \varepsilon_0 \langle w\rangle}$, 
 dobimo enačbo elipsoida:
 \boxeq{eq:elipsoid}{
 \frac{x^2}{\varepsilon_{xx}} + \frac{y^2}{\varepsilon_{yy}} + 
-\frac{z^2}{\varepsilon_{zz}} = 1. 
+\frac{z^2}{\varepsilon_{zz}} = 1,
 }
-To je enačba elipsoida, ki opisuje ploskve konstantne vrednosti $\langle w \rangle$ 
+ki opisuje ploskve konstantne vrednosti $\langle w \rangle$ 
 v anizotropni snovi z lastnimi osmi $x$, $y$ in $z$. 
+\end{example}
 
+\begin{example}{\bf Uporaba optične indikatrise.} 
 Ko enkrat poznamo elipsoid, ki predstavlja optično indikatriso, 
 lahko določimo smer lastnih polarizacij in velikosti lastnih 
 lomnih količnikov. Navodilo, kako to naredimo:
+\begin{figure}[!h]
+\centering
+\def\svgwidth{50truemm} 
+\input{slike/10_indikatrisa.pdf_tex}
+\caption{Grafična upodobitev anizotropije tenzorja dielektričnosti z indeksnim
+elipsoidom. Glavne osi elipsoida se ujemajo z lastnimi osmi tenzorja, velikosti
+polosi pa ustrezajo diagonalnim elementom tenzorja dielektričnosti.}
+\label{fig:10_indikatrisa}
+\end{figure}
  
 V prostoru indikatrise izberemo smerni vektor $\mathbf{s}$. Nato 
 narišemo ploskev, ki je pravokotna nanj in gre skozi središče elipsoida. 
@@ -515,7 +559,7 @@ Označimo komponente vektorja $\mathbf{r}= (x,y,z)$ z indeksom $r_i$ in dobimo:
 r_i \left(\frac{r^2}{\varepsilon_{ii}} -1\right) =  r^2\left( \sum_{j}\frac{r_j s_j}{\varepsilon_{jj}}\right) s_i. 
 \eeq
 Dobljeni sistem enačb je v vektorski obliki povsem enak sistemu enačb za $\mathbf{D}$, ki ga dobimo
-iz Maxwellovih enačb. Izhajamo iz enačbe (\ref{eq:10_017}):
+iz Maxwellovih enačb. Izhajamo iz enačbe (\ref{eq:10_025}):
 \beq
 \left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} = k^2 \mathbf{E}- k_0\underline{\varepsilon}\mathbf{E}
 \eeq
@@ -539,11 +583,12 @@ D_i \left(\frac{n^2}{\varepsilon_{ii}}-1 \right) = n^2 \left(\sum_j\frac{s_j D_j
 \eeq
 Zapisana enačba je po obliki povsem enaka kot enačba .., če le vektor $\mathbf{r}$ zamenjamo z $\mathbf{D}$
 in $|\mathbf{r}|$ z $n$. Rešitev geometrijske konstrukcije torej res ustreza smerem lastnih vektorjev gostot
-električnega polja in velikosti polosi lomnima količnikoma.  
+električnega polja in velikosti polosi lomnima količnikoma.
+\end{example}
 
 \section{Ploskev valovnega vektorja}
 Kljub temu da je indikatrisa zelo nazorna, pa z njo težko kaj konkretno izračunamo. Za bolj konkretni 
-račun se direktno lotimo reševanja Maxwellovih enačb oziroma enačbe~(\ref{eq:10_017}:
+račun se direktno lotimo reševanja Maxwellovih enačb oziroma enačbe~(\ref{eq:10_025}:
 \beq
 \left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} = 
 k^2 \mathbf{E}- k_0\underline{\varepsilon}\mathbf{E}.
