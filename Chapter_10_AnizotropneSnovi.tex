@@ -348,7 +348,7 @@ sta lastni polarizaciji linearni in medsebojno pravokotni.
 
 Izhajamo iz enačbe za jakost električnega polja (enačba~\ref{eq:10_025}):
 \beq
-k^2 \mathbf{E} - k_0\underline{\varepsilon}\,\mathbf{E} = 
+k^2 \mathbf{E} - k_0^2\underline{\varepsilon}\,\mathbf{E} = 
 \left(\mathbf{k}\cdot\mathbf{E}\right)\mathbf{k}.
 \label{eq:10_037}
 \eeq
@@ -372,7 +372,7 @@ Sledi:
 \mathbf{D} = n^2 \varepsilon_0\mathbf{E}_\perp
 \label{eq:10_040}
 \eeq
-oziroma za dve lastni vrednosti $\mathbf{D}_{1} = n_1^2 \varepsilon_0\mathbf{E}_{1\perp}$ in 
+oziroma za dve lastni vrednosti lomnega količnika $\mathbf{D}_{1} = n_1^2 \varepsilon_0\mathbf{E}_{1\perp}$ in 
 $\mathbf{D}_{2} = n_2^2 \varepsilon_0\mathbf{E}_{2\perp}$.
 
 Izračunajmo vrednosti izrazov:
@@ -414,20 +414,19 @@ Enačbo preoblikujemo in dobimo:
 \frac{1}{n_2^2}\right) = 0.
 \label{eq:10_045}
 \eeq
-Če sta lastna lomna količnika $n_1$ in $n_2$ različna, je člen v oklepaju 
-različen od nič. Za zadostitev enačbe mora biti takrat enak nič skalarni produkt 
+V anizotropni snovi sta lomna količnika $n_1$ in $n_2$ različna, zato je člen v oklepaju 
+različen od nič. Za zadostitev enačbe mora biti enak nič skalarni produkt 
 gostot električnega polja, kar pomeni, da sta v anizotropni snovi lastna 
 vektorja $\mathbf{D}_1$ in $\mathbf{D}_2$ med seboj pravokotna. 
-
-V izotropni snovi, v kateri sta lomna količnika $n_1$ in $n_2$ enaka, je enačba
-vedno izpolnjena, zato sta lastni smeri gostote električnega polja poljubni. Iz
-praktičnih razlogov navadno izberemo ortogonalni smeri. 
 \end{example}
 
-\begin{example}{\bf Upodobitev lomnega količnika z optično indikatriso.} Pri 
-določanju smeri lastnih vektorjev $\mathbf{D}_1$ in $\mathbf{D}_2$ ter 
-pripadajočih lomnih količnikov si lahko pomagamo z grafičnim pripomočkom, 
-imenovanim optična indikatrisa ali indeksni elipsoid. 
+\begin{example}{\bf Upodobitev lomnega količnika z optično indikatriso.} 
+\label{ex:ind}
+Različna lomna količnika in pripadajoča lastna
+vektorja $\mathbf{D}_1$ in $\mathbf{D}_2$ si lahko nazorno predstavljamo, če 
+uporabimo grafični pripomoček, tako imenovano optično indikatriso ali 
+indeksni elipsoid. Naša prva naloga je narisati indeksni elipsoid, ki ga določa
+tenzor dielektičnosti. 
 
 Izhajamo iz enačbe za povprečno gostoto energije valovanja
 v izotropni snovi (enačba~\ref{eq:w}):
@@ -458,6 +457,7 @@ zato lahko enačbo~(\ref{eq:10_047}) prepišemo v:
 \beq
 2 \varepsilon_0 \langle w \rangle = \frac{D_{x}^2}{\varepsilon_{xx}} + 
 \frac{D_{y}^2}{\varepsilon_{y}} + \frac{D_{z}^2}{\varepsilon_{zz}}.
+\label{eq:10_049}
 \eeq
 Če vpeljemo nove normirane koordinate:
 $\mathbf{r} = (x,y,z) = \mathbf{D}/\sqrt{2 \varepsilon_0 \langle w\rangle}$, 
@@ -467,155 +467,184 @@ dobimo enačbo elipsoida:
 \frac{z^2}{\varepsilon_{zz}} = 1,
 }
 ki opisuje ploskve konstantne vrednosti $\langle w \rangle$ 
-v anizotropni snovi z lastnimi osmi $x$, $y$ in $z$. 
+z lastnimi osmi $x$, $y$ in $z$ (slika~\ref{fig:10_indikatrisa}\,a). 
 \end{example}
 
 \begin{example}{\bf Uporaba optične indikatrise.} 
-Ko enkrat poznamo elipsoid, ki predstavlja optično indikatriso, 
-lahko določimo smer lastnih polarizacij in velikosti lastnih 
-lomnih količnikov. Navodilo, kako to naredimo:
-\begin{figure}[!h]
+\label{chap:ind2}
+Ko enkrat poznamo optično indikatriso (indeksni elipsoid), lahko 
+geometrijsko določimo smer lastnih polarizacij in velikosti lastnih 
+lomnih količnikov.
+\begin{figure}[h]
 \centering
-\def\svgwidth{50truemm} 
-\input{slike/10_indikatrisa.pdf_tex}
+\def\svgwidth{120truemm} 
+\input{slike/10_indikatrisa_ravnina.pdf_tex}
 \caption{Grafična upodobitev anizotropije tenzorja dielektričnosti z indeksnim
 elipsoidom. Glavne osi elipsoida se ujemajo z lastnimi osmi tenzorja, velikosti
-polosi pa ustrezajo diagonalnim elementom tenzorja dielektričnosti.}
+polosi pa ustrezajo diagonalnim elementom tenzorja dielektričnosti (a). Prikaz grafičnega
+postopka iskanja lastnih polarizacij in lomnih količnikov pri poljubni smeri valovnega
+vektorja $\mathbf{s}$ (b).}
 \label{fig:10_indikatrisa}
 \end{figure}
- 
-V prostoru indikatrise izberemo smerni vektor $\mathbf{s}$. Nato 
-narišemo ploskev, ki je pravokotna nanj in gre skozi središče elipsoida. 
-Presečišče elipsoida in navedene ploskve je elipsa. Njeni glavni osi
-predstavljata smeri lastnih polarizacij $\mathbf{D}_{01}$ in $\mathbf{D}_{02}$,
-dolžini ustreznih polosi pa ustrezata lomnima količnikoma $n_1$ in $n_2$. 
+Postopek načrtovanja je sledeč: v prostoru indikatrise izberemo smerni 
+vektor $\mathbf{s}$, ki ustreza smeri valovnega vektorja. Nato 
+narišemo ravnino, ki je pravokotna nanj in gre skozi središče elipsoida. 
+Presečišče elipsoida in navedene ravnine je elipsa. Pokazali bomo, da njeni 
+glavni osi predstavljata smeri lastnih polarizacij $\mathbf{D}_{01}$ in 
+$\mathbf{D}_{02}$, dolžini ustreznih polosi pa ustrezata lomnima količnikoma 
+$n_1$ in $n_2$ (slika~\ref{fig:10_indikatrisa}\,b). Ta postopek se za dejanski 
+izračun le redko uporablja, lahko pa z njim  
+nazorno in hitro napovemo obnašanje vpadnega elektromagnetnega valovanja. 
 
-S tem receptom lahko nazorno in hitro ugotovimo, kakšno obnašanje
-vpadnega elektromagnetnega valovanja lahko pričakujemo.  Če navedeni
-recept matematično formuliramo, pravimo, da iščemo vezane ekstreme funkcije $r^2$
-pri pogoju $\mathbf{s}\cdot \mathbf{r}$ = 0 in enačbi... Prvi pogoj omeji 
-rešitve na ravnino, pravokotno na smerni vektor $\mathbf{s}$, drugi na elipsoid, 
-iščemo pa največjo in najmanjšo 
-oddaljenost od izhodišča, ki podata glavni polosi elipse. Gre torej za
-iskanje ekstremov funkcionala $F(x,y,z)$:
+Potrebujemo še matematični dokaz, da je zapisani postopek s konstrukcijo presečišča 
+ravnine in elipsoida res ekvivalenten reševanju enačbe za širjenje svetlobe 
+po anizotropni snovi (enačba~\ref{eq:10_025}). Najprej zapišemo opisani postopek
+matematično: iščemo ekstreme funkcije $r^2$ pri pogoju, da leži $\mathbf{r}$
+na ravnini, ki jo podaja enačba $\mathbf{s}\cdot \mathbf{r}$ = 0, in hkrati
+na elipsoidu, ki ga podaja enačba~(\ref{eq:elipsoid}). Uporabili bomo vezane ekstreme
+in poiskali ekstreme funkcionala $F(x,y,z)$:
 \beq
 F(x,y,z) = (x^2+y^2+z^2) + 2 \lambda_1 (xs_x+ys_y+zs_z) + \lambda_2
 \left(\frac{x^2}{\varepsilon_{xx}}+ \frac{y^2}{\varepsilon_{yy}}+
-\frac{z^2}{\varepsilon_{zz}} \right),
+\frac{z^2}{\varepsilon_{zz}} -1 \right)\!\!,
+\label{eq:10_050}
 \eeq
-pri čemer sta $\lambda_1$ in $\lambda_2$ Langrangeeva multiplikatorja.
-
-Dokaz, da navedeni recept deluje. Ekstrem dobimo, ko je $\nabla F = 0$.
-To zapišemo po komponentah:
+pri čemer sta $\lambda_1$ in $\lambda_2$ Lagrangeeva multiplikatorja. Prvi člen
+v zapisu je $r^2$, drugi predstavlja enačbo ravnine in tretji enačbo elipsoida.
+V ekstremu mora biti izpolnjen pogoj $\nabla F = 0$, ki ga po komponentah zapišemo kot:
 \begin{align}
-\frac{\partial F}{\partial x} &= 0 \qquad \Longrightarrow \qquad x + \lambda_1 s_x + \lambda_2 x/\varepsilon_{xx}=0 \\
-\frac{\partial F}{\partial y} &= 0 \qquad \Longrightarrow \qquad y + \lambda_1 s_y + \lambda_2 y/\varepsilon_{yy}=0 \\
-\frac{\partial F}{\partial z} &= 0 \qquad \Longrightarrow \qquad z + \lambda_1 s_z + \lambda_2 z/\varepsilon_{zz}=0
+\frac{\partial F}{\partial x} &= 0 \qquad \Longrightarrow 
+\qquad x + \lambda_1 s_x + \lambda_2 x/\varepsilon_{xx}=0, \label{eq:10_051}\\
+\frac{\partial F}{\partial y} &= 0 \qquad \Longrightarrow 
+\qquad y + \lambda_1 s_y + \lambda_2 y/\varepsilon_{yy}=0, \label{eq:10_052}\\
+\frac{\partial F}{\partial z} &= 0 \qquad \Longrightarrow 
+\qquad z + \lambda_1 s_z + \lambda_2 z/\varepsilon_{zz}=0. \label{eq:10_053}
 \end{align}
-
 Prvo enačbo množimo z $x$, drugo z $y$ in tretjo z $z$ ter jih seštejemo v:
 \beq
 \left(x^2+y^2+z^2 \right) + \lambda_1 \left(s_xx+s_yy+s_zz \right) + \lambda_2 
 \left( \frac{x^2}{\varepsilon_{xx}} + \frac{y^2}{\varepsilon_{yy}} + 
 \frac{z^2}{\varepsilon_{zz}} \right) = 0.
+\label{eq:10_054}
 \eeq
-Ker je vektor $\mathbf{r} = (x,y,z)$ pravokoten na vektor $\mathbf{s}$, je drugi člen enak nič, tretji 
-pa je po enačbi ... enak 1. Sledi: 
+Ker sta vektorja $\mathbf{r} = (x,y,z)$ in $\mathbf{s} = (s_x, s_y, s_z)$ pravokotna, 
+je drugi člen v enačbi~(\ref{eq:10_054}) enak nič, tretji člen pa je po 
+enačbi~(\ref{eq:elipsoid}) enak 1. Sledi: 
 \beq
 \lambda_2 = -r^2.
+\label{eq:10_055}
 \eeq
-Potem prvo enačbo pomnožimo s $s_x$, drugo s $s_y$ in tretjo s $s_z$ in seštejemo v:
+Drugi Lagrangeev multiplikator izračunamo tako, da prvo enačbo (enačba~\ref{eq:10_051}) pomnožimo s 
+$s_x$, enačbo~(\ref{eq:10_052}) s $s_y$ in enačbo~(\ref{eq:10_053}) s $s_z$. 
+Dobljene enačbe seštejemo v:
 \beq
 \left(s_xx+s_yy+s_zz \right) + \lambda_1 \left(s_x^2+s_y^2+s_z^2 \right) + \lambda_2 
 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right) = 0.
+\frac{zs_z}{\varepsilon_{zz}} \right)= 0.
+\label{eq:10_056}
 \eeq
-Od tod sledi:
+Upoštevamo, da je prvi člen enak 0 in drugi enak 1, saj velja $s_x^2+s_y^2+s_z^2=1$. Dobimo:
 \beq
 \lambda_1 = -\lambda_2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right) = r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right).
+\frac{zs_z}{\varepsilon_{zz}} \right) = r^2 \left( \frac{xs_x}{\varepsilon_{xx}} +
+\frac{ys_y}{\varepsilon_{yy}} + 
+\frac{zs_z}{\varepsilon_{zz}} \right)\!\!.
+\label{eq:10_057}
 \eeq
-Vstavimo vrednosti multiplikatorjev v sistem enačb in dobimo:
+Vstavimo vrednosti multiplikatorjev v sistem enačb~(\ref{eq:10_051}--\ref{eq:10_053}):
 \begin{align}
 x + r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right) s_x -r^2 x/\varepsilon_{xx}=0 \\
+\frac{zs_z}{\varepsilon_{zz}} \right) s_x -r^2 x/\varepsilon_{xx}=0, \label{eq:10_058}\\
 y + r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right)s_y -r^2 y/\varepsilon_{yy}=0 \\
+\frac{zs_z}{\varepsilon_{zz}} \right)s_y -r^2 y/\varepsilon_{yy}=0, \label{eq:10_059}\\
 z + r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right) s_z -r^2 z/\varepsilon_{zz}=0
+\frac{zs_z}{\varepsilon_{zz}} \right) s_z -r^2 z/\varepsilon_{zz}=0.\label{eq:10_060}
 \end{align}
 Enačbe preoblikujemo:
 \begin{align}
 x (1-r^2/\varepsilon_{xx})+ r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right) s_x=0 \\
+\frac{zs_z}{\varepsilon_{zz}} \right) s_x=0, \label{eq:10_061}\\
 y (1-r^2/\varepsilon_{yy}) + r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right)s_y=0 \\
+\frac{zs_z}{\varepsilon_{zz}} \right)s_y=0, \label{eq:10_062}\\
 z (1-r^2/\varepsilon_{zz})+ r^2 \left( \frac{xs_x}{\varepsilon_{xx}} + \frac{ys_y}{\varepsilon_{yy}} + 
-\frac{zs_z}{\varepsilon_{zz}} \right) s_z=0.
+\frac{zs_z}{\varepsilon_{zz}} \right) s_z=0.\label{eq:10_063}
 \end{align}
 Označimo komponente vektorja $\mathbf{r}= (x,y,z)$ z indeksom $r_i$ in dobimo:
 \beq
-r_i \left(\frac{r^2}{\varepsilon_{ii}} -1\right) =  r^2\left( \sum_{j}\frac{r_j s_j}{\varepsilon_{jj}}\right) s_i. 
+r_i \left(\frac{r^2}{\varepsilon_{ii}} -1\right) =  
+r^2\left( \sum_{j}\frac{r_j s_j}{\varepsilon_{jj}}\right) s_i.
+\label{eq:10_064}
 \eeq
-Dobljeni sistem enačb je v vektorski obliki povsem enak sistemu enačb za $\mathbf{D}$, ki ga dobimo
-iz Maxwellovih enačb. Izhajamo iz enačbe (\ref{eq:10_025}):
+Na tem mestu zaključimo matematično formulacijo opisanega geometrijskega postopka. Pokazati moramo le, 
+da so zapisane enačbe~(\ref{eq:10_064}) res ekvivalentne tistim, ki jih dobimo iz
+Maxwellovih enačb za širjenje ravnega vala po anizotropni snovi. Izhajamo iz enačbe (\ref{eq:10_025}):
 \beq
-\left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} = k^2 \mathbf{E}- k_0\underline{\varepsilon}\mathbf{E}
+\left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} = k^2 \mathbf{E}- k_0^2\underline{\varepsilon}\,\mathbf{E}
+\label{eq:10_065}
 \eeq
-in z upoštevanjem
-\beq
-\mathbf{E} = \frac{1}{\varepsilon_0}\underline{\varepsilon}^{-1} \mathbf{D}
-\eeq
-dobimo:
+in z upoštevanjem $\mathbf{E} = \underline{\varepsilon}^{-1} \mathbf{D}/\varepsilon_0$ 
+ter $\mathbf{k} = \mathbf{s}\,k = \mathbf{s}\,k_0 n$ dobimo:
 \beq
 k^2 \left(\mathbf{s}\frac{1}{\varepsilon_0}\cdot \underline{\varepsilon}^{-1}\mathbf{D}\right) \mathbf{s} = k^2 \frac{1}{\varepsilon_0}\underline{\varepsilon}^{-1} \mathbf{D} - \frac{k^2}{\varepsilon_0 n^2}\mathbf{D}.
+\label{eq:10_066}
 \eeq
 Sledi:
 \beq
 \left(\mathbf{s} \cdot \underline{\varepsilon}^{-1}\mathbf{D}\right) \mathbf{s} =
 \underline{\varepsilon}^{-1} \mathbf{D} - \frac{\mathbf{D}}{n^2} = \frac{1}{n^2}\left( n^2 
 \underline{\varepsilon}^{-1} -1 \right) \mathbf{D}.
+\label{eq:10_067}
 \eeq
-Upoštevamo, da je tenzor $\varepsilon$ diagonalen in enačbo prepišemo v obliko po komponentah:
+Upoštevamo, da je tenzor $\underline{\varepsilon}$ diagonalen in enačbo 
+zapišemo po komponentah:
 \beq
 D_i \left(\frac{n^2}{\varepsilon_{ii}}-1 \right) = n^2 \left(\sum_j\frac{s_j D_j}{\varepsilon_{jj}}\right) s_i.
+\label{eq:10_068}
 \eeq
-Zapisana enačba je po obliki povsem enaka kot enačba .., če le vektor $\mathbf{r}$ zamenjamo z $\mathbf{D}$
-in $|\mathbf{r}|$ z $n$. Rešitev geometrijske konstrukcije torej res ustreza smerem lastnih vektorjev gostot
-električnega polja in velikosti polosi lomnima količnikoma.
+Zapisana enačba je po obliki povsem enaka enačbi~(\ref{eq:10_064}), ki smo jo dobili iz 
+geometrijske predstavitve problema. Vlogo krajevnega vektorja $\mathbf{r}$ igra vektor gostote
+električnega polja $\mathbf{D}$, velikost vektorja $r = |\mathbf{r}|$ pa ustreza velikosti
+lomnega količnika $n$. S tem smo pokazali, da rešitev geometrijske konstrukcije res ustreza 
+smerem lastnih vektorjev gostot električnega polja in velikosti polosi lomnima količnikoma.
 \end{example}
 
 \section{Ploskev valovnega vektorja}
-Kljub temu da je indikatrisa zelo nazorna, pa z njo težko kaj konkretno izračunamo. Za bolj konkretni 
-račun se direktno lotimo reševanja Maxwellovih enačb oziroma enačbe~(\ref{eq:10_025}:
+V prejšnjem razdelku smo zapisali, da v anizotropnih snoveh v dani smeri valovnega vektorja
+lahko potujeta dve ravni valovanji z različnima polarizacijama in lomnima količnikoma. V 
+primerih~(\ref{ex:ind} in \ref{chap:ind2}) je opisan grafični postopek iskanja 
+lomnih količnikov in lastnih smeri polarizacij,
+tu pa opišimo drug pristop, ki je priročnejši za konkretne izračune. 
+
+Ponovno izhajamo iz Maxwellovih enačb oziroma enačbe~(\ref{eq:10_025}):
 \beq
 \left(\mathbf{k}\cdot \mathbf{E}\right)\mathbf{k} = 
-k^2 \mathbf{E}- k_0\underline{\varepsilon}\mathbf{E}.
+k^2 \mathbf{E}- k_0^2\underline{\varepsilon}\,\mathbf{E}.
+\label{eq:10_069}
 \eeq
-To je sistem treh enačb za 3 komponente vektorja $\mathbf{E}$, ki bo imel rešitve le, če bo 
-determinanta ustrezne matrike sistema enaka nič. Enačbe tudi tokrat zapišemo v lastnem sistemu
-tenzorja $\varepsilon$, tako da je ta diagonalen.
+Zapisana vektorska enačba predstavlja sistem treh enačb za tri komponente vektorja $\mathbf{E}$, ki 
+je netrivialno rešljiv, če je determinanta ustrezne matrike sistema enaka nič. Poiščimo najprej
+matriko sistema, pri čemer enačbe tudi tokrat zapišemo v lastnem sistemu tenzorja 
+$\underline{\varepsilon}$.
 
-Za komponento v smeri $x$ dobimo:
+Enačbo za komponento v smeri $x$ zapišemo kot:
 \beq
 (k_x E_x + k_yE_y+k_zE_z) k_x = k^2E_x-k_0^2\varepsilon_{xx}E_x.
+\label{eq:10_070}
 \eeq
-Izraz preoblikujemo:
-\beq
-k^2 E_x -k_x^2 E_x - k_0^2\varepsilon_{xx}E_x  - k_xk_yE_y - k_xk_zE_z = 0.
-\eeq
-Z upoštevanjem zveze $k^2 = k_x^2+k_y^2+k_z^2$ se prva enačba prepiše v:
+Z upoštevanjem zveze $k^2 = k_x^2+k_y^2+k_z^2$ se enačba prepiše v:
 \beq
 (k_y^2+k_z^2 - k_0^2\varepsilon_{xx})E_x  - k_xk_yE_y - k_xk_zE_z = 0.
+\label{eq:10_071}
 \eeq
 Podobno naredimo še za preostali koordinati in zapišemo enačbi:
 \beq
 - k_xk_yE_x + (k_x^2+k_z^2 - k_0^2\varepsilon_{yy})E_y  - k_yk_zE_z = 0
+\label{eq:10_072}
 \eeq
 ter 
 \beq
-- k_xk_zE_x - k_yk_zE_y + (k_x^2+k_y^2  - k_0^2\varepsilon_{zz})E_z   = 0
+- k_xk_zE_x - k_yk_zE_y + (k_x^2+k_y^2  - k_0^2\varepsilon_{zz})E_z   = 0.
+\label{eq:10_073}
 \eeq
 Enačbe združimo v matriko $M$:
 \beq
@@ -630,48 +659,113 @@ E_x \\
 E_y \\
 E_z
 \end{array}\right]=0.
+\label{eq:10_074}
 \eeq
-Da je sistem enolično rešljiv, mora biti $\det M=0$. Determinante niti ne bomo izpisali
-za splošen primer, saj je razmeroma zapletena. Poglejmo pa primer, denimo, ko je 
-$\mathbf{k}= (k_x,k_y, 0)$. V tem primeru se matrika $M$ precej poenostavi:
+Da je sistem enolično rešljiv, mora biti $\det M=0$. Determinante ne bomo izpisali
+za splošen primer, saj je razmeroma zapletena, bomo pa obravnavali nekaj posebnih primerov.
+
+Najprej poglejmo primer, ko je 
+$\mathbf{k}= (k_x,k_y, 0)$, s čimer se omejimo na rešitve v ravnini $xy$. 
+V tem primeru se matrika $M$ precej poenostavi in dobimo:
 \beq
 M = \left[\begin{array}{ccc}
 k_y^2- k_0^2\varepsilon_{xx} &  - k_xk_y & 0\\
 - k_xk_y & k_x^2- k_0^2\varepsilon_{yy} &0\\
 0& 0 & k_x^2+k_y^2  - k_0^2\varepsilon_{zz}\\
-\end{array}\right]\!\!,
+\end{array}\right]\!\!.
+\label{eq:10_075}
 \eeq
-njena determinanta pa je:
+Determinanta matrike $M$ je v tem primeru:
 \beq
 \left(k_x^2+k_y^2 - k_0^2\varepsilon_{zz}\right) 
 \left((k_y^2- k_0^2\varepsilon_{xx})(k_x^2- k_0^2\varepsilon_{yy})-k_x^2k_y^2\right) = 0.
+\label{eq:10_076}
 \eeq
-Zapisana enačba ima več rešitev. Eno dobimo v primeru, da je prvi oklepaj enak 0:
-\beq
-k_x^2+k_y^2 = k_0^2\varepsilon_{zz}.
-\eeq
-Ta enačba opisuje krožnico s polmerom $k_0\varepsilon_{zz}$. Ustrezni lastni vektor jakosti
-električnea polja ima smer osi $z$.
-
-Drugo rešitev dobimo, kadar je drugi oklepaj v enačbi .. enak 0:
+Zapisana enačba ima več rešitev. Eno dobimo, kadar je prvi oklepaj enak 0 in velja:
+\boxeq{eq:10_077}{
+\frac{k_x^2}{k_0^2\varepsilon_{zz}}+\frac{k_y^2}{k_0^2\varepsilon_{zz}} = 1.
+}
+Ta enačba v ravnini $xy$ opisuje krožnico s polmerom $k_0\varepsilon_{zz}$. Pripadajoči 
+lastni vektor jakosti električnega polja ima smer osi $z$.
+Drugo rešitev dobimo, kadar je drugi oklepaj v enačbi~(\ref{eq:10_076}) enak 0 in velja:
 \beq
 (k_y^2- k_0^2\varepsilon_{xx})(k_x^2- k_0^2\varepsilon_{yy})=k_x^2k_y^2.
+\label{eq:10_078}
 \eeq
-Člene zmnožimo, odštejemo enake člene in dobimo:
-\beq
-k_x^2 k_0^2 \varepsilon_{xx}+ k_y^2 k_0^2\varepsilon_{yy}= k_0^4 \varepsilon_{xx}\varepsilon_{yy}.
-\eeq
-Sledi:
-\beq
+Člene zmnožimo, enake člene odštejemo in enačbo preoblikujemo v:
+\boxeq{eq:10_080}{
 \frac{k_x^2}{k_0^2 \varepsilon_{yy}}+ \frac{k_y^2}{k_0^2 \varepsilon_{xx}} = 1.
-\eeq
-Ta izraz opisuje elipso s polosjo $k_0\sqrt{\varepsilon_{yy}}$ v smeri $x$ in 
-$k_0\sqrt{\varepsilon_{xx}}$ v smeri $y$. 
+}
+Zapisana druga rešitev v ravnini $xy$ opisuje elipso s polosjo $k_0\sqrt{\varepsilon_{yy}}$ v smeri $x$ in 
+$k_0\sqrt{\varepsilon_{xx}}$ v smeri $y$. Rešitev enačbe~(\ref{eq:10_074}) v ravnini $xy$ opisujeta
+krožnica in elipsa. Pripadajoči lastni vektor leži v ravnini $xy$.
 
-Podoben račun lahko naredimo tudi v ravninah $xz$ in $yz$, rezultata pa sta zelo podobna:
-v obeh primerih dobimo za rešitev eno krožnico in eno elipso. Če se držimo ustaljenega dogovora, 
-da velja $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$, potem se v ravninah $xy$ in $xy$
-krožnica in elipsa ne sekata, v ravnini $xz$ pa se sekata. 
+Podoben račun lahko naredimo tudi v ravninah $xz$ in $yz$, rezultata pa sta zelo podobna. V vseh treh
+ravninah tako dobimo rešitve v obliki ene krožnice in ene elipse. Če se držimo ustaljenega dogovora, 
+da velja $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$, potem je v ravnini $xy$ elipsa znotraj krožnice,
+v ravnini $yz$ je elipsa zunaj krožnice, v ravnini $xz$ pa se krožnica in elipsa sekata 
+(slika~\ref{fig:10_ploskev_preseki}).
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/10_ploskev_preseki.pdf_tex}
+\caption{Preseki ploskve valovnega vektorja s koordinatnimi ravninami $xy$ (a), $yz$ (b) in $xz$ (c).
+V prvih dveh primerih se elipsa in krožnica, ki predstavljata rešitev enačbe, ne sekata, v tretjem
+primeru pa se elipsa in krožnica sekata. Lega presečišč določa smeri dveh optičnih osi v snovi (turkizni puščici).
+Pri tem velja $n_x = \sqrt{\varepsilon_{xx}}$, $n_y = \sqrt{\varepsilon_{yy}}$ in $n_z = \sqrt{\varepsilon_{zz}}$.}
+\label{fig:10_ploskev_preseki}
+\end{figure}
+
+Točke, v katerih se v ravnini $xz$ krožnica in elipsa sekata, določajo smeri optičnih osi. 
+V splošnem sta v anizotropni snovi dve taki osi in snov imenujemo optično dvoosna snov. Če se 
+svetloba širi vzdolž smeri optične osi, sta rešitvi za obe polarizaciji enaki in se torej obe 
+ortogonalni polarizaciji širita z enako hitrostjo. Svetloba, ki se širi vzdolž optične osi, 
+ohranja polarizacijo.
+
+\begin{example}{\bf Smer optičnih osi v optično dvoosni snovi.}
+Poiščimo smeri optičnih osi v ravnini $xz$. Zaradi simetrije zadošča določiti smer 
+ene optične osi, druga je simetrična glede na koordinatni osi. 
+Smer vektorja $\mathbf{k}$, vzdolž katerega leži optična os, 
+določimo kot smer presečišča krožnice (enačba~\ref{eq:10_077}) in elipse (enačba~\ref{eq:10_080}). 
+Naj bo $\mathbf{s}$ smerni vektor vzdolž valovnega vektorja $\mathbf{k}$ (enačba~\ref{eq:10_033}).
+Potem enačbo krožnice zapišemo kot:
+\beq
+n^2s_x^2+n^2s_z^2 = \varepsilon_{yy},
+\label{eq:10_081}
+\eeq
+od koder sledi:
+\beq
+n = \sqrt{\varepsilon_{yy}}.
+\label{eq:10_082}
+\eeq
+Iščemo presečišče krožnice z elipso:
+\beq
+\frac{n^2s_x^2}{\varepsilon_{zz}} + \frac{n^2s_z^2}{\varepsilon_{xx}}=1,
+\label{eq:10_083}
+\eeq
+za katerega velja:
+\beq
+\frac{1}{n} = \sqrt{\frac{s_x^2}{\varepsilon_{zz}} + \frac{s_z^2}{\varepsilon_{xx}}} = 
+\frac{1}{\sqrt{\varepsilon_{yy}}}.
+\label{eq:10_084}
+\eeq
+Naj bo smerni vektor $\mathbf{s}= (\sin\vartheta, 0, \cos\vartheta)$, pri čemer je kot
+$\vartheta$ kot med optično osjo in osjo $z$. Potem enačbo~(\ref{eq:10_084}) prepišemo
+v:
+\beq
+\frac{\sin^2\vartheta}{\varepsilon_{zz}} + \frac{\cos^2\vartheta}{\varepsilon_{xx}}=
+\frac{1}{\varepsilon_{yy}},
+\label{eq:10_085}
+\eeq
+od koder sledi:
+\beq
+\cos \vartheta = \sqrt{\frac{1/\varepsilon_{yy}-1/\varepsilon_{zz}}{1/\varepsilon_{xx}-1/\varepsilon_{zz}}}.
+\label{eq:10_086}
+\eeq
+Od tod izračunamo kot $\vartheta$ optične osi, druga os pa leži pod kotom $-\vartheta$.
+\end{example}
+
 
 Zdaj smo izračunali rešitev sistema enačb v treh ravninah, v katerih so rešitve v obliki
 krožnic in elips. Na splošnem je rešitev enačbe 3D dvolistna ploskev, ki jo imenujemo
@@ -688,37 +782,6 @@ Optični osi sta v resnici dve, saj so razmere pri negativnih in pozitivnih vred
 enake. Na splošno imamo torej v snovi dve optični osi, ki sta nagnjeni pod kotom $\vartheta$
 glede na os največje dielektrične konstante. Za tako snov pravimo, da je optično dvoosna. 
 
-\subsection*{Smer optične osi}
-Poiščimo smer optične osi v ravnini $xz$. V tej ravnini je $\mathbf{k}=(k_x, 0, k_z)$.
-Rešitev poiščemo kot presečišče krožnice (enačba) in elipse (enačba). Zapišemo:
-\beq
-k_x^2+k_z^2 = k_0^2 \varepsilon_{yy},
-\eeq
-od koder sledi:
-\beq
-(k_0 n s_x)^2 + (k_0 n s_z)^2 = k_0^2 \varepsilon_{yy}
-\eeq
-in 
-\beq
-n^2 (s_x^2+s_z^2) = \varepsilon_{yy} \qquad \Longrightarrow \qquad n = \sqrt{\varepsilon_{xx}}.
-\eeq
-Drugo rešitev dobimo iz enačbe elipse:
-\beq
-\frac{(k_0ns_x)^2}{k_0^2\varepsilon_{zz}} + \frac{(k_0ns_z)^2}{k_0^2\varepsilon_{xx}}=1,
-\eeq
-od tod pa:
-\beq
-\frac{s_x^2}{\varepsilon_{zz}} + \frac{(s_z)^2}{\varepsilon_{xx}}=\frac{1}{n^2} 
-\qquad \Longrightarrow \qquad
-\frac{1}{n} = \sqrt{\frac{s_x^2}{\varepsilon_{zz}} + \frac{(s_z)^2}{\varepsilon_{xx}}}.
-\eeq
-Naj bo smerni vektor $\mathbf{s}= (\sin\vartheta, 0, \cos\vartheta)$, pri čemer je kot
-$\vartheta$ kot med optično osjo in osjo $z$. Lomna količnika bosta enaka, če velja: 
-\beq
-\frac{\sin^2\vartheta}{\varepsilon_{zz}} + \frac{\cos^2\vartheta}{\varepsilon_{xx}}=
-\frac{1}{n^2} = \frac{1}{\varepsilon_{yy}}.  
-\eeq
-Od tod izračunamo $\vartheta$. 
 
 Hitro lahko razberemo, da je v primeru rotacijsko simetrične snovi, ko velja 
 $\varepsilon_{xx} = \varepsilon_{yy}\neq \varepsilon_{zz}$, rešitev $\vartheta =0$.
@@ -778,46 +841,30 @@ Tangnetno smer na elipso podaja odvod $dZ/dX$.
 Dobimo ... isto. Poglej zvezek za vaje, kjer je to rešeno. S tem smo pokazali, da 
 je smer optičnega polja res tangentna na elipso v prostoru valovnega vektorja. 
 
-
-\section{Ploskev fazne in žarkovne hitrosti}
-Poleg ploskve valovnega vektorja obstajajo še druge reprezentacije obravnave
-elektromagnetnega valovanja v anizotropnih snoveh. Ena izmed njih je ploskev
-fazne hitrosti. Fazna hitrost (enačba) je 
+\begin{remark}
+Do zdaj smo spoznali grafično upodobitev lomnega količnika v anizotropni snovi 
+z optično indikatriso in z ploskvijo valovnega vektorja. Poleg tega obstajajo še
+druge grafične upodobitve obravnave elektromagnetnega valovanja v anizotropnih snoveh.
+Ena od njih je ploskev fazne hitrosti. Dobimo jo tako, da vpeljemo vektor fazne hitrosti:
 \beq
-c = \frac{c_0}{n} = \frac{\omega}{k} = \frac{\omega}{k_0n}.
-\eeq
-Valovni vektor je:
-\beq
-\mathbf{k} = k_0 n \mathbf{s} = k_0 \frac{c_0}{c}\mathbf{s}.
-\eeq
-Vpeljemo vektor fazne hitrosti:
-\beq
-\mathbf{c} = \mathbf{s}c = \frac{\mathbf{k}}{k}c.
-\eeq
-Potem lahko zapišemo:
-\beq
-\mathbf{k} = \frac{\mathbf{c}\omega}{c^2}
-\eeq
-oziroma po komnponentah:
-\beq
-k_x = c_x \frac{\omega}{c^2}; \qquad k_y = c_y \frac{\omega}{c^2}; \qquad k_z = c_z \frac{\omega}{c^2}. 
+\mathbf{c} = \mathbf{s}c = \frac{\mathbf{k}}{k}c = \mathbf{k}\frac{c^2}{\omega}.
 \eeq
 Ta zapis vstavimo v matriko sistema enačb $M$ (enačba) in dobimo:
 \beq
 M=
 \left[\begin{array}{ccc}
-\left(\frac{c_y \omega}{c^2}\right)^2 +
-\left(\frac{c_z \omega}{c^2}\right)^2- \frac{\omega^2}{c_0^2}\varepsilon_{xx} &  
-- c_x c_y \frac{\omega^2}{c^4}
-& - c_x c_z \frac{\omega^2}{c^4}\\
-- c_x c_y\frac{\omega^2}{c^4} & 
-\left(\frac{c_x \omega}{c^2}\right)^2 \left(\frac{c_z \omega}{c^2}\right)^2- 
-\frac{\omega^2}{c_0^2}\varepsilon_{yy} &
-- c_y c_z \frac{\omega^2}{c^4}\\
-- c_x c_z \frac{\omega^2}{c^4}& 
-- c_y c_z \frac{\omega^2}{c^4} & 
-\left(\frac{c_x \omega}{c^2}\right)^2 + \left(\frac{c_y \omega}{c^2}\right)^2 - 
-\frac{\omega^2}{c_0^2}\varepsilon_{zz}\\
+c_y^2 +
+c_z^2- \frac{c^4}{c_0^2}\varepsilon_{xx} &  
+- c_x c_y
+& - c_x c_z\\
+- c_x c_y & 
+c_x^2 + c_z^2- 
+\frac{c^4}{c_0^2}\varepsilon_{yy} &
+- c_y c_z\\
+- c_x c_z& 
+- c_y c_z& 
+c_x^2 +c_y^2 - 
+\frac{c^4}{c_0^2}\varepsilon_{zz}\\
 \end{array}\right]\!\!.
 \eeq
 Tudi v tem pristopu mora biti determinanta matrike enaka nič, da ima sistem netrivialne rešitve.
@@ -828,22 +875,6 @@ oziroma izračunamo ju iz Fresnelove enačbe valovnih normal:
 \sum_i \frac{s_i^2}{c-c_{ii}^2} = 0,
 \eeq
 pri čemer je $c_{ii} = c_0 /\sqrt{\varepsilon_{ii}}$. 
-
-Dokaz: Izhajamo iz Fresnelove enačbe za izračun lomnega količnika (enačba..). Enačbo z obeh strani pomnožimo
-z $n^2$ in dobimo:
-\beq
-\sum_i \frac{s_i^2 n^2}{n^2-\varepsilon_{ii}} = 1 = \sum_i s_i^2.
-\eeq
-Druga enakost velja, saj je vektor $\mathbf{s}$ normiran. Sledi:
-\beq
-\sum_i s_i^2 \left(\frac{n^2}{n^2-\varepsilon_{ii}}-1\right) = \sum_i \frac{\varepsilon_{ii}}{n^2 
-- \varepsilon_{ii}}s_i^2 = 0.
-\eeq
-Ker je lomni količnik vedno različnen od nič, lahko z njim pomnožimo in dobimo:
-\beq
-\sum_i \frac{-s_i^2}{\frac{1}{\varepsilon_{ii}}- \frac{1}{n^2}} = \sum_i \frac{s_i^2}{c^2-c_{ii}^2} = 0,
-\eeq
-s čimer smo dokazali trditev.
 
 Tretja možna reprezentacija je ploskev žarkovne hitrosti. Ta je povezana s hitrostjo
 širjenja energije elektromagnetnega valovanja. Kot že vemo, ima Poyntingov vektor
@@ -865,7 +896,7 @@ u = \frac{c}{\cos \gamma}.
 Energijski tok potuje v prostoru hitreje kot valovne fronte. (?). 
 
 Enačbo za ploskev $\mathbf{u}$ dobimo, če zvezo Ekk=k2E-keE zapišemo z D in iščemo ... VAJE.
-
+\end{remark}
 
 \section{Optično enoosne snovi}
 V lastnem sistemu tenzorja $\underline{\varepsilon}$, ki ga izberemo tako, da velja 
