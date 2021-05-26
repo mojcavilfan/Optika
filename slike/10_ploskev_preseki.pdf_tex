@@ -54,17 +54,17 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{10_ploskev_preseki.pdf}}%
-    \put(0.5135523,0.28865536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_z/k_0$\end{tabular}}}}%
-    \put(0.34411646,0.28774246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
-    \put(0.62332269,0.11963984){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_y/k_0$\end{tabular}}}}%
-    \put(0.61707337,0.15607598){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_z$\end{tabular}}}}%
-    \put(0.50737924,0.21357937){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_x$\end{tabular}}}}%
     \put(0.15670826,0.26267332){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_z$\end{tabular}}}}%
     \put(0.16288132,0.28865536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_y/k_0$\end{tabular}}}}%
     \put(-0.0065545,0.28774246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
     \put(0.27265171,0.1213932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_x/k_0$\end{tabular}}}}%
     \put(0.15670826,0.21708609){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_x$\end{tabular}}}}%
     \put(0.23966037,0.15256927){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_y$\end{tabular}}}}%
+    \put(0.5135523,0.28865536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_z/k_0$\end{tabular}}}}%
+    \put(0.34411646,0.28774246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.62332269,0.11963984){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_y/k_0$\end{tabular}}}}%
+    \put(0.61707337,0.15607598){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_z$\end{tabular}}}}%
+    \put(0.50737924,0.21357937){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_x$\end{tabular}}}}%
     \put(0.50737924,0.23921306){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_y$\end{tabular}}}}%
     \put(0.86422329,0.28865536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_z/k_0$\end{tabular}}}}%
     \put(0.69478746,0.28774246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}c)\end{tabular}}}}%
@@ -72,6 +72,5 @@
     \put(0.96774437,0.15607598){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_z$\end{tabular}}}}%
     \put(0.85850684,0.21533273){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_x$\end{tabular}}}}%
     \put(0.85850684,0.23921306){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small$n_y$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{10_ploskev_preseki.pdf}}%
   \end{picture}%
 \endgroup%
