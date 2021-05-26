@@ -787,7 +787,7 @@ določajo smer optičnih osi (slika~\ref{fig:10_ploskev_3D}).
 \input{slike/10_ploskev_3D.pdf_tex}
 \caption{Ploskev valovnega vektorja (a) je dvolistna ploskev, ki ima v poljubni smeri dve rešitvi in 
 se dotika sama sebe le v smereh optičnih osi (turkizni puščici). Preseki ploskve valovnega vektorja
-s koordinatnimi ravninami se ujemajo s preseki, prikazanimi na sliki~\ref{fig:10_ploskev_preseki}.
+s koordinatnimi ravninami (b) se ujemajo s preseki, prikazanimi na sliki~\ref{fig:10_ploskev_preseki}.
 Zelene puščice prikazujejo smeri lastnih vektorjev $\mathbf{D}$ za izbrano vejo rešitve pri 
 določeni smeri valovnega vektorja, rdeče puščice pa pripadajoč vektor jakosti električnega polja 
 $\mathbf{E}$. Vzdolž lastnih osi se smeri gostote in jakosti električnega polja ujemata.}
@@ -981,60 +981,75 @@ u_x^2 \varepsilon_{yy} +u_y^2 \varepsilon_{xx} = c_0^2.
 \section{Optično enoosne snovi}
 Do zdaj smo splošno obravnavali optično anizotropne snovi, katerih dielektričnost
 smo opisali s tenzorjem $\underline{\varepsilon}$ in tremi različnimi lastnimi vrednostmi. 
-V snoveh z višjo stopnjo simetrije se tenzor poenostavi in v rotacijsko
-simetričnih snoveh sta dve lastni vrednosti enaki, tretja pa se razlikuje od njiju.
+V snoveh z višjo stopnjo simetrije, na primer s tetragonalno, trigonalno ali heksagonalno
+simetrijo, se tenzor dodatno poenostavi. V rotacijsko simetričnih snoveh sta tako dve lastni 
+vrednosti tenzorja dielektričnosti enaki, tretja pa se razlikuje od njiju.
 Po dogovoru velja $\varepsilon_{xx} = \varepsilon_{yy}\neq \varepsilon_{zz}$.
 
+Poglejmo, kako so ploskve, ki smo jih na splošno uporabili za grafično predstavitev optično
+dvoosnih snovi, videti v tem primeru. Optična indikatrisa oziroma indeksni elipsoid 
+(slika~\ref{fig:10_indikatrisa}) je rotacijski elipsoid, saj sta lastni vrednosti
+v ravnini $x$ in $y$ enaki. Bolj zanimiva je ploskev valovnega vektorja 
+(slika~\ref{fig:10_ploskev_3D_eno}\,a)
+oziroma njeni preseki s koordinatnimi ravninami (slika~\ref{fig:10_ploskev_3D_eno}\,b). 
+S slike je razvidno, sa se ploskev dotika sama sebe le še v dveh točkah, ki določata 
+smer optične osi. Optična os je v takih sistemih ena sama, zato te snovi imenujemo optično 
+enoosne. Če se držimo dogovora iz prejšnjega odstavka, se optična os ujema z osjo $z$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/10_ploskev_3D_eno.pdf_tex}
+\caption{Ploskev valovnega vektorja (a) je tudi v optično enoosnih dvolistna ploskev, 
+ki ima v poljubni smeri dve rešitvi in se dotika sama sebe le v smero optične osi 
+(turkizna puščica). Preseki ploskve valovnega vektorja
+s koordinatnimi ravninami (b) so v obliki krožnic in elips.
+Zelene puščice prikazujejo smeri lastnih vektorjev $\mathbf{D}$ za izbrano vejo rešitve pri 
+določeni smeri valovnega vektorja, rdeče puščice pa pripadajoč vektor jakosti električnega polja 
+$\mathbf{E}$. Vzdolž lastnih osi se smeri gostote in jakosti električnega polja ujemata.}
+\label{fig:10_ploskev_3D_eno}
+\end{figure}
 
+Presečišča ploskve valovnega vektorja s koordinatnimi ravninami so v obliki krožnic
+in elips. V ravnini $xy$ sta presečišči v obliki dveh kocentričnih krožnic, medtem ko sta 
+preseka v ravninah $xz$ in $yz$ enaka. V teh dveh ravninah
+se krožnica in elipsa dotikata v dveh točkah, ki določata smer optične osi.
 
-
-rešitev $\vartheta =0$.
-V tem primeru je optičan os snovi ena sama in kaže v smeri rotacijske osi $z$. Optična
-indukatrisa je v tem primeru rotacijski elipsoid. Rečemo, da je snov optično enoosna. 
-
-
-
-V monokristalih z večjo simetrijo (s tetragonalno, trigonalno in heksagonalno mrežo) sta
-zaradi simetrije snovi dve od treh vrednosti $\varepsilon_{ii}$ enaki. Dogovorimo se, da sta 
-to vrednosti $\varepsilon_{xx} = \varepsilon_{yy}$. V tem primeru se obe optični osi združita
-v eno samo optično os, ki je usmerjena vdolž osi $z$. Tako snov imenujemo optično enoosno snov. 
-
-
-
-Optična indikatrisa v optično enoosnih snoveh je rotacijski elipsoid z rotacijsko osjo v smeri osi $z$. 
-V prostoru valovnega vektorja je posledično ena ploskev kar krogla, druga pa rotacijski elipsoid.
 Zaradi rotacijske  simetrije okoli osi $z$ lahko koordinatni sistem vedno izberemo tako, da
-komponenta valovnega vektorja, pravokotna na optično os $k_\perp$, kaže vzdož osi $x$. Splošno 
-torej lahko zapišemo $\mathbf{k} = (k_x, 0, k_z) = (k_\perp, 0, k_\myparallel)$. 
-Valovni vektor potem v ravnini zapišemo kot:
+komponenta valovnega vektorja, ki je pravokotna na optično os, kaže vzdož osi $x$. Brez
+izgube splošnosti lahko torej valovni vektor vedno zapišemo v obliki 
+$\mathbf{k} = (k_x, 0, k_z) = (k_\perp, 0, k_\myparallel)$, pri čemer oznake pomenijo
+smer komponente valovnega vektorja glede na optično os (pravokotno in vzporedno). 
+Valovni vektor v izbrani ravnini zapišemo kot:
 \beq
 \mathbf{k} = \mathbf{k}_\perp + \mathbf{k}_\myparallel,
+\label{eq:10_100}
 \eeq
-ustrezni smerni vektor $\mathbf{s}= \mathbf{k}/(k_0n)$ pa kot:
+in ustrezni smerni vektor $\mathbf{s}$ kot: $\mathbf{s} = \mathbf{s}_\perp + 
+\mathbf{s}_\myparallel$.
+V skladu z oznakami glede na optično os (os $z$) vpeljemo tudi zveze:
 \beq
-\mathbf{s} = \mathbf{s}_\perp + \mathbf{s}_\myparallel.
+\varepsilon_{xx} = \varepsilon_{yy} = \varepsilon_\perp \qquad 
+\mathrm{in} \qquad \varepsilon_{zz} = \varepsilon_\myparallel.
+\label{eq:10_101}
 \eeq
-Temu ustrezno označimo tudi $\varepsilon_{xx} = \varepsilon_{yy} = \varepsilon_\perp$ in 
-$\varepsilon_{zz} = \varepsilon_\myparallel$. 
-
-Pri poljubni smeri valovnega vektorja tako obstojata dve rešitvi: ena na krožnici in druga
-na elipsi. Enačbo kroga opisuje zveza:
+Poglejmo podrobneje presek ploskve valovnega vektorja z ravnino $xz$. 
+Izhajamo iz enačbe~(\ref{eq:10_074}), vstavimo $k_y=0$ in upoštevamo zapis
+(enačba~\ref{eq:10_101}). Pri poljubni smeri valovnega vektorja $\mathbf{k}$ 
+v ravnini $xz$ obstajata dve rešitvi. Prvo rešitev podaja enačba:
 \beq
-\frac{k_\perp^2/k_0^2}{\varepsilon_\perp}+ \frac{k_\myparallel^2/k_0^2}{\varepsilon_\perp} = 1.
+k_\perp^2 + k_\myparallel^2 = k_0^2 \varepsilon_\perp,
 \eeq
-Od tod sledi:
-\beq
-k_\perp^2 + k_\myparallel^2 = k_0^2 \varepsilon_\perp
-\eeq
-in
+ki na sliki~\ref{fig:10_elipsa} predstavlja enačbo krožnice s polmerom:
 \boxeq{eq:redni}{
-n_r = \sqrt{\varepsilon_\perp}.
+n_r = n_\perp = \sqrt{\varepsilon_\perp}.
 }
-Temu lastnemu valovanju rečemo redni žarek. Njegov lomni količnik je neodvisen od smeri $\mathbf{s}$,
-njegova polarizacija pa je pravokotna na ravnino, ki jo določata smer optične osi in smer valovnega
-vektorja $\mathbf{s}$. Vektor jakosti elektičnega polja je pravokoten na vektor gostote elektičnega polja. 
-
-Druga rešitev je rešitev na elipsi, ki jo opisuje enačba:
+Lomni količnik te rešitve je neodvisen
+od smeri valovnega vektorja, zato to rešitev imenujemo redni žarek, 
+pripadajoča polarizacija
+pa je pravokotna na ravnino krožnice oziroma ravnino, ki jo določata 
+smer optične osi $z$ in smer valovnega vektorja $\mathbf{s}$.
+ 
+Drugo rešitev podaja enačba elipse:
 \beq
 \frac{k_\perp^2/k_0^2}{\varepsilon_\myparallel}+ \frac{k_\myparallel^2/k_0^2}{\varepsilon_\perp} = 
 \frac{n^2s_\perp^2}{\varepsilon_\myparallel}+ \frac{n^2s_\myparallel^2}{\varepsilon_\perp} = 
