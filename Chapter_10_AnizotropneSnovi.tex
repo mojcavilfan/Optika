@@ -1,4 +1,4 @@
-%\chapterimage{Geometrijska.jpg} % Chapter heading image
+\chapterimage{10_Dvolom2.jpg} % Chapter heading image
 
 \chapter{Optika v anizotropnih snoveh}
 \label{chap:AnizotropneSnovi}
@@ -1434,25 +1434,60 @@ Kadar je fazni zamik $\pi$, element deluje kot ploščica $\lambda/2$, ki spreme
 krožno polariziranega valovanja oziroma zasuče smer linearno polariziranega valovanja.
 
 \subsection*{Kompenzatorji}
-Retardacijske ploščice imajo željeno retardacijo le za določeno valovno dolžino. Če 
-želimo element, ki je uporaben za različne valovne dolžine, uporabimo tako imenovani
-kompenzator. Z njim lahko izničimo oz kompneziramo poljuben fazni zamik, do katerega pride
-v neki preiskovani snovi. Primer kompenzatorjev je Soleil-Babinetov kompenzator, v katerem
-retardacijo reguliramo s pomikanjnjem klinastega elementa iz anizotropne snovi.
+Slabost retardacijskh ploščic je v tem, da imajo izbrano retardacijo le za 
+točno določeno valovno dolžino. Če želimo narediti element, ki je uporaben za svetlobo z 
+različnimi valovnimi dolžinami, uporabimo tako imenovani kompenzator. Z njim lahko 
+ustvarimo poljubni fazni zamik med ortognonalnima polarizacijama. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/10_Soleil.pdf_tex}
+\caption{Babinet-Soleilev kompenzator. S premikanjem klinaste ploščice spreminjamo
+fazni zamik med ortogonalnima komponentama polarizacijame prepuščene svetlobe.}
+\label{fig:10_Soleil}
+\end{figure}
+
+Primer kompenzatorjev je Babinet-Soleilev kompenzator.
+Sestavljen je iz treh elementov iz iste snovi: ene planparalelne ploščice in dveh klinastih ploščic, 
+pri čemer je optična os v ploščici pravokotna na optični osi v klinastih ploščicah 
+(slika~\ref{fig:10_Soleil}). S pomikanjem klinaste ploščice v smeri pravokotno na smer vpadne 
+svetlobe lahko poljubno nastavljamo fazni zamik (retardacijo) med obema lastnima polarizacijama.
+
+Če označimo debelino planparalele ploščice z $L_1$ in skupno debelino obeh klinastih ploščic
+na mestu vpadne svetlobe $L_2$, potem je fazni zamik med polarizacijama po prehodu skozi kompenzator
+enak:
+\beq
+\Delta \phi = k_0 (L_1 - L_2) (n_i - n_r).
+\eeq
+
+\begin{remark}
+Omenili smo ploščice $\lambda/4$, ki ustvarijo fazni zamik $\pi/2$, in ploščice $\lambda/2$,
+ki ustvarijo fazni zamik $\pi$. Zanimive so tudi ploščice $\lambda$, ki na prvi pogled nimajo
+posebnega učinka, saj valovanje le zamaknejo za eno valovno dolžino. Vednar je ta zamik odvisen
+od valovne dolžine, kar pomeni, da je fazni zamik $\lambda$ le pri točno določeni valovni dolžini,
+za ostale valovne dolžine pa je izhodna polarizacija na splošno eliptična. Če dodamo 
+\end{remark}
 
 \section{Konoskopija}
 Konoskopija je eksperimentalna metoda za analizo in vizualizacijo optično anizotropnih snovi. 
-Navadno želimo izvedeti, ali je snov optično enoosna ali dvoosna ter določiti orientacijo 
-optičnih osi. Določimo lahko tudi glavne lomne količnike $n_1$, $n_2$ in $n_3$. 
+Navadno želimo izvedeti, ali je snov optično enoosna ali dvoosna, ter določiti orientacijo 
+optičnih osi. Z uporabo te metode lahko poleg orientacije optičnih osi določimo 
+tudi glavne lomne količnike $n_1$, $n_2$ in $n_3$. Metoda je izredno uporabna v mineralogiji
+za identifikacijo in določanje lastnosti mineralov.
 
-Med prekrižani polarizacijski foliji damo proučevano snov. Osvetlitev izvedemo s koničnim
-snopom svetlobe. Na opazovalnem zaslonu se pojavijo svetle in temne proge, odvisno
-od dvolomnosti snovi. Ločimo dve vrsti linij na zaslonu: to so lahko izogire, pri katerih vpadna
+Metoda je preprosta: tanko plast snovi, ki jo proučujemo, postavimo med dva prekrižana 
+polarizatorja in jo osvetlimo s koničnim snopom svetlobe. Vpadni žarki, ki na snov vpadajo
+pod različnimi vpadnimi koti, se zaradi dvolomnosti razcepijo glede na polarizacijo, nato 
+pa se ob izhodu prispevki iz različnih vpadnih žarkov združijo v na splošno eliptično valovanje.
+Skozi analizator zato ponekod izhaja več svetlobe, ponekod pa manj in na 
+opazovalnem zaslonu se pojavijo svetle in temne proge, odvisno
+od dvolomnosti snovi. Ločimo dve vrsti črt na zaslonu: 
+
+prve so izogire, pri katerih vpadna
 polarizacija ustreza eni od lastnih polarizacij $\mathbf{D}_1$ ali $\mathbf{D}_2$, ali
 izokrome, pri katerih za dano valovno dolžino $\lambda$ dobimo fazni zamik $N2\pi$. 
 Če delamo poskus z belo svetlobo, so izokrome mavričnih barv, izogire pa so vedno temne.
-Trik: v eksperimentu lahko konično svetlobo dobimo tako, da z laserjem posvetimo
-na difuzor (na primer prosojni paus papir).
+
 
 
 
