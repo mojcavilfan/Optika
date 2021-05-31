@@ -1185,19 +1185,21 @@ izredni žarek pa smer Poyntinovega vektorja odstopa od smeri valovnega vektorja
 čemer je kot med njima enak kotu med smerjo jakosti in smerjo gostote električnega polja. 
 Poglejmo nekaj zanimivejših primerov.
 
-%%%%%%%%%%
-
 \begin{example}{\bf Dvojni lom pri poševnem vpadu na optično enoosno snov.}
 Oglejmo si lom svetlobe pri poševnem vpadu na optično enoosno snov, pri katerem 
 je optična os vzporedna z mejo med snovema (slika~\ref{fig:10_dvolom_6}). Vpadna
 svetloba naj bo nepolarizirana.
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/10_dvolom_6.pdf_tex}
 \caption{Dvojni lom pri poševnem vpadu nepolarizirane svetlobe iz izotropne v 
-optično anizotropno snov, če je optična os vzporedna mejni ravnini. Vpadni žarek
-se razcepi v dva žarka, ki sta medsebojno ortogonalno polarizirana.}
+optično anizotropno snov, če je optična os vzporedna mejni ravnini: 
+dvojni lom v pozitivno anizotropno snov (a) in lom v negativno 
+aniztropno snov (b). V obeh primerih 
+se vpadni žarek razcepi v dva žarka, ki sta medsebojno ortogonalno polarizirana. Smer 
+Poyntinovega vektorja za redni žarek ni prikazana, saj je enaka smeri valovnega vektorja
+$\mathbf{k}_r$.}
 \label{fig:10_dvolom_6}
 \end{figure}
 
@@ -1260,170 +1262,183 @@ Sledi:
 /n_\perp^2 -1\right)n_0^2 \sin^2\alpha}}.
 \label{eq:10_117}
 \eeq
+Enačbi~(\ref{eq:10_110} in \ref{eq:10_117}) uporabimo za izračun lomnega kota, ki podaja 
+smer valovnega vektorja v snovi. Za izračun smeri prenosa energije oziroma smeri 
+Poyntingovega vektorja moramo upoštevati tudi, da smeri $\mathbf{k}$ in $\mathbf{S}$
+za izredni žarek nista vzporedni. Kot med njima $\gamma$ izračunamo z enačbo~(\ref{eq:10_105}),
+pri čemer moramo upoštevati razliko med lomnim kotom $\beta_i$ in kotom $\vartheta$,
+ki nastopa v enačbi za elipso ~(\ref{eq:10_112}).
 
-
-
-Iz enačbe .. izračunamo lomni kot. Pri tem moramo biti pozorni, da je le vektor $\mathbf{D}$
-transverzalen na valovni vektor, vektor $\mathbf{E}$ pa ima tudi longitudinalno 
-komponento in oklepa z vektorjem $\mathbf{D}$ kot $\gamma$.
-samo za optično oz vzporedno.
-
-
+Za kristale z negativno optično anizotropijo (slika~\ref{fig:10_dvolom_6}\,) je račun zelo 
+podoben. Razlika nastanek pri izračunu smeri Poyntinovega vektorja, saj se 
+pri negativno anizotropnih snoveh kot $\gamma$ (kot med $\mathbf{k}$ in $\mathbf{S}$)
+odšteje od lomnega kota $\beta_i$, pri pozitivno anizotropnih pa prišteje.
 \end{example}
 
-
-
-\begin{example}{\bf Dvojni lom pri pravokotnem vpadu vzdolž lastne osi.}
-Prvi primer naj bo pravokotni vpad na optično enoosno snov, pri katerem je optična os
-vzporedna z mejo med snovema.
-\begin{figure}[h]
-\centering
-\def\svgwidth{70truemm} 
-\input{slike/10_dvolom_3.pdf_tex}
-\caption{Pravokotni vpad svetlobe iz izotropne v optično anizotropno snov vzdolž 
-lastne osi}
-\label{fig:10_dvolom_3}
-\vglue-3truemm
-\end{figure}
-
-Pri pravoktnem vpadu se smer valovnega vektorja ohranja in ostaja v smeri pravokotno 
-na mejno ravnino. Redni in izredni žarek zato potujeta v isti smeri in po prehodu 
-iz kristala izstopata na istem mestu. Ker pa se različni polarizaciji širita z različnima
-hitrostma, med njima nastane fazna razlika, ki je odvisna od debeline snovi $L$. 
-Fazno razliko zapišemo kot:
-\beq
-\Delta \phi = \phi_i-\phi_r = k_0 L (n_i-n_r).
-\label{eq:10_108}
-\eeq
-S spreminjanjem debeline snovi lahko ustvarimo poljuben fazni zamik med
-polarizacijama, kar uporabljamo za izdelavo retardacijskih ploščic 
-(glej razdelek~\ref{chap:komponente}).
-\end{example}
-
+%%%%%%%%%%
 \begin{example}{\bf Dvojni lom pri pravokotnem vpadu.}
-Prvi primer naj bo pravokotni vpad na optično enoosno snov, pri katerem je optična os
-nagnjena glede na mejno ravnino.
+\label{chap:dvolomfaza}
+Obravnavajmo poseben primer prejšnjega zgleda, ko svetloba vpada pravokotno na mejo
+med izotropno in anizotropno snovjo, optična os pa naj bo še vedno vzporedna z mejo 
+med snovema (slika~\ref{fig:10_dvolom_3}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/10_dvolom_3.pdf_tex}
 \caption{Pravokotni vpad svetlobe iz izotropne v optično anizotropno snov vzdolž 
 lastne osi}
 \label{fig:10_dvolom_3}
+\end{figure}
+
+Redni žarek se po pričakovanu ne lomi in tako valovni kot Poyntingov vektor kažeta
+v smeri pravokotno na mejno ravnino. Pri izrednem žarku je podobno, saj je smer
+valovnega vektorja v smeri normale, s slike pa vidimo, da je tudi
+smer Poyntinovega vektorja (normala na elipso) vzporedna z valovnim vektorjem. 
+Redni in izredni žarek zato v tem primeru potujeta v isti smeri in po prehodu 
+iz kristala izstopata na istem mestu. Ker pa se različni polarizaciji širita z različnima
+hitrostma, med njima nastane fazna razlika, ki je odvisna od debeline snovi $L$. 
+Fazno razliko med izrednim in rednim žarkom zapišemo kot:
+\beq
+\Delta \phi = \phi_i-\phi_r = k_0 L (n_i-n_r) = k_0 L (n_\myparallel - n_\perp).
+\label{eq:10_108}
+\eeq
+Če na snov posvetimo z linearno polarizirano svetlobo, kater polarizacija se ne ujema
+z lastnimi osmi snovi, tako med posameznima komponentama vpadne polarizacije nastane
+fazni zamik. S spreminjanjem debeline snovi lahko spreminjamo zamik $\Delta \phi$,
+kar uporabljamo za izdelavo retardacijskih ploščic (glej razdelek~\ref{chap:komponente}).
+Kadar se polarizacija vpadne svetlobe ujema z eno od lastnih osi snovi, se ohranjata 
+tako polarizacija kot smer širjenja svetlobe.
+\end{example}
+
+\begin{example}{\bf Dvojni lom pri pravokotnem vpadu in splošni smeri optične osi.}
+Za konec poglejmo še pravokotni vpad na optično enoosno snov, v kateri je optična os
+nagnjena glede na mejno ravnino. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/10_dvolom_7.pdf_tex}
+\caption{Pravokotni vpad svetlobe na optično anizotropno snov z nagnjeno optično osjo}
+\label{fig:10_dvolom_7}
 \vglue-3truemm
 \end{figure}
 
-Pri pravoktnem vpadu se smer valovnega vektorja ohranja in ostaja v smeri pravokotno 
-na mejno ravnino. Za redni žarek je smer Poyntingovega vektorja vzporedna valovnemu
-vektorju, tako da žarek potuje v isti smeri naprej. Poyntingov vektor za izredni žarek
-pa je v smeri tangentno na elipso, zato je nagnjen za nek kot $\gamma$ glede na normalo
-na mejno ploskev. 
-
-
-in po prehodu 
-iz kristala izstopata na istem mestu. Ker pa se različni polarizaciji širita z različnima
-hitrostma, med njima nastane fazna razlika, ki je odvisna od debeline snovi $L$. 
-Fazno razliko zapišemo kot:
-\beq
-\Delta \phi = \phi_i-\phi_r = k_0 L (n_i-n_r).
-\label{eq:10_108}
-\eeq
-S spreminjanjem debeline snovi lahko ustvarimo poljuben fazni zamik med
-polarizacijama, kar uporabljamo za izdelavo retardacijskih ploščic 
-(glej razdelek~\ref{chap:komponente}).
+Pri pravokotnem vpadu se smer valovnega vektorja ohranja tako za redni kot za izredni 
+žarek. Za redni žarek je smer Poyntingovega vektorja vzporedna valovnemu vektorju, 
+tako da žarek tudi v snovi potuje v smeri normale. 
+Poyntingov vektor za izredni žarek pa je v smeri tangentno na elipso in zato 
+nagnjen za kot $\gamma$ glede na normalo na mejno ploskev. Po vpadu na  optično 
+anizotropno snov z nagnjeno optično osjo tako tudi pri pravokotnem vpadu svetlobe 
+pride do loma, pri čemer se lomi valovanje s TM polarizacijo, TE polarizirano 
+valovanje pa ne. Iz snovi izstopata dva različno polarizirana vzporedna žarka, 
+zato lahko tako postavitev uporabimo kot polarizator za pridobivanje
+linearno polarizirane svetlobe.
 \end{example}
 
-\begin{example}{\bf Optično anizotropna snov med prekrižanima polarizatorjema.}{
+\begin{example}{\bf Optično anizotropna snov med prekrižanima polarizatorjema.}
 Fazni zamik med polarizacijama pri prehodu skozi optično anizotropno snov je 
-odvisen tudi od valovne dolžine svetlobe. Kadar postavimo optično anizotropno 
-snov med prekrižana polarizatorja, zato snov na splošno vidimo obarvano, saj se 
-polarizacija svetlobe z določenimi valovnimi dolžinami zasuče za $\pi/2$, z drugimi
-valovnimi dolžinami pa za drugačen kot in je zato izhodni polarizator ne prepušča
-oziroma je prepušča znanto manj.
+odvisen tudi od valovne dolžine svetlobe (enačba~\ref{eq:10_108}). 
+Polarizacija valovanj z različnimi valovnimi dolžinami se zato v snovi zasuče za različne kote 
+in če anizotropno snov postavimo med prekrižana polarizatorja, bodo nekatere barve bolj prepuščene
+od drugih, nekatere pa sploh ne. Snov zato na splošno vidimo obarvano 
+(slike~\ref{fig:10_nematik} in \ref{fig:10_dvolom_5}).
 \begin{figure}[ht]
 \centering
 \includegraphics[width=7truecm]{slike/10_FotoDvolom5a.jpg}\hfill
 \includegraphics[width=7truecm]{slike/10_FotoDvolom5b.jpg}
-\caption{Primer optično anizotropne snovi je lepilni trak. Kadar zlepimo več 
-plasti pod različnimi koti, so fazni zamiki na različnih delih različni. Linearno
-polarizirana svetloba zato na razičnih delih vzorca dobi različni razni zamik in 
-skozi analizator so prepuščene različne valovne dolžine (a). 
-Ko analizator vrtimo, se barve
-vzorca spreminjajo (b).}
+\caption{Primer optično anizotropne snovi je lepilni trak. Kadar naključno zlepimo več 
+plasti, so fazni zamiki na različno debelih in različno orientiranih delih različni. 
+Svetloba, prepuščena skozi analizator, je zato različnih barv (a). Ko analizator sučemo, 
+se barve vzorca spreminjajo~(b).}
 \label{fig:10_dvolom_5}
 \end{figure}
-
+\vglue-3truemm
 \end{example}
-
-
-
-
-Zanimiv primer je pravokotni vpad nepolarizirane svetlobe na anizotropno snov. Če
-ozek snop nepolarizirane svetlobe usmerimo na plast optično anizotropne snovi, se 
-energijski tok tega snopa v snovi razdeli na dva delna snopa, ki se širita
-v rahlo različnih smereh. Če je plast snovi dovolj debela, se delna snopa zaradi tega 
-prostorsko ločita. Na izstopni strani dobimo dva ločena razmaknjena 
-snopa, ki se širita v smeri pravokotno na mejo in sta medsebojno ortogonalno linearno
-polarizirana.
-
-
-Če ploščico optično dvoosne snovi položimo na vzorec, vzorec skozi ploščico vidimo
-dvojno. Premaknjeni sliki vzorca sta med seboj pravokotno linearno polarizirani.
-
-
-V smeri optičnih osi se vpadna polarizacija elektromagnetnega valovanja nemoteno širi naprej,
-ne da bi se pri tem pretvarjala v drugo polarizacijo. To ne velja za Poyntingov vektor. Posledično
-opazimo zanimiv pojav razcepa polarizacije svetlobe, ki mu pravimo konični dvojni lom. Samo za dvoosne snovi?
 
 \section{Optične komponente na osnovi dvolomnih snovi}
 \label{chap:komponente}
-Dvolomne snovi so osnova za večino optičnih komponent, s katerimi učinkujemo na polarizacijo
-svetlobe, oziroma naprav, ki se odzivajo na vpadno elektromagnetno valovanje v odvisnosti
+Dodobra smo spoznali širjenje snovi v optično anizotropnih snoveh in spoznali dvojni lom.
+Poglejmo zdaj načine uporabe dvojnega loma in optične komponente na osnovi dvolomnih snovi.
+Večinoma so to optične komponente, s katerimi učinkujemo na polarizacijo
+svetlobe, oziroma naprave, ki se odzivajo na vpadno elektromagnetno valovanje v odvisnosti
 od njegove polarizacije.
 
 \subsection*{Polarizatorji}
-Polarizatorje uporabimo, da iz nepolarizirane svetlobe ustvarijo  linearno polarizirano 
-svetlobo. Tak primer je Nicolova prizma, ki jo imenunjemo po škotskem geologu in fiziku
-Williamu Nicolu (1770--1851). Prizma temelji na dvolomnosti, da sta lomna količnika za 
-različni polarizaciji različna. Prizmo odrežemo pod takim kotom, da se ena lastna polarizacija
-ob vpadu na stranico totalno odbije, druga polarizacija pa je prepuščena. Kristal iz kalcita, 
-na primer, prerežemo in damo vmes plast prozornega kanadskega balzama z lomnim
-količnikom $n_0=1,55$.  Lomni količnik kalcita je $n_\perp = 1,658$, lomni količnik
-$n_\myparallel = 1,486$. Redni žarek se na meji med kristalom in vmesno plastjo 
-totalno odbije. Izredni žarek pa je prepuščen. In ker smo pri tem blizu Brewstrovega kota,
-je odbojnost za TM polarizacijo zelo majhna, tako da je praktično v celoti prepuščena. Na izhodu
-tako dobimo TM linearno polarizirano valovanje. 
+Ker se po prehodu skozi dvolomno snov redni in izredni žarek na splošno razmakneta, 
+lahko dvolomne snovi uporabimo za pridobivanje linearno polarizirane svetlobe iz nepolarizirane
+vpadne. Dvolomne snovi tako lahko delujejo kot polarizatorji.
 
-Drugi primer je Wollastonova prizma, poimenovana po angleškem kemiku in fiziku 
-Williamu Hyde Wollastonu (1766--1828). Prizmo naredimo tako, da kristal prerežemo po 
-diagonali in drugi del zasučemo glede na os prvega, tako da je optična os v drugem delu
-obrnjena pravokotno glede na optično os v prvem delu. Na meji med obema deloma se potem 
-valovanje razdeli na dve linearno polarizirani komponenti, ki zapustita prizmo vsaka v svoji
-smeri. 
+Prvi primer je Nicolova prizma, ki jo imenunjemo po škotskem geologu in fiziku
+Williamu Nicolu (1770--1851). Nicolova prizma je navadno sestavljena iz dveh kalcitnih prizm, ki 
+sta med seboj zlepljeni (slika~\ref{fig:10_Nicol}) s kanadskim balzamom\footnote{Kanadski balzam je neke vrste 
+terpentin, pridobljen iz smole balzamovca, iglavca iz rodu jelk.}. 
+Lomni količnik kanadskega balzama $n_0=1,550$ in velja:
+\beq
+n_\perp = 1,658 > n_0 = 1,550 > n_\myparallel = 1,486.
+\label{eq:10_119}
+\eeq
+Pri tem sta $n_\perp$ in $n_\myparallel$ lastna lomna količnika kalcita. 
+Prizmi sta odrezani pod takim kotom ($\approx 68\si{\degree}$), da se ena polarizacija na 
+meji z lepilom totalno odbije. Ker je kalcit negtivno anizotropen, se totalno odbije redno polarizirani
+žarek. Izredni žarek je skoraj v celoti prepuščen, saj je vpadni kot blizu Brewstrovega kota in je zato
+odbojnost za TM polarizacijo zelo majhna. Na izhodu iz prizme v smeri naprej dobimo 
+TM linearno polarizirano valovanje.
+\vglue3truemm
+\begin{figure}[!h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/10_Nicol.pdf_tex}
+\caption{Nicolova (a) in Wollastonova prizma (b) delujeta kot polarizatorja.}
+\label{fig:10_Nicol}
+\end{figure}
+
+Drugi primer je Wollastonova prizma, imenovana po angleškem kemiku in fiziku 
+Williamu Hyde Wollastonu (1766--1828). Prizma je sestavljena iz dveh zlepljenih pravokotnih prizm, 
+pri čemer je optična os v drugi prizmi pravokotna glede na optično os v prvi prizmi. 
+Na meji med prizmama se valovanje razdeli na dve linearno polarizirani komponenti, 
+ki zapustita prizmo vsaka v svoji smeri. 
+
+\begin{remark}
+Poleg omenjenih prizm poznamo veliko drugih polarizacijskih prizm. Na totalnem odboju temeljijo
+poleg Nicolove prizme še na primer Glan-Taylorjeva prizma (sestavljena iz dveh pravokotnih prizm, 
+med katerima je zračna reža, optični osi prizm pa ležita v ravnini osnovne ploskve prizme vzporedno 
+z vpadno stranico), Glan-Thompsonova prizma (sestavljena iz dveh zlepljenih pravokotnih prizm, 
+optični osi prizm pa sta pravokotni na osnovni ploskvi prizme) in Glan-Foucaultova prizma 
+(podobna kot Glan-Thompsonova, le da je med prizmama zračna reža). Paul Glan (1846--1898), 
+po katerem se te prizme imenujejo, je bil nemški fizik in meteorolog. Na razklonu žarkov
+pa poleg Wollastonove prizme delujejo med drugimi Nomarskijeva prizma (dve zlepljeni pravokotni prizmi, 
+optična os prve leži v ravnini osnovne ploskve, druge pa je pravokotna nanjo), Rochonova prizma
+(podobna Nomarskijevi, le da je optična os prve prizme vzdolž vpadne svetlobe) in 
+S\'enarmontova prizma (podoba Normanskijevi, le da je optična os prve prizme vzporedna vpadni svetlobi).
+\end{remark}
 
 \subsection*{Retardacijske ploščice}
-Retardacijske ploščice med dvema ortogonalnima komponentama polarizacije ustvarijo
-fazni zamik (retardacijo). Njihov učinek opišemo z Jonesovo matriko:
+Kadar svetloba vpada pravokotno na anizotropno snov vzdolž lastne osi kristala 
+(glej primer~\ref{chap:dvolomfaza}) se redni in 
+izredni žarek širita v isti smeri, med njima pa nastane fazni zamik oziroma retardacija, če se le 
+ne širita vzdolž optične osi.
+Ploščice, ki med dvema ortogonalnima komponentama vpadne polarizacije ustvarijo
+fazni zamik, imenujemo retardacijske ploščice. Njihov učinek opišemo z Jonesovo matriko:
 \beq
 M = 
 \left[\begin{array}{cc}
-e^{-i\Delta \Phi/2} & 0\\
-0 & e^{i\Delta \Phi/2}\\
+e^{-i\Delta \phi/2} & 0\\
+0 & e^{i\Delta \phi/2}\\
 \end{array}\right]\!\!.
+\label{eq:10_120}
 \eeq
-Pri tem je $\Delta \Phi = k_0 L (n_i-n_r)$, kjer je $L$ dolžina kristala, $n_i$ in $n_r$
-pa označujeta redni in izredni lomni količnik snovi. Če je $\Delta \Phi= \pi/2$, taki 
-retardacijski ploščici pravimo ploščica $\lambda/4$. Taka ploščia iz linearne polarizacije
-naredi cirkularno polarizirano svetlobo. Kadar je fazni zamik $\pi$, gre za ploščico $\lambda/2$.
+Pri tem je $\Delta \phi = k_0 L (n_i-n_r)$, kjer je $L$ dolžina kristala, $n_i$ in $n_r$
+pa označujeta redni in izredni lomni količnik snovi (enačba~\ref{eq:10_108}). 
+Če je $\Delta \phi= \pi/2$, retardacijski ploščici pravimo ploščica $\lambda/4$. 
+Ploščica $\lambda/4$ iz linearne polarizacije naredi cirkularno polarizirano svetlobo. 
+Kadar je fazni zamik $\pi$, element deluje kot ploščica $\lambda/2$, ki spremeni smer
+krožno polariziranega valovanja oziroma zasuče smer linearno polariziranega valovanja.
 
 \subsection*{Kompenzatorji}
 Retardacijske ploščice imajo željeno retardacijo le za določeno valovno dolžino. Če 
 želimo element, ki je uporaben za različne valovne dolžine, uporabimo tako imenovani
 kompenzator. Z njim lahko izničimo oz kompneziramo poljuben fazni zamik, do katerega pride
 v neki preiskovani snovi. Primer kompenzatorjev je Soleil-Babinetov kompenzator, v katerem
-retardacijo reguliramo s pomikanjnjem klinastega elementa iz anizotropne snovi. Poleg opisanega
-je še cela vrsta polarizatorjev in kompenzatorjev (Nomarski, Glan-Foucaul, Glan-Thompson, S{\'e}narmont, 
-Rochon).
+retardacijo reguliramo s pomikanjnjem klinastega elementa iz anizotropne snovi.
 
 \section{Konoskopija}
 Konoskopija je eksperimentalna metoda za analizo in vizualizacijo optično anizotropnih snovi. 

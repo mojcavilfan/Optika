@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{372.41269089bp}%
+    \setlength{\unitlength}{822.4930987bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,24 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.70266946)%
+  \begin{picture}(1,0.3181583)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(3.43483699,0.19966254){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{2.01088333\unitlength}\raggedright \end{minipage}}}%
+    \put(1.58706008,0.80225226){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.91049818\unitlength}\raggedright \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{10_dvolom_3.pdf}}%
-    \put(0.3965447,0.5064594){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_0$\end{tabular}}}}%
-    \put(0.08164629,0.51299536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_0$\end{tabular}}}}%
-    \put(0.02525718,0.22271577){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta n \neq 0$\end{tabular}}}}%
-    \put(0.40100965,0.28892109){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_r$\end{tabular}}}}%
-    \put(0.39924753,0.16621511){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_i$\end{tabular}}}}%
+    \put(-0.00109558,0.30224229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.08215765,0.24139541){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_0$\end{tabular}}}}%
+    \put(0.05662564,0.08625273){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_\parallel > n_\perp$\end{tabular}}}}%
+    \put(0.04368523,0.14061704){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}opti{\v c}na os\end{tabular}}}}%
+    \put(0.33236781,0.22814323){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_0$\end{tabular}}}}%
+    \put(0.33236781,0.13926469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_r$\end{tabular}}}}%
+    \put(0.33236781,0.05045335){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_i$\end{tabular}}}}%
+    \put(0.5140519,0.30224229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.59877353,0.24139541){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_0$\end{tabular}}}}%
+    \put(0.57324106,0.08625273){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_\parallel < n_\perp$\end{tabular}}}}%
+    \put(0.56030083,0.14061704){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}opti{\v c}na os\end{tabular}}}}%
+    \put(0.84896363,0.22889693){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_0$\end{tabular}}}}%
+    \put(0.85261103,0.09807315){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_r$\end{tabular}}}}%
+    \put(0.84896363,0.15698159){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_i$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

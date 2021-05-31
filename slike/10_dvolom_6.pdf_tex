@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{372.41398849bp}%
+    \setlength{\unitlength}{822.49327172bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,26 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.70266701)%
+  \begin{picture}(1,0.31815826)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(2.25761067,0.20154803){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{2.01087632\unitlength}\raggedright \end{minipage}}}%
+    \put(1.05281431,0.09125826){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.91049799\unitlength}\raggedright \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{10_dvolom_6.pdf}}%
-    \put(0.31465834,0.4848948){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_0$\end{tabular}}}}%
-    \put(0.08164945,0.51299361){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_0$\end{tabular}}}}%
-    \put(0.02526053,0.22271503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta n \neq 0$\end{tabular}}}}%
-    \put(0.44531673,0.35739237){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_r$\end{tabular}}}}%
-    \put(0.42914126,0.1971414){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_i$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{10_dvolom_6.pdf}}%
-    \put(0.70556103,0.31861456){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}opti{\v c}na os\end{tabular}}}}%
+    \put(-0.00109558,0.30224224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.27695007,0.22084759){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_0$\end{tabular}}}}%
+    \put(0.08215766,0.24139529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_0$\end{tabular}}}}%
+    \put(0.05662552,0.08625268){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_\parallel > n_\perp$\end{tabular}}}}%
+    \put(0.3598283,0.15133824){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_r$\end{tabular}}}}%
+    \put(0.33309883,0.1125493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_i$\end{tabular}}}}%
+    \put(0.04368524,0.14061697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}opti{\v c}na os\end{tabular}}}}%
+    \put(0.42367432,0.04766827){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{S}_i$\end{tabular}}}}%
+    \put(0.5140515,0.30224224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.79356503,0.22084759){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_0$\end{tabular}}}}%
+    \put(0.59877305,0.24139529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_0$\end{tabular}}}}%
+    \put(0.57324095,0.08625268){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_\parallel < n_\perp$\end{tabular}}}}%
+    \put(0.8465897,0.1369461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_r$\end{tabular}}}}%
+    \put(0.87644989,0.16678512){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_i$\end{tabular}}}}%
+    \put(0.56030042,0.14061697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}opti{\v c}na os\end{tabular}}}}%
+    \put(0.94076299,0.09925045){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{S}_i$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
