@@ -1459,36 +1459,103 @@ enak:
 \beq
 \Delta \phi = k_0 (L_1 - L_2) (n_i - n_r).
 \eeq
-
+\vglue-3truemm
 \begin{remark}
-Omenili smo ploščice $\lambda/4$, ki ustvarijo fazni zamik $\pi/2$, in ploščice $\lambda/2$,
-ki ustvarijo fazni zamik $\pi$. Zanimive so tudi ploščice $\lambda$, ki na prvi pogled nimajo
-posebnega učinka, saj valovanje le zamaknejo za eno valovno dolžino. Vednar je ta zamik odvisen
-od valovne dolžine, kar pomeni, da je fazni zamik $\lambda$ le pri točno določeni valovni dolžini,
-za ostale valovne dolžine pa je izhodna polarizacija na splošno eliptična. Če dodamo 
+Poleg ploščic $\lambda/4$, ki ustvarijo fazni zamik $\pi/2$, in ploščic $\lambda/2$,
+ki ustvarijo fazni zamik $\pi$, so zanimive tudi ploščice $\lambda$. Te na prvi pogled nimajo
+posebnega učinka, saj je fazni zamik, ki ga dodajo valovanju, enak $2\pi$. Vednar je ta zamik odvisen
+od valovne dolžine in je enak $2\pi$ le pri točno določeni valovni dolžini,
+za vse ostale pa je izhodna polarizacija na splošno eliptična. Če na izhod dodamo 
+analizator, taka ploščica izloči le izbrano valovno dolžino, ostale pa vsaj delno prepusti. 
+Navadno se uporablja ploščico za valovno dolžino $\sim 540~\si{nm}$, zato so med prekrižanima
+polarizatorjema videti izrazito rožnato. Uporablja se jih pri mikroskopiji za določanje predznaka
+optične anizotropije in povečanje kontrasta. Med vzporednima polarizatorjema jih uporabljamo
+v optičnih sistemih za odpravljanje morebitih neželenih sprememb linearne polarizacije. 
 \end{remark}
 
 \section{Konoskopija}
 Konoskopija je eksperimentalna metoda za analizo in vizualizacijo optično anizotropnih snovi. 
 Navadno želimo izvedeti, ali je snov optično enoosna ali dvoosna, ter določiti orientacijo 
 optičnih osi. Z uporabo te metode lahko poleg orientacije optičnih osi določimo 
-tudi glavne lomne količnike $n_1$, $n_2$ in $n_3$. Metoda je izredno uporabna v mineralogiji
+tudi glavne lomne količnike $n_1$, $n_2$ in $n_3$. Konoskopija je izredno uporabna v mineralogiji
 za identifikacijo in določanje lastnosti mineralov.
 
-Metoda je preprosta: tanko plast snovi, ki jo proučujemo, postavimo med dva prekrižana 
+Prinicp delovanja je preprost: tanko plast snovi, ki jo proučujemo, postavimo med dva prekrižana 
 polarizatorja in jo osvetlimo s koničnim snopom svetlobe. Vpadni žarki, ki na snov vpadajo
 pod različnimi vpadnimi koti, se zaradi dvolomnosti razcepijo glede na polarizacijo, nato 
-pa se ob izhodu prispevki iz različnih vpadnih žarkov združijo v na splošno eliptično valovanje.
+pa se ob izhodu prispevki iz različnih vpadnih žarkov seštejejo v na splošno eliptično valovanje.
 Skozi analizator zato ponekod izhaja več svetlobe, ponekod pa manj in na 
-opazovalnem zaslonu se pojavijo svetle in temne proge, odvisno
-od dvolomnosti snovi. Ločimo dve vrsti črt na zaslonu: 
+opazovalnem zaslonu se pojavijo svetle in temne interferenčne proge, katerih lega in oblika je 
+odvisna od dvolomnosti snovi. Ločimo dve vrsti črt na zaslonu: svetle črte imenujemo izokrome, temne
+pa izogire. Izokrome nastanejo na mestih, na katerih nastane za dano valovno dolžino $\lambda$ 
+fazni zamik $N2\pi$. Kadar osvetljujemo z belo svetlobo, so izokrome črte iste barve, kar da
+izokromam tudi ime. Izogire so temne črte in se pojavijo, kadar vpadna
+polarizacija ustreza eni od lastnih polarizacij $\mathbf{D}_1$ ali $\mathbf{D}_2$. Iz oblike
+opazovanega vzorca hitro določimo, ali je kristal enoosen ali dvoosen in z računom tudi lomne
+količnike snovi.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=7truecm]{slike/10_Konoskopija1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/10_Konoskopija2.jpg}
+\caption{Poenostavljen konoskopski ekspriment lahko naredimo tudi sami: na izhod laserskega
+kazalnika prilepimo moten lepilni trak, s čimer svetlobo razpršimo, in posvetimo na tanko plast
+dvolomne snovi med prekrižanima polarizatorjema. Optično dvoosno snov (plastična folija)
+prepoznamo po dveh 'očesih' (levo). Vzorec prepuščene svetlobe je odvisen od valovne dolžine (desno).}
+\label{fig:10_konoskopija}
+\vglue-4truemm
+\end{figure}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=7truecm]{slike/10_Konoskopija1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/10_Konoskopija2.jpg}
+\caption{NOVA SLIKA (ENOOSNA SNOV) 
+Poenostavljen konoskopski ekspriment lahko naredimo tudi sami: na izhod laserskega
+kazalnika prilepimo moten lepilni trak, s čimer svetlobo razpršimo, in posvetimo na tanko plast
+dvolomne snovi med prekrižanima polarizatorjema.}
+\label{fig:10_konoskopija2}
+\end{figure}
 
-prve so izogire, pri katerih vpadna
-polarizacija ustreza eni od lastnih polarizacij $\mathbf{D}_1$ ali $\mathbf{D}_2$, ali
-izokrome, pri katerih za dano valovno dolžino $\lambda$ dobimo fazni zamik $N2\pi$. 
-Če delamo poskus z belo svetlobo, so izokrome mavričnih barv, izogire pa so vedno temne.
-
-
-
+\end{example}
 
 \section{Inducirana anizotropija}
+Do zdaj smo obravnavali naravno dvolomne snovi, katerih dvolomnost je posledica kristalne
+strukture ali ureditve anizotropnih molekul. Izkaže se, da lahko dvolomnost umetno
+vzpostavimo tudi v sicer optično izotropnih snoveh. Na kratko bomo predstavili dva primera:
+optična anizotropija kot posledica mehanske obremenitve ali anizotropija kot posledica
+zunanjega električnega polja. 
+
+\subsection*{Fotoelastičnost}
+Fotoelastičnost je pojav, pri katerem optično izotropna snov zaradi mehanske obremenitve 
+postane optično anizotropna. Ko opazujemo vzorec pod mehansko obremenitvijo med prekrižanima
+polarizatorjema, je inducirana dvolomnost vidna kot barvni vzorci. Metoda je uporabna za 
+določanje porazdelitve mehanskih obremenitev v vzorcu oziroma za določanje točk največje 
+obrementive.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=7truecm]{slike/10_fotoelasticnost1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/10_fotoelasticnost2.jpg}
+\caption{Mehanske napetosti v plastičnem izdelku postanejo med prekrižanima 
+polarizatorjema vidne (levo). Plastična vrečka med prekrižanima polarizatorjema (desno).
+Vrečka je ki je zaradi izdelave že deloma anizotropna (zgoraj), 
+pod mehansko obrementivijo pa urejanje dolgih molekul polimera vodi 
+do povečanja anizotropije (spodaj).}
+\label{fig:10_fotoelasticnost}
+\end{figure}
+
+\subsection*{Elektro-optični pojav}
+Na optične lastnosti snovi lahko vplivamo tudi z zunanjim električnim poljem. Omenimo 
+dva pojava, to sta Pockelsov in Kerrov pojav. 
+
+Pri Pockelsovem
+pojavu je odziv snovi linearen na električno polje in je zato prisoten le v snoveh
+brez centra inverzije (npr. BaTiO$_3$ ali LiNbO$_3$). Ker je inducirana anizotropija sorazmerna
+s priključeno napetostjo, lahko s spreminjanjem napetosti spreminjamo fazni zamik med 
+komponentama polarizacije. Z dodanim analizatorjem lahko razlike v izhodni polarizaciji
+pretvorimo v razlike v intenziteti prepuščene svetlobe. Pockelsov pojav se imenuje po
+nemškem fiziku Friedrichu Carlu Alwinu Pockelsu (1865--1913).
+
+Kerrov pojav je kvadratni elektro-optični pojav in razlika v lomnih količnikih snovi 
+je sorazmerna s kvadratom priključene napetosti. Pojav je prisoten v vseh snoveh, tudi
+tekočinah, zelo izrazit je na primer v nitrotoluenu ali nitrobenzenu. Tudi v tem 
+primeru s spreminjanjem priključene napetosti spreminjamo fazni zamik oziroma polarizacijo
+prepuščene svetlobe. Kerrov pojav je poimenovan po škotskem fiziku Johnu Kerru (1824--1907).
