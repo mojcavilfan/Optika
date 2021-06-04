@@ -615,8 +615,7 @@ smeri lastnih gostot električnega polja in velikosti lomnih količnikov.
 V prejšnjem razdelku smo zapisali, da v anizotropnih snoveh v dani smeri valovnega vektorja
 lahko potujeta dve ravni valovanji z različnima polarizacijama in lomnima količnikoma. V 
 primerih~(\ref{ex:ind} in \ref{chap:ind2}) je opisan grafični postopek iskanja 
-lomnih količnikov in lastnih smeri polarizacij,
-tu pa opišimo drug pristop, ki je priročnejši za konkretne izračune. 
+rešitev, tu pa opišimo pristop s ploskvijo valovnega vektorja, ki je priročnejši za konkretne izračune. 
 
 Ponovno izhajamo iz Maxwellovih enačb oziroma enačbe~(\ref{eq:10_025}):
 \beq
@@ -625,7 +624,7 @@ k^2 \mathbf{E}- k_0^2\underline{\varepsilon}\,\mathbf{E}.
 \label{eq:10_069}
 \eeq
 Zapisana vektorska enačba predstavlja sistem treh enačb za tri komponente vektorja $\mathbf{E}$, ki 
-je netrivialno rešljiv, če je determinanta ustrezne matrike sistema enaka nič. Poiščimo najprej
+je netrivialno rešljiv, kadar je determinanta ustrezne matrike sistema enaka nič. Poiščimo najprej
 matriko sistema, pri čemer enačbe tudi tokrat zapišemo v lastnem sistemu tenzorja 
 $\underline{\varepsilon}$.
 
@@ -684,12 +683,13 @@ Determinanta matrike $M$ je v tem primeru:
 \left((k_y^2- k_0^2\varepsilon_{xx})(k_x^2- k_0^2\varepsilon_{yy})-k_x^2k_y^2\right) = 0.
 \label{eq:10_076}
 \eeq
-Zapisana enačba ima več rešitev. Eno dobimo, kadar je prvi oklepaj enak 0 in velja:
+Zapisana enačba ima več rešitev. Eno dobimo, kadar je prvi oklepaj enak 0. Takrat velja:
 \boxeq{eq:10_077}{
 \frac{k_x^2}{k_0^2\varepsilon_{zz}}+\frac{k_y^2}{k_0^2\varepsilon_{zz}} = 1.
 }
-Ta enačba v ravnini $xy$ opisuje krožnico s polmerom $k_0\varepsilon_{zz}$. Pripadajoči 
-lastni vektor jakosti električnega polja ima smer osi $z$.
+Ta enačba v ravnini $xy$ opisuje krožnico s polmerom $k_0\varepsilon_{zz}$. Iz zapisa matrike 
+$M$ (enačba~\ref{eq:10_075}) razberemo, da ima pripadajoči 
+lastni vektor jakosti električnega polja smer osi $z$.
 Drugo rešitev dobimo, kadar je drugi oklepaj v enačbi~(\ref{eq:10_076}) enak 0 in velja:
 \beq
 (k_y^2- k_0^2\varepsilon_{xx})(k_x^2- k_0^2\varepsilon_{yy})=k_x^2k_y^2.
@@ -700,31 +700,41 @@ Drugo rešitev dobimo, kadar je drugi oklepaj v enačbi~(\ref{eq:10_076}) enak 0
 \frac{k_x^2}{k_0^2 \varepsilon_{yy}}+ \frac{k_y^2}{k_0^2 \varepsilon_{xx}} = 1.
 }
 Zapisana druga rešitev v ravnini $xy$ opisuje elipso s polosjo $k_0\sqrt{\varepsilon_{yy}}$ v smeri $x$ in 
-$k_0\sqrt{\varepsilon_{xx}}$ v smeri $y$. Rešitev enačbe~(\ref{eq:10_074}) v ravnini $xy$ opisujeta
-krožnica in elipsa. Pripadajoči lastni vektor leži v ravnini $xy$.
+$k_0\sqrt{\varepsilon_{xx}}$ v smeri $y$. Pripadajoči lastni vektor leži v ravnini $xy$. 
 
-Podoben račun lahko naredimo tudi v ravninah $xz$ in $yz$, rezultata pa sta zelo podobna. V vseh treh
-ravninah tako dobimo rešitve v obliki ene krožnice in ene elipse. Če se držimo ustaljenega dogovora, 
+Podoben račun naredimo tudi v ravninah $xz$ in $yz$ in po pričakovanju dobimo podoben rezultat. V vseh treh
+ravninah so tako rešitve v obliki ene krožnice in ene elipse. Če se držimo ustaljenega dogovora, 
 da velja $\varepsilon_{xx}<\varepsilon_{yy}<\varepsilon_{zz}$, potem je v ravnini $xy$ elipsa znotraj krožnice,
 v ravnini $yz$ je elipsa zunaj krožnice, v ravnini $xz$ pa se krožnica in elipsa sekata 
 (slika~\ref{fig:10_ploskev_preseki}).
+
+Točke, v katerih se v ravnini $xz$ krožnica in elipsa sekata, določajo smeri optičnih osi. 
+V splošnem sta v anizotropni snovi dve optični osi in tako snov imenujemo optično dvoosna snov. V 
+anizotropnih snoveh z višjo stopnjo simetrije je optična os ena sama in snov imenujemo optično enoosna. 
+Če se svetloba širi vzdolž smeri optične osi, sta rešitvi enaki, kar pomeni, da se obe lastni 
+polarizaciji širita z enako hitrostjo. Polarizacija vpadnega valovanja se vzdolž optične osi tako ohranja.
+
+\begin{remark}
+Optično os v anizotropnih snoveh moramo ločiti od optične osi sistema, ki smo jo vpeljali v obosnem
+približku valovne enačbe (poglavje~\ref{chap:zarkovna}) in obravnavi uklonskih pojavov 
+(poglavje~\ref{chap:uklint}). Tam je optična os določala osrednjo os sistema in je bila točno določena 
+premica v prostoru. Pri anizotropnih smereh je optičnih osi lahko več (ena ali dve), poleg tega
+ v tem primeru optična os ni ena sama premica, temveč zgolj nakazuje smer v prostoru, podobno kot vektor. 
+V angleškem jeziku sta izraza za optični osi ločeni: {\it optical axis} je optična os sistema 
+in {\it optic axis} optična os v anizotropni snovi.
+\end{remark}
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/10_ploskev_preseki.pdf_tex}
-\caption{Preseki ploskve valovnega vektorja s koordinatnimi ravninami $xy$ (a), $yz$ (b) in $xz$ (c).
+\caption{Rešitve za ravne valove v koordinatnah ravninah $xy$ (a), $yz$ (b) in $xz$ (c).
 V prvih dveh primerih se elipsa in krožnica, ki predstavljata rešitev enačbe, ne sekata, v tretjem
 primeru pa se elipsa in krožnica sekata. Lega presečišč določa smeri dveh optičnih osi v snovi (turkizni puščici).
-Pri tem velja $n_x = \sqrt{\varepsilon_{xx}}$, $n_y = \sqrt{\varepsilon_{yy}}$ in $n_z = \sqrt{\varepsilon_{zz}}$.}
+Uporabili smo oznake: $n_x = \sqrt{\varepsilon_{xx}}$, $n_y = \sqrt{\varepsilon_{yy}}$ in $n_z = \sqrt{\varepsilon_{zz}}$.}
 \label{fig:10_ploskev_preseki}
+\vglue-3truemm
 \end{figure}
-
-Točke, v katerih se v ravnini $xz$ krožnica in elipsa sekata, določajo smeri optičnih osi. 
-V splošnem sta v anizotropni snovi dve taki osi in snov imenujemo optično dvoosna snov. Če se 
-svetloba širi vzdolž smeri optične osi, sta rešitvi za obe polarizaciji enaki in se torej obe 
-ortogonalni polarizaciji širita z enako hitrostjo. Svetloba, ki se širi vzdolž optične osi, 
-ohranja polarizacijo.
 
 \begin{example}{\bf Smer optičnih osi v optično dvoosni snovi.}
 Poiščimo smeri optičnih osi v ravnini $xz$. Zaradi simetrije zadošča določiti smer 
@@ -734,27 +744,18 @@ določimo kot smer presečišča krožnice (enačba~\ref{eq:10_077}) in elipse (
 Naj bo $\mathbf{s}$ smerni vektor vzdolž valovnega vektorja $\mathbf{k}$ (enačba~\ref{eq:10_033}).
 Potem enačbo krožnice zapišemo kot:
 \beq
-n^2s_x^2+n^2s_z^2 = \varepsilon_{yy},
+n^2s_x^2+n^2s_z^2 = \varepsilon_{yy} \qquad \Longrightarrow \qquad n = \sqrt{\varepsilon_{yy}}.
 \label{eq:10_081}
-\eeq
-od koder sledi:
-\beq
-n = \sqrt{\varepsilon_{yy}}.
-\label{eq:10_082}
 \eeq
 Iščemo presečišče krožnice z elipso:
 \beq
-\frac{n^2s_x^2}{\varepsilon_{zz}} + \frac{n^2s_z^2}{\varepsilon_{xx}}=1,
-\label{eq:10_083}
-\eeq
-za katerega velja:
-\beq
+\frac{n^2s_x^2}{\varepsilon_{zz}} + \frac{n^2s_z^2}{\varepsilon_{xx}}=1 \qquad \Longrightarrow \qquad 
 \frac{1}{n} = \sqrt{\frac{s_x^2}{\varepsilon_{zz}} + \frac{s_z^2}{\varepsilon_{xx}}} = 
 \frac{1}{\sqrt{\varepsilon_{yy}}}.
-\label{eq:10_084}
+\label{eq:10_083}
 \eeq
 Naj bo smerni vektor $\mathbf{s}= (\sin\vartheta, 0, \cos\vartheta)$, pri čemer je kot
-$\vartheta$ kot med optično osjo in osjo $z$. Enačbo~(\ref{eq:10_084}) prepišemo
+$\vartheta$ kot med optično osjo in osjo $z$. Enačbo~(\ref{eq:10_083}) prepišemo
 v:
 \beq
 \frac{\sin^2\vartheta}{\varepsilon_{zz}} + \frac{\cos^2\vartheta}{\varepsilon_{xx}}=
@@ -769,18 +770,16 @@ od koder sledi:
 Od tod izračunamo kot $\vartheta$ optične osi, druga os pa leži pod kotom $-\vartheta$ glede na os $z$.
 \end{example}
 
-Vrnimo se k enačbi~(\ref{eq:10_074}) oziroma determinanti zapisane matrike $M$. Zaenkrat smo njene 
+Vrnimo se k determinanti zapisane matrike $M$ (enačba~\ref{eq:10_074}). Zaenkrat smo njene 
 rešitve poiskali le na koordinatnih ravninah in ugotovili, da ima v poljubni smeri valovnega vektorja
-na teh ravninah sistem dve rešitvi, ki ustrezata dvema ortogonalnima polarizacijama. Rešitvam, ki jih
-v ravninah opisujejo krožnice, pripada lastni vektor, ki je pravokoten na ravnino izbrane krožnice, 
-rešitvam, ki jih opišemo z elipsami, pa ustreza lastni vektor v ravnini izbrane elipse, ki je pravokoten
-na valovni vektor. V smereh, kjer
-sta rešitvi za obe polarizaciji enaki, se obe lastni polarizaciji širita z enako hitrostjo in snov 
-deluje kot izotropna. To se zgodi, kadar svetloba vpada vzdolž ene od dveh optičnih osi snovi.
-Rešitve v koordinatnih ravninah smo tudi grafično predstavili na sliki~\ref{fig:10_ploskev_preseki}.
-Na splošno je rešitev bolj zapletena, saj so v poljubni smeri valovnega vektorja vse tri komponente 
-različne od nič. Rešitev lahko grafično predstavimo s 3D geometrijsko ploskvijo, ki jo imenujemo
-ploskev valovnega vektorja. Ker sta v poljubni smeri možni dve rešitvi, je ploskev valovnega vektorja
+na teh ravninah sistem dve rešitvi, ki ustrezata dvema ortogonalnima polarizacijama. Krožnici
+pripada lastni vektor, ki je pravokoten na ravnino krožnice, elipsam pa lastni vektor v ravnini 
+izbrane elipse, ki je pravokoten na valovni vektor. Vzdolž optičnih osi se rešitvi ujemata in 
+obe lastni polarizaciji se širita z enako hitrostjo, zato snov deluje kot izotropna. 
+
+Za poljubno smer valovnega vektorja je rešitev bolj zapletena in jo predstavimo grafično s 
+3D geometrijsko ploskvijo, ki jo imenujemo ploskev valovnega vektorja. 
+Ker sta v poljubni smeri možni dve rešitvi, je ploskev valovnega vektorja
 dvolistna ploskev. Notranji in zunanji list se dotikata oziroma sekata le v štirih točkah v prostoru, ki
 določajo smer optičnih osi (slika~\ref{fig:10_ploskev_3D}).
 
@@ -799,17 +798,19 @@ $\mathbf{E}$. Vzdolž lastnih osi se smeri gostote in jakosti električnega polj
  
 Določimo še smer električnega polja, ki ustreza izračunanima rešitvama. Za gostoto električnega polja
 smo že zapisali odgovor: za rešitev na krožnici je lastni vektor $\mathbf{D}$ pravokoten
-na ravnino krožnice, za rešitev na elipsi pa leži v isti ravnini tudi lastni vektor, ki 
-vedno pravokoten na valovni vektor $\mathbf{k}$. Če se širi svetloba vzdolž ene od lastnih osi
+na ravnino krožnice, za rešitev na elipsi pa lastni vektor leži v ravnini elipse v smeri pravokotno 
+na valovni vektor $\mathbf{k}$. Če se širi svetloba vzdolž ene od lastnih osi
 sistema, je vektor jakosti električnega polja $\mathbf{E}$ vzporeden vektorju gostote polja $\mathbf{D}$.
 
 Na splošno se smeri gostote in jakosti električnega polja ne ujemata, zato moramo smer $\mathbf{E}$
 še določiti. Zaradi preprostosti se ponovno omejimo na ravnino $xy$~(\ref{eq:10_075}). Rešitev 
-enačbe~(\ref{eq:10_074}) poiščemo tako, da vstavimo dobljene rešitve za $k_x$ in $k_y$.
+enačbe~(\ref{eq:10_074}) poiščemo tako, da vanjo vstavimo dobljene rešitve za $k_x$ in $k_y$.
 
-Ko vstavimo rešitev s krožnico, za katero velja enačba~(\ref{eq:10_077}), je zadnji člen identično 
-enak nič. V tej smeri je lahko jakost električnega polja poljubna, ostali dve komponenti pa morata
-biti enaki nič. Rešitvi s krožnico torej ustreza vektor jakosti električnega polja $\mathbf{E}$, ki
+Ko vstavimo rešitev s krožnico (enačba~\ref{eq:10_077}), je zadnja komponenta
+produkta $M\cdot \mathbf{E}$ identično 
+enaka nič. V tej smeri je lahko jakost električnega polja poljubna, ostali dve komponenti pa morata
+biti enaki nič, da zadostimo enačbi.
+Rešitvi s krožnico torej ustreza vektor jakosti električnega polja $\mathbf{E}$, ki
 je pravokoten na ravnino $xy$ (slika~\ref{fig:10_ploskev_3D}).
 
 Poglejmo še rešitev z elipso (enačba~\ref{eq:10_080}). Rešitev vstavimo v matriko $M$ in dobimo
@@ -817,7 +818,7 @@ enačbo:
 \beq
 M \cdot \mathbf{E}= \left[\begin{array}{ccc}
 -k_x^2\frac{\varepsilon_{xx}}{\varepsilon_{yy}} &  - k_xk_y & 0\\
-- k_xk_y & k_y^2\frac{\varepsilon_{yy}}{\varepsilon_{xx}} &0\\
+- k_xk_y & -k_y^2\frac{\varepsilon_{yy}}{\varepsilon_{xx}} &0\\
 0& 0 & k_x^2+k_y^2  - k_0^2\varepsilon_{zz}\\
 \end{array}\right] \cdot
 \left[\begin{array}{c}
@@ -833,7 +834,7 @@ Od tod sledi zveza med komponentama polja:
 \label{eq:10_088}
 \eeq
 S tem smo določili smer jakosti električnega polja v ravnini $xy$. Pokažimo z računom,
-da izračunana smer predstavlja smer tangente na elipso. 
+da izračunana smer predstavlja smer tangente na elipso pri danem valovnem vektorju $\mathbf{k}$. 
 
 Vpeljemo $X = k_x/k_0$ in $Y = k_y/k_0$
 in zapišemo elipso (enačba~\ref{eq:10_080}):
@@ -848,7 +849,8 @@ Y' = - \frac{\varepsilon_{xx}}{\varepsilon_{yy}} \frac{X}{Y}.
 \label{eq:10_090}
 \eeq
 Vidimo, da je odvod, ki določa smerni koeficient tangente na dano krivuljo, enak
-izračunanemu izrazu (enačba~\ref{eq:10_088}).
+izračunanemu izrazu (enačba~\ref{eq:10_088}). Jakost polja je pri danem valovnem vektorju torej
+vzporedna tangenti na elipso (slika~\ref{fig:10_ploskev_tangenta}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{130truemm} 
@@ -872,7 +874,7 @@ vektorja.
 \begin{example}{\bf Kot med gostoto in jakostjo električnega polja.}
 Dvolistna ploskev valovnega vektorja ima na splošno dve rešitvi in izračun kota med gostoto
 in jakostjo električnega polja je razmeroma zapleten. Tukaj se omejimo le na eno geometrijsko
-ravnino, naj bo to $xz$ (slika~\ref{fig:10_ploskev_tangenta}\,b). Naj bo smer valovnega vektorja
+ravnino, naj bo to $xz$ (slika~\ref{fig:10_ploskev_tangenta}\,a). Naj bo smer valovnega vektorja
 podana s smerjo $\mathbf{s}=(s_x, s_y, s_z) = (\sin\vartheta, 0, \cos\vartheta)$, pri čemer je $\vartheta$
 kot med osjo $z$ in vektorjem $\mathbf{s}$. Smer gostote polja preprosto določimo, saj vemo, da
 je pravokotna na $\mathbf{s}$ (enačba~\ref{eq:10_013}) in da leži v ravnini elipse. Dobimo:
@@ -880,7 +882,7 @@ je pravokotna na $\mathbf{s}$ (enačba~\ref{eq:10_013}) in da leži v ravnini el
 \mathbf{D} = D_0 (-\cos\vartheta, 0, \sin\vartheta).
 \label{eq:10_091}
 \eeq
-Za jakost električnega polja pa vemo, da leži v isti ravnini tangentno na elipso (enačba~\ref{eq:10_088}):
+Za jakost električnega polja vemo, da leži v isti ravnini tangentno na elipso (enačba~\ref{eq:10_088}):
 \beq
 \mathbf{E} \propto (-\varepsilon_{zz}k_z, 0, \varepsilon_{xx}k_x) \propto
 (-\varepsilon_{zz}s_z, 0, \varepsilon_{xx}s_x) = (-\varepsilon_{zz}\cos\vartheta, 0, \varepsilon_{xx}\sin\vartheta).
@@ -901,7 +903,8 @@ $\gamma=0$ in vektorja gostote in jakosti električnega polja vzporedna.
 
 \begin{example}{\bf Primeri optično dvoosnih snovi.}
 Med optično dvoosne snovi snovi sodijo monokristali s triklinsko, 
-monoklinsko ali ortorombsko mrežo. Nekaj primerov lastnih vrednosti
+monoklinsko ali ortorombsko mrežo, pogosto pa so optično dvoosni tudi raztegnjeni 
+polimeri. Nekaj primerov lastnih vrednosti
 tenzorja dielektričnosti $\underline{\varepsilon}$ oziroma njihovih korenov 
 pri valovni dolžini svetlobe $590~\si{nm}$ je navedenih v spodnji tabeli.
 \begin{center}
@@ -916,8 +919,8 @@ topaz & 1,618 & 1,620 & 1,627 \\ \hline
 \end{example}
 
 \begin{remark}
-Do zdaj smo spoznali grafično upodobitev lomnega količnika v anizotropni snovi 
-z optično indikatriso in z ploskvijo valovnega vektorja. Poleg tega obstajajo še
+Do zdaj smo spoznali dve grafični upodobitvi lomnega količnika v anizotropni snovi: 
+z optično indikatriso in s ploskvijo valovnega vektorja. Poleg tega obstajajo še
 druge grafične upodobitve obravnave elektromagnetnega valovanja v anizotropnih snoveh.
 Ena od njih je ploskev fazne hitrosti. Dobimo jo tako, da vpeljemo vektor fazne hitrosti:
 \beq
@@ -954,9 +957,8 @@ c_x^2+c_y^2 = \frac{c_0^2}{\varepsilon_{zz}}\qquad \mathrm{in}\qquad
 \frac{(c_x^2+c_y^2)^2}{c_0^2}.
 \label{eq:10_096}
 \eeq
-V izbrani smeri $\mathbf{c}/c$ ponovno dobimo dve rešitvi. 
 
-Tretja možna reprezentacija je ploskev žarkovne hitrosti. Ta je povezana s hitrostjo
+Omenimo še reprezentacijo s ploskvijo žarkovne hitrosti. Ta je povezana s hitrostjo
 širjenja energije elektromagnetnega valovanja. Kot že vemo, Poyntingov vektor
 v anizotropni snovi ni vzporeden valovnemu vektorju $\mathbf{k}$, ampak je med njima kot $\gamma$. 
 Vpeljemo žarkovno hitrost $\mathbf{u}$ v smeri Poyntingovega vektorja:
@@ -970,10 +972,11 @@ Poyntingovega vektorja. S fazno hitrostjo $c$ jo zato izrazimo kot:
 u = \frac{c}{\cos \gamma}.
 \label{eq:10_098}
 \eeq
-Žarkovna hitrost je zato vedno večja od fazne hitrosti, razen v primeru, ko svetloba
-potuje vzdolž lastne osi kristala in sta Poyntingov in valovni vektor vzporedna. 
+Žarkovna hitrost je vedno večja od fazne hitrosti, razen v primeru, ko svetloba
+potuje vzdolž lastne osi kristala. Takrat sta Poyntingov in valovni vektor vzporedna, žarkovna
+in fazna hitrost pa enaki.
 
-V tem primeru zapišemo sistem enačb za $\mathbf{D}$, ki ga rešujemo z matriko 
+Za izračun ploskve žarkovne hitrosti zapišemo sistem enačb za $\mathbf{D}$, ki ga rešujemo z matriko 
 $M$ in $\det M =0$. Ponovno dobimo dvolistno ploskev žarkovne hitrosti, njena 
 presečišča s koordinatnimi ravninami pa so krožnice in elipse, na primer v ravnini $xy$:
 \beq
@@ -991,7 +994,7 @@ simetrijo, se tenzor dodatno poenostavi. V rotacijsko simetričnih snoveh sta ta
 vrednosti tenzorja dielektričnosti enaki, tretja pa se razlikuje od njiju.
 Po dogovoru velja $\varepsilon_{xx} = \varepsilon_{yy}\neq \varepsilon_{zz}$.
 
-Poglejmo, kako so ploskve, ki smo jih na splošno uporabili za grafično predstavitev optično
+Poglejmo, kako so ploskve, ki smo jih uporabili za grafično predstavitev optično
 dvoosnih snovi, videti v tem primeru. Optična indikatrisa oziroma indeksni elipsoid 
 (slika~\ref{fig:10_indikatrisa}) je rotacijski elipsoid, saj sta lastni vrednosti
 v ravnini $x$ in $y$ enaki. Bolj zanimiva je ploskev valovnega vektorja 
@@ -1004,7 +1007,7 @@ enoosne. Če se držimo dogovora iz prejšnjega odstavka, je optična os vzpored
 \centering
 \def\svgwidth{130truemm} 
 \input{slike/10_ploskev_3D_eno.pdf_tex}
-\caption{Ploskev valovnega vektorja (a) je tudi v optično enoosnih dvolistna ploskev, 
+\caption{Ploskev valovnega vektorja (a) je tudi v optično enoosnih snoveh dvolistna ploskev, 
 ki ima v poljubni smeri dve rešitvi in se dotika sama sebe le v smeri optične osi 
 (turkizna puščica). Preseki ploskve valovnega vektorja
 s koordinatnimi ravninami (b) so v obliki krožnic in elips.
@@ -1063,9 +1066,8 @@ Rešitve, ki ustrezajo krožnici (redni žarek), so neodvisne od smeri,
 gostota in jakost električnega polja (rdeča) sta vzporedni in 
 pravokotni na ravnino krožnice. Za rešitev, ki ustreza 
 elipsi, je gostota električnega polja pravokotna na valovni vektor 
-(zelena), jakosti električnega polja pa tangentna na elipso (rdeča), 
-pri čemer obe ležita v ravnini elipse, ki jo določata optična os in smer $\mathbf{s}$.
-Turkizna puščica označuje optično os.}
+(zelena), jakost električnega polja pa tangentna na elipso (rdeča), 
+pri čemer obe ležita v ravnini elipse, ki jo določata optična os (turkizna) in smer $\mathbf{s}$.}
 \vglue-3truemm
 \label{fig:10_elipsa}
 \end{figure}
@@ -1073,7 +1075,7 @@ Turkizna puščica označuje optično os.}
 Drugo rešitev podaja enačba elipse:
 \beq
 \frac{k_\perp^2/k_0^2}{\varepsilon_\myparallel}+ \frac{k_\myparallel^2/k_0^2}{\varepsilon_\perp} = 
-\frac{n^2s_\perp^2}{\varepsilon_\myparallel}+ \frac{n^2s_\myparallel^2}{\varepsilon_\perp} = 
+\frac{n_i^2s_\perp^2}{\varepsilon_\myparallel}+ \frac{n_i^2s_\myparallel^2}{\varepsilon_\perp} = 
 1.
 \label{eq:10_104}
 \eeq
@@ -1093,7 +1095,7 @@ za enoosno snov:
 \sqrt{n_\myparallel^4\cos^2\vartheta+ n_\perp^4\sin^2 \vartheta}}.
 \label{eq:10_105}
 \eeq
-Isti kot je seveda tudi med smerjo valovnega vektorja in smerjo Poyntingovega vektorja.
+Isti kot $\gamma$ je seveda tudi med smerjo valovnega in Poyntingovega vektorja.
 
 \begin{example}{\bf Primeri optično enoosnih snovi.} Med optično enoosne snovi 
 sodijo kristali s tetragonalno, heksagonalno ali trigonalno simetrijo, na primer
@@ -1113,14 +1115,14 @@ tekoči kristal 5CB ($25~\si{\celsius}$) & 1,53 & 1,73 & 0,20 \\ \hline
 \vglue5truemm
 Vpeljali smo razliko med izrednim in rednim lomnim količnikom
 $\Delta n = n_\myparallel - n_\perp$, ki jo imenujemo optična anizotropija. 
-Če je $\Delta n >0$, pravimo, da ima snov pozitivno anizotropijo 
-(slika~\ref{fig:10_elipsa}\,a), v nasprotnem 
-primeru je anizotropija negativna (slika~\ref{fig:10_elipsa}\,b). 
-Kadar sta lomna količnika enaka, je snov optično izotropna.
+Če je $\Delta n >0$, pravimo, da ima snov pozitivno anizotropijo oziroma je 
+pozitivno anizotropna (slika~\ref{fig:10_elipsa}\,a), v nasprotnem 
+primeru je anizotropija negativna oziroma snov negativno anizotropna
+(slika~\ref{fig:10_elipsa}\,b). 
 \end{example}
 
 \section{Lom pri prehodu svetlobe iz izotropne v optično enoosno snov}
-Zamislimo si prehod ravnega potujočega elektromagnetnega valovanja iz izotropne snovi 
+Obravnavajmo prehod ravnega potujočega elektromagnetnega valovanja iz izotropne snovi 
 z lomnim količnikom $n_0$ v anizotropno snov. Vemo, da sta v anizotropni snovi 
 dve lastni rešitvi valovne enačbe, vsaka s svojo polarizacijo in svojim lomnim količnikom.
 Zaradi razlike v lomnih količnikih za redni in izredni žarek pričakujemo,
@@ -1131,22 +1133,23 @@ Označimo lomna količnika za splošen primer z $n_1$ in $n_2$.
 V skladu z robnimi pogoji za ohranitev tangentne komponente $\mathbf{E}$ 
 na meji dveh snovi (enačba~\ref{eq:RPE}) se mora na meji ohranjati 
 komponenta valovnega vektorja, ki je vzporedna z mejo med snovema.
-To ugotovitev zapišemo v obliki lomnega zakona, pri čemer je $\alpha$ vpadni kot:
+To ugotovitev zapišemo v obliki lomnega zakona, pri čemer je $\alpha$ vpadni kot 
+(slika~\ref{fig:10_dvolom_1}):
 \beq
-k_0 n_0 \sin \alpha = k_0 n_1(\beta_1) \sin \beta_1 
+k_0 n_0 \sin \alpha = k_0 n_1 \sin \beta_1 
 \label{eq:10_106a}
 \eeq
 in 
 \beq
-k_0 n_0 \sin \alpha = k_0 n_2(\beta_2) \sin \beta_2.
+k_0 n_0 \sin \alpha = k_0 n_2 \sin \beta_2.
 \label{eq:10_106}
 \eeq
 Za redni žarek je lomni količnik neodvisen od smeri širjenja svetlobe in enak $n_r$.
 Lomni zakon za redni žarek je tako enak kot v izotropni snovi:
 \boxeq{eq:rednilom}{
-n_0 \sin \alpha = n_r\sin\beta_r
+n_0 \sin \alpha = n_r\sin\beta_r.
 }
-Zdaj tudi razumemo, odkod poimenovanje ``redni'' žarek, saj se obnaša tako kot
+Zdaj tudi razumemo, odkod poimenovanje ``redni'' žarek, saj se pri lomu obnaša tako kot
 pričakujemo iz poznavanja izotropnih snovi. 
 
 Za izredni žarek je lom bolj zapleten, saj je lomni količnik odvisen od kota, pod
@@ -1166,8 +1169,9 @@ komponenta valovnega vektorja, ki je vzporedna z mejo med snovema, ohranja. }
 \begin{figure}[ht]
 \centering
 \includegraphics[width=9truecm]{slike/10_FotoDvolom2.jpg}
-\caption{Snop svetlobe se pri lomu v kalcit razcepi v dva snopa. Pot svetlobe skozi 
-kristal je vidna zaradi fluorescence.}
+\caption{Dvojni lom v kalcitu: vpadni snop svetlobe se ob lomu 
+razcepi na dva snopa, ki se lomita pod različnima kotoma.
+Pot svetlobe skozi kristal je vidna zaradi fluorescence.}
 \label{fig:10_dvolom_2}
 \end{figure}
 \begin{figure}[h!]
@@ -1182,7 +1186,7 @@ Kalcitu zaradi te optične lastnosti rečemo tudi islandski dvolomec.
 \end{figure}
 
 Ko enkrat določimo smeri valovnih vektorjev v snovi, lahko izračunamo tudi 
-smeri Poyntingovih vektorjev, ki predstavljajo smer širjenja energije. Za redni 
+smeri Poyntingovih vektorjev, ki predstavljata smeri širjenja energije. Za redni 
 žarek je račun preprost, saj je Poyntingov vektor vzporeden valovnemu vektorju, za 
 izredni žarek pa smer Poyntingovega vektorja odstopa od smeri valovnega vektorja, pri 
 čemer je kot med njima enak kotu med smerjo jakosti in smerjo gostote električnega polja. 
@@ -1211,7 +1215,7 @@ vpadno ravnino (transverzalno električno oziroma TE valovanje).
 Zanj velja navadni lomni zakon, pri čemer je lomni količnik v snovi 
 redni lomni količnik $n_r$ (enačba~\ref{eq:rednilom}). Velja:
 \beq
-n_0 \sin\alpha = n_r \sin \beta_r = \sqrt{\varepsilon_\perp}\sin\beta_r.
+n_0 \sin\alpha = n_r \sin \beta_r = n_\perp\sin\beta_r.
 \label{eq:10_110}
 \eeq
 Pri tem smo z $\alpha$ označili vpadni kot, z $\beta_r$ pa lomni kot rednega žarka.
@@ -1224,7 +1228,7 @@ n_0 \sin \alpha = n_i \sin\beta_i,
 \label{eq:10_111}
 \eeq
 pri čemer $\beta_i$ označuje lomni kot izrednega žarka glede na normalo na mejno ravnino.
-Ne smemo pozabiti, da v enačbah za izračun lomnega količnika v odvisnosti od smeri 
+Pri računu moramo upoštevati, da v enačbah za lomni količnik v odvisnosti od smeri 
 valovnega vektorja (enačba~\ref{eq:izredni}) nastopa kot $\vartheta$ glede na smer optične osi.
 Med kotoma $\beta_i$ in $\vartheta$ zato v opisanem primeru velja zveza:
 \beq
@@ -1269,11 +1273,11 @@ Enačbi~(\ref{eq:10_110} in \ref{eq:10_117}) uporabimo za izračun lomnega kota,
 smer valovnega vektorja v snovi. Za izračun smeri prenosa energije oziroma smeri 
 Poyntingovega vektorja moramo upoštevati tudi, da smeri $\mathbf{k}$ in $\mathbf{S}$
 za izredni žarek nista vzporedni. Kot med njima $\gamma$ izračunamo z enačbo~(\ref{eq:10_105}),
-pri čemer moramo upoštevati razliko med lomnim kotom $\beta_i$ in kotom $\vartheta$,
-ki nastopa v enačbi za elipso ~(\ref{eq:10_112}).
+pri čemer moramo tudi tukaj biti pozorni na razliko med lomnim kotom $\beta_i$ in kotom $\vartheta$,
+ki nastopa v enačbi za elipso (enačba~\ref{eq:10_112}).
 
-Za kristale z negativno optično anizotropijo (slika~\ref{fig:10_dvolom_6}\,) je račun zelo 
-podoben. Razlika nastanek pri izračunu smeri Poyntingovega vektorja, saj se 
+Za kristale z negativno optično anizotropijo (slika~\ref{fig:10_dvolom_6}\,b) je račun zelo 
+podoben. Razlika nastane pri izračunu smeri Poyntingovega vektorja, saj se 
 pri negativno anizotropnih snoveh kot $\gamma$ (kot med $\mathbf{k}$ in $\mathbf{S}$)
 odšteje od lomnega kota $\beta_i$, pri pozitivno anizotropnih pa prišteje.
 \end{example}
@@ -1298,15 +1302,15 @@ v smeri pravokotno na mejno ravnino. Pri izrednem žarku je podobno, saj je smer
 valovnega vektorja v smeri normale, s slike pa vidimo, da je tudi
 smer Poyntingovega vektorja (normala na elipso) vzporedna z valovnim vektorjem. 
 Redni in izredni žarek zato v tem primeru potujeta v isti smeri in po prehodu 
-iz kristala izstopata na istem mestu. Ker pa se različni polarizaciji širita z različnima
-hitrostma, med njima nastane fazna razlika, ki je odvisna od debeline snovi $L$. 
+iz kristala izstopata na istem mestu. Ker pa se valovanji z različnima  polarizacijama širita z različnima
+hitrostma, med žarkoma nastane fazna razlika, ki je odvisna od debeline snovi $L$. 
 Fazno razliko med izrednim in rednim žarkom zapišemo kot:
 \beq
 \Delta \phi = \phi_i-\phi_r = k_0 L (n_i-n_r) = k_0 L (n_\myparallel - n_\perp).
 \label{eq:10_108}
 \eeq
 Če na snov posvetimo z linearno polarizirano svetlobo, katere polarizacija se ne ujema
-z lastnimi osmi snovi, tako med posameznima komponentama vpadne polarizacije nastane
+z lastnimi osmi snovi, zaradi anizotropije med posameznima komponentama vpadne polarizacije nastane
 fazni zamik. S spreminjanjem debeline snovi lahko spreminjamo zamik $\Delta \phi$,
 kar uporabljamo za izdelavo retardacijskih ploščic (glej razdelek~\ref{chap:komponente}).
 Kadar se polarizacija vpadne svetlobe ujema z eno od lastnih osi snovi, se ohranjata 
@@ -1322,26 +1326,27 @@ nagnjena glede na mejno ravnino.
 \input{slike/10_dvolom_7.pdf_tex}
 \caption{Pravokotni vpad svetlobe na optično anizotropno snov z nagnjeno optično osjo}
 \label{fig:10_dvolom_7}
-\vglue-3truemm
+\vglue-5truemm
 \end{figure}
 
 Pri pravokotnem vpadu se smer valovnega vektorja ohranja tako za redni kot za izredni 
 žarek. Za redni žarek je smer Poyntingovega vektorja vzporedna valovnemu vektorju, 
 tako da žarek tudi v snovi potuje v smeri normale. 
 Poyntingov vektor za izredni žarek pa je v smeri tangentno na elipso in zato 
-nagnjen za kot $\gamma$ glede na normalo na mejno ploskev. Po vpadu na  optično 
+nagnjen za kot $\gamma$ glede na normalo na mejno ploskev (enačba~\ref{eq:10_105}). 
+Po vpadu na  optično 
 anizotropno snov z nagnjeno optično osjo tako tudi pri pravokotnem vpadu svetlobe 
 pride do loma, pri čemer se lomi valovanje s TM polarizacijo, TE polarizirano 
-valovanje pa ne. Iz snovi izstopata dva različno polarizirana vzporedna žarka, 
-zato lahko tako postavitev uporabimo kot polarizator za pridobivanje
-linearno polarizirane svetlobe.
+valovanje pa ne. Iz snovi izstopata dva različno polarizirana vzporedna žarka, ki sta
+med seboj premaknjena.
 \end{example}
 
 \begin{example}{\bf Optično anizotropna snov med prekrižanima polarizatorjema.}
 Fazni zamik med polarizacijama pri prehodu skozi optično anizotropno snov je 
 odvisen tudi od valovne dolžine svetlobe (enačba~\ref{eq:10_108}). 
-Polarizacija valovanj z različnimi valovnimi dolžinami se zato v snovi zasuče za različne kote 
-in če anizotropno snov postavimo med prekrižana polarizatorja, bodo nekatere barve bolj prepuščene
+Polarizacija valovanj z različnimi valovnimi dolžinami pridobi različni fazni zamik in se 
+ob prehodu skozi snov zasuče za različne kote. Če anizotropno snov 
+postavimo med prekrižana polarizatorja, bodo nekatere barve bolj prepuščene
 od drugih, nekatere pa sploh ne. Snov zato na splošno vidimo obarvano 
 (slike~\ref{fig:10_nematik} in \ref{fig:10_dvolom_5}).
 \begin{figure}[ht]
@@ -1380,11 +1385,12 @@ n_\perp = 1,658 > n_0 = 1,550 > n_\myparallel = 1,486.
 \label{eq:10_119}
 \eeq
 Pri tem sta $n_\perp$ in $n_\myparallel$ lastna lomna količnika kalcita. 
-Prizmi sta odrezani pod takim kotom ($\approx 68\si{\degree}$), da se ena polarizacija na 
-meji z lepilom totalno odbije. Ker je kalcit negativno anizotropen, se totalno odbije redno polarizirani
+Prizmi sta odrezani pod takim kotom, da se ena polarizacija na 
+meji z lepilom totalno odbije, druga pa ne. 
+Ker je kalcit negativno anizotropen, se totalno odbije redno polarizirani
 žarek. Izredni žarek je skoraj v celoti prepuščen, saj je vpadni kot na mejno ploskev
 blizu Brewstrovega kota in je zato odbojnost za TM polarizacijo zelo majhna. 
-Na izhodu iz prizme v smeri naprej torej dobimo TM linearno polarizirano valovanje.
+Na izhodu iz prizme v smeri naprej dobimo TM linearno polarizirano valovanje.
 \vglue3truemm
 \begin{figure}[!h]
 \centering
@@ -1395,7 +1401,8 @@ Na izhodu iz prizme v smeri naprej torej dobimo TM linearno polarizirano valovan
 \end{figure}
 
 Drugi primer je Wollastonova prizma, imenovana po angleškem kemiku in fiziku 
-Williamu Hyde Wollastonu (1766--1828). Prizma je sestavljena iz dveh zlepljenih pravokotnih prizem, 
+Williamu Hyde Wollastonu (1766--1828). Prizma je sestavljena iz dveh zlepljenih pravokotnih prizem (tristrana
+prizma, v katerih je en kot $90\si{\degree}$), 
 pri čemer je optična os v drugi prizmi pravokotna glede na optično os v prvi prizmi. 
 Na meji med prizmama se valovanje razdeli na dve linearno polarizirani komponenti, 
 ki zapustita prizmo vsaka v svoji smeri. 
@@ -1447,14 +1454,14 @@ ustvarimo poljubni fazni zamik med ortogonalnima polarizacijama.
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/10_Soleil.pdf_tex}
-\caption{Babinet-Soleilev kompenzator. S premikanjem klinaste ploščice spreminjamo
-fazni zamik med ortogonalnima komponentama polarizacije prepuščene svetlobe.}
+\caption{Babinet-Soleilev kompenzator. S premikanjem klinaste ploščice spreminjamo debelino
+plasti in z njo fazni zamik med ortogonalnima polarizacijama prepuščene svetlobe.}
 \label{fig:10_Soleil}
 \end{figure}
 
 Primer kompenzatorjev je Babinet-Soleilev kompenzator.
 Sestavljen je iz treh elementov iz iste snovi: ene planparalelne ploščice in dveh klinastih ploščic, 
-pri čemer je optična os v ploščici pravokotna na optični osi v klinastih ploščicah 
+pri čemer je optična os v planparalelni ploščici pravokotna na optični osi v klinastih ploščicah 
 (slika~\ref{fig:10_Soleil}). S pomikanjem klinaste ploščice v smeri pravokotno na smer vpadne 
 svetlobe lahko poljubno nastavljamo fazni zamik (retardacijo) med obema lastnima polarizacijama.
 
@@ -1462,7 +1469,7 @@ svetlobe lahko poljubno nastavljamo fazni zamik (retardacijo) med obema lastnima
 na mestu vpadne svetlobe $L_2$, potem je fazni zamik med polarizacijama po prehodu skozi kompenzator
 enak:
 \beq
-\Delta \phi = k_0 (L_1 - L_2) (n_i - n_r).
+\Delta \phi = k_0 (L_1 - L_2) (n_\myparallel - n_\perp).
 \eeq
 \vglue-3truemm
 \begin{remark}
@@ -1481,19 +1488,19 @@ v optičnih sistemih za odpravljanje morebitnih neželenih sprememb linearne pol
 \section{Konoskopija}
 Konoskopija je eksperimentalna metoda za analizo in vizualizacijo optično anizotropnih snovi. 
 Navadno želimo izvedeti, ali je snov optično enoosna ali dvoosna, ter določiti orientacijo 
-optičnih osi. Z uporabo te metode lahko poleg orientacije optičnih osi določimo 
+optičnih osi. Z natančno analizo lahko poleg orientacije optičnih osi določimo 
 tudi glavne lomne količnike $n_1$, $n_2$ in $n_3$. Konoskopija je izredno uporabna v mineralogiji
 za identifikacijo in določanje lastnosti mineralov.
 
-Princip delovanja je preprost: tanko plast snovi, ki jo proučujemo, postavimo med dva prekrižana 
+Metoda je preprosta: tanko plast snovi, ki jo proučujemo, postavimo med prekrižana 
 polarizatorja in jo osvetlimo s koničnim snopom svetlobe. Vpadni žarki, ki na snov vpadajo
 pod različnimi vpadnimi koti, se zaradi dvolomnosti razcepijo glede na polarizacijo, nato 
 pa se ob izhodu prispevki iz različnih vpadnih žarkov seštejejo v na splošno eliptično valovanje.
-Skozi analizator zato ponekod izhaja več svetlobe, ponekod pa manj in na 
-opazovalnem zaslonu se pojavijo svetle in temne interferenčne proge, katerih lega in oblika je 
-odvisna od dvolomnosti snovi. Ločimo dve vrsti črt na zaslonu: svetle črte imenujemo izokrome, temne
-pa izogire. Izokrome nastanejo na mestih, na katerih nastane za dano valovno dolžino $\lambda$ 
-fazni zamik $N2\pi$. Kadar osvetljujemo z belo svetlobo, so izokrome črte iste barve, kar da
+Skozi analizator zato v nekaterih smereh izhaja več svetlobe, v drugih pa manj in na 
+opazovalnem zaslonu se pojavijo svetle in temne interferenčne proge, katerih lega in oblika sta
+odvisni od dvolomnosti snovi. Ločimo dve vrsti črt na zaslonu: svetle črte imenujemo izokrome, temne
+pa izogire. Izokrome nastanejo na mestih, na katerih nastane za dano valovno dolžino 
+fazni zamik $2\pi N$. Kadar osvetljujemo z belo svetlobo, so izokrome črte iste barve, kar da
 izokromam tudi ime. Izogire so temne črte in se pojavijo, kadar vpadna
 polarizacija ustreza eni od lastnih polarizacij $\mathbf{D}_1$ ali $\mathbf{D}_2$. Iz oblike
 opazovanega vzorca hitro določimo, ali je kristal enoosen ali dvoosen in z računom tudi lomne
@@ -1517,12 +1524,13 @@ prepoznamo po dveh 'očesih' (levo). Vzorec prepuščene svetlobe je odvisen od 
 pravokotna na polarizatorja (levo) ali vzporedna z njima (desno). Na levi sliki je
 tekoči kristal, na desni pa okoli 20 plasti prozornega lepilnega traku.}
 \label{fig:10_konoskopija2}
+\vglue-3truemm
 \end{figure}
 
 \end{example}
 
 \section{Inducirana anizotropija}
-Do zdaj smo obravnavali naravno dvolomne snovi, katerih dvolomnost je posledica kristalne
+Obravnavali smo naravno dvolomne snovi, katerih dvolomnost je posledica kristalne
 strukture ali ureditve anizotropnih molekul. Izkaže se, da lahko dvolomnost umetno
 vzpostavimo tudi v sicer optično izotropnih snoveh. Na kratko bomo predstavili dva primera:
 optična anizotropija kot posledica mehanske obremenitve ali anizotropija kot posledica
@@ -1533,15 +1541,16 @@ Fotoelastičnost je pojav, pri katerem optično izotropna snov zaradi mehanske o
 postane optično anizotropna. Ko opazujemo vzorec pod mehansko obremenitvijo med prekrižanima
 polarizatorjema, je inducirana dvolomnost vidna kot barvni vzorci. Metoda je uporabna za 
 določanje porazdelitve mehanskih obremenitev v vzorcu oziroma za določanje točk največje 
-obremenitve.
+obremenitve. V polimernih izdelkih napetosti, ki se pojavijo ob izdelavi, 
+pogosto ostanejo zamrznjene v snovi.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=7truecm]{slike/10_fotoelasticnost1.jpg}\hfill
 \includegraphics[width=7truecm]{slike/10_fotoelasticnost2.jpg}
 \caption{Mehanske napetosti v plastičnem izdelku postanejo med prekrižanima 
 polarizatorjema vidne (levo). Plastična vrečka med prekrižanima polarizatorjema (desno).
-Vrečka je ki je zaradi izdelave že deloma anizotropna (zgoraj), 
-pod mehansko obremenitvijo pa urejanje dolgih molekul polimera vodi 
+Vrečka je zaradi izdelave že deloma anizotropna (zgoraj), 
+pod mehansko obremenitvijo (raztegom) pa urejanje dolgih molekul polimera vodi 
 do povečanja anizotropije (spodaj).}
 \label{fig:10_fotoelasticnost}
 \end{figure}
