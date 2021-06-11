@@ -2,9 +2,417 @@
 
 \chapter{Koherenca}
 \label{chap:Koherenca}
- 
+Koherenca oziroma koherentne lastnosti svetlobe se nanašajo na obstoj povezave
+med fazo elektromagnetnega valovanja ob nekem času ter faso elektromagnetnega
+valovanja na nekem drugem kraju ob nekem drugem času. V poglavjih o uklonu in interferenci
+smo predpostavljali, da znamo fazo zapisati na vsakem kratju in ob vsakem času,
+s čemer smo predpostavili, da je elektromagnetno valovanje popolnoma koherentno
+in da lahko jakost električnega polja zapišemo kot funkcijo, ki jo poznamo
+za vsak $\mathbf{r}$ in $t$, se pravi:
+\beq
+\mathbf{E} (\mathbf{r}, t) = f(\mathbf{r}, t) = \mathbf{E}_0(\mathbf{r}, t) e^{i\phi(\mathbf{r}, t)}, 
+\eeq
+pri čemer je amplituda $\mathbf{E}_0$ realna. Še vedno obravnavamo polje $\mathbf{E}$
+v skalarnem približku, zanima nas pa predvsem fazni člen $\phi(\mathbf{r}, t)$. V odvisnosti
+od eksperimenta lahko ločimo med časovno (ali longitudinalno oziroma vzdolžno) koherenco ter
+prostorsko (ali tranzverzalno oziroma prečno) koherenco.
+
 \section{Časovna koherenca}
-\section{Wiener-Hinčinov teorem}
+Opazujmo monokromatsko elektromagnetno valovanje v skalarnem približku. Na mestu $\mathbf{r}$
+ga ob času $t$ in $t+\tau$ zapišemo kot:
+\beq
+E(\mathbf{r}, t) = E_0 e^{-i\omega t} e^{i\phi(\mathbf{r}, t)}
+\eeq
+ter
+\beq
+E(\mathbf{r}, t+\tau) = E_0 e^{-i\omega (t+\tau)} e^{i\phi(\mathbf{r}, t+\tau)}.
+\eeq
+Glede na povezavo med $\phi(\mathbf{r}, t)$ in $\phi(\mathbf{r}, t+\tau)$ ločimo tri vrste valovanj:
+\begin{itemize}
+ \item Za popolnoma koherentno valovanje velja: $\phi(\mathbf{r}, t+\tau) = f(\mathbf{r}, t, \phi(\mathbf{r}, t))$
+ za vsak $\tau$. Povedano drugače: če poznamo fazo valovanja ob nekem času, jo poznamo tudi ob vsakem drugem času.
+ \item Za delno koherentno velja:
+\begin{equation}
+\phi(\mathbf{r}, t)=\begin{cases}
+f(\mathbf{r}, t, \phi(\mathbf{r}, t)); \quad \tau < \tau_c\\
+\mathrm{ni povezave}; \quad \tau > \tau_c.
+\end{cases}
+\label{eq:gauss-eksponent}
+\end{equation}
+Do časa $\tau_c$, ki ga imenujemo koherenčni čas, fazo valovanja znamo napovedati, pri časih, ki so daljši
+od koherehnčnega časa, pa ni povezave med fazo valovanja.
+ \item Za povsem nekoheretno valovanje velja, da sta $\phi(\mathbf{r}, t)$ in $\phi(\mathbf{r}, t+\tau)$
+ povsem nepovezana in naključna za vse vrednosti $\tau$.
+\end{itemize}
+V resnici imamo praktično vedno opravka z delno koherentnim valovanjem. Če si denimo predstavljamo
+plinsko razelektritveno cev (neonska luč) in opazujemo svetlobe ene same spektralne komonente (filter).
+Ta svetloba je superpozicija sevalnih prispevkov vseh atomov, ki iz vzbujenega stanja prehajajo v nižja
+energijska stanja s sevanjem. V času, ki je kratek v primerjavi s tipičnim časom med trki atomov,
+imajo vsa sevalna polja neko določeno fazo. Ko dva atoma trčita, se faza naključno spremeni. Tipični 
+čas med trki je pri $U \sim 1~\si{kV}$, $\Delta l = 1~\si{nm}$ in $\langle v \rangle \sim 10^3~\si{m/s}$
+enak $\tau_c \sim 10^{-14}~\si{s}$. To ustreza nekaj nihajnim periodam vidne svetlobe. Celotno sevalno 
+polje na izbranem mestu torej izgleda kot SLIKA.
+
+Časovno koherenco analiziramo z Michelsonovim interferometrom. To metodo imenujemo tudi Fouriereva
+spektroskopija. Uporabimo Twyman-Greenovo postavitev. SLIKA. Delni valovanji, ki interferirata na
+mestu detekcije, izvirata iz istega izvora S, sta pa med seboj zaradi različno dolgih poti zakasnjeni
+za:
+\beq
+\tau = \frac{2 \Delta l}{c_0},
+\eeq
+pri čemer je $2\Delta l$ razlika poti med delnima valovanjema v prvi in drugi veji interferometra. Jakost
+električnega polja na detektorju je potem:
+\beq
+E_d = E(t) + E(t+\tau).
+\eeq
+Gostota svetlobnega toka na detektorju je:
+\beq
+j_d \propto |E(t) + E(t+\tau)|^2 = \left(E(t) + E(t+\tau)\right) \left(E^*(t) + E^*(t+\tau)\right)
+\eeq
+in 
+\beq
+j_d \propto |E(t)|^2 + |E(t+\tau)|^2 + E(t)E^*(t+\tau) + E^*(t)E(t+\tau).
+\eeq
+Z detektorjem zajemamo signal v časovnem intervalu $T$, ki je navadno bistveno daljši od koherenčnega
+časa in velja $T\gg \tau_c$. Zato na detektorju zaznamo povprečen vpadni signal:
+\beq
+\langle j_d \rangle \propto \frac{1}{T}\int_{-T/2}^{T/2} 
+\left(|E(t)|^2 + |E(t+\tau)|^2 + 2 \Re \left( E(t)E^*(t+\tau)\right) \right) dt.
+\eeq
+Če sta amplitudi delnih žarkov enaki, velja:
+\beq
+\langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 2\frac{1}{T}\int_{-T/2}^{T/2} 
+\Re \left( E(t)E^*(t+\tau)\right) dt = 2\langle |E(t)|^2 \rangle + 2\Re \left( G^{(1)}(\tau)\right).
+\eeq
+Pri tem smo vpeljali časovno avtokorelacijsko funkcijo polja:
+\boxeq{eq:G1}{
+G^{(1)}(\tau)= \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2}E(t)E^*(t+\tau)dt.
+}
+\begin{example}{\bf Avtokorelacija sinusnega valovanja.}
+Obravnavajmo ravno sinusno elektromagnetno valovanje. Zapišemo ga v obliki:
+\beq
+E(t) = E_0 e^{-i\omega t} \qquad \mathrm{in} \qquad E(t+\tau)= E_0 e^{-i\omega(t+\tau)},
+\eeq
+pri čemer je $E_0$ realno število. Potem je časovna avtokorelacijska funkcija enaka:
+\beq
+G^{(1)} = \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2}E_0 e^{-i\omega t}E_0^*e^{i\omega t}e^{i\omega\tau} dt.
+\eeq
+Sledi:
+\beq
+G^{(1)} = E_0^2 e^{i\omega \tau} \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2} dt= E_0^2 e^{i\omega \tau}.
+\eeq
+Gostota svetlobnega toka na detektorju je potem:
+\beq
+\langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 2 E_0^2 \Re e^{i\omega \tau} = 
+2\langle |E(t)|^2 \rangle + 2 E_0^2 \cos(\omega \tau).
+\eeq
+Za majhne vrednosti $\tau$ je tako:
+\beq
+\langle j_d \rangle  = 2 j_0 + 2 j_0 \cos (\omega \tau),
+\eeq
+pri čemer je:
+\beq
+\omega \tau = 2\omega \frac{\Delta l}{c_0} = 2 k \Delta l = \Delta \phi.
+\eeq
+Izraz .. prevedemo na:
+\beq
+\langle j_d \rangle  = 4 j_0 \cos^2\frac{\Delta \phi}{2},
+\eeq
+pri čemer je $j_0$ gostota energijskega toka delnega vpadnega valovanja.
+
+Zapisani rezultat velja samo v primeru povsem koherentnega valovanja, za katerega znamo napovedati
+fazo v vsakem trenutku. V praksi pa opisano obnašanje opazimo le v bližini ekvidistančne 
+lege zrcal za majhne vrednosti $\Delta \phi$. Ko razliko v poteh posameznih delnih 
+žarkov povečujemo, se koherenca valovanja zmanjšuje in kontrast interferenčnega vzorca bledi.
+Pri zelo velikih vrednostih $\Delta l$ imata delna žarka naključni fazi, kar pomeni, da $\Delta \phi$
+zavzema naključne vrednosti med $0$ in $2\pi$. Posledično je povprečje $\langle \cos \Delta \phi \rangle= 0$
+in za velike vrednosti $\tau$ velja:
+\beq
+\langle j_d \rangle = 2 j_0.
+\eeq
+\end{example} 
+
+Namesto koherenčnega časa $\tau_c$ pogosto vpeljemo koherenčno dolžino $L_c = c_0 \tau_c$. Označuje
+dolžino, ki jo svetloba prepotuje vzdolž svoje smeri znotraj koherenčnega časa. Valovanje, ki je 
+koherentno za $\tau < \tau_c$, je tako pri opisanem eksperimentu koherentno za spremembe dolžine poti, 
+za katere velja $L < L_c$. Pri večjih razlikah v dolžini poti se koherenca zmanjša in kontrast
+interferenčnih kolobarjev izgubi. 
+
+\section{Wiener-Hinčinov izrek}
+Električno polje analiziramo in detektiramo v nekem končnem časovnem intervalu $T$. Temu 
+ustrezno ga lahko razvijemo v Fourierovo vrsto:
+\beq
+E(t) = \sum_n A_n e^{-i \omega_0 nt} = \sum_n A_n e^{-i \omega_nt}
+\eeq
+pri čemer je $\omega_0 = 2\pi/T$, $n$ pa je celo število.
+Podobno zapišemo tudi:
+\beq
+E^*(t+\tau) = \sum_m A_m^* e^{i\omega_m (t + \tau)},
+\eeq
+kjer je $m$ celo število. Izraza vstavimo v definicijo za časovno avtokorelacijsko funkcijo polja:
+\beq
+G^{(1)}(\tau) = \lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2} \sum_{n,m} A_n A_m^* e^{-i\omega_n t}
+e^{i\omega_m (t+\tau)} dt= \sum_{n,m} A_n A_m^*e^{i\omega_m\tau} \left(
+\lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2}e^{i(\omega_m - \omega_n)t}dt \right)\!\!.
+\eeq
+Izraz v oklepaju je v limiti za velike vrednosti $T$ enak funkciji $\delta(\omega_n - \omega_m)$, zato 
+sledi:
+\beq
+G^{(1)}(\tau) = \sum_m|A_m|^2e^{i\omega_m\tau}.
+\eeq 
+V nasprotnem primeru, ko $T$ ne gre proti neskončnosti, moramo predpostaviti, da členi z različnimi
+frekvencami ne interferirajo drug z drugimi. To je približek 1, ki smo ga naredili.
+
+Izračunajmo njegovo Fourierevo transformiranko:
+\beq
+\frac{1}{2\pi T}\lim_{T\to \infty}\int_{-T/2}^{T/2} G^{(1)} (\tau) e^{-i\omega \tau} d\tau = 
+\sum_m |A_m|^2\lim_{T\to \infty}\frac{1}{2\pi T}\int_{-T/2}^{T/2} e^{i\omega_m\tau}e^{-i\omega \tau} d\tau.
+\eeq
+Integral gre za velike vrednosti $T$ proti delta funkciji $\delta (\omega_m - \omega)$, kar pomeni, 
+da bi vrednosti G načeloma morali poznati za vsak $\tau$. Vendar to eksperimentalno ni izvedljivo.
+Navadno lahko predpostavimo, da so vrednosti G izven merilnega območja  enake 0 oziroma zanemarljivo 
+majhne. To je pa približek 2, ki smo ga naredili. Sledi:
+\beq
+\mathcal{F}(G^{(1)})  = |A_m|^2 \propto S(\omega).
+\eeq
+S $S(\omega)$ smo označili spekter svetlobe -- to je intenziteto svetlobe pri frekvenci $\omega$, deljeno
+z intervalom $\omega_0$. To popravi da delta omega!
+\boxeq{eq:WH}{
+S(\omega) \propto \lim_{T \to \infty}\frac{1}{T}\int_{-T/2}^{T/2} G^{(1)}(\tau) e^{-i\omega \tau} d\tau.
+}
+Z izračunom smo pokazali, da je spekter svetlobe $S(\omega)$
+Fouriereva transformiranka časovne avtokorelacijske funkcije polja $G^{(1)}(\tau)$. To trditev
+imenujemo Wiener-Hinčinov izrek po ameriškem matematiku Norbertu Wienerju (1894--1964) ter 
+ruskemu matematiku Aleksandru Jakovljeviču Hinčinu (1894--1959).
+
+Od tod pride ime Fouriereva spektroskopija. 
+
+Zapisani limitni izraz velja za diskretni spekter. Če je spekter zvezen, lahko limito izvrednotimo in dobimo
+zvezo:
+\beq
+S(\omega) \propto \int_{-\infty}^{\infty} G^{(1)}(\tau) e^{-i\omega \tau} d\tau.
+\eeq
+V eksperimentu pri Fourierevi spektroskopiji je pomembno, da signal na detektorju merimo oziroma
+povprečimo čim dlje. Pri tem mora veljati $T \gg \tau_c$. Če bi merili krajši čas, sploh ne bi opazili, da
+faza preskoči, ampak bi dobili tak rezultat kot pri povsem koherentni svetlobi. 
+
+Druga pomembna stvar je v tem, da naredimo meritve tudi pri velikih razmikih zrcal $\Delta L \gg t_cc_0$. 
+To pa zato, ker je $t_c$ v resnici statistični parameter in dolžine nekaterih valvonih potez lahko tudi 
+zelo velike. Pravo vrednost povprečja $\tau_c = \langle \Delta t\rangle$ lahko dobimo le, če v eksperimentu
+preverimo vse možne vrednosti. 
+
+V praksi seveda ni niti $T= \infty$ niti $\Delta L = \infty$ možno doseči. Težave rešimo z upoštevanjem
+t.i. okenskih funkcij. 
+Če je svetloba povsem koherentna, potem je spekter delta funkcija. Drugače pa v splošnem velja
+\boxeq{eq:spkor}{
+\delta \omega \tau_c \gtrsim 2\pi.
+}
+Opisano zvezo imenujemo K\"upfm\'ullerjev princip nedoločenosti. Krajši kot je koherenčni čas, širši je 
+spekter in obratno, dolg koherenčni čas da ozek spekter.
+
+Wiener Kinčinov izrek zares velja, samo kadar intenziteto na detektorju merimo oziroma povprečimo
+neskončno dolgo $-\infty < t <\infty$ 
+in kadar pri zaporednih meritvah zamik med delnima žarkoma v interferometru zavzame
+vse vrednosti $-\infty <\tau <\infty$. Tem zahtevam se v praksi izognemo ob predpostavki, da so 
+vrednosti G znanto večje od 0 le za $\tau <\tau_c$ ter da so funkcije polja $E(t)$ na velikih
+časovnih intervalih zanemarljivo majhne.
+
+
+WAIT - KAKŠNE MERITVE, KAJ SPLOH MERIMO, ZAKAJ MERIMO? Merimo spektre svetil (emisijske) ali pa 
+absorpcijske, tako da v snop svetlobe postavimo snov, ki jo proučujemo. 
+
+
 \section{Prostorska koherenca}
-\section{Van Cittert-Zernike teorem}
+Pri prostorski koherenci nas zanima faza valovanja na dveh različnih krajih ob enakem času $t$. Območje, 
+znotraj katerega so faze povezane, imenujemo koherenčna ploskev. Velja
+\beq
+\phi (\mathbf{r}_2, t) = f(\mathbf{r}_1 - \mathbf{r}_2, t, \phi(\mathbf{r}_1, t)),
+\eeq
+pri čemer sta $\mathbf{r}_1$ in $\mathbf{r}_2$ znotraj iste koherenčne ploskve.  V primeru, da
+$\phi (\mathbf{r}_2, t)$ in $\phi (\mathbf{r}_1,t)$ nista povezana med seboj, sta $\mathbf{r}_1$
+in $\mathbf{r}_2$ na različnih koherenčnih ploskvah. Ker se faza pri tem spreminja predvsem 
+v smeri pravokotno na žarke, govorimo o transverzalni koherenci.
+
+Prostorsko koherenco analiziramo s pomočjo Youngovega eksperimenta. Zajemamo valovanje
+iz dveh različnih območij valovne fronte in zanima nas, ali na oddaljenem zaslonu
+opazimo interferenčni (uklonski) vzorec ali ne.
+
+Denimo, da imamo neko običajno plinsko svetilko končnih razsežnosti, ki jo uporabimo kot
+izvor svetlobe za Youngov poskus. Pokazali bomo, da je kontrast interferenčnega vzorca odvisen
+od velikosti svetila in od razdalje med režama. Velikost svetila označimo z $L$, razmik med
+režama pa z $D$. Interferenčni vzorec, ki ga ustvari svetloba iz osrednjega dela svetila ($y'=0$)
+je premaknjen glede na interferenčni vzorec, ki ga ustvari svetloba iz robnega dela svetila 
+($y'=L/2$).
+
+Youngov poskus, interferenca: Naj svetloba iz razsežnega svetila vpada na objektni zaslon, 
+v katerem sta dve reži, razmaknjeni za $D$. Velikost svetila naj bo $L$, oddaljenost med 
+svetilom in objektnim zaslonom pa $z_0$. Svetloba po prehodu skozi reži vpade na opazovalni
+zaslon na oddaljenosti $z_0$ od objektnega zaslona. Ko svetloba iz svetila vpada na reži, dobimo
+na opazovalnem zaslonu superpozicijo interferenčnih vzorcev svetlobe iz različnih delov svetila. 
+Fazni zamik med valovanjema, ki se širita skozi reži 1 in 2 zapišemo kot vsoto dveh prispevkov: 
+\beq
+\Delta \phi = \Delta \phi (y, y') = k D \sin \beta + kD \sin \alpha,
+\eeq
+pri čemer prvi člen predstavlja razliko v fazi pred vpadom na reži, drugi pa po 
+prehodu rež. Pri tem velja:
+\beq
+\sin \alpha \approx \alpha \approx \frac{\eta}{z_0} \qquad \mathbf{in} \qquad
+\sin \beta \approx \beta \approx \frac{y'}{z_0'}.
+\eeq
+Za interferenčni vzorec na ozkih režah velja zveza (enačba ..)
+\beq
+j = 4 j_0 \cos^2 \left(\frac{\Delta \phi}{2}\right).
+\eeq
+Interferenčni vzorec, ki ga ustvari svetloba, ki prihaja s sredine svetila (pri $y'=0$) ima
+vrhove pri $kD\sin \alpha = 2\pi N$, pri čemer je $N$ celo število. Interferenčni vzorec, ki 
+ga ustvari svetloba z območij $y'>0$, ima vrhove zamaknjene k drugim vrednostim $\alpha$. Ko so 
+vrhovi vzorca svetlobe, ki prihaja iz roba svetila $y'=L/2$, premaknjeni ravno na minimume
+vzorca svetlobe, ki prihaja iz sredine, se bodo interferenčni vzorec izpovprečil. To se zgodi, 
+kadar velja:
+\beq
+kD \sin\beta_\mathrm{max} = kD\frac{L}{2z_0'}= \pi,
+\eeq
+od koder sledi:
+\beq
+D_\mathrm{max} = \frac{2z_0'\pi}{kL} = \frac{z_0'\lambda}{L}.
+\eeq
+Maksimalna razdalja med režama $D_\mathrm{max}$, pri kateri interferenčni vzorec izgine oziroma
+se izpovreči, je merilo za transverzalno koherenčno razdaljo svetlobe, ki vpada na objektni zaslon.
+Vrednost $D_\mathrm{max}^2$ pa je merilo za koherenčno ploskev vpadne svetlobe.
+
+Koherenčno razdaljo neke monokromatske svetlobe oziroma elektromagnetnega valovanja torej dobimo
+tako, da v Youngovem poskusu najprej postavimo reži blizu skupaj in opazujemo interferenčni vzorec
+na oddaljenem zaslonu. Ko reži razmikamo, opazujemo, kako interferenčni vzorec bledi. Ko popolnoma
+zbledi, smo dosegli $D_\mathrm{max}$, ki ustreza prečni koherenčni razdalji vpadnega valovanja.
+
+\begin{example}{\bf Merjenje velikosti zvezd.}
+Z navedenim poskusom lahko izmerimo velikost zvezde, če poznamo njeno oddaljenost od Zemlje. Na ta način
+so leta 1920 prvič izmerili premer katerekoli zvezde, izmerili so zvezdo $\alpha$ v ozvezdju Orion
+(Betelgeza). Oddaljenost (kako vejo?) zvezde je $z_0' = 600$~svetlobnih let. Interferenčna razdalja
+je zbledela na razdalji med režama $D_\mathrm{max} = 2~\si{m}$. Zvezda je sicer zelo majhna, ampak zorni
+kot je pa različen od nič, zato svetloba z različnih delov zvezde vpada na zrcali pod rahlo različnima
+kotoma. Gledamo interferenco med njima oziroma kdaj izgine kontrast. 
+Ker je $D_\mathrm{max} = 2~\si{m}$, lahko izračunamo:
+\beq
+D_B = 2R = L = \frac{z_0' \lambda}{D_\mathrm{max}} \approx 1,4 \times 10^{12}~\si{m}.
+\eeq
+PAZI - dejansko so določili leta 1920, da je premer enak 390MKm., to je okoli 300x toliko kot Sonce. 
+Pri 10 feet je izginil vzorec, valovna dolžina 550 nm, kot 0,045 sekund. Hm, polmer je 760 +120/-60 od sonca.
+Preveri! Irena: izmerili, da je DB = 1000 Ds, danes vemo, da je 887 +/- 203 premere sonca. 
+
+S teleskopi lahk odobimo podobno ločljivost, vendar jih je bolj zahtevno zgraditi s tako veliko lečo.
+
+Na sliki modre črte označujejo pot in interferenčni vzorec svetlobe, ki prihaja iz sredine zvezde, rdeče
+črte pa pot in interferenčni vzorec z roba zvezde. Naklon smeri slednje določa zorni kot zvezde. 
+V eksperimentu spreminjamo razdaljo med zrcaloma M1 in M2, ki nadomeščata reži v Youngovem poskusu
+in opazujemo bledenje interferenčnega vzorca. 
+\end{example}
+
+\section{Van Cittert-Zernikov izrek}
+Podobno kot pri Michelsonovem interferometru v Fourierevi spektroskopiji tudi v tem eksperimentu z
+detektorjem merimo dolgo časa, tako da velja:
+\beq
+\langle j_d \rangle \propto \langle|E_1(t)|^2 \rangle + \langle|E_2(t<+\tau)|^2 \rangle
++ 2\Re \left( \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt \right).
+\eeq
+Pri tem prvi člen opisuje svetlobno polje iz prve reže, drugi člen svetlobo iz druge reže, 
+tretji člen pa imenujemo navzkrižna korelacijska funkcija polja. Časovni zamik $\tau$ je enak:
+\beq
+\tau = \frac{l_1-l_2}{c_0} \approx \frac{kD\sin\alpha}{c_0}.
+\eeq
+Če je svetloba iz posamezne reže časovno koherentna, velja:
+\beq
+E^*(t+\tau) = e^{i \omega \tau} E^*(t)
+\eeq
+in navzkrižno korelacijsko funkcijo zapišemo kot:
+\beq
+\Gamma_{12}(\tau) = \Re \left(e^{i \omega \tau} \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt \right) =
+\Re \left(e^{i \omega \tau} J_{12}\right). 
+\eeq
+Z $J_{12}$, ki je enak:
+\beq
+J_{12} = \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt,
+\eeq
+je odvisen od prostorske koherence valovanja in določa kontrast oziroma vidljivost interferenčne slike. 
+nizozemskem fiziku Pietru Hendriku van Cittertu (1889-1959) in nizozemskem fiziku in nobelovcu
+Fritsu Zerniku (1888--1966). 
+Pokazati se da, da je vrednost $J_{12}$ povezana z intenzitetnim profilom  svetlobnega polja 
+$j_{0i}(x',y')$, pri čemer $j_{0i}$ označuje gostoto izsevanega svetlobnega toka.
+Potem velja: 
+\beq
+J_{12} = \frac{\pi}{z_0'^2}\iint j_{0i}(x', y') e^{ikx'\Delta x/z_0'}e^{iky'\Delta y/z_0'} dx'dy',
+\eeq
+pri čemer je $\Delta x = x_2 -x_1$ in $\Delta y = y_2-y_1$. To je Van Cittert-Zernikov izrek po 
+
+Koordinate $(x_1, y_1)$ so koordinate prve reže oziroma odprtine v objektnem zaslonu, koordintate
+$(x_2, y_2)$ pa koordinate druge reže oziroma odprtine v objektnem zaslonu. Vidljivost oziroma kontrast
+interferenčne slike $J_{x_1,y_1,x_2,y_2)$ je 2D Fouriereva tranformiranka intenzitetnega profila izvora.
+Velja pa seveda tudi obratno: s Fourierevo transformacijo vidljivosti po $\Delta x$ in $\Delta y$ lahko
+dobimo intenzitetni prodil svetlobnega objekta. Uporabno v astronomiji.
+
+Izpeljava Van Cittert-Zernikovega izreka: Kontrast oziroma vidljivost interferenčnih prog
+določa $J_{12}$, za katerega velja:
+\beq
+J_{12} = \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt = \langle E_1(t) E_2^*(t)\rangle.
+\eeq
+pri čemer je $E_1$ polje na reži 1 in $E_2$ polje na reži 2. 
+Lega rež naj bo določena s koordinatama $(x_1,y_1)$ in  $(x_2,y_2)$ na objektnem zaslonu.
+
+Svetloba, ki prihaja na režo 1 ali 2, izvira iz vseh točk svetlečega zaslona $(x', y')$. Potem 
+zapišemo:
+\beq
+E_1 \propto \iint E_0(x',y') \frac{e^{ikr_1'}}{r_1'}dx'dy'
+\eeq
+in podobno za polje v drugi reži:
+\beq
+E_2 \propto \iint E_0(x'',y'') \frac{e^{ikr_2''}}{r_2''}dx''dy''.
+\eeq
+Sledi:
+\beq
+J_{12} = \langle E_0(x',y')E_0^*(x'',y'')\rangle.
+\eeq
+Kadar je svetloba, ki izvira iz različnih delov svetila med seboj povsem nekorelirana,
+dobimo od nič različno povprečje le v primeru, da je $x'=x''$ in $y'=y''$. To seveda velja, 
+če svetilo samo po sebi ni prostorsko koherentno, denimo termična svetloba zvezd.
+Potem je:
+\beq
+J_{12} \propto \delta(x'-x'', y'-y'') |E_0|^2.
+\eeq
+Vstavimo polji enačbi.. v izraz za vidnost in dobimo:
+\beq
+J_{12} \propto \iint_S |E_0(x',y')|^2 \frac{e^{ikr_1'}}{r_1'}\frac{e^{ikr_2'}}{r_2'}dx'dy'
+\approx \frac{1}{z_0^2}\iint_S j_{0i}(x',y') e^{ik(r_1'-r_2')}dx'dy'.
+\eeq
+Vstavimo in razvijemo za veliko oddaljenost med izvorom in objektnim zaslonom:
+\beq
+r_1' = z_0' \sqrt{1+(x_1-x')^2/z_0'^2+ (y_1-y')^2/z_0'^2} \approx
+z_0'-\frac{x_1x'}{z_0'}-\frac{y_1y'}{z_0'}+\frac{x_1^2}{2z_0'}+\frac{y_1^2}{2z_0'}+\frac{x'^2}{2z_0'}
++\frac{y'^2}{2z_0'}.
+\eeq
+Ter podobno za drugo odprtino:
+\beq
+r_2' = z_0' \sqrt{1+(x_2-x')^2/z_0'^2+ (y_2-y')^2/z_0'^2} \approx
+z_0'-\frac{x_2x'}{z_0'}-\frac{y_2y'}{z_0'}+\frac{x_2^2}{2z_0'}+\frac{y_2^2}{2z_0'}+\frac{x'^2}{2z_0'}
++\frac{y'^2}{2z_0'}.
+\eeq
+Razlika, ki nastopa v eksponentu, je potem enaka:
+\beq
+r_1'-r_2' = \frac{x'(x_2-x_1)}{z_0'}+\frac{y'(y_2-y_1)}{z_0'}
++ \frac{(x_1^2-x_2^2)}{2z_0'^2} + \frac{(y_1^2-y_2^2)}{2z_0'^2}.
+\eeq
+Če sta odprtini simetrični glede na izhodišče koordinatnega sistema, sta zadnja dva člena
+v izrazu enaka nič. Sicer prineseta nek konstantni fazni faktor. Rezultat je v simetričnem primeru
+enak:
+\beq
+J_{12} \propto \frac{1}{z_0'^2}\iint j_{0i}(x',y') e^{ikx'\Delta x/z_0'}e^{iky'\Delta y/z_0'}dx'dy'.
+\eeq
+Dobljeni izraz velja tudi na relativno majhnih razdaljah med svetilom in objektnim zaslonom, saj so 
+se kvadratni členi zaradi simetričnosti izničili. 
+
+
 \section{Holografija}
+
+\beq
+t \propto I = I_r + I_s + 2\sqrt{I_rI_s}\cos(\phi_r-\phi_s(x,y)).
+\eeq
+Zapisovanje pri klasini izvenosni holografiji; branje pri holografiji. Fotografija holograma. 

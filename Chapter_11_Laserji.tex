@@ -3,6 +3,66 @@
 \chapter{Osnove laserjev}
 
 \section{Kvantni opis interakcije svetlobe s snovjo}
+Za razliko od Lorentzovega modela, v katerem smo privzeli, da je snov sestavljena
+iz kroglic pozitivnega in negativnega naboja, ki sta povezani z vzmetjo
+in lahko oscilirata s poljubno frekvenco oziroma amplitudo. Pri kvantnem
+opisu upoštevamo, da imajo atomi oziroma molekule stanja z diskretnimi vrednostmi
+energije. Obenem upoštevamo tudi, da elektromagnetno valovanje snovi
+lahko odda oziroma od nje dobi le diskretne ``pakete'' energije, ki jih imenujemo
+fotoni. Energija fotona je 
+\boxeq{eq:foton}{
+E_f = \hbar \omega.
+}
+Zamislimo si toplotni rezervoar pri temperaturi $T$, v katerem je votlina s črnimi
+stenami. V votlini so atomi z energijskimi nivoji $E_0, E_1, E_2...$. Hkrati je 
+v votlini prisotno tudi termično sevanje oziroma elektromagnetno valovanje. Oba sistema
+sta v termičnem ravnovesju.
+
+Razmerje med številom atomov, ki se nahajajo v različnih  diskretnih energijskih
+stanjih (zasedenost nivojev), podaja Maxwell-Boltzmannova statistika. 
+\beq
+\frac{N_2}{N_1} = e^{-(E_2-E_1)/k_BT},
+\eeq
+pri čemer je $k_B$ Boltzmannova konstanta v vrednosti $k_B = 1,38 \cdot 10^{-23}~\si{J/K}$.
+Razmerje med številom fotonov pri različnih frekvencah oziroma porazdelitev 
+termičnega sevanja po frekvencah podaja Bose-Einsteinova statistika, ki ob 
+ustreznem upoštevanju gostote stanj vodi do spektra, ki ga opisuje Planckov zakon
+za termično sevanje:
+\beq
+u(\omega)d\omega = \hbar \omega \frac{\omega^2}{\pi^2\c_0^3}\frac{1}{e^{\hbar \omega/k_bT}-1} d\omega = 
+\frac{\hbar \omega^3}{\pi^2c_0^3}\frac{1}{e^{\hbar \omega/k_bT}-1}d\omega.
+\eeq
+Spekter $u(\omega)$ opisuje elektromagnetno energijo na enoto prostornine na na 
+en hertz spektralne širine. 
+
+Zaradi interakcije med elektromagnetnim poljem in atomi v votlini prihaja do treh različnih
+vrst procesov: absorpcije, spontanega sevanja in stimuliranega sevanja oziroma stimulirane
+emisije. Pri emisijskih pojavih prehajajo atomi iz višjih na nižje energijske nivoje, pri 
+absorpciji pa iz nižje na višje energijske nivoje. 
+
+Spontano sevanje: Atom v vzbujenem stanju spontano preide v nižje stanje, pri čemer izseva
+foton. Število spontatnih prehodov na časovno enoto je:
+\beq
+\frac{dN_\mathrm{sp}}{dt} = A_{21}N_2,
+\eeq
+pri čemer je:
+\beq
+A_{21} = \frac{P_{dip}}{\hbar \omega_{21}}.
+\eeq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Osnovni procesi interakcije}
 \section{Sevanje črnega telesa}
 \section{Ojačevanje svetlobe}
