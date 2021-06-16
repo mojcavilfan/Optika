@@ -5,13 +5,13 @@
 \section{Kvantni opis interakcije svetlobe s snovjo}
 Za razliko od Lorentzovega modela, v katerem smo privzeli, da je snov sestavljena
 iz kroglic pozitivnega in negativnega naboja, ki sta povezani z vzmetjo
-in lahko oscilirata s poljubno frekvenco oziroma amplitudo. Pri kvantnem
-opisu upoštevamo, da imajo atomi oziroma molekule stanja z diskretnimi vrednostmi
+in lahko oscilirata s poljubno frekvenco oziroma amplitudo, pri kvantnem
+opisu upoštevamo, da lahko zavzamejo atomi oziroma molekule stanja z diskretnimi vrednostmi
 energije. Obenem upoštevamo tudi, da elektromagnetno valovanje snovi
 lahko odda oziroma od nje dobi le diskretne ``pakete'' energije, ki jih imenujemo
 fotoni. Energija fotona je 
 \boxeq{eq:foton}{
-E_f = \hbar \omega.
+E_f = \hslash \omega.
 }
 Zamislimo si toplotni rezervoar pri temperaturi $T$, v katerem je votlina s črnimi
 stenami. V votlini so atomi z energijskimi nivoji $E_0, E_1, E_2...$. Hkrati je 
@@ -22,15 +22,18 @@ Razmerje med številom atomov, ki se nahajajo v različnih  diskretnih energijsk
 stanjih (zasedenost nivojev), podaja Maxwell-Boltzmannova statistika. 
 \beq
 \frac{N_2}{N_1} = e^{-(E_2-E_1)/k_BT},
+\label{eq:11_01}
 \eeq
-pri čemer je $k_B$ Boltzmannova konstanta v vrednosti $k_B = 1,38 \cdot 10^{-23}~\si{J/K}$.
+pri čemer so $k_B$ Boltzmannova konstanta v vrednosti $k_B = 1,38 \cdot 10^{-23}~\si{J/K}$, 
+$N_1$ zasedenost nižjega nivoja, $N_2$ pa zasedenost višjega nivoja.
 Razmerje med številom fotonov pri različnih frekvencah oziroma porazdelitev 
 termičnega sevanja po frekvencah podaja Bose-Einsteinova statistika, ki ob 
 ustreznem upoštevanju gostote stanj vodi do spektra, ki ga opisuje Planckov zakon
 za termično sevanje:
 \beq
-u(\omega)d\omega = \hbar \omega \frac{\omega^2}{\pi^2\c_0^3}\frac{1}{e^{\hbar \omega/k_bT}-1} d\omega = 
-\frac{\hbar \omega^3}{\pi^2c_0^3}\frac{1}{e^{\hbar \omega/k_bT}-1}d\omega.
+u(\omega)d\omega = \hslash \omega \frac{\omega^2}{\pi^2c_0^3}\frac{1}{e^{\hslash \omega/k_bT}-1} d\omega = 
+\frac{\hslash \omega^3}{\pi^2c_0^3}\frac{1}{e^{\hslash \omega/k_bT}-1}d\omega.
+\label{eq:Planck}
 \eeq
 Spekter $u(\omega)$ opisuje elektromagnetno energijo na enoto prostornine na na 
 en hertz spektralne širine. 
@@ -38,7 +41,8 @@ en hertz spektralne širine.
 Zaradi interakcije med elektromagnetnim poljem in atomi v votlini prihaja do treh različnih
 vrst procesov: absorpcije, spontanega sevanja in stimuliranega sevanja oziroma stimulirane
 emisije. Pri emisijskih pojavih prehajajo atomi iz višjih na nižje energijske nivoje, pri 
-absorpciji pa iz nižje na višje energijske nivoje. 
+absorpciji pa iz nižje na višje energijske nivoje. Razlika med nivojema atoma naj bo $E_{21} = 
+\hslash \omega_{21}$.
 
 Spontano sevanje: Atom v vzbujenem stanju spontano preide v nižje stanje, pri čemer izseva
 foton. Število spontatnih prehodov na časovno enoto je:
@@ -47,24 +51,127 @@ foton. Število spontatnih prehodov na časovno enoto je:
 \eeq
 pri čemer je:
 \beq
-A_{21} = \frac{P_{dip}}{\hbar \omega_{21}}.
+A_{21} = \frac{P_\mathrm{dip}}{\hslash \omega_{21}} = 
+\frac{1}{\hslash \omega_{21}}\frac{\omega_{21}^4 e_0^2\left(\langle 2|\mathbf{r}|1\rangle\rangle)^2}{3\pi \varepsilon_0 c_0^3},
+\eeq
+ki označuje verjetnost za prehod iz stanja $|2\rangle$ v stanje $|1\rangle$ na časovno enoto
+z dipolnim sevanjem (Fermijevo zlato pravilo). Tipična vrednost je $A_{21}  = A \sim 10^{-9}$ za 
+dovoljene prehode, kar ustreza življenjskemu času zgornjih nivojev $\tau = 1/A \sim 1~\si{ns}$. 
+Spontano sevanje bomo pogosto zanemarili. 
+
+Absorpcija: Ko foton z ustrezno energijo vpade na atom, se lahko absorbira, pri čemer atom 
+preide v vzbujeno stanje. Verjetnost za prehod je močno odvisna od energije fotona: če je 
+njegova energija približno enaka energiji med nivojema atoma, se foton lahko absorbira, sicer
+se ne more. Zato je število prehodov na časovno enoto odvisno tudi od spektralne gostote 
+energije $u(\omega_{21})$ pri frekvenci prehoda med stanjema:
+\beq
+\frac{dN_\mathrm{abs}}{dt} = B_{12}u(\omega_{21}) N_1.
+\eeq
+Sorazmernostno konstanto smo označili z $B_{12}$, število prehodov pa je seveda odvisno
+tudi od celotnega števila atomov v nižjem nivoju $N_1$.
+
+Stimulirano sevanje: Ko foton z ustrezno energijo vpade na vzbujen atom, lahko atom preide
+iz višjega v nižje stanje, pri tem pa izseva foton, ki je enak vpadnemu fotonu. Iz enega 
+vpadnega fotona in atoma v vzbujenem stanju tako dobimo dva identična fotona, ki potujeta v isti smeri
+z enako energijo. Število prehodov na časovno enoto zapišemo kot:
+\beq
+\frac{dN_\mathrm{st}}{dt} = B_{21}u(\omega_{21}) N_2,
+\eeq
+pri čemer je $B_{21}$ sorazmernostni koeficient, $N_2$ pa število atomov v vzbujenem stanju. 
+
+Koeficiente $A$, $B_{12}$ in $B_{21}$ imenujemo Einsteinovi koeficienti. Njihove vrednosti 
+niso neodvisne, ampak velja:
+\beq
+B_{12}=B_{21}= B \qquad \mathrm{in} \qquad \frac{A}{B} = \frac{\hslash \omega_{21}^3}{\pi^2c_0^3}.
+\eeq
+
+\begin{example}{\bf Zveza med Einsteinovimi koeficienti.}
+Razmerje med Einsteinovimi koeficienti lahko pojasnimo na preprostem primeru. Naj interakcija
+poteka le med nivojema 2 in 1 ter elektromagnetnim valovanjem pri frekvenci $\omega_{21}$. Celotno
+število atomov v enem in drugem stanju je konstantno, zato $N_1 + N_2 = N$ in spreminjanje zasedenosti
+posameznih nivojev zapišemo kot:
+\beq
+\frac{dN_1}{dt} = A_{21} + B_{21}u(\omega_{21})N_2 - B_{12}u(\omega_{21})N_1 = \frac{dN_2}{dt}.
+\eeq
+Prvi člen v vsoti opisuje povečanje zasedenosti spodnjega nivoja zaradi spontanega sevanja, 
+drugi člen zaradi stimuliranega sevanja, tretji pa zmanjševanje zasedenosti zaradi absorpcije.  
+V stacionarnem stanju v termičnem ravnovesju se zasedenosti nivojev ne spreminjata, zato velja:
+\beq
+A_{21} + B_{21}u(\omega_{21})N_2 - B_{12}u(\omega_{21})N_1 = 0
+\eeq
+in 
+\beq
+u(\omega_{21}) = \frac{A_{21}N_2}{B_{12}N_1-B{21}N_2} = \frac{A_{21}}{B_{12}N_1/N_2 - B_{21}}.
+\eeq
+Upoštevamo Boltzmannovo porazdelitev za zasedenost nivojev (enačba~\ref{eq:11_01}) in dobimo:
+\beq
+u(\omega_{21}) = \frac{A_{21}}{B_{12}e^{\hslash \omega_{21}/k_B T} - B_{21}}.
+\eeq
+Ker je tudi elektromagnetno valovanje v termičnem ravnovesju, vemo, da velja Planckov zakon 
+(enačba~\ref{eq:Planck}). Primerjava izračunanega izraza in Plankovega zakona vodi do 
+zvez med Einsteinovimi koeficienti:
+\beq
+B_{12} = B_{21}
+\eeq
+in
+\beq
+\frac{A}{B} = \frac{\hslash \omega_{21}^3}{\pi^2c_0^3}.
+\eeq
+Einstein proučeval interakcije svetlobe s snovjo in že leta 1916. Napovedal možnost ojačenja
+svetlobe in delovanja laserja (preveri), postavil teoretične osnove za razlago in delovanje laserja.
+Potem je trajalo še več desetletij, da so prvi laser naredili. 
+\end{example}
+
+\subsection*{Interakcija svetlobe s snovjo v optičnem resonatorju}
+Optični resonatorji so naprave, znotraj katerih lahko vzbudimo stoječe elektromagnetno 
+valovanje pri določenih frekvencah (resonančnih frekvencah). Za optično valovanje
+si jih lahko zamislimo kot zaprto škatlo z zrcali v notranjosti, da se svetloba odbija.
+Posamezne črte v resonančnem spektru niso neskončno ozke, je pa širina resonanc navadno dosti ožja 
+od naravne širine emisijske  oziroma absorpcijske širine atomskega sistema. 
+ Na procese absorpcije in stimulirane emisije v tem primeru vpliva
+prekrivanje med resonančnim spektrom resonatorja in spektrom atomskega sistema. 
+
+Spektralno odvisnost emisije oziroma absorpcije podaja naravna širina spektralne 
+črte, ki jo opišemo s funkcijo $g(\omega)$, za katero velja:
+\beq
+\int_{-\infty}^\infty g(\omega) d\omega = 1.
+\eeq
+Na splošno zapišemo za absorpcijo:
+\beq
+\frac{dN_{abs}}{dt} = BN_1 \int_{-\infty}^{\infty} g(\omega) u(\omega) d\omega
+\eeq
+in za stimulirano emisijo:
+\beq
+\frac{dN_{st}}{dt} = BN_2 \int_{-\infty}^{\infty} g(\omega) u(\omega) d\omega.
+\eeq
+Širok sevalni spekter spontanega sevanja atomskega sistema in ozki resonančni vrhovi, 
+ki so lahko vzbujeni v izbranem resonatorju. Prekrivanje med svetlobo, ki lahko obstaja
+v resonatorju, in spektrom spontanega sevanja (razliko energij med stanjema), 
+da verjetnost za prehod na časovno enoto.
+
+V ekstremnem primeru, ko je spektralna širina resonančnih črt, 
+podana s funkcijo $u(\omega)$, bistveno ožja od širine absorpcijskega oziroma
+emisijskega spektra, podane z $g(\omega)$, lahko privzamemo, da je vrednost $g(\omega)$
+znotraj integrala konstantna in upoštevamo le njeno vrednost pri resonančni frekvenci.
+Dobimo:
+\beq
+\int_{-\infty}^{\infty} g(\omega) u(\omega) d\omega = g(\omega_R) \int_{-\infty}^{\infty}
+u(\omega) d\omega = g(\omega_R) w,
+\eeq
+pri čemer je $\omega_R$ osrednja resonančna frekvenca resonatorja, $w$ pa gostota
+energije elektromagnetnega valovanja. Poenostavljeno potem število prehodov pri absorpciji
+in stimuliranem sevanju zapišemo kot:
+\beq
+\frac{dN_{abs}}{dt} = B N_1 g(\omega) w
+\eeq
+in
+\beq
+\frac{dN_{st}}{dt} = B N_2 g(\omega) w.
 \eeq
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-\section{Osnovni procesi interakcije}
-\section{Sevanje črnega telesa}
 \section{Ojačevanje svetlobe}
+
 \section{Trinivojski sistemi}
 \section{Laser}
