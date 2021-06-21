@@ -1,58 +1,125 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Osnove laserjev}
+V prejšnjih poglavjih smo svetlobo obravnavali klasično, za
+opis delovanja laserjev pa klasična optika ne zadošča in 
+svetlobo moramo obravnavati kvantno. V kvantni optiki svetloba ni valovanje, 
+temveč predstavlja prenos paketov (kvantov) energije, imenovanih fotoni. 
+V tem poglavju bomo predstavili osnovne procese interakcije 
+fotonov s snovjo in  pojasnili, v katerih primerih se svetloba v snovi
+absorbira in v katerih ojači. Opisali bomo preprost model laserja 
+in na koncu na kratko opisali lastnosti laserske svetlobe.
 
-\section{Kvantni opis interakcije svetlobe s snovjo}
-Za razliko od Lorentzovega modela, v katerem smo privzeli, da je snov sestavljena
-iz kroglic pozitivnega in negativnega naboja, ki sta povezani z vzmetjo
-in lahko oscilirata s poljubno frekvenco oziroma amplitudo, pri kvantnem
-opisu upoštevamo, da lahko zavzamejo atomi oziroma molekule stanja z diskretnimi vrednostmi
-energije. Obenem upoštevamo tudi, da elektromagnetno valovanje snovi
-lahko odda oziroma od nje dobi le diskretne ``pakete'' energije, ki jih imenujemo
-fotoni. Energija fotona je 
+\section{Sevanje črnega telesa}
+V klasični sliki smo za opis snovi uporabili Lorentzev model, 
+v katerem smo snov sestavili iz kroglic pozitivnega in 
+negativnega naboja (glej razdelka~\ref{chap:lomni} in \ref{chap:AnizoLorentz}).
+V tem modelu so kroglice med seboj povezane z vzmetmi, frekvenco
+in amplitudo nihanja kroglic pa lahko zvezno spreminjamo.
+
+V kvantnem opisu snovi atomi oziroma molekule zavzemajo
+le stanja z diskretnimi vrednostmi energije. Obenem kvantno
+obravnavamo tudi svetlobo, ki predstavlja potovanje diskretnih
+kvantov energije, imenovanih fotoni. 
+Energija fotona je sorazmerna z njegovo frekvenco $\nu$:
 \boxeq{eq:foton}{
-E_f = \hslash \omega.
+E_f = h\nu = \hslash \omega,
 }
-Zamislimo si toplotni rezervoar pri temperaturi $T$, v katerem je votlina s črnimi
-stenami. V votlini so atomi z energijskimi nivoji $E_0, E_1, E_2...$. Hkrati je 
-v votlini prisotno tudi termično sevanje oziroma elektromagnetno valovanje. Oba sistema
-sta v termičnem ravnovesju.
+pri čemer je sorazmernostni faktor Planckova konstanta
+$h = 6,62 \cdot 10^{-34}~\si{Js}$ in $\hslash = h/2\pi$, imenovana 
+po nemškem fiziku in nobelovcu Maxu Plancku (1858--1947).
 
-Razmerje med številom atomov, ki se nahajajo v različnih  diskretnih energijskih
-stanjih (zasedenost nivojev), podaja Maxwell-Boltzmannova statistika. 
+Zamislimo si toplotni zalogovnik pri temperaturi $T$, v katerem 
+je votlina s črnimi stenami. Znotraj votline se nahajajo atomi z diskretnimi
+energijskimi nivoji $E_0, E_1, E_2$ ... Hkrati je v votlini zaradi 
+končne temperature prisotno tudi termično sevanje v obliki 
+elektromagnetnega valovanja (slika~\ref{fig:11_votlina}\,a). 
+Oba sistema naj bosta v termičnem ravnovesju.
+\begin{figure}[h!]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/11_votlina.pdf_tex}
+\caption{Zamislimo si votlino s črnimi stenami, v kateri so 
+atomi in elektromagnetno valovanje~(a). Spekter elektromagnetnega 
+valovanja v votlini opiše Planckov spekter $u$, ki 
+je odvisen od temperature, pri čemer modra črta ustreza 
+najnižji, rdeča srednji in rumena najvišji temperaturi~(b). 
+}
+\label{fig:11_votlina}
+\end{figure}
+
+Atomi v votlini se nahajajo v različnih diskretnih energijskih stanjih,
+ki ustrezajo posameznim energijskim nivojem. Število atomov na izbranem
+energijskem nivoju $i$ imenujemo zasedenost nivoja in jo označimo z $N_i$.
+Razmerje med zasedenostmi nivojev podaja
+Maxwell-Boltzmannova statistika. 
 \beq
-\frac{N_2}{N_1} = e^{-(E_2-E_1)/k_BT},
+\frac{N_2}{N_1} = \frac{N_0e^{-E_2/k_BT}}{N_0e^{-E_1/k_BT}} = e^{-(E_2-E_1)/k_BT},
 \label{eq:11_01}
 \eeq
-pri čemer so $k_B$ Boltzmannova konstanta v vrednosti $k_B = 1,38 \cdot 10^{-23}~\si{J/K}$, 
-$N_1$ zasedenost nižjega nivoja, $N_2$ pa zasedenost višjega nivoja.
-Razmerje med številom fotonov pri različnih frekvencah oziroma porazdelitev 
-termičnega sevanja po frekvencah podaja Bose-Einsteinova statistika, ki ob 
-ustreznem upoštevanju gostote stanj vodi do spektra, ki ga opisuje Planckov zakon
-za termično sevanje:
-\beq
-u(\omega)d\omega = \hslash \omega \frac{\omega^2}{\pi^2c_0^3}\frac{1}{e^{\hslash \omega/k_bT}-1} d\omega = 
-\frac{\hslash \omega^3}{\pi^2c_0^3}\frac{1}{e^{\hslash \omega/k_bT}-1}d\omega.
-\label{eq:Planck}
-\eeq
-Spekter $u(\omega)$ opisuje elektromagnetno energijo na enoto prostornine na na 
-en hertz spektralne širine. 
+pri čemer so $N_1$ zasedenost nižjega nivoja, $N_2$ zasedenost višjega 
+nivoja in $k_B$ Boltzmannova konstanta, imenovana po avstrijskem
+fiziku Ludwigu Boltzmannu (1844--1906), v vrednosti 
+$k_B = 1,38 \cdot 10^{-23}~\si{J/K}$.
 
-Zaradi interakcije med elektromagnetnim poljem in atomi v votlini prihaja do treh različnih
-vrst procesov: absorpcije, spontanega sevanja in stimuliranega sevanja oziroma stimulirane
-emisije. Pri emisijskih pojavih prehajajo atomi iz višjih na nižje energijske nivoje, pri 
-absorpciji pa iz nižje na višje energijske nivoje. Razlika med nivojema atoma naj bo $E_{21} = 
-\hslash \omega_{21}$.
+Povprečno število fotonov $\langle n \rangle$ 
+z energijo $\hslash \omega$ oziroma porazdelitev 
+termičnega sevanja po frekvencah podaja 
+Bose-Einsteinova statistika:
+\beq
+\langle n \rangle = \frac{1}{e^{\hslash \omega/k_B T}-1}.
+\label{eq:11_02}
+\eeq
+Povprečna energija izbranega lastnega nihanja je produkt energije tega nihanja
+in povprečnega števila fotonov: $\langle W \rangle = \hslash \omega \langle n \rangle$.
+
+Za izračun spektra moramo upoštevati še ustrezno gostoto stanj, to je število 
+različnih lastnih nihanj v votlini na enoto prostornine.
+Račun navadno izpeljemo za votlino v obliki kocke, vendar je rezultat splošno veljaven.
+Za veliko število stanj lahko naredimo približen izračun in gostoto stanj $\varrho$
+zapišemo kot:
+\beq
+\varrho (k) = \frac{4 \pi k^2}{8 (\pi/L)^3} \frac{2}{L^3}\qquad \mathrm{oziroma}\qquad
+\varrho (\omega) = \frac{4 \pi \omega^2}{8c^3 (\pi/L)^3}\frac{2}{L^3} = 
+\frac{\omega^2}{\pi^2c^3}.
+\label{eq:11_03}
+\eeq
+Zapisali smo prostornino krogelne lupine v prostoru valovnega vektorja $4\pi k^2 dk$, 
+se omejili na prvi oktant (faktor $1/8$), 
+nato pa prostornino lupine delili s prostornino enega samega
+lastnega nihanja $(\pi/L)^3$. Dodali smo še možnost dveh različnih polarizacij 
+svetlobe (faktor $2$).
+
+Zdaj lahko izračunamo spekter izsevane svetlobe, tako da povprečno 
+energijo izbranega lastnega nihanja pomnožimo z gostoto stanj 
+(enačba~\ref{eq:11_03}). Spekter svetlobe, izsevane iz črnega telesa v 
+termičnem ravnovesju, opisuje Planckov zakon:
+\boxeq{eq:Planck}{
+u(\omega) =  
+\frac{\hslash \omega^3}{\pi^2c^3}\frac{1}{e^{\hslash \omega/k_bT}-1}.
+}
+Spektralna gostota energije $u(\omega)$ tako opisuje energijo elektromagnetnega
+valovanja na enoto prostornine na enoto frekvence (slika~\ref{fig:11_votlina}\,b). 
+
+\section{Kvantni opis interakcije svetlobe s snovjo}
+Nadaljujmo z obravnavo votline, v kateri so redek plin 
+in elektromagnetno valovanje v termičnem ravnovesju. Zaradi interakcije med 
+elektromagnetnim poljem in atomi v votlini prihaja do treh različnih
+vrst procesov: absorpcije, spontanega sevanja in stimuliranega sevanja. 
+Pri sevalnih (emisijskih) pojavih atomi prehajajo iz višjih na nižje 
+energijske nivoje, pri absorpciji pa iz nižje na višje energijske nivoje. 
+Razlika med nivojema atoma naj bo $E_{21} = \hslash \omega_{21}$.
 
 Spontano sevanje: Atom v vzbujenem stanju spontano preide v nižje stanje, pri čemer izseva
 foton. Število spontatnih prehodov na časovno enoto je:
 \beq
 \frac{dN_\mathrm{sp}}{dt} = A_{21}N_2,
+\label{eq:11_04}
 \eeq
 pri čemer je:
 \beq
 A_{21} = \frac{P_\mathrm{dip}}{\hslash \omega_{21}} = 
-\frac{1}{\hslash \omega_{21}}\frac{\omega_{21}^4 e_0^2\left(\langle 2|\mathbf{r}|1\rangle\rangle)^2}{3\pi \varepsilon_0 c_0^3},
+\frac{1}{\hslash \omega_{21}}\frac{\omega_{21}^4 e_0^2\left(\langle 2|\mathbf{r}|1\rangle\right)^2}{3\pi \varepsilon_0 c_0^3},
 \eeq
 ki označuje verjetnost za prehod iz stanja $|2\rangle$ v stanje $|1\rangle$ na časovno enoto
 z dipolnim sevanjem (Fermijevo zlato pravilo). Tipična vrednost je $A_{21}  = A \sim 10^{-9}$ za 
@@ -168,10 +235,223 @@ in
 \beq
 \frac{dN_{st}}{dt} = B N_2 g(\omega) w.
 \eeq
+Pri tem je $g(\omega)$ vrednost funkcije $g$ pri frekvenci $\omega$, ki ustreza monokromatskemu
+resonančnemu elektromagnetnemu valovanju znotraj resonatorja, $w$ pa je gostota
+energije valovanja pri resonančni frekvenci $\omega$. 
 
-
+Funkcija $g(\omega)$ ima pogosto Gaussovo ali Lorenzovo obliko. Pri računanju pa jo
+zaradi enostavnosti velikokrat nadomestimo s škatlasto funkcijo, ki je izven intervala $\Delta \omega$
+enaka 0, znotraj tega intervala pa ima konstantno vrednost $g(\omega) = 1/\Delta \omega$.
 
 \section{Ojačevanje svetlobe}
+Zanima nas proces, ko na neko snov usmerimo snop svetlobe s svetlobnim tokom $P_0$, na izhodu
+iz snovi pa dobimo svetlobni snop s tokom $P_1 > P_0$.  Napravi, ki poveča moč vpadne svetlobe, 
+imenujemo optični ojačevalnik. 
+
+Opazujemo procese v tanki plasti snovi debeline $dz$, katere prostornina je $dV = S dz$. V
+tej tej plasti naj bo $\tilde{N}_1$ atomov v nižjem energijskem nivoju in $\tilde{N}_2$ 
+v višjem energijskem nivoju.
+Pri potovanju svetlobe skozi tako snov se svetlobni tok zmanjšuje zaradi absorpcije in povečuje
+zaradi stimulirane in spontane emisije. Zanima nas samo tok v smeri vpadnega valovanja (vdolž osi
+$z$), zato lahko spontano sevanje, ki je enakomerno porazdeljeno po vseh smereh prostora, zanemarimo.
+Snov je postavljena v resonator (ali res?)
+
+Sprememba energijskega toka je:
+\beq
+dP = S dj \hslash \omega \left(\frac{dN_{st}}{dt}- \frac{dN_{abs}}{dt} = 
+\hslash \omega \left( \tilde{N}_2Bg(\omega) w - \tilde{N}_1Bg(\omega)w\right) = 
+\hslash \omega B g(\omega) w (\tilde{N}_2 - \tilde{N}_1\right).
+\eeq
+Upoštevamo $j = wc$ in hkrati predpostavimo, da sta gostoti atomov v stanjih 1 in 2 v celotni
+snovi konstantni:
+\beq
+\tilde{N}_1 = \frac{N_1}{V}Sdz \qquad \mathrm{in}\qquad \tilde{N}_2 = \frac{N_2}{V}Sdz.
+\eeq
+Dobimo:
+\beq
+dP = S dj = \hslash \omega B g(\omega) \frac{j}{c}\frac{N_2-N_1}{V}S dz
+\eeq
+in
+\boxeq{eq:ojacenje}{
+dj = \sigma \frac{N_2-N_1}{V}jdz = \gamma j dz,
+}
+pri čemer smo vpeljali sipalni presek za absorpcijo in stimulirano emisijo:
+\beq
+\sigma (\omega)= \frac{\hslash \omega g(\omega) B}{c}.
+\eeq
+Tipične vrednosti sipalnega preseka so $\sigma \sim 10^{-20}~\si{m^2}$.
+
+Če želimo doseči ojačenje svetlobnega toka, mora biti koeficient ojačenja $\gamma$ 
+pozitiven. Iz enačbe .. sledi, da je ta pogoj izpoljen le, kadar je $N_2-N_1>0$
+in je torej zasedenost višjega stanja večja od zasedenosti nižjega stanja. 
+Tako neravnovesno stanje imenujemo stanje obrnjene zasedenosti. V termičnem 
+ravnovesju obrnjene zasedenosti ne moremo doseči, zato moramo za ojačenje svetlobe
+sistem atomov vzdrževati z dovajanjem energije od zunaj.
 
 \section{Trinivojski sistemi}
+Da lahko v nekem sistemu dosežemo obrnjeno zasedenost in s tem optično ojačevanje,
+moramo v interakcijski proces med snovjo in svetlobo vključiti vsaj tri atomske nivoje.
+Takrat govorimo o trinivojskem sistemu. V dvonivojskem obrnjene zasedenosti s še tako
+močnim dovajanjem energije (črpanjem) ne moremo doseči.
+
+Naj bo celotno število atomov v sistemu $N$, zasedenosti posameznih nivojev pa 
+označimo z indeksom. Potem velja:
+\beq
+N = N_0 + N_1 + N_2,
+\eeq
+pri čemer privzamemo, da je zasedenost osnovnega nivoja daleč največja $N_0 \gg N_1, N_2$
+in da je posledično $N_0 \approx N$. Prisotna je tudi svetloba s frekvenco:
+\beq
+\omega_{21} = \frac{E_2-E_1}{\hslash},
+\eeq
+pri čemer $E_1$ in $E_2$ označujeta energiji prvega in drugega vzbujenega nivoja. Naš
+cilj je ojačati svetlobo s frekvenco $\omega_{21}$, kar dosežemo le ob obrnjeni 
+zasedenosti med nivojema 1 in 2.
+V ta namen z zunanjim črpalnim mehanizmom neprestano vzbujamo atome iz osnovnega nivoja
+v drugi vzbujeni nivo, črpanje pa neodvisno od mehanizma zapišemo v koeficientom $r$
+oziroma:
+\beq
+\frac{dN_2}{dt} = r N_0.
+\eeq
+Zasedbene enačbe za vse tri nivoje potem zapišemo z upoštevanjem prehodov med njimi:
+\begin{align}
+\frac{dN_2}{dt} &= rN_0 - A_{20}N_2 - A_{21}N_2 + B_{21}w(\omega_{21})g(\omega_{21}) (N_1-N_2),\\
+\frac{dN_1}{dt} &= - A_{10}N_1 + A_{21}N_2 - B_{21}w(\omega_{21})g(\omega_{21}) (N_1-N_2),\\
+\frac{dN_0}{dt} &= - rN_0 + A_{20}N_2 + A_{10}N_1.
+\end{align}
+Brez škode lahko spontane prehode iz drugega vzbujenega nivoja v osnovni nivo zanemarimo, poleg 
+tega namesto $N_0$ vstavimo $N$. 
+
+Zanima nas stacionarno stanje, ko so časovni odvodi enaki nič. Iz tretje enačbe dobimo
+preprosto zvezo:
+\beq
+N_1 = \frac{rN_0}{A_{10}},
+\eeq
+iz druge pa:
+\beq
+\left(B_{21}w(\omega_{21})g(\omega_{21}) + A_{21}\right)N_2 = \left(B_{21}w(\omega_{21})g(\omega_{21}) + 
+A_{10}\right)N_1.
+\eeq
+Sledi:
+\beq
+N_2 = \frac{B_{21}w(\omega_{21})g(\omega_{21}) + A_{10}}{B_{21}w(\omega_{21})g(\omega_{21}) + A_{21}}N_1
+\eeq
+in od tod z upoštevanjem enačbe...:
+\beq
+N_2-N_1 = \frac{A_{10}-A_{21}}{B_{21}w(\omega_{21})g(\omega_{21}) + A_{21}}\frac{rN}{A_{10}}.
+\eeq
+Za dosego obrnjene zasedenosti v trinivojskem sistemu mora torej veljati $A_{10}>A_{21}$. Verjetnost za
+prehod iz nivoja 1 v osnovni nivo mora biti torej večja od verjetnost za prehod iz drugega vzbujenega
+v prvi vzbujen nivo. Povedano drugače: najvišji nivo se mora prazniti počasneje od srednjega nivoja, da med
+njima dosežemo obrnjeno zasedenost.
+
+V praksi navadno uporabljamo sisteme, v katerih je $A_{10}\gg A_{21}$. V tem primeru lahko izraz
+za obrnjeno zasedenost še dodatno poenostavimo in dobimo:
+\beq
+N_2-N_1 = \frac{rN}{A_{21}}~\frac{1}{1+B_{21}w(\omega_{21})g(\omega_{21})/A_{21}}.
+\eeq
+Upoštevamo še zvezo $w(\omega_{21}) = j/c$ in zapišemo:
+\beq
+N_2-N_1 = \frac{rN}{A_{21}}~\frac{1}{1+\frac{B_{21}g(\omega_{21})}{A_{21}c}j} = 
+\frac{rN}{A_{21}}~\frac{1}{1+j/j_s}.
+\eeq
+Vpeljali smo saturacijsko gostoto toka $j_s = A_{21}c/B_{21}g(\omega_{21})$. 
+
+Vstavimo izračunano obrnjeno zasedenost v enačbo za optično ojačevanje (enčba ..):
+\beq
+dj = \sigma (\omega_{21})\frac{rN}{VA_{21}}\frac{1}{1 + j/j_s}j dz = \frac{G j dz}{1+j/j_s},
+\eeq
+pri čemer 
+\beq
+G = \sigma(\omega_{21})\frac{rN}{VA_{21}}
+\eeq
+označuje koeficient ojačenja pri nizkih močeh.
+
+Enačbo .. lahko integriramo:
+\beq
+\int_{j_0}^j \frac{dj}{j}\left(1 + j/j_s\right) = \int_0^z G dz
+\eeq
+in dobimo zvezo:
+\beq
+\ln\frac{j}{j_0} + \frac{j-j_0}{j_s} = Gz.
+\eeq
+Zapisana enačba podaja odvisnost $z(j)$, ki jo v limitnih primerih preprosto obrnemo 
+v bolj uporabno odvisnost $j(z)$. Kadar so vpadne moči majhne in je $j \ll j_s$, drugi člen
+na levi strani zanemarimo in ostane eksponentno naraščajoča odvisnost od prepotovane poti po snovi:
+\beq
+dj \approx Gjdz \qquad \Longrightarrow \qquad j = j_0e^{Gz}.
+\eeq
+Za velike vpadne moči, za katere velja $j \gg j_s$ svetlobna moč 
+narašča le linearno:
+\beq
+dj \approx \frac{G j dz}{j/j_s} qquad \Longrightarrow \qquad j = j_0 + Gj_s z.
+\eeq
+Opisani pojav imenujemo nasičenje ojačenja. Vstavimo koeficient ojačenja
+pri nizkih močeh (enačba), saturacijsko gostoto toka (enačba) in presek za absorpcijo (enačba). 
+Dobimo:
+\beq
+Gj_s = \frac{\sigma r N A_{21}c}{V A_{21}B_{21}g(\omega_{21})} = \frac{\hslash \omega_{21}rN 
+B_{21}g(\omega_{21})}{V B_{21}g(\omega_{21})} = \hslash \omega_{21}\frac{rN}{V}.
+\eeq
+Od tod zapišemo povečanje gostote svetlobnega toka:
+\beq
+dj = \hslash \omega_{21}\frac{rN}{V}dz,
+\eeq
+kar pomeni, da v izbrani plasti snovi vsi atomi, ki jih s črpalnim mehanizmom vzbudimo v drugi vzbujeni
+nivo, na osnovi stimulirane emisije prispevajo dodatni svetlobni tok k vpadnemu elektromagnetnemu valovanju.
+Takrat torej vso razpoložljivo energijo sistema počrpamo in ojačenje je nasičeno. 
+
 \section{Laser}
+Laser je naprava, v kateri izkoristimo stimulirano emisijo za nastanek koherentne in monokromatske
+svetlobe. Sestavljajo jo trije osnovni sestavni deli: ojačevalno sredstvo za ojačenje svetlobe, 
+črpalni sistem za vzdrževanje obrnjene zasedenosti v ojačevalnem sredstvu, in resonator, ki zagotavlja
+prevlado stimulirane emisije.
+
+Beseda laser je pravzaprav kratica(?) za Light Amplification by Stimulated Emission of Radiation, 
+to je ojačevanje svetlobe s stimuliranim sevanjem. 
+
+Ojačevalno sredstvo je lahko plin, trdna snov ali tudi tekočina. Črpalni mehanizem je z električnim
+tokom, svetilka (ali drug laser), resonator pa sta dve ukrivljeni zrcali, med katera postavimo
+ojačevalno sredstvo. Svetloba se odbija med zrcaloma, vsakič se pri prehodu snovi ojači. Eno zrcalo
+je karseda odbojno z odbojnostjo $100~\%$, drugi pa ima malo manjšo odbojnost, da svetloba izhaja
+iz laserja. 
+
+Naj bo dolžina laserskega resonatorja $L$, dolžina ojačevalnega stedstva v resonatorju pa $L'$. V enem 
+obhodu resonatorja, to je od enega zrcala do drugega in nazaj, svetloba dvakrat preide skozi ojačevalno
+sredstvo. Povečanje gostote svetlobnega toka na en obhod je tako:
+\beq
+\Delta j = \frac{G j 2L'}{1+j/j_s}.
+\eeq
+Izračunamo še povečanje energije elektromagnetnega valovanja, pri čemer upoštevamo zvezo:
+$W = wV = jV/c$ in dobimo:
+\beq
+\Delta W = \frac{GW 2L'}{1+W/W_s},
+\eeq
+pri čemer je $W_s = j_s V/c$ saturacijska energija. 
+
+Po drugi strani se energija iz resonatorja tudi izgublja. Deloma zaradi namenskega izhajanja
+svetlobe iz laserja skozi izhodno zrcalo, deloma zaradi izgub v resonatorju zaradi absorpcije, sipanja:
+\beq
+\Delta W = -\Lambda W,
+\eeq
+pri čemer parameter $\Lambda$ opisuje izgube na obhod resonatorja.
+
+Stacionarno stanje je doseženo, ko se ojačenje na obhod resonatorja po velikosti ravno izenači z izgubami:
+\beq
+\Delta W = \Lambda W = \frac{GW 2L'}{1+W/W_s}.
+\eeq
+Enačba ima dve rešitvi:
+\beq
+W=0 \qquad \mathrm{in} \qquad W = W_s \left(\frac{G}{G_\mathrm{pr}} - 1\right),
+\eeq
+pri čemer je $G_\mathrm{pr} = \lambda/2L'$ ojačenje na pragu. Vrednost parametra $G$ 
+je odvisna od črpanja. Dokler je črpanje šibko in vrednost $G$ majhna, laser ne sveti in velja prva rešitev. 
+Ko je črpanje dovolj veliko, je $G>G_\mathrm{pr}$ in energija v laserju narašča linearno s parametrom $G$.
+Takrat laser na osnovi stimulirane emisije oddaja usmerjeni koherentni izhodni snop svetlobe, kar
+je karakteristika laserjev.
+
+Izhodni svetlobni tok iz laserja je:
+\beq
+P = (1-\mathcal{R}_2) W_s \left( \frac{G}{G_\mathrm{pr}}-1\right) \frac{c}{2L},
+\eeq
+pri čemer smo upoštevali čas obhoda resonatorja, v katerem je izsevana izračunana energija.
