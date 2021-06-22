@@ -1,19 +1,27 @@
 %\chapterimage{Geometrijska.jpg} % Chapter heading image
 
 \chapter{Osnove laserjev}
-V prejšnjih poglavjih smo svetlobo obravnavali klasično, za
+V tem poglavju bomo na kratko opisali delovanje laserjev, ki so 
+danes eno najpomembnejših orodij v optiki. Njihova prelomna
+iznajdba v šestdesetih letih dvajsetega stoletja je omogočila
+opazovanje povsem novih pojavov in uporabo optičnih metod
+v številnih panogah industrije, medicine in telekomunikacij.
+
+Do zdaj smo svetlobo obravnavali klasično, za
 opis delovanja laserjev pa klasična optika ne zadošča in 
-svetlobo moramo obravnavati kvantno. V kvantni optiki svetloba ni valovanje, 
-temveč predstavlja prenos paketov (kvantov) energije, imenovanih fotoni. 
+svetlobo moramo obravnavati kvantno. V kvantni optiki 
+svetlobe ne opišemo kot valovanje, temveč kot 
+prenos paketov (kvantov) energije, imenovanih fotoni. 
 V tem poglavju bomo predstavili osnovne procese interakcije 
-fotonov s snovjo in  pojasnili, v katerih primerih se svetloba v snovi
+fotonov s snovjo in pojasnili, v katerih primerih se svetloba v snovi
 absorbira in v katerih ojači. Opisali bomo preprost model laserja 
 in na koncu na kratko opisali lastnosti laserske svetlobe.
 
 \section{Sevanje črnega telesa}
 V klasični sliki smo za opis snovi uporabili Lorentzev model, 
 v katerem smo snov sestavili iz kroglic pozitivnega in 
-negativnega naboja (glej razdelka~\ref{chap:lomni} in \ref{chap:AnizoLorentz}).
+negativnega naboja (glej razdelka~\ref{chap:lomni} in 
+\ref{chap:AnizoLorentz}).
 V tem modelu so kroglice med seboj povezane z vzmetmi, frekvenco
 in amplitudo nihanja kroglic pa lahko zvezno spreminjamo.
 
@@ -26,8 +34,10 @@ Energija fotona je sorazmerna z njegovo frekvenco $\nu$:
 E_f = h\nu = \hslash \omega,
 }
 pri čemer je sorazmernostni faktor Planckova konstanta
-$h = 6,62 \cdot 10^{-34}~\si{Js}$ in $\hslash = h/2\pi$, imenovana 
+$h = 6,62 \cdot 10^{-34}~\si{Js}$, imenovana 
 po nemškem fiziku in nobelovcu Maxu Plancku (1858--1947).
+Zaradi krajšega zapisa navadno uporabljamo reducirano Planckovo konstanto
+$\hslash = h/2\pi$, 
 
 Zamislimo si toplotni zalogovnik pri temperaturi $T$, v katerem 
 je votlina s črnimi stenami. Znotraj votline se nahajajo atomi z diskretnimi
@@ -35,34 +45,37 @@ energijskimi nivoji $E_0, E_1, E_2$ ... Hkrati je v votlini zaradi
 končne temperature prisotno tudi termično sevanje v obliki 
 elektromagnetnega valovanja (slika~\ref{fig:11_votlina}\,a). 
 Oba sistema naj bosta v termičnem ravnovesju.
-\begin{figure}[h!]
-\centering
-\def\svgwidth{130truemm} 
-\input{slike/11_votlina.pdf_tex}
-\caption{Zamislimo si votlino s črnimi stenami, v kateri so 
-atomi in elektromagnetno valovanje~(a). Spekter elektromagnetnega 
-valovanja v votlini opiše Planckov spekter $u$, ki 
-je odvisen od temperature, pri čemer modra črta ustreza 
-najnižji, rdeča srednji in rumena najvišji temperaturi~(b). 
-}
-\label{fig:11_votlina}
-\end{figure}
 
-Atomi v votlini se nahajajo v različnih diskretnih energijskih stanjih,
-ki ustrezajo posameznim energijskim nivojem. Število atomov na izbranem
+Atomi v votlini zasedajo različna diskretna  energijska stanja,
+ki ustrezajo posameznim energijskim nivojem 
+(slika~\ref{fig:11_votlina}\,b). Število atomov na izbranem
 energijskem nivoju $i$ imenujemo zasedenost nivoja in jo označimo z $N_i$.
 Razmerje med zasedenostmi nivojev podaja
-Maxwell-Boltzmannova statistika. 
+Maxwell-Boltzmannova statistika:
 \beq
-\frac{N_2}{N_1} = \frac{N_0e^{-E_2/k_BT}}{N_0e^{-E_1/k_BT}} = e^{-(E_2-E_1)/k_BT},
+\frac{N_2}{N_1} = \frac{e^{-E_2/k_BT}}{e^{-E_1/k_BT}} = e^{-(E_2-E_1)/k_BT},
 \label{eq:11_01}
 \eeq
 pri čemer so $N_1$ zasedenost nižjega nivoja, $N_2$ zasedenost višjega 
 nivoja in $k_B$ Boltzmannova konstanta, imenovana po avstrijskem
-fiziku Ludwigu Boltzmannu (1844--1906), v vrednosti 
+fiziku Ludwigu Boltzmannu (1844--1906). Njena vrednost znaša 
 $k_B = 1,38 \cdot 10^{-23}~\si{J/K}$.
+\begin{figure}[h!]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/11_votlina.pdf_tex}
+\caption{Zamislimo si votlino s črnimi stenami, v kateri so 
+atomi in elektromagnetno valovanje v termičnem ravnovesju~(a). 
+Atomi zasedajo le diskretne
+energijske nivoje $E_i$, katerih zasedenost poda zasedbeno 
+število $N_i$~(b). 
+}
+\label{fig:11_votlina}
+\vglue-5truemm
+\end{figure}
 
-Povprečno število fotonov $\langle n \rangle$ 
+Elektromagnetno valovanje v votlini bomo opisali s spektrom sevanja
+črnega telesa. Povprečno število fotonov $\langle n \rangle$ 
 z energijo $\hslash \omega$ oziroma porazdelitev 
 termičnega sevanja po frekvencah podaja 
 Bose-Einsteinova statistika:
@@ -70,42 +83,104 @@ Bose-Einsteinova statistika:
 \langle n \rangle = \frac{1}{e^{\hslash \omega/k_B T}-1}.
 \label{eq:11_02}
 \eeq
-Povprečna energija izbranega lastnega nihanja je produkt energije tega nihanja
-in povprečnega števila fotonov: $\langle W \rangle = \hslash \omega \langle n \rangle$.
-
-Za izračun spektra moramo upoštevati še ustrezno gostoto stanj, to je število 
-različnih lastnih nihanj v votlini na enoto prostornine.
-Račun navadno izpeljemo za votlino v obliki kocke, vendar je rezultat splošno veljaven.
-Za veliko število stanj lahko naredimo približen izračun in gostoto stanj $\varrho$
-zapišemo kot:
+Povprečna energija fotonov pri dani frekvenci je produkt energije fotona
+in povprečnega števila fotonov pri tej frekvenci:
 \beq
-\varrho (k) = \frac{4 \pi k^2}{8 (\pi/L)^3} \frac{2}{L^3}\qquad \mathrm{oziroma}\qquad
-\varrho (\omega) = \frac{4 \pi \omega^2}{8c^3 (\pi/L)^3}\frac{2}{L^3} = 
-\frac{\omega^2}{\pi^2c^3}.
+\langle W \rangle = \hslash \omega \langle n \rangle.
 \label{eq:11_03}
 \eeq
-Zapisali smo prostornino krogelne lupine v prostoru valovnega vektorja $4\pi k^2 dk$, 
-se omejili na prvi oktant (faktor $1/8$), 
-nato pa prostornino lupine delili s prostornino enega samega
-lastnega nihanja $(\pi/L)^3$. Dodali smo še možnost dveh različnih polarizacij 
-svetlobe (faktor $2$).
+Za izračun spektra moramo upoštevati še ustrezno gostoto stanj, 
+to je število različnih lastnih nihanj v votlini v bližini dane 
+frekvence na enoto prostornine. Vzemimo kocko s stranico $L$ in 
+preštejmo število lastnih nihajnih načinov (stoječih valovanj) v njej.
+Valovne vektorje stoječih valovanj na splošno zapišemo v obliki:
+\beq
+\mathbf{k} = \left(\frac{\pi l}{L}, \frac{\pi m}{L}, \frac{\pi n}{L}\right)\!\!,
+\label{eq:11_04}
+\eeq
+pri čemer so $l$, $m$ in $n$ cela števila. Valovni vektorji tako tvorijo 
+mrežo v prvem oktantu prostora valovnih vektorjev.
+Za velike vrednosti $k$ lahko število lastnih nihanj pri valovnih 
+številih med $k$ in $k+dk$ izračunamo kot prostornino krogelne 
+lupine pri $k$, deljeno s prostornino $\pi/L$, ki pripada posamezni 
+mrežni točki. Dodamo še možnost dveh različnih polarizacij in dobimo:
+\beq
+dN = \frac{2}{8}4\pi k^2 dk \left(\frac{L}{\pi}\right)^3\!\!.
+\label{eq:11_05}
+\eeq
+Odvisnost od $k$ prevedemo na frekvenčno odvisnost, delimo s prostornino
+in za gostoto stanj, to je število lastnih nihanj na frekvenčni interval
+na enoto prostornine, dobimo:
+\beq
+\varrho (\omega) = \frac{\omega^2}{\pi^2c^3}.
+\label{eq:11_06}
+\eeq
+Čeprav smo gostoto stanj izpeljali za votlino v obliki kocke, 
+je rezultat za dovolj velike vrednosti $k$ in $\omega$ splošno veljaven. 
 
 Zdaj lahko izračunamo spekter izsevane svetlobe, tako da povprečno 
-energijo izbranega lastnega nihanja pomnožimo z gostoto stanj 
-(enačba~\ref{eq:11_03}). Spekter svetlobe, izsevane iz črnega telesa v 
-termičnem ravnovesju, opisuje Planckov zakon:
+energijo izbranega lastnega nihanja (enačba~\ref{eq:11_03}) 
+pomnožimo z gostoto stanj (enačba~\ref{eq:11_06}). 
+Spektralno gostoto energije $u(\omega)$, ki je enaka energiji 
+elektromagnetnega valovanja na enoto prostornine na enoto frekvence, 
+opisuje Planckov zakon za sevanje črnega telesa v termičnem ravnovesju:
 \boxeq{eq:Planck}{
 u(\omega) =  
 \frac{\hslash \omega^3}{\pi^2c^3}\frac{1}{e^{\hslash \omega/k_bT}-1}.
 }
-Spektralna gostota energije $u(\omega)$ tako opisuje energijo elektromagnetnega
-valovanja na enoto prostornine na enoto frekvence (slika~\ref{fig:11_votlina}\,b). 
+Spekter termičnega sevanja je močno odvisen od temperature telesa. Z naraščajočo
+temperaturo njegova vrednost narašča, vrh spektra pa se pomika k višjim
+frekvencam (slika~\ref{fig:11_Planck}).
+\begin{figure}[h!]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/11_Planck.pdf_tex}
+\caption{Povprečna energija posameznega lastnega nihanja v odvisnosti
+od njegove frekvence~(a), gostota stanj  oziroma lasnih nihanjih načinov
+v votlini~(b) in Planckov spekter sevanja
+črnega telesa pri dveh različnih temperaturah~(c). Velja $T_2>T_1$.
+}
+\label{fig:11_Planck}
+\end{figure}
 
 \section{Kvantni opis interakcije svetlobe s snovjo}
-Nadaljujmo z obravnavo votline, v kateri so redek plin 
-in elektromagnetno valovanje v termičnem ravnovesju. Zaradi interakcije med 
-elektromagnetnim poljem in atomi v votlini prihaja do treh različnih
-vrst procesov: absorpcije, spontanega sevanja in stimuliranega sevanja. 
+Nadaljujmo z obravnavo votline, v kateri so atomi 
+in elektromagnetno valovanje v termičnem ravnovesju. 
+Interakcijo med atomi in elektromagnetnim valovanjem 
+opišemo s tremi različnimi procesi: absorpcijo, spontanim
+sevanjem in stimuliranim sevanjem. Poglejmo jih podrobneje.
+\vglue3truemm
+\begin{figure}[h!]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/11_procesi.pdf_tex}
+\caption{Trije osnovni procesi interakcije svetlobe s snovjo:
+absorpcija, pri kateri se foton absorbira, atom pa preide iz nižjega v višje stanje~(a); spontana emisija, pri kateri atom spontano preide iz višjega v nižje stanje in pri 
+tem izseva foton~(b), in stimulirana emisija, pri kateri vpadni foton sproži prehod
+atoma iz višjega v nižje stanje, izsevani foton pa je identično enak vpadnemu~(c).
+}
+\label{fig:11_procesi}
+\end{figure}
+
+\subsection*{Absorpcija} 
+Absorpcija je proces, pri katerem atom absorbira vpadni foton in pri tem 
+preide iz nižjega v višje energijsko stanje (slika~\ref{fig:11_procesi}\,a). 
+Verjetnost za absorpcijo je močno odvisna od energije vpadnega fotona: če je 
+njegova energija enaka energiji med nivojema atoma, se foton lahko absorbira, sicer
+se ne more. Pomemben parameter pri zapisu verjetnosti za prehod je tako spektralna
+gostota energije $u(\omega)$.
+
+
+Število prehodov na časovno enoto odvisno tudi od spektralne gostote 
+energije $u(\omega_{21})$ pri frekvenci prehoda med stanjema:
+\beq
+\frac{dN_\mathrm{abs}}{dt} = B_{12}u(\omega_{21}) N_1.
+\eeq
+Sorazmernostno konstanto smo označili z $B_{12}$, število prehodov pa je seveda odvisno
+tudi od celotnega števila atomov v nižjem nivoju $N_1$.
+
+
+
 Pri sevalnih (emisijskih) pojavih atomi prehajajo iz višjih na nižje 
 energijske nivoje, pri absorpciji pa iz nižje na višje energijske nivoje. 
 Razlika med nivojema atoma naj bo $E_{21} = \hslash \omega_{21}$.
@@ -114,7 +189,7 @@ Spontano sevanje: Atom v vzbujenem stanju spontano preide v nižje stanje, pri �
 foton. Število spontatnih prehodov na časovno enoto je:
 \beq
 \frac{dN_\mathrm{sp}}{dt} = A_{21}N_2,
-\label{eq:11_04}
+\label{eq:11_07}
 \eeq
 pri čemer je:
 \beq
@@ -126,16 +201,7 @@ z dipolnim sevanjem (Fermijevo zlato pravilo). Tipična vrednost je $A_{21}  = A
 dovoljene prehode, kar ustreza življenjskemu času zgornjih nivojev $\tau = 1/A \sim 1~\si{ns}$. 
 Spontano sevanje bomo pogosto zanemarili. 
 
-Absorpcija: Ko foton z ustrezno energijo vpade na atom, se lahko absorbira, pri čemer atom 
-preide v vzbujeno stanje. Verjetnost za prehod je močno odvisna od energije fotona: če je 
-njegova energija približno enaka energiji med nivojema atoma, se foton lahko absorbira, sicer
-se ne more. Zato je število prehodov na časovno enoto odvisno tudi od spektralne gostote 
-energije $u(\omega_{21})$ pri frekvenci prehoda med stanjema:
-\beq
-\frac{dN_\mathrm{abs}}{dt} = B_{12}u(\omega_{21}) N_1.
-\eeq
-Sorazmernostno konstanto smo označili z $B_{12}$, število prehodov pa je seveda odvisno
-tudi od celotnega števila atomov v nižjem nivoju $N_1$.
+
 
 Stimulirano sevanje: Ko foton z ustrezno energijo vpade na vzbujen atom, lahko atom preide
 iz višjega v nižje stanje, pri tem pa izseva foton, ki je enak vpadnemu fotonu. Iz enega 
