@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '11_Planck.pdf' (pdf, eps, ps)
+%% Accompanies image file '11_g.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1653.64930641bp}%
+    \setlength{\unitlength}{394.18569009bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,21 +50,21 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.20628786)%
+  \begin{picture}(1,0.2693855)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.84986044,0.14840868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(T_2)$\end{tabular}}}}%
-    \put(1.00257785,0.00293132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
-    \put(0.6427765,0.18018872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}c)\end{tabular}}}}%
-    \put(0.50860116,0.10402038){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\varrho$\end{tabular}}}}%
-    \put(0.62576616,0.00293132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
-    \put(0.31857579,0.18018872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
-    \put(0.06877912,0.10578188){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\langle W \rangle$\end{tabular}}}}%
-    \put(0.30156548,0.00293132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
-    \put(-0.00562507,0.18018872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{11_Planck.pdf}}%
-    \put(0.78601341,0.0677565){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(T_1)$\end{tabular}}}}%
-    \put(0.31105745,0.09809854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\times$\end{tabular}}}}%
-    \put(0.63670103,0.09809854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$=$\end{tabular}}}}%
+    \put(-0.00107324,0.24658504){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.52599313,0.24720712){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.70626689,0.01380256){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{11_g.pdf}}%
+    \put(0.33818018,0.17830614){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(\omega)$\end{tabular}}}}%
+    \put(0.6262202,0.21484295){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(\omega)$\end{tabular}}}}%
+    \put(0.29666288,0.11597153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g(\omega)$\end{tabular}}}}%
+    \put(0.81759873,0.11336793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g(\omega)$\end{tabular}}}}%
+    \put(0.22552109,0.00663649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{21}$\end{tabular}}}}%
+    \put(0.74690875,0.00663649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{21}$\end{tabular}}}}%
+    \put(0.67678231,0.00663649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_R$\end{tabular}}}}%
+    \put(0.45658515,0.00663652){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
+    \put(0.97673099,0.00663651){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
