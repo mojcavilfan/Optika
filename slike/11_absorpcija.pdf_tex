@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '11_procesi.pdf' (pdf, eps, ps)
+%% Accompanies image file '11_absorpcija.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1503.30235759bp}%
+    \setlength{\unitlength}{246.04746901bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,21 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.11242715)%
+  \begin{picture}(1,0.66327215)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{11_procesi.pdf}}%
-    \put(0.02300426,0.00470644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_1$\end{tabular}}}}%
-    \put(0.02300426,0.06656941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_2$\end{tabular}}}}%
-    \put(0.16541556,0.00470644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_1$\end{tabular}}}}%
-    \put(0.16541556,0.06656941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_2$\end{tabular}}}}%
-    \put(0.34474611,0.00470644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_1$\end{tabular}}}}%
-    \put(0.34474611,0.06656941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_2$\end{tabular}}}}%
-    \put(0.48715739,0.00470644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_1$\end{tabular}}}}%
-    \put(0.48715739,0.06656941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_2$\end{tabular}}}}%
-    \put(0.67147501,0.00470644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_1$\end{tabular}}}}%
-    \put(0.67147501,0.06656941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_2$\end{tabular}}}}%
-    \put(0.81388921,0.00470644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_1$\end{tabular}}}}%
-    \put(0.81388921,0.06656941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$E_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{11_absorpcija.pdf}}%
+    \put(0.09717003,0.37514111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$P$\end{tabular}}}}%
+    \put(0.76385102,0.37514111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$P+dP$\end{tabular}}}}%
+    \put(0.51122464,0.11440407){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S$\end{tabular}}}}%
+    \put(0.34186317,0.03341845){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$dz$\end{tabular}}}}%
+    \put(0.31075901,0.3803726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$N_1, N_2$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
