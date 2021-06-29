@@ -721,63 +721,121 @@ Emission of Radiation}, to je ojačevanje svetlobe s stimuliranim sevanjem.}
 v grobem sestavljajo trije osnovni sestavni deli: ojačevalno sredstvo, 
 v katerem se svetloba ojačuje, črpalni sistem, ki vzdržuje obrnjeno zasedenost
 v ojačevalnem sredstvu, in resonator, ki zagotavlja prevlado stimulirane emisije.
+\begin{figure}[h!]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/11_laser.pdf_tex}
+\caption{Shema laserja s tremi poglavitnimi sestavnimi deli: ojačevalnim sredstvom, 
+črpalnim mehanizmom in resonatorjem. Odbojnost izhodnega zrcala je manjša od $100\%$,
+da lahko svetloba izhaja iz resonatorja. Fotografija starejšega helij-neonskega laserja, narejenega v Sloveniji. Ohišje laserja je odprto, da se vidi notranje elemente.
+}
+\label{fig:11_laser}
+\end{figure}
 
-Ojačevalno sredstvo je lahko plin, trdna snov ali tudi tekočina. Zelo razširjeni
-plinski laserji so helij-neonski (He-Ne) laser, v katerem je ojačevalno sredstvo
-mešanica plinov helija in neona; najbolj razširjenji laserji pa so diodni laserji,
-v katerih se svetloba ojačuje na pn stiku polprevodnika. 
+Ojačevalno sredstvo je najznačilnejši del laserja, saj je od njega odvisna 
+valovna dolžina izhodne svetlobe. Laserje zato tudi navadno poimenujemo
+po snovi, iz katere je ojačevalno sredstvo.
+Ojačevalno sredstvo je lahko plin, trdna snov ali tekočina.  
+Šolski laserji so plinski helij-neonski (He-Ne) laserji, ki oddajajo 
+rdečo svetlobo pri $632,8~\si{nm}$. V njih je ojačevalno sredstvo
+mešanica plinov helija in neona. Danes najbolj razširjenji laserji so 
+diodni laserji, v katerih se svetloba ojačuje na p-n spoju polprevodnika. 
+Valovne dolžine diodnih laserjev sežejo od $\sim 375~\si{nm}$ do več 
+$\si{\micro\meter}$, odvisno od polprevodnika in njegovih primesi.
 
-Črpalni mehanizem je odvisen od izbire ojačevalnega sredstva, najpogostejši način je 
-z električnim tokom. V helij-neonskem laserju, na primer, v razelektritveni 
-cevi elektroni trkajo z atomi helija. Vzbujeni atomi helija s trki prenesejo 
-energijo na atome neona in tako vzdržujemo obrnjeno zasedenost. 
+Črpalni mehanizem je odvisen od izbire ojačevalnega sredstva. Črpamo lahko 
+optično, z močno svetilko ali drugim laserjem, najpogostejši način pa je z
+električnim tokom. V helij-neonskem laserju, na primer, v razelektritveni 
+cevi elektroni trkajo z atomi helija. Vzbujeni atomi helija z nadaljnjimi
+trki prenesejo energijo na atome neona, jih vzbudijo in tako vzdržujejo 
+obrnjeno zasedenost.
 
 Resonatorji sta navadno dve ukrivljeni zrcali, od katerih ima eno odbojnost
-kar se da veliko $R_1 \approx 100\%$, drugo pa malo manjšo $R_2 < 100\%$, 
-da svetloba sploh lahko izhaja iz laserja. Med zrcali resonatorja postavimo
-ojačevalno sredstvo in svetloba, ki se od zrcal odbija, se pri vsakem prehodu
-ojačevalnega sredstva ojači.
+kar se da veliko $\mathcal{R}_1 \approx 100\%$, drugo pa malo manjšo 
+$\mathcal{R}_2 < 100\%$, da svetloba sploh lahko izhaja iz laserja. 
+Med zrcali resonatorja postavimo ojačevalno sredstvo in svetloba, ki se od 
+zrcal odbija, se pri vsakem prehodu ojačevalnega sredstva ojači.
 
-Izhajanje svetlobe skozi izhodno zrcalo predstavlja poglavitne izgube resonatorja. 
-Ko se izgube na prelet resonatorja izenačijo z ojačevanjem svetlobe na prelet, deluje
-laser v stacionarnem stanju. Poglejmo ta proces podrobneje.
+Izhajanje svetlobe skozi izhodno zrcalo predstavlja poglavitne izgube 
+resonatorja.  Ko se izgube na obhod resonatorja izenačijo z ojačevanjem 
+svetlobe na obhod, deluje laser v stacionarnem stanju. Poglejmo ta proces 
+podrobneje.
 
-Naj bo dolžina laserskega resonatorja $L$, dolžina ojačevalnega stedstva v resonatorju pa $L'$. V enem 
-obhodu resonatorja, to je od enega zrcala do drugega in nazaj, svetloba dvakrat preide skozi ojačevalno
-sredstvo. Povečanje gostote svetlobnega toka na en obhod je tako:
+Naj bo dolžina laserskega resonatorja $L$, dolžina ojačevalnega sredstva 
+v resonatorju pa $L'$. V enem obhodu resonatorja, to je pri preletu svetlobe
+od enega zrcala do drugega in nazaj, svetloba dvakrat preide skozi ojačevalno
+sredstvo. Povečanje gostote svetlobnega toka na en obhod je tako 
+(enačba~\ref{eq:3ojacevanje}):
 \beq
-\Delta j = \frac{G j 2L'}{1+j/j_s}.
+\Delta j = \frac{G j\,2L'}{1+j/j_s}.
+\label{eq:11_51}
 \eeq
-Izračunamo še povečanje energije elektromagnetnega valovanja, pri čemer upoštevamo zvezo:
-$W = wV = jV/c$ in dobimo:
+Privzeli smo, da je prirast majhen in se tako izognili integralu.
+Povečanje energije je z upoštevanjem zveze z gostoto
+svetlobnega toka ($W = Vw = Vj/c$) potem:
 \beq
-\Delta W = \frac{GW 2L'}{1+W/W_s},
+\Delta W = \frac{G\,W 2L'}{1+W/W_s},
+\label{eq:11_52}
 \eeq
-pri čemer je $W_s = j_s V/c$ saturacijska energija. 
+pri čemer je $W_s = Vj_s/c$ saturacijska energija. 
 
-Po drugi strani se energija iz resonatorja tudi izgublja. Deloma zaradi namenskega izhajanja
-svetlobe iz laserja skozi izhodno zrcalo, deloma zaradi izgub v resonatorju zaradi absorpcije, sipanja:
+Energija se iz resonatorja tudi izgublja. Deloma zaradi namenskega 
+izhajanja svetlobe iz laserja skozi izhodno zrcalo, deloma zaradi 
+izgub v resonatorju zaradi absorpcije, sipanja ali uklona. Skupne izgube
+energije na en obhod resonatorja opišemo s parametrom $\Lambda$, tako da velja:
 \beq
-\Delta W = -\Lambda W,
+\Delta W = -\Lambda W.
+\label{eq:11_53}
 \eeq
-pri čemer parameter $\Lambda$ opisuje izgube na obhod resonatorja.
+Stacionarno stanje je doseženo, ko se ojačenje na obhod resonatorja 
+(enačba~\ref{eq:11_52}) po velikosti ravno izenači z izgubami (enačba~\ref{eq:11_53}):
+\beq
+\Lambda W = \frac{G\,W 2L'}{1+W/W_s}.
+\label{eq:11_54}
+\eeq
+Zapisana enačba ima dve rešitvi:
+\beq
+W=0 \qquad \mathrm{in} \qquad W = W_s \left(\frac{G\,2L'}{\Lambda} - 1\right)\!\!.
+\label{eq:11_55}
+\eeq
+Spomnimo se, da je parameter $G$ sorazmeren s črpanjem 
+(enačba~\ref{eq:11_44}). Pri šibkem črpanju je vrednost $G$ majhna in 
+edina smiselna rešitev je $W=0$. Takrat laser ne sveti. Pri močnem
+črpanju in velikem ojačenju ima enačba~(\ref{eq:11_55}) tudi neničelno
+rešitev (enačba~\ref{eq:11_55}\, desno) in takrat laser oddaja svetlobo. 
+Mejno ojačenje, pri katerem začne laser svetiti, imenujemo prag 
+delovanja laserja. Ojačenje na pragu delovanja je enako:
+\beq
+G_\mathrm{pr} = \frac{\Lambda}{2L'}.
+\label{eq:11_56}
+\eeq
+Kadar je črpanje nad pragom, energija v laserju narašča linearno s 
+parametrom $G$:
+\beq
+W = W_s \left(\frac{G}{G_\mathrm{pr}} - 1\right)\!\!.
+\label{eq:11_57}
+\eeq
+Takrat laser na osnovi stimulirane emisije oddaja usmerjeni 
+koherentni izhodni snop svetlobe, kar je poglavitna značilnost laserjev laserjev.
 
-Stacionarno stanje je doseženo, ko se ojačenje na obhod resonatorja po velikosti ravno izenači z izgubami:
+Ko enkrat poznamo energijo v laserskem resonatorju, lahko preprosto
+izračunamo izhodni svetlobni tok iz laserja. Čas enega obhoda je $2L/c$,
+upoštevati pa moramo le delež energije, ki je prepuščen skozi izhodno zrcalo. 
+Dobimo: 
 \beq
-\Delta W = \Lambda W = \frac{GW 2L'}{1+W/W_s}.
+P = (1-\mathcal{R}_2) W_s \left( \frac{G}{G_\mathrm{pr}}-1\right) \frac{c}{2L}.
+\label{eq:11_58}
 \eeq
-Enačba ima dve rešitvi:
-\beq
-W=0 \qquad \mathrm{in} \qquad W = W_s \left(\frac{G}{G_\mathrm{pr}} - 1\right),
-\eeq
-pri čemer je $G_\mathrm{pr} = \lambda/2L'$ ojačenje na pragu. Vrednost parametra $G$ 
-je odvisna od črpanja. Dokler je črpanje šibko in vrednost $G$ majhna, laser ne sveti in velja prva rešitev. 
-Ko je črpanje dovolj veliko, je $G>G_\mathrm{pr}$ in energija v laserju narašča linearno s parametrom $G$.
-Takrat laser na osnovi stimulirane emisije oddaja usmerjeni koherentni izhodni snop svetlobe, kar
-je karakteristika laserjev.
+\begin{remark}
+Izhodne moči laserjev so od nekaj $\si{mW}$ v laserskih kazalnikih, do 
+več $\si{kV}$ v industrijskih laserjih za obdelavo snovi. Najvišje moči 
+dosegajo sunkovni laserji. Ti za razliko od zvezno delujočih energijo oddajajo
+v izredno kratkih sunkih, dolgih lahko le $\si{ns}$, $\si{ps}$ ali celo 
+le nekaj $\si{fs}$. Vršna moč v takih laserjih dosega
+vrednosti $\si{GW}$ ali še več. Ker so sunki izredno kratki, celotna izsevana 
+energija kljub nepredstavljivo veliki moči ostaja razmeroma majhna, tipično 
+velikosti $\si{mJ}$.
+\end{remark}
 
-Izhodni svetlobni tok iz laserja je:
-\beq
-P = (1-\mathcal{R}_2) W_s \left( \frac{G}{G_\mathrm{pr}}-1\right) \frac{c}{2L},
-\eeq
-pri čemer smo upoštevali čas obhoda resonatorja, v katerem je izsevana izračunana energija.
+Dodaj sliko Gaussovega snopa in povej, da je to Gaussova oblika, dala ime. 
+z oddaljenostjo od laserja se širi, ampak ima divergenco zelo majhno, mrad.

@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="298.10056mm"
-   height="191.54887mm"
-   viewBox="0 0 298.10057 191.54891"
+   width="257.98398mm"
+   height="193.13635mm"
+   viewBox="0 0 257.98399 193.13639"
    version="1.1"
    id="svg211"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -20,10 +20,10 @@
      id="defs205">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="-2334.84 : 315.92507 : 1"
-       inkscape:vp_y="0 : 470.97669 : 0"
-       inkscape:vp_z="700.70451 : 448.43479 : 1"
-       inkscape:persp3d-origin="254.03458 : 279.42543 : 1"
+       inkscape:vp_x="-2334.8401 : 315.92506 : 1"
+       inkscape:vp_y="0 : 470.97668 : 0"
+       inkscape:vp_z="700.70454 : 448.43478 : 1"
+       inkscape:persp3d-origin="254.03459 : 279.42542 : 1"
        id="perspective9541" />
     <marker
        inkscape:stockid="Arrow1Sstart"
@@ -2460,8 +2460,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.55493296"
-     inkscape:cx="407.39987"
-     inkscape:cy="124.53061"
+     inkscape:cx="284.30099"
+     inkscape:cy="130.53051"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2470,9 +2470,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1873"
+     inkscape:window-width="991"
      inkscape:window-height="896"
-     inkscape:window-x="29"
+     inkscape:window-x="911"
      inkscape:window-y="49"
      inkscape:window-maximized="0"
      inkscape:snap-global="true"
@@ -2496,7 +2496,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(169.0993,39.792062)">
+     transform="translate(136.52939,39.792062)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -2604,7 +2604,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.10030651px;line-height:0%;font-family:msbm10;-inkscape-font-specification:msbm10;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-146.34279"
+       x="-145.28447"
        y="139.89148"
        id="text5330-93-1-6-5-8-1-1-7"
        inkscape:transform-center-x="6.877612"
@@ -2612,19 +2612,19 @@
          sodipodi:role="line"
          id="tspan5332-4-8-7-3-3-4-4-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.13374138px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:round"
-         x="-146.34279"
+         x="-145.28447"
          y="139.89148">$1$</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.10030651px;line-height:0%;font-family:msbm10;-inkscape-font-specification:msbm10;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-137.06328"
-       y="150.70117"
+       y="152.28865"
        id="text5330-0"><tspan
          sodipodi:role="line"
          id="tspan5332-45"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.13374138px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:round"
          x="-137.06328"
-         y="150.70117">$0$</tspan></text>
+         y="152.28865">$0$</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.10030651px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2639,25 +2639,25 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.10030651px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-169.45927"
+       x="-163.10936"
        y="-21.099596"
        id="text4258"><tspan
          sodipodi:role="line"
          id="tspan4260"
          style="font-size:9.10030651px;line-height:1.25;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:round"
-         x="-169.45927"
+         x="-163.10936"
          y="-21.099596">$j/j_0$</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.10030651px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="74.684464"
-       y="79.985176"
+       x="74.155296"
+       y="81.04351"
        id="text4258-3"><tspan
          sodipodi:role="line"
          id="tspan4260-6"
          style="font-size:9.10030651px;line-height:1.25;stroke-width:0.75835884px;stroke-linecap:butt;stroke-linejoin:round"
-         x="74.684464"
-         y="79.985176">$j_s/j_0$</tspan></text>
+         x="74.155296"
+         y="81.04351">$j_s/j_0$</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot1992"
