@@ -1,4 +1,4 @@
-%\chapterimage{Geometrijska.jpg} % Chapter heading image
+\chapterimage{11_Laser.jpg} % Chapter heading image
 
 \chapter{Osnove laserjev}
 V tem poglavju bomo na kratko opisali delovanje laserjev, ki so 
@@ -199,7 +199,7 @@ atomov v višjem stanju in ga zapišemo kot:
 \label{eq:11_09}
 \eeq
 pri čemer smo vpeljali sorazmernostno konstanto $A_{21}$. Tipična vrednost 
-za dovoljene prehode je $A_{21}\sim 10^{6}$--$10^8$, za prepovedane pa okoli 
+za dovoljene prehode je $A_{21}\sim 10^{6}$--$10^8~\si{s^{-1}}$, za prepovedane pa okoli 
 štiri velikostne rede manj. Inverzna vrednost konstante $A_{21}$ 
 ustreza življenjskemu času višjega nivoja oziroma naravnemu razpadnemu času višjega
 stanja:
@@ -247,13 +247,13 @@ koeficientov so $B_{21}\sim 10^{16}$--$10^{20}~\si{m^3/Js^2}$.
 \subsection*{Einsteinovi koeficienti}
 Koeficiente $A$, $B_{12}$ in $B_{21}$, ki smo jih vpeljali kot sorazmernostne
 koeficiente pri opisu interakcije svetlobe s snovjo, imenujemo Einsteinovi 
-koeficienti. Izkaže se, da njihove vrednosti niso neodvisne, ampak veljata med 
-njimi sledeči zvezi:
+koeficienti. Izkaže se, da njihove vrednosti niso neodvisne. Velja namreč:
 \beq
-B_{12}=B_{21}= B
+B_{12}=B_{21}= B,
 \label{eq:11_13}
 \eeq
-in 
+kar pomeni, da je verjetnost za absorpcijo 
+enaka verjetnosti za stimulirano emisijo. Poleg tega velja še zveza:
 \beq
 \frac{A}{B} = \frac{\hslash \omega_{21}^3}{\pi^2c_0^3}.
 \label{eq:11_14}
@@ -320,8 +320,8 @@ s čimer smo pokazali še enačbo~(\ref{eq:11_14}).
 Parametre $A$ in $B$ imenujemo po Albertu Einsteinu, ki je že leta 
 1916 proučeval interakcije svetlobe s snovjo in predlagal opisani model. 
 Na podlagi modela je napovedal možnost ojačenja svetlobe s stimulirano 
-emisijo in tako napovedal delovanje laserja. Do prvega delujočega laserja 
-je potem minilo še  več kot 40 let. 
+emisijo in tako postavil teoretično utemeljitev za delovanje laserjev.
+Do prvega delujočega laserja je potem minilo še  več kot 40 let. 
 \end{example}
 
 \section{Interakcija svetlobe s snovjo v optičnem resonatorju}
@@ -826,16 +826,65 @@ Dobimo:
 P = (1-\mathcal{R}_2) W_s \left( \frac{G}{G_\mathrm{pr}}-1\right) \frac{c}{2L}.
 \label{eq:11_58}
 \eeq
-\begin{remark}
-Izhodne moči laserjev so od nekaj $\si{mW}$ v laserskih kazalnikih, do 
-več $\si{kV}$ v industrijskih laserjih za obdelavo snovi. Najvišje moči 
-dosegajo sunkovni laserji. Ti za razliko od zvezno delujočih energijo oddajajo
+
+\begin{figure}[h!]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/11_laserG.pdf_tex}
+\caption{Odvisnost izhodne svetlobne moči od ojačenja $G$. Za lasersko
+delovanje je značilen prag, pod katerim laser ne sveti, nad njim pa moč
+narašča linearno z ojačenjem oziroma črpanjem.
+}
+\label{fig:11_laserG}
+\vglue-3truemm
+\end{figure}
+
+\section{Lastnosti laserske svetlobe}
+Poglavitna značilnost laserske svetlobe je njena zelo ozka spektralna
+širina oziroma zelo izrazita enobarvnost. Svetloba iz He-Ne laserja, 
+na primer, z valovno dolžino $632,8~\si{nm}$ (in ustrezno frekvenco $
+5 \cdot 10^{14}~\si{Hz}$) ima širino spektralne črte 
+$1,5 \cdot 10^{9}~\si{Hz}$. Spekter lahko z dodatno stabilizacijo 
+zmanjšamo še za več redov velikosti. 
+
+Laserska svetloba je najbolj koherenten izvor svetlobe. Tipične 
+koherenčne dolžine laserske svetlobe so več $100~\si{m}$ ali celo 
+več $100~\si{km}$. Za primerjavo: svetloba s Sonca ima koherenčno dolžino
+krajšo od mikrometra. Koherentna laserska svetloba je zato zelo uporabna
+v interferenčnih poskusih in izredno natančnih meritvah.
+
+Osnovni laserski snop, ki izhaja iz resonatorja, je po obliki
+Gaussov snop. To pomeni, da njegova intenziteta pojema z oddaljenostjo
+od osrednje osi $r$ kot Gaussova funkcija (slika~\ref{fig:11_Gauss}):
+\beq
+j = j_0 e^{-2r^2/w^2},
+\eeq
+pri čemer sta $w$ efektivni polmer snopa in $j_0$ največja gostota
+svetlobnega toka. Mestu, kjer je snop najožji, pravimo grlo snopa.
+Z oddaljenostjo od grla se snop širi, zaradi ohranitve energije pa 
+se njegova vršna gostota toka zmanjšuje.
+
+Širjenje snopa opisuje divergenca, to je razmerje med 
+polmerom  snopa in oddaljenostjo od grla pri velikih razdaljah. 
+Za laserske snopa je divergenca izredno majhna, tipično okoli $\si{mrad}$.
+% Divergenca snopa je obratno sorazmerna s polmerom snopa v grlu, 
+% zato lahko divergenca zelo naraste, če polmer grla močno zmanjšamo, 
+% na primer ob preslikavi z zbiralno lečo. 
+
+Izhodne moči laserjev so od nekaj $\si{mW}$ v laserskih kazalnikih do 
+več $\si{kW}$ v industrijskih laserjih za obdelavo snovi. Najvišje moči 
+dosegajo sunkovni laserji, ki oddajajo energijo
 v izredno kratkih sunkih, dolgih lahko le $\si{ns}$, $\si{ps}$ ali celo 
-le nekaj $\si{fs}$. Vršna moč v takih laserjih dosega
+le nekaj $\si{fs}$. Vršna moč v sunkovnih laserjih dosega
 vrednosti $\si{GW}$ ali še več. Ker so sunki izredno kratki, celotna izsevana 
 energija kljub nepredstavljivo veliki moči ostaja razmeroma majhna, tipično 
-velikosti $\si{mJ}$.
-\end{remark}
-
-Dodaj sliko Gaussovega snopa in povej, da je to Gaussova oblika, dala ime. 
-z oddaljenostjo od laserja se širi, ampak ima divergenco zelo majhno, mrad.
+pod $\si{J}$.
+\begin{figure}[h!]
+\centering
+\def\svgwidth{80truemm} 
+%\input{slike/11_Gauss.pdf_tex}
+\caption{Prečni profil laserskega snopa je Gaussove oblike.
+}
+\label{fig:11_Gauss}
+\vglue-3truemm
+\end{figure}
