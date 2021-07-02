@@ -8,22 +8,21 @@ opazovanje povsem novih pojavov in uporabo optičnih metod
 v številnih panogah industrije, medicine in telekomunikacij.
 
 Do zdaj smo svetlobo obravnavali klasično, za
-opis delovanja laserjev pa klasična optika ne zadošča in 
-svetlobo moramo obravnavati kvantno. V kvantni optiki 
+opis delovanja laserjev pa moramo svetlobo obravnavati kvantno. V kvantni optiki 
 svetlobe ne opišemo kot valovanje, temveč kot 
 prenos paketov (kvantov) energije, imenovanih fotoni. 
 V tem poglavju bomo predstavili osnovne procese interakcije 
 fotonov s snovjo in pojasnili, v katerih primerih se svetloba v snovi
 absorbira in v katerih ojači. Opisali bomo preprost model laserja 
-in na koncu na kratko opisali lastnosti laserske svetlobe.
+in na koncu na kratko podali lastnosti laserske svetlobe.
 
 \section{Sevanje črnega telesa}
 V klasični sliki smo za opis snovi uporabili Lorentzev model, 
 v katerem smo snov sestavili iz kroglic pozitivnega in 
 negativnega naboja (glej razdelka~\ref{chap:lomni} in 
 \ref{chap:AnizoLorentz}).
-V tem modelu so kroglice med seboj povezane z vzmetmi, frekvenco
-in amplitudo nihanja kroglic pa lahko zvezno spreminjamo.
+V tem modelu so kroglice med seboj povezane z vzmetmi, pri čemer lahko
+frekvenco, amplitudo in energijo nihanja zvezno spreminjamo.
 
 V kvantnem opisu snovi atomi oziroma molekule zavzemajo
 le stanja z diskretnimi vrednostmi energije. Obenem kvantno
@@ -37,19 +36,18 @@ pri čemer je sorazmernostni faktor Planckova konstanta
 $h = 6,62 \cdot 10^{-34}~\si{Js}$, imenovana 
 po nemškem fiziku in nobelovcu Maxu Plancku (1858--1947).
 Zaradi krajšega zapisa navadno uporabljamo reducirano Planckovo konstanto
-$\hslash = h/2\pi$, 
+$\hslash = h/2\pi$.
 
 Zamislimo si toplotni zalogovnik pri temperaturi $T$, v katerem 
-je votlina s črnimi stenami. Znotraj votline se nahajajo atomi z diskretnimi
-energijskimi nivoji $E_0, E_1, E_2$ ... Hkrati je v votlini zaradi 
+je votlina s črnimi stenami (slika~\ref{fig:11_votlina}\,a). 
+Znotraj votline se nahajajo posamezni atomi, hkrati pa je v votlini zaradi 
 končne temperature prisotno tudi termično sevanje v obliki 
-elektromagnetnega valovanja (slika~\ref{fig:11_votlina}\,a). 
-Oba sistema naj bosta v termičnem ravnovesju.
+elektromagnetnega valovanja. Celoten sistem naj bo v termičnem ravnovesju.
 
-Atomi v votlini zasedajo različna diskretna  energijska stanja,
-ki ustrezajo posameznim energijskim nivojem 
-(slika~\ref{fig:11_votlina}\,b). Število atomov na izbranem
-energijskem nivoju $i$ imenujemo zasedenost nivoja in jo označimo z $N_i$.
+Atomi v votlini zasedajo različne diskretne energijske nivoje
+$E_0, E_1, E_2$ ..., število atomov na izbranem
+energijskem nivoju $i$ pa imenujemo zasedenost nivoja in 
+jo označimo z $N_i$ (slika~\ref{fig:11_votlina}\,b).
 Razmerje med zasedenostmi nivojev podaja
 Maxwell-Boltzmannova statistika:
 \beq
@@ -62,48 +60,37 @@ fiziku Ludwigu Boltzmannu (1844--1906). Njena vrednost znaša
 $k_B = 1,38 \cdot 10^{-23}~\si{J/K}$.
 \begin{figure}[h!]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{130truemm} 
 \input{slike/11_votlina.pdf_tex}
-\caption{Zamislimo si votlino s črnimi stenami, v kateri so 
-atomi in elektromagnetno valovanje v termičnem ravnovesju~(a). 
+\caption{V votlini s črnimi stenami so atomi (modri krožci) in 
+elektromagnetno valovanje (rdeči valovi) v termičnem ravnovesju~(a). 
 Atomi zasedajo le diskretne
 energijske nivoje $E_i$, katerih zasedenost poda zasedbeno 
-število $N_i$~(b). 
+število $N_i$~(b). Dovoljeni valovni vektorji stoječih valovanj na danem intervalu $dk$ (c), zaradi
+preprostosti je narisan 2D primer. 
 }
 \label{fig:11_votlina}
-\vglue-5truemm
+\vglue-2truemm
 \end{figure}
 
 Elektromagnetno valovanje v votlini bomo opisali s spektrom sevanja
-črnega telesa. Povprečno število fotonov $\langle n \rangle$ 
-z energijo $\hslash \omega$ oziroma porazdelitev 
-termičnega sevanja po frekvencah podaja 
-Bose-Einsteinova statistika:
-\beq
-\langle n \rangle = \frac{1}{e^{\hslash \omega/k_B T}-1}.
-\label{eq:11_02}
-\eeq
-Povprečna energija fotonov pri dani frekvenci je produkt energije fotona
-in povprečnega števila fotonov pri tej frekvenci:
-\beq
-\langle W \rangle = \hslash \omega \langle n \rangle.
-\label{eq:11_03}
-\eeq
-Za izračun spektra moramo upoštevati še ustrezno gostoto stanj, 
-to je število različnih lastnih nihanj v votlini v bližini dane 
-frekvence na enoto prostornine. Vzemimo kocko s stranico $L$ in 
-preštejmo število lastnih nihajnih načinov (stoječih valovanj) v njej.
-Valovne vektorje stoječih valovanj na splošno zapišemo v obliki:
+črnega telesa. Poglejmo najprej, koliko različnih lastnih nihanj
+(stoječih valovanj) je v votlini pri dani frekvenci na enoto prostornine.
+To količino imenujemo gostota stanj in jo izračunamo na preprostem primeru
+votline v obliki kocke s stranico $L$. Valovne vektorje stoječih valovanj 
+na splošno zapišemo kot:
 \beq
 \mathbf{k} = \left(\frac{\pi l}{L}, \frac{\pi m}{L}, \frac{\pi n}{L}\right)\!\!,
 \label{eq:11_04}
 \eeq
-pri čemer so $l$, $m$ in $n$ cela števila. Valovni vektorji tako tvorijo 
-mrežo v prvem oktantu prostora valovnih vektorjev.
-Za velike vrednosti $k$ lahko število lastnih nihanj pri valovnih 
-številih med $k$ in $k+dk$ izračunamo kot prostornino krogelne 
-lupine pri $k$, deljeno s prostornino $\pi/L$, ki pripada posamezni 
-mrežni točki. Dodamo še možnost dveh različnih polarizacij in dobimo:
+pri čemer so $l,m,n \in \mathbb{N}_0$. V tridimenzionalnem prostoru
+valovnih vektorjev tvorijo zapisani valovni vektorji diskretno 
+mrežo (slika~\ref{fig:11_votlina}\,c). Za velike vrednosti $k$ 
+število lastnih nihanj 
+med $k$ in $k+dk$ izračunamo kot prostornino krogelne 
+lupine pri $k$ v prvem oktantu, deljeno s prostornino $\pi/L$, 
+ki pripada posamezni  mrežni točki. Upoštevamo še možnost dveh polarizacij 
+in dobimo:
 \beq
 dN = \frac{2}{8}4\pi k^2 dk \left(\frac{L}{\pi}\right)^3\!\!.
 \label{eq:11_05}
@@ -112,33 +99,44 @@ Odvisnost od $k$ prevedemo na frekvenčno odvisnost, delimo s prostornino
 in za gostoto stanj, to je število lastnih nihanj na frekvenčni interval
 na enoto prostornine, dobimo:
 \beq
-\varrho (\omega) = \frac{\omega^2}{\pi^2c^3}.
+\varrho (\omega) = \frac{dN}{d\omega\, V} = \frac{\omega^2}{\pi^2c^3}.
 \label{eq:11_06}
 \eeq
-Čeprav smo gostoto stanj izpeljali za votlino v obliki kocke, 
-je rezultat za dovolj velike vrednosti $k$ in $\omega$ splošno veljaven. 
-
+Povprečno število fotonov $\langle n \rangle$ pri frekvenci $\omega$
+z energijo $\hslash \omega$ podaja 
+Bose-Einsteinova statistika:
+\beq
+\langle n \rangle = \frac{1}{e^{\hslash \omega/k_B T}-1}.
+\label{eq:11_02}
+\eeq
+Povprečna energija fotonov pri dani frekvenci je produkt energije enega fotona
+in povprečnega števila fotonov pri tej frekvenci:
+\beq
+\langle W \rangle = \hslash \omega \langle n \rangle.
+\label{eq:11_03}
+\eeq
 Zdaj lahko izračunamo spekter izsevane svetlobe, tako da povprečno 
 energijo izbranega lastnega nihanja (enačba~\ref{eq:11_03}) 
-pomnožimo z gostoto stanj (enačba~\ref{eq:11_06}). 
-Spektralno gostoto energije $u(\omega)$, ki je enaka energiji 
-elektromagnetnega valovanja na enoto prostornine na enoto frekvence, 
-opisuje Planckov zakon za sevanje črnega telesa v termičnem ravnovesju:
+pomnožimo z gostoto stanj (enačba~\ref{eq:11_06}). Dobimo spektralno 
+gostoto energije $u(\omega)$, ki je enaka energiji 
+elektromagnetnega valovanja na enoto prostornine na enoto frekvence:
 \boxeq{eq:Planck}{
 u(\omega) =  
 \frac{\hslash \omega^3}{\pi^2c^3}\frac{1}{e^{\hslash \omega/k_bT}-1}.
 }
-Spekter termičnega sevanja je močno odvisen od temperature telesa. Z naraščajočo
+Zapisano odvisnost imenujemo Planckov zakon za sevanje črnega telesa 
+v termičnem ravnovesju. Spekter je močno odvisen od temperature telesa. Z naraščajočo
 temperaturo njegova vrednost narašča, vrh spektra pa se pomika k višjim
 frekvencam (slika~\ref{fig:11_Planck}).
 \begin{figure}[h!]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/11_Planck.pdf_tex}
-\caption{Povprečna energija posameznega lastnega nihanja v odvisnosti
-od njegove frekvence~(a), gostota stanj  oziroma lasnih nihanjih načinov
-v votlini~(b) in njun produkt, to je Planckov spekter sevanja
-črnega telesa pri dveh različnih temperaturah~(c). Velja $T_2>T_1$.
+\caption{Gostota lastnih nihanj v votlini~(a), 
+povprečna energija posameznega lastnega nihanja~(b) 
+in njun produkt, to je 
+Planckov spekter sevanja črnega telesa pri dveh različnih 
+temperaturah~(c). Velja $T_2>T_1$.
 }
 \label{fig:11_Planck}
 \end{figure}
@@ -187,7 +185,7 @@ nižjega nivoja, tako da ga na splošno zapišemo kot:
 pri čemer sorazmernostno konstanto označimo z $B_{12}$. 
 
 \subsection*{Spontano sevanje}
-Spontano sevanje (spontana emisija) je proces, pri katerem atom, 
+Spontano sevanje je proces, pri katerem atom, 
 ki se nahaja v višjem energijskem stanju, spontano preide v nižje 
 stanje in ob tem izseva foton (slika~\ref{fig:11_procesi}\,b). Energija
 izsevanega fotona je enaka razliki energij med atomskima nivojema.
@@ -207,7 +205,7 @@ stanja:
 \tau = \frac{1}{A_{21}}.
 \label{eq:11_10}
 \eeq
-Življenjski čas zgornjih nivojev je tako tipično $\tau\sim10$--$100~\si{ns}$. 
+Življenjski čas zgornjih nivojev je tako tipično $\tau\sim 100~\si{ns}$. 
 V primerjavi s stimuliranim sevanjem je spontano sevanje v delujočem laserju 
 zanemarljivo in ga bomo zato pri računih pogosto zanemarili. 
 
@@ -284,14 +282,14 @@ ne spreminjata in velja:
 A_{21}N_2 + B_{21}u(\omega_{21})N_2 - B_{12}u(\omega_{21})N_1 = 0.
 \label{eq:11_16}
 \eeq
-Izrazimo spektralno gostoto energije:
+Od tod izrazimo spektralno gostoto energije:
 \beq
 u(\omega_{21}) = \frac{A_{21}N_2}{B_{12}N_1-B_{21}N_2} = 
 \frac{A_{21}}{B_{12}N_1/N_2 - B_{21}}.
 \label{eq:11_17}
 \eeq
-Upoštevamo Boltzmannovo porazdelitev za zasedenost nivojev (
-enačba~\ref{eq:11_01}) in dobimo:
+Upoštevamo še Boltzmannovo porazdelitev za zasedenost nivojev 
+(enačba~\ref{eq:11_01}) in dobimo:
 \beq
 u(\omega_{21}) = \frac{A_{21}}{B_{12}e^{\hslash \omega_{21}/k_B T} - B_{21}}.
 \label{eq:11_18}
@@ -312,15 +310,15 @@ B_{12} = B_{21}.
 Ker sta koeficienta enaka, ju lahko poenostavljeno označimo z $B$. 
 Preostali faktorji se združijo v obliko:
 \beq
-\frac{A_{21}}{B} = \frac{\hslash \omega_{21}^3}{\pi^2c_0^3}
+\frac{A_{21}}{B} = \frac{\hslash \omega_{21}^3}{\pi^2c^3},
 \label{eq:11_20}
 \eeq
-s čimer smo pokazali še enačbo~(\ref{eq:11_14}).
+s čimer smo pokazali še veljavnost enačbe~(\ref{eq:11_14}).
 
 Parametre $A$ in $B$ imenujemo po Albertu Einsteinu, ki je že leta 
-1916 proučeval interakcije svetlobe s snovjo in predlagal opisani model. 
+1916 proučeval interakcije svetlobe s snovjo in predlagal opisani triprocesni model. 
 Na podlagi modela je napovedal možnost ojačenja svetlobe s stimulirano 
-emisijo in tako postavil teoretično utemeljitev za delovanje laserjev.
+emisijo in tako postavil teoretično utemeljitev delovanja laserjev.
 Do prvega delujočega laserja je potem minilo še  več kot 40 let. 
 \end{example}
 
@@ -337,8 +335,7 @@ neskončno ozke, temveč imajo neko končno širino.
 
 Po drugi strani tudi energija med posameznima atomskima nivojema 
 ni povsem točno določena. Zaradi končnega razpadnega časa 
-(enačba~\ref{eq:11_10}) ima spekter prehoda (absorpcije ali 
-stimulirane emisije) neko končno širino. Tako imenovano
+(enačba~\ref{eq:11_10}) ima spekter prehoda neko končno širino. Tako imenovano
 atomsko spektralno črto opišemo s funkcijo $g(\omega)$,
 ki je Lorentzeve ali  Gaussove oblike okoli osrednje 
 frekvence prehoda $\omega_{21}$. Zanjo velja:
@@ -881,8 +878,8 @@ energija kljub nepredstavljivo veliki moči ostaja razmeroma majhna, tipično
 pod $\si{J}$.
 \begin{figure}[h!]
 \centering
-\def\svgwidth{80truemm} 
-%\input{slike/11_Gauss.pdf_tex}
+\def\svgwidth{70truemm} 
+\input{slike/11_Gauss.pdf_tex}
 \caption{Prečni profil laserskega snopa je Gaussove oblike.
 }
 \label{fig:11_Gauss}

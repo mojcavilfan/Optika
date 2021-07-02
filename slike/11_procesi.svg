@@ -2569,8 +2569,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.79113824"
-     inkscape:cx="1075.7999"
-     inkscape:cy="131.92084"
+     inkscape:cx="1089.7039"
+     inkscape:cy="120.54483"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2597,7 +2597,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2989,5 +2989,38 @@
            id="tspan3693-3-5-1-9-0"
            sodipodi:role="line">$E_2$</tspan></text>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-120.04132"
+       y="174.91489"
+       id="text1626"><tspan
+         sodipodi:role="line"
+         id="tspan1624"
+         x="-120.04132"
+         y="174.91489"
+         style="stroke-width:0.26458332">a)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="50.810642"
+       y="174.55818"
+       id="text1626-3"><tspan
+         sodipodi:role="line"
+         id="tspan1624-6"
+         x="50.810642"
+         y="174.55818"
+         style="stroke-width:0.26458332">b)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="224.38214"
+       y="174.55818"
+       id="text1626-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan1624-6-5"
+         x="224.38214"
+         y="174.55818"
+         style="stroke-width:0.26458332">c)</tspan></text>
   </g>
 </svg>

@@ -53,18 +53,19 @@
   \begin{picture}(1,0.20628786)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.84986044,0.14840868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(T_2)$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{11_Planck.pdf}}%
+    \put(0.84986044,0.14840868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$T_2$\end{tabular}}}}%
     \put(1.00257785,0.00293132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
     \put(0.6427765,0.18018872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}c)\end{tabular}}}}%
-    \put(0.50860116,0.10402038){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\varrho$\end{tabular}}}}%
     \put(0.62576616,0.00293132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
     \put(0.31857579,0.18018872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
-    \put(0.06877912,0.10578188){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\langle W \rangle$\end{tabular}}}}%
     \put(0.30156548,0.00293132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
     \put(-0.00562507,0.18018872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{11_Planck.pdf}}%
-    \put(0.78601341,0.0677565){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(T_1)$\end{tabular}}}}%
+    \put(0.36370949,0.17717717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\langle W \rangle$\end{tabular}}}}%
+    \put(0.03211205,0.17541567){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\varrho$\end{tabular}}}}%
+    \put(0.78601341,0.0677565){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$T_1$\end{tabular}}}}%
     \put(0.31105745,0.09809854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\times$\end{tabular}}}}%
     \put(0.63670103,0.09809854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$=$\end{tabular}}}}%
+    \put(0.68092273,0.17541567){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
