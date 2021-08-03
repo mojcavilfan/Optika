@@ -374,48 +374,70 @@ Do prvega delujočega laserja je potem minilo še  več kot 40 let.
 Optični resonatorji so naprave, znotraj katerih lahko vzbudimo 
 stoječe elektromagnetno valovanje. Resonatorje navadno poznamo iz glasbe,
 za svetlobo pa si lahko resonatorje mislimo kot zaprto škatlo
-z zrcali na notranjih straneh, od katerih se svetloba odbija.
+z zrcali na notranjih straneh, od katerih se svetloba 
+odbija (slika~\ref{fig:11_resonator}\,a).
 Frekvence vzbujenih stoječih valovanj (lastnih nihanj) so točno 
-določene z geometrijo resonatorja in robnimi pogoji na njegovih stenah. 
+določene z geometrijo resonatorja in robnimi pogoji na njegovih 
+stenah (slika~\ref{fig:11_resonator}\,b).
 Frekvence lastnih nihanj imenujemo tudi resonančne frekvence. 
 Zaradi izgub v resonatorju črte v resonančnem spektru niso 
-neskončno ozke, temveč imajo neko končno širino.
+neskončno ozke, temveč imajo neko končno širino
+(slika~\ref{fig:11_resonator}\,c).
+\vglue2truemm
+\begin{figure}[h!]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/11_resonator.pdf_tex}
+\caption{Najpreprostejši primer optičnega resonatorja sta 
+dve vzporedni zrcali, med katerima se svetloba odbija~(a). Stoječa
+valovanja, ki jih vzbudimo v resonatorju, so njegova lastna nihanja~(b). 
+Spekter svetlobe v resonatorju je diskreten, vendar so posamezne 
+črte zaradi izgub razširjene (c).
+}
+\label{fig:11_resonator}
+\end{figure}
 
-Po drugi strani tudi energija med posameznima atomskima nivojema 
+Po drugi strani tudi energijska razlika med posameznima atomskima nivojema 
 ni povsem točno določena. Zaradi končnega razpadnega časa 
 (enačba~\ref{eq:11_10}) ima spekter prehoda neko končno širino. Tako imenovano
 atomsko spektralno črto opišemo s funkcijo $g(\omega)$,
-ki je Lorentzeve ali  Gaussove oblike okoli osrednje 
+ki je Lorentzeve ali Gaussove oblike okoli osrednje 
 frekvence prehoda $\omega_{21}$. Zanjo velja:
 \beq
 \int_{-\infty}^\infty g(\omega) d\omega = 1.
 \label{eq:11_21}
 \eeq
 
-V primeru sevanja črnega telesa smo lahko privzeli, 
-da je njegov spekter znotraj atomske spektralne širine 
-približno konstanten (slika~\ref{fig:11_g}\,a) in enak $u(\omega_{21})$.
-To smo tudi upoštevali v zapisu enačb (\ref{eq:11_08} in \ref{eq:11_12}). 
+Spekter sevanja črnega telesa, ki smo ga spoznali v prejšnjem razdelku 
+(enačba~\ref{eq:Planck}), je širok. Zato lahko privzamemo, da je 
+znotraj atomske spektralne širine približno konstanten 
+in enak $u(\omega_{21})$ (glej sliko~\ref{fig:11_g}\,a).
+To smo tudi upoštevali v zapisu enačb za absorpcijo (enačba~\ref{eq:11_08})
+in stimulirano sevanje (enačba~\ref{eq:11_12}). 
 
-Pri interakcijah svetlobe in snovi v resonatorju pa je treba
-upoštevati prekrivanje resonančnega spektra resonatorja in 
-spektra atomskega sistema. Oba imata končno širino, vendar 
-je širina resonanc navadno dosti ožja od naravne širine 
+Kadar obravnavamo svetlobo v resonatorju, je njen spekter zelo drugačen 
+od spektra črnega telesa, saj je sestavljen iz ozkih diskretnih črt.
+Pri opisu interakcije svetlobe s snovjo v resonatorju je zato treba 
+upoštevati prekrivanje resonatorskega spektra in 
+spektra atomskega sistema. Oba sta ozka z neko končno širino, vendar 
+je širina resonanc v resonatorju navadno dosti ožja od naravne širine 
 emisijske oziroma absorpcijske črte (slika~\ref{fig:11_g}\,b).
+\vglue2truemm
 \begin{figure}[h!]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{130truemm} 
 \input{slike/11_g.pdf_tex}
-\caption{Spekter sevanja črnega telesa $u(\omega)$ je bistveno širši 
-od atomske spektralne črte $g(\omega)$ (a), spekter svetlobe iz 
-resonatorja $u(\omega)$ pa je navadno bistveno ožji od atomske 
-spektralne črte $g(\omega)$ (b). V laserjih velja drugi primer.
+\caption{Primerjava atomske spektralne črte in svetlobnega spektra: (a)
+spekter sevanja črnega telesa $u(\omega)$ je bistveno širši 
+od atomske spektralne črte $g(\omega)$; (b) spekter svetlobe iz 
+resonatorja $u(\omega)$ je navadno bistveno ožji od atomske 
+spektralne črte $g(\omega)$. V laserjih velja drugi primer.
 }
 \label{fig:11_g}
 \end{figure}
 
 Na splošno moramo pri zapisu izrazov za absorpcijo in stimulirano emisijo 
-upoštevamo širini obeh črt. Število prehodov z absorpcijo je tako:
+upoštevamo širini obeh črt. Število prehodov za absorpcijo je tako:
 \beq
 \frac{dN_\mathrm{abs}}{dt} = BN_1 \int_{-\infty}^{\infty} g(\omega) u(\omega) d\omega
 \label{eq:11_22}
@@ -425,27 +447,26 @@ in za stimulirano emisijo:
 \frac{dN_\mathrm{st}}{dt} = BN_2 \int_{-\infty}^{\infty} g(\omega) u(\omega) d\omega.
 \label{eq:11_23}
 \eeq
-Prvi skrajni primer, ko je širina spektra črnega telesa bistveno širša
-od atomske spektralne črte, smo že opisali, zdaj pa poglejmo še drugo skrajnost, 
+Prvi skrajni primer, ko je bila širina spektra črnega telesa bistveno širša
+od atomske spektralne črte, smo že opisali (enačbi~\ref{eq:11_08} in \ref{eq:11_12}). 
+Poglejmo zdaj še drugo skrajnost, 
 ko je spektralna širina resonančnih črt, podana s funkcijo $u(\omega)$, bistveno 
 ožja od atomske spektralne črte, podane z $g(\omega)$. V tem primeru 
 lahko privzamemo, da je vrednost $g(\omega)$ znotraj integrala konstantna in 
-upoštevamo le njeno vrednost pri resonančni frekvenci $\omega_R$.
-
+upoštevamo le njeno vrednost pri izbrani resonančni frekvenci $\omega_R$.
 Integral tudi v tem primeru preprosto izračunamo:
 \beq
 \int_{-\infty}^{\infty} g(\omega) u(\omega) d\omega = g(\omega_R) \int_{-\infty}^{\infty}
 u(\omega) d\omega = g(\omega_R) w,
 \label{eq:11_24}
 \eeq
-pri čemer je $\omega_R$ izbrana resonančna frekvenca resonatorja, $w$ pa gostota
-energije elektromagnetnega valovanja. Število prehodov pri absorpciji
-in stimuliranem sevanju na časovno enoto v tem približku zapišemo kot:
+pri čemer je $w$ gostota energije elektromagnetnega valovanja. 
+Število prehodov za absorpcijo na časovno enoto v tem približku zapišemo kot:
 \beq
 \frac{dN_\mathrm{abs}}{dt} = B N_1 g(\omega_R) w
 \label{eq:11_25}
 \eeq
-in
+in za stimulirano sevanje kot:
 \beq
 \frac{dN_\mathrm{st}}{dt} = B N_2 g(\omega_R) w.
 \label{eq:11_26}
@@ -454,13 +475,14 @@ Ponovimo: $g(\omega_R)$ je vrednost atomske spektralne črte $g$ pri
 frekvenci $\omega_R$, ki ustreza monokromatskemu resonančnemu 
 elektromagnetnemu valovanju znotraj resonatorja, $w$ pa je gostota
 energije valovanja pri resonančni frekvenci $\omega_R$. 
-
+\vglue-2truemm
 \begin{remark}
 Kljub temu da ima funkcija $g(\omega)$ navadno Lorentzovo ali Gaussovo 
 obliko, jo pri računanju zaradi preprostosti velikokrat nadomestimo 
 s škatlasto funkcijo. Njena vrednost je izven nekega ustreznega 
 intervala $\Delta \omega$ enaka 0, znotraj tega intervala pa ima 
-funkcija konstantno vrednost $g = 1/\Delta \omega$.
+funkcija konstantno vrednost $g = 1/\Delta \omega$. Tipične vrednosti
+so $\Delta \omega \sim 10^9$--$10^{12}~\si{Hz}$.
 \end{remark}
 
 \section{Ojačevanje svetlobe}
@@ -471,13 +493,13 @@ dosežemo, da je moč izhodne svetlobe večja od moči vpadne svetlobe in tak
 sistem imenujemo optični ojačevalnik.
 
 Naj svetloba vpada vzdolž osi $z$ pod pravim kotom na tanko plast snovi. 
-Debelina plasti naj bo $dz$, njena prostornina pa $dV = S dz$. V plasti naj 
+Debelina plasti naj bo $dz$, njena prostornina pa $V = S dz$. V plasti naj 
 bo $N_1$ atomov v nižjem energijskem stanju in $N_2$ v višjem. 
 Moč vpadne svetlobe naj bo $P$ (slika~\ref{fig:11_absorpcija}). Ko 
 svetloba prehaja skozi snov, se njena moč zmanjšuje zaradi absorpcije 
 in povečuje zaradi stimuliranega sevanja. Spontano sevanje 
 zanemarimo, saj je spontano izsevana svetloba enakomerno 
-porazdeljena v vseh smereh in le zanemarljiv delež je usmerjen 
+porazdeljena v vseh smereh in le zanemarljivo majhen delež je usmerjen 
 vzdolž osi $z$. Obravnavajmo primer, ko je spekter vpadne svetlobe
 zelo ozek, na primer iz optičnega resonatorja.
 \begin{figure}[h!]
@@ -492,10 +514,12 @@ zaradi stimulirane emisije.}
 
 Sprememba svetlobne moči ob prehodu skozi plast snovi je:
 \beq
-dP = \hslash \omega \left(\frac{dN_\mathrm{st}}{dt}- \frac{dN_\mathrm{abs}}{dt}\right)\!\!,
+dP = \hslash \omega \left(\frac{dN_\mathrm{st}}{dt}- 
+\frac{dN_\mathrm{abs}}{dt}\right)\!\!,
 \label{eq:11_27}
 \eeq
-pri čemer smo prispevek spontanega sevanja že zanemarili.
+pri čemer smo upoštevali povečanje zaradi stimulirane emisije in zmanjšanje
+zaradi absorpcije, prispevek spontanega sevanja pa smo že zanemarili.
 Z uporabo enačb~(\ref{eq:11_25} in \ref{eq:11_26}) dobimo:
 \beq
 dP = 
@@ -505,7 +529,7 @@ dP =
 \eeq
 Upoštevamo zvezo $w = j/c$ (enačba~\ref{eq:j}) in enačbo delimo s $S$:
 \beq
-dj = \hslash \omega\,B g(\omega) \frac{j}{c}\frac{N_2-N_1}{V}dz.
+dj = \hslash \omega\,B g(\omega) \frac{j}{c}\frac{(N_2-N_1)}{V}dz.
 \label{eq:11_29}
 \eeq
 Zapisano enačbo lahko v poenostavljeni obliki zapišemo kot:
@@ -523,10 +547,10 @@ Tipične vrednosti sipalnega preseka so $\sigma \sim 10^{-20}~\si{m^2}$.
 Drugi parameter, ki smo ga vpeljali v enačbi~(\ref{eq:ojacenje}), 
 je koeficient ojačenja $\gamma$:
 \beq
-\gamma = \sigma \,\frac{N_2-N_1}{V}
+\gamma = \sigma \,\frac{N_2-N_1}{V}.
 \label{eq:11_31}
 \eeq
-in je odvisen od zasedenosti posameznih stanj. 
+Ta parameter je odvisen od zasedenosti posameznih  nivojev. 
 Kadar je snov v termičnem ravnovesju in velja $N_2 < N_1$, je $\gamma <0$
 in svetlobna moč se po prehodu skozi snov zmanjša. 
 
@@ -537,7 +561,7 @@ Ojačenje svetlobe v snovi lahko dosežemo le v primeru, ko je zasedenost
 višjega nivoja večja od zasedenosti nižjega nivoja. Tako neravnovesno 
 stanje imenujemo stanje obrnjene zasedenosti. V termičnem ravnovesju 
 obrnjene zasedenosti ne moremo doseči, zato moramo za ojačenje svetlobe
-sistem atomov vzdrževati z dovajanjem energije od zunaj.
+sistem atomov vzdrževati v neravnovesnem stanju z dovajanjem energije od zunaj.
 
 \section{Trinivojski sistemi}
 Da lahko v nekem sistemu svetlobo ojačujemo, moramo med 
@@ -568,8 +592,9 @@ označimo z indeksom nivoja. Potem velja:
 N = N_0 + N_1 + N_2.
 \label{eq:11_32}
 \eeq
-Pri obravnavi bomo privzeli, da je zasedenost osnovnega (najnižjega) nivoja daleč 
-največja $N_0 \gg N_1, N_2$ in da zato velja $N_0 \approx N$. 
+Pri obravnavi bomo privzeli, da je zasedenost osnovnega (najnižjega) 
+nivoja bistveno večja od zasedenosti drugih dveh nivojev $N_0 \gg N_1, N_2$ 
+in zato rekli, da velja $N_0 \approx N$. 
 
 Na sistem trinivojskih atomov naj vpada svetloba s frekvenco:
 \beq
@@ -578,21 +603,23 @@ Na sistem trinivojskih atomov naj vpada svetloba s frekvenco:
 \eeq
 ki ustreza energijski razliki med prvim in drugim vzbujenim stanjem.  Če želimo
 vpadno svetlobo ojačevati, moramo doseči obrnjeno zasedenost med nivojema 1 in 2.
-To naredimo z zunanjim črpalnim mehanizmom, s katerim neprestano vzbujamo atome 
-iz osnovnega v drugi vzbujeni nivo. Črpanje neodvisno od črpalnega mehanizma
-zapišemo s koeficientom $r$:
+To naredimo z zunanjim črpalnim mehanizmom, s katerim vzbujamo atome 
+iz osnovnega v drugi vzbujeni nivo.
+
+Črpanje neodvisno od črpalnega mehanizma
+opišemo s koeficientom $r$:
 \beq
 \frac{dN_2}{dt} = r\, N_0.
 \label{eq:11_34}
 \eeq
-Zasedbene enačbe za vse tri nivoje zapišemo z upoštevanjem vseh prehodov med njimi. 
+Zasedbene enačbe za vse tri nivoje zapišemo z upoštevanjem prehodov med njimi. 
 Poglejmo podrobneje spreminjanje zasedenosti drugega vzbujenega nivoja 
 (slika~\ref{fig:11_3nivojski}\,a). Zasedenost
-se povečuje zaradi črpanja (enačba~\ref{eq:11_34}) in zmanjšuje zaradi spontanih
-prehodov v prvo vzbujeno stanje ($A_{21}$) in v osnovno stanje ($A_{20})$. V prisotnosti
+se povečuje zaradi črpanja ($r$) in zmanjšuje zaradi spontanih
+prehodov v prvo vzbujeno ($A_{21}$) in v osnovno stanje ($A_{20})$. V prisotnosti
 svetlobe se zasedenost povečuje še zaradi absorpcije ($B_{12}$) in zmanjšuje
-zaradi stimuliranega sevanja ($B_{21}$). Vse prispevke združimo v eno enačbo in 
-podobno sklepamo še za ostala dva nivoja. Dobimo sistem enačb:
+zaradi stimuliranega sevanja ($B_{21}$). Vse prispevke združimo v eno enačbo, 
+nato naredimo podoben razmislek še za ostala dva nivoja. Dobimo sistem enačb:
 \begin{align}
 \frac{dN_2}{dt} &= rN_0 - A_{20}N_2 - A_{21}N_2 + B_{21}w(\omega_{21})g(\omega_{21}) 
 (N_1-N_2),\label{eq:11_35}\\
@@ -600,16 +627,20 @@ podobno sklepamo še za ostala dva nivoja. Dobimo sistem enačb:
 (N_1-N_2),\label{eq:11_36}\\
 \frac{dN_0}{dt} &= - rN_0 + A_{20}N_2 + A_{10}N_1.\label{eq:11_37}
 \end{align}
-Sistem je zapleten, vendar lahko že takoj naredimo nekaj poenostavitev. Namesto
-$N_0$ vstavimo $N$, ki je konstanten, poleg tega lahko brez škode spontane prehode
-iz drugega vzbujenega nivoja v osnovni nivo ($A_{20}$) zanemarimo. Spontanih prehodov
-iz prvega v osnovni nivo ($A_{10}$) seveda ne smemo zanemariti, saj je to ključni
+Vidimo, da vsak prehod v sistemu enačb nastopa dvakrat: enkrat s pozitivnim 
+in enkrat z negativnim predznakom. Vsota vseh treh enačb je posledično enaka 
+nič, kar se ujema z zahtevo, da je vsota zasedenosti konstantna. Za reševanje
+sistema zato zadošča obravnava le dveh enačb. Poleg tega lahko že takoj 
+naredimo nekaj poenostavitev. Namesto $N_0$ vstavimo $N$, ki je konstanten, 
+in brez škode zanemarimo spontane prehode iz drugega vzbujenega 
+nivoja v osnovnega ($A_{20}$). Spontanih prehodov iz prvega v osnovni 
+nivo ($A_{10}$) seveda ne smemo zanemariti, saj je to ključni
 mehanizem, ki prazni nižji vzbujeni nivo.
 
 Zanima nas stacionarno stanje, ko so časovni odvodi enaki nič. 
 Iz enačbe~(\ref{eq:11_37}) dobimo:
 \beq
-N_1 = \frac{rN_0}{A_{10}} \approx \frac{rN}{A_{10}}.
+N_1 \approx \frac{rN}{A_{10}}.
 \label{eq:11_38}
 \eeq
 Enačba~(\ref{eq:11_36}) se v stacionarnem stanju prepiše v:
@@ -618,11 +649,8 @@ Enačba~(\ref{eq:11_36}) se v stacionarnem stanju prepiše v:
 \left(A_{10}+ B_{21}w(\omega_{21})g(\omega_{21})\right)N_1.
 \label{eq:11_39}
 \eeq
-Tretja enačba (enačba~\ref{eq:11_35}) ne da nove informacije, 
-saj je vsota zasedenosti konstantna.
-
 Iz enačb~(\ref{eq:11_38} in \ref{eq:11_39}) izrazimo razliko 
-zasedenosti vzbujenih stanj in dobimo:
+zasedenosti vzbujenih nivojev in dobimo:
 \beq
 N_2-N_1 = \frac{A_{10}-A_{21}}{A_{21} + B_{21}w(\omega_{21})g(\omega_{21})}
 \cdot \frac{rN}{A_{10}}.
@@ -653,23 +681,31 @@ Vpeljali smo saturacijsko gostoto toka:
 j_s = \frac{A_{21}c}{B_{21}g(\omega_{21})},
 \label{eq:11_42a}
 \eeq
-ki je odvisna od snovi in od frekvence vpadne svetlobe. Vidimo, da pri isti gostoti
-vpadnega svetlobnega toka $j$ dosežemo večjo obrnjeno zasedenost pri 
-večji saturacijski gostoti toka $j_s$ in seveda pri močnejšem črpanju.
+ki je odvisna od snovi in od frekvence vpadne svetlobe. Iz enačbe~(\ref{eq:11_42}) razberemo, 
+da dosežemo pri  dani saturacijski gostoti toka $j_s$ večjo obrnjeno zasedenost
+pri močnejšem črpanju $r$ in šibkejši gostoti vpadnega svetlobnega toka $j$.
 
-Vstavimo izračunano obrnjeno zasedenost (enačba~\ref{eq:11_42}) v enačbo za 
+Z upoštevanjem izraza za presek za absorpcijo in stimulirano emisijo 
+(enačba~\ref{eq:11_30}) lahko saturacijsko gostoto toka zapišemo kot:
+\beq
+j_s = \hslash \omega \frac{A_{21}}{\sigma}
+\label{eq:11_42b}
+\eeq
+in na grobo ocenimo velikostni red $j_s \sim 10^7~\si{W/m^2}$. 
+
+Vstavimo zdaj izračunano obrnjeno zasedenost (enačba~\ref{eq:11_42}) v enačbo za 
 optično ojačevanje (enačba~\ref{eq:ojacenje}):
 \beq
 dj = \sigma (\omega_{21})\frac{rN}{VA_{21}}\cdot \frac{1}{1 + j/j_s}j\,dz.
 \label{eq:11_43}
 \eeq
-Vpeljemo koeficient ojačenja pri nizkih močeh oziroma nizkih gostotah vpadnega 
+Vpeljemo koeficient ojačenja pri majhnih gostotah vpadnega 
 energijskega toka:
 \beq
-G = \sigma(\omega_{21})\frac{rN}{VA_{21}}.
+G = \sigma(\omega_{21})\frac{rN}{VA_{21}}
 \label{eq:11_44}
 \eeq
-Optično ojačevanje potem strnjeno zapišemo v obliki:
+in optično ojačevanje strnjeno zapišemo v obliki:
 \boxeq{eq:3ojacevanje}{
 dj = \frac{G j\,dz}{1+j/j_s}.
 }
@@ -685,7 +721,7 @@ prepotovani razdalji $z$. Dobimo:
 \ln\frac{j}{j_0} + \frac{j-j_0}{j_s} = Gz.
 \label{eq:11_46}
 \eeq
-Zapisana enačba podaja spreminjanja gostote
+Zapisana enačba podaja spreminjanje gostote
 energijskega toka v odvisnosti od prepotovane razdalje v snovi. Odvisnosti
 $j(z)$ ne moremo enostavno zapisati, lahko pa jo narišemo.
 Na sliki~\ref{fig:11_ojacenje} je prikazano naraščanje
@@ -700,46 +736,52 @@ Pri majhnih vpadnih močeh je naraščanje eksponentno, pri velikih močeh
 pa linearno, saj se ojačenje nasiti.
 }
 \label{fig:11_ojacenje}
+\vglue-2truemm
 \end{figure}
 
 Naraščanje gostote svetlobnega toka (enačba~\ref{eq:11_46}) 
-lahko preprosto zapišemo v limitnih primerih. 
+lahko preprosto zapišemo v limitnih primerih zelo majhnih ali 
+zelo velikih vrednosti $j_0$. 
 Kadar so vpadne moči majhne in je $j \ll j_s$, drugi člen
-na levi strani enačbe zanemarimo in ostane eksponentno 
+na levi strani enačbe~(\ref{eq:11_46}) zanemarimo in ostane eksponentno 
 naraščajoča odvisnost od dolžine prepotovane poti po snovi:
 \beq
 j = j_0e^{Gz}.
 \label{eq:11_47}
 \eeq
 Eksponentno naraščanje vidimo na sliki~\ref{fig:11_ojacenje}
-pri majhnih vrednostih $j$. Pri velikih vpadnih močeh,
-za katere velja $j \gg j_s$, naraščanje svetlobne moči preide
-v linearno obnašanje. To pokažemo tudi z limitnim računom, tako
-da zanemarimo prvi člen v enačbi~(\ref{eq:11_46}). Dobimo:
+pri majhnih vrednostih $j$. 
+
+Pri velikih močeh vpadne svetlobe, za katere velja $j \gg j_s$, 
+zanemarimo prvi člen na levi strani enačbe~(\ref{eq:11_46}) in dobimo:
 \beq
 j = j_0 + Gj_s\, z.
 \label{eq:11_48}
 \eeq
-Opisani pojav imenujemo nasičenje ojačenja. Svetloba se pri 
-majhnih vrednostih ojačuje, saj je prehodov s stimulirano 
-emisijo več kot absorpcije. Pri velikih intenzitetah pa začne
+Naraščanje svetlobne moči pri velikih vrednostih torej preide iz 
+eksponentnega v linearno obnašanje. Opisani pojav imenujemo 
+nasičenje ojačenja.
+
+Svetloba se v snovi, v kateri je vzpostavljena
+obrnjena zasedenost, ojačuje, saj je stimulirane emisije več
+kot absorpcije. Izsevani fotoni sprožijo nadaljnje prehode
+in pri majhnih vrednostih gostote svetlobnega toka je  
+naraščanje eksponentno. Pri velikih svetlobnih močeh začne
 vzbujenih atomov, ki bi lahko izsevali svetlobo, primanjkovati.
-Svetlobna moč narašča zato le še linearno s prepotovano razdaljo, 
-saj je v novih prostorninskih enotah še nekaj vzbujenih atomov, 
-ki lahko s stimulirano emisijo oddajo svetlobo. Parameter, ki pove, 
+V skrajnem primeru stimulirano sevajo prav vsi vzbujeni atomi in 
+svetlobna moč narašča le še linearno s prepotovano razdaljo. 
+Parameter, ki pove, 
 ali se bo svetloba eksponentno ojačevala ali bo njena
-intenziteta naraščala le še linearno, je ravno saturacijska
+intenziteta naraščala  linearno, je ravno saturacijska
 gostota svetlobnega toka $j_s$ (enačba~\ref{eq:11_42a}). 
 
-Poglejmo to razlago še matematično. V enačbi~(\ref{eq:11_48})
-je ključni parameter produkt $Gj_s$. Vstavimo enačbi
-za koeficient ojačenja pri nizkih močeh ter saturacijsko 
-gostoto~(\ref{eq:11_42a} in \ref{eq:11_44}) ter
-upoštevamo enačbo~(\ref{eq:11_30}) za izračun preseka
-za absorpcijo in stimulirano emisijo. Sledi:
+Vrnimo se k enačbi~(\ref{eq:11_48}), v kateri je 
+ključni parameter produkt $Gj_s$. Vstavimo enačbi
+za koeficient ojačenja pri nizkih močeh (enačba~\ref{eq:11_44}) 
+in saturacijsko gostoto (enačba~\ref{eq:11_42b}). Dobimo:
 \beq
-Gj_s = \frac{\hslash \omega_{21}B_{21}g}{c}\cdot \frac{r N}{V A_{21}} 
-\cdot \frac{A_{21}c}{B_{21}g}=
+Gj_s = \sigma \frac{r N}{V A_{21}} 
+\cdot \frac{\hslash \omega_{21} A_{21}}{\sigma}=
 \hslash \omega_{21}\frac{rN}{V}.
 \label{eq:11_49}
 \eeq
@@ -752,28 +794,32 @@ kar pomeni, da v izbrani plasti snovi vsi atomi,
 ki jih s črpalnim mehanizmom vzbudimo v drugi vzbujeni
 nivo, na osnovi stimulirane emisije prispevajo dodatni 
 svetlobni tok k vpadnemu elektromagnetnemu valovanju.
-Takrat torej vso razpoložljivo energijo sistema počrpamo in ojačenje se nasiti. 
+Takrat torej vso razpoložljivo energijo sistema počrpamo 
+in ojačenje se nasiti. 
 
 \section{Laser}
 Laser je naprava, v kateri izkoristimo stimulirano emisijo 
-za nastanek koherentne in monokromatske izhodne svetlobe. Dodatna odlika
-laserke svetlobe je njena ozka usmerjenost (majhna divergenca svetlobnega snopa)
-in posledično zelo velike gostote svetlobnega toka v snopu. Poglejmo preprost
+za nastanek močne koherentne in monokromatske izhodne svetlobe. Dodatna odlika
+laserske svetlobe je njena ozka usmerjenost (majhna divergenca svetlobnega snopa)
+in posledično zelo velika gostota svetlobnega toka v snopu. Poglejmo preprost
 model laserja.
 
-Laser\footnote{Laser je pravzaprav kratica za {\it Light Amplification by Stimulated
+Laser\footnote{Laser je kratica za {\it Light Amplification by Stimulated
 Emission of Radiation}, to je ojačevanje svetlobe s stimuliranim sevanjem.} 
 v grobem sestavljajo trije osnovni sestavni deli: ojačevalno sredstvo, 
 v katerem se svetloba ojačuje, črpalni sistem, ki vzdržuje obrnjeno zasedenost
-v ojačevalnem sredstvu, in resonator, ki zagotavlja prevlado stimulirane emisije.
+v ojačevalnem sredstvu, in resonator, ki zagotavlja prevlado stimulirane emisije
+(slika~\ref{fig:11_laser}).
+
 \begin{figure}[h!]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/11_laser.pdf_tex}
-\caption{Shema laserja s tremi poglavitnimi sestavnimi deli: ojačevalnim sredstvom, 
-črpalnim mehanizmom in resonatorjem. Odbojnost izhodnega zrcala je manjša od $100\%$,
-da lahko svetloba izhaja iz resonatorja. Fotografija starejšega helij-neonskega laserja, 
-narejenega v Sloveniji. Ohišje laserja je odprto, da se vidi notranje elemente.
+\caption{Shema laserja s tremi poglavitnimi sestavnimi deli (zgoraj): 
+ojačevalnim sredstvom, črpalnim mehanizmom in resonatorjem. Odbojnost 
+izhodnega zrcala $\mathcal{R}_2$ je manjša od $100\%$, da lahko svetloba 
+izhaja iz resonatorja. Fotografija starejšega helij-neonskega laserja, 
+narejenega v Sloveniji (spodaj). Ohišje laserja je odprto, da se vidi notranje elemente.
 }
 \label{fig:11_laser}
 \end{figure}
@@ -794,7 +840,7 @@ optično, z močno svetilko ali drugim laserjem, najpogostejši način pa je z
 električnim tokom. V helij-neonskem laserju, na primer, v razelektritveni 
 cevi elektroni trkajo z atomi helija. Vzbujeni atomi helija z nadaljnjimi
 trki prenesejo energijo na atome neona, jih vzbudijo in tako vzdržujejo 
-obrnjeno zasedenost.
+obrnjeno zasedenost med dvema nivojema.
 
 Resonatorji sta navadno dve ukrivljeni zrcali, od katerih ima eno odbojnost
 kar se da veliko $\mathcal{R}_1 \approx 100\%$, drugo pa malo manjšo 
@@ -803,7 +849,7 @@ Med zrcali resonatorja postavimo ojačevalno sredstvo in svetloba, ki se od
 zrcal odbija, se pri vsakem prehodu ojačevalnega sredstva ojači.
 
 Izhajanje svetlobe skozi izhodno zrcalo predstavlja poglavitne izgube 
-resonatorja.  Ko se izgube na obhod resonatorja izenačijo z ojačevanjem 
+resonatorja.  Ko se izgube na obhod resonatorja izenačijo z ojačenjem
 svetlobe na obhod, deluje laser v stacionarnem stanju. Poglejmo ta proces 
 podrobneje.
 
@@ -825,8 +871,8 @@ svetlobnega toka ($W = Vw = Vj/c$) potem:
 \eeq
 pri čemer je $W_s = Vj_s/c$ saturacijska energija. 
 
-Energija se iz resonatorja tudi izgublja. Deloma zaradi namenskega 
-izhajanja svetlobe iz laserja skozi izhodno zrcalo, deloma zaradi 
+Energija se iz resonatorja izgublja deloma zaradi namenskega 
+izhajanja svetlobe skozi izhodno zrcalo, deloma zaradi 
 izgub v resonatorju zaradi absorpcije, sipanja ali uklona. Skupne izgube
 energije na en obhod resonatorja opišemo s parametrom $\Lambda$, tako da velja:
 \beq
@@ -834,7 +880,8 @@ energije na en obhod resonatorja opišemo s parametrom $\Lambda$, tako da velja:
 \label{eq:11_53}
 \eeq
 Stacionarno stanje je doseženo, ko se ojačenje na obhod resonatorja 
-(enačba~\ref{eq:11_52}) po velikosti ravno izenači z izgubami (enačba~\ref{eq:11_53}):
+(enačba~\ref{eq:11_52}) po velikosti ravno izenači z izgubami 
+(enačba~\ref{eq:11_53}):
 \beq
 \Lambda W = \frac{G\,W 2L'}{1+W/W_s}.
 \label{eq:11_54}
@@ -847,32 +894,8 @@ W=0 \qquad \mathrm{in} \qquad W = W_s \left(\frac{G\,2L'}{\Lambda} - 1\right)\!\
 Spomnimo se, da je parameter $G$ sorazmeren s črpanjem 
 (enačba~\ref{eq:11_44}). Pri šibkem črpanju je vrednost $G$ majhna in 
 edina smiselna rešitev je $W=0$. Takrat laser ne sveti. Pri močnem
-črpanju in velikem ojačenju ima enačba~(\ref{eq:11_55}) tudi neničelno
+črpanju in velikem ojačenju ima enačba~(\ref{eq:11_54}) tudi neničelno
 rešitev (enačba~\ref{eq:11_55}\, desno) in takrat laser oddaja svetlobo. 
-Mejno ojačenje, pri katerem začne laser svetiti, imenujemo prag 
-delovanja laserja. Ojačenje na pragu delovanja je enako:
-\beq
-G_\mathrm{pr} = \frac{\Lambda}{2L'}.
-\label{eq:11_56}
-\eeq
-Kadar je črpanje nad pragom, energija v laserju narašča linearno s 
-parametrom $G$:
-\beq
-W = W_s \left(\frac{G}{G_\mathrm{pr}} - 1\right)\!\!.
-\label{eq:11_57}
-\eeq
-Takrat laser na osnovi stimulirane emisije oddaja usmerjeni 
-koherentni izhodni snop svetlobe, kar je poglavitna značilnost laserjev laserjev.
-
-Ko enkrat poznamo energijo v laserskem resonatorju, lahko preprosto
-izračunamo izhodni svetlobni tok iz laserja. Čas enega obhoda je $2L/c$,
-upoštevati pa moramo le delež energije, ki je prepuščen skozi izhodno zrcalo. 
-Dobimo: 
-\beq
-P = (1-\mathcal{R}_2) W_s \left( \frac{G}{G_\mathrm{pr}}-1\right) \frac{c}{2L}.
-\label{eq:11_58}
-\eeq
-
 \begin{figure}[h!]
 \centering
 \def\svgwidth{60truemm} 
@@ -885,39 +908,79 @@ narašča linearno z ojačenjem oziroma črpanjem.
 \vglue-3truemm
 \end{figure}
 
+Mejno ojačenje, pri katerem začne laser svetiti, imenujemo prag 
+delovanja laserja. Ojačenje na pragu delovanja je enako 
+(glej enačbo~\ref{eq:11_55}\, desno):
+\beq
+G_\mathrm{pr} = \frac{\Lambda}{2L'}.
+\label{eq:11_56}
+\eeq
+Kadar je črpanje nad pragom, energija v laserju narašča linearno s 
+parametrom $G$:
+\beq
+W = W_s \left(\frac{G}{G_\mathrm{pr}} - 1\right)\!\!.
+\label{eq:11_57}
+\eeq
+Takrat laser na osnovi stimulirane emisije oddaja usmerjeni 
+koherentni izhodni snop svetlobe.
+
+Ko enkrat poznamo energijo v laserskem resonatorju, lahko preprosto
+izračunamo izhodni svetlobni tok iz laserja. Čas enega obhoda je $2L/c$,
+upoštevati pa moramo le delež energije, ki je prepuščen skozi izhodno zrcalo. 
+Dobimo: 
+\beq
+P = (1-\mathcal{R}_2) W \frac{c}{2L}
+= (1-\mathcal{R}_2) W_s \left( \frac{G}{G_\mathrm{pr}}-1\right) \frac{c}{2L}.
+\label{eq:11_58}
+\eeq
+
 \section{Lastnosti laserske svetlobe}
-Poglavitna značilnost laserske svetlobe je njena zelo ozka spektralna
+Poglejmo za konec še nekaj najznačilnejših lastnosti laserske svetlobe: 
+monokromatskost, koherenco, obliko snopa in njegovo divergenco ter izhodno moč. 
+\begin{itemize}
+\item Poglavitna značilnost laserske svetlobe je njena zelo ozka spektralna
 širina oziroma zelo izrazita enobarvnost. Svetloba iz He-Ne laserja, 
-na primer, z valovno dolžino $632,8~\si{nm}$ (in ustrezno frekvenco $
-5 \cdot 10^{14}~\si{Hz}$) ima širino spektralne črte 
-$1,5 \cdot 10^{9}~\si{Hz}$. Spekter lahko z dodatno stabilizacijo 
+na primer, z valovno dolžino $632,8~\si{nm}$ in ustrezno frekvenco $
+5 \cdot 10^{14}~\si{Hz}$ ima širino spektralne črte 
+$1,5 \cdot 10^{9}~\si{Hz}$, kar ustreza širini $\Delta \lambda = 0,002~\si{nm}$.
+Spekter lahko z dodatno stabilizacijo 
 zmanjšamo še za več redov velikosti. 
 
-Laserska svetloba je najbolj koherenten izvor svetlobe. Tipične 
+\item Laserska svetloba je najbolj koherenten izvor svetlobe. Tipične 
 koherenčne dolžine laserske svetlobe so več $100~\si{m}$ ali celo 
 več $100~\si{km}$. Za primerjavo: svetloba s Sonca ima koherenčno dolžino
 krajšo od mikrometra. Koherentna laserska svetloba je zato zelo uporabna
 v interferenčnih poskusih in izredno natančnih meritvah.
 
-Osnovni laserski snop, ki izhaja iz resonatorja, je po obliki
-Gaussov snop. To pomeni, da njegova intenziteta pojema z oddaljenostjo
+\item Osnovni laserski snop, ki izhaja iz resonatorja, je po obliki
+Gaussov snop. To pomeni, da njegov rob ni oster, temveč njegova 
+intenziteta pojema z oddaljenostjo
 od osrednje osi $r$ kot Gaussova funkcija (slika~\ref{fig:11_Gauss}):
 \beq
 j = j_0 e^{-2r^2/w^2},
 \eeq
 pri čemer sta $w$ efektivni polmer snopa in $j_0$ največja gostota
-svetlobnega toka. Mestu, kjer je snop najožji, pravimo grlo snopa.
+svetlobnega toka. 
+\begin{figure}[h!]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/11_Gauss.pdf_tex}
+\caption{Prečni profil laserskega snopa je Gaussove oblike.
+}
+\label{fig:11_Gauss}
+\vglue-3truemm
+\end{figure}
+\item Efektivni polmer snopa $w$ ni konstanten, ampak
+se zaradi uklona povečuje. Mestu, kjer je snop najožji, pravimo grlo snopa.
 Z oddaljenostjo od grla se snop širi, zaradi ohranitve energije pa 
-se njegova vršna gostota toka zmanjšuje.
-
-Širjenje snopa opisuje divergenca, to je razmerje med 
+se njegova vršna gostota toka zmanjšuje. Širjenje snopa opisuje divergenca, to je razmerje med 
 polmerom  snopa in oddaljenostjo od grla pri velikih razdaljah. 
 Za laserske snopa je divergenca izredno majhna, tipično okoli $\si{mrad}$.
 % Divergenca snopa je obratno sorazmerna s polmerom snopa v grlu, 
 % zato lahko divergenca zelo naraste, če polmer grla močno zmanjšamo, 
 % na primer ob preslikavi z zbiralno lečo. 
 
-Izhodne moči laserjev so od nekaj $\si{mW}$ v laserskih kazalnikih do 
+\item Izhodne moči laserjev so od nekaj $\si{mW}$ v laserskih kazalnikih do 
 več $\si{kW}$ v industrijskih laserjih za obdelavo snovi. Najvišje moči 
 dosegajo sunkovni laserji, ki oddajajo energijo
 v izredno kratkih sunkih, dolgih lahko le $\si{ns}$, $\si{ps}$ ali celo 
@@ -925,12 +988,4 @@ le nekaj $\si{fs}$. Vršna moč v sunkovnih laserjih dosega
 vrednosti $\si{GW}$ ali še več. Ker so sunki izredno kratki, celotna izsevana 
 energija kljub nepredstavljivo veliki moči ostaja razmeroma majhna, tipično 
 pod $\si{J}$.
-\begin{figure}[h!]
-\centering
-\def\svgwidth{70truemm} 
-\input{slike/11_Gauss.pdf_tex}
-\caption{Prečni profil laserskega snopa je Gaussove oblike.
-}
-\label{fig:11_Gauss}
-\vglue-3truemm
-\end{figure}
+\end{itemize}

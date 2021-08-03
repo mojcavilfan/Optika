@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{394.18569009bp}%
+    \setlength{\unitlength}{421.32161779bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,21 +50,22 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.2693855)%
+  \begin{picture}(1,0.25203525)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(-0.00107324,0.24658504){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
-    \put(0.52599313,0.24720712){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
-    \put(0.70626689,0.01380256){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
+    \put(-0.00100412,0.23070329){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.53483836,0.23128531){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.70350128,0.01291356){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{11_g.pdf}}%
-    \put(0.33818018,0.17830614){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(\omega)$\end{tabular}}}}%
-    \put(0.6262202,0.21484295){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(\omega)$\end{tabular}}}}%
-    \put(0.29666288,0.11597153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g(\omega)$\end{tabular}}}}%
-    \put(0.81759873,0.11336793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g(\omega)$\end{tabular}}}}%
-    \put(0.22552109,0.00663649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{21}$\end{tabular}}}}%
-    \put(0.74690875,0.00663649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{21}$\end{tabular}}}}%
-    \put(0.67678231,0.00663649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_R$\end{tabular}}}}%
-    \put(0.45658515,0.00663652){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
-    \put(0.97673099,0.00663651){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
+    \put(0.31639929,0.17038224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(\omega)$\end{tabular}}}}%
+    \put(0.62861014,0.2010056){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$u(\omega)$\end{tabular}}}}%
+    \put(0.30959788,0.08002037){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g(\omega)$\end{tabular}}}}%
+    \put(0.83970463,0.07758445){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g(\omega)$\end{tabular}}}}%
+    \put(0.2109962,0.00620904){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{21}$\end{tabular}}}}%
+    \put(0.7415255,0.00620904){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{21}$\end{tabular}}}}%
+    \put(0.6759157,0.00620904){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_{R,i}$\end{tabular}}}}%
+    \put(0.42717784,0.00620907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
+    \put(0.95654567,0.00620906){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
+    \put(-0.01979954,0.29422239){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.62522258\unitlength}\raggedright \end{minipage}}}%
   \end{picture}%
 \endgroup%
