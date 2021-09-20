@@ -31,11 +31,11 @@ ki jo bomo podrobneje obravnavali v poglavju~\ref{chap:Koherenca}.
 Najpreprostejši interferenčni poskusi so taki, pri katerih vpadni snop svetlobe
 razdelimo na več delov. To lahko naredimo z delitvijo po valovni fronti
 ali z delitvijo po amplitudi. V obeh primerih so zahteve po isti frekvenci, 
-polarizaciji in fazi izpolnjene, seveda pa se valovanji razlikujeta 
+polarizaciji in začetni fazi izpolnjene, seveda pa se valovanji razlikujeta 
 v dodatnem faznem zamiku, ki ga pridobita po delitvi.
 Dodatni fazni zamik in z njim povezana interferenčna slika 
-sta močno odvisna od dolžine poti, ki jo del prvotnega snopa 
-vpadne svetlobe prepotuje. Ker je valovna dolžina svetlobe zelo majhna, že majhne 
+sta močno odvisna od dolžine poti, ki jo prepotuje del prvotnega snopa 
+vpadne svetlobe. Ker je valovna dolžina svetlobe zelo majhna, že majhne 
 spremembe v dolžini poti oziroma zakasnitvi žarka povzročijo velike spremembe 
 interferenčnega vzorca. 
 
@@ -54,7 +54,7 @@ je interferenčna slika sestavljena iz svetlih in temnih območij. V naravi inte
 navadno opazujemo z belo dnevno svetlobo, kar da snovem, na primer plasti olja na vodi ali
 milnemu mehurčku, značilno mavrično obarvanost.
 
-\newpage
+\section{Interferenca dveh ravnih valov}
 Zapišimo preprost primer interference dveh ravnih valov z enako frekvenco. Valovna
 vektorja valovanj označimo s $\mathbf{k}_1$ in $\mathbf{k}_2$, fazi valovanj z 
 $\delta_1$ in $\delta_2$ ter njuni realni amplitudi z $E_{10}$ in $E_{20}$. Ker imajo 
@@ -74,12 +74,12 @@ E = E_1 + E_2 = E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t
 \label{eq:06_02}
 \eeq
 pri čemer sta $\phi_{1,2} = \mathbf{k}_{1,2} \cdot \mathbf{r} + \delta_{1,2}$. 
-Gostota svetlobnega toka $j$ je enaka (enačba~\ref{eq:j}):
+Gostota svetlobnega toka $j$ je na splošno (enačba~\ref{eq:j}):
 \beq
 j = \frac{1}{2}\varepsilon \varepsilon_0 |E|^2c,
 \label{eq:06_03}
 \eeq
-zato velja
+zato je celotna gostota svetlobnega toka enaka:
 \beq
 j \propto (E_1+E_2)(E_1^*+E_2^*)  = 
 \left( E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t}\right)
@@ -91,7 +91,7 @@ Sledi:
 j \propto E_{10}^2 + E_{20}^2 + E_{10}E_{20} \left(e^{i\phi_1-i\phi_2}+ e^{-i\phi_1+i\phi_2}\right)\!.
 \label{eq:06_05}
 \eeq
-Eksponente v oklepaju izrazimo s kotno funkcijo in dobimo:
+Eksponente v oklepaju izrazimo s kotno funkcijo in upoštevajoč zvezo~(enačba~\ref{eq:06_03}) dobimo:
 \boxeq{eq:06_06}{
 j = j_1 + j_2 + 2\sqrt{j_1 j_2} \cos(\Delta \phi),
 }
@@ -341,6 +341,7 @@ zrcali (b) in Fresnelova biprizma (c). Črtkane črte označujejo navidezne izvo
 \end{remark}
 
 \section{Interferenca z delitvijo amplitude}
+\label{chap:Michelson}
 Amplitudno delitev valovanja dosežemo s polprepustnimi zrcali. Kot že ime pove, taka
 zrcala del vpadne svetlobe odbijejo in del prepustijo. 
 Najznačilnejši primer interferometra z delitvijo amplitude je Michelsonov interferometer.
