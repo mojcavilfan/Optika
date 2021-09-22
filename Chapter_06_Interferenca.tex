@@ -43,15 +43,15 @@ Z opazovanjem interferenčnih vzorcev lahko zelo natančno določimo fazni zamik
 dvema deloma valovanja in s tem pridobimo podatke o valovanju samem, o snovi, po 
 kateri se širi valovanje, ali o oddaljenosti predmeta, od katerega se svetloba odbija. 
 Zato interferometrijo, kot imenujemo metodo, ki temelji na opazovanju interference,
-s pridom uporabljamo med drugim za izredno natačne meritve dolžine, 
+s pridom uporabljamo med drugim za izredno natančne meritve dolžine, 
 oddaljenosti, lomnega količnika snovi oziroma njegovih sprememb ali odstopanj v frekvenci. 
 Interferenčne meritve so ene najnatančnejših in so zato zelo uporabne na veliko področjih:
-od prvotne opustitve obstanka etra prek izredno natačnih meritev gladkosti površine do
+od prvotne opustitve obstanka etra prek izredno natančnih meritev gladkosti površine do
 opazovanja gravitacijskih valov. 
 
 V laboratorijih in industrijskih aplikacijah navadno za vir svetlobe uporabljamo laser, zato
 je interferenčna slika sestavljena iz svetlih in temnih območij. V naravi interferenco
-navadno opazujemo z belo dnevno svetlobo, kar da snovem, na primer plasti olja na vodi ali
+navadno opazujemo z belo dnevno svetlobo, kar da tankim plastem, na primer plasti olja na vodi ali
 milnemu mehurčku, značilno mavrično obarvanost.
 
 \section{Interferenca dveh ravnih valov}
@@ -113,46 +113,62 @@ oziroma zapisano drugače:
 \left(\sqrt{j_1}- \sqrt{j_2}\right)^2 < j < \left(\sqrt{j_1} +\sqrt{j_2}\right)^2\!\!.
 \label{eq:06_07a}
 \eeq
-Vpeljemo vidljivost ali kontrast interferenčnega vzorca:
+\begin{remark}
+Vpeljemo lahko tudi kontrast interferenčnega vzorca, ki ga izračunamo kot:
 \beq
-v = \frac{j_\mathrm{max}- j_\mathrm{min}}{j_\mathrm{max}+ j_\mathrm{min}},
+v = \frac{j_\mathrm{max}- j_\mathrm{min}}{j_\mathrm{max}+ j_\mathrm{min}}.
 \label{eq:06_08}
 \eeq
-ki lahko zavzema vrednosti med 0 in 1. V posebnem primeru, 
-ko sta amplitudi obeh valovanj enaki in je $j_1 = j_2 = j_0$, je skupna gostota 
-svetlobnega toka enaka (enačba~\ref{eq:06_06}):
+Parameter $v$, ki zavzema vrednosti med 0 in 1, imenujemo tudi
+vidljivost interferenčnega vzorca.
+\end{remark}
+
+Vrnimo se h krajevni odvisnosti gostote svetlobnega toka (enačba~\ref{eq:06_06}). Na
+splošno se intenziteti delnih valovanj razlikujeta in skupna gostota svetlobnega
+toka oscilira med neko neničelno najmanjšo in največjo vrednostjo (slika~\ref{fig:06_kontrast}).
+\begin{figure}[h!]
+\centering
+\def\svgwidth{85truemm} 
+\input{slike/06_vidljivost.pdf_tex}
+\vglue1truemm
+\caption{Interferenca dveh valovanj z različnima intenzitetama. 
+Vrednost skupne gostote svetlobnega toka v odvisnosti od faznega 
+zamika med vpadnima valovanjema oscilira med najmanjšo $j_\mathrm{min}$ 
+in največjo vrednostjo $j_\mathrm{max}$. Pikčasta črta označuje skupno
+gostoto toka delnih valovanj, kadar se fazna razlika hitro spreminja
+in interferenčni vzorec ni viden.}
+\label{fig:06_kontrast}
+\end{figure}
+
+V posebnem primeru, ko sta amplitudi obeh valovanj enaki in je $j_1 = j_2 = j_0$, 
+je skupna gostota svetlobnega toka enaka (enačba~\ref{eq:06_06}):
 \beq
 j = 2j_0 + 2j_0 \cos (\Delta \phi) = 4j_0 \cos^2 (\Delta \phi/2).
 \label{eq:06_09}
 \eeq
-Interferenčni vzorec dveh enako močnih snopov svetlobe zavzame vrednosti med 0 
-in $4j_0$, kar pomeni, da je kontrast takega vzorca enak 1. 
-\begin{figure}[ht]
-\centering
-\def\svgwidth{75truemm} 
-\input{slike/06_vidljivost.pdf_tex}
-\vglue3truemm
-\caption{Interferenca dveh valovanj z različnima intenzitetama. 
-Vrednost skupne gostote svetlobnega toka v odvisnosti od faznega 
-zamika med vpadnima valovanjima oscilira med najmanjšo in največjo vrednostjo.}
-\label{fig:06_kontrast}
-\vglue-5truemm
-\end{figure}
+Interferenčni vzorec dveh enako močnih snopov svetlobe zavzema vrednosti med 0 
+in $4j_0$, kar pomeni, da je kontrast takega vzorca (enačba~\ref{eq:06_08}) enak 1. 
+Kadar se fazna razlika med valovanjema $\Delta \phi$ hitro spreminja,
+je gostota svetlobnega toka na zaslonu enaka vsoti prispevkov posameznih 
+delnih valovanj in interference ne vidimo. Takrat je kontrast enak 0. 
 
-Kako pa je z ohranitvijo energijskega toka? Povprečni energijski 
-tok čez veliko območje prostora je (enačba~\ref{eq:06_09}):
+Kako pa je z ohranitvijo energijskega toka pri interferenci? Omejimo 
+se na primer, ko sta amplitudi obeh delnih valovanj enaki. Takrat
+je povprečni energijski  tok čez veliko območje prostora enak (enačba~\ref{eq:06_09}):
 \beq
-\langle j \rangle = \langle 4j_0 \cos^2 (\Delta \phi/2) \rangle  = \frac{1}{2}(4j_0) = 2j_0,
+\langle j \rangle = \langle 4j_0 \cos^2 (\Delta \phi/2) \rangle  = \frac{1}{2}(4j_0) = 2j_0.
 \label{eq:06_10}
 \eeq
-kar je po pričakovanju enako gostoti energijskega toka dveh vpadnih valovanj. 
-Pri interferenci se torej energijski tok ohranja, vendar se energija prerazporedi.
+Po pričakovanju je povprečna gostota energijskega toka interferenčnega vzorca
+enaka vsoti gostot energijskega toka obeh vpadnih valovanj. Enako velja tudi 
+v primeru, ko amplitudi vpadnih delnih valovanj nista enaki. Pri interferenci se 
+torej energijski tok ohranja, vendar se energija prerazporedi.
 
-\begin{example}{\bf Interferenca dveh ravnih valovanj}.
+\begin{example}{\bf Interferenca dveh ravnih valovanj.}
 Opazujmo interferenco dveh ravnih valovanj z enakima intenzitetama, ki pod kotom 
-vpadata eno glede na drugo. Njuna valovna vektorja zapišemo kot:
-$\mathbf{k}_1 = (k_x,0, k_z)$ in $\mathbf{k}_2 = (-k_x,0, k_z)$.
-Valovanji sta potem oblike:
+vpadata eno glede na drugo (slika~\ref{fig:06_int}). Njuna valovna vektorja na splošno
+zapišemo kot: $\mathbf{k}_1 = (k_x,0, k_z)$ in $\mathbf{k}_2 = (-k_x,0, k_z)$. 
+Valovanji sta oblike:
 \beq
 E_1 = E_0 e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
 E_2 = E_0 e^{-ik_x x} e^{ik_z z}e^{-i\omega t}.
@@ -164,45 +180,49 @@ E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_x x}+e^{-ik_x x} \right) =
 E_0 e^{ik_z z -i\omega t } 2 \cos(k_x x).
 \label{eq:06_14}
 \eeq
-Interferenčni vzorec, ki ga zaznamo, je enak:
+Izračunamo gostoto svetlobnega toka in za interferenčni vzorec dobimo obliko:
 \beq
 j = 4 j_0 \cos^2(k_x x).
 \label{eq:06_15}
 \eeq
-\vglue-7truemm
 \begin{figure}[!h]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/06_interferenca_1.pdf_tex}
-\caption{Interferenca dveh ravnih valov, ki pod kotom vpadata eno na drugo (levo). Na mestu, kjer
-se valovanji seštejeta, se pojavijo ojačitve, vmes so oslabitve. Intenziteta interferenčnega vzorca
-ima značilne bele črte na mestu oslabitev, potujoče rdeče in modre liste z leve slike pa se 
-na detektorju izpovprečijo (desno).}
+\caption{Interferenca dveh ravnih valovanj, ki pod kotom vpadata eno na drugo. Modra barva
+označuje negativno vrednost jakosti električnega polja in rdeča pozitivno. Kjer je belo, je jakost
+električnega polja enaka nič (levo). Intenzitetni interferenčni vzorec
+ima značilne bele črte na mestu oslabitev, potujoče ojačitve z leve slike pa se 
+na detektorju izpovprečijo v znano interferenčno sliko (desno).}
 \label{fig:06_int}
-\vglue-5truemm
 \end{figure}
 
 \end{example}
 
-\begin{example}{\bf Interferenca dveh krožnih valovanj}.
-Poglejmo še interferenco dveh krožnih valovanj v ravnini. 
-Valovanji sta v ravnini $xy$ oblike:
+\begin{example}{\bf Interferenca dveh krožnih valovanj.}
+Poglejmo še interferenco dveh krožnih valovanj v ravnini. Krožno valovanje izhaja
+iz ene točke in se v koncentričnih krogih širi po ravnini navzven. V
+ravnini $xy$ dve krožni valovanji zapišemo kot:
 \beq
-E_1 \propto \exp\left( ik\sqrt{x^2+y^2}\right)  e^{-i\omega t} \qquad \mathrm{in} \qquad 
-E_2 \propto \exp\left( ik\sqrt{(x-d)^2+y^2}\right)  e^{-i\omega t},
+E_1 \propto \exp\left( ik\sqrt{x^2+y^2}\right)  e^{-i\omega t}
+\qquad \mathrm{in} \qquad
+E_2 \propto \exp\left( ik\sqrt{(x-d)^2+y^2}\right)  e^{-i\omega t}.
 \label{eq:06_16a}
 \eeq
-pri čemer je $d$ razmik med točkastima izvoroma. Pojemanja amplitude
-z oddaljenostjo od izvora nismo zapisali. Nekaj primerov interferenčnih vzorcev, ki 
-nastanejo pri različnih razmikih $d$, je narisanih na sliki~\ref{fig:06_intkrog}.
-
+Pri zapisu smo privzeli, da sta izhodišči valovanj razmaknjeni vzdolž osi $x$, 
+razmik med njima pa je enak $d$. Pojemanja amplitude
+z oddaljenostjo od izvora nismo zapisali. Nekaj primerov amplitudnih in pripadajočih
+intenzitetnih interferenčnih vzorcev, ki 
+nastanejo pri različnih razmikih $d$ in različni valovni dolžini, 
+je narisanih na sliki~\ref{fig:06_intkrog}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width=140truemm]{slike/06_interferenca_krog.png}
-\caption{Interferenca dveh krožnih valov za različne razmike med točkastima izvoroma. Kjer sta
-valovanji iz faze (destruktivna interferenca), se pojavijo bele črte, ker sta valovanji v fazi
-(konstruktivna interferenca), se pojavijo ojačitve. Z naraščajočim razmikom se ojačitve in oslabitve
-gostijo.}
+\includegraphics[width=140truemm]{slike/06_interferenca_krog_nov.png}
+\caption{Interferenca dveh krožnih valov, pri čemer zgornja vrsta prikazuje 
+amplitudo polja, spodnja pa intenziteto. Na mestih, kjer sta valovanji iz faze (destruktivna
+interferenca), se pojavijo oslabitve, kjer sta valovanji v fazi (konstruktivna interferenca),
+pa ojačitve. Od leve proti desni razmik med izvoroma narašča, zato se ojačitve gostijo, zadnji 
+stolpec pa ponazori premik ojačitev pri spremenjeni valovni dolžini valovanja.}
 \label{fig:06_intkrog}
 \vglue-5truemm
 \end{figure}
@@ -210,58 +230,68 @@ gostijo.}
 \end{example}
 
 \section{Interferenca z delitvijo valovne fronte}
-V večini interferometričnih naprav in pri večini interferenčnih poskusov
-ustvarimo interferenco z enim samim snopom svetlobe, 
-ki ga razdelimo na dva dela. To lahko naredimo na dva načina: lahko razdelimo
-valovno fronto valovanja (npr. Youngov poskus) ali pa razdelimo amplitudo
-valovanja (npr. Michelsonov interferometer). 
+Pri večini interferenčnih poskusov ustvarimo interferenco z enim samim 
+snopom svetlobe, ki ga razdelimo na dva dela. S tem zagotovimo isto 
+frekvenco, isto začetno fazo in enako polarizacijo obeh delnih valovanj. V uvodu smo
+že omenili, da lahko vpadno valovanje razdelimo na dva dela z delitvijo 
+valovne fronte valovanja (npr. Youngov poskus) ali z delitvijo amplitude
+valovanja (npr. Michelsonov interferometer). Najprej si poglejmo prvi primer.
 
 Najpomembnejši primer interference z delitvijo valovne fronte je nedvomno
 Youngov poskus (1801), na podlagi katerega je angleški fizik Thomas Young
-spoznal, da je svetloba transverzalno valovanje. Pri tem poskusu vpadno valovanje iz 
-monokromatskega izvora  
-simetrično usmerimo na zaslon, v katerem sta dve enaki ozki
+sklepal, da je svetloba transverzalno valovanje. 
+Pri tem poskusu vpadno valovanje iz monokromatskega izvora  
+simetrično usmerimo na objektni zaslon, v katerem sta dve enaki ozki
 reži, in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovanje mora biti 
 kar se da koherentno. Young je to dosegel tako, da je vpadno svetlobo najprej 
-speljal skozi tanko režo in jo šele nato usmeril na zaslon z dvema režama. 
-Več o koherenci bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Poiščimo lego ojačitev in oslabitev
-na oddaljenem zaslonu.
+speljal skozi eno tanko režo in jo šele nato usmeril na zaslon z dvema režama. 
+Več o koherenci bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Poiščimo 
+lego ojačitev in oslabitev na oddaljenem opazovalnem zaslonu.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/06_Young.pdf_tex}
-\caption{Pri Youngovem poskusu svetloba prehaja ozko režo in vpada simetrično na dve ozki
-reži. Na oddaljenem zaslonu opazujemo interferenco.}
+\caption{Pri prvotnem Youngovem poskusu monokromatska svetloba prehaja ozko 
+režo in vpada simetrično na dve ozki reži v razmiku $D$ na objektnem zaslonu. 
+Na oddaljenem zaslonu opazujemo interferenčno sliko. Pri tem $z_0$ opisuje razdaljo
+od objektnega do opazovalnega zaslona, $r_1$ in 
+$r_2$ razdalji od rež do izbrane točke na opazovalnem zaslonu in kot 
+$\vartheta$ približno smer izbrane točke glede na reži v zaslonu. 
+Privzamemo, da je $z_0 \gg D$.}
 \label{fig:06_Young}
+\vglue-3truemm
 \end{figure}
 
 Naj bodo $z_0$ razdalja od objektnega zaslona z dvema režama 
 do opazovalnega zaslona, $D$ razdalja med središčema rež, 
 $r_1$ razdalja med sredino prve reže in izbrano točko na zaslonu
-ter $r_2$ razdalja med sredino druge reže in točko na zaslonu. Potem za velike 
+ter $r_2$ razdalja med sredino druge reže in isto točko na zaslonu. Potem za velike 
 oddaljenosti $r_1, r_2 \gg D$ velja:
 \beq
 \Delta r = r_1-r_2 \approx D \sin\vartheta,
 \label{eq:06_16}
 \eeq
 pri čemer je $\vartheta$ kot med osjo $z$ in zveznico med točko na sredini med režama in
-izbrano točko na opazovalnem zaslonu. Uporabimo enačbo~(\ref{eq:06_09}) in za gostoto 
-svetlobnega toka na zaslonu dobimo:
+izbrano točko na opazovalnem zaslonu. Ker ležita reži simetrično, sta intenziteti delnih
+valovanj enaki, prav tako tudi njuni začetni fazi. Za izračun gostote svetlobnega toka na zaslonu 
+zato lahko uporabimo enačbo~(\ref{eq:06_09}). Vstavimo fazno razliko $\Delta \phi \approx 
+k\Delta r$ in z upoštevanjem enačbe~(\ref{eq:06_16}) dobimo:
 \beq
 j = 4 j_0 \cos^2\left(\frac{\Delta \phi}{2}\right) = 4j_0 \cos^2\left(\frac{k\Delta r}{2}\right) = 
 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right)\!\!.
 \label{eq:06_17}
 \eeq
-
-V točkah, kjer se prispevka obeh valovanj seštevata, nastopi tako imenovana
-konstruktivna interferenca in na zaslonu opazimo ojačitve. Izhajajoč iz enačbe~(\ref{eq:06_17})
-pogoj za ojačitev zapišemo kot:
+V točkah, kjer se prispevka obeh valovanj seštejeta, nastopi tako imenovana
+konstruktivna interferenca in na zaslonu opazimo ojačitve. 
+Izhajajoč iz enačbe~(\ref{eq:06_17}) pogoj za ojačitev zapišemo kot:
 \beq
 \frac{kD\sin \vartheta}{2} = N\pi,
 \label{eq:06_18}
 \eeq
-pri čemer je $N$ celo število. Od tod izračunamo pogoj za kote $\vartheta_\mathrm{max}$, pri katerih
-se pojavijo vrhovi:
+pri čemer je $N$ celo število. 
+
+Od tod izračunamo pogoj za kote $\vartheta_\mathrm{max}$, pri katerih
+se pojavijo ojačitve:
 \boxeq{eq:InterferencaMax}{
 D \sin\vartheta_\mathrm{max} = N \lambda.
 }

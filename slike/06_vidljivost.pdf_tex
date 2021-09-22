@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{459.90062804bp}%
+    \setlength{\unitlength}{575.26944378bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,14 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.3898476)%
+  \begin{picture}(1,0.33073874)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{06_vidljivost.pdf}}%
-    \put(0.02668417,0.3601112){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j$\end{tabular}}}}%
-    \put(0.99401988,-0.03202538){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \phi$\end{tabular}}}}%
-    \put(0.97868836,0.32236938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{max}$\end{tabular}}}}%
-    \put(0.97742415,0.06202536){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{min}$\end{tabular}}}}%
-    \put(0.97829674,0.19290593){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_1+j_2$\end{tabular}}}}%
+    \put(0.02915515,0.30696591){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j$\end{tabular}}}}%
+    \put(0.79988661,0.0065085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \phi$\end{tabular}}}}%
+    \put(0.73548102,0.26636335){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{max}$\end{tabular}}}}%
+    \put(0.73447034,0.08951993){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_\mathrm{min}$\end{tabular}}}}%
+    \put(0.73516793,0.1785081){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$j_1+j_2$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
