@@ -281,7 +281,7 @@ j = 4 j_0 \cos^2\left(\frac{\Delta \phi}{2}\right) = 4j_0 \cos^2\left(\frac{k\De
 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right)\!\!.
 \label{eq:06_17}
 \eeq
-V točkah, kjer se prispevka obeh valovanj seštejeta, nastopi tako imenovana
+V točkah, kjer se prispevka obeh valovanj seštejeta, nastopi 
 konstruktivna interferenca in na zaslonu opazimo ojačitve. 
 Izhajajoč iz enačbe~(\ref{eq:06_17}) pogoj za ojačitev zapišemo kot:
 \beq
@@ -295,49 +295,51 @@ se pojavijo ojačitve:
 \boxeq{eq:InterferencaMax}{
 D \sin\vartheta_\mathrm{max} = N \lambda.
 }
-Ker je leva stran enačbe enaka razliki poti od rež do točke na zaslonu, je zapis preprosto razumeti. 
-Ojačitve se pojavijo, kjer je razlika poti od središč rež do točke na zaslonu enaka večkratniku 
-valovne dolžine valovanja.
+Zapis pove, da se ojačitve pojavijo, ko je razlika poti od rež 
+do točke na zaslonu enaka večkratniku valovne dolžine valovanja.
 
-V vmesnih točkah, kjer se prispevka valovanj odštevata, je destruktivna
-interferenca in na zaslonu opazimo oslabitve (temne proge). Pogoj za oslabitve je:
+V vmesnih točkah, kjer se prispevka valovanj odštejeta, nastopi 
+destruktivna interferenca in na zaslonu opazimo oslabitve (neosvetljene proge). 
+Pogoj za oslabitve je:
 \boxeq{eq:InterferencaMin}{
 D \sin\vartheta_\mathrm{min} = \left(N + \frac{1}{2}\right)\lambda.
 }
-Vzorec, ki se pojavi v daljnjem polju oziroma na oddaljenem zaslonu,
-je za majhne kote periodičen s periodo ponavljanja $\Delta \xi_0$. Izračunajmo jo. Velja:
+Interferenčni vzorec, ki ga opazujemo na oddaljenem opazovalnem zaslonu, je za majhne 
+kote periodičen. Izračunajmo periodo ponavljanja $\xi_0$ (slika~\ref{fig:06_Young}). 
+Iz enačbe~(\ref{eq:06_17}) sledi zahteva:
 \beq
 \Delta \left(\frac{kD\sin \vartheta}{2}\right) = \pi.
 \label{eq:06_19}
 \eeq
-Za majhne kote $\vartheta$ velja 
+Za majhne kote velja $\sin \vartheta \approx \vartheta$ in zapišemo: 
 \beq
-k D \Delta \vartheta = k D \frac{\Delta \xi_0}{z_0} = 2 \pi,
+\frac{k D\,\Delta \sin\vartheta}{2} \approx \frac{k D\, \Delta \vartheta}{2}
+ \approx \frac{k D\,\xi_0}{2z_0} = \pi,
 \label{eq:06_20}
 \eeq
 od koder sledi:
 \beq
-\Delta \xi_0 = \frac{\lambda z_0}{D}.
+\xi_0 = \frac{\lambda z_0}{D}.
 \label{eq:06_21}
 \eeq
-Bliže kot so reže (manjši $D$), bolj razmaknjeni so uklonski vrhovi (večji $\Delta \xi_0$),
-kar je seveda v skladu z uklonsko sliko. Za $D=1~\si{\micro\metre}$ je na oddaljenosti 
-$z_0 = 1~\si{m}$ razmik med ojačitvami
-$\Delta \xi_0 = 0,5~\si{m}$, medtem ko je pri $D = 1~\si{mm}$ 
-vrednost $\Delta \xi_0 = 0,5~\si{mm}$. 
+Bliže kot sta reži (manjši $D$), bolj razmaknjene so ojačitve (večji $\xi_0$). 
+Za $D=1~\si{\micro\metre}$ je na oddaljenosti $z_0 = 1~\si{m}$ razmik med ojačitvami za 
+svetlobo z valovno dolžino $\lambda  = 500~\si{nm}$ enak $\xi_0 = 0,5~\si{m}$, 
+medtem ko je pri $D = 1~\si{mm}$ na isti razdalji vrednost $\xi_0 = 0,5~\si{mm}$. 
 
-Pokažimo, da je dobljeni rezultat (enačba~\ref{eq:06_17}) enak tistemu, 
-ki smo ga izpeljali pri obravnavi Fraunhoferjevega uklona v petem poglavju. 
-Za sistem $N$ rež širine $d$ s periodo ponavljanja $D$ je veljalo 
-(enačba~\ref{eq:uklonNrez}):
+\begin{example}{\bf Fraunhoferjeva uklonska obravnava Youngovega poskusa.}
+Youngov poskus na dveh režah lahko obravnavamo tudi v Fraunhoferjevi uklonski
+sliki (poglavje~\ref{chap:Fraunhofer}). Spomnimo se uklona na $N$ režah
+širine $d$ s periodo ponavljanja $D$ (enačba~\ref{eq:uklonNrez}):
 \beq
 j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\vartheta/2}\right)^2
 \left(\frac{\sin\left(NkD\sin\vartheta/2\right)}{\sin\left(kD\sin\vartheta/2\right)}\right)^2\!\!.
 \label{eq:06_22}
 \eeq
-Uporabimo zapisano enačbo na primeru, ko je $N=2$, reži pa sta tako ozki, da lahko 
-privzamemo $d\to 0$. Potem je strukturni faktor (prvi oklepaj) enak $1$ in 
-intenziteta vrhov z oddaljenostjo od optične osi $z$ ne pojema. Ostane:
+Pokažimo, da je uklonska slika za $N=2$ v limitnem primeru, ko sta
+reži ozki in velja $d\to 0$, enaka izračunanemu interferenčnemu vzorcu 
+(enačba~\ref{eq:06_17}). Strukturni faktor (prvi oklepaj) je za ozke reže 
+enak $1$ in intenziteta vrhov z oddaljenostjo od optične osi $z$ ne pojema. Ostane:
 \beq
 j = j_0~\frac{\sin^2(2kD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
 j_0~\frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{\sin^2(kD \sin\vartheta/2)},
@@ -347,28 +349,59 @@ pri čemer smo uporabili izraz za zapis dvojnega kota. Ulomek krajšamo in dobim
 j = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}{2}\right)\!\!,
 \label{eq:06_23}
 \eeq
-kar je enako enačbi~(\ref{eq:06_17}).
+kar je, po pričakovanju, enako enačbi~(\ref{eq:06_17}).
+\end{example}
 
 \begin{remark}
-Oglejmo si še nekaj alternativnih postavitev interferometrov z delitvijo žarka. Pri Youngovem
-eksperimentu se namreč težko izognemo težavam, povezanim s končno širino reže $d$. Njegovi
-sodobniki so poskušali podoben interferenčni vzorec ustvariti nad druge načine. Prvi primer
-je Lloydovo zrcalo (1834), pri katerem interferirajo žarki, ki pridejo neposredno od izvora svetlobe, 
-in žarki, ki se odbijejo od zrcala. Drugi primer sta Fresnelovi zrcali, pri katerih interferirata
-sva snopa svetlobe, ki se odbijata vsak od svojega zrcala. Tretja postavitev, ki jo omenimo,
-je s Fresnelovo biprizmo. Svetloba, ki izhaja iz enega svetila, se na Fresnelovi biprizmi
-lomi, lomljena žarka pa med seboj interferirata.
+Oglejmo si še nekaj alternativnih postavitev interferenčnih poskusov
+z delitvijo žarka. Pri Youngovem poskusu se namreč težko izognemo 
+težavam, povezanim s končno širino reže $d$. Njegovi
+sodobniki so zato poskušali podoben interferenčni vzorec ustvariti 
+nad druge načine, s čimer bi se izognili domnevam, da se interferenčni 
+vzorec pojavi kot posledica pojavov na robu rež. 
+Prvi primer je Lloydovo zrcalo (1834), pri katerem interferirajo žarki, 
+ki vpadajo neposredno od izvora svetlobe, in žarki, ki se odbijejo od zrcala
+(slika~\ref{fig:06_Lloyd}\,a). 
+Drugi primer sta Fresnelovi zrcali, pri katerih interferirata
+sva snopa svetlobe, ki se odbijata vsak od svojega zrcala 
+(slika~\ref{fig:06_Lloyd}\,b). Omenimo še postavitev s Fresnelovo biprizmo. 
+V tem primeru se svetloba, ki izhaja iz enega svetila, 
+na biprizmi lomi, lomljena žarka pa med seboj 
+interferirata (slika~\ref{fig:06_Lloyd}\,c).
 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/06_Lloyd.pdf_tex}
 \caption{Različne postavitve za opazovanje interference: Lloydovo zrcalo (a), Fresnelovi
-zrcali (b) in Fresnelova biprizma (c). Črtkane črte označujejo navidezne izvore svetlobe.}
+zrcali (b) in Fresnelova biprizma (c). S črko $S$ smo označili izvore svetlobe in s  
+$S'$ navidezne izvore. Črtkane črte prikazujejo poti navideznih snopov svetlobe.}
 \label{fig:06_Lloyd}
 \end{figure}
 \vskip1truecm
 \end{remark}
+
+\begin{remark}
+Youngov poskus je osnova za delovanje Rayleighovega interferometra, ki ga uporabljamo
+za natančno merjenje lomnega količnika plinov. V njem svetlobo 
+iz točkastega svetila (laserja) najprej razširimo v širok snop in nato usmerimo
+na zaslon z dvema ozkima režama. Za režama svetloba prehaja skozi plinsko komoro, 
+nato pa žarka z drugo lečo ponovno zberemo, kjer interferirata. Lege ojačitev na zaslonu
+so odvisne od relativnega faznega zamika obeh delnih valovanj, ta pa je odvisen od
+lomnega količnika plina, po katerem je svetloba potovala. Ker so interferenčne
+meritve izredno natančne, lahko določamo vrednost $n-1$ na $10^{-8}$ natančno.
+
+\begin{figure}[ht]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/06_Lloyd.pdf_tex}
+\caption{Različne postavitve za opazovanje interference: Lloydovo zrcalo (a), Fresnelovi
+zrcali (b) in Fresnelova biprizma (c). S črko $S$ smo označili izvore svetlobe in s  
+$S'$ navidezne izvore. Črtkane črte prikazujejo poti navideznih snopov svetlobe.}
+\label{fig:06_RayleighInt}
+\end{figure}
+\end{remark}
+
 
 \section{Interferenca z delitvijo amplitude}
 \label{chap:Michelson}
