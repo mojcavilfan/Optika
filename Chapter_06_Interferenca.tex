@@ -385,7 +385,7 @@ $S'$ navidezne izvore. Črtkane črte prikazujejo poti navideznih snopov svetlob
 \begin{remark}
 Youngov poskus je osnova za delovanje Rayleighovega interferometra, ki ga uporabljamo
 za natančno merjenje lomnega količnika plinov. V njem svetlobo 
-iz točkastega svetila (laserja) najprej razširimo v širok vzporeden snop (kolimiramo)
+iz točkastega svetila (ali laserja) najprej razširimo v širok vzporeden snop (kolimiramo)
 in nato usmerimo na zaslon z dvema ozkima režama. Za režama svetloba prehaja skozi plinsko komoro, 
 nato pa žarka z drugo lečo ponovno zberemo, kjer interferirata. Lege ojačitev na izhodu 
 so odvisne od relativnega faznega zamika obeh delnih valovanj, ta pa je odvisen od
@@ -412,42 +412,57 @@ vzorca.}
 
 \section{Interferenca z delitvijo amplitude}
 \label{chap:Michelson}
-Amplitudno delitev valovanja dosežemo s polprepustnimi zrcali. Kot že ime pove, taka
-zrcala del vpadne svetlobe odbijejo in del prepustijo. 
+Drugi način delovanja interferometrov je z delitvijo amplitude. V tem primeru
+vpadni žarek svetlobe razdelimo na dva delna žarka, navadno s polprepustnim zrcalom. 
+Kot že ime pove, tako zrcalo del vpadne svetlobe odbije in del prepusti.
+
 Najznačilnejši primer interferometra z delitvijo amplitude je Michelsonov interferometer.
 Z njim je Michelson pokazal, da je hitrost svetlobe v smeri gibanja Zemlje enaka hitrosti
-svetlobe v smeri pravokotno na smer gibanja in tako ovrgel teorijo o obstoju etra. 
+svetlobe v smeri pravokotno na smer gibanja in tako ovrgel teorijo o obstoju etra. Poleg
+tega je prvi opazoval fini razcep spektralnih črt v vodikovem atomu, meril velikost zvezd in 
+proučeval gravitacijski vpliv Lune na Zemlji. Michelsonov interferometer
+se danes uporablja za celo vrsto raziskav, med drugim za neposredno opazovanje 
+gravitacijskih valov, za kar je bila leta 2017 podeljena Nobelova nagrada za fiziko.
 
-V Michelsonovem interferometru vpadno svetlobo s polprepustnim zrcalom razdelimo 
-na dva snopa. Delna snopa usmerimo na  vsak od svojega zrcala in interferirata na detektorju. 
-S premikanjem enega od zrcal spreminjamo
-zakasnitev med žarkoma in na detektorju se izmenično pojavljajo ojačitve in oslabitve
-(slika~\ref{fig:06_Michelson}).
-Gostota svetlobnega toka na detektorju je (enačba~):
+V Michelsonovem interferometru vpadni žarek svetlobe s polprepustnim zrcalom razdelimo 
+na dve delni valovanji, ki se po prehodu oziroma odboju širita v pravokotnih 
+smereh (slika~\ref{fig:06_Michelson}). Vsak od delnih žarkov se odbije od zrcala, 
+ki žarek usmeri po isti poti nazaj na polprepustno zrcalo. Po prehodu oziroma odboju
+od polprepustnega zrcala žarka interferirata, kar opazujemo z detektorjem. 
+Interferenčni vzorec je odvisen od faznega zamika med obema delnima valovanjema, 
+zato premikanje enega od zrcal spreminja interferenčno sliko in na detektorju 
+se ob premikanju zrcala izmenično pojavljajo ojačitve in oslabitve.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{65truemm} 
+\input{slike/06_Michelson.pdf_tex}
+\caption{Postavitev Michelsonovega interferometra. Vpadno svetlobo z polprepustnim
+zrcalom $PZ$ razdelimo na dve delni valovanji. Prvo se odbije od zrcala $Z_1$ in vrne
+po isti poti, drugo pa od zrcala $Z_2$, ki se prav tako vrne po isti poti, zato se delni
+valovanji na polprepustnem zrcalu ponovno združita. Interferenco delnih valovanj, ki je odvisna
+od premika zrcala $x$, opazujemo na detektorju $D$. Pogosto v interferometer dodamo kompenzacijsko
+ploščico $K$, da sta optični poti obeh žarkov $l_1$ in $l_2$ v izhodiščni legi povsem enaki.
+}
+\label{fig:06_Michelson}
+\vglue-4truemm
+\end{figure}
+
+Gostoto svetlobnega toka na detektorju lahko izračunamo kot vsoto 
+dveh valovanj z enako amplitudo (enačba~\ref{eq:06_09}):
 \beq
 j = 4j_0 \cos^2(\Delta \phi/2),
 \label{eq:06_24}
 \eeq
-pri čemer je $\Delta \phi = k_0(l_1-l_2)$. Maksimumi so doseženi pri:
+pri čemer je $\Delta \phi = k_0(l_1-l_2) = 2 k_0 x$. Ojačitve na detektorju dosežemo pri:
 \beq
-k_0 \Delta l 2/2 = N \pi
+k_0 x = N \pi
 \eeq
 oziroma:
 \beq
-\Delta l = \frac{N\pi}{k_0} = N\lambda/2.
+x = N\pi/k_0 = N\lambda/2.
 \eeq
 Vrhovi se torej pojavljajo pri premiku zrcala za $\lambda/2$. 
-\begin{figure}[ht]
-\centering
-\def\svgwidth{80truemm} 
-\input{slike/08_TwymanGreen.pdf_tex}
-\caption{Postavitev Michelsonovega interferometra. Vpadno svetlobo z polprepustnim
-zrcalom razdelimo na dva dela. Delni valovanji se odbijeta od zrcal 
-in interferirata na detektorju oziroma zaslonu. V eno ..krilo?... interferometra
-navadno dodamo kompenzator, da izniči učinek prehoda drugega žarka skozi stekleni del zrcala. 
-}
-\label{fig:06_Michelson}
-\end{figure}
+
 
 
 Kompenzator dodamo, če kratka koherenčna razdalja, da se izniči razmik.
