@@ -189,11 +189,13 @@ j = 4 j_0 \cos^2(k_x x).
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/06_interferenca_1.pdf_tex}
-\caption{Interferenca dveh ravnih valovanj, ki pod kotom vpadata eno na drugo. Modra barva
-označuje negativno vrednost jakosti električnega polja in rdeča pozitivno. Kjer je belo, je jakost
-električnega polja enaka nič (levo). Intenzitetni interferenčni vzorec
+\caption{Interferenca dveh ravnih valovanj, ki pod kotom vpadata eno na drugo. 
+Prikaz električne poljske jakosti (a) in intenzitete (b). 
+Modra barva označuje negativno vrednost jakosti električnega polja in 
+rdeča pozitivno. Kjer je belo, je jakost električnega polja enaka nič.
+Intenzitetni interferenčni vzorec (b)
 ima značilne bele črte na mestu oslabitev, potujoče ojačitve z leve slike pa se 
-na detektorju izpovprečijo v znano interferenčno sliko (desno).}
+na detektorju izpovprečijo v znano interferenčno sliko.}
 \label{fig:06_int}
 \end{figure}
 
@@ -421,7 +423,7 @@ Z njim je Michelson pokazal, da je hitrost svetlobe v smeri gibanja Zemlje enaka
 svetlobe v smeri pravokotno na smer gibanja in tako ovrgel teorijo o obstoju etra. Poleg
 tega je prvi opazoval fini razcep spektralnih črt v vodikovem atomu, meril velikost zvezd in 
 proučeval gravitacijski vpliv Lune na Zemlji. Michelsonov interferometer
-se danes uporablja za celo vrsto raziskav, med drugim za neposredno opazovanje 
+se danes uporablja za celo vrsto natančnih meritev in raziskav, med drugim za neposredno opazovanje 
 gravitacijskih valov, za kar je bila leta 2017 podeljena Nobelova nagrada za fiziko.
 
 V Michelsonovem interferometru vpadni žarek svetlobe s polprepustnim zrcalom razdelimo 
@@ -434,63 +436,107 @@ zato premikanje enega od zrcal spreminja interferenčno sliko in na detektorju
 se ob premikanju zrcala izmenično pojavljajo ojačitve in oslabitve.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{65truemm} 
+\def\svgwidth{130truemm} 
 \input{slike/06_Michelson.pdf_tex}
-\caption{Postavitev Michelsonovega interferometra. Vpadno svetlobo z polprepustnim
-zrcalom $PZ$ razdelimo na dve delni valovanji. Prvo se odbije od zrcala $Z_1$ in vrne
-po isti poti, drugo pa od zrcala $Z_2$, ki se prav tako vrne po isti poti, zato se delni
-valovanji na polprepustnem zrcalu ponovno združita. Interferenco delnih valovanj, ki je odvisna
-od premika zrcala $x$, opazujemo na detektorju $D$. Pogosto v interferometer dodamo kompenzacijsko
-ploščico $K$, da sta optični poti obeh žarkov $l_1$ in $l_2$ v izhodiščni legi povsem enaki.
+\caption{Postavitev Michelsonovega interferometra: shema (a) in fotografija (b). 
+Vpadno svetlobo s polprepustnim zrcalom $PZ$ ali kockastim žarkovnim 
+delilnikom razdelimo na dve delni valovanji. 
+Prvo se odbije od zrcala $Z_1$ in se vrne po isti poti, drugo pa se odbije od 
+zrcala $Z_2$. Na polprepustnem zrcalu se odbiti delni valovanji 
+ponovno združita. Interferenčni vzorec delnih valovanj, ki je odvisen
+od premika zrcala $x$, opazujemo na detektorju $D$, kjer vidimo ojačitve
+in oslabitve. Pogosto v interferometer dodamo kompenzacijsko
+ploščico $K$, da sta optični poti obeh žarkov $l_1$ in $l_2$ v izhodiščni 
+legi povsem enaki. 
 }
 \label{fig:06_Michelson}
 \vglue-4truemm
 \end{figure}
 
-Gostoto svetlobnega toka na detektorju lahko izračunamo kot vsoto 
-dveh valovanj z enako amplitudo (enačba~\ref{eq:06_09}):
+Gostoto svetlobnega toka na detektorju zapišemo kot vsoto 
+dveh delnih valovanj z enako amplitudo (enačba~\ref{eq:06_09}):
 \beq
 j = 4j_0 \cos^2(\Delta \phi/2),
 \label{eq:06_24}
 \eeq
-pri čemer je $\Delta \phi = k_0(l_1-l_2) = 2 k_0 x$. Ojačitve na detektorju dosežemo pri:
-\beq
-k_0 x = N \pi
-\eeq
-oziroma:
+pri čemer je $\Delta \phi = k_0(l_1-l_2) = 2 k_0 x$. Vrhove dosežemo pri 
+$k_0 x = N \pi$ oziroma:
 \beq
 x = N\pi/k_0 = N\lambda/2.
+\label{eq:06_25}
 \eeq
-Vrhovi se torej pojavljajo pri premiku zrcala za $\lambda/2$. 
+Ojačitve na detektorju se torej pojavljajo periodično pri premiku zrcala za $\lambda/2$. 
 
+Omenjene oslabitve in ojačitve nastanejo, kadar je svetloba v obliki ravnega valovanja.
+Bolj realistično je opisati interferenco z nekolimiranim (nevzporednim) laserskim snopom, ki ga
+navadno uporabimo v eksperimentu. Takrat se na opazovalnem zaslonu pojavijo 
+kolobarji, ki ob premikanju zrcala $Z_1$ nastajajo oziroma izginjajo proti 
+sredini. Nastanek kolobarjev lahko pojasnimo z nazorno skico 
+(slika~\ref{fig:06_kolobarji}), na kateri se vidi, da imajo žarki, 
+ki potujejo skozi interferometer pod različnimi 
+koti, različno dolge poti in zato različne fazne zamike, ki vodijo izmenično
+do ojačitev in oslabitev.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/06_kolobarji.pdf_tex}
+\caption{Nekolimirana vpadna svetloba na izhodu iz Michelsonovega interferometra
+povzroči nastanek kolobarjev, saj je razlika med optičnimi poti delnih žarkov
+odvisna od vpadnega kota $\alpha$ (levo). Če vpadno lasersko svetlobo razpršimo,
+nastanejo na opazovalnem zaslonu kolobarji (fotografija desno), 
+pri čemer je zrnatost slike posledica difuzorja.
+}
+\vglue-3truemm
+\label{fig:06_kolobarji}
+\end{figure}
 
+Omenimo še dve različici Michelsonovega interferometra, pri katerih
+točkasti izvor svetlobe pred vpadom na polprepustno zrcalo kolimiramo z lečo 
+(slika~\ref{fig:06_TG-MZ}). Prva različica je Twyman-Greenov interferometer, 
+ki je uporaben predvsem za 
+določanje homogenosti, ukrivljenosti in na splošno kakovosti prozornih 
+optičnih komponent. Vsaka nehomogenost namreč povzroči razliko v optični poti,
+kar se vidi v nastalem interferenčnem vzorcu. 
 
-Kompenzator dodamo, če kratka koherenčna razdalja, da se izniči razmik.
-Če v eksperimentu uporabimo nekolimiran snop, se na opazovalnem zaslonu oziroma
-detektorju pojavijo kolobarji, ki nastajajo oziroma izginjajo proti sredini, ko
-pomikamo zrcalo M2. To se zgodi, ker imajo žarki, ki potujejo pod različnimi
-koti, različno dolge poti. 
-SLIKA: kako nastanejo krogi. 
+Druga različica je Mach-Zehnderjev interferometer, pri 
+katerem potuje svetloba po vsakem kraku interferometra le enkrat. Uporaben je v vrsti
+eksperimentov, na primer za vizualizacijo zračnih tokov, za preklapljanje 
+svetlobnih signalov v optičnih telekomunikacijah ali za opazovanje kvantnih
+optičnih pojavov.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/06_TG-MZ1.pdf_tex}
+\caption{Twyman-Greenov interferometer (a) in Mach-Zehnderjev 
+interferometer (b). V obeh različicah uporabimo kolimiran
+snop svetlobe, ki ga prek polprepustnih zrcal $PZ$ usmerimo na zrcala $Z$. Posebnost
+Mach-Zehnderjevega inteferometra je v tem, da gre pri njem svetloba skozi vsak krak
+interferometra le enkrat. 
+}
+\label{fig:06_TG-MZ}
+\end{figure}
 
-... prakitkum:  med katerimi je
-najbolj znan Michelson-Morleyev eksperiment, s katerim so ovrgli hipotezo o obstoju
-vse-obdajajočega etra [2]. Danes se Michelsonovi interferometri uporabljajo za pre-
-cizno merjenje dolžin in lomnih količnikov, z njimi kontroliramo majhne napake na ra-
-zličnih optičnih komponentah, uporabljamo ga v visoko ločljivi infra-rdeči spektroskopiji
-(Fourierova spektroskopija), itd. Prednosti? Slabosti?
-
-Točkasti izvor svetlobe lahko pred vpadom na polprepustno zrcalo kolimiramo
-z lečo. Na tak način izvedemo Twyman-Greenov in Mach-Zehnderjev interferometer.
-Prvi je uporaben za testiranje homogenosti in ravnosti prozornih objektov. Prednost
-Mach-Zenhderjevega sistema je, da gre svetloba čez vsako vejo interferometra samo enkrat.
-Interferenco z delitvijo svetlobe dobimo tudi na tankih plasteh, pri nastanku
-Newtonovih kolobarjev med lečo in podlago...
-SLIKA TWYGreen & MACHZEHNDER.
-
-Zanimiv je Sagnacov interferometer, ki se uporablja za laserske giroskope. En del svetlobe
-potuje v smeri urinega kazalca, drugi del pa v nasprotni smeri. Če interferometer miruje, 
-med njima dobimo konstruktivno interferenco. Če se interferometer vrti v ravnini žarkov,
-pa se pojaivi fazni zamik in z njim zmanjševanje signala na detektorju. 
+\begin{example}{\bf Sagnacov interferometer.} Oglejmo si še delovanje Sagnacovega interferometera, ki se danes uporablja predvsem za laserske 
+giroskope. V tej postavitvi laserski žarek vpade na polprepustno zrcalo, nato pa 
+en del svetlobe potuje med tremi zrcali v smeri urinega kazalca, drugi del 
+svetlobe pa v nasprotni smeri, po prehodu polprepustnega zrcala pa se ponovno združita
+in interferirata (na sliki~\ref{fig:06_Sagnac} sta žarka, ki se širita v nasprotnih
+smereh zaradi nazornosti označena z drugačno barvo). 
+Če interferometer miruje, nastane med delnima valovanjema
+konstruktivna interferenca, če pa se interferometer vrti v ravnini žarkov, se
+med delnima valovanjema pojavi fazni zamik in zato zmanjšanje signala na detektorju.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/06_Sagnac.pdf_tex}
+\caption{Sagnacov interferometer (levo) shema za lažji izračun (desno) in Mach-Zehnderjev 
+interferometer (desno). V obeh različicah uporabimo kolimiran
+snop svetlobe, ki ga prek polprepustnih zrcal $PZ$ usmerimo na zrcala $Z$. Posebnost
+Mach-Zehnderjevega inteferometra je v tem, da gre pri njem svetloba skozi vsak krak
+interferometra le enkrat. 
+}
+\label{fig:06_Sagnac}
+\end{figure}
 
 Za lažje razumevanje si predstavljamo, da imamo zelo veliko zrcal, tako da je pot 
 svetlobe krožna. Čas, ki ga prvi žarek potrebuje, da pride od izvora do detektorja, 
@@ -516,6 +562,7 @@ Sledi:
 \Delta \phi = \frac{4 \pi^2 R^2 \omega \Omega}{c_0^2 - \Omega^2R^2} \approx 
 \frac{4 \omega \Omega A}{c_0^2}.
 \eeq
+\end{example}
 
 
 
@@ -527,6 +574,9 @@ Sledi:
 
 
 \section{Interferenca na tanki plasti}
+Interferenco z delitvijo svetlobe dobimo tudi na tankih plasteh, pri nastanku
+Newtonovih kolobarjev med lečo in podlago...
+
 Do zdaj smo obravnavali interferenco, pri kateri je bilo skupno valovanje sestavljeno iz le 
 dveh prispevkov. Zdaj si oglejmo primer interference, ki nastane kot vsota zelo velikega 
 števila delnih valovanj. 
