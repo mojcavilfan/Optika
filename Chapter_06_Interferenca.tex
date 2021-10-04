@@ -516,52 +516,149 @@ interferometra le enkrat.
 \label{fig:06_TG-MZ}
 \end{figure}
 
-\begin{example}{\bf Sagnacov interferometer.} Oglejmo si še delovanje Sagnacovega interferometera, ki se danes uporablja predvsem za laserske 
+\begin{example}{\bf Sagnacov interferometer.} Oglejmo si še delovanje 
+Sagnacovega interferometera, ki se danes uporablja predvsem za laserske 
 giroskope. V tej postavitvi laserski žarek vpade na polprepustno zrcalo, nato pa 
 en del svetlobe potuje med tremi zrcali v smeri urinega kazalca, drugi del 
-svetlobe pa v nasprotni smeri, po prehodu polprepustnega zrcala pa se ponovno združita
-in interferirata (na sliki~\ref{fig:06_Sagnac} sta žarka, ki se širita v nasprotnih
-smereh zaradi nazornosti označena z drugačno barvo). 
-Če interferometer miruje, nastane med delnima valovanjema
+svetlobe pa v nasprotni smeri. Po ponovnem prehodu polprepustnega zrcala se delni
+valovanji združita in interferirata (na sliki~\ref{fig:06_Sagnac} sta 
+žarka, ki se širita v nasprotnih smereh zaradi nazornosti označena z drugačno 
+barvo). Če interferometer miruje, nastane med delnima valovanjema
 konstruktivna interferenca, če pa se interferometer vrti v ravnini žarkov, se
 med delnima valovanjema pojavi fazni zamik in zato zmanjšanje signala na detektorju.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/06_Sagnac.pdf_tex}
-\caption{Sagnacov interferometer (levo) shema za lažji izračun (desno) in Mach-Zehnderjev 
-interferometer (desno). V obeh različicah uporabimo kolimiran
-snop svetlobe, ki ga prek polprepustnih zrcal $PZ$ usmerimo na zrcala $Z$. Posebnost
-Mach-Zehnderjevega inteferometra je v tem, da gre pri njem svetloba skozi vsak krak
-interferometra le enkrat. 
+\caption{Sagnacov interferometer (a) z enim polprepustnim zrcalom $PZ$ 
+in tremi zrcali $Z$. Nazorna shema za 
+lažji izračun (b), pri čemer tri zrcala nadomestimo z zelo velikim številom zrcal, 
+tako da je pot žarka po krogu s polmerom $R$. Zaradi vrtenja interferometra 
+s kotno hitrostjo $\Omega$ je pot obeh 
+žarkov različno dolga in interferenčni vzorec se spremeni (c).
 }
 \label{fig:06_Sagnac}
 \end{figure}
 
-Za lažje razumevanje si predstavljamo, da imamo zelo veliko zrcal, tako da je pot 
-svetlobe krožna. Čas, ki ga prvi žarek potrebuje, da pride od izvora do detektorja, 
-je:
+Za lažje razumevanje si predstavljamo, da imamo zelo veliko zrcal, 
+tako da je pot svetlobe krožna (slika~\ref{fig:06_Sagnac}\,b in c).
+Čas potovanja prvega žarka (označenega z rdečo) od izvora do detektorja je:
 \beq
-\Delta t_1 = \frac{2\pi R- \Delta L}{c_0},
+t_1 = \frac{2\pi R- \Delta L}{c_0},
+\label{eq:06_26}
 \eeq
-pri čemer je $\Delta L - \Omega R \Delta t_1 = R \Delta \phi$. Vstavimo v gornjo enačbo in dobimo:
+pri čemer je $\Delta L  = \Omega R t_1$. Vstavimo v enačbo~(\ref{eq:06_26}) 
+in dobimo:
 \beq
-\Delta t_1 = \frac{2\pi R}{c_0+\Omega R}.
+t_1 = \frac{2\pi R}{c_0+\Omega R}.
+\label{eq:06_27}
 \eeq
-Čas, ki ga potrebuje drugi žarek, da pride od izvora do detektorja, je podobno:
+Podobno izračunamo čas, ki ga od izvora do detektorja potrebuje drugi (modri) žarek. 
+Upoštevamo, da se za ta žarek pot podaljša za $\Delta L$ in dobimo:
 \beq
-\Delta t_2 = \frac{2 \pi R}{c_0 -\Omega R}.
+t_2 = \frac{2 \pi R}{c_0 -\Omega R}.
+\label{eq:06_28}
 \eeq
-Med obema signaloma nastane fazni zamik:
+Med obema signaloma tako nastane fazni zamik:
 \beq
-\Delta \phi - \omega (\Delta t_2 - \Delta t-1) = \omega \left(\frac{2\pi R}{c_0-\Omega R} - 
-\frac{2 \pi R}{c_0 + \Omega R}  \right)\!\!.
+\Delta \phi = \omega (t_2 -t_1) = \omega \left(\frac{2\pi R}{c_0-\Omega R} - 
+\frac{2 \pi R}{c_0 + \Omega R}\right) = 
+\frac{4 \pi R^2 \omega \Omega}{c_0^2 - \Omega^2R^2} \approx 
+\frac{4 \omega \Omega A}{c_0^2},
+\label{eq:06_29}
 \eeq
-Sledi:
+pri čemer smo z $A$ označili ploščino interferometra. Čeprav smo rezultat izpeljali za
+krog, velja na splošno tudi za druge oblike. Vidimo, da lahko 
+občutljivost interferometra znatno povečamo, če povečamo parameter $A$. 
+To dosežemo na primer z uporabo optičnega vlakna, ki ga navijemo v veliko 
+število ovojev. Tovrstne naprave so uporabne za določanje zasukov v navigacijskih 
+napravah in danes nadomeščajo mehanske giroskope in kompase v letalih,
+podmornicah in raketah. Njihove glavne prednosti so majhna velikost ter
+kompaktna in robustna zgradba. 
+\end{example}
+
+\section{Interferenca na tanki plasti}
+Obravnavajmo še en preprost primer interference z delitvijo amplitude, to je 
+interferenco na tanki plasti dielektrika. Naj bo plast dielektrika
+debela $d$, njen lomni količnik naj bo $n_2$, lomni količnik okolice
+pa $n_1$. Ravno valovanje z valovno dolžino $\lambda$ naj vpada pod kotom
+$\alpha$ glede na normalo na tanko plast (slika~\ref{fig:06_plast}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/06_plast.pdf_tex}
+\caption{Odboj svetlobe na tanki plasti dielektrika debeline $d$ (a).
+Kadar je razlika optičnih poti dveh delnih valovanj enaka $2\pi$,
+je interferenca konstruktivna in vidimo ojačitev (b). 
+}
+\label{fig:06_plast}
+\end{figure}
+
+V četrtem poglavju smo spoznali, da se pri vpadu svetlobe na mejo dveh dielektrikov
+del valovanja odbije, del pa je prepuščen. Prepuščeno valovanje se lomi pod kotom
+$\beta$, ki je določen z lomnim zakonom (enačba~\ref{eq:lomnizakon}). Prepuščeno valovanje
+se na drugi meji med tanko plastjo in okolico ponovno delno odbije in delno valovanje, 
+odbito na prvi meji, interferira z delnim valovanjem, odbitim na drugi meji. Za
+izračun fazne razlike med njima si pomagamo s sliko~\ref{fig:06_plast}\,b.
+
+Označimo s točko $A$ mesto vpada na tanko plast, točka $B$ naj bo mesto odboja 
+od spodnje meje, točka $C$ izhodna točka na zgornji meji, točko $D$ pa postavimo
+tako, da je optična pot valovanja od točk $C$ in $D$ do detektorja enaka in je 
+zato ni treba upoštevati. Pot prvega žarka je:
 \beq
-\Delta \phi = \frac{4 \pi^2 R^2 \omega \Omega}{c_0^2 - \Omega^2R^2} \approx 
-\frac{4 \omega \Omega A}{c_0^2}.
+\overline{AC}= 2\,\overline{AB} = 2 \frac{d}{\cos \beta}
+\label{eq:06_30}
 \eeq
+in ustrezni fazni zamik:
+\beq
+\phi_1 = k_0 n_2 \overline{AC} = \frac{4\pi n_2 d}{\lambda \cos \beta}.
+\label{eq:06_31}
+\eeq
+Pod drugega žarka je z upoštevanjem lomnega zakona (enačba~\ref{eq:lomnizakon}):
+\beq
+\overline{AD} = 2 d \tan \beta \sin \alpha = 2 d \tan \beta \frac{n_2 \sin \beta}{n_1}.
+\label{eq:06_32}
+\eeq
+Fazni zamik drugega žarka je tako:
+\beq
+\phi_2 = k_0 n_1 \overline{AD} = \frac{4 \pi n_2 d \sin^2 \beta}{\lambda \cos \beta},
+\label{eq:06_33}
+\eeq
+fazna razlika med žarkoma pa:
+\beq
+\phi  = \phi_1 - \phi_2 = 2 k_0 n_2 d \cos \beta.
+\label{eq:06_34}
+\eeq
+Ne smemo pozabiti, da je $\beta$ kot glede na normalo znotraj tanke plasti in ga iz 
+vpadnega kota izračunamo z lomnim zakonom. 
+
+Spomnimo se, da se pri odboju TE polariziranega valovanja na optično gostejši snovi
+faza valovanja spremeni za $\pi$ (glej poglavje~\ref{chap:lomgost}). Pri izračunu pogoja
+za ojačitve in oslabitve odbitega valovanja je zato treba 
+dodati še fazno razliko $\pi$. Ojačitev odbite svetlobe se potem pojavi pri pogoju:
+\boxeq{eq:06_tankamax}{
+2 n_2 d \cos \beta_\mathrm{max} = \lambda \left(N+\frac{1}{2}\right)\!\!,
+}
+oslabitev pa pri pogoju:
+\boxeq{eq:06_tankamin}{
+2 n_2 d \cos \beta_\mathrm{min} = \lambda N,
+}
+pri čemer je $N$ poljubno celo število. 
+\begin{remark}
+Obravnavali smo simetrični primer, ko je bila snov nad tanko plastjo in pod njo enaka.
+Na splošno ima lahko snov pod tanko plastjo lomni količnik $n_3$. Če velja
+$n_1 < n_2 <n_3$ ali $n_1 > n_2 > n_3$, se v prvem primeru pojavi fazni zamik $2\pi$,
+v drugem primeru pa dodatnega faznega zamika ni, zato sta izraza za ojačitve in 
+oslabitve zamenjana glede
+na izraza, izpeljana za simetrični primer (enačbi~\ref{eq:06_tankamax} in 
+\ref{eq:06_tankamin}).
+\end{remark}
+
+\begin{example}{\bf Interferenca na tanki plasti}.
+Interferenco na tanki plasti lahko pogosto opazujemo tudi v naravi, na primer
+na tanki plasti olja na luži ali na milnem mehurčku. Tanka plast olja na 
+vodni gladini je navadno izredno enakomerno debela plast, tanka 
+
 \end{example}
 
 
@@ -570,24 +667,36 @@ Sledi:
 
 
 
-
-
-
-\section{Interferenca na tanki plasti}
-Interferenco z delitvijo svetlobe dobimo tudi na tankih plasteh, pri nastanku
-Newtonovih kolobarjev med lečo in podlago...
-
-Do zdaj smo obravnavali interferenco, pri kateri je bilo skupno valovanje sestavljeno iz le 
-dveh prispevkov. Zdaj si oglejmo primer interference, ki nastane kot vsota zelo velikega 
-števila delnih valovanj. 
+\section{Večkratni odboj na tanki plasti}
+V prejšnjih razdelkih smo obravnavali interferenco dveh delnih valovanj, ki sta nastali
+ali z delitvijo valovne fronte ali delitvijo amplitude. Zdaj se osredotočimo
+na interferenco zelo velikega števila delnih valovanj, ki nastanejo
+z delitvijo amplitude. Tak primer je interferenca na tanki plasti dielektrika.
 
 Naj ravno valovanje vpada na tanko plast snovi z lomnim količnikom $n_2$, lomni količnik 
-okolice pa naj bo enak $n_1$, pri čemer se omejimo na primer TE polariziranega valovanja.
+okolice pa naj bo enak $n_1$. Omejimo se na primer TE polariziranega valovanja, pri katerem
+je smer jakosti električnega polja pravokotna na vpadno ravnino (slika~\ref{fig:06_plast}).
 Ob vpadu na plast se del svetlobe odbije, del pa lomi v snov po lomnem zakonu (enačba~) 
 z amplitudo, ki jo določa Fresnelova enačba (). Prepuščeni val potuje po plasti do meje
 na drugi strani, kjer je ga ponovno nekaj odbije, del pa je prepuščen v smeri, ki 
 je enaka vpadni smeri. Odbiti del valovanja potuje 
 do vpadne meje, kjer se deloma odbije, del pa ga izhaja na vpadni strani ... 
+\begin{figure}[ht]
+\centering
+\def\svgwidth{80truemm} 
+%\input{slike/06_plast.pdf_tex}
+\caption{Prehod svetlobe skozi tanko plast dielektrika. Delni žarki, ki prehajajo
+skozi plast, med seboj interferirajo, zato je intenziteta prepuščene svetlobe odvisna
+od debeline plasti $d$, lomnih količnikov plasti $n_2$ in okolice $n_1$ ter vpadnega 
+kota $\alpha$. 
+}
+\label{fig:06_plast}
+\end{figure}
+
+
+
+
+
 
 Jakost prepuščenega električnega polja je tako sestavljena iz velikega števila prispevkov, ki 
 izhajajo v isti smeri, njihove amplitude pa so vedno manjše. Ker izhodni žarki 
