@@ -583,11 +583,14 @@ interferenco na tanki plasti dielektrika. Naj bo plast dielektrika
 debela $d$, njen lomni količnik naj bo $n_2$, lomni količnik okolice
 pa $n_1$. Ravno valovanje z valovno dolžino $\lambda$ naj vpada pod kotom
 $\alpha$ glede na normalo na tanko plast (slika~\ref{fig:06_plast}).
+\vglue3truemm
 \begin{figure}[ht]
 \centering
 \def\svgwidth{130truemm} 
 \input{slike/06_plast.pdf_tex}
-\caption{Odboj svetlobe na tanki plasti dielektrika debeline $d$ (a).
+\caption{Odboj svetlobe na tanki plasti dielektrika debeline $d$ (a). Valovanje,
+ki se odbije na prvi mejni plasti interferira z valovanjem, ki se odbije na 
+drugi mejni plasti in pojavi se interferenca.
 Kadar je razlika optičnih poti dveh delnih valovanj enaka $2\pi$,
 je interferenca konstruktivna in vidimo ojačitev (b). 
 }
@@ -598,8 +601,9 @@ V četrtem poglavju smo spoznali, da se pri vpadu svetlobe na mejo dveh dielektr
 del valovanja odbije, del pa je prepuščen. Prepuščeno valovanje se lomi pod kotom
 $\beta$, ki je določen z lomnim zakonom (enačba~\ref{eq:lomnizakon}). Prepuščeno valovanje
 se na drugi meji med tanko plastjo in okolico ponovno delno odbije in delno valovanje, 
-odbito na prvi meji, interferira z delnim valovanjem, odbitim na drugi meji. Za
-izračun fazne razlike med njima si pomagamo s sliko~\ref{fig:06_plast}\,b.
+odbito na prvi meji, interferira z delnim valovanjem, odbitim na drugi meji. Omejimo
+se na TE polarizirano valovanje in si za
+izračun fazne razlike med njima pomagajmo s sliko~\ref{fig:06_plast}\,b.
 
 Označimo s točko $A$ mesto vpada na tanko plast, točka $B$ naj bo mesto odboja 
 od spodnje meje, točka $C$ izhodna točka na zgornji meji, točko $D$ pa postavimo
@@ -634,7 +638,7 @@ vpadnega kota izračunamo z lomnim zakonom.
 
 Spomnimo se, da se pri odboju TE polariziranega valovanja na optično gostejši snovi
 faza valovanja spremeni za $\pi$ (glej poglavje~\ref{chap:lomgost}). Pri izračunu pogoja
-za ojačitve in oslabitve odbitega valovanja je zato treba 
+za ojačitve in oslabitve odbitega valovanja na tanki plasti je zato treba 
 dodati še fazno razliko $\pi$. Ojačitev odbite svetlobe se potem pojavi pri pogoju:
 \boxeq{eq:06_tankamax}{
 2 n_2 d \cos \beta_\mathrm{max} = \lambda \left(N+\frac{1}{2}\right)\!\!,
@@ -643,132 +647,148 @@ oslabitev pa pri pogoju:
 \boxeq{eq:06_tankamin}{
 2 n_2 d \cos \beta_\mathrm{min} = \lambda N,
 }
-pri čemer je $N$ poljubno celo število. 
+pri čemer je $N$ celo število. Če opazujemo interferenco z monokromatsko svetlobo,
+opazimo pod različnimi koti svetle in temne proge. Kadar pa osvetljujemo tanko plast
+z belo svetlobo, se različne valovne dolžine ojačijo pod različnimi koti, zato tanko
+plast vidimo mavričastih barv.
 \begin{remark}
 Obravnavali smo simetrični primer, ko je bila snov nad tanko plastjo in pod njo enaka.
 Na splošno ima lahko snov pod tanko plastjo lomni količnik $n_3$. Če velja
 $n_1 < n_2 <n_3$ ali $n_1 > n_2 > n_3$, se v prvem primeru pojavi fazni zamik $2\pi$,
 v drugem primeru pa dodatnega faznega zamika ni, zato sta izraza za ojačitve in 
-oslabitve zamenjana glede
-na izraza, izpeljana za simetrični primer (enačbi~\ref{eq:06_tankamax} in 
+oslabitve zamenjana glede na izraza za simetrični primer (enačbi~\ref{eq:06_tankamax} in 
 \ref{eq:06_tankamin}).
 \end{remark}
-
-\begin{example}{\bf Interferenca na tanki plasti}.
+\begin{example}{\bf Tanke plasti v naravi}.
 Interferenco na tanki plasti lahko pogosto opazujemo tudi v naravi, na primer
-na tanki plasti olja na luži ali na milnem mehurčku. Tanka plast olja na 
-vodni gladini je navadno izredno enakomerno debela plast, tanka 
+na tanki plasti olja na luži, na milnem mehurčku, na tanki plasti zraka med 
+dvema gladkima površinama ali na tankem krilu žuželke. 
+Interferenčni pojavi omogočajo, da s prostim očesom zaznamo plasti, ki so 
+debele le okoli mikrometer.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/06_photo_oil.jpg}\hfill
+\includegraphics[width=7truecm]{slike/06_photo_soap.jpg}\newline
+
+\includegraphics[width=7truecm]{slike/06_photo_zrak.jpg}\hfill
+\includegraphics[width=7truecm]{slike/06_photo_us.jpg}
+\caption{Interferenca na tanki plasti olja na vodi, milnice v zraku, tanke plasti 
+zraka med objektnima stekelcema v beli in rdeči svetlobi ter interferenca
+na krilih žuželke. Foto listne uši: Miran Pflaum. 
+ZAMENJAJ FOTKO!!!}
+\vglue-8truemm
+\label{fig:06_Photos}
+\end{figure}
 
 \end{example}
 
-
-
-
-
-
-
 \section{Večkratni odboj na tanki plasti}
-V prejšnjih razdelkih smo obravnavali interferenco dveh delnih valovanj, ki sta nastali
-ali z delitvijo valovne fronte ali delitvijo amplitude. Zdaj se osredotočimo
-na interferenco zelo velikega števila delnih valovanj, ki nastanejo
-z delitvijo amplitude. Tak primer je interferenca na tanki plasti dielektrika.
+Spoznali smo interferenco na tanki plasti, pri čemer
+smo upoštevali le delni valovanji, ki sta se odbili na zgornji in 
+spodnji meji tanke plasti. Odboje višjih redov smo zanemarili.
 
-Naj ravno valovanje vpada na tanko plast snovi z lomnim količnikom $n_2$, lomni količnik 
-okolice pa naj bo enak $n_1$. Omejimo se na primer TE polariziranega valovanja, pri katerem
-je smer jakosti električnega polja pravokotna na vpadno ravnino (slika~\ref{fig:06_plast}).
-Ob vpadu na plast se del svetlobe odbije, del pa lomi v snov po lomnem zakonu (enačba~) 
-z amplitudo, ki jo določa Fresnelova enačba (). Prepuščeni val potuje po plasti do meje
-na drugi strani, kjer je ga ponovno nekaj odbije, del pa je prepuščen v smeri, ki 
-je enaka vpadni smeri. Odbiti del valovanja potuje 
-do vpadne meje, kjer se deloma odbije, del pa ga izhaja na vpadni strani ... 
+Zdaj se osredotočimo na interferenco velikega števila delnih 
+valovanj, ki nastanejo z delitvijo amplitude na tanki plasti dielektrika.
+Naj tako kot v prejšnjem razdelku ravno valovanje vpada na tanko plast 
+snovi z lomnim količnikom $n_2$, lomni količnik okolice pa naj bo enak $n_1$. 
+Ponovno se omejimo na primer TE polariziranega valovanja, pri katerem
+je smer jakosti električnega polja pravokotna na vpadno ravnino 
+(slika~\ref{fig:06_plast}). Ob vpadu na mejo med snovema se del 
+svetlobe odbije, del pa lomi po lomnem zakonu (enačba~\ref{eq:lomnizakon}).
+Za razliko od prej bomo zdaj upoštevali vsoto vseh prepuščenih valov, 
+ki prehajajo skozi tanko plast, z ustrezno zmanjšano amplitudo.
 \begin{figure}[ht]
 \centering
-\def\svgwidth{80truemm} 
-%\input{slike/06_plast.pdf_tex}
+\def\svgwidth{70truemm} 
+\input{slike/06_plastmulti.pdf_tex}
 \caption{Prehod svetlobe skozi tanko plast dielektrika. Delni žarki, ki prehajajo
 skozi plast, med seboj interferirajo, zato je intenziteta prepuščene svetlobe odvisna
 od debeline plasti $d$, lomnih količnikov plasti $n_2$ in okolice $n_1$ ter vpadnega 
-kota $\alpha$. 
-}
-\label{fig:06_plast}
+kota $\alpha$. }
+\vglue-2truemm
+\label{fig:06_plastmulti}
 \end{figure}
 
-
-
-
-
-
-Jakost prepuščenega električnega polja je tako sestavljena iz velikega števila prispevkov, ki 
-izhajajo v isti smeri, njihove amplitude pa so vedno manjše. Ker izhodni žarki 
-izhajajo na različnih točkah, jih navadno z zbiralno lečo preslikamo v eno točko. Pri pravokotnem
-vpadu na tanko plast teh težav ni. 
-
 Zanima nas gostota prepuščenega svetlobnega toka $j$ v odvisnosti od 
-lomnih količnikov $n_1$ in $n_2$, vpadnega kota $\alpha$ in debeline plasti $d$. 
-
-Najprej z lomnim zakonom izračunamo kot $\beta$, pod katerim se širi svetloba v plasti:
-\beq
-\sin\beta = \frac{n_1}{n_2}\sin\alpha.
-\label{eq:06_25}
-\eeq
-Amplitudna odbojnost $r$ in prepustnot $t$ na prvi meji sta enaka (enačba~):
+lomnih količnikov $n_1$ in $n_2$, vpadnega kota $\alpha$ in debeline plasti $d$ pri dani
+vpadni gostoti toka $j_0$. Spomnimo se, da za TE polarizirano valovanje
+amplitudno prepustnost zapišemo z enačbo~(\ref{eq:TEr}), amplitudno odbojnost
+pa z enačbo~(\ref{eq:TEt}). Ob vstopu v tanko plast tako velja:
 \beq
 r_{12} = \frac{n_1\cos \alpha - n_2\cos \beta}{n_1\cos \alpha + n_2\cos \beta}\qquad 
 \mathrm{in}\qquad t_{12} = 1+r_{12},
-\label{eq:06_26}
+\label{eq:06_35}
 \eeq
-na drugi meji pa:
+ob izstopu valovanja iz tanke plasti pa:
 \beq
 r_{21} = \frac{n_2\cos \beta - n_1\cos \alpha}{n_2\cos \beta + n_1\cos \alpha}\qquad 
-\mathrm{in}\qquad t_{21} = 1+r_{21}.
-\label{eq:06_27}
+\mathrm{in}\qquad t_{21} = 1+r_{21},
+\label{eq:06_36}
 \eeq
-Vidimo, da velja $r_{12} = r_{21}$. Ko poznamo vse koeficiente, lahko zapišemo
-posamezne prispevke jakosti električnega polja na prepuščeni strani:
+pri čemer smo upoštevali, da je izhodni kot enak vpadnemu kotu $\alpha$. 
+
+Posamezne prispevke jakosti 
+električnega polja na prepuščeni strani zapišemo kot:
 \begin{align}
 E_1 &= E_0\,t_{12}\,t_{21},\\
-E_2 &= E_0\,t_{12}\,r_{21}\,r_{21}\,e^{i\phi}\,t_{21},\\
-E_3 &= E_0\,t_{12}\,r_{21}\,r_{21}\,e^{i\phi}\,r_{21}\,r_{21}\,e^{i\phi}\,t_{21},\\
-&...\\
-E_{N+1} &= E_0\,t_{12}\,\left(r_{21}\,r_{21}\right)^N\,e^{iN\phi}\,t_{21}\\
-&...
-\label{eq:06_29}
+E_2 &= E_0\,t_{12}\left(r_{21}\,r_{21}\,e^{i\phi}\right)t_{21},\\
+E_3 &= E_0\,t_{12}\left(r_{21}\,r_{21}\,e^{i\phi}\right)
+\left(\,r_{21}\,r_{21}\,e^{i\phi}\right)t_{21},\\
+&...\nonumber\\
+E_{N+1} &= E_0t_{12}\,\left(r_{21}\,r_{21}\,e^{i\phi}\right)^Nt_{21}.
+\label{eq:06_37}
 \end{align}
-
-\begin{figure}[ht]
-\centering
-\def\svgwidth{140truemm} 
-%\input{slike/06_.pdf_tex}
-\caption{SLIKA}
-\label{fig:06_Nrez}
-\end{figure}
-
-Pri tem smo upoštevali tudi fazni zamik zaradi dodatne prepotovane poti v plasti:
+Upoštevali smo tudi fazni zamik med dvema sosednjima izhodnima valovanjema, do katerega
+pride zaradi razlike v prepotovani poti (enačba~\ref{eq:06_34}):
 \beq
-\phi = k_0 2d \cos \beta n_2.
-\label{eq:06_31}
+\phi = 2k_0 n_2 d \cos \beta.
+\label{eq:06_38}
 \eeq
-Dodaj izpeljavo, skico. 
-Celotno polje zapišemo kot vsoto vseh teh prispevkov:
+Celotno prepuščeno polje $E_t$ zapišemo kot vsoto vseh prispevkov (enačba~\ref{eq:06_37}) in dobimo:
 \begin{align}
-E_t &= E_1+E_2+E_3+... + E_N + ... \\
-& E_0\, t_{12}\,t_{21}\,\left(1 + r_{21}^2 e^{i\phi} + r_{21}^4 e^{2i\phi} + r_{21}^6 e^{3i\phi} + ... \right).
-\label{eq:06_30}
+E_t &= E_1+E_2+E_3+... \nonumber \\
+&= E_0\, t_{12}\,t_{21}\,\left(1 + r_{21}^2 e^{i\phi} + r_{21}^4 e^{2i\phi} 
++ r_{21}^6 e^{3i\phi} + ... \right)\!\!.
+\label{eq:06_39}
 \end{align}
-Geometrijsko vrsto lahko seštejemo in za prepuščeno polje dobimo:
+Geometrijsko vrsto v oklepaju seštejemo in za jakost prepuščenega polja dobimo:
 \beq
-E_t = \frac{E_0 t_{21}t_{12}}{1-r_{21}^2e^{i\phi}} = E_0 t.
-\label{eq:06_32}
+E_t = E_0 t= E_0 t_{12}t_{21}\frac{1}{1-r_{21}^2e^{i\phi}},
+\label{eq:06_40}
 \eeq
-Zanima nas gostota prepuščenega energijskega toka glede na vpadno. Ker sta lomni količnik snovi
-in smer širjenja svetlobe na izhodni strani enaka kot na vpadni, je prepustnost $T$ kar enaka $|t|^2$.
-Uporabimo enačbo~(\ref{eq:06_32}) in upoštevamo zveze med amplitudnimi prepustnostmi in odbojnostmi:
-$t_{21} = 1+r_{21} = 1-r_{12}$ in $t_{12} = 1+r_{12}$. Vpeljemo odbojnost $R = r_{12}^2 = R$.
-Prepustnost je tako:
+pri čemer smo vpeljali $t$ kot amplitudno prepustnost plasti. Ker sta lomni 
+količnik snovi in smer širjenja svetlobe na izhodni strani enaka kot na vpadni, je 
+prepustnost $T$, ki označuje razmerje med gostoto prepuščenega in vpadnega svetlobnega
+toka, kar enaka $|t|^2$:
 \beq
-T
-\label{eq:06_33}
+T = \frac{j}{j_0} = |t|^2= \frac{t_{12}^2t_{21}^2}{\left(1-r_{21}^2e^{i\phi}\right)
+\left(1-r_{21}^2e^{-i\phi}\right)}.
+\label{eq:06_41}
 \eeq
+Upoštevali smo, da je tanka plast dielektrična in so zato vrednosti amplitudnih 
+prepustnosti in odbojnosti realne. Zapišemo še odbojnost $R = r_{21}^2$ in upoštevamo
+zveze med amplitudnimi prepustnostmi in odbojnostmi:
+$t_{21} = 1+r_{21}$ in $t_{12} = 1+r_{12} = 1-r_{21}$. Dobimo:
+\beq
+T = \frac{\left(1-R\right)^2}{1 + R^2 - 2R\cos \phi}.
+\label{eq:06_42}
+\eeq
+Imenovalec preoblikujemo, tako da upoštevamo zvezo $\cos(2x) = 1-2\sin^2x$:
+\beq
+1 + R^2 - 2R\cos \phi = 1+R^2 - 2R(1-2\sin^2(\phi/2) = (1-R)^2 + 4R \sin^2(\phi/2).
+\label{eq:06_43}
+\eeq
+Preoblikovan izraz vstavimo v enačbo~(\ref{eq:06_42}), jo delimo s števcem in dobimo končen izraz za 
+prepustnost tanke plasti:
+\boxeq{eq:FP}{
+T = \frac{1}{1 + \frac{4R}{\left(1-R^2\right)} \sin^2(\phi/2)}.
+}
+Spomnimo, da je $R = r_{21}^2$ podan z enačbo~(\ref{eq:06_36}), $\phi$ pa z enačbo~(\ref{eq:06_38}).
+Izračunano odvisnost $T(\phi)$ imenujemo tudi Airyjeva funkcija 
+
+
+
+
 
 
 
