@@ -776,7 +776,7 @@ T = \frac{\left(1-R\right)^2}{1 + R^2 - 2R\cos \phi}.
 \eeq
 Imenovalec preoblikujemo, tako da upoštevamo zvezo $\cos(2x) = 1-2\sin^2x$:
 \beq
-1 + R^2 - 2R\cos \phi = 1+R^2 - 2R(1-2\sin^2(\phi/2) = (1-R)^2 + 4R \sin^2(\phi/2).
+1 + R^2 - 2R\cos \phi = 1+R^2 - 2R(1-2\sin^2(\phi/2)) = (1-R)^2 + 4R \sin^2(\phi/2).
 \label{eq:06_43}
 \eeq
 Preoblikovan izraz vstavimo v enačbo~(\ref{eq:06_42}), jo delimo s števcem in 
@@ -785,18 +785,89 @@ dobimo končen izraz za prepustnost tanke plasti:
 T = \frac{1}{1 + \frac{4R}{\left(1-R^2\right)} \sin^2(\phi/2)}.
 }
 Spomnimo, da je $R = r_{21}^2$ podan z enačbo~(\ref{eq:06_36}), $\phi$ pa z 
-enačbo~(\ref{eq:06_38}). Izračunano odvisnost $T(\phi)$ imenujemo tudi Airyjeva 
-funkcija\footnote{Ločiti je treba Airyjevo funkcijo za prepustnost 
+enačbo~(\ref{eq:06_38}). 
+
+Izračunano odvisnost $T(\phi)$ imenujemo tudi Airyjeva
+funkcija.\footnote{Ločiti je treba Airyjevo funkcijo za prepustnost 
 na tanki plasti (enačba~\ref{eq:FP}) od Airyjeve funkcije v matematiki in tudi 
 od Airyjevega diska, ki smo ga vpeljali pri uklonu na okrogli odprtini 
-(enačba~\ref{eq:uklonAiry}.}
+(enačba~\ref{eq:uklonAiry}). Gre za povsem drugačne funkcijske odvisnosti.}
+Airyjeva funkcija, ki se v odvisnosti od parametra $\phi$ periodično spreminja
+med 0 in 1, zavzame največje vrednosti, kadar je izpolnjen pogoj $\phi = 2 \pi N$, 
+pri čemer je $N$ celo število. Zapisani pogoj je ekvivalenten zahtevi, da je  
+fazna razlika med dvema prepuščenima delnima valovanjema enaka večkratniku 
+števila $2\pi$ in zato prepuščeni delni valovanji med seboj konstruktivno 
+interferirata. Takrat je vsa vpadna svetloba prepuščena ($T=1$) in 
+odbojnost tanke plasti za dano valovno dolžino je enaka nič. Tanka plast torej 
+deluje kot frekvenčni filter, saj pri dani debelini dobro prepušča le valovanja
+s točno določenimi valovnimi dolžinami, ostala valovanja pa se od tanke plasti 
+odbijejo.
 
-
-
-
-
-
+Vpeljimo še en parameter, to je koeficient finese:
+\beq
+F = \frac{4R}{(1-R)^2}.
+\label{eq:06_44}
+\eeq
+Vrednost koeficienta finese določa kontrast prepustnosti svetlobe skozi tanko
+plast (slika~\ref{fig:06_FP1}). Odvisen je zgolj od odbojnosti na meji
+med tanko plastjo in okolico $R$, ta pa od lomnih količnikov plasti in okolice
+ter vpadnega kota na mejno ploskev. Že pri razmeroma majhni odbojnosti na mejni
+ploskvi (npr. $R=0,3$) so vrhovi največje prepustnosti jasno vidni, pri večji 
+odbojnosti (npr. $R=0,9$) pa postanejo vrhovi izredno ozki.
+\begin{figure}[ht]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/06_FP1.pdf_tex}
+\caption{Odvisnost prepustnosti tanke plasti od parametra faznega zamika $\phi$
+za različne vrednosti koeficienta finese $F$: modra $R = 0,3$ in $F=2,45$; 
+zelena $R=0,5$ in $F=8$ ter rdeča $R=0,9$ in $F=3600$.}
+\label{fig:06_FP1}
+\end{figure}
 
 \section{Fabry-Perotov interferometer}
+Naprava, ki temelji na selektivni prepustnosti tanke plasti dielektrika, je 
+Fabry-Perotov interferometer. Imenuje se po francoskih fizikih Charlesu Fabryju
+in Alfredu Perotu, ki sta napravo razvila leta 1899. Fabry-Perotov interferometer
+je navadno sestavljen iz dveh premičnih delno prepustnih ravnih zrcal. S
+spreminjanjem razmika med zrcaloma izbiramo valovno dolžino
+valovanja, ki ga interferometer popolnoma prepušča. Uporabljamo ga predvsem
+za spektralno analizo oziroma spektroskopijo, na primer v astronomiji. 
+
+Podobna naprava je Fabry-Perotov
+etalon. Ta je sestavljen iz tanke reže ali ploščice dielektrika, katerih debeline ne 
+moremo spreminjati. Stranicam dielektrika lahko z dodatnim nanosom povečamo
+odbojnost. Fabry-Perotovi etaloni so uporabni med drugim v optičnih 
+telekomunikacijah in pri izdelavi laserjev za spektralno filtracijo svetlobe.
+
+V prejšnjem razdelku smo izpeljali prepustnost valovanja skozi plast
+dielektrika (enačba~\ref{eq:FP}), pri čemer smo intenziteto odbitega
+oziroma prepuščenega valovanja na mejhnih ploskvah izračunali z uporabo
+Fresnelovih enačb. Povsem enak rezultat dobimo, če namesto ploščice 
+dielektrika obravnavamo prepustnost skozi tanko plast zraka, omejeno
+z dvema delno prepustnima ravnima zrcaloma. V tem primeru sta
+vpadni kot $\alpha$ in lomni kot približno $\beta$ enaka, $n_2 \approx 1$,
+odbojnost $R$ pa je enaka odbojnosti delno prepustnih zrcal. Privzamemo 
+še, da svetloba na interferometer vpada pravokotno in izraz za prepustnost
+prepišemo v:
+\beq
+T(\omega) = \frac{1}{1 + \frac{4R}{\left(1-R^2\right)} \sin^2(\omega d n_2/c_0)}.
+\label{eq:06_44}
+\eeq
+
+Pomemben parameter pri Fabry-Perotovem interferometru je tako imenovano prosto
+spektralno območje ($FSR$ -- {\it Free Spectral Range}). 
+Gre za območje spektra med dvema zaporednima vrhovoma
+in določa širino spektra, ki jo lahko s tako napravo analiziramo. 
+Prosto spektralno območje izračunamo iz pogoja, da se fazna razlika $\phi$ spremeni
+za $2\pi$:
+\beq
+\Delta \phi = 2 \pi = \Delta \left(2 \omega_\mathrm{FSR} d n_2/c_0\right) 
+\label{eq:06_45}
+\eeq
+in dobimo:
+\boxeq{eq:FSR}{
+\Delta \nu_\textrm{FSR}=\frac{c_0}{2dn_2}.
+}
+
 
 \section{Večplastni nanosi}
