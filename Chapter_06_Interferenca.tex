@@ -782,7 +782,7 @@ Imenovalec preoblikujemo, tako da upoštevamo zvezo $\cos(2x) = 1-2\sin^2x$:
 Preoblikovan izraz vstavimo v enačbo~(\ref{eq:06_42}), jo delimo s števcem in 
 dobimo končen izraz za prepustnost tanke plasti:
 \boxeq{eq:FP}{
-T = \frac{1}{1 + \frac{4R}{\left(1-R^2\right)} \sin^2(\phi/2)}.
+T = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2)}.
 }
 Spomnimo, da je $R = r_{21}^2$ podan z enačbo~(\ref{eq:06_36}), $\phi$ pa z 
 enačbo~(\ref{eq:06_38}). 
@@ -850,7 +850,7 @@ odbojnost $R$ pa je enaka odbojnosti delno prepustnih zrcal. Privzamemo
 še, da svetloba na interferometer vpada pravokotno in izraz za prepustnost
 prepišemo v:
 \beq
-T(\omega) = \frac{1}{1 + \frac{4R}{\left(1-R^2\right)} \sin^2(\omega d n_2/c_0)}.
+T(\omega) = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\omega d n_2/c_0)}.
 \label{eq:06_44}
 \eeq
 
@@ -868,6 +868,358 @@ in dobimo:
 \boxeq{eq:FSR}{
 \Delta \nu_\textrm{FSR}=\frac{c_0}{2dn_2}.
 }
+\begin{example}{\bf Prosta spektralna širina.}
+Obravnavajmo Fabry-Perotov interferometer, ki je sestavljen iz dveh ravnih zrcal, med 
+katerima je tanka plast zraka. Položaj zrcal zelo natačno nastavljamo s piezoelektričnim 
+mehanizmom in nastavimo režo med zrcaloma v debelini $d=0,1~\si{mm}$. Izračunajmo
+prosto spektralno območje za tak interferometer (enačba~\ref{eq:FSR}):
+\beq
+\Delta \nu_\textrm{FSR} = \frac{3 \cdot 10^8~\si{m/s}}{2 \cdot 10^{-4}~\si{m}} = 10^{12}~\si{Hz}.
+\label{eq:06_51}
+\eeq
+Z interferometrom lahko analiziramo spektralne podrobnosti 
+v intervalu širine $1~\si{THz}$, kar  v območju vidne svetlobe
+ustreza $\Delta \lambda_\textrm{FSR} \approx 1~\si{nm}$. Navadno zato z nekim drugim
+filtrom najprej osamimo iz spektra le svetlobo v bližini opazovanega dela in šele nato
+natančno analiziramo s Fabry-Perotovim interferometrom. 
+\end{example}
 
+\begin{remark}
+Primer uporabe Fabry-Perotovega interferometra 
+je opazovanje spektra svetlobe, ki jo izseva vodikov atom. Najsvetlejša
+spektralna črta H$_\alpha$ ustreza prehodu elektronov iz stanja 
+$n=3$ v stanje $n=2$ (Balmerjeva serija) z valovno dolžino $656,28~\si{nm}$.
+Podrobnejša analiza pokaže, da je črta sestavljena iz dveh ločenih črt, ki nastaneta
+kot posledica sklopitve spin-tir. Razlika med njima je le $0,016~\si{nm}$, vendar jo
+z interferometrom lahko izmerimo. Opazovanje vodikovega  H$_\alpha$ dubleta 
+je bilo en prvih eksperimentalnih dokazov za obstoj elektronskega spina.
+\end{remark}
+
+Drugi pomemben parameter pri tovrstni spektroskopiji je širina transmisijskih
+vrhov (slika~\ref{fig:06_FP2}).
+Ta namreč določa, kako natančno lahko merimo znotraj prostega 
+spektralnega območja, in torej določa ločljivost Fabry-Perotovega interferometra. 
+Širino posameznega vrha $\delta \nu_{1/2}$ izračunamo iz vrednosti frekvence, pri kateri pade 
+prepustnost interferometra na $T=0,5$. Celotno širino pri polovični
+višini pogosto označimo tudi z angleško kratico $FWHM$ ({\it Full Width at Half
+Maximum}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/06_FP2.pdf_tex}
+\caption{Prosto spektralno območje $\nu_\rm{FSR}$
+je interval med dvema zaporednima vrhoma prepustnosti.
+Širino vrha $\delta_{1/2}$ po dogovoru določimo na polovični prepustnosti. 
+Primer je narisan za $R=0,5$.}
+\label{fig:06_FP2}
+\end{figure}
+
+Širino vrha izračunamo iz pogoja $T=0,5$ (enačba~\ref{eq:FP}):
+\beq
+T = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2)} = \frac{1}{2} \qquad
+\Longrightarrow \qquad \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2) = 1.
+\label{eq:06_46}
+\eeq
+Privzamemo, da so vrhovi ozki in sinus razvijemo za majhne vrednosti:
+\beq
+\phi/2 = \sqrt{\frac{\left(1-R\right)^2}{4R}}
+\label{eq:06_47}
+\eeq
+od koder sledi:
+\beq
+\phi_{1/2} = \frac{1-R}{\sqrt{R}}.
+\label{eq:06_48}
+\eeq
+Vstavimo izraz za fazno razliko $\phi$ (enačba~\ref{eq:06_34}) in 
+za celotno širino vrha na polovični višini dobimo zvezo:
+\beq
+2k_0 n_2 d = \frac{4\pi \nu n_2 d}{c_0} = 2\frac{1-R}{\sqrt{R}},
+\label{eq:06_49}
+\eeq
+od koder sledi:
+\beq
+\delta \nu_{1/2} = \frac{1-R}{2\sqrt{R}} \frac{c_0}{\pi n_2 d}.
+\label{eq:06_50}
+\eeq
+\begin{remark}
+Pogosto govorimo o finesi interferometra, ki jo vpeljemo kot
+kvocient med prostim spektralnim območjem in širino vrha. Izračunamo jo 
+z upoštevanjem enačb~(\ref{eq:FSR} in \ref{eq:06_50}):
+\beq
+\mathcal{F} = \frac{\Delta \nu_\textrm{FSR}}{\delta \nu_{1/2}}  = \frac{\pi}{2}\sqrt{F}.
+\label{eq:06_51}
+\eeq
+\end{remark}
 
 \section{Večplastni nanosi}
+Prepustnost tanke plasti je razmeroma preprosto izračunati. Kadar je 
+tankih plasti več, se račun hitro zaplete, zato se navadno poslužimo 
+uporabe prehodnih matrik. Zaradi enostavnosti se omejimo zgolj na pravokotni 
+vpad svetlobe na večplastno strukturo. V tem primeru je obravnava TE in TM
+polarizanega valovanja enaka. 
+
+Namesto seštevanja prispevkov posameznih odbojev valovanja na mejah med plastmi 
+v tem primeru zapišemo celotno polje v neki plasti. Naj bodo polja na levih 
+robovih plasti označena z $E_N$, na desnih robovih plasti pa z $\tilde{E}_N$. 
+V vseh plasteh, razen na izhodni plasti, sta prisotni dve valovanji: prvo se širi
+v desno in drugo v levo. Jakosti električnega polja, ki pripadajo slednjemu
+valovanju, označimo s črtico (slika~\ref{fig:06_prehodneM}).
+\begin{figure}[ht]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/06_prehodneM.pdf_tex}
+\caption{K izračunu prehoda skozi večplastni nanos}
+\label{fig:06_prehodneM}
+\end{figure}
+
+Poglejmo najprej, kako z matričnim pristopom opišemo povezavmo med poljema na 
+meji snovi $1\rightarrow 2$. 
+% Robni pogoji (enačba~\ref{eq:RPE}) zahtevajo, 
+% da se na meji ohranja tangentna komponenta jakosti električnega polja. Ker je
+% vpad pravokotnen, se ohranja celotna jakost električnega polja. Tako dobimo
+% prvo zvezo:
+% \beq
+% \tilde{E}_1 + \tilde{E}_1' = E_2 + E_2'.
+% \label{eq:06_52}
+% \eeq
+Prepuščeno polje $E_2$ izrazimo s poljema $\tilde{E}_1$ in $E_2'$, tako da upoštevamo
+amplitudno prepustnost in odbojnost na meji (enačbe~\ref{eq:06_35} in \ref{eq:06_36}):
+\beq
+E_2 = t_{12}\tilde{E}_1 + r_{21}E_2'.
+\label{eq:06_53}
+\eeq
+Podobno zapišemo tudi odbito polje $\tilde{E}_1'$ kot:
+\beq
+\tilde{E}_1' = t_{21}E_2' + r_{12}\tilde{E}_1.
+\label{eq:06_54}
+\eeq
+Iz druge enačbe izrazimo $E_2'$:
+\beq
+E_2' = \frac{1}{t_{21}}\left(\tilde{E}_1' - r_{12}\tilde{E}_1\right) = 
+\frac{1}{t_{21}}\left(\tilde{E}_1' + r_{21}\tilde{E}_1\right),
+\label{eq:06_54a}
+\eeq
+pri čemer smo upoštevali, da je $r_{12} = - r_{21}$. Polje vstavimo v 
+enačbo~(\ref{eq:06_53}) in dobimo:
+\beq
+E_2 = t_{12}\tilde{E}_1 -\frac{r_{12}r_{21}}{t_{21}}\tilde{E}_1 + 
+\frac{r_{21}}{t_{21}}\tilde{E}_1'.
+\label{eq:06_55}
+\eeq
+Izračunajmo še zvezo med koeficienti prepustnosti in odbojnosti:
+\beq
+t_{12}t_{21} - r{12}r_{21} = (1+r_{12})(1+r_{21}) - r_{12}r_{21} = 
+(1+r_{12})(1-r_{12}) - r_{12}^2 = 1,
+\label{eq:06_56}
+\eeq
+s čimer enačbo~(\ref{eq:06_55}) poenostavimo v:
+\beq
+E_2 = \frac{1}{t_{21}}\left(\tilde{E}_1 + r_{21}\tilde{E}_1'\right).
+\label{eq:06_57}
+\eeq
+Prepuščeno polje na desni strani smo tako izrazili s poljem na levi strani meje. 
+
+Sestavimo zdaj 2D vektorja iz valovanj, ki se širita v desno in v levo, in zvezi
+med njimi (enačbi~\ref{eq:06_54a} in \ref{eq:06_57}) strnjeno zapišemo kot:
+\beq
+\left[\begin{array}{c}
+E_{2}\\
+E_{2}'\\
+\end{array}\right] =
+\frac{1}{t_{21}}
+\left[\begin{array}{cc}
+1& r_{21}\\
+r_{21}& 1\\
+\end{array}\right]\cdot
+\left[\begin{array}{c}
+\tilde{E}_1\\
+\tilde{E}_1'\\
+\end{array}\right]\!\!.
+\label{eq:06_58}
+\eeq
+Navadno obrnemo smer gledanja, kar zapišemo kot:
+\beq
+\left[\begin{array}{c}
+\tilde{E}_{1}\\
+\tilde{E}_{1}'\\
+\end{array}\right] =
+\frac{1}{t_{12}}
+\left[\begin{array}{cc}
+1& r_{12}\\
+r_{12}& 1\\
+\end{array}\right]\cdot
+\left[\begin{array}{c}
+E_2\\
+E_2'\\
+\end{array}\right]\!\!.
+\label{eq:06_59}
+\eeq
+Zapisani izraz posplošimo in zapišemo povezavo na meji med plastjo 
+$N-1$ in plastjo $N$:
+\boxeq{eq:prehodnaM}{
+\left[\begin{array}{c}
+\tilde{E}_{N-1}\\
+\tilde{E}_{N-1}'\\
+\end{array}\right] =
+\frac{1}{t_{N-1,N}}
+\left[\begin{array}{cc}
+1& r_{N-1,N}\\
+r_{N-1,N}& 1\\
+\end{array}\right]\cdot
+\left[\begin{array}{c}
+E_N\\
+E_N'\\
+\end{array}\right] = 
+\mathbf{M}_{N-1,N}\left[\begin{array}{c}
+E_N\\
+E_N'\\
+\end{array}\right]\!\!.
+}
+
+Na podoben način lahko s prehodno matriko povežemo tudi polja na 
+levi in desni strani posamezne plasti. Razlika
+je le v fazi, ki jo valovanje pridobi med širjenjem po plasti. 
+Če je debelina $N$-te plasti $d_N$ in njen
+lomni količnik $n_N$, zapišemo zvezi:
+\beq
+\tilde{E}_N = E_N e^{i k_0 n_N d_N}
+\label{eq:06_60}
+\eeq
+in 
+\beq
+E_N' = \tilde{E}_N' e^{i k_0 n_N d_N}.
+\label{eq:06_61}
+\eeq
+V matričnem zapisu je premik po posamezni plasti enak:
+\beq
+\left[\begin{array}{c}
+E_{N}\\
+E_{N}'\\
+\end{array}\right] =
+\left[\begin{array}{cc}
+e^{-i\delta}& 0\\
+0& e^{i\delta}\\
+\end{array}\right]\cdot
+\left[\begin{array}{c}
+\tilde{E}_2\\
+\tilde{E}_2'\\
+\end{array}\right] = 
+\mathbf{P}_{N}\left[\begin{array}{c}
+\tilde{E}_2\\
+\tilde{E}_2'\\
+\end{array}\right]\!\!,
+\label{eq:06_62}
+\eeq
+pri čemer smo vpeljali fazni zamik $\delta = k_0 n_N d_N$.
+
+Zapis z matrikami je priročen predvsem v primerih, ko imamo sistem več tankih plasti
+z različnimi debelinami in lomnimi količniki. Potem povezavo med vhodnim in izhodnim poljem
+izračunamo tako, da zmnožimo vse ustrezne matrike v pravilnem vrstnem redu. Pri tem 
+prehod obravnavamo od izhodne (desne) strani proti vpadni (levi) strani, saj vemo, da na
+izstopni strani svetlobe, ki bi se širila proti levi, ni. Na splošno je zapis oblike:
+\beq
+\left[\begin{array}{c}
+E_{0}\\
+E_{0}'\\
+\end{array}\right] = 
+\mathbf{M}_{01}
+\mathbf{P}_1
+\mathbf{M}_{12}
+\mathbf{P}_2
+\mathbf{M}_{23}
+\mathbf{P}_3 ... \mathbf{M}_{N,i}
+\left[\begin{array}{c}
+E_i\\
+0\\
+\end{array}\right] =
+\mathbf{A}
+\left[\begin{array}{c}
+E_i\\
+0\\
+\end{array}\right]\!\!,
+\label{eq:06_63}
+\eeq
+pri čemer $E_i$ označuje izhodno jakost električnega polja. Ko enkrat 
+poznamo matriko $\mathbf{A}$, lahko hitro izračunamo amplitudno 
+prepustnost in odbojnost večplastnega sistema. Zapišemo matriko 
+$\mathbf{A}$ po komponentah:
+\beq
+\left[\begin{array}{c}
+E_{0}\\
+E_{0}'\\
+\end{array}\right] =
+\left[\begin{array}{cc}
+A_{11}& A_{12}\\
+A_{21}& A_{22}\\
+\end{array}\right]\cdot
+\left[\begin{array}{c}
+E_i\\
+0\\
+\end{array}\right]\!\!,
+\label{eq:06_64}
+\eeq
+od koder razberemo zvezi:
+\boxeq{eq:plasti}{
+\frac{E_i}{E_0} = t = \frac{1}{A_{11}} \qquad \mathrm{in} \qquad 
+\frac{E_0'}{E_0} = r = \frac{A_{21}}{A_{11}}.
+}
+Tako na preprost način izračunamo prepustnost $t$ in odbojnost $r$ 
+večplastnih nanosov, vendar ne smemo pozabiti, 
+da je celoten račun narejen ob predpostavki pravokotnega vpada.
+
+\begin{example}{\bf Fabry-Perotov etalon v matrični obravnavi.}
+Uporabimo matrični pristop za izračun prehoda svetlobe skozi tanko plast 
+(Fabry-Perotov etalon). Naj bodo debelina plasti $d$, njen lomni količnik $n_1$, 
+lomni količnik okolice pa $n_0$. V tem primeru moramo zapisati tri matrike:
+eno za prehod v plast $\mathbf{M}_{01}$, drugo za prehod znotraj plasti $\mathbf{P}_1$ in 
+tretjo za prehod iz plasti $\mathbf{M}_{10}$:
+\beq
+\left[\begin{array}{c}
+E_{0}\\
+E_{0}'\\
+\end{array}\right] = 
+\mathbf{A}
+\left[\begin{array}{c}
+E_i\\
+0\\
+\end{array}\right] = 
+\mathbf{M}_{01}\mathbf{P}_1\mathbf{M}_{10}
+\left[\begin{array}{c}
+E_i\\
+0\\
+\end{array}\right]\!\!.
+\label{eq:06_65}
+\eeq
+Uporabimo splošni matriki (enačbi~\ref{eq:06_59} in \ref{eq:06_62}) in dobimo:
+\beq
+\mathbf{A} =
+\frac{1}{t_{01}}
+\left[\begin{array}{cc}
+1& r_{01}\\
+r_{01}& 1\\
+\end{array}\right]\cdot
+\left[\begin{array}{cc}
+e^{-i\delta}& 0\\
+0& e^{i\delta}\\
+\end{array}\right]\cdot
+\frac{1}{t_{10}}
+\left[\begin{array}{cc}
+1& r_{10}\\
+r_{10}& 1\\
+\end{array}\right]\!\!,
+\label{eq:06_66}
+\eeq
+pri čemer smo označili fazni zamik $\phi = k_0 n_1 d$. 
+Sledi:
+\beq
+\mathbf{A} = ...
+\eeq
+
+\end{example}
+
+
+
+
+
+
+

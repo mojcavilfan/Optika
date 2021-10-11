@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '06_FP1.pdf' (pdf, eps, ps)
+%% Accompanies image file '06_FP2.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{501.5085776bp}%
+    \setlength{\unitlength}{470.37375623bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,16 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.40756949)%
+  \begin{picture}(1,0.43537396)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{06_FP1.pdf}}%
-    \put(0.50310628,0.38605855){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{j}{j_0}$\end{tabular}}}}%
-    \put(0.92052325,0.00527509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\phi$\end{tabular}}}}%
-    \put(0.0305732,0.34435398){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0.47658494,0.00746574){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
-    \put(0.63777665,0.00527509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2\pi$\end{tabular}}}}%
-    \put(0.80915581,0.00746574){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$4\pi$\end{tabular}}}}%
-    \put(0.09962392,0.00746574){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-4\pi$\end{tabular}}}}%
-    \put(0.27100312,0.0096564){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-2\pi$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{06_FP2.pdf}}%
+    \put(0.10520387,0.40629969){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$T$\end{tabular}}}}%
+    \put(0.82450186,0.00668936){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\nu$\end{tabular}}}}%
+    \put(0.0478468,0.36821245){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.08011586,0.00902502){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.37092401,0.00902502){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta \nu_{\rm FSR}$\end{tabular}}}}%
+    \put(0.02552411,0.20557801){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0,5$\end{tabular}}}}%
+    \put(0.71844399,0.233621){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\delta\nu_{1/2}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
