@@ -1,4 +1,4 @@
-%\chapterimage{Geometrijska.jpg} % Chapter heading image
+\chapterimage{06_Interferenca.jpg} % Chapter heading image
 
 \chapter{Interferenca}
 \label{chap:Interferenca}
@@ -589,16 +589,16 @@ $\alpha$ glede na normalo na tanko plast (slika~\ref{fig:06_plast}).
 \def\svgwidth{130truemm} 
 \input{slike/06_plast.pdf_tex}
 \caption{Odboj svetlobe na tanki plasti dielektrika debeline $d$ (a). Valovanje,
-ki se odbije na prvi mejni plasti interferira z valovanjem, ki se odbije na 
-drugi mejni plasti in pojavi se interferenca.
-Kadar je razlika optičnih poti dveh delnih valovanj enaka $2\pi$,
+ki se odbije od prve mejne plasti interferira z valovanjem, ki se odbije od 
+druge mejne plasti in pojavi se interferenca.
+Kadar je razlika optičnih poti delnih valovanj enaka večkratniku $2\pi$,
 je interferenca konstruktivna in vidimo ojačitev (b). 
 }
 \label{fig:06_plast}
 \end{figure}
 
 V četrtem poglavju smo spoznali, da se pri vpadu svetlobe na mejo dveh dielektrikov
-del valovanja odbije, del pa je prepuščen. Prepuščeno valovanje se lomi pod kotom
+del valovanja odbije, del pa preide v drugo snov. Prepuščeno valovanje se lomi pod kotom
 $\beta$, ki je določen z lomnim zakonom (enačba~\ref{eq:lomnizakon}). Prepuščeno valovanje
 se na drugi meji med tanko plastjo in okolico ponovno delno odbije in delno valovanje, 
 odbito na prvi meji, interferira z delnim valovanjem, odbitim na drugi meji. Omejimo
@@ -637,23 +637,23 @@ Ne smemo pozabiti, da je $\beta$ kot glede na normalo znotraj tanke plasti in ga
 vpadnega kota izračunamo z lomnim zakonom. 
 
 Spomnimo se, da se pri odboju TE polariziranega valovanja na optično gostejši snovi
-faza valovanja spremeni za $\pi$ (glej poglavje~\ref{chap:lomgost}). Pri izračunu pogoja
-za ojačitve in oslabitve odbitega valovanja na tanki plasti je zato treba 
-dodati še fazno razliko $\pi$. Ojačitev odbite svetlobe se potem pojavi pri pogoju:
+faza valovanja spremeni (glej poglavje~\ref{chap:lomgost}). Zato je treba
+fazni razliki med delnima valovanjema (enačba~\ref{eq:06_34}) prišteti še $\pi$. Ojačitve
+odbite svetlobe nastopijo, kadar je celotni fazni zamik enak večkratniku $2\pi$ in velja:
 \boxeq{eq:06_tankamax}{
 2 n_2 d \cos \beta_\mathrm{max} = \lambda \left(N+\frac{1}{2}\right)\!\!,
 }
-oslabitev pa pri pogoju:
+pri čemer je $N$ celo število. Podobno določimo tudi pogoj za oslabitve:
 \boxeq{eq:06_tankamin}{
-2 n_2 d \cos \beta_\mathrm{min} = \lambda N,
+2 n_2 d \cos \beta_\mathrm{min} = \lambda N.
 }
-pri čemer je $N$ celo število. Če opazujemo interferenco z monokromatsko svetlobo,
+Če opazujemo interferenco z monokromatsko svetlobo,
 opazimo pod različnimi koti svetle in temne proge. Kadar pa osvetljujemo tanko plast
 z belo svetlobo, se različne valovne dolžine ojačijo pod različnimi koti, zato tanko
 plast vidimo mavričastih barv.
 \begin{remark}
-Obravnavali smo simetrični primer, ko je bila snov nad tanko plastjo in pod njo enaka.
-Na splošno ima lahko snov pod tanko plastjo lomni količnik $n_3$. Če velja
+Obravnavali smo simetrični primer, ko je bila ista snov nad tanko plastjo in pod njo.
+Na splošno je lahko snov pod tanko plastjo drugačna in naj ima lomni količnik $n_3$. Če velja
 $n_1 < n_2 <n_3$ ali $n_1 > n_2 > n_3$, se v prvem primeru pojavi fazni zamik $2\pi$,
 v drugem primeru pa dodatnega faznega zamika ni, zato sta izraza za ojačitve in 
 oslabitve zamenjana glede na izraza za simetrični primer (enačbi~\ref{eq:06_tankamax} in 
@@ -693,7 +693,7 @@ Naj tako kot v prejšnjem razdelku ravno valovanje vpada na tanko plast
 snovi z lomnim količnikom $n_2$, lomni količnik okolice pa naj bo enak $n_1$. 
 Ponovno se omejimo na primer TE polariziranega valovanja, pri katerem
 je smer jakosti električnega polja pravokotna na vpadno ravnino 
-(slika~\ref{fig:06_plast}). Ob vpadu na mejo med snovema se del 
+(slika~\ref{fig:06_plastmulti}). Ob vpadu na mejo med snovema se del 
 svetlobe odbije, del pa lomi po lomnem zakonu (enačba~\ref{eq:lomnizakon}).
 Za razliko od prej bomo zdaj upoštevali vsoto vseh prepuščenih valov, 
 ki prehajajo skozi tanko plast, z ustrezno zmanjšano amplitudo.
@@ -728,7 +728,7 @@ r_{21} = \frac{n_2\cos \beta - n_1\cos \alpha}{n_2\cos \beta + n_1\cos \alpha}\q
 pri čemer smo upoštevali, da je izhodni kot enak vpadnemu kotu $\alpha$. 
 
 Posamezne prispevke jakosti 
-električnega polja na prepuščeni strani zapišemo kot:
+električnega polja na izhodni strani zapišemo kot:
 \begin{align}
 E_1 &= E_0\,t_{12}\,t_{21},\\
 E_2 &= E_0\,t_{12}\left(r_{21}\,r_{21}\,e^{i\phi}\right)t_{21},\\
@@ -826,28 +826,29 @@ zelena $R=0,5$ in $F=8$ ter rdeča $R=0,9$ in $F=3600$.}
 
 \section{Fabry-Perotov interferometer}
 Naprava, ki temelji na selektivni prepustnosti tanke plasti dielektrika, je 
-Fabry-Perotov interferometer. Imenuje se po francoskih fizikih Charlesu Fabryju
-in Alfredu Perotu, ki sta napravo razvila leta 1899. Fabry-Perotov interferometer
-je navadno sestavljen iz dveh premičnih delno prepustnih ravnih zrcal. S
-spreminjanjem razmika med zrcaloma izbiramo valovno dolžino
+Fabry-Perotov interferometer. Imenuje se po francoskih fizikih Charlesu Fabryju (1867--1945)
+in Alfredu Perotu (1863--1925), ki sta napravo razvila leta 1899. Fabry-Perotov interferometer
+je navadno sestavljen iz dveh premičnih delno prepustnih ravnih zrcal, med katerima
+je zelo tanka reža. S spreminjanjem razmika med zrcaloma (in s tem debeline vmesne tanke
+plasti zraka) izbiramo valovno dolžino
 valovanja, ki ga interferometer popolnoma prepušča. Uporabljamo ga predvsem
 za spektralno analizo oziroma spektroskopijo, na primer v astronomiji. 
 
 Podobna naprava je Fabry-Perotov
-etalon. Ta je sestavljen iz tanke reže ali ploščice dielektrika, katerih debeline ne 
+etalon. Ta je navadno sestavljen iz ploščice dielektrika, katere debeline ne 
 moremo spreminjati. Stranicam dielektrika lahko z dodatnim nanosom povečamo
 odbojnost. Fabry-Perotovi etaloni so uporabni med drugim v optičnih 
 telekomunikacijah in pri izdelavi laserjev za spektralno filtracijo svetlobe.
 
 V prejšnjem razdelku smo izpeljali prepustnost valovanja skozi plast
 dielektrika (enačba~\ref{eq:FP}), pri čemer smo intenziteto odbitega
-oziroma prepuščenega valovanja na mejhnih ploskvah izračunali z uporabo
+oziroma prepuščenega valovanja na mejnih ploskvah izračunali z uporabo
 Fresnelovih enačb. Povsem enak rezultat dobimo, če namesto ploščice 
 dielektrika obravnavamo prepustnost skozi tanko plast zraka, omejeno
 z dvema delno prepustnima ravnima zrcaloma. V tem primeru sta
-vpadni kot $\alpha$ in lomni kot približno $\beta$ enaka, $n_2 \approx 1$,
+vpadni kot $\alpha$ in lomni kot $\beta$  približno enaka, $n_2 \approx 1$,
 odbojnost $R$ pa je enaka odbojnosti delno prepustnih zrcal. Privzamemo 
-še, da svetloba na interferometer vpada pravokotno in izraz za prepustnost
+še, da svetloba na interferometer vpada pravokotno, in izraz za prepustnost
 prepišemo v:
 \beq
 T(\omega) = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\omega d n_2/c_0)}.
@@ -856,34 +857,35 @@ T(\omega) = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\omega d n_2/c_0)}
 
 Pomemben parameter pri Fabry-Perotovem interferometru je tako imenovano prosto
 spektralno območje ($FSR$ -- {\it Free Spectral Range}). 
-Gre za območje spektra med dvema zaporednima vrhovoma
+Gre za območje spektra med dvema zaporednima vrhoma (slika~\ref{fig:06_FP2})
 in določa širino spektra, ki jo lahko s tako napravo analiziramo. 
 Prosto spektralno območje izračunamo iz pogoja, da se fazna razlika $\phi$ spremeni
 za $2\pi$:
 \beq
-\Delta \phi = 2 \pi = \Delta \left(2 \omega_\mathrm{FSR} d n_2/c_0\right) 
+\Delta \phi = 2 \pi = \Delta \left(2 \omega_\mathrm{FSR} d n_2/c_0\right)= 
+2 \Delta \omega_\mathrm{FSR} dn_2/c_0
 \label{eq:06_45}
 \eeq
 in dobimo:
 \boxeq{eq:FSR}{
 \Delta \nu_\textrm{FSR}=\frac{c_0}{2dn_2}.
 }
-\begin{example}{\bf Prosta spektralna širina.}
+\begin{example}{\bf Prosto spektralno območje.}
 Obravnavajmo Fabry-Perotov interferometer, ki je sestavljen iz dveh ravnih zrcal, med 
-katerima je tanka plast zraka. Položaj zrcal zelo natačno nastavljamo s piezoelektričnim 
-mehanizmom in nastavimo režo med zrcaloma v debelini $d=0,1~\si{mm}$. Izračunajmo
+katerima je tanka plast zraka. Položaj zrcal zelo natančno nastavljamo s piezoelektričnim 
+mehanizmom in nastavimo debelino reže na $d=0,1~\si{mm}$. Izračunajmo
 prosto spektralno območje za tak interferometer (enačba~\ref{eq:FSR}):
 \beq
-\Delta \nu_\textrm{FSR} = \frac{3 \cdot 10^8~\si{m/s}}{2 \cdot 10^{-4}~\si{m}} = 10^{12}~\si{Hz}.
+\Delta \nu_\textrm{FSR} = \frac{3 \cdot 10^8~\si{m/s}}{2 \cdot 10^{-4}~\si{m}} \sim 10^{12}~\si{Hz}.
 \label{eq:06_51}
 \eeq
-Z interferometrom lahko analiziramo spektralne podrobnosti 
+S takim interferometrom lahko analiziramo spektralne podrobnosti 
 v intervalu širine $1~\si{THz}$, kar  v območju vidne svetlobe
-ustreza $\Delta \lambda_\textrm{FSR} \approx 1~\si{nm}$. Navadno zato z nekim drugim
-filtrom najprej osamimo iz spektra le svetlobo v bližini opazovanega dela in šele nato
+ustreza $\Delta \lambda_\textrm{FSR} \sim 1~\si{nm}$. Navadno zato uporabimo dodatne filtre, 
+s katerimi iz celotnega spektra najprej osamimo le svetlobo v bližini opazovanega dela in šele nato
 natančno analiziramo s Fabry-Perotovim interferometrom. 
 \end{example}
-
+\vglue-5truemm
 \begin{remark}
 Primer uporabe Fabry-Perotovega interferometra 
 je opazovanje spektra svetlobe, ki jo izseva vodikov atom. Najsvetlejša
@@ -907,9 +909,9 @@ Maximum}).
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/06_FP2.pdf_tex}
-\caption{Prosto spektralno območje $\nu_\rm{FSR}$
+\caption{Prosto spektralno območje $\Delta \nu_\rm{FSR}$
 je interval med dvema zaporednima vrhoma prepustnosti.
-Širino vrha $\delta_{1/2}$ po dogovoru določimo na polovični prepustnosti. 
+Širino vrha $\delta \nu_{1/2}$ po dogovoru določimo na polovični prepustnosti. 
 Primer je narisan za $R=0,5$.}
 \label{fig:06_FP2}
 \end{figure}
@@ -1037,7 +1039,7 @@ r_{21}& 1\\
 \end{array}\right]\!\!.
 \label{eq:06_58}
 \eeq
-Navadno obrnemo smer gledanja, kar zapišemo kot:
+Kot bomo videli pozneje, je priročno obrniti smer gledanja. Potem zapišemo:
 \beq
 \left[\begin{array}{c}
 \tilde{E}_{1}\\
@@ -1158,12 +1160,12 @@ E_i\\
 \end{array}\right]\!\!,
 \label{eq:06_64}
 \eeq
-od koder razberemo zvezi:
+od koder razberemo amplitudno prepustnost $t$ in amplitudno odbojnost $r$:
 \boxeq{eq:plasti}{
-\frac{E_i}{E_0} = t = \frac{1}{A_{11}} \qquad \mathrm{in} \qquad 
-\frac{E_0'}{E_0} = r = \frac{A_{21}}{A_{11}}.
+t = \frac{E_i}{E_0} = \frac{1}{A_{11}} \qquad \mathrm{in} \qquad 
+r = \frac{E_0'}{E_0} = \frac{A_{21}}{A_{11}}.
 }
-Tako na preprost način izračunamo prepustnost $t$ in odbojnost $r$ 
+Tako na preprost način izračunamo prepustnost in odbojnost
 večplastnih nanosov, vendar ne smemo pozabiti, 
 da je celoten račun narejen ob predpostavki pravokotnega vpada.
 
@@ -1190,7 +1192,8 @@ E_i\\
 \end{array}\right]\!\!.
 \label{eq:06_65}
 \eeq
-Uporabimo splošni matriki (enačbi~\ref{eq:06_59} in \ref{eq:06_62}) in dobimo:
+Uporabimo matriki za prehod skozi mejo (enačba~\ref{eq:06_59}) 
+in za premik po snovi (enačba~\ref{eq:06_62}). Dobimo:
 \beq
 \mathbf{A} =
 \frac{1}{t_{01}}
@@ -1209,12 +1212,148 @@ r_{10}& 1\\
 \end{array}\right]\!\!,
 \label{eq:06_66}
 \eeq
-pri čemer smo označili fazni zamik $\phi = k_0 n_1 d$. 
+pri čemer smo označili fazni zamik $\delta = k_0 n_1 d$. 
 Sledi:
 \beq
-\mathbf{A} = ...
+\mathbf{A} =
+\frac{1}{t_{01}t_{10}}
+\left[\begin{array}{cc}
+e^{-i\delta}+r_{01}r_{10}e^{i\delta}& r_{10}e^{-i\delta}+r_{01}e^{i\delta} \\
+r_{01}e^{-i\delta}+r_{10}e^{i\delta} & r_{01}r_{10}e^{-i\delta}+ e^{i\delta}\\
+\end{array}\right]\!\!.
+\label{eq:06_67}
 \eeq
+Ko poznamo celotno matriko $\mathbf{A}$, lahko iz nje razberemo koeficient prepustnosti 
+(enačba~\ref{eq:plasti}):
+\beq
+t = \frac{1}{A_{11}} = \frac{t_{01}t_{10}}{e^{-i\delta}+r_{01}r_{10}e^{i\delta}} = 
+\frac{1-r_{01}^2}{e^{-i\delta}\left(1-r_{01}^2e^{2i\delta}\right)},
+\label{eq:06_68}
+\eeq
+pri čemer smo upoštevali enačbe~(\ref{eq:06_35} in \ref{eq:06_36}) in zvezo
+$r_{01} = r_{10}$. Vpeljemo odbojnost $R = r_{01}^2$ in fazni zamik 
+$\phi = 2 \delta = 2 k_0 n_2 d$ in izračunamo prepustnost:
+\beq
+T = |t|^2 = \frac{\left(1-R\right)^2}{\left(1 - Re^{2i\delta}\right)\left(1 -
+Re^{-2i\delta}\right)} = \frac{\left(1-R\right)^2}{1 + R^2 - 2R\cos \phi}=
+\frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2)}.
+\label{eq:06_69}
+\eeq
+Upoštevali smo enačbo~(\ref{eq:06_44}) in izpeljali prepustnost 
+Fabry-Perotovega etalona, ki je po pričakovanju povsem enaka prepustnosti interferometra, 
+izračunani s seštevanjem delnih valovanj (enačba~\ref{eq:FP}).
 
+\end{example}
+
+\begin{example}{\bf Antirefleksni nanos.}
+Kadar želimo zmanjšati odboj svetlobe pri vpadu na mejo dveh snovi, uporabimo
+antirefleksne nanose. To so praviloma zelo tanke plasti iz neke tretje snovi, 
+s katerimi dosežemo zmanjšanje odbojnosti in tako povečanje prepustnosti. Poglejmo, 
+kako lahko dosežemo, da se nič vpadne svetlobe ne odbije in je $R=0$. 
+
+V tem primeru naj svetloba iz snovi z lomnim količnikom $n_1$ vpada na tanek antirefleksni
+nanos debeline $d$ z lomnim količnikom $n_2$ in potem prehaja v snov z lomnim količnikom 
+$n_3$. Matrika, ki opisuje prehod skozi opisani sistem, je produkt dveh prehodov skozi
+mejo in enega premika po snovi:
+\beq
+\mathbf{A} = 
+\frac{1}{t_{12}}
+\left[\begin{array}{cc}
+1& r_{12}\\
+r_{12}& 1\\
+\end{array}\right]\cdot
+\left[\begin{array}{cc}
+e^{-i\delta}& 0\\
+0& e^{i\delta}\\
+\end{array}\right]\cdot
+\frac{1}{t_{23}}
+\left[\begin{array}{cc}
+1& r_{23}\\
+r_{23}& 1\\
+\end{array}\right]\!\!.
+\label{eq:06_70}
+\eeq
+Matriko izračunamo in dobimo:
+\beq
+\mathbf{A} =
+\frac{1}{t_{12}t_{23}}
+\left[\begin{array}{cc}
+e^{-i\delta}+r_{12}r_{23}e^{i\delta}& r_{23}e^{-i\delta}+r_{12}e^{i\delta} \\
+r_{12}e^{-i\delta}+r_{23}e^{i\delta} & r_{12}r_{23}e^{-i\delta}+ e^{i\delta}\\
+\end{array}\right]\!\!.
+\label{eq:06_71}
+\eeq
+Prepustnost sistema izračunamo iz enačbe~(\ref{eq:plasti}):
+\beq
+T =\frac{n_3}{n_1} |t|^2 = \frac{n_3}{n_1} \left\rvert \frac{1}{A_{11}}\right\rvert^2 = 
+\frac{n_3}{n_1}\frac{t_{12}^2t_{23}^2}{1+ r_{12}^2r_{23}^2+2r_{12}r_{23}\cos\phi},
+\label{eq:06_72}
+\eeq
+pri čemer je $\phi = 2k_0n_2d$. Prepustnost je največja, kadar je imenovalec najmanjši in 
+$\cos \phi = -1$. Iz tega lahko izračunamo najmanjšo debelino antirefleksnega nanosa:
+\beq
+2 \frac{2\pi}{\lambda} n_2 d = \pi \qquad \Longrightarrow \qquad d = \frac{\lambda}{4n_2} = \frac{\lambda_2}{4}.
+\label{eq:06_73}
+\eeq
+Najmanjša potrebna debelina antirefleksnega nanosa je torej četrtina valovne dolžine valovanja v nanosu.
+Druge rešitve (večje debeline) dobimo z upoštevanjem periodičnosti sinusne funkcije. Rezultat je pričakovan,
+saj se pri tej debelini valovanje, ki je odbito od prve meje med plastmi, destruktivno sešteje z 
+valovanjem, odbitim na drugi meji. Celotno odbito valovanje je enako nič in vsa svetloba je prepuščena. 
+
+Izračunajmo še odbojnost z upoštevanjem enačbe~(\ref{eq:plasti}):
+\beq
+R = |r|^2 = \left\rvert \frac{A_{21}}{A_{11}}\right\rvert^2 = 
+\left\rvert\frac{r_{12}e^{-i\delta}+r_{23}e^{i\delta}}{e^{-i\delta}+r_{12}r_{23}e^{i\delta}}\right\rvert^2\!\!.
+\label{eq:06_74}
+\eeq
+Vstavimo izračunano debelino nanosa (enačba~\ref{eq:06_73}) in odbojnost poenostavimo v:
+\beq
+R = \frac{r_{12}^2+r_{23}^2-2r_{12}r_{23}}{1-r_{12}^2r_{23}^2}. = \frac{(r_{12}-r_{23})^2}{(1-r_{12}r_{23})^2}.
+\label{eq:06_75}
+\eeq
+Da dosežemo popolno prepustnost svetlobe in nič odboja, mora biti $R=0$. To velja, kadar je $r_{12} = r_{23}$
+oziroma izraženo z lomnimi količniki snovi (enačba~\ref{eq:06_35}):
+\beq
+\frac{n_1-n_2}{n_1+n_2} = \frac{n_2-n_3}{n_2+n_3}.
+\label{eq:06_76}
+\eeq
+Pri danih lomnih količnikih $n_1$ in $n_3$ poiščemo lomni količnik antirefleksijskega nanosa, tako da rešimo
+gornjo enačbo. Svetloba se ne bo odbila, kadar je:
+\boxeq{eq:antirefleks}{
+n_2 = \sqrt{n_1n_3} \qquad \mathrm{in} \qquad d = \frac{\lambda_2}{4}.
+}
+Kadar je debelina nanosa enaka četrtini valovne dolžine v nanosu, njen lomni količnik pa je 
+geometrijska sredina lomnih količnikov snovi na obeh straneh nanosa, se svetloba ne odbija. 
+
+Antirefleksni nanosi so zelo praktično uporabni, saj zmanjšajo odbojnost in povečajo prepuščen signal. 
+Uporabljamo jih med drugim na korekcijskih očalih vida, na lečah v mikroskopih ali teleskopih in 
+na sončnih celicah. Ker je razmeroma težko najti snov, ki bi imela lomni količnik enak geometrijski sredini
+med zrakom ($n_1=1$) in steklom ($n_1=1,52$), se za antirefleksne snovi najpogosteje uporablja magnezijev 
+fluorid MgF$_2$ z lomnim količnikom $n_2=1,38$. 
+\end{example}
+
+\begin{remark}
+Odbojnost antirefleksnega nanosa je lahko nič le pri eni valovni dolžini, valovanje z drugačnimi valovnimi 
+dolžinami se pa še vedno delno odbije. Prav tako smo pri računu privzeli, da je vpad na mejo med snovmi 
+pravokoten. V praksi se zato pogosto uporabljajo bolj zapleteni antirefleksni nanosi, sestavljeni iz več
+plasti različnih debelin in z različnimi lomnimi količniki. Tako dosežemo odbojnost, manjšo od $0,5~\%$
+na skoraj celotnem vidnem območju.
+\end{remark}
+
+\begin{example}{\bf Periodične strukture in fotonski kristali.}
+Posebej zanimiv primer večplastnih dielektrikov so periodične strukture. Nastanejo z izmeničnim
+nanosom na primer dveh plasti z lomnima količnikoma $n_1$ in $n_2$. Zaradi periodične strukture
+lahko za opis svetlobe uporabimo Blochov formalizem za opis elektronskih stanj v periodični 
+kristalni mreži. Podobno kot se v kristalih pojavijo dovoljeni energijski pasovi za elektrone 
+in med njimi prepovedani pasovi oziroma energijske reže, se v periodičnih strukturah dielektikov
+pojavijo stanja, ki se po snovi širijo, in stanja, ki se ne. Zaradi podobnosti s kristali
+govorimo o fotonskih kristalih, za njih pa je značilna velika odbojnost za valovanja s točno
+določenimi frekvencami znotraj prepovedanega pasu. 
+
+Znani primeri fotonskih kristalov v naravi so na primer krila nekaterih metuljev, peresa
+določenih ptic (npr. pava ali vodomca), 
+ 
+ 
 \end{example}
 
 
