@@ -22,8 +22,8 @@ nepravilnosti v snovi, lokalne fluktuacije v gostoti snovi ...
 \centering
 \includegraphics[width=7truecm]{slike/06_photo_soap.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_megla.jpg}
-\caption{Sipanje svetlobe v mešanici vode in mleka (a) ter sipanje svetlobe 
-cestne svetilke v megli (b). ZAMENJAJ FOTKO!!!}
+\caption{Sipanje svetlobe v mešanici vode in mleka (levo) ter sipanje svetlobe 
+cestne svetilke v megli (desno). ZAMENJAJ FOTKO!!!}
 \label{fig:07_Sipanje}
 \end{figure}
 
@@ -292,13 +292,13 @@ Sledi:
 \sin^2 \vartheta \,\mathbf{e}_r.
 }
 Z vpeljavo dipolnega momenta smo veljavnost izračunanega izraza razširili
-tudi na kompleksnejše sisteme, v katerih se ob vpadu elektromagnetnega 
+tudi na večje delce, v katerih se ob vpadu elektromagnetnega 
 valovanja inducira električni dipol.
 
 \begin{example}{\bf Sipanje na majhnih dielektričnih kroglicah.}
 Obravnavajmo sipanje svetlobe na dielektričnih kroglicah z
 dielektričnostjo $\varepsilon_2$, dielektričnost 
-okolice pa naj bo enaka $\varepsilon_1$. Kroglice naj bodo majhne ($r < \lambda$),
+okolice pa naj bo enaka $\varepsilon_1$. Kroglice naj bodo majhne ($R < \lambda$),
 zato da lahko privzamemo, da je električno polje 
 vpadnega valovanja $E$ znotraj celotnega delca enako. 
 
@@ -307,102 +307,196 @@ elektrostatike z upoštevanjem robnih pogojev na površini
 kroglice\footnote{Glej npr. Stratton, {\it Electromagnetic Theory}, različne izdaje.}
 in ga zapišemo kot:
 \beq
-p = 4 \pi \varepsilon_0 r^3 \,\frac{\varepsilon-1}{\varepsilon +2} E,
+p = 4 \pi \varepsilon_0 R^3 \,\frac{\varepsilon-1}{\varepsilon +2} E,
 \label{eq:07_56}
 \eeq
-pri čemer je $\varepsilon = \varepsilon_2/\varepsilon_1$. Svetloba
-se torej siplje le, če sta dielektričnosti kroglice in okoliške snovi različni.
+pri čemer je $\varepsilon = \varepsilon_2/\varepsilon_1$. 
+
+Povsem enak rezultat dobimo tudi z upoštevanjem zveze med polarizirnostjo in 
+dielektričnostjo snovi (enačba~\ref{eq:09_35a}), kjer zapišemo:
+\beq
+p = \alpha E = \frac{3\varepsilon_0}{\varrho}\frac{\varepsilon-1}{\varepsilon+2}E,
+\label{eq:07_57}
+\eeq
+Pri čemer je $\varrho$ gostota delcev, inverz gostote pa je prostornina, ki pripada
+enemu delcu, to je $4\pi R^3/3$. Ko prostornino enega delca vstavimo, 
+dobimo enačbo~(\ref{eq:07_56}).
+
+Oba izraza dokazujeta, da se svetloba siplje le, če sta dielektričnosti 
+kroglice in okoliške snovi različni.
 Od razlike lomnih količnikov je odvisna intenziteta sipane svetlobe, medtem ko
 kotna odvisnost in odvisnost od valovne dolžine ostajata nespremenjeni.
 \end{example}
 
-Vrnimo se k izrazu za gostoto energijskega toka sipane svetlobe (enačba~\ref{eq:dipolj})
-in vanj vstavimo velikost induciranega dipolnega momenta (enačba~\ref{eq:07_11}). Na danem
+Vrnimo se k izrazu za gostoto energijskega toka sipane 
+svetlobe (enačba~\ref{eq:07_55}) in upoštevajmo velikost induciranega 
+dipolnega momenta v dielektrični kroglici (enačba~\ref{eq:07_56}). Na danem
 mestu je gostota svetlobnega toka sipane svetlobe sorazmerna:
 \beq
-\mathbf{j}_\mathrm{sev} \propto \omega^4 p_0^2 \propto \frac{E^2V^2}{\lambda^4} 
-\propto \frac{E^2 R^6}{\lambda^4}.
+j_\mathrm{sev} \propto \omega^4 p^2 \propto E^2 \frac{R^6}{\lambda^4}.
 \label{eq:07_17}
 \eeq
-Razmerje med sipanim svetlobnim tokom in vpadno gostoto svetlobnega toka določa sipalni presek. Iz
-zapisanega sledi, da je sipalni presek sorazmeren s šesto potenco polmera delca in obratno
-sorazmeren s četrto potenco valovne dolžine svetlobe. 
-
-Vpeljemo še sipalni izkoristek $Q_S$ kot razmerje med sipalnim presekom $\sigma$ in 
-dejanskim prečnim presekom delca $S$. Zapišemo:
-\beq
-Q_S = \frac{\sigma}{S} \propto \frac{R^6}{\lambda^4 (\pi R^2)}\propto\left(\frac{R}{\lambda}\right)^4\!\!.
-\label{eq:07_17}
-\eeq
-Četrta potenca odvisnosti sipalnega izkoristka od velikosti delcev je značilna za Rayleighovo sipanje.
+Sipalni presek, ki ga izračunamo kot razmerje med sipanim svetlobnim tokom in 
+vpadno gostoto svetlobnega toka, je sorazmeren s šesto potenco polmera 
+delca in obratno sorazmeren s četrto potenco valovne dolžine svetlobe.
 
 \begin{example}{\bf Zakaj je nebo modro?}
-Svetloba, ki s Sonca vpada na Zemljino površje, najprej prepotuje Zemljino atmosfero.
-Pri tem se del svetlobe se absorbira (najizrazitejše so absorpcije v ultravijoličnem delu 
-spektra na ozonski plasti ter na infrardečem spektru na molekulah vode in ogljikovega 
-dioksida). Preostala svetloba potuje skozi atmosfero in se pri tem na molekulah v zraku
-Rayleighovo siplje. Zaradi močne odvisnosti intenzitete sipanja od valovne dolžine svetlobe 
-(enačba~\ref{eq:rayleigh}) se modri odtenki s krajšo valovno dolžino sipljejo bistveno bolj 
-kot svetloba rdečih odtenkov z daljšo valovno dolžino. Na primer: svetloba z 
-$\lambda = 400~\si{\nm}$ se siplje 16-krat močneje kot svetloba z $\lambda = 800~\si{\nm}$.
-Ko opazujemo nebo, zaznavamo svetlobo, ki se na atmosferi siplje. Ker se modri odtenki sipljejo
-bolj kot rdeči, vidimo nebo modro. 
+Preden svetloba s Sonca doseže Zemljino površje, prepotuje Zemljino atmosfero.
+Pri tem se del svetlobe absorbira (najizrazitejše so absorpcije v ultravijoličnem delu 
+spektra na ozonski plasti ter v infrardečem spektru na molekulah vode in ogljikovega 
+dioksida). Preostala svetloba potuje skozi atmosfero in se pri tem na molekulah
+Rayleighovo siplje. Zaradi močne odvisnosti intenzitete sipanja od valovne dolžine 
+svetlobe (enačba~\ref{eq:rayleigh}) se modri odtenki s krajšo valovno dolžino 
+sipljejo bistveno bolj kot svetloba rdečih odtenkov z daljšo valovno dolžino.
+Na primer: svetloba z $\lambda = 400~\si{\nm}$ se siplje 16-krat močneje kot 
+svetloba z $\lambda = 800~\si{\nm}$. Ko opazujemo nebo, zaznavamo svetlobo, 
+ki se na atmosferi siplje. Ker se modri odtenki sipljejo bolj kot rdeči, 
+vidimo nebo modro. 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/07_ModroNebo.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_Luna.jpg}
+\caption{Barva neba je posledica sipanja svetlobe. Ker se močneje siplje 
+svetloba s krajšo valovno dolžino, je nebo podnevi videti modro (levo).
+Na Luni, kjer ni atmosfere, na kateri bi se svetloba sipala, je nebo 
+tudi podnevi povsem črno (Foto: NASA).}
+\label{fig:07_Modrina}
+\end{figure}
 
 Seveda se vprašamo, zakaj ne vidimo neba vijoličnega, saj 
 ima vijolična svetloba še krajšo valovno dolžino in se zato še močneje siplje. Upoštevati 
 moramo spekter sončeve svetlobe, v katerem je vijolična barva manj zastopana od modre, poleg
 tega k temu prispeva tudi občutljivost očesa, ki se pri krajših valovnih dolžinah znatno 
 zmanjša in vijolične barve ne zaznava tako močno kot modre. 
-
-Na Luni, kjer ni atmosfere, je nebo povsem črno.
 \end{example}
 
 \begin{example}{\bf In zakaj je sončni zahod rdeč?}
-Tudi rdeči sončni vzhodi in zahodi so posledica sipanja svetlobe na atmosferi. Takrat Sonce
-leži nizko nad obzorjem in pot sončne svetlobe skozi atmosfero je razmeroma dolga.
-Modra svetloba se močno siplje na vse strani, rdeča svetloba pa razmeroma malo. Večina
-svetlobe, ki pride do opazovalca, je tako rdečkaste barve.
+Tudi rdeči sončni vzhodi in zahodi so posledica sipanja svetlobe v atmosferi. 
+Takrat Sonce leži nizko nad obzorjem in pot svetlobe skozi atmosfero je 
+razmeroma dolga. Pogosto je v ozračju bližje površju tudi več vlage, prašnih delcev
+in drugih sipalcev. Ker se modra svetloba močno siplje na vse strani, rdeča
+pa razmeroma šibko, je večina svetlobe, ki pride do opazovalca iz smeri Sonca,
+rdečkaste barve. Zaradi človekove aktivnosti in višjih dnevnih temperatur je 
+navadno zvečer v zraku več sipalcev kot proti jutru. Sončni zahodi so zato pogosto
+bolj izrazito rdečkasti kot sončni vzhodi.
+\end{example}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/07_Zahod.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_Hribi.jpg}
+\caption{Ker se modra barva bolj siplje, je večina prepuščene svetlobe ob Sončnem
+vzhodu ali zahodu rdečkaste barve (levo). Zaradi sipanja svetlobe so oddaljeni
+grebeni modrikastih barv (desno).}
+\label{fig:07_Rdeca}
+\end{figure}
+
+\begin{example}{\bf Zakaj so oddaljene gore modikaste?}
+Zaradi sipanja svetlobe v zraku opazimo še en zanimiv pojav: modrikasto
+obarvanost oddaljenih gorskih grebenov. Med opazovalcem in oddaljenim grebenom
+je razmeroma dolga pot skozi ozračje, na katerem se svetloba siplje. Več kot
+je ozračja med goro in opazovalcem, več bo sipane svetlobe. Posledično so
+bolj oddaljene gore videti bolj modro in svetlejše. 
+
+Kadar ozračje ni čisto in so prisotni večji delci (na primer prah ali vodne kapljice),
+takrat se svetloba siplje drugače. Kot bomo spoznali v nadaljevanju, je sipanje
+na večjih delcih le šibko odvisno od valovne dolžine svetlobe, zato je svetloba, sipana
+na večjih delcih, siva. V meglenem vremenu so posledično oddaljene gore -- in celo nebo -- 
+videti sivo.
 \end{example}
 
-\section{Sipanje nepolarizirane svetlobe}
-Naj bo sipalni delec vzdolž smeri $x$ vpada nepolarizirana svetloba. Električno
-polje vpadne svetlobe razdelimo na dva prispevka: polarizacijo vzdolž osi $y$ in 
-polarizacijo vzdolž osi $z$. Sipano svetlobo opazujemo v ravnini $xy$, v kateri
-ležita valovni vektor vpadne svetlobe $\mathbf{k}_i$ in valovni vektor sipane svetlobe
-$\mathbf{k}_s$. Kot med njima $\beta$ imenujemo sipalni kot.
+\begin{example}{\bf Tyndallov pojav.} Pojav, ki je zelo podoben Rayleighovem sipanju
+na molekulah in delcih v zraku, je Tyndallov pojav. Pojav, ki se imenuje po irskem fiziku
+Johnu Tyndallu (1820--1893), opisuje sipanje svetlobe v koloidih in suspenzijah. Za Rayleighovo
+sipanje smo izpeljali, da intenziteta sipane svetlobe narašča s šesto potenco velikosti
+delca. Na večjih delcih (a vseeno po velikosti manjših ali največ primerljivih z valovno dolžino 
+svetlobe), se tako svetloba zelo močno siplje. Koloid pri navadni 
+osvetlitvi zato pogosto vidimo modrikast, pri presevni osvetlitvi pa rdečkaste barve.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/07_Mo2N1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_Mo2N2.jpg}
+\caption{Primer disperzije delcev molibdenovega nitrida v vodi, ki je zaradi sipanja
+videti modra (levo). Ko isto disperzijo osvetlimo od zadaj, je prepuščena pretežno rdečkasta
+svetloba (desno).}
+\label{fig:07_NeboPol}
+\vglue-10truemm
+\end{figure}
 
-Za del svetlobe, ki je polariziran v smeri $z$, se detektor nahaja 
-v ekvatorialni ravnini ($\vartheta = 90\si{\degree}$) in 
-$j_{\mathrm{sev}, z}$ je neodvisen od sipalnega kota $\beta$. Gostota energijskega
-toka sipane svetlobe za del svetlobe, ki je polariziran vzdolž smeri $y$, pa je od kota
-odvisna. Zapišemo zvezo $\vartheta = \pi/2+\beta$ in to upoštevamo pri zapisu sevalnega polja.
-Skupno sipano polje je sestavljeno iz obeh prispevkov:
+\end{example}
+
+\section{Polarizacija sipane svetlobe}
+Pri razlagi Rayleighovega sipanja v prejšnjem razdelku smo privzeli, da na
+delec vpada linearno polarizirano elektromagnetno valovanje, ki v delcu vzbudi 
+električni dipolni moment. Oscilirajoči dipol seva, pri čemer je polarizacija
+izsevane svetlobe vzdolž enotskega vektorja $\mathbf{e}_\vartheta$. Sevanja vzdolž
+smeri vpadne polarizacije ni, v smeri pravokotno na vpadno svetlobo pa je polarizacija
+pravokotna na sipalno ravnino (slika~\ref{07_pol}\,a).
+
+Kadar na sipalni delec vpada nepolarizirana svetloba, vpadno svetlobo razstavimo
+na dve med seboj pravokotni komponenti in obravnavamo vsako posebej. Naj bo smer
+vpadne svetlobe vzdolž osi $x$, električno polje vpadne svetlobe pa razdelimo na 
+dva prispevka: polarizacijo vzdolž osi $y$ in polarizacijo vzdolž osi $z$.  
+Komponenta polarizacije vzdolž osi $y$ vzbudi dipolni moment, ki vzdolž osi $y$ 
+ne seva, vzdolž osi $z$ pa je izsevana svetloba polarizirana v smeri $y$. 
+Podobno komponenta polarizacije vzdolž osi $z$ ne povzroči sevanja vzdolž osi $z$,
+izsevana svetloba vzdolž osi $y$ pa je polarizirana v smeri $z$. Posledično je v smereh
+pravokotno na smer vpadne svetlobe sipana svetloba vedno linearno polarizirana. 
+Pri poljubnem sipalnem kotu je sipana svetloba na splošno delno polarizirana 
+(slika~\ref{07_pol}\,b). 
+
+Poglejmo pojav podrobneje. Naj bo opazovalec vzdolž smeri vektorja $\mathbf{r}$, katero
+smer določajo koti $\vartheta_1$, $\vartheta_2$ in $\beta$. Pri tem je $\vartheta_1$ 
+kot med smerjo opazovalca in osjo $y$, $\vartheta_2$ med smerjo opazovalca in 
+osjo $z$, kot $\beta$, tako imenovani sipalni kot, pa je kot med smerjo opazovalca 
+in osjo $x$ (slika~). Med koti velja sledeča zveza:
 \beq
-j_\mathrm{sip} = j_{\mathrm{sev}, y} + j_{\mathrm{sev}, z} = 
-j_{\mathrm{sev}, 0}\sin^2\left(\pi/2+\beta \right) + 
-j_{\mathrm{sev}, 0} = j_{\mathrm{sev}, 0}\left(1 + \cos^2\beta\right).
-\label{eq:07_13}
+\cos^2 \vartheta_1 + \cos^2 \vartheta_2 + \cos^2 \beta = 1.
 \eeq
-Kadar torej vpada nepolarizirana vpadna svetloba, je sipane svetlobe v smeri pravokotno 
-na izvor dvakrat manj kot sipane svetlobe vzdolž vpadne smeri. Enako kot sipanja v smeri
-naprej je tudi sipanja v smeri nazaj.
-\end{example}
+Zapišemo sevalno polje dipola, induciranega v smeri $y$ (enačba~\ref{eq:07_53}):
+\beq
+j_y = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_1,
+\label{eq:07_58}
+\eeq
+pri čemer smo konstante in odvisnost od frekvence in oddaljenosti od dipola združili 
+v funkcijo $f$. Upoštevali smo le polovico gostote vpadnega svetlobnega toka $j_0$, saj 
+velja zapis za izbrano polarizacijo. Podobno zapišemo tudi sevalno polje dipola, ki je 
+induciran v smeri $z$:
+\beq
+j_z = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_2.
+\label{eq:07_59}
+\eeq
+Celotna gostota energijskega toka sipane svetlobe je vsota obeh prispevkov:
+\beq
+j = j_x + j_z = j_0 f(\omega, r) \frac{\sin^2 \vartheta_1 + \sin^2 \vartheta_2}{2},
+\label{eq:07_60}
+\eeq
+kar z upoštevanjem zveze med smernimi kosinusi da:
+\boxeq{eq:07_61}{
+j = j_0 f(\omega, r) \frac{1+ \cos^2 \beta}{2}.
+}
+Intenziteta sipane nepolarizirane svetlobe je, po pričakovanju, odvisna zgolj od sipalnega kota.
+Njena odvisnost (slika~) je simetrična v smeri naprej in nazaj, pri čemer je sipanja  teh 
+dveh smereh dvakrat več kot pravokotno na vpadno smer. V smeri naprej je sipanje nepolarizirano, 
+pri $\beta = 90~\si{degree}$ je linearno polarizirano, v ostalih smereh pa delno polarizirano.
 
-\begin{example}{\bf Polarizacija sipane svetlobe.}
-Spoznali, smo, da je zaradi sipanja svetlobe nebo čez dan videti modro. Poglejmo še 
-polarizacijo te modre svetlobe, če svetlobo opazujemo v smeri pravokotno glede na Sonce (glej 
-sliko). Svetloba s Sonca je nepolarizirana. Komponenta svetlobe, 
-ki je polarizirana pravokotno na Zemljino površje, v smeri opazovalca ne seva, polarizacija,
-ki leži tangentno na Zemljino površje, pa seva. Svetloba, ki jo tako zazna opazovalec
-na Zemlji, je polarizirana v smeri pravokotno na smer Sonca. V naravi polarizacija ni popolna,
-saj prihaja do večkratnega sipanja, do sipanja na drugih, večjih delcih v atmosferi, za katere
-Rayleighov približek ne velja, ipd. 
-\end{example}
+\begin{example}{\bf Polarizacija modrega neba.}
+Spoznali smo, da je sipana svetloba najbolj izrazito linearno polarizirana v smeri pravokotno na smer 
+širjenja. Pri opazovanju neba to pomeni pravokotno na smer, iz katere vpada nepolarizirana 
+svetloba s Sonca. Komponenta svetlobe, ki je polarizirana pravokotno na Zemljino površje, 
+v smeri opazovalca ne seva, polarizacija, ki leži tangentno na Zemljino površje, pa seva. Ta
+pojav preverimo s polarizacijskim filtrom. Svetloba, ki jo zaznamo, tudi pri pravokotni smeri
+ni povsem linearno polarizirana, saj v atmosferi prihaja do večkratnega sipanja in tudi do 
+sipanja na večjih delcih v atmosferi, za katere Rayleighov približek ne velja.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/07_NeboPol2.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_NeboPol1.jpg}
+\caption{Sliki neba skozi različno zasukana linearna polarizatorja nakazujeta na delno
+linearno polarizacijo sipane svetlobe. Svetloba s Sonca vpada z desne, puščici pa nakazujeta
+zasuk polarizatorja.}
+\label{fig:07_NeboPol}
+\end{figure}
 
-
-\begin{example}{\bf Tyndallov pojav.}
-Odvisnost  
- 
 \end{example}
 
 \subsection*{Sipalna matrika}
@@ -497,8 +591,6 @@ Tudi kotna odvisnosti $j(\beta)$ kaže številne minimume in maksimume. Prevladu
 
 
 - beli oblaki.
-
-- Zakaj so oddaljene gore bolj svetle /in modre/ od bližnjih?
 
 - detektor megle/plina. manj svetlobe pride do detektorja.
 
