@@ -415,9 +415,9 @@ osvetlitvi zato pogosto vidimo modrikast, pri presevni osvetlitvi pa rdečkaste 
 \centering
 \includegraphics[width=7truecm]{slike/07_Mo2N1.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_Mo2N2.jpg}
-\caption{Primer disperzije delcev molibdenovega nitrida v vodi, ki je zaradi sipanja
-videti modra (levo). Ko isto disperzijo osvetlimo od zadaj, je prepuščena pretežno rdečkasta
-svetloba (desno).}
+\caption{Disperzije nanodelcev molibdenovega nitrida v vodi, ki je zaradi sipanja
+videti modra (levo). Ko isto disperzijo osvetlimo od zadaj, je prepuščena svetloba rdečkasta
+(desno).}
 \label{fig:07_NeboPol}
 \vglue-10truemm
 \end{figure}
@@ -430,54 +430,109 @@ delec vpada linearno polarizirano elektromagnetno valovanje, ki v delcu vzbudi
 električni dipolni moment. Oscilirajoči dipol seva, pri čemer je polarizacija
 izsevane svetlobe vzdolž enotskega vektorja $\mathbf{e}_\vartheta$. Sevanja vzdolž
 smeri vpadne polarizacije ni, v smeri pravokotno na vpadno svetlobo pa je polarizacija
-pravokotna na sipalno ravnino (slika~\ref{07_pol}\,a).
+pravokotna na sipalno ravnino (slika~\ref{fig:07_pol}\,a).
 
 Kadar na sipalni delec vpada nepolarizirana svetloba, vpadno svetlobo razstavimo
 na dve med seboj pravokotni komponenti in obravnavamo vsako posebej. Naj bo smer
 vpadne svetlobe vzdolž osi $x$, električno polje vpadne svetlobe pa razdelimo na 
-dva prispevka: polarizacijo vzdolž osi $y$ in polarizacijo vzdolž osi $z$.  
-Komponenta polarizacije vzdolž osi $y$ vzbudi dipolni moment, ki vzdolž osi $y$ 
+polarizacijo vzdolž osi $y$ in polarizacijo vzdolž osi $z$.  
+Komponenta vzdolž osi $y$ vzbudi dipolni moment, ki vzdolž osi $y$ 
 ne seva, vzdolž osi $z$ pa je izsevana svetloba polarizirana v smeri $y$. 
-Podobno komponenta polarizacije vzdolž osi $z$ ne povzroči sevanja vzdolž osi $z$,
+Podobno komponenta vzdolž osi $z$ ne povzroči sevanja vzdolž osi $z$,
 izsevana svetloba vzdolž osi $y$ pa je polarizirana v smeri $z$. Posledično je v smereh
-pravokotno na smer vpadne svetlobe sipana svetloba vedno linearno polarizirana. 
+pravokotno na smer vpadne svetlobe sipana svetloba linearno polarizirana. 
 Pri poljubnem sipalnem kotu je sipana svetloba na splošno delno polarizirana 
-(slika~\ref{07_pol}\,b). 
+(slika~\ref{fig:07_pol}\,b).
+\begin{figure}[!h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/07_sipanjePol_1.pdf_tex}
+\caption{Linearno polarizirana vpadna svetloba se na delcu siplje, pri čemer je polarizacija
+sipane svetlobe vzporedna z $\mathbf{e}_\vartheta$ (a). Nepolarizirano vpadno svetlobo
+razstavimo na dve komponenti (rdeča in modra) in ju obravnavamo neodvisno. 
+V smeri pravokotno na vpadno svetlobo je sipana svetloba linearno polarizirana, na splošno
+pa delno polarizirana.}
+\label{fig:07_pol}
+\vglue-5truemm
+\end{figure}
 
-Poglejmo pojav podrobneje. Naj bo opazovalec vzdolž smeri vektorja $\mathbf{r}$, katero
+Poglejmo pojav podrobneje. Naj bo opazovalec vzdolž smeri vektorja $\mathbf{r}$, katerega
 smer določajo koti $\vartheta_1$, $\vartheta_2$ in $\beta$. Pri tem je $\vartheta_1$ 
 kot med smerjo opazovalca in osjo $y$, $\vartheta_2$ med smerjo opazovalca in 
 osjo $z$, kot $\beta$, tako imenovani sipalni kot, pa je kot med smerjo opazovalca 
-in osjo $x$ (slika~). Med koti velja sledeča zveza:
+in osjo $x$ (slika~). Med koti velja 
+zveza: $\cos^2 \vartheta_1 + \cos^2 \vartheta_2 + \cos^2 \beta = 1$.
+\begin{figure}[!h]
+\vglue-2truemm
+\centering
+\def\svgwidth{50truemm} 
+\input{slike/07_smernikoti.pdf_tex}
+\caption{Smer opazovalca $\mathbf{r}$ označimo s tremi koti glede na koordinatne osi.}
+\label{fig:07_smernikoti}
+\vglue-5truemm
+\end{figure}
+
+Potem sevalno polje dipola, induciranega v smeri $y$ (modra polarizacija 
+na sliki~\ref{fig:07_NeboPol}\,b) zapišemo kot (enačba~\ref{eq:07_53}):
 \beq
-\cos^2 \vartheta_1 + \cos^2 \vartheta_2 + \cos^2 \beta = 1.
-\eeq
-Zapišemo sevalno polje dipola, induciranega v smeri $y$ (enačba~\ref{eq:07_53}):
-\beq
-j_y = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_1,
+j_y = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_1.
 \label{eq:07_58}
 \eeq
-pri čemer smo konstante in odvisnost od frekvence in oddaljenosti od dipola združili 
+Pri tem smo konstante ter odvisnost od frekvence in oddaljenosti od dipola združili 
 v funkcijo $f$. Upoštevali smo le polovico gostote vpadnega svetlobnega toka $j_0$, saj 
-velja zapis za izbrano polarizacijo. Podobno zapišemo tudi sevalno polje dipola, ki je 
-induciran v smeri $z$:
+upoštevamo le izbrano polarizacijo. Podobno zapišemo tudi sevalno polje dipola, ki je 
+induciran v smeri $z$ (rdeča polarizacija na sliki~\ref{fig:07_NeboPol}\,b):
 \beq
 j_z = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_2.
 \label{eq:07_59}
 \eeq
 Celotna gostota energijskega toka sipane svetlobe je vsota obeh prispevkov:
 \beq
-j = j_x + j_z = j_0 f(\omega, r) \frac{\sin^2 \vartheta_1 + \sin^2 \vartheta_2}{2},
+j_\mathrm{sev} = j_y + j_z = j_0 f(\omega, r) \frac{\sin^2 \vartheta_1 + \sin^2 \vartheta_2}{2}.
 \label{eq:07_60}
 \eeq
-kar z upoštevanjem zveze med smernimi kosinusi da:
+Z upoštevanjem zveze med smernimi kosinusi dobimo:
 \boxeq{eq:07_61}{
-j = j_0 f(\omega, r) \frac{1+ \cos^2 \beta}{2}.
+j_\mathrm{sev} = j_0 f(\omega, r) \frac{1+ \cos^2 \beta}{2}.
 }
-Intenziteta sipane nepolarizirane svetlobe je, po pričakovanju, odvisna zgolj od sipalnega kota.
-Njena odvisnost (slika~) je simetrična v smeri naprej in nazaj, pri čemer je sipanja  teh 
-dveh smereh dvakrat več kot pravokotno na vpadno smer. V smeri naprej je sipanje nepolarizirano, 
-pri $\beta = 90~\si{degree}$ je linearno polarizirano, v ostalih smereh pa delno polarizirano.
+Intenziteta sipane nepolarizirane svetlobe je, po pričakovanju, odvisna zgolj od sipalnega kota $\beta$.
+Njena odvisnost (slika~\ref{fig:07_nepol}) je simetrična v smeri naprej in nazaj, pri čemer je 
+sipanja v teh dveh smereh dvakrat več kot pravokotno na vpadno smer. V smeri naprej je sipanje 
+nepolarizirano, v pravokotnih smereh je linearno polarizirano, v ostalih smereh pa delno polarizirano.
+\begin{figure}[!h]
+\vglue-2truemm
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/07_nepol.pdf_tex}
+\caption{Celotna intenziteta sipane nepolarizirane svetlobe je vsota dveh prispevkov, pri čemer vsak
+ustreza eni od komponent polarizacije vpadne svetlobe (modra $y$ in rdeča $z$).}
+\label{fig:07_nepol}
+\vglue-7truemm
+\end{figure}
+
+\begin{example}{\bf Sipanje polarizirane svetlobe.} Posvetimo z linearno polarizirano
+svetlobo v posodico z vodo, kateri smo dodali kapljico mleka. Svetloba se siplje,
+vendar je intenziteta sipane svetlobe na mestu opazovalca močno odvisna
+od smeri vpadne polarizacije. Z zasukom laserja za $90\si{\degree}$
+sipana svetloba praktično izgine (slika~\ref{fig:07_mleko} zgoraj). 
+Polarizacijo sipane svetlobe preverimo z uporabo linearnih polarizatorjev 
+(slika~\ref{fig:07_mleko} spodaj). 
+\begin{figure}[!h]
+\centering
+\vglue-1truemm
+\includegraphics[width=7truecm]{slike/07_Mleko1.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_Mleko2.jpg}\\ \vglue3truemm
+\includegraphics[width=7truecm]{slike/07_Mleko3.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_Mleko4.jpg}
+\caption{Sipanje v posodici vode z dodanim mlekom. Intenziteta sipane svetlobe je odvisna 
+od polarizacije vpadne svetlobe (zgoraj), sipana svetloba pod pravim kotom pa je linearno
+polarizirana (spodaj). Rdeče puščice označujejo smer polarizacije svetlobe, beli puščici
+pa smeri polarizatorjev.}
+\label{fig:07_mleko}
+\vglue-10truemm
+\end{figure}
+
+\end{example}
 
 \begin{example}{\bf Polarizacija modrega neba.}
 Spoznali smo, da je sipana svetloba najbolj izrazito linearno polarizirana v smeri pravokotno na smer 
@@ -495,68 +550,69 @@ sipanja na večjih delcih v atmosferi, za katere Rayleighov približek ne velja.
 linearno polarizacijo sipane svetlobe. Svetloba s Sonca vpada z desne, puščici pa nakazujeta
 zasuk polarizatorja.}
 \label{fig:07_NeboPol}
+\vglue-10truemm
 \end{figure}
 
 \end{example}
-
-\subsection*{Sipalna matrika}
-Tudi pri sipanju navadno uvedemo matrični zapis. Vsako vpadno polarizacijo lahko obravnavamo, tako
-da jo razstavimo na dve komponenti: eno, ki je vzporedna s sipalno ravnino $E_\parallel$, in drugo, ki 
-je nanjo pravokotna $E_\perp$. V našem zapisu je tako $E_\parallel \parallel H$ in
-$E_\perp \parallel V$. 
-\beq
-\mathbf{E}_s = 
-\left[\begin{array}{c}
-E_{s,H}\\
-E_{s,V}\\
-\end{array}\right]
-= \left[\begin{array}{c}
-E_{s, \parallel}(\beta)\\
-E_{s, \perp}(\beta)\\
-\end{array}\right] = 
-\left[\begin{array}{cc}
-S_2 & S_3 \\
-S_4 & S_1\\
-\end{array}\right] 
-\left[\begin{array}{c}
-E_{i, \parallel}(\beta)\\
-E_{i, \perp}(\beta)\\
-\end{array}\right] 
-\left(
-\frac{e^{ik(r-x)}}{ikr}
-\right)\!\!.
-\label{eq:07_14}
-\eeq
-Pri tem je matrika amplitudna sipalna matrika, ki je na splošno funkcija zenitalnega
-in azimutalnega kota (če delec ni povsem okrogel), ki poruši simetrijo. Vektor v zgornjem
-zapisu predstavlja optično polje vpadne svetlobe, zadnji člen pa je transportni faktor,
-ki je odvisen od razdalje med sipalcem in detektorjem $r$, ter od globine, v kateri
-je prišlo so sipanja (z).
-
-V praksi navadno merimo gostoto energijskega toka sipane svetlobe:
-\beq
-j_s \propto |E_{s, \parallel}|^2 + |E_{s, \perp}|^2.
-\label{eq:07_15}
-\eeq
-Ker sta polarizaciji ortogonalni, mešani členi ničesar ne prispevajo. Potem sipalno matriko
-za gostoto svetlobnega toka zapišemo kot:
-\beq
-\left[\begin{array}{c}
-j_{s, \parallel}(\beta)\\
-j_{s, \perp}(\beta)\\
-\end{array}\right] = 
-\left[\begin{array}{cc}
-|S_2|^2& 0\\
-0 & |S_1|^2\\
-\end{array}\right] 
-\left[\begin{array}{c}
-j_{i, \parallel}(\beta)\\
-j_{i, \perp}(\beta)\\
-\end{array}\right]\!\!.
-\label{eq:07_16}
-\eeq
-
-.. Kakšen komentar, zakaj je to dobro, primer? .. Zakaj so indeksi tako čudno?
+% 
+% \subsection*{Sipalna matrika}
+% Sipanje lahko opišemo tudi z matričnim pristopom. Splošno vpadno polarizacijo 
+% razstavimo na dve komponenti: eno, ki je vzporedna s sipalno ravnino $E_\parallel$, in drugo, ki 
+% je nanjo pravokotna $E_\perp$. V našem zapisu je tako $E_\parallel \parallel y$ in
+% $E_\perp \parallel z$. 
+% \beq
+% \mathbf{E}_s = 
+% \left[\begin{array}{c}
+% E_{s,y}\\
+% E_{s,z}\\
+% \end{array}\right]
+% = \left[\begin{array}{c}
+% E_{s, \parallel}(\beta)\\
+% E_{s, \perp}(\beta)\\
+% \end{array}\right] = 
+% \left[\begin{array}{cc}
+% S_2 & S_3 \\
+% S_4 & S_1\\
+% \end{array}\right] 
+% \left[\begin{array}{c}
+% E_{i, \parallel}\\
+% E_{i, \perp}\\
+% \end{array}\right] 
+% \left(
+% \frac{e^{ik(r-x)}}{ikr}
+% \right)\!\!.
+% \label{eq:07_14}
+% \eeq
+% Pri tem je matrika amplitudna sipalna matrika, ki je na splošno funkcija zenitalnega
+% in azimutalnega kota (če delec ni povsem okrogel), ki poruši simetrijo. Vektor v zgornjem
+% zapisu predstavlja optično polje vpadne svetlobe, zadnji člen pa je transportni faktor,
+% ki je odvisen od razdalje med sipalcem in detektorjem $r$, ter od globine, v kateri
+% je prišlo so sipanja (z).
+% 
+% V praksi navadno merimo gostoto energijskega toka sipane svetlobe:
+% \beq
+% j_s \propto |E_{s, \parallel}|^2 + |E_{s, \perp}|^2.
+% \label{eq:07_15}
+% \eeq
+% Ker sta polarizaciji ortogonalni, mešani členi ničesar ne prispevajo. Potem sipalno matriko
+% za gostoto svetlobnega toka zapišemo kot:
+% \beq
+% \left[\begin{array}{c}
+% j_{s, \parallel}(\beta)\\
+% j_{s, \perp}(\beta)\\
+% \end{array}\right] = 
+% \left[\begin{array}{cc}
+% |S_2|^2& 0\\
+% 0 & |S_1|^2\\
+% \end{array}\right] 
+% \left[\begin{array}{c}
+% j_{i, \parallel}(\beta)\\
+% j_{i, \perp}(\beta)\\
+% \end{array}\right]\!\!.
+% \label{eq:07_16}
+% \eeq
+% 
+% .. Kakšen komentar, zakaj je to dobro, primer? .. Zakaj so indeksi tako čudno?
 
 \section{Miejevo sipanje}
 Sipanje svetlobe na delcih, ki so po velikosti primerljivi z valovno dolžino vpadne svetlobe, imenujemo
@@ -607,3 +663,5 @@ nivojih atomov in molekul. Zelo uporabno za analizo materialov, kemijsko sestavo
 Stokes, anti-stokes. 
 
 Uporaba sipanja, Rayleigh... Raman... 
+
+če je treba, lahko dodam sipalni presek za pol/nepol sipanje. Je enak.
