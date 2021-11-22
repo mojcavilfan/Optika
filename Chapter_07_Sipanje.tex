@@ -348,8 +348,8 @@ dioksida). Preostala svetloba potuje skozi atmosfero in se pri tem na molekulah
 Rayleighovo siplje. Zaradi močne odvisnosti intenzitete sipanja od valovne dolžine 
 svetlobe (enačba~\ref{eq:rayleigh}) se modri odtenki s krajšo valovno dolžino 
 sipljejo bistveno bolj kot svetloba rdečih odtenkov z daljšo valovno dolžino.
-Na primer: svetloba z $\lambda = 400~\si{\nm}$ se siplje 16-krat močneje kot 
-svetloba z $\lambda = 800~\si{\nm}$. Ko opazujemo nebo, zaznavamo svetlobo, 
+Na primer: svetloba z $\lambda = 400~\si{\nm}$ se siplje 10-krat močneje kot 
+svetloba z $\lambda = 710~\si{\nm}$. Ko opazujemo nebo, zaznavamo svetlobo, 
 ki se na atmosferi siplje. Ker se modri odtenki sipljejo bolj kot rdeči, 
 vidimo nebo modro. 
 \begin{figure}[!h]
@@ -554,6 +554,7 @@ zasuk polarizatorja.}
 \end{figure}
 
 \end{example}
+
 % 
 % \subsection*{Sipalna matrika}
 % Sipanje lahko opišemo tudi z matričnim pristopom. Splošno vpadno polarizacijo 
@@ -615,53 +616,94 @@ zasuk polarizatorja.}
 % .. Kakšen komentar, zakaj je to dobro, primer? .. Zakaj so indeksi tako čudno?
 
 \section{Miejevo sipanje}
-Sipanje svetlobe na delcih, ki so po velikosti primerljivi z valovno dolžino vpadne svetlobe, imenujemo
-Miejevo sipanje po nemškem fiziku Gustavu Mieju (1868--1957). Kadar je polmer delcev $R\approx \lambda$
-ali večji, približek sipalca kot točkastega dipola ni ustrezen. V tem primeru se moramo lotiti problema
-bolj natančno, tako da z reševanjem Maxwellovih enačb izračunamo polje znotraj in zunaj delca ter
-ustrezno upoštevamo robne pogoje med delcem in okolico. Če je delec okrogel, iščemo rešitve v sferičnih 
-koordinatah. Pojav dovolj dobro opišemo, če rešujemo skalarno Helmholtzevo enačbo (enačba..) in rešitve
-poiščemo z metodo separacije spremeljivk:
+Z Rayleighovim sipanjem dobro opišemo sipanje svetlobe na delcih, ki so 
+po velikosti precej manjši od valovne dolžine vpadne svetlobe. Po drugi strani lahko
+sipanje na delcih, ki so precej večji od valovne dolžine svetlobe, opišemo
+z geometrijsko optiko. V vmesnem režimu, pri katerem je velikost delcev 
+primerljiva z valovno dolžino svetlobe, je opis sipanja najzahtevnejši.
+Takrat govorimo o Miejevem sipanju, ki se imenuje po nemškem fiziku Gustavu 
+Mieju (1868--1957). Miejevo sipanje je, 
+tako kot Rayleighovo, elastično sipanje, kar pomeni, da se valovna dolžina svetlobe
+pri sipanju ne spremeni. 
+
+Pri Rayleighovem sipanju smo izračunali intenziteto sipane svetlobe za posamezni
+delec in prispevke vseh sipalcev sešteli. To smo lahko naredili, saj so 
+zaradi naključne porazdelitve sipalcev njihovi prispevki 
+statistično neodvisni in se zato seštevajo 
+nekoherentno. Pri Miejevem sipanju moramo upoštevati tudi porazdelitev atomskih
+sipalcev znotraj večjih delcev. Zaradi njihove vsaj delne ureditve sipljejo
+svetlobo delno koherentno in do izraza pridejo interferenčni pojavi. Posledično
+je kotna odvisnost Miejevo sipane svetlobe zelo zapletena. 
+
+Druga pomembna lastnost Miejevega sipanja je zelo šibka odvisnost intenzitete
+sipanja od valovne dolžine svetlobe -- za razliko od četrte potence pri Rayleighovem
+sipanju. Z naraščajočo velikostjo delcev postane Miejevo sipanje od valovne dolžine
+neodvisno in sipana svetloba je videti bela. Značilen primer Miejevega 
+sipanja je sipanje svetlobe na drobnih kapljicah megle ali oblakov, kar da 
+megli in oblakom značilno belo oziroma sivo barvo.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7truecm]{slike/07_oblak.jpg}\hfill
+\includegraphics[width=7truecm]{slike/07_meglaB.jpg}
+\caption{Oblaki (levo) in megla (desno) so videti belo zaradi sipanja svetlobe
+na drobnih kapljicah vode. Pojav opišemo z Miejevim sipanjem.}
+\label{fig:07_Mie}
+\vglue-2truemm
+\end{figure}
+
+Izračun Miejevega sipanja na splošno poteka tako, da z reševanjem Maxwellovih enačb 
+izračunamo polje znotraj in zunaj delca ter ustrezno upoštevamo robne pogoje med 
+delcem in okolico. Pri tem upoštevamo velikost in obliko delca ter njegove optične
+lastnosti, kot sta lomni količnik in koeficient absorpcije. Za okrogle delce 
+iščemo rešitve v sferičnih koordinatah. Pojav dovolj dobro opišemo, če rešujemo skalarno
+obliko Helmholtzeve enačbe (enačba~\ref{eq:03_12}) in rešitve
+poiščemo z metodo separacije spremenljivk:
 \beq
 E_{lm}(r,\vartheta, \varphi) = R_l(r) \Theta_l^m(\vartheta) \Phi_m(\varphi) = 
 E_0 e^{im\varphi}P_l^m (\cos \vartheta) Z_l (kr).
 \label{eq:07_20}
 \eeq
-Pri tem $P$ označujejo pridružene Legendrove polinome, $Z$ pa sferične Besslove funkcije prvega
-ali drugega reda. Celotno sipano polje zapišemo kot vsoto vseh prispevkov:
+Pri tem $P$ označujejo pridružene Legendrove polinome in $Z$ sferične Besslove 
+funkcije prvega ali drugega reda. Celotno sipano polje zapišemo kot vsoto vseh prispevkov:
 \beq
-E = \sum_{l,m} A_{l,m}E_{l,m}.
+E = \sum_{l,m} A_{lm}E_{lm},
 \label{eq:07_21}
 \eeq
-Navedene funkcije (vektorski sferični harmoniki) tvorijo poln ortogonalni sistem stanj. V sferične
-harmonike zato lahko razvijemo tudi vpadno valovanje. Celotno polje v prostoru potem zapišemo
-kot superpozicijo vpadnega in sipanega valovanja. Koeficiente $A$ pred različnimi členi pa dobimo
-iz robnih pogojev. 
+pri čemer koeficiente razvoja $A$ določimo iz robnih pogojev. 
 
-Z računom ugotovimo, da - podobno kot pri Fabry-Perotovem interferometru - tudi v sferičnih delcih
-lahko pride do resonance, kadar sta polmer delca in valovna dolžina v ustreznem razmerju. Takrat 
-je sipano polje oziroma energijski tok sipanega valovanja še posebej šibek (ali velik). Po drugi
-strani  pa sipalni izkoristek ni več tako izrazito odvisen od razmerja $R/\lambda$. GRAF. 
+Poglejmo sipalni izkoristek za Miejevo sipanje. Sipalni izkoristek $Q_s$ vpeljemo kot razmerje 
+med sipalnim presekom $\sigma_s$ in dejanskim prečnim presekom delca $A$.
+Za Rayleighovo sipanje z upoštevanjem enačbe~(\ref{eq:07_17}) in prečnega preseka kroglice $\pi R^2$
+izračunamo, da je sipalni izkoristek sorazmeren s četrto potenco $R/\lambda$ oziroma s četrto
+potenco $kR$. Za Miejevo sipanje je ta odvisnost zaradi interferenčnih pojavov bistveno
+bolj zapletena in shematsko prikazana na sliki~\ref{fig:07_MieGraf}. V limiti za majhne delce
+pa po pričakovanju preide v Rayleihovo sipanje, v limiti velikih vrednosti $kR$ pa za delce brez 
+absorpcije zavzame vrednost 2. V vmesnem območju se pojavijo vrhovi, tako imenovane Miejeve resonance, 
+pri katerih je sipanje še posebej močno. 
+\begin{figure}[!h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/07_MieGraf.pdf_tex}
+\caption{Sipalni izkoristek $Q_s$ za Miejevo sipanje na kroglici (a) in skica kotne porazdelitve
+Miejevega sipanja (b). Povzeto po Born in Wolf, {\it Principles of Optics}, sedma izdaja, Cambridge University Press (1999).
+}
+\label{fig:07_MieGraf}
+\end{figure}
 
-Tudi kotna odvisnosti $j(\beta)$ kaže številne minimume in maksimume. Prevladuje sipanje naprej (skica).
+Kotna odvisnost Miejevega sipanja (slika~\ref{fig:07_MieGraf},\,b) ima izrazit vrh v smeri naprej
+in le razmeroma malo svetlobe se siplje v smeri nazaj. Pri vmesnih kotih se pojavijo številni
+vrhovi in oslabitve. 
 
+\begin{remark}
+Pri obravnavi sipanja svetlobe smo se omejili le na elastično sipanje, pri katerem se valovna 
+dolžina svetlobe ohranja. Poleg tega poznamo neelastično sipanje, pri katerem se valovna dolžina 
+sipane svetlobe razlikuje od valovne dolžine vpadne svetlobe. Primer neelastičnega sipanja
+je Ramanovo sipanje. Ko se svetloba siplje, se del energije vpadnega valovanja porabi za 
+vzbujanje nihanj ali rotacije gradnikov snovi, sipana svetloba pa ima praviloma nižjo frekvenco oziroma
+večjo valovno dolžino. Razlika frekvenc vpadne in sipane svetlobe sovpada z energijskimi
+nivoji v snovi, zato je ta Ramanovo sipanje zelo uporabno za spektroskopske metode analize snovi.
 
-- beli oblaki.
-
-- detektor megle/plina. manj svetlobe pride do detektorja.
-
-***
-Dodaj: 
-Debye ali Miejevo sipanje - elastično na delcih ali molekulah, ki so primerljive
-z valovno dolžino sverlobe, izrazito enenakomerno sipanje. Ni zelo odvisno od
-valovne dolžine, kapljice v zraku - bel oblak in megla. 
-
-Brillouinovo sipanje - neelastično, na trdni snovi, vzbudimo fonone, majhni premiki.
-
-Ramanovo sipanje - neelastično, razlika v frekvencah je razlika v energijskih 
-nivojih atomov in molekul. Zelo uporabno za analizo materialov, kemijsko sestavo.
-Stokes, anti-stokes. 
-
-Uporaba sipanja, Rayleigh... Raman... 
-
-če je treba, lahko dodam sipalni presek za pol/nepol sipanje. Je enak.
+Drugi primer neelastičnega sipanja je Brillouinovo sipanje, pri katerem del energije 
+vpadne svetlobe preide na mrežna nihanja v snovi. Z merjenjem spremembe frekvence sipane svetlobe
+glede na frekvenco vpadne svetlobe lahko določimo lastnosti snovi.
+\end{remark}
