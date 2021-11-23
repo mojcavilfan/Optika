@@ -13,33 +13,30 @@ fazo na nekem drugem kraju ob nekem drugem času. V poglavjih o
 uklonu (poglavje~\ref{chap:Uklon}) in interferenci (poglavje~\ref{chap:Interferenca})
 smo pri zapisu elektromagnetnega valovanja privzeli, da poznamo njegovo fazo 
 na vsakem kraju in ob vsakem času, s čimer smo predpostavili, 
-da je elektromagnetno valovanje popolnoma koherentno. Jakost
-električnega polja v tem primeru zapišemo kot funkcijo $\mathbf{r}$ in $t$ 
+da je elektromagnetno valovanje popolnoma koherentno. Jakost 
+električnega polja popolno koherentnega valovanja zapišemo kot funkcijo $\mathbf{r}$ in $t$ 
 v obliki (enačba~\ref{eq:ravnival}):
 \beq
 \mathbf{E} (\mathbf{r}, t) = \mathbf{E}_0(\mathbf{r}, t) 
 e^{i\phi(\mathbf{r}, t)}.
 \label{eq:08_01}
 \eeq
-V realnih sistemih valovanje
-ni nikoli povsem koherentno in prej ali slej se povezava med njegovo 
-fazo izgubi. Koherentno valovanje ob interferenci da značilen interferenčni 
+Koherentno valovanje ob interferenci da značilen interferenčni 
 vzorec, ki se s časom ne spreminja, nekoherentno valovanje pa ne. Pri  
 delno koherentnih valovanjih interferenčne vzorce sicer opazimo, vendar z zmanjšanim
-kontrastom. 
+kontrastom. V realnih sistemih valovanje
+ni nikoli povsem koherentno in prej ali slej se povezava med njegovo 
+fazo izgubi. Ločimo časovno (tudi longitudinalno ali vzdolžno) in krajevno 
+(tudi transverzalno ali prečno) koherenco. 
 
 \section{Časovna koherenca}
-Najprej bomo opisali časovno koherenco, ki jo imenujemo tudi longitudinalna 
-oziroma vzdolžna koherenca. Časovna koherenca povezuje valovanje na istem mestu 
+Najprej bomo opisali časovno koherenco, ki povezuje valovanje na istem mestu 
 ob dveh različnih časih. Za opis se omejimo na monokromatsko elektromagnetno 
-valovanje v skalarnem približku. 
-Potem ga na mestu $\mathbf{r}$ ob časih $t$ in $t+\tau$ zapišemo kot:
+valovanje v skalarnem približku. Na mestu $\mathbf{r}$ ob časih $t$ in $t+\tau$ valovanje
+zapišemo kot:
 \beq
 E(\mathbf{r}, t) = E_0 e^{-i\omega t} e^{i\phi(\mathbf{r}, t)}
-\label{eq:08_02}
-\eeq
-in
-\beq
+\qquad \mathrm{in} \qquad
 E(\mathbf{r}, t+\tau) = E_0 e^{-i\omega (t+\tau)} e^{i\phi(\mathbf{r}, t+\tau)}.
 \label{eq:08_03}
 \eeq
@@ -47,12 +44,12 @@ Glede na povezavo med $\phi(\mathbf{r}, t)$ in $\phi(\mathbf{r}, t+\tau)$
 ločimo tri vrste valovanj:
 \begin{itemize}
  \item popolnoma koherentno valovanje, za katerega velja: $\phi(\mathbf{r}, t+\tau) = 
- f(\mathbf{r}, t, \phi(\mathbf{r}, t))$ za vsak $\tau$. Če poznamo fazo valovanja ob 
- nekem času, jo poznamo tudi ob vsakem drugem času.
+ f(\mathbf{r}, \tau, \phi(\mathbf{r}, t))$ za vsak $\tau$. 
+ Če poznamo fazo valovanja ob nekem času, jo poznamo tudi ob vsakem drugem času.
  \item delno koherentno, za katerega velja:
 \begin{equation}
 \phi(\mathbf{r}, t)=\begin{cases}
-f(\mathbf{r}, t, \phi(\mathbf{r}, t)); \quad \tau < \tau_c\\
+f(\mathbf{r}, \tau, \phi(\mathbf{r}, t)); \quad \tau < \tau_c\\
 \mathrm{ni~povezave}; \quad \tau > \tau_c.
 \end{cases}
 \label{eq:08_04}
@@ -112,19 +109,19 @@ koherenčni čas svetlobe.
 \vglue-3truemm
 \end{figure}
 
-Delni valovanji, ki nastaneta z delitvijo vpadnega snopa, po odbojih na 
+Vpadni snop svetlobe razdelimo na dve delni valovanji, ki po odbojih na 
 zrcalih interferirata na mestu detekcije. Čeprav izvirata iz istega 
-izvora, sta zaradi različno dolgih poti med seboj zakasnjeni. 
+izvora, sta delni valovanji zaradi različno dolgih poti med seboj zakasnjeni. 
 Časovna zakasnitev je enaka:
 \beq
 \tau = \frac{2 x}{c_0},
 \label{eq:08_05}
 \eeq
-pri čemer je $x$ pomik zrcala in tako $2x$ razlika poti med prvo in drugo 
+pri čemer je $x$ pomik zrcala in $2x$ razlika v dolžini poti med prvo in drugo 
 vejo interferometra. 
 
 Jakost
-električnega polja na detektorju zapišemo kot vsoto obeh prispevkov:
+električnega polja na detektorju zapišemo kot vsoto dveh delnih valovanj:
 \beq
 E_d = E(t) + E(t+\tau).
 \label{eq:08_06}
@@ -132,7 +129,7 @@ E_d = E(t) + E(t+\tau).
 Gostota svetlobnega toka  je sorazmerna kvadratu jakosti:
 \beq
 j_d \propto |E(t) + E(t+\tau)|^2 = \left(E(t) + E(t+\tau)\right) 
-\left(E^*(t) + E^*(t+\tau)\right),
+\left(E^*(t) + E^*(t+\tau)\right)\!,
 \label{eq:08_07}
 \eeq
 od koder sledi:
@@ -147,27 +144,28 @@ daljši od nihajnega časa svetlobe. Zato na detektorju zaznamo povprečen signa
 \left(|E(t)|^2 + |E(t+\tau)|^2 + 2 \Re \left( E(t)E^*(t+\tau)\right) \right) dt.
 \label{eq:08_09}
 \eeq
-Če sta amplitudi delnih žarkov enaki, velja:
+Kadar sta amplitudi delnih žarkov enaki, velja:
 \beq
 \langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 2\frac{1}{T}\int_{-T/2}^{T/2} 
 \Re \left( E(t)E^*(t+\tau)\right) dt.
 \label{eq:08_10}
 \eeq
-Izraz prepišemo:
+Vpeljemo časovno avtokorelacijsko funkcijo polja:
+\boxeq{eq:G1}{
+G^{(1)}(\tau)= \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2}E(t)E^*(t+\tau)dt
+}
+in signal na detektorju zapišemo kot:
 \beq
 \langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 
-2\Re \left( G^{(1)}(\tau)\right)\!\!,
+2\Re \left( G^{(1)}(\tau)\right)\!\!.
 \label{eq:08_11}
 \eeq
-pri čemer smo vpeljali časovno avtokorelacijsko funkcijo polja:
-\boxeq{eq:G1}{
-G^{(1)}(\tau)= \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2}E(t)E^*(t+\tau)dt.
-}
 Zapisana avtokorelacijska funkcija podaja korelacijo valovanja samega s seboj pri
-dani časovni zakasnitvi $\tau$. Pri tem $T$ označuje dolžino meritve. Poglejmo nekaj primerov.
+dani časovni zakasnitvi $\tau$. Poglejmo nekaj primerov.
 
 \begin{example}{\bf Avtokorelacija sinusnega valovanja.}
-Obravnavajmo ravno sinusno elektromagnetno valovanje. Zapišemo ga v obliki:
+Obravnavajmo ravno sinusno elektromagnetno valovanje pri točno določeni frekvenci. 
+Zapišemo ga v obliki:
 \beq
 E(t) = E_0 e^{-i\omega t} \qquad \mathrm{in} \qquad E(t+\tau)= E_0 e^{-i\omega(t+\tau)},
 \label{eq:08_12}
@@ -190,46 +188,66 @@ G^{(1)}(\tau) = E_0^2 e^{i\omega \tau}
 G^{(1)}(\tau) = E_0^2 \cos(\omega \tau).
 \label{eq:08_14a}
 \eeq
-Gostoto svetlobnega toka na detektorju zapišemo kot (enačba~\ref{eq:08_11}):
+Gostota svetlobnega toka na detektorju je potem enaka (enačba~\ref{eq:08_11}):
 \beq
-\langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 2 E_0^2 \Re \left(e^{i\omega \tau}\right)= 
+\langle j_d \rangle \propto  
 2E_0^2 + 2 E_0^2 \cos(\omega \tau).
 \label{eq:08_15}
 \eeq
-Vpeljemo $j_0$ kot gostoto energijskega toka delnega valovanja in izmerjeno 
-gostoto toka na detektorju prepišemo v:
+Vpeljemo $j_0$ kot gostoto energijskega toka posameznega delnega valovanja 
+in izmerjeno  gostoto toka na detektorju preoblikujemo v:
 \beq
-\langle j_d \rangle  = 4 j_0 \cos^2\frac{\omega \tau}{2}.
+\langle j_d \rangle  = 4j_0 \cos^2\frac{\omega \tau}{2}.
 \label{eq:08_15a}
 \eeq
 Z uporabo enačbe~(\ref{eq:08_05}) preoblikujemo še argument funkcije:
 \beq
-\omega \tau = 2\omega \frac{x}{c_0} = 2 k x = \Delta \phi
+\frac{\omega \tau}{2} = \omega \frac{x}{c_0} = k x = \frac{\Delta \phi}{2}.
 \label{eq:08_17}
 \eeq
-in dobimo izraz, ki ga že poznamo iz poglavja o interferenci (enačba~***). 
+Dobimo izraz:
+\beq
+\langle j_d \rangle  = 4j_0 \cos^2 (\Delta \phi/2).
+\label{eq:08_15c}
+\eeq
+ki ga že poznamo iz poglavja o interferenci (enačba~\ref{eq:06_09}). 
 
-
-Zapisani rezultat velja samo v primeru povsem koherentnega valovanja, za katerega znamo napovedati
-fazo v vsakem trenutku. V praksi pa opisano obnašanje opazimo le v bližini ekvidistančne 
+Zapisani rezultat velja samo v primeru povsem koherentnega monokromatskega 
+sinusnega valovanja, za katerega znamo zapisati fazo v vsakem trenutku. 
+V praksi opisano obnašanje opazimo le v bližini ekvidistančne 
 lege zrcal za majhne vrednosti $\Delta \phi$. Ko razliko v poteh posameznih delnih 
 žarkov povečujemo, se koherenca valovanja zmanjšuje in kontrast interferenčnega vzorca bledi.
-Pri zelo velikih vrednostih $\Delta l$ imata delna žarka naključni fazi, kar pomeni, da $\Delta \phi$
-zavzema naključne vrednosti med $0$ in $2\pi$. Posledično je povprečje $\langle \cos \Delta \phi \rangle= 0$
+Pri zelo velikih vrednostih $x$ imata delna žarka naključni fazi, 
+kar pomeni, da $\Delta \phi$ zavzema naključne vrednosti med $0$ in $2\pi$. 
+Posledično je povprečje $\langle \cos \Delta \phi \rangle= 0$
 in za velike vrednosti $\tau$ velja:
 \beq
 \langle j_d \rangle = 2 j_0.
 \eeq
+\begin{figure}[h]
+\vglue-3truemm
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/08_sinkoh.pdf_tex}
+\caption{Signal na detektorju Michelsonovega interferometra v odvisnosti od premika zrcala $x$
+v primeru koherentnega monokromatskega sinusnega valovanja (a). Kadar je dolžina valovanja
+končna in valovanje ni povsem monokromatsko, kontrast signala pri večjih $x$ oslabi. Karakteristična razdalja, na kateri kontrast signala oslabi, je koherenčna dolžina $L_c = c \tau_c$.
+}
+\label{fig:08_sinkoh}
+\vglue-7truemm
+\end{figure}
+
 \end{example} 
 
-Namesto koherenčnega časa $\tau_c$ pogosto vpeljemo koherenčno dolžino $L_c = c_0 \tau_c$. Označuje
-dolžino, ki jo svetloba prepotuje vzdolž svoje smeri znotraj koherenčnega časa. Valovanje, ki je 
-koherentno za $\tau < \tau_c$, je tako pri opisanem eksperimentu koherentno za spremembe dolžine poti, 
-za katere velja $L < L_c$. Pri večjih razlikah v dolžini poti se koherenca zmanjša in kontrast
-interferenčnih kolobarjev izgubi. 
-
-To metodo imenujemo tudi Fouriereva
-spektroskopija. 
+Namesto koherenčnega časa $\tau_c$ lahko vpeljemo koherenčno dolžino 
+$L_c = c_0 \tau_c$, ki označuje pot, ki jo svetloba prepotuje 
+v koherenčnem času. Časovno koherenco zato imenujemo tudi 
+longitudinalna ali vzdolžna koherenca, saj opazujemo zamik valovanja, ki se
+premakne vzdolžno glede na smer širjenja svetlobe. Valovanje, ki je 
+koherentno za $\tau < \tau_c$, je tako pri opisanem eksperimentu 
+koherentno za spremembe dolžine poti, za katere velja $L < L_c$. Pri 
+večjih razlikah v dolžini poti se koherenca zmanjša in kontrast
+interferenčne slike izgubi. 
 
 \section{Wiener-Hinčinov izrek}
 Električno polje analiziramo in detektiramo v nekem končnem časovnem intervalu $T$. Temu 
