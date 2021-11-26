@@ -150,7 +150,7 @@ Kadar sta amplitudi delnih žarkov enaki, velja:
 \Re \left( E(t)E^*(t+\tau)\right) dt.
 \label{eq:08_10}
 \eeq
-Vpeljemo časovno avtokorelacijsko funkcijo polja:
+Vpeljemo časovno avtokorelacijsko funkcijo polja za dolge čase zajemanja:
 \boxeq{eq:G1}{
 G^{(1)}(\tau)= \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2}E(t)E^*(t+\tau)dt
 }
@@ -223,6 +223,7 @@ Posledično je povprečje $\langle \cos \Delta \phi \rangle= 0$
 in za velike vrednosti $\tau$ velja:
 \beq
 \langle j_d \rangle = 2 j_0.
+\label{eq:08_18}
 \eeq
 \begin{figure}[h]
 \vglue-3truemm
@@ -231,7 +232,8 @@ in za velike vrednosti $\tau$ velja:
 \input{slike/08_sinkoh.pdf_tex}
 \caption{Signal na detektorju Michelsonovega interferometra v odvisnosti od premika zrcala $x$
 v primeru koherentnega monokromatskega sinusnega valovanja (a). Kadar je dolžina valovanja
-končna in valovanje ni povsem monokromatsko, kontrast signala pri večjih $x$ oslabi. Karakteristična razdalja, na kateri kontrast signala oslabi, je koherenčna dolžina $L_c = c \tau_c$.
+končna in valovanje ni povsem monokromatsko, kontrast signala pri večjih $x$ oslabi.
+Karakteristična razdalja, na kateri kontrast signala oslabi, je koherenčna dolžina $L_c = c \tau_c$.
 }
 \label{fig:08_sinkoh}
 \vglue-7truemm
@@ -250,88 +252,118 @@ večjih razlikah v dolžini poti se koherenca zmanjša in kontrast
 interferenčne slike izgubi. 
 
 \section{Wiener-Hinčinov izrek}
-Električno polje analiziramo in detektiramo v nekem končnem časovnem intervalu $T$. Temu 
-ustrezno ga lahko razvijemo v Fourierevo vrsto:
+Michelsonov interferometer lahko uporabimo za meritve emisijskih spektrov svetil
+ali absorpcijskih spektrov snovi. Takrat svetloba, ki vpada na interferometer,
+ni monokromatska, ampak je sestavljena iz valovanj z različnimi valovnimi dolžinami.
+S premikanjem zrcala interferometra na detektorju posnamemo celoten interferogram. Pokazali bomo, da
+spekter vpadne svetlobe izračunamo kot Fourierevo transformiranko posnetega interferograma. 
+
+Najprej razstavimo periodično vpadno električno polje na posamična valovanja z diskretnim
+Fourierevim razvojem. Pri tem upoštevamo, da polje analiziramo in zaznavamo le v nekem končnem
+časovnem intervalu $T$. Fourierev razvoj je potem:
 \beq
-E(t) = \sum_n A_n e^{-i \omega_0 nt} = \sum_n A_n e^{-i \omega_nt}
+E(t) = \sum_n A_n e^{-i n \Delta\omega t},
+\label{eq:08_19}
 \eeq
-pri čemer je $\omega_0 = 2\pi/T$, $n$ pa je celo število.
-Podobno zapišemo tudi:
+pri čemer je širina intervala $\Delta\omega = 2\pi/T$, $n$ pa je celo število. Koeficienti
+razvoja $A_n$ označujejo delež polja pri krožni frekvenci $n\Delta \omega$. 
+V nadaljevanju bomo krožno frekvenco posamezne komponente pisali kot 
+$\omega_n$:
+\beq
+\omega_n = n \Delta \omega = n \frac{2\pi}{T}.
+\label{eq:08_20}
+\eeq
+Razstavimo še polje zakasnjenega delnega valovanja oziroma njegove kompleksno konjugirane vrednosti:
 \beq
 E^*(t+\tau) = \sum_m A_m^* e^{i\omega_m (t + \tau)},
+\label{eq:08_21}
 \eeq
-kjer je $m$ celo število. Izraza vstavimo v definicijo za časovno avtokorelacijsko funkcijo polja:
+kjer je $m$ celo število. Signal na detektorju je sorazmeren z avtokorelacijsko funkcijo
+polja, zato razstavljeni polji vstavimo v definicijo avtokorelacijske funkcije (enačba~\ref{eq:G1}):
 \beq
 G^{(1)}(\tau) = \lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2} \sum_{n,m} A_n A_m^* e^{-i\omega_n t}
-e^{i\omega_m (t+\tau)} dt= \sum_{n,m} A_n A_m^*e^{i\omega_m\tau} \left(
-\lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2}e^{i(\omega_m - \omega_n)t}dt \right)\!\!.
+e^{i\omega_m (t+\tau)} dt.
+\label{eq:08_22}
 \eeq
-Izraz v oklepaju je v limiti za velike vrednosti $T$ enak funkciji $\delta(\omega_n - \omega_m)$, zato 
-sledi:
+Sledi:
+\beq
+G^{(1)}(\tau) = 
+\sum_{n,m} A_n A_m^*e^{i\omega_m\tau} \left(
+\lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2}e^{i(\omega_m - \omega_n)t}dt \right)\!\!.
+\label{eq:08_23}
+\eeq
+Privzamemo, da je čas meritve razmeroma dolg ($T\to\infty$) in izraz v oklepaju zapišemo kot funkcijo
+$\delta(\omega_n - \omega_m)$. Dobimo:
 \beq
 G^{(1)}(\tau) = \sum_m|A_m|^2e^{i\omega_m\tau}.
+\label{eq:08_24}
 \eeq 
-V nasprotnem primeru, ko $T$ ne gre proti neskončnosti, moramo predpostaviti, da členi z različnimi
-frekvencami ne interferirajo drug z drugimi. To je približek 1, ki smo ga naredili.
+Izračunajmo Fourierevo transformiranko avtokorelacijske funkcije:
+\beq
+\frac{1}{2\pi}\int_{-\infty}^{\infty} G^{(1)} (\tau) e^{-i\omega \tau} d\tau = 
+\frac{1}{2\pi}\sum_m |A_m|^2 \int_{-\infty}^{\infty} e^{i\omega_m\tau}e^{-i\omega \tau} d\tau = 
+\frac{T}{2\pi}|A (\omega)|^2.
+\label{eq:08_25}
+\eeq
+V zadnjem koraku smo upoštevali enačbo~(\ref{eq:08_20}) in integral zapisali kot 
+$T \delta (2\pi m  - \omega T)$, od koder sledi pogoj $\omega_m = \omega$. 
+Spomnimo se, kaj opisujejo parametri $A(\omega)$: to so deleži električnega polja pri 
+dani frekvenci $\omega$, kvadrat $|A(\omega)|^2$ pa je enak intenziteti svetlobe pri tej
+frekvenci.
 
-Izračunajmo njegovo Fourierevo transformiranko:
+Vpeljemo spekter svetlobe $S(\omega)$ kot intenziteto svetlobe pri $\omega$ na frekvenčni 
+interval $\Delta \omega$:
 \beq
-\frac{1}{2\pi T}\lim_{T\to \infty}\int_{-T/2}^{T/2} G^{(1)} (\tau) e^{-i\omega \tau} d\tau = 
-\sum_m |A_m|^2\lim_{T\to \infty}\frac{1}{2\pi T}\int_{-T/2}^{T/2} e^{i\omega_m\tau}e^{-i\omega \tau} d\tau.
+S(\omega) = \frac{|A(\omega)|^2}{\Delta \omega} = \frac{T}{2\pi}|A(\omega)|^2.
+\label{eq:08_26}
 \eeq
-Integral gre za velike vrednosti $T$ proti delta funkciji $\delta (\omega_m - \omega)$, kar pomeni, 
-da bi vrednosti G načeloma morali poznati za vsak $\tau$. Vendar to eksperimentalno ni izvedljivo.
-Navadno lahko predpostavimo, da so vrednosti G izven merilnega območja  enake 0 oziroma zanemarljivo 
-majhne. To je pa približek 2, ki smo ga naredili. Sledi:
-\beq
-\mathcal{F}(G^{(1)})  = |A_m|^2 \propto S(\omega).
-\eeq
-S $S(\omega)$ smo označili spekter svetlobe -- to je intenziteto svetlobe pri frekvenci $\omega$, deljeno
-z intervalom $\omega_0$. To popravi da delta omega!
+
+Primerjava enačb~(\ref{eq:08_25}) in (\ref{eq:08_26}) pokaže, da je spekter svetlobe enak 
+Fourierevi transformiranki avtokorelacijske funkcije svetlobnega električnega polja:
 \boxeq{eq:WH}{
-S(\omega) \propto \lim_{T \to \infty}\frac{1}{T}\int_{-T/2}^{T/2} G^{(1)}(\tau) e^{-i\omega \tau} d\tau.
+S(\omega) = \frac{1}{2\pi}\int_{-\infty}^{\infty} G^{(1)} (\tau) e^{-i\omega \tau} d\tau.
 }
-Z izračunom smo pokazali, da je spekter svetlobe $S(\omega)$
-Fouriereva transformiranka časovne avtokorelacijske funkcije polja $G^{(1)}(\tau)$. To trditev
-imenujemo Wiener-Hinčinov izrek po ameriškem matematiku Norbertu Wienerju (1894--1964) ter 
-ruskemu matematiku Aleksandru Jakovljeviču Hinčinu (1894--1959).
+Zapisano zvezo imenujemo Wiener-Hinčinov izrek po ameriškem matematiku Norbertu
+Wienerju (1894--1964) in ruskemu matematiku Aleksandru Jakovljeviču Hinčinu (1894--1959).
 
-Od tod pride ime Fouriereva spektroskopija. 
+Z Michelsonovim interferometrom lahko z uporabo Wiener-Hinčinovega izreka izmerimo
+spekter svetlobe. Pri tem je pomembno, da signal na detektorju merimo oziroma
+povprečimo čim dlje. Predvsem mora veljati $T \gg \tau_c$, sicer sploh ne bi zaznali 
+preskoka faze, temveč bi izmerili navidez povsem koherentno svetlobo. 
 
-Zapisani limitni izraz velja za diskretni spekter. Če je spekter zvezen, lahko limito izvrednotimo in dobimo
-zvezo:
+Poleg tega smo pri računu privzeli, da poznamo avtokorelacijsko funkcij $G^{(1)}(\tau)$ 
+za vse vrednosti $\tau$, to je za vse premike zrcala $x$. Tega seveda eksperimentalno
+ne moremo narediti, vendar navadno velja, da so vrednosti
+avtokorelacijske funkcije znatno večje od 0 le za $\tau <\tau_c$, izven merilnega
+območja pa so tako majhne, da na rezultat ne vplivajo.
+
+\begin{example}{\bf Spekter ravnega valovanja.}
+Za primer si oglejmo spekter povsem koherentnega ravnega valovanja, ki ga zapišemo
+kot:
 \beq
-S(\omega) \propto \int_{-\infty}^{\infty} G^{(1)}(\tau) e^{-i\omega \tau} d\tau.
+E(t) = E_0 e^{-i\omega_0 t}.
+\label{eq:08_27}
 \eeq
-V eksperimentu pri Fourierevi spektroskopiji je pomembno, da signal na detektorju merimo oziroma
-povprečimo čim dlje. Pri tem mora veljati $T \gg \tau_c$. Če bi merili krajši čas, sploh ne bi opazili, da
-faza preskoči, ampak bi dobili tak rezultat kot pri povsem koherentni svetlobi. 
+Avtokorelacijsko funkcijo takega valovanja smo že izračunali (enačba~\ref{eq:08_14}), zdaj
+pa izračunajmo še spekter kot Fourierevo transformacijo avtokorelacijske funkcije:
+\beq
+S(\omega) = \frac{1}{2\pi}\int_{-\infty}^{\infty} E_0^2 e^{i\omega_0 \tau} e^{-i\omega \tau} d\tau,
+\eeq
+od koder sledi:
 
-Druga pomembna stvar je v tem, da naredimo meritve tudi pri velikih razmikih zrcal $\Delta L \gg t_cc_0$. 
-To pa zato, ker je $t_c$ v resnici statistični parameter in dolžine nekaterih 
-valovnih potez lahko tudi 
-zelo velike. Pravo vrednost povprečja $\tau_c = \langle \Delta t\rangle$ lahko dobimo le, če v eksperimentu
-preverimo vse možne vrednosti. 
+\end{example}
 
-V praksi seveda ni niti $T= \infty$ niti $\Delta L = \infty$ možno doseči. Težave rešimo z upoštevanjem
-t.i. okenskih funkcij. 
+
 Če je svetloba povsem koherentna, potem je spekter delta funkcija. Drugače pa v splošnem velja
 \boxeq{eq:spkor}{
 \delta \omega \tau_c \gtrsim 2\pi.
 }
 Opisano zvezo imenujemo K\"upfm\'ullerjev princip nedoločenosti. Krajši kot je koherenčni čas, širši je 
-spekter in obratno, dolg koherenčni čas da ozek spekter.
-
-Wiener Hinčinov izrek zares velja, samo kadar intenziteto na detektorju merimo oziroma povprečimo
-neskončno dolgo $-\infty < t <\infty$ 
-in kadar pri zaporednih meritvah zamik med delnima žarkoma v interferometru zavzame
-vse vrednosti $-\infty <\tau <\infty$. Tem zahtevam se v praksi izognemo ob predpostavki, da so 
-vrednosti G znatno večje od 0 le za $\tau <\tau_c$ ter da so funkcije polja $E(t)$ na velikih
-časovnih intervalih zanemarljivo majhne.
+spekter in obratno, dolg koherenčni čas da ozek spekter. 
 
 
-WAIT - KAKŠNE MERITVE, KAJ SPLOH MERIMO, ZAKAJ MERIMO? Merimo spektre svetil (emisijske) ali pa 
-absorpcijske, tako da v snop svetlobe postavimo snov, ki jo proučujemo. 
+
+Od tod pride ime Fouriereva spektroskopija. 
 
 
 \section{Prostorska koherenca}
