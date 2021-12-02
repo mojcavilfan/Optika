@@ -1,4 +1,4 @@
-%\chapterimage{Geometrijska.jpg} % Chapter heading image
+\chapterimage{08_Koherenca.jpg} % Chapter heading image
 
 \chapter{Koherenca}
 \label{chap:Koherenca}
@@ -200,6 +200,7 @@ in izmerjeno  gostoto toka na detektorju preoblikujemo v:
 \langle j_d \rangle  = 4j_0 \cos^2\frac{\omega_0 \tau}{2}.
 \label{eq:08_15a}
 \eeq
+Signal na detektorju je prikazan na sliki~\ref{fig:08_sinkoh}\,a.
 Z uporabo enačbe~(\ref{eq:08_05}) preoblikujemo še argument funkcije:
 \beq
 \frac{\omega_0 \tau}{2} = \omega_0 \frac{x}{c_0} = k x = \frac{\Delta \phi}{2}.
@@ -216,7 +217,8 @@ Zapisani rezultat velja samo v primeru povsem koherentnega monokromatskega
 sinusnega valovanja, za katerega znamo zapisati fazo v vsakem trenutku. 
 V praksi opisano obnašanje opazimo le v bližini ekvidistančne 
 lege zrcal za majhne vrednosti $\Delta \phi$. Ko razliko v poteh posameznih delnih 
-žarkov povečujemo, se koherenca valovanja zmanjšuje in kontrast interferenčnega vzorca bledi.
+žarkov povečujemo, se koherenca valovanja zmanjšuje in kontrast interferenčnega vzorca bledi 
+(slika~\ref{fig:08_sinkoh}\,b).
 Pri zelo velikih vrednostih $x$ imata delna žarka naključni fazi, 
 kar pomeni, da $\Delta \phi$ zavzema naključne vrednosti med $0$ in $2\pi$. 
 Posledično je povprečje $\langle \cos \Delta \phi \rangle= 0$
@@ -390,13 +392,14 @@ S(\omega) \propto \delta (\omega - \omega_0).
 \label{eq:08_202}
 \eeq
 Po pričakovanju je spekter ravnega valovanja neskončno ozek (funkcija delta) pri krožni
-frekvenci valovanja $\omega_0$. 
+frekvenci valovanja $\omega_0$ (slika~\ref{fig:08_spekter}\,a in b).
 \end{example}
 
 \begin{example}{\bf Spekter omejenega ravnega valovanja.}
 Poglejmo še bolj realistični primer, v katerem je valovanje časovno omejeno. Naj bo 
 valovanje enako ravnemu valovanju zgolj v intervalu dolžine $\tau_0$, sicer naj bo jakost
-električnega polja enaka nič. Ker gre za neperiodični signal, zapišemo avtokorelacijsko
+električnega polja enaka nič (slika~\ref{fig:08_spekter}\,c).
+Ker gre za neperiodični signal, zapišemo avtokorelacijsko
 funkcijo z enačbo~(\ref{eq:G12}), nato pa izračunamo njeno Fourierevo transformacijo.
 Ker je avtokorelacijska funkcija polja konvolucija funkcije same s seboj, 
 je Fouriereva transformiranka avtokorelacijske funkcije enaka kvadratu Fouriereve transformiranke
@@ -430,7 +433,8 @@ prekrivata. Takrat za spekter pri pozitivnih frekvencah velja:
 S(\omega) \propto \mathrm{sinc}^2\left(\left(\omega - \omega_0\right)\frac{\tau_0}{2}\right).
 \label{eq:08_206}
 \eeq
-Ničli okoli osrednjega vrha spektra sta pri $\omega_0 \pm 2\pi/\tau$, zato širino spektra ocenimo
+Spekter je prikazan na sliki~\ref{fig:08_spekter}\,d. Ničli okoli osrednjega vrha 
+spektra sta pri $\omega_0 \pm 2\pi/\tau_0$, zato širino spektra ocenimo
 na $\Delta \omega = 2\pi/\tau_0$. Z naraščajočim $\tau_0$ se spekter oži in v limiti 
 neskončno dolgega trajanja sunka po pričakovanju
 preide v funkcijo delta pri frekvenci $\omega_0$. 
@@ -442,6 +446,7 @@ preide v funkcijo delta pri frekvenci $\omega_0$.
 sunek valovanja končnen (c), se spekter razširi (d).
 }
 \label{fig:08_spekter}
+\vglue-4truemm
 \end{figure}
 
 \end{example}
@@ -501,7 +506,7 @@ prečni koherenčni razdalji vpadnega valovanja.
 Zaradi preprostosti se omejimo na ravninski primer in odprtini obravnavajmo kot ozki reži.
 Označimo velikost svetila z $L$, razmik med režama z $D$, oddaljenost med 
 svetilom in objektnim zaslonom pa naj bo $z_0'$. Svetloba po prehodu skozi reži 
-vpade na opazovalni zaslon na oddaljenosti $z_0$ od objektnega zaslona.
+vpade na opazovalni zaslon na oddaljenosti $z_0$ od objektnega zaslona (slika~\ref{fig:08_kohprost}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
@@ -560,29 +565,51 @@ zaradi velike oddaljenosti in posledično majhnega zornega kota svetloba, ki vpa
 na teleskope, prostorsko koherentna.
 
 \begin{example}{\bf Merjenje velikosti zvezd.}
-Z Youngovim poskusom lahko izmerimo velikost zvezde, če poznamo njeno oddaljenost od Zemlje. Na ta način
-so leta 1920 prvič izmerili premer katerekoli zvezde, izmerili so zvezdo $\alpha$ v ozvezdju Orion
-(Betelgeza). Oddaljenost (kako vejo?) zvezde je $z_0' = 600$~svetlobnih let. Interferenčna razdalja
-je zbledela na razdalji med režama $D_\mathrm{max} = 2~\si{m}$. Zvezda je sicer zelo majhna, ampak zorni
-kot je pa različen od nič, zato svetloba z različnih delov zvezde vpada na zrcali pod rahlo različnima
-kotoma. Gledamo interferenco med njima oziroma kdaj izgine kontrast. 
-Ker je $D_\mathrm{max} = 2~\si{m}$, lahko izračunamo:
+Z Youngovim poskusom lahko izmerimo velikost zvezde, če poznamo njeno oddaljenost. 
+Ker zvezde opazujemo pod zelo majhnim zornim kotom, je njihova koherenčna ploskev
+na Zemlji razmeroma velika. Zato namesto premičnih odprtin v zaslonu uporabimo dve 
+premični zrcali, ki vpadno svetlobo prek drugega para zrcal usmerita na zbiralno lečo.
+Na zaslonu opazujemo interferenco valovanj, ki vpadata pod malenkost različnima vpadnima kotoma
+(slika~\ref{fig:08_Stellar}). Z večanjem razmika med zrcaloma interferenčni kontrast izgine, kar
+omogoča določiti velikost zvezde.
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/08_Stellar.pdf_tex}
+\caption{Michelsonov zvezdni interferometer, s katerim merimo velikost zvezd. 
+Z večanjem razmika med zrcaloma ($D$) kontrast na zaslonski sliki izgine in iz razmika med zrcaloma 
+lahko določimo zorni kot zvezde.}
+\label{fig:08_Stellar}
+\vskip-4truemm
+\end{figure}
+
+Z opisano postavitvijo sta leta 1920 Michelson in astronom Francis Gladheim Pease
+prvič izmerila premer katerekoli zvezde. Opazovala sta interferenco svetlobe z 
+zvezde $\alpha$ v ozvezdju Orion (Betelgeza) in opazila, da pri razmiku zrcal, večjem
+od $D_c = 307~\si{cm}$, interferenčni kontrast izgine. Privzela sta, da je valovna dolžina
+svetlobe $575~\si{nm}$ in z upoštevanjem popravka za okrogel predmet (glej enačbo~\ref{eq:05_42}) 
+določila zorni kot:
 \beq
-D_B = 2R = L = \frac{z_0' \lambda}{D_\mathrm{max}} \approx 1,4 \times 10^{12}~\si{m}.
+\alpha = 1,22 \frac{\lambda}{D_c} = 2,3 \times 10^{-7}~\si{\radian} = 0,047\si{\arcsec}.
+\label{eq:08_33}
 \eeq
-PAZI - dejansko so določili leta 1920, da je premer enak 390MKm., to je okoli 300x toliko kot Sonce. 
-Pri 10 feet je izginil vzorec, valovna dolžina 550 nm, kot 0,045 sekund. Hm, polmer je 760 +120/-60 od sonca.
-Preveri! Irena: izmerili, da je DB = 1000 Ds, danes vemo, da je 887 +/- 203 premere sonca. 
-
-S teleskopi lahko dobimo podobno ločljivost, vendar jih je bolj zahtevno zgraditi s tako veliko lečo.
-
-Na sliki modre črte označujejo pot in interferenčni vzorec svetlobe, ki prihaja iz sredine zvezde, rdeče
-črte pa pot in interferenčni vzorec z roba zvezde. Naklon smeri slednje določa zorni kot zvezde. 
-V eksperimentu spreminjamo razdaljo med zrcaloma M1 in M2, ki nadomeščata reži v Youngovem poskusu
-in opazujemo bledenje interferenčnega vzorca. 
+Z upoštevanjem oddaljenosti zvezde (podatek so pridobili iz paralakse) sta ocenila premer
+na $390 \times 10^6~\si{km}$, kar ustreza približno $300~\times$ premeru Sonca. Poznejše 
+natančnejše meritve so pokazale, da je zvezda približno trikrat večja. Glavnina napake je 
+izvirala iz nenatančne ocene oddaljenosti zvezde. 
 \end{example}
 
 \section{Van Cittert-Zernikov izrek}
+Obravnavajmo prostorsko koherenco podrobneje. Pokazali bomo, da je kontrast interferenčnih prog
+sorazmeren z navzkrižno korelacijsko funkcijo jakosti električnega polja, podobno kot
+je pri časovni koherenci kontrast interferenčnih prog sorazmeren z avtokorelacijsko funkcijo polja
+(enačba~\ref{eq:G12}).
+
+
+
+Naj svetloba s svetila vpada na objektni zaslon, v katerem sta dve odprtini. Na oddaljenem opazovalnem
+zaslonu z detektorjem zaznavamo vpadno svetlobo kot funkcijo koordinate 
+
 Podobno kot pri Michelsonovem interferometru v Fourierevi spektroskopiji tudi v tem eksperimentu z
 detektorjem merimo dolgo časa, tako da velja:
 \beq
