@@ -580,7 +580,6 @@ omogoča določiti velikost zvezde.
 Z večanjem razmika med zrcaloma ($D$) kontrast na zaslonski sliki izgine in iz razmika med zrcaloma 
 lahko določimo zorni kot zvezde.}
 \label{fig:08_Stellar}
-\vskip-4truemm
 \end{figure}
 
 Z opisano postavitvijo sta leta 1920 Michelson in astronom Francis Gladheim Pease
@@ -601,121 +600,177 @@ izvirala iz nenatančne ocene oddaljenosti zvezde.
 
 \section{Van Cittert-Zernikov izrek}
 Obravnavajmo prostorsko koherenco podrobneje. Pokazali bomo, da je kontrast interferenčnih prog
-sorazmeren z navzkrižno korelacijsko funkcijo jakosti električnega polja, podobno kot
+na zaslonu sorazmeren z navzkrižno korelacijsko funkcijo jakosti električnega polja, podobno kot
 je pri časovni koherenci kontrast interferenčnih prog sorazmeren z avtokorelacijsko funkcijo polja
-(enačba~\ref{eq:G12}).
+(enačba~\ref{eq:G12}). Nadalje velja, da je kontrast interferenčnih prog sorazmeren z 2D-Fourierevo
+transformiranko intenzitetne porazdelitve na oddaljenem izvoru. Čeprav je svetloba, ki jo oddaja
+svetilo, nekoherentna, stopnja njene koherence narašča z oddaljenostjo, zato je svetloba, ki vpada z zelo
+oddaljenih svetil (na primer zvezd), koherentna. Z inverzno transformiranko lahko iz izmerjenega
+interferenčnega vzorca določimo intenzitetno porazdelitev svetila. To ugotovitev imenujemo
+Van Cittert-Zernikov izrek po nizozemskem fiziku Pietru Hendriku van Cittertu (1889-1959) 
+in nizozemskem fiziku in nobelovcu Fritsu Zerniku (1888--1966).
 
+Naj svetloba s svetila vpada na objektni zaslon, v katerem sta dve odprtini, na oddaljenem
+opazovalnem zaslonu pa opazujemo interferenčno sliko (slika~\ref{fig:08_VCZ}). Svetloba, ki vpada 
+na dano točko zaslona, je sestavljena iz prispevkov iz prve in druge odprtine. Privzamemo, 
+da je meritev dovolj dolga, da z detektorjem zaznavamo povprečni signal $\langle j_d \rangle$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/08_VCZ.pdf_tex}
+\caption{Svetloba iz nekoherentnega izvora vpada na objektni zaslon, v katerem sta dve odprtini.
+Na oddaljenem objektnem zaslonu opazujemo interferenčno sliko v odvisnosti od razmika med 
+odprtinami. Ko razmik doseže koherenčno razdaljo, kontrast interferenčnih prog izgine.}
+\label{fig:08_VCZ}
+\vskip-4truemm
+\end{figure}
 
-
-Naj svetloba s svetila vpada na objektni zaslon, v katerem sta dve odprtini. Na oddaljenem opazovalnem
-zaslonu z detektorjem zaznavamo vpadno svetlobo kot funkcijo koordinate 
-
-Podobno kot pri Michelsonovem interferometru v Fourierevi spektroskopiji tudi v tem eksperimentu z
-detektorjem merimo dolgo časa, tako da velja:
+Povprečni signal na detektorju je sorazmeren kvadratu jakosti električnega polja, ki ga zapišemo
+kot vsoto prispevkov iz posameznih odprtin:
 \beq
-\langle j_d \rangle \propto \langle|E_1(t)|^2 \rangle + \langle|E_2(t<+\tau)|^2 \rangle
-+ 2\Re \left( \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt \right).
+\langle j_d \rangle \propto \langle|E_1(t)+ E_2(t+\tau)|^2 \rangle,
+\label{eq:08_34}
+\eeq
+pri čemer smo upoštevali časovni zamik $\tau$, ki nastane zaradi različno dolgih poti od
+odprtin do detektorja. Sledi:
+\beq
+\langle j_d \rangle \propto \langle|E_1(t)|^2 \rangle + \langle|E_2(t+\tau)|^2 \rangle
++ 2\Re \left( \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt \right)\!\!.
+\label{eq:08_35}
 \eeq
 Pri tem prvi člen opisuje svetlobno polje iz prve reže, drugi člen svetlobo iz druge reže, 
-tretji člen pa imenujemo navzkrižna korelacijska funkcija polja. Časovni zamik $\tau$ je enak:
-\beq
-\tau = \frac{l_1-l_2}{c_0} \approx \frac{kD\sin\alpha}{c_0}.
-\eeq
-Če je svetloba iz posamezne reže časovno koherentna, velja:
+izraz v oklepaju tretjega člena pa predstavlja navzkrižno korelacijsko funkcijo polja ob dolgih
+časih meritve:
+\boxeq{eq:CC}{
+\Gamma_{12}(\tau) = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt.
+}
+Kadar je svetloba iz 
+posamezne reže časovno koherentna, velja:
 \beq
 E^*(t+\tau) = e^{i \omega \tau} E^*(t)
+\label{eq:08_36}
 \eeq
 in navzkrižno korelacijsko funkcijo zapišemo kot:
 \beq
-\Gamma_{12}(\tau) = \Re \left(e^{i \omega \tau} \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt \right) =
-\Re \left(e^{i \omega \tau} J_{12}\right). 
+\Gamma_{12}(\tau) = e^{i \omega \tau} \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t) dt \right) =
+ J_{12} e^{i \omega \tau}. 
+ \label{eq:08_37}
 \eeq
-Z $J_{12}$, ki je enak:
+Člen $J_{12}$, ki je enak:
 \beq
-J_{12} = \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt,
+J_{12} = \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t) dt,
+\label{eq:08_38}
 \eeq
-je odvisen od prostorske koherence valovanja in določa kontrast oziroma vidljivost interferenčne slike. 
-nizozemskem fiziku Pietru Hendriku van Cittertu (1889-1959) in nizozemskem fiziku in nobelovcu
-Fritsu Zerniku (1888--1966). 
-Pokazati se da, da je vrednost $J_{12}$ povezana z intenzitetnim profilom  svetlobnega polja 
-$j_{0i}(x',y')$, pri čemer $j_{0i}$ označuje gostoto izsevanega svetlobnega toka.
-Potem velja: 
-\beq
-J_{12} = \frac{\pi}{z_0'^2}\iint j_{0i}(x', y') e^{ikx'\Delta x/z_0'}e^{iky'\Delta y/z_0'} dx'dy',
-\eeq
-pri čemer je $\Delta x = x_2 -x_1$ in $\Delta y = y_2-y_1$. To je Van Cittert-Zernikov izrek po 
+je odvisen od prostorske koherence valovanja in določa kontrast oziroma vidljivost interferenčne slike
+na opazovalnem zaslonu. Zaradi preglednosti v zapisu izpuščamo limito, vendar se moramo zavedati, 
+da zapisano velja le za dovolj dolge meritve.
 
-Koordinate $(x_1, y_1)$ so koordinate prve reže oziroma odprtine v 
-objektnem zaslonu, koordinate $(x_2, y_2)$ pa koordinate druge 
-reže oziroma odprtine v objektnem zaslonu. Vidljivost oziroma kontrast
-interferenčne slike $J_{x_1,y_1,x_2,y_2}$ je 2D Fouriereva transformiranka 
-intenzitetnega profila izvora.
-Velja pa seveda tudi obratno: s Fourierevo transformacijo vidljivosti 
-po $\Delta x$ in $\Delta y$ lahko
-dobimo intenzitetni profil svetlobnega objekta. Uporabno v astronomiji.
-
-Izpeljava Van Cittert-Zernikovega izreka: Kontrast oziroma vidljivost interferenčnih prog
-določa $J_{12}$, za katerega velja:
+Označimo z $(x_1, y_1)$ koordinate prve odprtine v objektnem zaslonu in z $(x_2, y_2)$
+koordinate druge odprtine. Svetilo s ploskvijo $S$ naj leži v ravnini $x'y'$. Potem je svetloba, 
+ki vpada na posamezno odprtino, sestavljena iz prispevkov vseh točk svetila $S$. Polje v prvi
+odprtini zapišemo kot:
 \beq
-J_{12} = \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt = \langle E_1(t) E_2^*(t)\rangle.
+E_1 \propto \iint_S E_0(x',y') \frac{e^{ikr_1'}}{r_1'}dx'dy'
+\label{eq:08_39}
 \eeq
-pri čemer je $E_1$ polje na reži 1 in $E_2$ polje na reži 2. 
-Lega rež naj bo določena s koordinatama $(x_1,y_1)$ in  $(x_2,y_2)$ na objektnem zaslonu.
-
-Svetloba, ki prihaja na režo 1 ali 2, izvira iz vseh točk svetlečega zaslona $(x', y')$. Potem 
-zapišemo:
+in podobno polje v drugi reži kot:
 \beq
-E_1 \propto \iint E_0(x',y') \frac{e^{ikr_1'}}{r_1'}dx'dy'
+E_2 \propto \iint_S E_0(x'',y'') \frac{e^{ikr_2''}}{r_2''}dx''dy''.
+\label{eq:08_40}
 \eeq
-in podobno za polje v drugi reži:
+Vstavimo polji v enačbo~(\ref{eq:08_38}) in dobimo:
 \beq
-E_2 \propto \iint E_0(x'',y'') \frac{e^{ikr_2''}}{r_2''}dx''dy''.
-\eeq
-Sledi:
-\beq
-J_{12} = \langle E_0(x',y')E_0^*(x'',y'')\rangle.
+J_{12} \propto \iint_S \iint_S \langle E_0(x',y') E_0^*(x'',y'') \rangle  \frac{e^{ik(r_1'-r_2')}}{r_1'r_2'}dx'dy'dx''dy''.
+\label{eq:08_41}
 \eeq
 Kadar je svetloba, ki izvira iz različnih delov svetila med seboj povsem nekorelirana,
-dobimo od nič različno povprečje le v primeru, da je $x'=x''$ in $y'=y''$. To seveda velja, 
+je povprečje različno od nič le v primeru, ko sta $x'=x''$ in $y'=y''$. To seveda velja, 
 če svetilo samo po sebi ni prostorsko koherentno, denimo termična svetloba zvezd.
-Potem je:
+Zapišemo:
 \beq
-J_{12} \propto \delta(x'-x'', y'-y'') |E_0|^2.
+\langle E_0(x',y') E_0^*(x'',y'') \rangle \propto \delta(x'-x'', y'-y'') |E_0(x',y')|^2.
+\label{eq:08_42}
 \eeq
-Vstavimo polji enačbi.. v izraz za vidnost in dobimo:
+Enačbo~(\ref{eq:08_41}) poenostavimo, pri čemer privzamemo, da je oddaljenost svetila od 
+objektnega zaslona bistveno večja od dimenzij svetila, tako da $r_1'$ in $r_2'$ v imenovalcu 
+nadomestimo z $z_0'$:
 \beq
-J_{12} \propto \iint_S |E_0(x',y')|^2 \frac{e^{ikr_1'}}{r_1'}\frac{e^{ikr_2'}}{r_2'}dx'dy'
-\approx \frac{1}{z_0^2}\iint_S j_{0i}(x',y') e^{ik(r_1'-r_2')}dx'dy'.
+J_{12} \propto \iint_S |E_0(x',y')|^2 \frac{e^{ik(r_1'-r_2')}}{z_0'^2}dx'dy'
+\propto \frac{1}{z_0'^2}\iint_S j_0(x',y') e^{ik(r_1'-r_2')}dx'dy'.
+\label{eq:08_43}
 \eeq
-Vstavimo in razvijemo za veliko oddaljenost med izvorom in objektnim zaslonom:
+Z $j_0(x',y')$ smo označili intenziteto svetlobe, ki jo oddaja izbrana točka na svetilu, 
+v odvisnosti od lege točke $(x',y')$.
+
+Parameter $r_1'$ razvijemo za veliko oddaljenost izvora od objektnega zaslona:
 \beq
-r_1' = z_0' \sqrt{1+(x_1-x')^2/z_0'^2+ (y_1-y')^2/z_0'^2} \approx
+r_1' = \sqrt{z_0'^2+(x_1-x')^2+ (y_1-y')^2} \approx
 z_0'-\frac{x_1x'}{z_0'}-\frac{y_1y'}{z_0'}+\frac{x_1^2}{2z_0'}+\frac{y_1^2}{2z_0'}+\frac{x'^2}{2z_0'}
 +\frac{y'^2}{2z_0'}.
+\label{eq:08_44}
 \eeq
 Ter podobno za drugo odprtino:
 \beq
-r_2' = z_0' \sqrt{1+(x_2-x')^2/z_0'^2+ (y_2-y')^2/z_0'^2} \approx
+r_2' = \sqrt{z_0'^2+(x_2-x')^2+ (y_2-y')^2} \approx
 z_0'-\frac{x_2x'}{z_0'}-\frac{y_2y'}{z_0'}+\frac{x_2^2}{2z_0'}+\frac{y_2^2}{2z_0'}+\frac{x'^2}{2z_0'}
 +\frac{y'^2}{2z_0'}.
+\label{eq:08_45}
 \eeq
-Razlika, ki nastopa v eksponentu, je potem enaka:
+Razlika, ki nastopa v eksponentu (enačba~\ref{eq:08_43}), je enaka:
 \beq
 r_1'-r_2' = \frac{x'(x_2-x_1)}{z_0'}+\frac{y'(y_2-y_1)}{z_0'}
 + \frac{(x_1^2-x_2^2)}{2z_0'^2} + \frac{(y_1^2-y_2^2)}{2z_0'^2}.
+\label{eq:08_46}
 \eeq
-Če sta odprtini simetrični glede na izhodišče koordinatnega sistema, sta zadnja dva člena
-v izrazu enaka nič. Sicer prineseta nek konstantni fazni faktor. Rezultat je v simetričnem primeru
-enak:
-\beq
-J_{12} \propto \frac{1}{z_0'^2}\iint j_{0i}(x',y') e^{ikx'\Delta x/z_0'}e^{iky'\Delta y/z_0'}dx'dy'.
-\eeq
-Dobljeni izraz velja tudi na relativno majhnih razdaljah med 
-svetilom in objektnim zaslonom, saj so 
-se kvadratni členi zaradi simetričnosti izničili. 
+Če sta odprtini simetrični glede na izhodišče, sta zadnja dva člena
+enaka nič, sicer prineseta neko konstantno fazo. V enačbo~(\ref{eq:08_43}) vstavimo 
+še razliki koordinat
+$\Delta x = x_2-x_1$ in $\Delta y = y_2-y_1$ in dobimo Van Cittert-Zernikov izrek:
+\boxeq{eq:VCZ}{
+J_{12} \propto \frac{1}{z_0'^2}\iint_S j_{0}(x',y') e^{ikx'\Delta x/z_0'+ iky'\Delta y/z_0'}dx'dy'.
+}
 
+Parameter $J_{12}$, ki ga lahko določimo iz interferenčne slike na opazovalnem zaslonu,
+je torej enak 2D-Fourierevi transformiranki intenzitetne porazdelitve svetlobnega polja 
+na nekoherentnem svetilu $j_0(x',y')$. Z inverzno Fourierevo transformacijo tako iz izmerjene vidljivosti
+kontrasta določimo porazdelitev intenzitete po izvoru, na primer po oddaljeni zvezdi. 
+Pri tem velja, da manjši kot je svetlobni izvor, večja je njegova koherenca na oddaljenem 
+zaslonu in obratno.
+
+Če povzamemo ključno ugotovitev: Pri časovni koherenci je kontrast interferenčne slike
+inverzna Fouriereva transformiranka spektralne porazdelitve vpadne svetlobe, pri prostorski
+koherenci pa je kontrast interferenčne slike Fouriereva transformiranka prostorske porazdelitve vpadne svetlobe.
+\begin{figure}[h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/08_VCZ_slika.pdf_tex}
+\caption{Primeri interferenčnih slik, ki nastanejo pri prehodu skozi dve simetrični odprtini, svetilo
+pa je podolgovate oblike. Z naraščajočim razmikom (od a proti c) se kontrast interferenčnih prog zmanjšuje.}
+\label{fig:08_VCZ_slika}
+\vskip-4truemm
+\end{figure}
 
 \section{Holografija}
+Za konec si oglejmo še holografijo -- to je zapisovanje interferenčnega vzorca v film
+in rekonstrukcija 3D slike predmeta. Hologram zapišemo tako, da snop monokromatske
+koherentne svetlobe razdelimo na dva dela: referenčni snop usmerimo neposredno na film, z drugim
+delom pa osvetlimo predmet. Svetloba, ki se od predmeta odbija, interferira z referenčnim
+snopom in v filmu shranjeni interferenčni vzorec ohrani informacijo o obliki predmeta. Ko
+na (razvit) film ponovno osvetlimo z referenčnim snopom, v filmu vidimo 3D navidezno 
+sliko predmeta. 
+
+
+
+Navadno razdelimo vpadni snop na dva neenaka dela, da je količina odbite svetlobe
+približno enaka količini direktne svetlobe. Referenčni žarek je torej precej šibkejši
+od tistega, ki vpada na predmet. 
+
+Koherenčna razdalja svetlobe mora biti precej daljša od razlike optičnih poti obeh
+delnih žarkov. 
+
+Ignoriramo polarizacijo, vektorsko naravo svetlobe in delamo skalarno. 
+
+
 
 \beq
 t \propto I = I_r + I_s + 2\sqrt{I_rI_s}\cos(\phi_r-\phi_s(x,y)).
