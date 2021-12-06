@@ -709,13 +709,13 @@ z_0'-\frac{x_1x'}{z_0'}-\frac{y_1y'}{z_0'}+\frac{x_1^2}{2z_0'}+\frac{y_1^2}{2z_0
 +\frac{y'^2}{2z_0'}.
 \label{eq:08_44}
 \eeq
-Ter podobno za drugo odprtino:
-\beq
-r_2' = \sqrt{z_0'^2+(x_2-x')^2+ (y_2-y')^2} \approx
-z_0'-\frac{x_2x'}{z_0'}-\frac{y_2y'}{z_0'}+\frac{x_2^2}{2z_0'}+\frac{y_2^2}{2z_0'}+\frac{x'^2}{2z_0'}
-+\frac{y'^2}{2z_0'}.
-\label{eq:08_45}
-\eeq
+Ter podobno za drugo odprtino. 
+% \beq
+% r_2' = \sqrt{z_0'^2+(x_2-x')^2+ (y_2-y')^2} \approx
+% z_0'-\frac{x_2x'}{z_0'}-\frac{y_2y'}{z_0'}+\frac{x_2^2}{2z_0'}+\frac{y_2^2}{2z_0'}+\frac{x'^2}{2z_0'}
+% +\frac{y'^2}{2z_0'}.
+% \label{eq:08_45}
+% \eeq
 Razlika, ki nastopa v eksponentu (enačba~\ref{eq:08_43}), je enaka:
 \beq
 r_1'-r_2' = \frac{x'(x_2-x_1)}{z_0'}+\frac{y'(y_2-y_1)}{z_0'}
@@ -747,33 +747,77 @@ koherenci pa je kontrast interferenčne slike Fouriereva transformiranka prostor
 \caption{Primeri interferenčnih slik, ki nastanejo pri prehodu skozi dve simetrični odprtini, svetilo
 pa je podolgovate oblike. Z naraščajočim razmikom (od a proti c) se kontrast interferenčnih prog zmanjšuje.}
 \label{fig:08_VCZ_slika}
-\vskip-4truemm
 \end{figure}
 
 \section{Holografija}
-Za konec si oglejmo še holografijo -- to je zapisovanje interferenčnega vzorca v film
+Za konec si na kratko oglejmo še holografijo -- to je zapisovanje interferenčnega vzorca v medij
 in rekonstrukcija 3D slike predmeta. Hologram zapišemo tako, da snop monokromatske
-koherentne svetlobe razdelimo na dva dela: referenčni snop usmerimo neposredno na film, z drugim
+koherentne svetlobe razdelimo na dva dela: referenčni snop usmerimo neposredno na medij, 
+praviloma film, z drugim
 delom pa osvetlimo predmet. Svetloba, ki se od predmeta odbija, interferira z referenčnim
 snopom in v filmu shranjeni interferenčni vzorec ohrani informacijo o obliki predmeta. Ko
-na (razvit) film ponovno osvetlimo z referenčnim snopom, v filmu vidimo 3D navidezno 
-sliko predmeta. 
+(razvit) film ponovno osvetlimo z referenčnim snopom, v filmu vidimo 3D navidezno 
+sliko predmeta. Za razliko od klasične fotografije, ki shrani podatke o  intenziteti svetlobe
+na mestu detektorja ali filma, shrani hologram podatke v valovni fronti (njeno 
+amplitudo in fazo). Druga pomembna razlika je v tem, da pri klasični fotografiji na vsako točko
+zaslona vpada svetloba le z ene točke predmeta, pri holografiji pa na vsako točko holograma
+vpada svetloba z vseh točk predmeta. Če odstranimo pol fotografije, ostane le pol informacije, 
+če pa razpolovimo hologram, lahko še vedno reproduciramo celotno sliko -- vendar s slabšo 
+ločljivostjo.
 
+Pogoj za uspešen zapis in naknadno branje holograma je dovolj dolga koherenčna razdalja svetlobe, 
+s katero hologram posnamemo. Ker mora biti koherenčna razdalja precej daljša od razlike
+optičnih poti obeh delnih valovanj, je za izdelavo hologramov potrebna laserska svetloba.
+Poleg tega mora imeti svetloba tudi dovolj veliko prostorsko koherenco, da koherenčna
+ploskev zajame celoten predmet. Danes se hologrami uporabljajo predvsem proti ponarejanju, 
+na primer denarja, dokumentov in dražjih artikov ali za holografsko interferometrijo, s
+katero zelo natančno merijo spremembe velikosti predmetov. 
 
+SKICA POSTAVITVE.
 
-Navadno razdelimo vpadni snop na dva neenaka dela, da je količina odbite svetlobe
-približno enaka količini direktne svetlobe. Referenčni žarek je torej precej šibkejši
-od tistega, ki vpada na predmet. 
-
-Koherenčna razdalja svetlobe mora biti precej daljša od razlike optičnih poti obeh
-delnih žarkov. 
-
-Ignoriramo polarizacijo, vektorsko naravo svetlobe in delamo skalarno. 
-
-
-
+Zapišimo električno polje na zaslonu (filmu). Iz praktičnih razlogov se navadno uporablja
+izvenosna postavitev, pri kateri referenčna svetloba na film vpada pod kotom. 
+Označimo vpadni kot z $\alpha$.
+Omejimo se na skalarni približek in jakost električnega polja referenčnega valovanja v 
+ravnini filma zapišemo kot:
 \beq
-t \propto I = I_r + I_s + 2\sqrt{I_rI_s}\cos(\phi_r-\phi_s(x,y)).
+E_r = E_{r0}e^{i\phi},
+\label{eq:08_47}
 \eeq
-Zapisovanje pri klasični izvenosni holografiji; branje pri holografiji. 
+pri čemer $E_{r0}(xy)$ označuje konstantno amplitudo valovanja, $\phi$ pa fazo, 
+ki je zaradi neničelnega vpadnega kota $\alpha$ funkcija lege $x$. Jakost električnega polja
+signalnega valovanja, ki se odbija od predmeta, zapišemo kot:
+\beq
+E_s = E_{s0}e^{i\vartheta},
+\label{eq:08_48}
+\eeq
+pri čemer sta tako amplituda $E_{s0}$ kot faza $\vartheta$ zapleteni funkciji kraja. 
+Kadar vpadata na film obe valovanji, za gostoto svetlobnega toka na filmu velja:
+\beq
+j_h \propto |E_r + E_s|^2 = |E_r|^2 + |E_s|^2+ E_{r0}E_{s0}e^{i(\phi - \vartheta)} + 
+E_{r0}E_{s0}e^{-i(\phi - \vartheta)}.
+\label{eq:08_49}
+\eeq
+Ko film razvijemo, je njegova prepustnost sorazmerna z intenziteto vpadne svetlobe $j_h$.
+
+Za opazovanje 3D slike predmeta, hologram (film) ponovno osvetlimo z referenčno 
+svetlobo (enačba~\ref{eq:08_47}). Jakost elektičnega polja prepuščene svetlobe je potem oblike:
+\beq
+E_h \propto j_h E_r = \left(|E_r|^2 + |E_s|^2\right)E_r + E_{r0}^2E_{s0}e^{i\phi} + 
+E_{r0}^2E_{s0}e^{-i\phi}e^{2\vartheta}.
+\label{eq:08_50}
+\eeq
+Prvi člen v vsoti predstavlja neuklonjeno referenčno valovanje, drugi člen rekonstruirano
+signalno valovanje, ki da opazovalcu 3D sliko predmeta, tretji člen pa je konjugirano signalno
+valovanje, ki da realno sliko. Postavitev pod kotom $\alpha$ omogoča, da rekonstruirano
+signalno valovanje opazujemo nemoteno od ostalih dveh valovanj. 
+
+Holograme lahko razumemo kot zelo zapletene uklonske mrežice. Za uklon vemo, da je 
+smer uklonjene svetlobe močno odvisna od valovne dolžine svetlobe, ki vpada na uklonsko mrežico,
+in podobno velja tudi za holograme. 
+
+
+white light; rainbow; reflection.
+iz druge strani drugo barvo in drugo stran predmeta ali celo drugo sliko. 
+
 Fotografija holograma. 
