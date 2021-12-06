@@ -1,4 +1,4 @@
-\chapterimage{08_Koherenca.jpg} % Chapter heading image
+\chapterimage{08_KoherencaB.jpg} % Chapter heading image
 
 \chapter{Koherenca}
 \label{chap:Koherenca}
@@ -652,7 +652,7 @@ E^*(t+\tau) = e^{i \omega \tau} E^*(t)
 \eeq
 in navzkrižno korelacijsko funkcijo zapišemo kot:
 \beq
-\Gamma_{12}(\tau) = e^{i \omega \tau} \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t) dt \right) =
+\Gamma_{12}(\tau) = e^{i \omega \tau} \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t) dt =
  J_{12} e^{i \omega \tau}. 
  \label{eq:08_37}
 \eeq
@@ -742,7 +742,7 @@ inverzna Fouriereva transformiranka spektralne porazdelitve vpadne svetlobe, pri
 koherenci pa je kontrast interferenčne slike Fouriereva transformiranka prostorske porazdelitve vpadne svetlobe.
 \begin{figure}[h]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/08_VCZ_slika.pdf_tex}
 \caption{Primeri interferenčnih slik, ki nastanejo pri prehodu skozi dve simetrični odprtini, svetilo
 pa je podolgovate oblike. Z naraščajočim razmikom (od a proti c) se kontrast interferenčnih prog zmanjšuje.}
@@ -755,9 +755,24 @@ in rekonstrukcija 3D slike predmeta. Hologram zapišemo tako, da snop monokromat
 koherentne svetlobe razdelimo na dva dela: referenčni snop usmerimo neposredno na medij, 
 praviloma film, z drugim
 delom pa osvetlimo predmet. Svetloba, ki se od predmeta odbija, interferira z referenčnim
-snopom in v filmu shranjeni interferenčni vzorec ohrani informacijo o obliki predmeta. Ko
+snopom in v filmu shranjeni interferenčni vzorec ohrani informacijo o obliki predmeta 
+(slika~\ref{fig:08_hologram}\,a). Ko
 (razvit) film ponovno osvetlimo z referenčnim snopom, v filmu vidimo 3D navidezno 
-sliko predmeta. Za razliko od klasične fotografije, ki shrani podatke o  intenziteti svetlobe
+sliko predmeta (slika~\ref{fig:08_hologram}\,b).
+\begin{figure}[h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/08_hologram2.pdf_tex}
+\caption{Hologram posnamemo tako, da film hkrati osvetlimo z referenčnim valovanjem in 
+valovanjem, ki se od predmeta odbija (a). Za 3D-rekonstrukcijo slike hologram osvetlimo
+z referenčnim valovanjem in opazujemo nastalo navidezno sliko (b). Z 1 je označen izhodni referenčni
+snop, z 2 valovanje, ki da navidezno sliko predmeta, in s 3 konugirano 
+valovanje, ki da pravo sliko predmeta. 
+}
+\label{fig:08_hologram}
+\end{figure}
+
+Za razliko od klasične fotografije, ki shrani podatke o intenziteti svetlobe
 na mestu detektorja ali filma, shrani hologram podatke v valovni fronti (njeno 
 amplitudo in fazo). Druga pomembna razlika je v tem, da pri klasični fotografiji na vsako točko
 zaslona vpada svetloba le z ene točke predmeta, pri holografiji pa na vsako točko holograma
@@ -769,16 +784,14 @@ Pogoj za uspešen zapis in naknadno branje holograma je dovolj dolga koherenčna
 s katero hologram posnamemo. Ker mora biti koherenčna razdalja precej daljša od razlike
 optičnih poti obeh delnih valovanj, je za izdelavo hologramov potrebna laserska svetloba.
 Poleg tega mora imeti svetloba tudi dovolj veliko prostorsko koherenco, da koherenčna
-ploskev zajame celoten predmet. Danes se hologrami uporabljajo predvsem proti ponarejanju, 
-na primer denarja, dokumentov in dražjih artikov ali za holografsko interferometrijo, s
-katero zelo natančno merijo spremembe velikosti predmetov. 
+ploskev zajame celoten predmet. Danes se hologrami uporabljajo predvsem kot zaščita
+proti ponarejanju, na primer denarja, dokumentov in dražjih artikov ali za 
+holografsko interferometrijo, s katero zelo natančno merijo 3D spremembe velikosti predmetov. 
 
-SKICA POSTAVITVE.
-
-Zapišimo električno polje na zaslonu (filmu). Iz praktičnih razlogov se navadno uporablja
-izvenosna postavitev, pri kateri referenčna svetloba na film vpada pod kotom. 
-Označimo vpadni kot z $\alpha$.
-Omejimo se na skalarni približek in jakost električnega polja referenčnega valovanja v 
+Zapišimo električno polje na zaslonu (filmu). Naj referenčna svetloba na film vpada pod 
+kotom $\alpha$.
+Omejimo se na skalarni približek, s čimer privzamemo, da je odbita svetloba enako polarizirana
+kot vpadna, in in jakost električnega polja referenčnega valovanja v 
 ravnini filma zapišemo kot:
 \beq
 E_r = E_{r0}e^{i\phi},
@@ -798,8 +811,8 @@ j_h \propto |E_r + E_s|^2 = |E_r|^2 + |E_s|^2+ E_{r0}E_{s0}e^{i(\phi - \vartheta
 E_{r0}E_{s0}e^{-i(\phi - \vartheta)}.
 \label{eq:08_49}
 \eeq
-Ko film razvijemo, je njegova prepustnost sorazmerna z intenziteto vpadne svetlobe $j_h$.
-
+Pod določenimi pogoji lahko dosežemo, da je amplitudna prepustnost razvitega filma 
+sorazmerna z gostoto energijskega toka vpadne svetlobe $j_h$.
 Za opazovanje 3D slike predmeta, hologram (film) ponovno osvetlimo z referenčno 
 svetlobo (enačba~\ref{eq:08_47}). Jakost elektičnega polja prepuščene svetlobe je potem oblike:
 \beq
@@ -807,17 +820,34 @@ E_h \propto j_h E_r = \left(|E_r|^2 + |E_s|^2\right)E_r + E_{r0}^2E_{s0}e^{i\phi
 E_{r0}^2E_{s0}e^{-i\phi}e^{2\vartheta}.
 \label{eq:08_50}
 \eeq
-Prvi člen v vsoti predstavlja neuklonjeno referenčno valovanje, drugi člen rekonstruirano
-signalno valovanje, ki da opazovalcu 3D sliko predmeta, tretji člen pa je konjugirano signalno
-valovanje, ki da realno sliko. Postavitev pod kotom $\alpha$ omogoča, da rekonstruirano
+Prvi člen v vsoti predstavlja neuklonjeno referenčno valovanje (glej sliko~\ref{fig:08_hologram}\,b), 
+drugi člen rekonstruirano signalno valovanje, ki da opazovalcu 3D sliko predmeta, 
+tretji člen pa je konjugirano signalno
+valovanje, ki da fazno obrnjeno realno sliko.
+Izvenosna postavitev pod kotom $\alpha$ omogoča, da rekonstruirano
 signalno valovanje opazujemo nemoteno od ostalih dveh valovanj. 
 
-Holograme lahko razumemo kot zelo zapletene uklonske mrežice. Za uklon vemo, da je 
+Hologrami so pravzaprav zelo zapletene uklonske mrežice. Za uklon pa vemo, da je 
 smer uklonjene svetlobe močno odvisna od valovne dolžine svetlobe, ki vpada na uklonsko mrežico,
-in podobno velja tudi za holograme. 
+in podobno velja tudi za holograme. Če ga osvetlimo z drugo valovno dolžino, kot smo 
+ga zapisali, bo slika videti pod drugim kotom. Kadar hologram osvetlimo z belo svetlobo
+(in pri izdelavi poskrbimo, da se slike različnih barv med seboj ne prekrivajo)
+bo pod različnimi koti opazovanja hologram videti različnih barv. Takim hologramom pravimo mavrični
+hologram. Navadno je na njih nanešena tanka plast aluminija, zato da hologram lahko 
+opazujemo v odbiti svetlobi. 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=13truecm]{slike/08_photo_hologram.jpg}
+\caption{Holograma na evrskem bankovcu, kot ju vidimo pod različnimi koti. }
+\label{fig:08_photo_hologram}
+\vglue-10truemm
+\end{figure}
+
+\begin{remark}
+Kadar zajamemo interferenco ne le v tankem filmu, temveč po debelejšem sloju, imenujemo 
+nastalo interferenčno sliko volumski hologram. Za volumske holograme je značilno, da omogočajo 
+opazovanje hologramov v naravnih barvah predmeta, kar dosežemo s posebnim tridimenzionalim zapisom 
+v treh osnovnih barvah.
+\end{remark}
 
 
-white light; rainbow; reflection.
-iz druge strani drugo barvo in drugo stran predmeta ali celo drugo sliko. 
-
-Fotografija holograma. 
