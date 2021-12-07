@@ -82,7 +82,7 @@ integrala po zgornji in spodnji stranici, integral na desni strani pa gre proti 
 \label{eq:04_05}
 \eeq
 Ohranja se torej projekcija vektorja jakosti električnega polja na mejo med snovema. 
-Ker je vektor $d\mathbf{l}$ vzporeden z mejo, vektor $d\mathbf{s}_0$ pa 
+Ker je vektor $d\mathbf{l}$ vzporeden z mejo, vektor $\mathbf{s}_0$ pa 
 pravokoten nanjo, lahko zgornji izraz zapišemo kot:
 \boxeq{eq:RPE}{
 \left( \mathbf{E}_2-\mathbf{E}_1 \right) \times \mathbf{s}_0 = 0 \qquad \mathrm{oziroma} \qquad
@@ -117,18 +117,18 @@ Naj žarek svetlobe vpada na mejno ravnino pod kotom $\alpha$ glede na normalo n
 sliko~\ref{fig:04_lom}). Njegov valovni vektor naj bo $\mathbf{k}_i$, 
 krožna frekvenca $\omega_i$, faza $\delta_i$ in amplituda $\mathbf{E}_{0i}$. 
 Pripadajoče valovno število
-je $k_i = \omega_i n_1/c_0$. Vpadni val na splošno zapišemo kot:
+je $k_i = \omega_i n_1/c_0$. Vpadno valovanje na splošno zapišemo kot:
 \beq
 \mathbf{E}_i = \mathbf{E}_{0i} e^{i\mathbf{k}_i\cdot \mathbf{r} - i \omega_i t + i \delta_i}.
 \label{eq:04_06}
 \eeq
-Odbiti val zapišemo z valovnim vektorjem $\mathbf{k}_r$, 
+Odbito valovanje zapišemo z valovnim vektorjem $\mathbf{k}_r$, 
 krožno frekvenco $\omega_r$, fazo $\delta_r$ in amplitudo $\mathbf{E}_{0r}$: 
 \beq
 \mathbf{E}_r = \mathbf{E}_{0r} e^{i\mathbf{k}_r\cdot \mathbf{r} - i \omega_r t + i \delta_r}
 \label{eq:04_07}
 \eeq
-in prepuščeni val z valovnim vektorjem $\mathbf{k}_t$, 
+in prepuščeno valovanje z valovnim vektorjem $\mathbf{k}_t$, 
 krožno frekvenco $\omega_t$, fazo $\delta_t$ in amplitudo $\mathbf{E}_{0t}$:
 \beq
 \mathbf{E}_t = \mathbf{E}_{0t} e^{i\mathbf{k}_t\cdot \mathbf{r} - i \omega_t t + i \delta_t}.
@@ -158,7 +158,7 @@ oziroma izpisano:
 \eeq
 Zapisana zveza mora veljati 
 ob vseh časih $t$ in za vse vrednosti $x$ in $y$. Vzemimo najprej $x=y=0$ in $t=0$. 
-Od tod sledi, da so vse fazne enake in $\delta_i = \delta_r = \delta_t$.
+Od tod sledi, da so vse faze enake in $\delta_i = \delta_r = \delta_t$.
 Drugi pogoj poglejmo pri $x=y=0$ in poljubnem času $t>0$. Robni pogoj 
 je izpolnjen le v primeru, da velja 
 \boxeq{eq:omegakonst}{
@@ -261,8 +261,8 @@ vse tri jakosti (vpadna, odbita in prepuščena) vzporedne z osjo $y$, velja pre
 E_{0i} + E_{0r}= E_{0t}.
 \label{eq:04_19}
 \eeq
-Pri tem smo upoštevali, da je polje v prvi snovi vsota vpadnega in odbitega
-polja, v drugi snovi pa je samo prepuščeno valovanje. Drugi robni pogoj, ki zahteva
+Pri tem smo upoštevali, da je polje v prvi snovi vsota polja vpadnega in odbitega
+valovanja, v drugi snovi pa je samo prepuščeno valovanje. Drugi robni pogoj, ki zahteva
 ohranitev normalne komponente gostote električnega polja (enačba~\ref{eq:RPD}) je 
 vedno izpolnjen, saj je ta komponenta v obeh snoveh identično enaka nič. 
 
@@ -297,7 +297,8 @@ enačbo~(\ref{eq:04_21}). Dobimo:
 \label{eq:04_26}
 \eeq
 Vpeljemo amplitudno odbojnost $r = E_{0r}/E_{0i}$ 
-kot razmerje odbite in vpadne amplitude valovanja. Iz enačbe~(\ref{eq:04_26}) sledi:
+kot razmerje amplitud jakosti električnega polja odbitega in vpadnega valovanja.
+Iz enačbe~(\ref{eq:04_26}) sledi:
 \boxeq{eq:TEr}{
 r_\mathrm{TE}  = \frac{n_1 \cos \alpha - n_2 \cos \beta}
 {n_1 \cos \alpha + n_2 \cos \beta},
@@ -314,7 +315,7 @@ r = \frac{\frac{n_1}{n_2} \cos \alpha - \cos \beta}{\frac{n_1}{n_2} \cos \alpha 
 \eeq
 
 Izračunajmo še amplitudno prepustnost $t = E_{0t}/E_{0i}$, ki jo vpeljemo
-kot razmerje amplitud prepuščenega in vpadnega valovanja. Izhajamo
+kot razmerje amplitud jakosti električnega polja prepuščenega in vpadnega valovanja. Izhajamo
 iz prvega robnega pogoja (enačba~\ref{eq:04_19}) in zapišemo:
 \beq
 t = \frac{E_{0t}}{E_{0i}} = \frac{E_{0i} + E_{0r}}{E_{0i}} = 1+ r.
@@ -359,7 +360,7 @@ Predznak jakosti električnega polja smo zapisali v skladu s sliko~\ref{fig:04_t
 Za vajo bi lahko zapisali še četrti robni pogoj, vendar tudi v tem primeru ne bi dobili nove informacije.
 
 Ostaneta dve enačbi za tri neznanke in ponovno lahko
-izrazimo amplitudi odbite in prepuščene svetlobe z amplitudo vpadne. 
+izrazimo amplitudi polja odbite in prepuščene svetlobe z amplitudo polja vpadne svetlobe. 
 Enačbo (\ref{eq:04_31}) pomnožimo s $\cos \beta$, enačbo~(\ref{eq:04_32}) pa z $n_2$:
 \begin{align}
 E_{0i} n_1 \cos \beta + E_{0r} n_1 \cos \beta  &= E_{0t} n_2 \cos \beta \label{eq:04_35} \\
@@ -451,13 +452,13 @@ V razmerju jakosti električnega polja prepoznamo amplitudno odbojnost in zapiš
 Izračunajmo še prepustnost $\mathcal{T}$, ki je razmerje med prepuščeno in vpadno svetlobno 
 močjo. To razmerje ni enako razmerju gostot svetlobih tokov, saj se zaradi
 spremenjene smeri valovanja spremeni velikost ploskve, skozi
-katero se pretoči vpadna svetlobna moč $P$.
+katero se pretoči vpadni svetlobni tok $P$.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{60truemm} 
 \input{slike/04_coscos.pdf_tex}
 \caption{Pri prehodu skozi mejo se zaradi loma spremeni velikost
-ploskve, skozi katero se pretaka vpadna svetlobna moč.}
+ploskve, skozi katero se pretaka vpadni svetlobni tok.}
 \label{fig:04_coscos}
 \end{figure}
 
@@ -629,8 +630,8 @@ je odbita svetloba pretežno TE linearno polarizirana. Če sončna
 očala ali fotografski filter delujejo kot polarizator, ki TE polarizirane 
 svetlobe ne prepušča, bistveno zmanjšamo količino odbite svetlobe in 
 ``bleščanje'' površine. Sončna očala so linearni polarizatorji, večina 
-fotografskih polarizacijskih filtrov pa je cirkularnih polarizatorjev,
-saj bi vstopna linearna polarizacija motila delovanje svetlomera.
+fotografskih polarizacijskih filtrov pa vstopno linearno polarizacijo spremeni
+v cirkularno, saj bi linearno polarizirana svetloba lahko motila delovanje svetlomera.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=7truecm]{slike/04_photos_voda1.jpg}\hfill
@@ -913,7 +914,7 @@ robnih pogojev pri $z=0$.
 Na sliki~\ref{fig:04_simulacija} je prikazana primerjava med valovanjem
 pri navadnem lomu in valovanjem pri totalnem odboju. V prvem primeru (levo) se
 na vpadni strani pojavi interferenca med
-vpadnim in šibkejšim odbitim žarkom, na drugi strani meje pa se prepuščeni val nemoteno
+vpadnim in šibkejšim odbitim žarkom, na drugi strani meje pa se prepuščeno valovanje nemoteno
 širi. V primeru totalnega odboja (desno) na vpadni strani interferirata 
 vpadni in odbiti žarek z enako amplitudo, na drugi strani meje pa polje pojema 
 eksponentno z oddaljenostjo od meje med snovema. Valovanje na obeh straneh meje
@@ -964,7 +965,7 @@ Najprej izračunamo levo stran enačbe:
 \beq
 \nabla \times \mathbf{E} = \left|
 \begin{array}{ccc}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\mathbf{e}_x & \mathbf{e}_y & \mathbf{e}_z \\
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
 0&E_{0t}e^{-\varkappa z} \cos \left(k_xx-\omega t\right)& 0 \\
 \end{array}
@@ -1151,7 +1152,7 @@ Podobno delujejo čitalci prstnih odtisov.}
 
 \end{figure}
 \begin{remark}
-Pri totalnem odboju se zgodi še en zanimiv pojav, ki ga imenujemo Goose--H\"anchenin pojav 
+Pri totalnem odboju se zgodi še en zanimiv pojav, ki ga imenujemo Goose--H\"anchen pojav 
 po nemških fizikih Hermannu Fritzu Gustavu Goosu (1883--1968) in Hildi H\"anchen (1919--2013).
 Ko se linearno polarizirana svetloba totalno odbije, odbita svetloba ne izhaja iz 
 povsem iste točke, kot nanjo vpada. Videti je, kot da se svetloba odbije od neke 
@@ -1167,8 +1168,8 @@ učinek faznih zakasnitev je tak, kot bi se žarek navidezno vzdolžno premaknil
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/04_Goos.pdf_tex}
-\caption{Goos-H\"anchenin pojav pri totalnem odboju: totalno odbita svetloba izhaja iz druge točke, 
-kot vpada na mejo snovi vpada svetloba. Videti je, kot da se odbije od navidezne ravnine.}
+\caption{Goos-H\"anchen pojav pri totalnem odboju: totalno odbita svetloba izhaja iz druge točke, 
+kot vpadna svetloba vpada na mejo snovi. Videti je, kot da se odbije od navidezne ravnine.}
 \label{fig:04_Goos}
 \vglue-5truemm\end{figure}
 \end{remark}
@@ -1195,10 +1196,9 @@ in \ref{eq:kappatottm}):
 \varkappa_{\mathrm{TM}}= k_0 n_1 \sqrt{\left(\frac{\sin \alpha}{\sin \alpha_m}\right)^2-1}.
 \label{eq:04_83}
 \eeq
-Valovanje v obliki evanescentnega vala vdira v snov z manjšim lomnim količnikom, zato
+Valovanje v obliki evanescentnega valovanja vdira v snov z manjšim lomnim količnikom, zato
 pri oboju doživi fazni zamik. Ker je fazni zamik neposredno povezan z atenuacijskim
 koeficientom oziroma vdorno globino, je odvisen od vpadnega kota $\alpha$ in polarizacije svetlobe. 
-
 
 Izračunajmo najprej fazo za TE polarizirano valovanje. Izhajamo iz amplitudne odbojnosti (enačba~\ref{eq:04_61})
 in kompleksni števili v števcu in imenovalcu zapišemo v polarni obliki:
@@ -1222,7 +1222,8 @@ fazni zamik odbitega valovanja $\delta = \pi$. Vmesna odvisnost je prikazana na 
 \def\svgwidth{80truemm} 
 \input{slike/04_faza.pdf_tex}
 \caption{Fazna zamika totalno odbite svetlobe in 
-njuna razlika $\Delta$ v odvisnosti od vpadnega kota $\alpha$ za obe polarizaciji.}
+njuna razlika $\Delta$ v odvisnosti od vpadnega kota $\alpha$ za obe polarizaciji. Izračun 
+je narejen za $n_1 = 2$ in $n_1 = 1$.}
 \label{fig:04_faza}
 \end{figure}
 
@@ -1326,7 +1327,7 @@ realnega in imaginarnega dela:
 \label{eq:04_95}
 \eeq
 Zapišimo robne pogoje, po katerih se ohranjata tangentni komponenti jakosti
-električnega in magnetnega polja (enačbi~\ref{eq:RPE} in \ref{eq:RPH}).Prva enačba
+električnega in magnetnega polja (enačbi~\ref{eq:RPE} in \ref{eq:RPH}). Prva enačba
 je preprosta:
 \beq
 E_{0i} + E_{0r} = E_{0t}.
@@ -1392,7 +1393,7 @@ zmanjša (analog Brewsterjevem kotu pri odboju na neprevodnih snoveh).
 \def\svgwidth{70truemm} 
 \input{slike/04_kovinaMo.pdf_tex}
 \caption{Odbojnost na prevodni snovi v odvisnosti od vpadnega kota za TE in TM polarizirano
-valovanje. Primer je narisan za molibden z $n'=3,70$ in $n''=3,55$.}
+valovanje. Primer je narisan za molibden z $n'=3,70$ in $n''=3,55$, pri čemer je $\mathcal{N} = n'+in''$.}
 \label{fig:04_kovina}
 \end{figure}
 

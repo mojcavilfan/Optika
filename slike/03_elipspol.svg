@@ -2248,7 +2248,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3559038"
-     inkscape:cx="466.80741"
+     inkscape:cx="468.28244"
      inkscape:cy="192.30675"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -2275,7 +2275,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2583,7 +2583,7 @@
          y="226.41248"
          x="179.79022"
          id="tspan1073-6-6-0-26-2-2-6"
-         sodipodi:role="line">$\vartheta$</tspan></text>
+         sodipodi:role="line">$\theta$</tspan></text>
     <text
        id="text1075-0-2-2-5"
        y="193.17719"

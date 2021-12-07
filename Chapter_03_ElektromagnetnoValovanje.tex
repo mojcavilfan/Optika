@@ -39,7 +39,7 @@ enačbe:
 \boxeq{eq:Maxwell1}{
 \nabla\times\mathbf{H} & =\frac{\partial\mathbf{D}}{\partial t}+\mathbf{j}_e,\\
 \nabla\times\mathbf{E} & =-\frac{\partial\mathbf{B}}{\partial t}\label{eq:Maxwell2},\\
-\nabla\cdot\mathbf{D} & =\varrho_{e}\label{eq:Maxwell3} \qquad \mathrm{in}\\
+\nabla\cdot\mathbf{D} & =\varrho_{e}\label{eq:Maxwell3}, \\
 \nabla\cdot\mathbf{B} & =0.\label{eq:Maxwell4}
 }
 
@@ -103,7 +103,7 @@ Valovno enačbo lahko izpeljemo tudi za gostoto magnetnega polja:
 V nadaljevanju bo naša naloga poiskati rešitve teh dveh valovnih enačb $\mathbf{E}(\mathbf{r},t)$
 in $\mathbf{B}(\mathbf{r},t)$ kot funkciji kraja $\mathbf{r}$ in časa $t$ pri danih robnih pogojih.
 
-\section{Ravni valovi}
+\section{Ravno valovanje}
 Najpreprostejša rešitev valovne enačbe je sinusno potujoče valovanje, ki ga zapišemo
 v obliki:
 \boxeq{eq:ravnival}{
@@ -139,7 +139,7 @@ za katero velja $\nu = 1/t_0 = \omega/2\pi$.
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/03_sinus.pdf_tex}
-\caption{Spreminjanje velikosti jakosti električnega polja vzdolž smeri $z$ pri ravnem valu 
+\caption{Spreminjanje velikosti jakosti električnega polja vzdolž smeri $z$ pri ravnem valovanju 
 ob nekem trenutku.}
 \label{fig:03_sinus}
 \end{figure}
@@ -157,12 +157,12 @@ Ploskve konstantne faze dobimo pri konstantnem $\phi$. Ob danem trenutku velja:
 \eeq
 Ta pogoj ni nič drugega kot enačba ravnine, pravokotne na vektor $\mathbf{k}$. Ploskve konstantne faze
 oziroma valovne fronte so torej ravnine, ki so pravokotne na $\mathbf{k}$, žarki pa so premice, ki 
-so vzporedne s $\mathbf{k}$. Zapisana rešitev predstavlja ravni val.
+so vzporedne s $\mathbf{k}$. Zapisana rešitev predstavlja ravno valovanje.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/03_ravnival.pdf_tex}
-\caption{Najpreprostejša rešitev valovne enačbe je ravni val, pri katerem so ploskve konstante
+\caption{Najpreprostejša rešitev valovne enačbe je ravno valovanje, pri katerem so ploskve konstante
 faze (valovne fronte) ravnine, pravokotne na valovni vektor $\mathbf{k}$.}
 \label{fig:03_ravnival}
 \end{figure}
@@ -294,7 +294,7 @@ $4\times10^{14}~\si{s}^{-1}$ do približno $9\times10^{14}~\si{s}^{-1}$.
 
 \subsection*{Smeri vektorjev $\mathbf{E}$, $\mathbf{B}$ in $\mathbf{k}$}
 Nadaljujmo z obravnavo elektromagnetnega valovanja v homogeni in izotropni snovi. 
-Valovanje naj bo v obliki ravnih valov, pri čemer se poslužimo praktičnega kompleksnega zapisa:
+Valovanje naj bo v obliki ravnega potujočega sinusnega valovanja, pri čemer se poslužimo praktičnega kompleksnega zapisa:
 \beq
 \mathbf{E}(\mathbf{r},t) = \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i\omega t + i\delta}
 \qquad \mathrm{in} \qquad
@@ -380,7 +380,7 @@ vzdolž osi $z$, $\mathbf{E}$ kaže vzdolž osi $x$ in $\mathbf{B}$ vzdolž osi 
 \end{figure}
 
 \subsection*{Razmerje med $\mathbf{E}_0$ in $\mathbf{B}_0$}
-Zdaj poznamo smeri vektorjev $\mathbf{E}$ in $\mathbf{B}$ v ravnem valu, poiskati moramo
+Zdaj poznamo smeri vektorjev $\mathbf{E}$ in $\mathbf{B}$ v ravnem valovanju, poiskati moramo
 še razmerja med njunimi amplitudami. Izhajamo iz enačbe~(\ref{eq:EkB}), upoštevamo
 ortogonalnost vektorjev in dobimo zvezo med amplitudami:
 \beq
@@ -406,11 +406,11 @@ Hitro uvidimo, da je enota za impedanco $\si{\ohm}$. V vakuumu,
 kjer sta $\varepsilon = 1$ in $\mu= 1$, je impedanca $Z_0 = 377~\si{\ohm}$.
 
 \begin{remark}
-Poleg ravnih valov, ki predstavljajo enodimenzionalno rešitev valovne enačbe, poznamo
-tudi druge rešitve, na primer sferične (krogelne) ali cilindrične valove. Pri 
-sferičnih valovih so ploskve konstantne faze krogelne lupine, ki izhajajo radialno 
+Poleg ravnega valovanja, ki predstavlja enodimenzionalno rešitev valovne enačbe, poznamo
+tudi druge rešitve, na primer sferično (krogelno) ali cilindričo valovanje. Pri 
+sferičnem valovanju so ploskve konstantne faze krogelne lupine, ki izhajajo radialno 
 simetrično iz točke izvora. Amplituda valovanja ni konstantna, ampak se zmanjšuje z oddaljenostjo 
-od izhodišča kot $A = E_0/r$. V primeru cilindričnih valov so ploskve konstantne
+od izhodišča kot $A = E_0/r$. V primeru cilindričnega valovanja so ploskve konstantne
 faze valji, ki izhajajo iz izhodiščne premice. Tudi v tem primeru amplituda valovanja ni konstantna,
 ampak pojema z oddaljenostjo od izhodiščne premice: $A = E_0/\sqrt{r}$.  Če cilindrični 
 primer omejimo na eno ravnino, ki je pravokotna na izhodiščno premico (kar zaradi 
@@ -420,8 +420,8 @@ v polarnih koordinatah.
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/03_sfericnival.pdf_tex}
-\caption{Valovne fronte sferičnega vala so krogelne lupine (a), valovne fronte
-cilindričnega vala pa valji (b).}
+\caption{Valovne fronte sferičnega valovanja so krogelne lupine (a), valovne fronte
+cilindričnega valovanja pa valji (b).}
 \label{fig:03_sfericnival}
 \end{figure}
 \end{remark}
@@ -464,7 +464,7 @@ w_{EMV} = \left(\frac{1}{2}\varepsilon \varepsilon_0 E_0^2 +
 \label{eq:03_31}
 \eeq
 Vstavimo še izraz za hitrost valovanja (enačba~\ref{eq:fazna}) in vidimo,
-da sta prispevka električnega in magnetnega polja k gostoti energije elektromagnetnega valovanja
+da sta prispevka električnega in magnetnega polja h gostoti energije elektromagnetnega valovanja
 po velikosti enaka, poleg tega imata enako krajevno in časovno odvisnost:
 \beq
 w_{EMV} = \left(\varepsilon \varepsilon_0 E_0^2  \right) 
@@ -474,7 +474,7 @@ w_{EMV} = \left(\varepsilon \varepsilon_0 E_0^2  \right)
 Za vidno svetlobo je krožna frekvenca zelo velika 
 ($\omega \sim 3 \times 10^{15}~\si{s}^{-1}$), zato praktično vedno 
 zaznavamo povprečno energijo, ki je povprečena po času čez veliko 
-število nihanj. Ker je po dolgem času povprečje funkcije $\cos^2(x)$ enako $1/2$, sledi:
+število nihajev. Ker je po dolgem času povprečje funkcije $\cos^2(x)$ enako $1/2$, sledi:
 \boxeq{eq:w}{
 \langle w \rangle = \frac{1}{2}\varepsilon \varepsilon_0 E_0^2. 
 }
@@ -528,7 +528,7 @@ Povprečni Poyntingov vektor je potem:
 \eeq
 in je enak gostoti svetlobnega toka (enačba~\ref{eq:j}).
 
-Celotno moč, ki se pretoči skozi dano ploskev v prostoru, izračunamo kot 
+Celotni energijski tok, ki se pretoči skozi dano ploskev v prostoru, izračunamo kot 
 integral gostote svetlobnega toka po ploskvi:
 \boxeq{eq:P}{
 P = \int \mathbf{j}\cdot d\mathbf{S}.
@@ -621,7 +621,7 @@ Drugi primer je krožno oziroma cirkularno polarizirano valovanje. V tem primeru
 se vektor električne poljske jakosti vrti v ravnini, ki je pravokotna na smer 
 širjenja svetlobe. 
 
-Cirkularno polarizirano valovanje nastane tedaj, ko sta komponenti jakosti 
+Krožno polarizirano valovanje nastane tedaj, ko sta komponenti jakosti 
 elektičnega polja po velikosti enaki ($E_{0x} = E_{0y} = E_0$), fazna razlika 
 med njima pa je $\delta = (N+1/2) \pi$, pri čemer je $N$ celo število. 
 Zaradi periodičnosti kotnih funkcij zadošča, 
@@ -635,7 +635,7 @@ na danem mestu $z$ in ob danem času $t$ kot:
 \pm E_{0} \mathbf{e}_y \sin \left(kz - \omega t\right)\!.
 \label{eq:03_40}
 \eeq
-Poglejmo cirkularno polarizirano valovanje v izhodišču pri $z=0$ za 
+Poglejmo krožno polarizirano valovanje v izhodišču pri $z=0$ za 
 $\delta = \pi/2$. Komponenta v smeri $x$ je:
 \beq
 E_x = E_0 \cos (-\omega t) = E_0 \cos (\omega t),
@@ -667,12 +667,12 @@ V literaturi ni povsem enotnega dogovora o poimenovanju krožne polarizacije.
 Mi bomo uporabljali definicijo, ki se najpogosteje uporablja v optiki, to
 je s stališča opazovalca. Če opazovalec gleda v smeri proti izvoru valovanja 
 (v našem primeru je to vzdolž smeri $-z$), smer urinega kazalca opisuje desno 
-cirkularno polarizirano valovanje, nasprotna smer urinega kazalca pa levo 
-cirkularno polarizirano valovanje (slika~\ref{fig:03_cirkpol}).
+krožno polarizirano valovanje, nasprotna smer urinega kazalca pa levo 
+krožno polarizirano valovanje (slika~\ref{fig:03_cirkpol}).
 Enačbi~(\ref{eq:circx}) in (\ref{eq:circy}) s pozitivnim
-$\delta$ torej v skladu z našim dogovorom opisujeta levo cirkularno 
+$\delta$ torej v skladu z našim dogovorom opisujeta levo krožno
 polarizirano valovanje, enačbi~(\ref{eq:circxy}) in (\ref{eq:circxy2}) 
-z negativnim $\delta$ pa desno cirkularno polarizirano valovanje. 
+z negativnim $\delta$ pa desno krožno polarizirano valovanje. 
 
 \begin{figure}[h]
 \centering
@@ -690,7 +690,7 @@ Prikaz polja desno krožno polariziranega vala ob nekem trenutku (c).}
 Pri dogovoru o levi/desni cirkularni polarizaciji moramo biti pozorni na tri stvari. 
 Prvič -- cirkularnost definiramo s stališča opazovalca, kar pomeni, da gledamo proti izvoru,
 in ne s stališča izvora, pri čemer bi gledali vzdolž širjenja svetlobe. Drugič --
-ravni val vpeljemo z odvisnostjo $(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta)$ in 
+ravno valovanje vpeljemo z odvisnostjo $(\mathbf{k}\cdot \mathbf{r} - \omega t + \delta)$ in 
 ne $(\omega t - \mathbf{k}\cdot \mathbf{r} + \delta)$, kot lahko ponekod zasledimo v literaturi.
 Tretjič -- pri desni cirkularni polarizaciji se jakost polja suče v desno, če opazujemo 
 časovni potek vektorja na danem mestu (slika~\ref{fig:03_cirkpol}\,a), in v levo, 
@@ -709,7 +709,7 @@ Zapišemo ga kot:
 Kadar je fazni zamik med posameznima komponentama $\delta = \pm \pi/2$, razlikujeta
 pa se velikosti komponent, se lastni osi elipse ujemata s koordinatnima
 osema $x$ in $y$. Če pa je fazni zamik med komponentama poljuben, je elipsa
-zasukana glede na koordinatni sistem za nek kot $\vartheta$. 
+zasukana glede na koordinatni sistem za nek kot $\theta$. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
@@ -717,23 +717,23 @@ zasukana glede na koordinatni sistem za nek kot $\vartheta$.
 \caption{Pri eliptično polariziranem valovanju vrh vektorja
 jakosti električnega polja opisuje elipso. Če je fazni zamik med komponentama
 $\delta = \pm \pi/2$, sta osi elipse vzporedni koordinatnima osema (a), sicer
-je elipsa zasukana (b). Z $a$ in $b$ označimo polosi elipse, $\vartheta$ pa je
+je elipsa zasukana (b). Z $a$ in $b$ označimo polosi elipse, $\theta$ pa je
 naklon elipse glede na os $x$.}
 \label{fig:03_elipspol}
 \vglue-3truemm
 \end{figure}
 
 Vrednost 
-kota $\vartheta$ lahko analitično izračunamo iz enačbe:
+kota $\theta$ lahko analitično izračunamo iz enačbe:
 \beq
-\tan (2\vartheta) = \frac{2E_{0x}E_{0y}\cos \delta}{E_{0x}^2 - E_{0y}^2},
+\tan (2\theta) = \frac{2E_{0x}E_{0y}\cos \delta}{E_{0x}^2 - E_{0y}^2},
 \label{eq:elipsatheta}
 \eeq
-pri čemer sta $E_{x0}$ in $E_{y0}$ amplitudi posameznih komponent.
+pri čemer sta $E_{0x}$ in $E_{0y}$ amplitudi posameznih komponent.
 Izračunamo še
 razmerje med kratko in dolgo polosjo elipse:
 \beq
-\frac{b}{a} = \frac{E_{0y}\sin\delta\cos \vartheta}{E_{0x}\cos \vartheta + E_{0y}\cos\delta\sin\vartheta}.
+\frac{b}{a} = \frac{E_{0y}\sin\delta\cos \theta}{E_{0x}\cos \theta + E_{0y}\cos\delta\sin\theta}.
 \label{eq:elipsaba}
 \eeq
 Hitro uvidimo, da sta linearna in krožna polarizacija zgolj posebna
@@ -743,13 +743,13 @@ v drugem primeru pa razširjena v krožnico.
 Splošno eliptično polarizirano valovanje lahko vedno
 zapišemo kot vsoto dveh med seboj pravokotnih
 linearno polariziranih valovanj z upoštevanjem pravega faznega zamika med njima.
-Podobno lahko splošno polaziracijo valovanja zapišemo tudi kot vsoto 
+Podobno lahko splošno linearno polaziracijo valovanja zapišemo kot vsoto 
 dveh nasprotno usmerjenih krožno polariziranih valovanj.
 
 \subsection*{Jonesovi vektorji in matrike}
 Najpriročnejši zapis polarizacije je z dvodimenzionalnimi 
 vektorji, ki jih imenujemo Jonesovi vektorji.  Izhajamo iz kompleksnega zapisa
-jakosti električnega polja $\mathbf{E}$ za valovanje, ki se širi v smeri $z$.
+jakosti električnega polja $\mathbf{E}$ za valovanje, ki se širi v smeri osi $z$.
 Komponenti $x$ in $y$ sestavimo v vektor:
 \beq
 \mathbf{E} = 
@@ -876,7 +876,7 @@ Najpreprostješi
 primer opičnega elementa, ki vpliva na polarizacijo valovanja,
 je zagotovo linearni polarizator. Ta prepušča
 polarizacijo vzdolž prepustne smeri, komponento, ki
-je nanjo pravokotna, pa povsem zaustavi. Matrika za
+je nanjo pravokotna, pa povsem absorbira. Matrika za
 linearni polarizator s prepustno smerjo $x$ je:
 \beq
 M = \left[\begin{array}{cc}
@@ -928,7 +928,7 @@ J_{1x} \pm J_{1y}\\
 \label{eq:03_51}
 \eeq
 Poglejmo še cirkularne polarizatorje, ki iz poljubne
-vpadne polarizacije naredijo cirkularno polarizacijo. Cirkulator, ki
+vpadne polarizacije naredijo krožno polarizacijo. Cirkulator, ki
 prepušča desno cirkularno polarizacijo, zapišemo kot:
 \beq
 M = \frac{1}{2}\left[\begin{array}{cc}
@@ -1010,9 +1010,9 @@ polarizacije naredi eliptično. Če je vpadna polarizacija vzporedna z
 lastnima osema ploščice, se linearna polarizacija ohranja, če pa je
 zasukana pod kotom $45^\circ$, nastane iz linearnega krožno polarizirano valovanje. 
 
-Zaenkrat smo zapisali matrike le za optične elemente, katerih osi so poravnane z osmi
-koordinatnega sistema. Če želimo obravnavati elemente pod poljubnimi koti, 
-ustrezno Jonesovo matriko izračunamo tako, da prvotno matriko zasučemo za ustrezen kot $\vartheta$:
+Zaenkrat smo zapisali matrike le za optične elemente, katerih osi so poravnane z lastnimi osmi
+koordinatnega sistema. Jonesove matrike za elemente, ki so zasukani glede na 
+koordinatni sistem, izračunamo tako, da prvotno matriko zasučemo za ustrezen kot $\vartheta$:
 \beq
 M(\vartheta) = R(\vartheta) \cdot M (0) \cdot R(\vartheta)^{T},
 \label{eq:03_57}
@@ -1098,7 +1098,8 @@ Naj nepolarizirana svetloba vpada na linearni polarizator,
 nato pa skozi ploščico $\lambda/4$ na zrcalo, od katerega
 se odbije in vrne po isti poti nazaj. Izračunajmo intenziteto
 izhodne svetlobe, če je prepustna smer linearnega polarizatorja
-zasukana za kot $45\si{\degree}$ glede na osi $x$ in $y$. 
+zasukana za kot $45\si{\degree}$ glede na osi $x$ in $y$, lastne
+osi ploščice $\lambda/4$ pa sovpadajo z osema $x$ in $y$.
 \vglue-5truemm
 \begin{figure}[h!]
 \centering
@@ -1171,17 +1172,16 @@ V prejšnjem primeru (primer~\ref{ex_izolator})
 pa smo pokazali, da cirkularno polarizirano valovanje po odboju 
 od zrcala ne prehaja več skozi prvotni cirukularni 
 polarizator. Zrcalo iz desno krožno polariziranega valovanja naredi
-levo krožno polarizirano valovanje in obratno, zato je odbita
-slika skozi cirkularni polarizator videti 
-temna (glej sliko~\ref{fig:03_CirkularniOdboj}). 
+levo krožno polarizirano valovanje in obratno, zato nazaj do predmeta
+ne pride nič svetlobe (glej sliko~\ref{fig:03_CirkularniOdboj}). 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=7truecm]{slike/03_linodboj.JPG}\hfill
 \includegraphics[width=7truecm]{slike/03_circodboj.JPG}
 \caption{Linearno polarizirano valovanje pri odboju in prehodu skozi linearni polarizator
 vidimo (levo). Cirkularno polarizirano valovanje se pri odboju spremeni iz 
-desno polariziranega v levo polarizirano in obratno, zato je pri ponovnem 
-prehodu skozi cirkularni polarizator slika temna (desno).}
+desno polariziranega v levo polarizirano in obratno, zato pri ponovnem 
+prehodu skozi cirkularni polarizator slike ni (desno).}
 \label{fig:03_CirkularniOdboj}
 \end{figure}
 \end{example}
@@ -1212,7 +1212,7 @@ iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) in zveze:
 \mathbf{j}_e = \sigma \mathbf{E},
 \label{eq:03_65}
 \eeq
-ki povezuje gostoto električnih tokov $\mathbf{j}_e $ in jakost 
+ki povezuje gostoto električnega toka $\mathbf{j}_e $ in jakost 
 električnega polja $\mathbf{E}$. Sorazmernostni faktor, ki predstavlja 
 električno prevodnost, smo označili s $\sigma$. Tipična vrednost
 za kovine je $\sigma > 10^6/\si{\ohm\m}$ in za izolatorje 
@@ -1249,7 +1249,7 @@ za gostoto magnetnega polja $\mathbf{B}$.
 
 Ker v telegrafski enačbi med drugim nastopa tudi prvi odvod po času, po analogiji z mehanskimi
 sistemi pričakujemo, da se valovanje v snovi duši oziroma slabi (atenuira). 
-Rešitev zato iščemo v obliki ravnega vala:
+Rešitev zato iščemo v obliki ravnega valovanja:
 \beq
 \mathbf{E}(\mathbf{r},t) = \mathbf{E}_0 e^{i\mathbf{k}\cdot \mathbf{r} - i\omega t},
 \label{eq:03_68}

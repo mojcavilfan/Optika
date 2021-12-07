@@ -14,7 +14,7 @@ zahtevnejša izpeljava Kirchhoffovega uklonskega integrala.
 Svetloba se uklanja, kadar vpada na oviro, katere velikost je primerljiva z valovno  
 dolžino svetlobe, ali se širi skozi podobno veliko odprtino v zaslonu. 
 V geometrijski optiki se svetloba širi po ravnih črtah, ki po 
-najkrajši poti povezujejo začetno in končno točko. V tej sliki za oviro 
+najkrajši optični poti povezujejo začetno in končno točko. V tej sliki za oviro 
 nastane ostra senca, v katero se svetloba ne širi. Po uklonski teoriji
 svetloba seže deloma tudi v območje sence. Poleg tega, da se valovanje širi
 v območje geometrijske sence za ovirami, se v njem pojavijo ojačitve
@@ -30,7 +30,7 @@ polarizacijo in jakost električnega polja obravnavamo kot skalarno količino.
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/05_skica01.pdf_tex}
-\caption{Ravni valovi vpadajo na objektni zaslon, v katerem je odprtina. 
+\caption{Ravno valovanje vpada na objektni zaslon, v katerem je odprtina. 
 Na opazovalnem zaslonu v točki $P_0$ opazujemo jakost električnega polja v
 odvisnosti od vpadnega polja v točki $P$.}
 \label{fig:05_shema}
@@ -42,7 +42,7 @@ na objektnem zaslonu, do katerega vodi vektor $\mathbf{r}$.
 
 Po Huygensovem načelu iz vsake točke $P$ v odprtini izhaja sekundarno krogelno valovanje, 
 katerega amplitudo določa polje, ki vpada na objektni zaslon. Če je vpadno valovanje
-ravni val, velja $E(\mathbf{r}) = E_0$ za vsak $\mathbf{r}$. Za nastanek slike
+ravno, velja $E(\mathbf{r}) = E_0$ za vsak $\mathbf{r}$. Za nastanek slike
 v točki $P_0$  na opazovalnem zaslonu seštejemo prispevke sekundarnih
 polj iz vseh točk odprtine v objektnem zaslonu. 
 
@@ -118,8 +118,8 @@ znana sta Fraunhoferjev in Fresnelov približek.
 \section{Fraunhoferjev uklon}
 \label{chap:Fraunhofer}
 O Fraunhoferjevem uklonu oziroma natančneje Fraunhoferjevem uklonskem približku govorimo,
-kadar razdaljo $R$ med točko v odprtini in točko na zaslonu v uklonskem integralu 
-(enačba~\ref{eq:05_05}) razvijemo do prvega reda. Zapišemo:
+kadar je razdalja $z_0$ med objektno in opazovalno ravnino bistveno večja od oddaljenosti
+točk $P$ in $P_0$ od optične osi sistema. Zapišemo:
 \beq
 R = \sqrt{(\xi-x)^2 + (\eta - y)^2 + z_0^2} =
 \sqrt{\xi^2+\eta^2 +z_0^2 - 2\xi x - 2 \eta y + x^2 + y^2}.
@@ -241,24 +241,24 @@ Fraunhoferjevega približka. Zamislimo si enodimenzionalno režo, ki se razteza 
 osi $x$. Fazni zamik sekundarnih sferičnih valov, ki izvirajo iz reže pri danem $x$ 
 in se zberejo v eni točki na zaslonu, se po enačbi~(\ref{eq:05_11}) spreminja z lego $x$ kot:
 \beq
-\Delta \phi = \frac{k \xi x}{R_0}.
+\Delta \phi = -\frac{k \xi x}{R_0}.
 \label{eq:05_20}
 \eeq
-Primerjamo to z faznim zamikov ravnih valov, ki potujejo v smeri $\vartheta_\xi \approx
+Primerjamo to z faznim zamikov ravnega valovanja, ki potuje v smeri $\vartheta_\xi \approx
 \xi/R_0$ glede na os $z$:
 \beq
-\Delta \phi = k x \vartheta_\xi.
+\Delta \phi = - k x \vartheta_\xi.
 \label{eq:05_21}
 \eeq
 Vidimo, da sta fazna zamika (enačbi~\ref{eq:05_20} in \ref{eq:05_21}) enaka. 
 V Fraunhoferjevem približku je torej uklonjeno valovanje
-enako ravnim valovom, ki se širijo pod kotom $\vartheta_\xi$ 
+enako ravnemu valovanju, ki se širi pod kotom $\vartheta_\xi$ 
 (skica~\ref{fig:05_ravnivalovi}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{75truemm} 
 \input{slike/05_ravnivalovi.pdf_tex}
-\caption{V Fraunhoferjevem približku so uklonjeni valovi ravni valovi. Približek
+\caption{V Fraunhoferjevem približku je uklonjeno valovanje ravno. Približek
 velja za velike oddaljenosti od zaslona, zato mu pravimo tudi približek
 daljnjega polja.}
 \label{fig:05_ravnivalovi}
@@ -272,7 +272,7 @@ Zbiralna leča namreč snop vzporednih žarkov zbere v eni
 točki v goriščni ravnini leče. Na podoben način na vpadni strani svetlobo, ki 
 izhaja iz točkastega svetila v gorišču leče, preslikamo v snop vzporednih žarkov (kolimiramo)
 in dosežemo enakomerno osvetlitev
-objektnega zaslona z vpadnim snopom ravnih valov.
+objektnega zaslona z vpadnim snopom ravnega valovanja.
 Z dodatim ustreznim spektralnim filtrom ustvarimo 
 monokromatsko valovanje.
 \begin{figure}[ht]
@@ -292,7 +292,7 @@ delno prozornega objekta ali vzorca.
 \end{remark}
 
 \begin{example}{\bf Fraunhoferjev uklon na reži širine $d$.}
-Obravnavajmo uklon svetlobe z valovno dolžino $\lambda$, ki v obliki ravnih valov 
+Obravnavajmo uklon svetlobe z valovno dolžino $\lambda$, ki v obliki ravnega valovanja 
 vpada na zaslon z režo širine $d$. Uklonsko sliko na oddaljenem opazovalnem zaslonu
 izračunamo iz enačbe~(\ref{eq:Fraunhoferjev}), pri čemer je funkcija $f(x)$ enaka 1 za
 $-d/2<x<d/2$, sicer je 0. Integral po smeri $y$ in ostale predfaktorje združimo
@@ -419,7 +419,7 @@ Gostota svetlobnega toka uklonjene svetlobe na opazovalnem zaslonu je tako:
 j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\vartheta/2}\right)^2
 \left(\frac{\sin\left(NkD\sin\vartheta/2\right)}{\sin\left(kD\sin\vartheta/2\right)}\right)^2\!\!.
 }
-Prvi oklepaj imenujemo strukturni faktor $S(\vartheta)$ in določa ovojnico 
+Prvi oklepaj imenujemo oblikovni faktor $S(\vartheta)$ in določa ovojnico 
 uklonske slike. Enak je uklonski sliki za eno samo režo debeline $d$ 
 (enačba~\ref{eq:uklon1reza}). 
 Drugi oklepaj imenujemo mrežni faktor $M(\vartheta)$ in je odvisen od števila
@@ -430,8 +430,8 @@ in razporeditve rež (glej sliko~\ref{fig:05_Nrez}).
 \def\svgwidth{140truemm} 
 \input{slike/05_Fraunhofer_N.pdf_tex}
 \caption{Fraunhoferjeva uklonska slika na $N$ vzporednih režah. 
-Primer je narisan za $N=5$ rež in $D=3d$. Strukturni faktor $S$ (modra) je 
-enak kot uklonska slika ene reže. Produkt med strukturnim faktorjem in mrežnim
+Primer je narisan za $N=5$ rež in $D=3d$. Oblikovni faktor $S$ (modra) je 
+enak kot uklonska slika ene reže. Produkt med oblikovnim in mrežnim
 faktorjem $M$ (zelena) da celotno uklonsko sliko (rdeča). Nad izračunano
 uklonsko sliko je simulacija uklonske slike laserskega snopa na enaki uklonski oviri.
 Parameter $x = d\sin \vartheta/\lambda$.}
@@ -451,20 +451,20 @@ NkD \sin(\vartheta)/2 = m\pi \qquad \mathrm{in} \qquad \sin \vartheta = \frac{m\
 \eeq
 pri čemer je $m$ celo število. Med dvema glavnima vrhoma je na splošno
 $N-2$ stranskih vrhov. Pri izračunu amplitude vrhov moramo upoštevati
-tudi strukturni faktor, torej ovojnico.
+tudi oblikovni faktor, torej ovojnico.
 \begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/05_Fraunhofer_2.pdf_tex}
 \caption{Fraunhoferjeva uklonska slika na dveh vzporednih režah $N=2$ za $D=4d$. 
-Produkt med strukturnim faktorjem $S$ (modra) in mrežnim
+Produkt med oblikovnim faktorjem $S$ (modra) in mrežnim
 faktorjem $M$ (zelena) da celotno uklonsko sliko (rdeča). Pod simulacijo uklonske 
 slike laserskega snopa je fotografija uklonske slike.}
 \label{fig:05_2rezi}
 \vglue-5truemm
 \end{figure}
 
-Poglejmo še limito v primeru zelo tankih rež. Strukturni faktor, ki opisuje uklon na 
+Poglejmo še limito v primeru zelo tankih rež. Oblikovni faktor, ki opisuje uklon na 
 eni sami reži, se močno razširi in v limiti $d\to 0$ velja $S(\vartheta) \to 1$. Envelopa
 tako postane konstantna in amplituda vrhov v tem primeru ne pojema več z naraščajočim 
 $\vartheta$. Uklonska slika je tako enaka mrežnemu faktorju (glej sliko~\ref{fig:05_Nrez}, modra črta).
@@ -809,7 +809,7 @@ za $z_0=6~\si{mm}$:
 F = \frac{d^2}{\lambda R_0} \approx 300. 
 \label{eq:05_74}
 \eeq
-Fresnelovo število $F\gg1$, kar potrjuje veljavnost Fresnelovega približka.
+Fresnelovo število $F\gg1$, kar potrjuje neustreznost Fraunhoferjevega približka.
 \end{example}
 
 \begin{example}{\bf Fresnelova conska plošča.}
@@ -945,7 +945,7 @@ iz sredine je enaka:
 \input{slike/05_FresFaza.pdf_tex}
 \caption{Pot, ki jo prepotuje valovanje od točke na razdalji $a$ do točke $P_0$, je enaka $R$ (levo).
 Prispevki sekundarnih polj se seštevajo za $\Delta \phi < \pi$,  pri večjih fazni razlikah
-se začnejo prispevki odštevati in skupno polje zmanjševati (sredina).}
+se začnejo prispevki odštevati in skupno polje zmanjševati (desno).}
 \label{fig:05_FresCona3}
 \vglue-5truemm
 \end{figure}
@@ -1123,9 +1123,10 @@ primerov Fresnelovih uklonskih slik za reže različnih širin.
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/05_Fresnek_Reza.pdf_tex}
-\caption{Fresnelova uklonska slika na reži za različne širine rež. Uklonska slika
+\caption{Fresnelova uklonska slika na reži za različne širine rež, pri čemer je 
+širina reže označena s črtkano črto. Uklonska slika
 zelo ozke reže je podobna Fraunhoferjevi uklonski sliki, pri večjih se od Fraunhoferjeve 
-znatno razlikuje. Črtkana črta označuje velikost odprtine. Desno so simulacije uklonskih
+znatno razlikuje. Desno so simulacije uklonskih
 slik na režah.}
 \label{fig:05_FrReza}
 \end{figure}
@@ -1274,7 +1275,7 @@ polmerom $\varepsilon$ okoli točke $P_0$ (slika~\ref{fig:05_Green}).
 \def\svgwidth{70truemm} 
 \input{slike/05_Green1.pdf_tex}
 \caption{K izračunu Greenovega teorema, pri katerem moramo zaradi divergence krogelnega
-vala $\Psi$ v izhodišču od integracije odvzeti majhno kroglico s polmerom $\varepsilon$.}
+valovanja $\Psi$ v izhodišču od integracije odvzeti majhno kroglico s polmerom $\varepsilon$.}
 \label{fig:05_Green}
 \end{figure}
 

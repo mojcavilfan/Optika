@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="167.79301mm"
@@ -18,6 +19,26 @@
    sodipodi:docname="02_FerOs.svg">
   <defs
      id="defs205">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11042-4">
+      <stop
+         style="stop-color:#e7f5e9;stop-opacity:1"
+         offset="0"
+         id="stop11038" />
+      <stop
+         id="stop12280"
+         offset="0.5"
+         style="stop-color:#e8e9c5;stop-opacity:1" />
+      <stop
+         style="stop-color:#c1d5e9;stop-opacity:1"
+         offset="0.75"
+         id="stop12282" />
+      <stop
+         style="stop-color:#c1cde9;stop-opacity:1"
+         offset="1"
+         id="stop11040" />
+    </linearGradient>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -258,6 +279,16 @@
          id="path14068-8"
          inkscape:connector-curvature="0" />
     </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11042-4"
+       id="linearGradient12278"
+       gradientUnits="userSpaceOnUse"
+       x1="82.218613"
+       y1="213.53818"
+       x2="82.218613"
+       y2="176.62509"
+       gradientTransform="translate(4.7625002)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -266,8 +297,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.4726699"
-     inkscape:cx="323.86007"
+     inkscape:zoom="1.1181675"
+     inkscape:cx="472.42905"
      inkscape:cy="138.45321"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -277,11 +308,11 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1302"
-     inkscape:window-height="994"
-     inkscape:window-x="1"
-     inkscape:window-y="4"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1159"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata208">
     <rdf:RDF>
@@ -310,6 +341,13 @@
          x="49.928837"
          y="57.345371"
          style="stroke-width:0.26458332" /></text>
+    <rect
+       style="opacity:1;fill:url(#linearGradient12278);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.70564377;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.23386253, 1.41128751;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect10397"
+       width="153.09462"
+       height="42.592007"
+       x="24.749456"
+       y="170.94617" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.80000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker18155)"
        d="m 24.558328,163.84532 v 57.21975"
