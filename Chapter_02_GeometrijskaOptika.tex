@@ -15,7 +15,7 @@ za katero potrebuje najmanj časa. Označimo
 hitrost svetlobe v snovi s $c$ in na splošno se  $c$ razlikuje
 od hitrosti svetlobe v praznem prostoru $c_0$. Razmerje med
 hitrostjo svetlobe v praznem prostoru in njeno hitrostjo
-v snovi opisuje lomni količnik $n$. Velja:
+v snovi opisuje lomni količnik $n$. Velja:\index{Hitrost svetlobe}
 \boxeq{eq:c}{
 c = \frac{c_0}{n}.
 }
@@ -23,6 +23,7 @@ Hitrost svetlobe v praznem prostoru je
 po definiciji enaka $c_0 = 299\,\,792\,\,458~\si{m/s}$, 
 lomni količnik pa je odvisen od snovi in frekvence svetlobe: za vidno svetlobo
 je v vodi približno $1,3$, v steklih okoli $1,4$--$1,9$ in v diamantu $2,4$.
+\index{Lomni količnik}
 
 Naj svetloba potuje po snovi z lomnim količnikom $n$. Celotno pot, ki 
 jo svetloba opravi od začetne do končne točke, razdelimo na kratke intervale 
@@ -31,7 +32,7 @@ poti $ds$. Za del poti $ds$ potrebuje svetloba čas $dt$, ki ga zapišemo kot:
  dt = \frac{ds}{c} = \frac{ds}{c_0/n} = \frac{nds}{c_0}.
 \label{eq:02_02}
 \end{equation}
-Fermatov teorem pravi, da svetloba potuje po poti, za katero velja:
+Fermatov teorem pravi, \index{Fermatov teorem}da svetloba od točke 1 do točke 2 potuje po poti, za katero velja:
 \beq
 \int_1^2 dt = \int_1^2 \frac{nds}{c_0} = \mathrm{min}.
 \label{eq:02_03}
@@ -43,10 +44,10 @@ krajem, zato teorem prepišemo v:
 S = \int_1^2 n(\mathbf{r})ds = \mathrm{min}.
 }
 Celotni integral $S$ imenujemo optična pot, ki se od geometrijske poti razlikuje v tem,
-da upošteva tudi lomni količnik snovi. 
+da upošteva tudi lomni količnik snovi.\index{Optična pot} 
 Zapisani izraz imenujemo princip najmanjše optične poti oziroma najmanjše optične akcije. 
 Problem je podoben principu najmanjše akcije v klasični mehaniki, zato včasih govorimo  
-tudi o Langrangeevi oziroma Hamiltonovi optiki.
+tudi o Lagrangeevi oziroma Hamiltonovi optiki.
 \begin{remark}
 Princip najkrajše optične poti lahko formalno izpeljemo z 
 obravnavo valovnih front in žarkov v valovni optiki, če naredimo limito $\lambda \to 0$.
@@ -55,11 +56,11 @@ Tako lahko izhajajoč iz Maxwellovih enačb pokažemo pravilnost Fermatovega teo
 
 \begin{example}
 {\bf Izpeljava lomnega zakona iz Fermatovega teorema.}
-Naj svetlobni žarek vpada na ravno mejo dveh snovi. Levo od meje je snov 
-z lomnim količnikom $n_1$, desno pa snov z lomnim količnikom $n_2$. Naj svetloba
+Naj svetlobni žarek vpada na ravno mejo med dvema snovema. Levo od meje je snov 
+z lomnim količnikom $n_1$, desno pa snov z lomnim količnikom $n_2$. Svetloba 
 potuje od točke 1, ki jo izberemo na oddaljenosti $z_1$ levo 
-od meje, do točke 2 na oddaljenosti $z_2$ desno od meje. Vzdolžna razdalja med obema
-točkama naj bo $x$ (slika~\ref{fig:02_FerLom}). 
+od meje, do točke 2 na oddaljenosti $z_2$ desno od meje. Vzdolžno razdaljo med obema
+točkama označimo z $x$ (slika~\ref{fig:02_FerLom}). 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{100truemm} 
@@ -75,34 +76,34 @@ Celotno optično pot zapišemo kot:
 S = n_1 s_1 + n_2 s_2 = n_1 \sqrt{x_1^2+z_1^2}\, +\, n_2 \sqrt{x_2^2+z_2^2}.
 \label{eq:02_05}
 \end{equation}
-Izrazimo parameter $x_2$ z lego iskane točke $x_1$: 
+Parameter $x_2$ izrazimo z lego iskane točke $x_1$ in dobimo: 
 \begin{equation}
 S = n_1 \sqrt{x_1^2+z_1^2}\, +\, n_2 \sqrt{(x-x_1)^2+z_2^2}.
 \label{eq:02_06}
 \end{equation}
 Najkrajšo optično pot izračunamo tako, da poiščemo vrednost $x_1$, 
-pri kateri je odvod optične poti po $x_1$ enak nič. Zapišemo:
+pri kateri je odvod optične poti po $x_1$ enak nič. Izračunamo odvod in zapišemo:
 \begin{equation}
 \frac{dS}{dx_1} = \frac{2 n_1 x_1}{2 \sqrt{x_1^2+z_1^2}}+
 \frac{-2n_2 (x-x_1)}{2 \sqrt{(x-x_1)^2+z_2^2}} = 0.
 \label{eq:02_07}
 \end{equation}
-Vpeljemo vpadni kot $\alpha$ glede na normalo na mejo snovi (slika~\ref{fig:02_FerLom}):
+Vpeljemo vpadni kot $\alpha$ glede na \index{Vpadni kot}normalo na mejo med snovema (slika~\ref{fig:02_FerLom}):
 \begin{equation}
 \sin \alpha = \frac{x_1}{\sqrt{x_1^2+z_1^2}}.
 \label{eq:02_08}
 \end{equation}
-Lomni kot $\beta$ naj bo kot med smerjo žarka v drugi snovi in normalo na mejo snovi: 
+Lomni kot $\beta$ naj bo kot med \index{Lomni kot} smerjo žarka v drugi snovi in normalo na mejo med snovema: 
 \begin{equation}
 \sin \beta = \frac{x_2}{\sqrt{x_2^2+z_2^2}} = \frac{(x-x_1)}{\sqrt{(x-x_1)^2+z_2^2}}.
 \label{eq:02_09}
 \end{equation}
 Vstavimo enačbi~(\ref{eq:02_08}) in (\ref{eq:02_09}) v enačbo~(\ref{eq:02_07})
-in dobimo lomni zakon v znani obliki:
+in dobimo lomni zakon v znani obliki:\index{Lomni zakon}
 \boxeq{eq:lomnizakon}{
 n_1 \sin \alpha = n_2 \sin \beta.
 }
-Na podoben način izpeljemo tudi odbojni zakon, tako da izračunamo 
+Na podoben način izpeljemo tudi odbojni zakon, \index{Odbojni zakon}tako da izračunamo 
 najkrajšo optično pot med točkama 1 in 3. Dobimo:
 \boxeq{eq:odbojnizakon}{
 \tilde{\alpha} = \alpha.
@@ -117,27 +118,27 @@ Naj bo lomni količnik v splošnem funkcija kraja: $n = n(\mathbf{r}) = n(x,y,z)
 Numerično se naloge lotimo tako, da snov razdelimo
 na kratke odseke in na mejah med njimi uporabimo lomni ali odbojni zakon.
 Analitično problem rešujemo z uporabo Euler-Lagrangeeve enačbe za minimum
-funkcionala optične poti $S$:
+funkcionala optične poti $S$:\index{Euler-Lagrangeeva enačba}\index{Optična pot}
 \begin{equation}
  S = \int_1^2 n(x,y,z) ds  = \int_1^2 n(x,y,z)\,|\mathbf{v}|\,dt  = 
  \int_1^2 n(x,y,z) \sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2} dt,
  \label{eq:02_10}
 \end{equation}
 pri čemer pika označuje odvod posamezne koordinate po času. Integrand
-enačbe predstavlja Langrangian $L$, ki je funkcija treh koordinat in njihovih
-odvodov.
+enačbe predstavlja Lagrangian $L$, ki je funkcija treh koordinat in njihovih
+odvodov.\index{Lagrangian}
 \begin{equation}
 L(x, y, z, \dot{x}, \dot{y}, \dot{z}) = n(x,y,z) \sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}.
 \label{eq:02_11}
 \end{equation}
-Lagrangian vstavimo v Euler-Lagrangeevo enačbo\footnote{~Glej npr. P. Prelovšek, {\it Klasična
-mehanika}, skripta, 2013.} in za koordinato $x$ dobimo:
+Euler-Lagrangeeva enačba\footnote{~Glej npr. P. Prelovšek, {\it Klasična
+mehanika}, skripta, 2013.} za koordinato $x$ je oblike:
 \begin{equation}
  \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - 
  \frac{\partial L}{\partial x} = 0.
  \label{eq:02_12}
 \end{equation}
-Vstavimo Langrangian (enačba~\ref{eq:02_11}) 
+Vstavimo Lagrangian (enačba~\ref{eq:02_11}) 
 v enačbo~(\ref{eq:02_12}) in dobimo:
 \begin{equation}
 \frac{d}{dt}\left(n \frac{\dot{x}}{\sqrt{\dot{x}^2+ \dot{y}^2+\dot{z}^2}} \right)
@@ -162,14 +163,14 @@ na levi strani pa verižno pravilo odvajanja, po katerem lahko pokrajšamo $dt$.
  \frac{\partial n}{\partial x}.
  \label{eq:02_16}
 \end{equation}
-Enačbo~(\ref{eq:02_15}) uporabimo še enkrat v oklepaju na levi strani. Sledi:
+Zvezo~(\ref{eq:02_15}) uporabimo še enkrat v oklepaju na levi strani. Sledi:
 \begin{equation}
  \frac{d}{ds} \left( n\, \frac{dx}{ds} \right)=
  \frac{\partial n}{\partial x}.
   \label{eq:02_17}
 \end{equation}
 Podobni enačbi zapišemo še za koordinati $y$ in $z$, nato vse tri enačbe
-združimo v enotno žarkovno enačbo:
+združimo v enotno žarkovno enačbo:\index{Žarkovna enačba}
 \boxeq{eq:zarkovnaenacba}{
 \nabla n = \frac{d}{ds} \left( n \frac{d\mathbf{r}}{ds}\right)\!.
 }
@@ -198,7 +199,8 @@ vektor $\mathbf{a}_1$ pa ima smer od začetne do končne točke.
 \subsection*{Obosni približek žarkovne enačbe}
 V optiki pogosto privzamemo, da smer širjenja svetlobe le malo 
 odstopa od neke dane smeri. Naj bo to smer $z$, ki jo imenujemo
-optična os sistema. Zaradi enostavnosti se omejimo na ravninski primer, 
+optična os sistema. \index{Optična os sistema}
+Zaradi enostavnosti se omejimo na ravninski primer, 
 tako da trajektorijo žarka opazujemo v ravnini $xz$ 
 (slika~\ref{fig:02_FerOs}). Lomni količnik naj bo funkcija $n= n(x)$.
 \begin{figure}[ht]
@@ -206,7 +208,7 @@ tako da trajektorijo žarka opazujemo v ravnini $xz$
 \def\svgwidth{90truemm} 
 \input{slike/02_FerOs.pdf_tex}
 \caption{K zapisu žarkovne enačbe v obosnem približku. Lomni količnik $n$ se na splošno
-spreminja z oddaljenosjo od optične osi sistema $x$.}
+spreminja z oddaljenostjo $x$ od optične osi sistema (os $z$).}
 \label{fig:02_FerOs}
 \end{figure}
 
@@ -218,7 +220,7 @@ le malo odstopa, matematično zapišemo s pogojem:
 \end{equation}
 Iz tega sledi, da za naklon žarka $\vartheta$, ki ga na danem mestu izračunamo kot:
 \begin{equation}
-\vartheta = \frac{dx}{dz}
+\vartheta = \frac{dx}{dz},
  \label{eq:02_21}
 \end{equation}
 velja $\sin \vartheta \approx \tan \vartheta \approx \vartheta \ll 1$.
@@ -227,9 +229,11 @@ Upoštevajoč enačbo~(\ref{eq:02_20}) zapišemo:
 ds = \sqrt{dx^2+dz^2} = \sqrt{1+\left(\frac{dx}{dz}\right)^2}\,\,dz \approx dz.
 \label{eq:02_22}
 \end{equation}
-Predpostavki, da se žarek širi približno vzdolž osi $z$, pravimo
+Predpostavki, da se žarek širi približno vzdolž osi $z$, pravimo\index{Obosni približek}
+\index{Paraksialni približek|see{Obosni približek}}
 obosni ali paraksialni približek. V nadaljevanju se ga bomo še velikokrat 
-posluževali. Žarkovno enačbo (enačba~\ref{eq:zarkovnaenacba}) v obosnem približku
+posluževali. Žarkovno enačbo (enačba~\ref{eq:zarkovnaenacba}) v obosnem 
+približku\index{Žarkovna enačba!Obosni približek|see{Obosni približek}}
 zapišemo kot:
 \begin{equation}
  \frac{dn}{dx} = \frac{d}{dz}\left(n(x)\,\frac{dx}{dz}\right) = n(x)\,\frac{d^2x}{dz^2}
@@ -294,16 +298,15 @@ do pojava fatamorgane.}
 \end{figure}
 \end{example}
 
-\subsection*{Fatamorgana}
+\subsection*{Fatamorgana}\index{Fatamorgana}
 Ukrivljeno pot žarkov v snovi z nehomogenim lomnim količnikom opazimo
 tudi v naravi. Kadar se tla (na primer asfaltna cesta) 
 močno segrejejo, nastane nad njimi tanka plast zraka, ki je bistveno 
 toplejši od zraka višje nad tlemi. Ali pa je tanka plast zraka nad 
-hladnim morjem znantno hladnejša od toplega zraka v višjih legah. Ker je 
+hladnim morjem znatno hladnejša od toplega zraka v višjih legah. Ker je 
 lomni količnik toplejšega zraka manjši od lomnega količnika hladnejšega zraka, 
 se v obeh primerih pot svetlobe ukrivi, enkrat navzgor, drugič navzdol. Ta pojav
-imenujemo zračno zrcaljenje ali fatamorgana. 
-
+imenujemo zračno zrcaljenje ali fatamorgana.\index{Zračno zrcaljenje|see{Fatamorgana}}
 Spodnje zračno zrcaljenje nastopi, kadar je spodnja plast zraka toplejša 
 od zgornjih plasti. Poglejmo, kako opazovalec vidi oddaljeno drevo 
 (slika~\ref{fig:02_Fata1}). Od krošnje do opazovalca pridejo žarki
@@ -329,13 +332,13 @@ in temperature plasti.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=12truecm]{slike/02_Fata2.jpg}
-\caption{Zračno zrcaljenje na hladnejši podlagi (Foto: Craig Clements, Wikimedia)}
+\caption{Zračno zrcaljenje na hladnejši podlagi. Foto: Craig Clements, Wikimedia.}
 \label{fig:02_Fata2}
 \end{figure}
 \vglue-0.6truecm
 Ukrivljena pot žarkov zaradi temperaturnega gradienta v atmosferi
 vodi še do enega zanimivega pojava: popačenja oblike Sonca ob sončnem 
-zahodu. Ker žarki s spodnjega dela Sonca potujejo po bolj ukrivljeni
+zahodu. Ker žarki s spodnjega dela Sonca potujejo po bolj ukrivljeni\index{Sonce}
 poti kot žarki z zgornjega dela, se spodnji rob navidezno premakne navzgor 
 in slika Sonca se splošči ali popači.
 \begin{figure}[ht]
@@ -362,7 +365,7 @@ teh dveh parametrov opišemo s preslikavo.}
 \label{fig:01_ABCD0}
 \end{figure}
 
-V splošnem vrednosti lege in naklona v točki 2 izrazimo kot 
+Na splošno vrednosti lege in naklona v točki 2 izrazimo kot 
 linearno kombinacijo prvotnih vrednosti v točki 1:
 \begin{align}
  x_2 &= A x_1 + B \vartheta_1 \qquad \mathrm{in}  \label{eq:02_29}\\
@@ -390,16 +393,17 @@ x_1\\
 \vartheta_1
 \end{array}\right]\!\!.
 }
-Matriko $M$ imenujemo transformacijska oziroma prehodna matrika 
-vmesnega optičnega medija ali optičnega elementa. 
+Matrika $M$ je  transformacijska oziroma prehodna matrika 
+vmesnega optičnega medija ali optičnega elementa. Imenujemo jo matrika ABCD.
+\index{Matrika ABCD}
 
 \begin{example}
-\label{ex:ML}
+\label{ex:ML}\index{Matrika ABCD!{pri premiku}}
 {\bf Matrika ABCD za premik v homogeni snovi s konstantnim lomnim količnikom.} 
 Prvi primer naj bo homogena snov, v kateri je lomni količnik konstanten in enak $n$. 
 V točki 1 pri $z_1$ naj bosta komponenti vektorja enaki $x_1$ in 
-$\vartheta_1$. Poiščimo vrednosti komponent vektorja, 
-če se premaknemo za $L$ vzdolž optične osi sistema do $z_2$ 
+$\vartheta_1$. Poiščimo vrednosti komponent vektorja pri $z_2$, ki je 
+za $L$ premaknjen vzdolž optične osi sistema 
 (slika~\ref{fig:01_ABCD1}). 
 \begin{figure}[ht]
 \centering
@@ -433,9 +437,9 @@ Iz zapisa razberemo koeficiente matrike $M$ za homogeno snov dolžine $L$:
 \end{example}
 
 \begin{example}
-\label{ex:Mmeja}
+\label{ex:Mmeja}\index{Matrika ABCD!{na ravni meji}}
 {\bf Matrika ABCD za prehod skozi ravno mejo med dvema snovema.} Naj svetloba vpada na 
-mejo dveh snovi z različnima lomnima količnikoma $n_1$ in $n_2$. Za izračun 
+mejo med dvema snovema z različnima lomnima količnikoma $n_1$ in $n_2$. Za izračun 
 prehodne matrike izberemo dve točki na žarku: eno tik pred mejo in eno tik za njo. 
 Lega žarka se ob tem ne spremeni in $x_2 = x_1$. 
 Spremeni pa se naklon žarka. 
@@ -470,13 +474,13 @@ Matrika $M$ za prehod skozi mejo med dvema snovema je:
 \end{example}
 
 \begin{example}
-\label{ex:MUmeja}
-{\bf Matrika ABCD za prehod skozi ukrivljeno mejo med dvema snovema.} V prejšnjem 
-primeru je bila meja med snovema z lomnima količnikoma $n_1$ in $n_2$ ravna, zdaj pa 
-poglejmo še matriko za prehod skozi ukrivljeno mejo. Krivinski radij mejne ploskve
+\label{ex:MUmeja}\index{Matrika ABCD!{na ukrivljeni meji}}
+{\bf Matrika ABCD za prehod skozi ukrivljeno mejo med dvema snovema.} 
+Poglejmo še matriko za prehod skozi ukrivljeno mejo med snovema z lomnima 
+količnikoma $n_1$ in $n_2$. Krivinski radij mejne ploskve
 naj bo $R$, pri čemer $R$ štejemo pozitivno, če je meja konveksna glede na smer
-naraščajočega $z$ oziroma če je središče krožnice za mejo med snovema. V primeru, 
-da je središče krožnice, ki določa mejo med snovema, pred mejo, je meja konkavna, 
+naraščajočega $z$ oziroma če je središče krožnice za mejo med snovema. Kadar
+je središče krožnice, ki določa mejo med snovema, pred mejo, je meja konkavna, 
 krivinski radij mejne ploskve pa negativen. 
 
 Za izračun matrike ponovno izberemo dve točki, prvo tik pred mejo in 
@@ -530,7 +534,7 @@ V limitnem primeru, ko gre $R \to \infty$, se matrika prevede na matriko za
 prehod skozi ravno mejo (glej primer~\ref{ex:Mmeja}).
 \end{example}
 
-Izračunajmo še determinanto izpeljanih matrik ABCD. Na splošno velja, da
+Izračunajmo še determinanto izpeljanih matrik ABCD. \index{Matrika ABCD!determinanta}Na splošno velja, da
 je determinanta matrike ABCD enaka razmerju lomnih količnikov začetne in 
 končne snovi. Če je lomni količnik snovi na koncu enak
 kot na začetku (primer~\ref{ex:ML}), je $\det(M) = 1$, v nasprotnem primeru 
@@ -542,7 +546,7 @@ primeru se pokažeta izjemna praktičnost in uporabnost zapisa z matrikami, saj 
 več elementov matrike za te elemente preprosto zmnožimo. Paziti moramo seveda
 na vrsti red: matriko za element, na katerega vpade svetloba najprej, zapišemo
 najbolj desno, to je najbliže vektorju, ki opisuje vpadno svetlobo. Celoten prehod
-spet opiše ena sama matrika:
+spet opiše ena sama matrika:\index{Matrika ABCD!množenje}
 \begin{equation}
 \left[\begin{array}{c}
 x_N\\
@@ -569,21 +573,21 @@ Pri tem moramo paziti na vrstni red zapisa matrik.}
 \end{figure}
 
 \section{Preslikave z lečami}
-\label{chap:lecje}
+\label{chap:lecje}\index{Leča}
 Uporabimo matrike ABCD za izračun prehoda svetlobe skozi tanko lečo. Matriko
 za prehod zapišemo kot produkt dveh matrik: prve, ki opiše
 prehod skozi prvo ukrivljeno ploskev s krivinskim radijem $R_1$, 
 in druge, ki opiše prehod skozi izhodno ukrivljeno ploskev s 
-krivinskim radijem $R_2$. Za bikonveksno lečo, na primer, je 
-$R_1>0$ in $R_2<0$ (glej sliko~\ref{fig:02_tankaleca}). 
-Lomni količnik leče naj bo $n_2$ in snovi okoli leče 
-(navadno je to zrak) $n_1$. Zanima nas, kako se vektor $(x_1, \vartheta_1)$ 
+krivinskim radijem $R_2$. Za bikonveksno lečo na sliki~\ref{fig:02_tankaleca} velja 
+$R_1>0$ in $R_2<0$.
+Lomni količnik leče naj bo $n_2$, lomni količnik snovi okoli leče 
+(navadno je to zrak) pa naj bo $n_1$. Zanima nas, kako se vektor $(x_1, \vartheta_1)$ 
 preslika v $(x_2, \vartheta_2)$.
 \begin{figure}[!h]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/02_tankaleca.pdf_tex}
-\caption{K izračunu matrike ABCD za prehod skozi tanko bikonvkesno lečo}
+\caption{K izračunu matrike ABCD za prehod skozi tanko bikonveksno lečo}
 \label{fig:02_tankaleca}
 \end{figure}
 
@@ -611,13 +615,12 @@ Vpeljemo parameter $f$, za katerega velja:
 \label{eq:02_48}
 \eeq
 Element matrike $C$ je tako enak $-1/f$. Fizikalni pomen tega parametra
-bomo kmalu spoznali.
+bomo kmalu spoznali.\index{Matrika ABCD!{za tanko lečo}}
 
 Uporabimo izračunano matriko za opis prehoda svetlobe skozi lečo. Naj žarek izhaja iz 
 predmeta, ki je na oddaljenosti $a$ od leče, opazujemo pa ga na razdalji
-$b$ za lečo. Za celotno pot žarka moramo zmnožiti tri matrike: matriko za 
-premik do leče, matriko za prehod skozi lečo in matriko za premik do opazovalca.
-Dobimo:
+$b$ za lečo (slika~\ref{fig:02_tankaleca}). Za celotno pot žarka moramo zmnožiti tri matrike: matriko za 
+premik do leče, matriko za prehod skozi lečo in matriko za premik do opazovalca. Pazimo na vrstni red in dobimo:
 \beq
 M = 
 \left[\begin{array}{cc}
@@ -663,8 +666,9 @@ x_1\\
 \label{eq:02_51}
 \eeq
 Vsi vzporedni vpadni žarki se zberejo v eni točki, kadar velja $1-b/f = 0$ in $b=f$. 
-Vzporedni žarki se torej zberejo na oddaljenosti $f$, zato 
-parameter $f$ prestavlja goriščno razdaljo leče. 
+Vzporedni vpadni žarki se torej zberejo na oddaljenosti $f$ od leče, zato 
+parameter $f$ prestavlja goriščno razdaljo leče.\index{Goriščna razdalja!{tanka leča}}
+\index{Leča!gorišče}
 Ker navadno obravnavamo lečo v zraku, enačbo~(\ref{eq:02_48}) za izračun 
 goriščne razdalje leče poenostavljeno zapišemo  kot:
 \boxeq{eq:goriscna}{
@@ -681,7 +685,8 @@ Ta zahteva je izpolnjena le ob pogoju, da je element matrike prehoda $B = 0$ in 
 \boxeq{eq:PreslikavaLeca}{
 \frac{1}{f} = \frac{1}{a}+\frac{1}{b}.
 }
-Dobili smo enačbo leče, ki povezuje lego predmeta z lego njegove slike.
+Dobili smo enačbo leče, ki povezuje lego predmeta z lego njegove slike.\index{Enačba leče}
+\index{Leča!{enačba leče}}
 
 Razmerje med velikostima slike $x_2$ in predmeta $x_1$ določa
 element matrike $A$, ki ga z upoštevanjem enačbe~(\ref{eq:PreslikavaLeca})
@@ -690,7 +695,7 @@ zapišemo kot:
 A= 1-\frac{b}{f} = 1 - b\left(\frac{1}{a}+\frac{1}{b}\right) = -\frac{b}{a}.
 \label{eq:02_50}
 \eeq
-Povečava leče je tako enaka:
+Povečava leče je tako enaka:\index{Povečava leče}\index{Leča!povečava}
 \boxeq{eq:PovecavaLece}{
 \frac{x_2}{x_1} =-\frac{b}{a}.
 }
@@ -707,11 +712,11 @@ nastane pokončna navidezna slika na isti strani, kot je predmet. V tem primeru 
 \label{fig:02_slikazaleco}
 \end{figure}
 
-Če je predmet oddaljen od leče več kot je goriščna razdalja, nastane na desni
+Če je predmet oddaljen od leče več kot je goriščna razdalja, nastane na desni\index{Prava slika}
 strani na glavo obrnjena prava slika, ki jo lahko projiciramo na zaslon. Če je 
 predmet blizu leče in velja $a<f$, je po enačbi~(\ref{eq:PreslikavaLeca}) 
 vrednost $b$ negativna. Žarki desno od leče se ne sekajo, temveč se sekajo podaljški 
-žarkov levo od leče. Slika predmeta je tako le navidezna in je
+žarkov levo od leče. Slika predmeta je tako le navidezna in je\index{Navidezna slika}
 ne moremo projicirati na zaslon. Povečava take slike je pozitivna, 
 kar pomeni, da je navidezna slika pokončno obrnjena.
 
@@ -720,7 +725,7 @@ povsem splošno za poljubno tanko lečo. Paziti moramo le na predznake krivinski
 radijev vstopne in izstopne ploskve. Če je ena stranica leče ravna, je 
 njen krivinski radij neskončen. 
 
-\begin{example}{\bf Preslikava z dvema zaporednima lečama.}
+\begin{example}{\bf Preslikava z dvema zaporednima lečama.}\index{Matrika ABCD!{za sistem leč}}
 Poglejmo prehod svetlobe skozi dve zaporedni tanki leči z goriščnima
 razdaljama $f_1$ in $f_2$, ki sta na medsebojni oddaljenosti $s$.
 \begin{figure}[!h]
@@ -786,7 +791,7 @@ Cx_1
 pri čemer so elementi matrike ABCD podani z enačbo~(\ref{eq:02_54}). 
 Po definiciji se vzporedni vpadni žarki po prehodu sekajo v gorišču, 
 zato je naklon izhodnega žarka $\vartheta_2 = -x_1/f$ in $C = -1/f$. 
-Od tod razberemo goriščno razdaljo sistema:
+Od tod razberemo goriščno razdaljo sistema:\index{Goriščna razdalja!{sistem leč}}
 \boxeq{eq:lecje}{
 \frac{1}{f} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{s}{f_1f_2}.
 }
@@ -796,8 +801,8 @@ d = -\frac{A}{C} = \frac{f_1f_2-sf_2}{f_1+f_2-s}.
 \label{eq:02_56}
 \eeq
 Pri sestavu leč pogosto vpeljemo glavno ravnino. To je ravnina, pravokotna
-na optično os, v kateri bi 
-bila postavljena nadomesta tanka leča. Dobimo jo tako, da poiščemo 
+na optično os, v kateri bi \index{Glavna ravnina}
+bila postavljena nadomestna tanka leča. Dobimo jo tako, da poiščemo 
 presečišče žarkov, ki vpadajo na sistem vzporedno z optično osjo, 
 in žarkov ali njihovih podaljškov, ki iz sestava izhajajo desno od lečja. 
 Ko poznamo lego gorišča, je lego glavne ravnine preprosto določiti, 
@@ -809,7 +814,7 @@ ne komutirajo, je prehod z desne proti levi drugačen. Skupna goriščna
 razdalja ostane enaka, premakneta pa se lega gorišča in glavna ravnina.
 \end{example}
 
-\begin{example}{\bf Preslikava z debelo lečo}
+\begin{example}{\bf Preslikava z debelo lečo}\index{Matrika ABCD!{za debelo lečo}}
 Matriko za prehod skozi debelo lečo s krivinskima radijema
 $R_1$ in $R_2$ ter debelino $d$ lahko neposredno izračunamo
 z množenjem treh matrik: matrike za prehod skozi ukrivljeno vstopno 
@@ -837,7 +842,7 @@ Matriko za prehod lahko izračunamo tudi drugače, na podlagi podobnosti
 s sistemom dveh leč. Debelo lečo razdelimo
 na tri dele: vstopno plankonveksno lečo, plast stekla in izstopno plankonkavno lečo.
 Goriščni razdalji leč zapišemo z uporabo enačbe~(\ref{eq:goriscna}), pri čemer upoštevamo, 
-da je krivinski radij ravne stranice neskončen:
+da je krivinski radij ravne stranice neskončen:\index{Goriščna razdalja!{debela leča}}
 \beq
 \frac{1}{f_1} = (n-1)\frac{1}{R_1}\qquad \mathrm{in} \qquad \frac{1}{f_2} = -(n-1)\frac{1}{R_2}.
 \label{eq:02_53}
@@ -865,7 +870,7 @@ M =
 \end{array}\right]\!\!.
 \label{eq:02_54a}
 \eeq
-Efektivna dolžina poti skozi snov je torej skrajšana za faktor $n$.
+Efektivna dolžina poti skozi snov se torej skrajša za faktor $n$.\index{Matrika ABCD!{pri premiku po snovi}}
 
 Ugotovitve vstavimo v enačbo za lečje (enačba~\ref{eq:02_54}) in dobimo:
 \beq
@@ -878,7 +883,7 @@ M =
 \eeq
 Hitro lahko preverimo, da dobimo isti rezultat, če zmnožimo matrike v enačbi~(\ref{eq:02_52}).
 Prav tako hitro preverimo tudi, da je izračunana matrika za debelo lečo v limitnem 
-primeru $d \to 0$ enaka matriki za prehod skozi tanko lečo. 
+primeru $d \to 0$ enaka matriki za prehod skozi tanko lečo (enačba~\ref{eq:02_47}). 
 \end{example}
 
 \begin{remark}
@@ -893,14 +898,15 @@ tako navadno sestavljeni iz vsaj treh do štirih leč, zapletenejši tudi več k
 \end{remark}
  
 \section{Odboj svetlobe na zrcalih}
-Opis odboja na ravnih zrcalih je 
+Opis odboja na ravnih zrcalih je \index{Odboj!{ravno zrcalo}}\index{Zrcalo!ravno}
 preprost: vse slike posamezne točke se po odboju zberejo v eni točki, 
 navidezna slika, ki pri tem nastane, pa je enako velika in enako obrnjena kot predmet.
 Matrika ABCD, ki opiše odboj od takega zrcala, je identiteta. Pri tem se moramo
-zavedati, da žarek po odboju spremeni smer in z njim tudi os $z$.
+zavedati, da žarek po odboju spremeni smer in z njim tudi os $z$.\index{Matrika ABCD!{za ravno zrcalo}}
 
-Poiščimo še matriko za odboj od ukrivljenega zrcala. Naj bo krivinski radij zrcala
-$R$, pri čemer za konkanvna zrcala, pri katerih sta predmet in krivinsko središče
+Poiščimo še matriko za odboj od ukrivljenega zrcala. Naj bo krivinski radij zrcala\index{Zrcalo!ukrivljeno}
+\index{Odboj!{ukrivljeno zrcalo}}
+$R$, pri čemer za konkavna zrcala, pri katerih sta predmet in krivinsko središče
 na isti strani zrcala, velja $R>0$. Pri odboju na zrcalu se lega žarka ne spremeni, zato 
 je $x_2 = x_1 = x$. Od tod takoj izračunamo prva dva elementa matrike ABCD: $A = 1$ in 
 $B=0$. Pri transformaciji kota si pomagamo s sliko~\ref{fig:02_zrcalo}. 
@@ -922,13 +928,13 @@ kot enaka, zato:
 \alpha - \vartheta_1= \vartheta_2-\alpha.
 \label{eq:02_60}
 \eeq
-Za majhne vrenosti velja $\alpha \approx x/R$, od koder sledi:
+Za majhne vrednosti velja $\alpha \approx x/R$, od koder sledi:
 \beq
 -\vartheta_2 = \vartheta_1 - \frac{2}{R}x.
 \label{eq:02_61a}
 \eeq
 Od tod lahko razberemo elementa matrike $C = -2/R$ in $D = 1$. Celotna matrika za odboj 
-na zrcalu je potem:
+na zrcalu je potem:\index{Matrika ABCD!{za ukrivljeno zrcalo}}
 \begin{equation}
  M = \left[\begin{array}{cc}
 1& 0\\
@@ -936,7 +942,7 @@ na zrcalu je potem:
 \end{array}\right]\!\!.
  \label{eq:02_62}
 \end{equation}
-Naj žarek vpada na zrcalo v smeri vzporedno z optično osjo $(x_1, 0)$:
+Naj žarek vpada na ukrivljeno zrcalo v smeri vzporedno z optično osjo $(x_1, 0)$:
 \begin{equation}
 \left[\begin{array}{c}
 x_2\\
@@ -958,8 +964,8 @@ x_1\\
 \end{equation}
 Žarek tik po odboju svoje lege ne spremeni, spremeni pa svojo smer.
 Ker je usmerjen proti gorišču, je podobno kot
-pri obravnavi leče njegova smer $\vartheta_2 = -x_1/f$. 
-Od tod razberemo goriščno razdaljo krogelnega zrcala kot:
+pri obravnavi leče njegova smer $\vartheta_2 = -x_1/f$. \index{Zrcalo!gorišče}
+Od tod razberemo goriščno razdaljo krogelnega zrcala kot:\index{Goriščna razdalja!{zrcalo}}
 \boxeq{eq:02_zrcalof}{
 f = \frac{R}{2}.
 }
@@ -988,16 +994,17 @@ M =
 \label{eq:02_64}
 \eeq
 Da po odboju nastane ostra slika predmeta, mora biti element matrike $B=0$ 
-(glej enačbo~\ref{eq:PreslikavaLeca}). To velja, kadar je izpolnjen pogoj:
+(glej utemeljitev za enačbo~\ref{eq:PreslikavaLeca}). To velja, kadar je izpolnjen pogoj:
+\index{Enačba zrcala}\index{Zrcalo!enačba zrcala}
 \boxeq{eq:PreslikavaZrcalo}{
 \frac{1}{f} = \frac{2}{R} = \frac{1}{a}+\frac{1}{b}.
 }
 Pri konkavnem zrcalu je $R>0$, vrednosti $a$ in $b$ pa sta pozitivni, če sta 
 na isti strani kot krivinsko središče. Če je predmet od zrcala oddaljen več 
-kot gorišče, je njegova slika prava in obrnjena. Vrednost $b$ je v tem primeru pozitivna.
+kot gorišče, je njegova slika prava in obrnjena. \index{Prava slika} Vrednost $b$ je v tem primeru pozitivna.
 Za predmete, za katere velja $a<f$, se odbiti žarki ne sekajo. Narisati
-moramo podaljške žarkov in slika nastane na mestu, kjer se sekajo podaljški odbitih
-žarkov (slika~\ref{fig:02_zrcaloodboj}).
+moramo podaljške žarkov in navidezna slika nastane na mestu, kjer se sekajo podaljški odbitih
+žarkov (slika~\ref{fig:02_zrcaloodboj}).\index{Navidezna slika}
 \begin{figure}[!ht]
 \centering
 \def\svgwidth{140truemm} 
@@ -1010,7 +1017,7 @@ nastane pokončna navidezna slika na drugi strani zrcala. V tem primeru velja $a
 \end{figure}
 
 Povsem enako kot pri lečah izračunamo tudi povečavo zrcala. Element matrike $A$
-preoblikujemo z upoštevanjem enačbe~(\ref{eq:PreslikavaZrcalo}) in dobimo:
+preoblikujemo z upoštevanjem enačbe~(\ref{eq:PreslikavaZrcalo}) in dobimo:\index{Zrcalo!povečava}\index{Povečava zrcala}
 \boxeq{eq:PovecavaZrcala}{
 \frac{x_2}{x_1} =-\frac{b}{a}.
 }
@@ -1027,7 +1034,7 @@ Za konec si oglejmo še delovanje nekaterih optičnih naprav. Obravnavali jih bo
 v najpreprostejši, a zato najnazornejši obliki. Izhajamo iz sestava dveh leč, ki 
 smo jih obravnavali v razdelku~\ref{chap:lecje}. 
 
-\subsection*{Razširjevalec snopov}
+\subsection*{Razširjevalec snopov}\index{Razširjevalec snopov}
 Spomnimo se matričnega zapisa prehoda skozi sistem dveh leč z goriščnima razdaljama
 $f_1$ in $f_2$, ki sta na medsebojni razdalji $s$ (enačba~\ref{eq:02_54}). Poiščimo
 pogoj, pri katerem so tako vpadni kot izhodni žarki iz sistema vzporedni z optično osjo.
@@ -1045,21 +1052,21 @@ s = f_1 + f_2.
 Vzporedni vpadni žarki izhajajo kot vzporedni žarki, kadar goriščni ravnini leč sovpadata.
 Povečava takega sistema je z upoštevanjem enačbe~(\ref{eq:02_57}) enaka:
 \beq
-\frac{x_2}{x_1} = A = 1 - \frac{s}{f_1} = \frac{f_2}{f_1}.
+\frac{x_2}{x_1} = A = 1 - \frac{s}{f_1} = -\frac{f_2}{f_1}.
 \label{eq:02_58}
 \eeq
 Če je goriščna razdalja druge leče večja od goriščne razdalje prve leče, 
 lahko širino snopa vzporednih vpadajočih žarkov močno povečamo -- žarek razširimo.
 Tako napravo zato imenujemo razširjevalec snopov in je zelo uporabna v optičnih laboratorijih.
 
-\subsection*{Teleskop in daljnogled}
+\subsection*{Teleskop in daljnogled}\index{Teleskop}\index{Daljnogled}
 Teleskop in daljnogled uporabljamo za opazovanje zelo oddaljenih predmetov, 
 zato lahko privzamemo, da vpadajo žarki s teh predmetov na optični sistem praktično vzporedno. 
 Naj bo zorni kot, pod katerim vidimo oddaljen predmet brez teleskopa, enak $\vartheta_1$.
 Da so vzporedni tudi izhodni žarki, uporabimo lečje, pri katerem je razdalja med 
 lečama enaka vsoti goriščnih razdalj obeh leč. Vstopno lečo imenujemo objektiv, 
-izstopno lečo pa okular. Pravo sliko, ki nastane po prehodu objektiva,
-opazujemo z okularjem, nastala slika pa je v tej preprosti izvedbi obrnjena. 
+izstopno lečo pa okular. Pravo sliko, ki nastane po prehodu skozi objektiv,\index{Objektiv}\index{Okular}
+opazujemo z okularjem, nastala slika pa je v tej preprosti izvedbi obrnjena.\index{Prava slika}
 \begin{figure}[ht]
 \centering
 \def\svgwidth{100truemm} 
@@ -1070,7 +1077,7 @@ slika predmeta, ki jo opazujemo z okularjem.}
 \end{figure}
 \vglue-10truemm
 Poiščimo še povečavo takega preprostega teleskopa. Vpadni žarek, ki gre skozi središče
-objektiva, je enak $(0,\vartheta_1)$. Izračunajmo izhodni žarek po prehodu skozi 
+objektiva, opišemo z vektorjem $(0,\vartheta_1)$. Izračunajmo izhodni žarek po prehodu skozi 
 optični sistem, ki ga v splošnem opisuje matrika (enačba~\ref{eq:02_54}). Dobimo:
 \beq
 \left[\begin{array}{c}
@@ -1093,7 +1100,7 @@ x_2\\
 \label{eq:02_66}
 \eeq
 Zorni kot, pod katerim vidimo izhodne žarke $\vartheta_2$ je enak vstopnemu zornemu kotu, 
-pomnoženemu z razmerjem goriščnih razdalj leč:
+pomnoženemu z razmerjem goriščnih razdalj leč:\index{Povečava teleskopa}
 \boxeq{eq:teleskop}{
 \vartheta_2 = -\frac{f_1}{f_2}\vartheta_1.
 }
@@ -1105,10 +1112,10 @@ V praksi so teleskopi sestavljeni precej bolj zapleteno. Lahko so sestavljeni iz
 konveksnih in konkavnih leč, skoraj vedno pa vsebujejo tudi zrcala, saj je izdelava
 velikih ukrivljenih zrcal preprostejša od izdelave velikih leč. 
 
-\subsection*{Mikroskop}
+\subsection*{Mikroskop}\index{Mikroskop}
 Za opazovanje majhnih predmetov uporabimo mikroskop. Preprost mikroskop je sestavljen
 iz dveh leč: objektiva, ki je bliže predmetu, in okularja, ki je bliže očesu 
-(slika~\ref{fig:02_mikroskop}). Obe leči 
+(slika~\ref{fig:02_mikroskop}). Obe leči \index{Objektiv}\index{Okular}
 naj bosta zbiralni z goriščnima razdaljama $f_1$ in $f_2$ na oddaljenosti $s$. Predmet
 postavimo blizu objektivu, vendar dovolj daleč, da velja $a>f_1$. Za objektivom 
 nastane prava, povečana in obrnjena slika predmeta. Nastalo sliko opazujemo z okularjem, 
@@ -1145,7 +1152,7 @@ x_1\\
 \end{array}\right]\!\!.
 \label{eq:02_67}
 \eeq
-Vpeljemo $d$ kot razdaljo med notranjimi gorišči mikroskopa
+Vpeljemo $d$ kot razdaljo med notranjima goriščema mikroskopa
 $d= s -f_1-f_2$ in izračunamo zorni kot, pod katerim opazujemo predmet:
 \beq
 \vartheta_2 = \frac{x_1 d}{f_1f_2}.
@@ -1158,12 +1165,12 @@ normalno vidimo predmet s prostim očesom, to je:
 \label{eq:02_70}
 \eeq
 pri čemer je po dogovoru normalna vidna razdalja $a_0 = 25~\si{cm}$.
-Povečava mikroskopa je potem razmerje zornih kotov:
+Povečava mikroskopa je potem razmerje zornih kotov:\index{Povečava mikroskopa}\index{Mikroskop!povečava}
 \beq
 \frac{\vartheta_2}{\vartheta_0} = \frac{a_0d}{f_1f_2}.
 \eeq
 
-\subsection*{Oko in korekcijska očala}
+\subsection*{Oko in korekcijska očala}\index{Oko}
 Človeško oko ima na vstopni strani bikonveksno lečo, ki vpadno 
 svetlobo zbere na mrežnici na zadnji strani očesa. 
 Goriščna razdalja očesne leče je spremenljiva, da se lahko 
@@ -1171,34 +1178,34 @@ prilagaja za opazovanje tako bližnjih kot oddaljenih
 predmetov. 
 
 Če slika predmeta, ki nastane po prehodu skozi očesno lečo,
-ne nastane točno na mrežnici, oseba za oster vid potrebuje korekcijska očala.
+ne nastane točno na mrežnici, oseba za oster vid potrebuje korekcijska očala.\index{Daljnovidnost}
 Daljnovidnost nastopi, kadar slika preslikanih predmetov nastane
 za mrežnico. Oseba oddaljene predmete vidi ostro, očesna leča 
 pa ne more imeti dovolj kratke goriščne razdalje, da bi nastala ostra 
 slika predmetov, ki so na majhnih oddaljenostih od očesa. Vid popravimo z očali z 
-zbiralno lečo. Po drugi strani pri kratkovidnih osebah slika
+zbiralno lečo. Po drugi strani pri kratkovidnih osebah slika\index{Kratkovidnost}
 oddaljenih predmetov nastane pred mrežnico, saj očesna leča 
 ne more doseči dovolj velikih goriščnih razdalj. Vid popravimo
 z razpršilno lečo. 
 
 \begin{remark}
- Kadar govorimo o vidu in korekcijskih očalih, navadno vpreljemo
+ Kadar govorimo o vidu in korekcijskih očalih, navadno vpeljemo
  še eno praktično fizikalno količino. Namesto goriščne razdalje
  leče $f$ vpeljemo inverzno goriščno razdaljo, ki jo imenujemo 
- lomnost $\mathcal{D}$. Ker smo pri sestavu leč seštevali inverzne
+ lomnost $\mathcal{D}$. Ker smo pri sestavu leč seštevali inverzne\index{Lomnost}
  vrednosti goriščnih razdalj, lomnost leč preprosto seštejemo. 
  Enota za lomnost je dioptrija, pri čemer velja $1~\mathrm{dioptrija} = 
- 1~\si{m}^{-1}$.
+ 1~\si{m}^{-1}$.\index{Dioptrija}
 \end{remark}
 
-\section{Primeri leč in zrcal}
+\section{Primeri leč in zrcal}\index{Leča}
 Poglejmo nekaj primerov leč in zrcal, ki jih srečujemo v vsakdanu. Zbiralne leče
 (navadno bikonveksne) uporabljamo kot lupe za povečavo pri branju ali 
 natančnem delu. Kot zbiralna leča delujejo tudi kapljice vode, okrogli 
 kozarci, napolnjeni z vodo, ali steklene krogle. Posebej zanimive so zbiralne leče
 v svetilnikih, ki svetlobo z majhnega svetila preslikajo v vzporeden snop svetlobe, ki 
 je viden od zelo daleč. Ker bi bile navadne plankonveksne leče prevelike in pretežke, se
-v svetilnikih uporablja tako imenovane Fresnelove leče. Sestavljene
+v svetilnikih uporablja tako imenovane Fresnelove leče. Sestavljene\index{Fresnel, Augustin}
 so iz kolobarjev, ki imajo enako ukrivljenost kot navadna leča, le da so bistveno
 tanjši in zato leča lažja. Razpršilne leče se med drugih uporabljajo v vratnih kukalih. 
 
@@ -1228,12 +1235,12 @@ snope svetlobe, ki so vidni od daleč (desno).}
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=8truecm]{slike/02_photos_peephole.jpg}
-\caption{Vratno kukalo uporablja razpršilne leče, da zajamejo čim večjo sliko (levo).}
+\caption{Vratno kukalo uporablja razpršilne leče, da zajamejo čim večjo sliko.}
 \label{fig:02_photos-3}
 \end{figure}
 
 \newpage
-Konveksna zrcala se uporabljajo na primer v avtomobilih kot vzvratna ali v prometu kot
+Konveksna zrcala se \index{Zrcalo} uporabljajo na primer v avtomobilih kot vzvratna ali v prometu kot
 cestna ogledala, da povečamo vidno polje. Podobno delujejo tudi novoletne 
 okrasne bunkice ali žlica s hrbtne strani. Konkavna zrcala najdemo v
 avtomobilskih žarometih, da zberejo čim več izsevane svetlobe, in za zobozdravniška
