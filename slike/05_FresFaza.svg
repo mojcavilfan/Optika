@@ -1482,7 +1482,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.43682476"
-     inkscape:cx="773.48044"
+     inkscape:cx="778.05894"
      inkscape:cy="187.30078"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -1494,8 +1494,8 @@
      fit-margin-bottom="0"
      inkscape:window-width="1770"
      inkscape:window-height="912"
-     inkscape:window-x="145"
-     inkscape:window-y="86"
+     inkscape:window-x="101"
+     inkscape:window-y="469"
      inkscape:window-maximized="0"
      inkscape:snap-global="true"
      inkscape:bbox-nodes="false"
@@ -1825,5 +1825,27 @@
            id="tspan1073-6-8-92-8-7-3-1-0-9-2-0-3-2-0-9-2"
            sodipodi:role="line">$\pi$</tspan></text>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="5.5096202"
+       y="142.12714"
+       id="text255"><tspan
+         sodipodi:role="line"
+         id="tspan253"
+         x="5.5096202"
+         y="142.12714"
+         style="stroke-width:0.26458332">a)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="257.60611"
+       y="142.12714"
+       id="text255-3"><tspan
+         sodipodi:role="line"
+         id="tspan253-6"
+         x="257.60611"
+         y="142.12714"
+         style="stroke-width:0.26458332">b)</tspan></text>
   </g>
 </svg>
