@@ -8,18 +8,17 @@ skupno optično polje. V poglavju o uklonu so nas zanimali predvsem uklonski
 vzorci, v poglavju o interferenci pa se bomo osredotočili na interferometrijo 
 in pojave na tankih plasteh.
 
-\section{Interferenca in interferometrija}
-O interferenci govorimo, kadar je na danem mestu v 
-prostoru jakost električnega polja sestavljena iz 
-več valovanj. Seštevanje 
+\section{Interferenca in interferometrija}\index{Interferenca}
+O interferenci govorimo, kadar je na danem mestu jakost električnega polja 
+sestavljena iz prispevkov več valovanj. Seštevanje 
 dveh ali več valovanj ponekod vodi
-do ojačevanja svetlobe (konstruktivna interferenca), 
-drugod pa do oslabitev (destruktivna interferenca). 
+do ojačitev (konstruktivna interferenca),\index{Interferenca!konstruktivna} 
+drugod pa do oslabitev (destruktivna interferenca).\index{Interferenca!destruktivna} 
 Vzorci izmenjujočih se ojačitev in oslabitev sestavljajo
 značilno interferenčno sliko.
 
 Elektromagnetna valovanja se na splošno razlikujejo 
-v smeri širjenja, amplitudi, frekvenci, fazi ali polarizaciji. 
+v smeri širjenja, amplitudi, frekvenci, fazi in polarizaciji. 
 Spoznali bomo, da se interferenčna slika pojavi le pri valovanjih z enako
 polarizacijo, konstantno (ali zelo počasi se spreminjajočo)
 začetno fazo in enako (oziroma približno enako) frekvenco. 
@@ -40,93 +39,97 @@ spremembe v dolžini poti oziroma zakasnitvi žarka povzročijo velike spremembe
 interferenčnega vzorca. 
 
 Z opazovanjem interferenčnih vzorcev lahko zelo natančno določimo fazni zamik med
-dvema deloma valovanja in s tem pridobimo podatke o valovanju samem, o snovi, po 
+dvema delnima valovanjema in s tem pridobimo podatke o valovanju samem, o snovi, po 
 kateri se širi valovanje, ali o oddaljenosti predmeta, od katerega se svetloba odbija. 
-Zato interferometrijo, kot imenujemo metodo, ki temelji na opazovanju interference,
+Zato interferometrijo, kot imenujemo metodo, ki temelji na opazovanju interference,\index{Interferometrija}
 s pridom uporabljamo med drugim za izredno natančne meritve dolžine, 
 oddaljenosti, lomnega količnika snovi oziroma njegovih sprememb ali odstopanj v frekvenci. 
-Interferenčne meritve so ene najnatančnejših in so zato zelo uporabne na veliko področjih:
-od prvotne opustitve obstanka etra prek izredno natančnih meritev gladkosti površine do
-opazovanja gravitacijskih valov. 
+Interferenčne meritve so ene najnatančnejših in so zato zelo uporabne na veliko področjih: od 
+dokončne opustitve teorije o obstanku etra prek izredno natančnih meritev gladkosti površin do
+opazovanja gravitacijskih valov.
 
 V laboratorijih in industrijskih aplikacijah navadno za vir svetlobe uporabljamo laser, zato
 je interferenčna slika sestavljena iz svetlih in temnih območij. V naravi interferenco
 navadno opazujemo z belo dnevno svetlobo, kar da tankim plastem, na primer plasti olja na vodi ali
-milnemu mehurčku, značilno mavrično obarvanost.
+milnemu mehurčku, značilno mavrično obarvanost.\vfill
 
 \section{Interferenca dveh ravnih valovanj}
 Zapišimo preprost primer interference dveh ravnih valovanj z enako frekvenco. Valovna
 vektorja valovanj označimo s $\mathbf{k}_1$ in $\mathbf{k}_2$, fazi valovanj z 
-$\delta_1$ in $\delta_2$ ter njuni realni amplitudi z $E_{10}$ in $E_{20}$. Ker imajo 
-valovanja, ki interferirajo, isto polarizacijo,
+$\delta_1$ in $\delta_2$ ter njuni realni amplitudi z $E_{10}$ in $E_{20}$. Ker med
+seboj interferirajo le valovanja z isto polarizacijo, 
 za račun interference zadošča skalarna oblika električnega polja.
 Valovanji potem zapišemo kot:
-\beq
+\begin{equation}
 E_1 = E_{10} e^{i\mathbf{k}_1 \cdot \mathbf{r} - i \omega t + i \delta_1}
-\qquad \mathrm{in} \qquad
+\end{equation}
+% \qquad \mathrm{in} \qquad
+in
+\begin{equation}
 E_2 = E_{20} e^{i\mathbf{k}_2 \cdot \mathbf{r} - i \omega t + i \delta_2}.
 \label{eq:06_01}
-\eeq
+\end{equation}
 Celotno
 električno polje je vsota obeh prispevkov:
-\beq
+\begin{equation}
 E = E_1 + E_2 = E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t},
 \label{eq:06_02}
-\eeq
+\end{equation}
 pri čemer sta $\phi_{1,2} = \mathbf{k}_{1,2} \cdot \mathbf{r} + \delta_{1,2}$. 
 Gostota svetlobnega toka $j$ je na splošno (enačba~\ref{eq:j}):
-\beq
+\begin{equation}
 j = \frac{1}{2}\varepsilon \varepsilon_0 |E|^2c,
 \label{eq:06_03}
-\eeq
-zato je celotna gostota svetlobnega toka enaka:
-\beq
+\end{equation}
+zato za celotno gostoto svetlobnega toka velja:
+\begin{equation}
 j \propto (E_1+E_2)(E_1^*+E_2^*)  = 
 \left( E_{10} e^{i\phi_1 - i \omega t} + E_{20} e^{i\phi_2 - i \omega t}\right)
 \left( E_{10} e^{-i\phi_1 + i \omega t} + E_{20} e^{-i\phi_2 + i \omega t}\right)\!.
 \label{eq:06_04}
-\eeq
+\end{equation}
 Sledi:
-\beq
+\begin{equation}
 j \propto E_{10}^2 + E_{20}^2 + E_{10}E_{20} \left(e^{i\phi_1-i\phi_2}+ e^{-i\phi_1+i\phi_2}\right)\!.
 \label{eq:06_05}
-\eeq
-Eksponente v oklepaju izrazimo s kotno funkcijo in upoštevajoč zvezo~(enačba~\ref{eq:06_03}) dobimo:
+\end{equation}
+Eksponente v oklepaju izrazimo s kotno funkcijo in upoštevajoč enačbo~(\ref{eq:06_03}) dobimo:
 \boxeq{eq:06_06}{
 j = j_1 + j_2 + 2\sqrt{j_1 j_2} \cos(\Delta \phi),
 }
 pri čemer sta $j_1$ in $j_2$ gostoti svetlobnih tokov prvega in drugega delnega valovanja,
 $\Delta \phi$ pa označuje razliko faz $\phi_1-\phi_2$. Le kadar je ta razlika neodvisna
 od časa oziroma se s časom zelo počasi spreminja, v eksperimentu poleg prvih dveh členov
-v enačbi~(\ref{eq:06_06}) opazimo tudi tretjega. V nasprotnem primeru se tretji člen 
+v enačbi~(\ref{eq:06_06}) zaznamo tudi tretjega. V nasprotnem primeru se tretji člen 
 izpovpreči in intenziteta na opazovalnem zaslonu je enaka vsoti intenzitet posameznih 
 delnih valovanj. Interference v tem primeru ne vidimo. 
 
 Če je $\Delta \phi$ neodvisen od časa, gostota svetlobnega toka na opazovalnem zaslonu $j$
 zavzema vrednosti $j_\mathrm{min}<j<j_\mathrm{max}$, za katere velja:
-\beq
-\left(j_1+j_2 -2\sqrt{j_1 j_2}\right) < j < \left(j_1+j_2 -2\sqrt{j_1 j_2}\right)
+\begin{equation}
+\left(j_1+j_2 -2\sqrt{j_1 j_2}\right) < j < \left(j_1+j_2 +2\sqrt{j_1 j_2}\right)
 \label{eq:06_07}
-\eeq
+\end{equation}
 oziroma zapisano drugače:
-\beq
+\begin{equation}
 \left(\sqrt{j_1}- \sqrt{j_2}\right)^2 < j < \left(\sqrt{j_1} +\sqrt{j_2}\right)^2\!\!.
 \label{eq:06_07a}
-\eeq
+\end{equation}
+
 \begin{remark}
-Vpeljemo lahko tudi kontrast interferenčnega vzorca, ki ga izračunamo kot:
-\beq
+Vpeljemo lahko kontrast interferenčnega vzorca, ki ga izračunamo kot:\index{Kontrast|see{Vidljivost}}
+\begin{equation}
 v = \frac{j_\mathrm{max}- j_\mathrm{min}}{j_\mathrm{max}+ j_\mathrm{min}}.
 \label{eq:06_08}
-\eeq
-Parameter $v$, ki zavzema vrednosti med 0 in 1, imenujemo tudi
+\end{equation}
+Parameter $v$, ki zavzema vrednosti med 0 in 1, imenujemo tudi\index{Vidljivost}
 vidljivost interferenčnega vzorca.
 \end{remark}
 
 Vrnimo se h krajevni odvisnosti gostote svetlobnega toka (enačba~\ref{eq:06_06}). Na
 splošno se intenziteti delnih valovanj razlikujeta in skupna gostota svetlobnega
 toka oscilira med neko neničelno najmanjšo in največjo vrednostjo (slika~\ref{fig:06_kontrast}).
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \def\svgwidth{85truemm} 
 \input{slike/06_vidljivost.pdf_tex}
@@ -142,10 +145,10 @@ in interferenčni vzorec ni viden.}
 
 V posebnem primeru, ko sta amplitudi obeh valovanj enaki in je $j_1 = j_2 = j_0$, 
 je skupna gostota svetlobnega toka enaka (enačba~\ref{eq:06_06}):
-\beq
+\begin{equation}
 j = 2j_0 + 2j_0 \cos (\Delta \phi) = 4j_0 \cos^2 (\Delta \phi/2).
 \label{eq:06_09}
-\eeq
+\end{equation}
 Interferenčni vzorec dveh enako močnih snopov svetlobe zavzema vrednosti med 0 
 in $4j_0$, kar pomeni, da je kontrast takega vzorca (enačba~\ref{eq:06_08}) enak 1. 
 Kadar se fazna razlika med valovanjema $\Delta \phi$ hitro spreminja,
@@ -155,37 +158,37 @@ delnih valovanj in interference ne vidimo. Takrat je kontrast enak 0.
 Kako pa je z ohranitvijo energijskega toka pri interferenci? Omejimo 
 se na primer, ko sta amplitudi obeh delnih valovanj enaki. Takrat
 je povprečni energijski  tok čez veliko območje prostora enak (enačba~\ref{eq:06_09}):
-\beq
+\begin{equation}
 \langle j \rangle = \langle 4j_0 \cos^2 (\Delta \phi/2) \rangle  = \frac{1}{2}(4j_0) = 2j_0.
 \label{eq:06_10}
-\eeq
+\end{equation}
 Po pričakovanju je povprečna gostota energijskega toka interferenčnega vzorca
 enaka vsoti gostot energijskega toka obeh vpadnih valovanj. Enako velja tudi 
 v primeru, ko amplitudi vpadnih delnih valovanj nista enaki. Pri interferenci se 
 torej energijski tok ohranja, vendar se energija prerazporedi.
 
-\begin{example}{\bf Interferenca dveh ravnih valovanj.}
+\begin{example}{\bf Interferenca dveh ravnih valovanj.}\index{Interferenca!{ravnih valovanj}}
 Opazujmo interferenco dveh ravnih valovanj z enakima intenzitetama, ki pod kotom 
 vpadata eno glede na drugo (slika~\ref{fig:06_int}). Njuna valovna vektorja na splošno
 zapišemo kot: $\mathbf{k}_1 = (k_x,0, k_z)$ in $\mathbf{k}_2 = (-k_x,0, k_z)$. 
 Valovanji sta oblike:
-\beq
+\begin{equation}
 E_1 = E_0 e^{ik_x x} e^{ik_z z}e^{-i\omega t} \qquad \mathrm{in} \qquad 
 E_2 = E_0 e^{-ik_x x} e^{ik_z z}e^{-i\omega t}.
 \label{eq:06_12}
-\eeq
+\end{equation}
 Interferenca teh dveh valovanj da:
-\beq
+\begin{equation}
 E = E_1+E_2 = E_0 e^{ik_z z -i\omega t }\left(e^{ik_x x}+e^{-ik_x x} \right) = 
 E_0 e^{ik_z z -i\omega t } 2 \cos(k_x x).
 \label{eq:06_14}
-\eeq
+\end{equation}
 Izračunamo gostoto svetlobnega toka in za interferenčni vzorec dobimo obliko:
-\beq
+\begin{equation}
 j = 4 j_0 \cos^2(k_x x).
 \label{eq:06_15}
-\eeq
-\begin{figure}[!h]
+\end{equation}
+\begin{figure}[!ht]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/06_interferenca_1.pdf_tex}
@@ -201,23 +204,23 @@ na detektorju izpovprečijo v znano interferenčno sliko.}
 
 \end{example}
 
-\begin{example}{\bf Interferenca dveh krožnih valovanj.}
+\begin{example}{\bf Interferenca dveh krožnih valovanj.}\index{Interferenca!{krožnih valovanj}}
 Poglejmo še interferenco dveh krožnih valovanj v ravnini. Krožno valovanje izhaja
 iz ene točke in se v koncentričnih krogih širi po ravnini navzven. V
 ravnini $xy$ dve krožni valovanji zapišemo kot:
-\beq
+\begin{equation}
 E_1 \propto \exp\left( ik\sqrt{x^2+y^2}\right)  e^{-i\omega t}
 \qquad \mathrm{in} \qquad
 E_2 \propto \exp\left( ik\sqrt{(x-d)^2+y^2}\right)  e^{-i\omega t}.
 \label{eq:06_16a}
-\eeq
+\end{equation}
 Pri zapisu smo privzeli, da sta izhodišči valovanj razmaknjeni vzdolž osi $x$, 
 razmik med njima pa je enak $d$. Pojemanja amplitude
 z oddaljenostjo od izvora nismo zapisali. Nekaj primerov amplitudnih in pripadajočih
 intenzitetnih interferenčnih vzorcev, ki 
 nastanejo pri različnih razmikih $d$ in različni valovni dolžini, 
 je narisanih na sliki~\ref{fig:06_intkrog}.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=140truemm]{slike/06_interferenca_krog_nov.png}
 \caption{Interferenca dveh krožnih valov, pri čemer zgornja vrsta prikazuje 
@@ -232,7 +235,7 @@ stolpec pa ponazori premik ojačitev pri spremenjeni valovni dolžini valovanja.
 \end{example}
 
 \section{Interferenca z delitvijo valovne fronte}
-\label{chap:Young}
+\label{chap:Young}\index{Interferenca!{z delitvijo valovne fronte}}
 Pri večini interferenčnih poskusov ustvarimo interferenco z enim samim 
 snopom svetlobe, ki ga razdelimo na dva dela. S tem zagotovimo isto 
 frekvenco, isto začetno fazo in enako polarizacijo obeh delnih valovanj. V uvodu smo
@@ -241,15 +244,16 @@ valovne fronte valovanja (npr. Youngov poskus) ali z delitvijo amplitude
 valovanja (npr. Michelsonov interferometer). Najprej si poglejmo prvi primer.
 
 Najpomembnejši primer interference z delitvijo valovne fronte je nedvomno
-Youngov poskus (1801), na podlagi katerega je angleški fizik Thomas Young
+Youngov poskus (1801), na podlagi katerega je angleški fizik Thomas Young\index{Youngov poskus}\index{Young, Thomas}
 sklepal, da je svetloba transverzalno valovanje. 
 Pri tem poskusu vpadno valovanje iz monokromatskega izvora  
-simetrično usmerimo na objektni zaslon, v katerem sta dve enaki ozki
-reži, in opazujemo sliko na oddaljenem zaslonu\footnote{Vpadno valovanje mora biti 
+simetrično usmerimo na objektni zaslon, v katerem sta dve enaki ozki\index{Objektni zaslon}
+reži, in opazujemo sliko na oddaljenem zaslonu 
+(slika~\ref{fig:06_Young})\footnote{Vpadno valovanje mora biti 
 kar se da koherentno. Young je to dosegel tako, da je vpadno svetlobo najprej 
 speljal skozi eno tanko režo in jo šele nato usmeril na zaslon z dvema režama. 
 Več o koherenci bomo spoznali v poglavju~\ref{chap:Koherenca}.}. Poiščimo 
-lego ojačitev in oslabitev na oddaljenem opazovalnem zaslonu.
+lego ojačitev in oslabitev na opazovalnem zaslonu.\index{Opazovalni zaslon}
 \begin{figure}[ht]
 \centering
 \def\svgwidth{100truemm} 
@@ -270,27 +274,27 @@ do opazovalnega zaslona, $D$ razdalja med središčema rež,
 $r_1$ razdalja med sredino prve reže in izbrano točko na zaslonu
 ter $r_2$ razdalja med sredino druge reže in isto točko na zaslonu. Potem za velike 
 oddaljenosti $r_1, r_2 \gg D$ velja:
-\beq
+\begin{equation}
 \Delta r = r_1-r_2 \approx D \sin\vartheta,
 \label{eq:06_16}
-\eeq
+\end{equation}
 pri čemer je $\vartheta$ kot med osjo $z$ in zveznico med točko na sredini med režama in
-izbrano točko na opazovalnem zaslonu. Ker ležita reži simetrično, sta intenziteti delnih
-valovanj enaki, prav tako tudi njuni začetni fazi. Za izračun gostote svetlobnega toka na zaslonu 
+izbrano točko na opazovalnem zaslonu. Ker ležita reži simetrično, sta intenziteti in začetni fazi vpadnih delnih
+valovanj enaki. Za izračun gostote svetlobnega toka na zaslonu 
 zato lahko uporabimo enačbo~(\ref{eq:06_09}). Vstavimo fazno razliko $\Delta \phi \approx 
 k\Delta r$ in z upoštevanjem enačbe~(\ref{eq:06_16}) dobimo:
-\beq
+\begin{equation}
 j = 4 j_0 \cos^2\left(\frac{\Delta \phi}{2}\right) = 4j_0 \cos^2\left(\frac{k\Delta r}{2}\right) = 
 4j_0 \cos^2\left(\frac{kD\sin \vartheta}{2}\right)\!\!.
 \label{eq:06_17}
-\eeq
+\end{equation}
 V točkah, kjer se prispevka obeh valovanj seštejeta, nastopi 
 konstruktivna interferenca in na zaslonu opazimo ojačitve. 
 Izhajajoč iz enačbe~(\ref{eq:06_17}) pogoj za ojačitev zapišemo kot:
-\beq
+\begin{equation}
 \frac{kD\sin \vartheta}{2} = N\pi,
 \label{eq:06_18}
-\eeq
+\end{equation}
 pri čemer je $N$ celo število. 
 
 Od tod izračunamo pogoj za kote $\vartheta_\mathrm{max}$, pri katerih
@@ -299,10 +303,10 @@ se pojavijo ojačitve:
 D \sin\vartheta_\mathrm{max} = N \lambda.
 }
 Zapis pove, da se ojačitve pojavijo, ko je razlika poti od rež 
-do točke na zaslonu enaka večkratniku valovne dolžine valovanja.
+do točke na zaslonu enaka večkratniku valovne dolžine valovanja.\index{Interferenca!ojačitve}
 
 V vmesnih točkah, kjer se prispevka valovanj odštejeta, nastopi 
-destruktivna interferenca in na zaslonu opazimo oslabitve (neosvetljene proge). 
+destruktivna interferenca in na zaslonu opazimo oslabitve (neosvetljene proge).\index{Interferenca!oslabitve}
 Pogoj za oslabitve je:
 \boxeq{eq:InterferencaMin}{
 D \sin\vartheta_\mathrm{min} = \left(N + \frac{1}{2}\right)\lambda.
@@ -310,48 +314,49 @@ D \sin\vartheta_\mathrm{min} = \left(N + \frac{1}{2}\right)\lambda.
 Interferenčni vzorec, ki ga opazujemo na oddaljenem opazovalnem zaslonu, je za majhne 
 kote periodičen. Izračunajmo periodo ponavljanja $\xi_0$ (slika~\ref{fig:06_Young}). 
 Iz enačbe~(\ref{eq:06_17}) sledi zahteva:
-\beq
+\begin{equation}
 \Delta \left(\frac{kD\sin \vartheta}{2}\right) = \pi.
 \label{eq:06_19}
-\eeq
+\end{equation}
 Za majhne kote velja $\sin \vartheta \approx \vartheta$ in zapišemo: 
-\beq
+\begin{equation}
 \frac{k D\,\Delta \sin\vartheta}{2} \approx \frac{k D\, \Delta \vartheta}{2}
  \approx \frac{k D\,\xi_0}{2z_0} = \pi,
 \label{eq:06_20}
-\eeq
+\end{equation}
 od koder sledi:
-\beq
+\begin{equation}
 \xi_0 = \frac{\lambda z_0}{D}.
 \label{eq:06_21}
-\eeq
+\end{equation}
 Bliže kot sta reži (manjši $D$), bolj razmaknjene so ojačitve (večji $\xi_0$). 
 Za $D=1~\si{\micro\metre}$ je na oddaljenosti $z_0 = 1~\si{m}$ razmik med ojačitvami za 
 svetlobo z valovno dolžino $\lambda  = 500~\si{nm}$ enak $\xi_0 = 0,5~\si{m}$, 
 medtem ko je pri $D = 1~\si{mm}$ na isti razdalji vrednost $\xi_0 = 0,5~\si{mm}$. 
 
-\begin{example}{\bf Fraunhoferjeva uklonska obravnava Youngovega poskusa.}
+\begin{example}{\bf Fraunhoferjeva uklonska obravnava Youngovega 
+poskusa.}\index{Fraunhoferjev uklon!{Youngov poskus}}\index{Youngov poskus}
 Youngov poskus na dveh režah lahko obravnavamo tudi v Fraunhoferjevi uklonski
 sliki (poglavje~\ref{chap:Fraunhofer}). Spomnimo se uklona na $N$ režah
 širine $d$ s periodo ponavljanja $D$ (enačba~\ref{eq:uklonNrez}):
-\beq
+\begin{equation}
 j(\vartheta) = j_0 \left(\frac{\sin\left(kd\sin\vartheta/2\right)}{kd\sin\vartheta/2}\right)^2
 \left(\frac{\sin\left(NkD\sin\vartheta/2\right)}{\sin\left(kD\sin\vartheta/2\right)}\right)^2\!\!.
 \label{eq:06_22}
-\eeq
+\end{equation}
 Pokažimo, da je uklonska slika za $N=2$ v limitnem primeru, ko sta
 reži ozki in velja $d\to 0$, enaka izračunanemu interferenčnemu vzorcu 
 (enačba~\ref{eq:06_17}). Oblikovni faktor (prvi oklepaj) je za ozke reže 
 enak $1$ in intenziteta vrhov z oddaljenostjo od optične osi $z$ ne pojema. Ostane:
-\beq
+\begin{equation}
 j = j_0~\frac{\sin^2(2kD\sin\vartheta/2)}{\sin^2(kD\sin\vartheta/2)} = 
 j_0~\frac{4 \sin^2(kD\sin\vartheta/2)\cos^2(kD \sin\vartheta/2)}{\sin^2(kD \sin\vartheta/2)},
-\eeq
+\end{equation}
 pri čemer smo uporabili izraz za zapis dvojnega kota. Ulomek krajšamo in dobimo:
-\beq
+\begin{equation}
 j = 4j_0 \cos^2\left(\frac{kD \sin\vartheta}{2}\right)\!\!,
 \label{eq:06_23}
-\eeq
+\end{equation}
 kar je, po pričakovanju, enako enačbi~(\ref{eq:06_17}).
 \end{example}
 
@@ -360,15 +365,15 @@ Oglejmo si še nekaj alternativnih postavitev interferenčnih poskusov
 z delitvijo žarka. Pri Youngovem poskusu se namreč težko izognemo 
 težavam, povezanim s končno širino reže $d$. Njegovi
 sodobniki so zato poskušali podoben interferenčni vzorec ustvariti 
-nad druge načine, s čimer bi se izognili domnevam, da se interferenčni 
+še drugače, s čimer bi se izognili domnevam, da se interferenčni 
 vzorec pojavi kot posledica pojavov na robu rež. 
 
 Prvi primer je Lloydovo zrcalo (1834), pri katerem interferirajo žarki, 
 ki vpadajo neposredno od izvora svetlobe, in žarki, ki se odbijejo od zrcala
-(slika~\ref{fig:06_Lloyd}\,a). 
-Drugi primer sta Fresnelovi zrcali, pri katerih interferirata
+(slika~\ref{fig:06_Lloyd}\,a).\index{Lloydovo zrcalo}
+Drugi primer sta Fresnelovi zrcali, pri katerih interferirata\index{Fresnelovi zrcali}
 sva snopa svetlobe, ki se odbijata vsak od svojega zrcala 
-(slika~\ref{fig:06_Lloyd}\,b). Omenimo še postavitev s Fresnelovo biprizmo. 
+(slika~\ref{fig:06_Lloyd}\,b). Omenimo še postavitev s Fresnelovo biprizmo.\index{Fresnelova biprizma}
 V tem primeru se svetloba, ki izhaja iz enega svetila, 
 na biprizmi lomi, lomljena žarka pa med seboj 
 interferirata (slika~\ref{fig:06_Lloyd}\,c).
@@ -386,11 +391,11 @@ $S'$ navidezne izvore. Črtkane črte prikazujejo poti navideznih snopov svetlob
 \end{remark}
 
 \begin{remark}
-Youngov poskus je osnova za delovanje Rayleighovega interferometra, ki ga uporabljamo
-za natančno merjenje lomnega količnika plinov. V njem svetlobo 
+Youngov poskus je osnova za delovanje Rayleighovega interferometra, ki ga uporabljamo\index{Rayleighov interferometer}
+za natančno merjenje lomnega količnika plinov (slika~\ref{fig:06_RayleighInt}). V njem svetlobo\index{Lomni količnik!plinov}
 iz točkastega svetila (ali laserja) najprej razširimo v širok vzporeden snop (kolimiramo)
-in nato usmerimo na zaslon z dvema ozkima režama. Za režama svetloba prehaja skozi plinsko komoro, 
-nato pa žarka z drugo lečo ponovno zberemo, kjer interferirata. Lege ojačitev na izhodu 
+in nato usmerimo na zaslon z dvema ozkima režama. Za režama del svetlobe prehaja skozi plinsko komoro, 
+po prehodu pa žarka z drugo lečo ponovno zberemo, kjer interferirata. Lege ojačitev na izhodu 
 so odvisne od relativnega faznega zamika obeh delnih valovanj, ta pa je odvisen od
 lomnega količnika plina, skozi katerega svetloba potuje. Ker so interferenčne
 meritve izredno natančne, lahko določamo vrednost $n-1$ na $10^{-8}$ natančno. Velika
@@ -405,23 +410,24 @@ stabilizirati temperaturo.
 \def\svgwidth{100truemm} 
 \input{slike/06_RayleighInt.pdf_tex}
 \caption{Postavitev Rayleighovega interferometra. Svetlobo z lečo kolimiramo in 
-usmerimo na zaslon z dvema režama. Del svetlobe prehaja skozi opazovani, del 
-pa skozi kontrolni vzorec. Z zbiralno lečo obe delni valovanji zberemo in opazujemo
-nastali interferenčni vzorec. Iz lege interferenčnega vzorca lahko določimo lomni količnik
+usmerimo na zaslon z dvema režama. Del svetlobe prehaja skozi opazovani vzorec (rumena cev), del 
+pa skozi kontrolnega (bela cev). Z zbiralno lečo obe delni valovanji zberemo in opazujemo
+nastali interferenčni vzorec. Iz lege ojačitev lahko določimo lomni količnik
 vzorca.}
 \label{fig:06_RayleighInt}
 \end{figure}
 \end{remark}
 
 \section{Interferenca z delitvijo amplitude}
-\label{chap:Michelson}
+\label{chap:Michelson}\index{Interferenca!{z delitvijo amplitude}}
 Drugi način delovanja interferometrov je z delitvijo amplitude. V tem primeru
 vpadni žarek svetlobe razdelimo na dva delna žarka, navadno s polprepustnim zrcalom. 
 Kot že ime pove, tako zrcalo del vpadne svetlobe odbije in del prepusti.
 
-Najznačilnejši primer interferometra z delitvijo amplitude je Michelsonov interferometer.
-Z njim je Michelson pokazal, da je hitrost svetlobe v smeri gibanja Zemlje enaka hitrosti
-svetlobe v smeri pravokotno na smer gibanja in tako ovrgel teorijo o obstoju etra. Poleg
+Najznačilnejši primer interferometra z delitvijo amplitude je Michelsonov 
+interferometer.\index{Michelsonov interferometer}\index{Interferometer!Michelsonov}
+Z njim je Michelson pokazal, da je hitrost svetlobe v smeri gibanja Zemlje enaka hitrosti\index{Michelson, Albert Abraham}
+svetlobe v smeri pravokotno na smer gibanja in tako ovrgel teorijo o obstoju etra. Poleg\index{Eter}
 tega je prvi opazoval fini razcep spektralnih črt v vodikovem atomu, meril velikost zvezd in 
 proučeval gravitacijski vpliv Lune na Zemlji. Michelsonov interferometer
 se danes uporablja za celo vrsto natančnih meritev in raziskav, med drugim za neposredno opazovanje 
@@ -456,16 +462,16 @@ legi povsem enaki.
 
 Gostoto svetlobnega toka na detektorju zapišemo kot vsoto 
 dveh delnih valovanj z enako amplitudo (enačba~\ref{eq:06_09}):
-\beq
+\begin{equation}
 j = 4j_0 \cos^2(\Delta \phi/2),
 \label{eq:06_24}
-\eeq
+\end{equation}
 pri čemer je $\Delta \phi = k_0(l_1-l_2) = 2 k_0 x$. Vrhove dosežemo pri 
 $k_0 x = N \pi$ oziroma:
-\beq
+\begin{equation}
 x = N\pi/k_0 = N\lambda/2.
 \label{eq:06_25}
-\eeq
+\end{equation}
 Ojačitve na detektorju se torej pojavljajo periodično pri premiku zrcala za $\lambda/2$. 
 
 Omenjene oslabitve in ojačitve nastanejo, kadar je svetloba v obliki ravnega valovanja.
@@ -494,12 +500,12 @@ pri čemer je zrnatost slike posledica difuzorja.
 Omenimo še dve različici Michelsonovega interferometra, pri katerih
 točkasti izvor svetlobe pred vpadom na polprepustno zrcalo kolimiramo z lečo 
 (slika~\ref{fig:06_TG-MZ}). Prva različica je Twyman-Greenov interferometer, 
-ki je uporaben predvsem za 
+ki je uporaben predvsem za\index{Twyman-Greenov interferometer}\index{Interferometer!{Twyman-Greenov}}
 določanje homogenosti, ukrivljenosti in na splošno kakovosti prozornih 
 optičnih komponent. Vsaka nehomogenost namreč povzroči razliko v optični poti,
 kar se vidi v nastalem interferenčnem vzorcu. 
 
-Druga različica je Mach-Zehnderjev interferometer, pri 
+Druga različica je Mach-Zehnderjev interferometer, pri\index{Mach-Zehnderjev interferometer}\index{Interferometer!{Mach-Zehnderjev}}
 katerem potuje svetloba po vsakem kraku interferometra le enkrat. Uporaben je v vrsti
 eksperimentov, na primer za vizualizacijo zračnih tokov, za preklapljanje 
 svetlobnih signalov v optičnih telekomunikacijah ali za opazovanje kvantnih
@@ -511,14 +517,14 @@ optičnih pojavov.
 \caption{Twyman-Greenov interferometer (a) in Mach-Zehnderjev 
 interferometer (b). V obeh različicah uporabimo kolimiran
 snop svetlobe, ki ga prek polprepustnih zrcal $PZ$ usmerimo na zrcala $Z$. Posebnost
-Mach-Zehnderjevega inteferometra je v tem, da gre pri njem svetloba skozi vsak krak
+Mach-Zehnderjevega interferometra je v tem, da gre pri njem svetloba skozi vsak krak
 interferometra le enkrat. 
 }
 \label{fig:06_TG-MZ}
 \end{figure}
 
-\begin{example}{\bf Sagnacov interferometer.} Oglejmo si še delovanje 
-Sagnacovega interferometera, ki se danes uporablja predvsem za laserske 
+\begin{example}{\bf Sagnacov interferometer.} Oglejmo si še delovanje\index{Sagnacov interferometer}\index{Interferometer!Sagnacov}
+Sagnacovega interferometra, ki se danes uporablja predvsem za laserske 
 giroskope. V tej postavitvi laserski žarek vpade na polprepustno zrcalo, nato pa 
 en del svetlobe potuje med tremi zrcali v smeri urinega kazalca, drugi del 
 svetlobe pa v nasprotni smeri. Po ponovnem prehodu polprepustnega zrcala se delni
@@ -544,30 +550,30 @@ s kotno hitrostjo $\Omega$ je pot obeh
 Za lažje razumevanje si predstavljamo, da imamo zelo veliko zrcal, 
 tako da je pot svetlobe krožna (slika~\ref{fig:06_Sagnac}\,b in c).
 Čas potovanja prvega žarka (označenega z rdečo) od izvora do detektorja je:
-\beq
+\begin{equation}
 t_1 = \frac{2\pi R- \Delta L}{c_0},
 \label{eq:06_26}
-\eeq
+\end{equation}
 pri čemer je $\Delta L  = \Omega R t_1$. Vstavimo v enačbo~(\ref{eq:06_26}) 
 in dobimo:
-\beq
+\begin{equation}
 t_1 = \frac{2\pi R}{c_0+\Omega R}.
 \label{eq:06_27}
-\eeq
+\end{equation}
 Podobno izračunamo čas, ki ga od izvora do detektorja potrebuje drugi (modri) žarek. 
 Upoštevamo, da se za ta žarek pot podaljša za $\Delta L$ in dobimo:
-\beq
+\begin{equation}
 t_2 = \frac{2 \pi R}{c_0 -\Omega R}.
 \label{eq:06_28}
-\eeq
+\end{equation}
 Med obema signaloma tako nastane fazni zamik:
-\beq
+\begin{equation}
 \Delta \phi = \omega (t_2 -t_1) = \omega \left(\frac{2\pi R}{c_0-\Omega R} - 
 \frac{2 \pi R}{c_0 + \Omega R}\right) = 
 \frac{4 \pi R^2 \omega \Omega}{c_0^2 - \Omega^2R^2} \approx 
 \frac{4 \omega \Omega A}{c_0^2},
 \label{eq:06_29}
-\eeq
+\end{equation}
 pri čemer smo z $A$ označili ploščino interferometra. Čeprav smo rezultat izpeljali za
 krog, velja na splošno tudi za druge oblike. Vidimo, da lahko 
 občutljivost interferometra znatno povečamo, če povečamo parameter $A$. 
@@ -578,7 +584,7 @@ podmornicah in raketah. Njihove glavne prednosti so majhna velikost ter
 kompaktna in robustna zgradba. 
 \end{example}
 
-\section{Interferenca na tanki plasti}
+\section{Interferenca na tanki plasti}\index{Interferenca na tanki plasti}
 Obravnavajmo še en preprost primer interference z delitvijo amplitude, to je 
 interferenco na tanki plasti dielektrika. Naj bo plast dielektrika
 debela $d$, njen lomni količnik naj bo $n_2$, lomni količnik okolice
@@ -591,7 +597,7 @@ $\alpha$ glede na normalo na tanko plast (slika~\ref{fig:06_plast}).
 \input{slike/06_plast.pdf_tex}
 \caption{Odboj svetlobe na tanki plasti dielektrika debeline $d$ (a). Valovanje,
 ki se odbije od prve mejne plasti interferira z valovanjem, ki se odbije od 
-druge mejne plasti in pojavi se interferenca.
+druge mejne plasti.
 Kadar je razlika optičnih poti delnih valovanj enaka večkratniku $2\pi$,
 je interferenca konstruktivna in vidimo ojačitev (b). 
 }
@@ -609,42 +615,42 @@ izračun fazne razlike med njima pomagajmo s sliko~\ref{fig:06_plast}\,b.
 Označimo s točko $A$ mesto vpada na tanko plast, točka $B$ naj bo mesto odboja 
 od spodnje meje, točka $C$ izhodna točka na zgornji meji, točko $D$ pa postavimo
 tako, da je optična pot valovanja od točk $C$ in $D$ do detektorja enaka in je 
-zato ni treba upoštevati. Pot prvega žarka je:
-\beq
-\overline{AC}= 2\,\overline{AB} = 2 \frac{d}{\cos \beta}
+zato ni treba upoštevati. Pot prvega žarka od $A$ do $C$ je:
+\begin{equation}
+2\,\overline{AB} = 2 \frac{d}{\cos \beta}
 \label{eq:06_30}
-\eeq
+\end{equation}
 in ustrezni fazni zamik:
-\beq
-\phi_1 = k_0 n_2 \overline{AC} = \frac{4\pi n_2 d}{\lambda \cos \beta}.
+\begin{equation}
+\phi_1 = k_0 n_2 2\overline{AB} = \frac{4\pi n_2 d}{\lambda \cos \beta}.
 \label{eq:06_31}
-\eeq
+\end{equation}
 Pod drugega žarka je z upoštevanjem lomnega zakona (enačba~\ref{eq:lomnizakon}):
-\beq
+\begin{equation}
 \overline{AD} = 2 d \tan \beta \sin \alpha = 2 d \tan \beta \frac{n_2 \sin \beta}{n_1}.
 \label{eq:06_32}
-\eeq
+\end{equation}
 Fazni zamik drugega žarka je tako:
-\beq
+\begin{equation}
 \phi_2 = k_0 n_1 \overline{AD} = \frac{4 \pi n_2 d \sin^2 \beta}{\lambda \cos \beta},
 \label{eq:06_33}
-\eeq
+\end{equation}
 fazna razlika med žarkoma pa:
-\beq
+\begin{equation}
 \phi  = \phi_1 - \phi_2 = 2 k_0 n_2 d \cos \beta.
 \label{eq:06_34}
-\eeq
+\end{equation}
 Ne smemo pozabiti, da je $\beta$ kot glede na normalo znotraj tanke plasti in ga iz 
 vpadnega kota izračunamo z lomnim zakonom. 
 
 Spomnimo se, da se pri odboju TE polariziranega valovanja na optično gostejši snovi
 faza valovanja spremeni (glej poglavje~\ref{chap:lomgost}). Zato je treba
-fazni razliki med delnima valovanjema (enačba~\ref{eq:06_34}) prišteti še $\pi$. Ojačitve
+fazni razliki med delnima valovanjema (enačba~\ref{eq:06_34}) prišteti še $\pi$. Ojačitve\index{Interferenca!ojačitve}
 odbite svetlobe nastopijo, kadar je celotni fazni zamik enak večkratniku $2\pi$ in velja:
 \boxeq{eq:06_tankamax}{
 2 n_2 d \cos \beta_\mathrm{max} = \lambda \left(N+\frac{1}{2}\right)\!\!,
 }
-pri čemer je $N$ celo število. Podobno določimo tudi pogoj za oslabitve:
+pri čemer je $N$ celo število. Podobno določimo tudi pogoj za oslabitve:\index{Interferenca!oslabitve}
 \boxeq{eq:06_tankamin}{
 2 n_2 d \cos \beta_\mathrm{min} = \lambda N.
 }
@@ -666,7 +672,7 @@ na tanki plasti olja na luži, na milnem mehurčku, na tanki plasti zraka med
 dvema gladkima površinama ali na tankem krilu žuželke. 
 Interferenčni pojavi omogočajo, da s prostim očesom zaznamo plasti, ki so 
 debele le okoli mikrometer.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/06_photo_oil.jpg}\hfill
 \includegraphics[width=7truecm]{slike/06_photo_soap.jpg}\newline
@@ -683,7 +689,7 @@ na krilih žuželke. Foto listne uši: Miran Pflaum.}
 
 \end{example}
 
-\section{Večkratni odboj na tanki plasti}
+\section{Večkratni odboj na tanki plasti}\index{Interferenca na tanki plasti}\index{Odboj na tanki plasti}
 Spoznali smo interferenco na tanki plasti, pri čemer
 smo upoštevali le delni valovanji, ki sta se odbili na zgornji in 
 spodnji meji tanke plasti. Odboje višjih redov smo zanemarili.
@@ -715,17 +721,17 @@ lomnih količnikov $n_1$ in $n_2$, vpadnega kota $\alpha$ in debeline plasti $d$
 vpadni gostoti toka $j_0$. Spomnimo se, da za TE polarizirano valovanje
 amplitudno prepustnost zapišemo z enačbo~(\ref{eq:TEr}), amplitudno odbojnost
 pa z enačbo~(\ref{eq:TEt}). Ob vstopu v tanko plast tako velja:
-\beq
+\begin{equation}
 r_{12} = \frac{n_1\cos \alpha - n_2\cos \beta}{n_1\cos \alpha + n_2\cos \beta}\qquad 
 \mathrm{in}\qquad t_{12} = 1+r_{12},
 \label{eq:06_35}
-\eeq
+\end{equation}
 ob izstopu valovanja iz tanke plasti pa:
-\beq
+\begin{equation}
 r_{21} = \frac{n_2\cos \beta - n_1\cos \alpha}{n_2\cos \beta + n_1\cos \alpha}\qquad 
 \mathrm{in}\qquad t_{21} = 1+r_{21},
 \label{eq:06_36}
-\eeq
+\end{equation}
 pri čemer smo upoštevali, da je izhodni kot enak vpadnemu kotu $\alpha$. 
 
 Posamezne prispevke jakosti 
@@ -741,10 +747,10 @@ E_{N+1} &= E_0t_{12}\,\left(r_{21}\,r_{21}\,e^{i\phi}\right)^Nt_{21}.
 \end{align}
 Upoštevali smo tudi fazni zamik med dvema sosednjima izhodnima valovanjema, do katerega
 pride zaradi razlike v prepotovani poti (enačba~\ref{eq:06_34}):
-\beq
+\begin{equation}
 \phi = 2k_0 n_2 d \cos \beta.
 \label{eq:06_38}
-\eeq
+\end{equation}
 Celotno prepuščeno polje $E_t$ zapišemo kot vsoto vseh prispevkov (enačba~\ref{eq:06_37}) 
 in dobimo:
 \begin{align}
@@ -754,32 +760,32 @@ E_t &= E_1+E_2+E_3+... \nonumber \\
 \label{eq:06_39}
 \end{align}
 Geometrijsko vrsto v oklepaju seštejemo in za jakost prepuščenega polja dobimo:
-\beq
+\begin{equation}
 E_t = E_0 t= E_0 t_{12}t_{21}\frac{1}{1-r_{21}^2e^{i\phi}},
 \label{eq:06_40}
-\eeq
-pri čemer smo vpeljali $t$ kot amplitudno prepustnost plasti. Ker sta lomni 
+\end{equation}
+pri čemer smo vpeljali $t$ kot amplitudno prepustnost plasti. Ker sta lomni\index{Amplitudna prepustnost!tanke plasti}
 količnik snovi in smer širjenja svetlobe na izhodni strani enaka kot na vpadni, je 
-prepustnost $T$, ki označuje razmerje med gostoto prepuščenega in vpadnega svetlobnega
+prepustnost $T$, ki označuje razmerje med gostoto prepuščenega in vpadnega svetlobnega\index{Prepustnost!{tanke plasti}}
 toka, kar enaka $|t|^2$:
-\beq
+\begin{equation}
 T = \frac{j}{j_0} = |t|^2= \frac{t_{12}^2t_{21}^2}{\left(1-r_{21}^2e^{i\phi}\right)
 \left(1-r_{21}^2e^{-i\phi}\right)}.
 \label{eq:06_41}
-\eeq
+\end{equation}
 Upoštevali smo, da je tanka plast dielektrična in so zato vrednosti amplitudnih 
-prepustnosti in odbojnosti realne. Zapišemo še odbojnost $R = r_{21}^2$ in upoštevamo
+prepustnosti in odbojnosti realne. Zapišemo še odbojnost $R = r_{21}^2$ in upoštevamo\index{Odbojnost!{tanke plasti}}
 zveze med amplitudnimi prepustnostmi in odbojnostmi:
 $t_{21} = 1+r_{21}$ in $t_{12} = 1+r_{12} = 1-r_{21}$. Dobimo:
-\beq
+\begin{equation}
 T = \frac{\left(1-R\right)^2}{1 + R^2 - 2R\cos \phi}.
 \label{eq:06_42}
-\eeq
+\end{equation}
 Imenovalec preoblikujemo, tako da upoštevamo zvezo $\cos(2x) = 1-2\sin^2x$:
-\beq
+\begin{equation}
 1 + R^2 - 2R\cos \phi = 1+R^2 - 2R(1-2\sin^2(\phi/2)) = (1-R)^2 + 4R \sin^2(\phi/2).
 \label{eq:06_43}
-\eeq
+\end{equation}
 Preoblikovan izraz vstavimo v enačbo~(\ref{eq:06_42}), jo delimo s števcem in 
 dobimo končen izraz za prepustnost tanke plasti:
 \boxeq{eq:FP}{
@@ -788,7 +794,7 @@ T = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2)}.
 Spomnimo, da je $R = r_{21}^2$ podan z enačbo~(\ref{eq:06_36}), $\phi$ pa z 
 enačbo~(\ref{eq:06_38}). 
 
-Izračunano odvisnost $T(\phi)$ imenujemo tudi Airyjeva
+Izračunano odvisnost $T(\phi)$ imenujemo tudi Airyjeva\index{Airyjeva funkcija}
 funkcija.\footnote{Ločiti je treba Airyjevo funkcijo za prepustnost 
 na tanki plasti (enačba~\ref{eq:FP}) od Airyjeve funkcije v matematiki in tudi 
 od Airyjevega diska, ki smo ga vpeljali pri uklonu na okrogli odprtini 
@@ -804,11 +810,11 @@ deluje kot frekvenčni filter, saj pri dani debelini dobro prepušča le valovan
 s točno določenimi valovnimi dolžinami, ostala valovanja pa se od tanke plasti 
 odbijejo.
 
-Vpeljimo še en parameter, to je koeficient finese:
-\beq
+Vpeljimo še en parameter, to je koeficient finese:\index{Koeficient finese}
+\begin{equation}
 F = \frac{4R}{(1-R)^2}.
 \label{eq:06_44d}
-\eeq
+\end{equation}
 Vrednost koeficienta finese določa kontrast prepustnosti svetlobe skozi tanko
 plast (slika~\ref{fig:06_FP1}). Odvisen je zgolj od odbojnosti na meji
 med tanko plastjo in okolico $R$, ta pa od lomnih količnikov plasti in okolice
@@ -825,21 +831,21 @@ zelena $R=0,5$ in $F=8$ ter rdeča $R=0,9$ in $F=3600$.}
 \label{fig:06_FP1}
 \end{figure}
 
-\section{Fabry-Perotov interferometer}
+\section{Fabry-Perotov interferometer}\index{Fabry-Perotov interferometer}\index{Interferometer!{Fabry-Perotov}}
 Naprava, ki temelji na selektivni prepustnosti tanke plasti dielektrika, je 
-Fabry-Perotov interferometer. Imenuje se po francoskih fizikih Charlesu Fabryju (1867--1945)
-in Alfredu Perotu (1863--1925), ki sta napravo razvila leta 1899. Fabry-Perotov interferometer
+Fabry-Perotov interferometer. Imenuje se po francoskih fizikih Charlesu Fabryju (1867--1945)\index{Fabry, Charles}
+in Alfredu Perotu (1863--1925), ki sta napravo razvila leta 1899. Fabry-Perotov interferometer\index{Perot, Alfred}
 je navadno sestavljen iz dveh premičnih delno prepustnih ravnih zrcal, med katerima
 je zelo tanka reža. S spreminjanjem razmika med zrcaloma (in s tem debeline vmesne tanke
 plasti zraka) izbiramo valovno dolžino
 valovanja, ki ga interferometer popolnoma prepušča. Uporabljamo ga predvsem
 za spektralno analizo oziroma spektroskopijo, na primer v astronomiji. 
 
-Podobna naprava je Fabry-Perotov
+Podobna naprava je Fabry-Perotov\index{Fabry-Perotov etalon}
 etalon. Ta je navadno sestavljen iz ploščice dielektrika, katere debeline ne 
 moremo spreminjati. Stranicam dielektrika lahko z dodatnim nanosom povečamo
 odbojnost. Fabry-Perotovi etaloni so uporabni med drugim v optičnih 
-telekomunikacijah in pri izdelavi laserjev za spektralno filtracijo svetlobe.
+telekomunikacijah in za spektralno filtracijo svetlobe pri izdelavi laserjev.
 
 V prejšnjem razdelku smo izpeljali prepustnost valovanja skozi plast
 dielektrika (enačba~\ref{eq:FP}), pri čemer smo intenziteto odbitega
@@ -851,22 +857,22 @@ vpadni kot $\alpha$ in lomni kot $\beta$  približno enaka, $n_2 \approx 1$,
 odbojnost $R$ pa je enaka odbojnosti delno prepustnih zrcal. Privzamemo 
 še, da svetloba na interferometer vpada pravokotno, in izraz za prepustnost
 prepišemo v:
-\beq
+\begin{equation}
 T(\omega) = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\omega d n_2/c_0)}.
 \label{eq:06_44}
-\eeq
+\end{equation}
 
-Pomemben parameter pri Fabry-Perotovem interferometru je tako imenovano prosto
+Pomemben parameter pri Fabry-Perotovem interferometru je tako imenovano prosto\index{Prosto spektralno območje}
 spektralno območje ($FSR$ -- {\it Free Spectral Range}). 
 Gre za območje spektra med dvema zaporednima vrhoma (slika~\ref{fig:06_FP2})
 in določa širino spektra, ki jo lahko s tako napravo analiziramo. 
 Prosto spektralno območje izračunamo iz pogoja, da se fazna razlika $\phi$ spremeni
 za $2\pi$:
-\beq
+\begin{equation}
 \Delta \phi = 2 \pi = \Delta \left(2 \omega_\mathrm{FSR} d n_2/c_0\right)= 
 2 \Delta \omega_\mathrm{FSR} dn_2/c_0
 \label{eq:06_45}
-\eeq
+\end{equation}
 in dobimo:
 \boxeq{eq:FSR}{
 \Delta \nu_\textrm{FSR}=\frac{c_0}{2dn_2}.
@@ -876,10 +882,10 @@ Obravnavajmo Fabry-Perotov interferometer, ki je sestavljen iz dveh ravnih zrcal
 katerima je tanka plast zraka. Položaj zrcal zelo natančno nastavljamo s piezoelektričnim 
 mehanizmom in nastavimo debelino reže na $d=0,1~\si{mm}$. Izračunajmo
 prosto spektralno območje za tak interferometer (enačba~\ref{eq:FSR}):
-\beq
+\begin{equation}
 \Delta \nu_\textrm{FSR} = \frac{3 \cdot 10^8~\si{m/s}}{2 \cdot 10^{-4}~\si{m}} \sim 10^{12}~\si{Hz}.
 \label{eq:06_51d}
-\eeq
+\end{equation}
 S takim interferometrom lahko analiziramo spektralne podrobnosti 
 v intervalu širine $1~\si{THz}$, kar  v območju vidne svetlobe
 ustreza $\Delta \lambda_\textrm{FSR} \sim 1~\si{nm}$. Navadno zato uporabimo dodatne filtre, 
@@ -905,7 +911,7 @@ spektralnega območja, in torej določa ločljivost Fabry-Perotovega interferome
 Širino posameznega vrha $\delta \nu_{1/2}$ izračunamo iz vrednosti frekvence, pri kateri pade 
 prepustnost interferometra na $T=0,5$. Celotno širino pri polovični
 višini pogosto označimo tudi z angleško kratico $FWHM$ ({\it Full Width at Half
-Maximum}).
+Maximum}).\index{FWHM}
 \begin{figure}[ht]
 \centering
 \def\svgwidth{100truemm} 
@@ -919,44 +925,44 @@ Primer je narisan za $R=0,5$.}
 \end{figure}
 
 Širino vrha izračunamo iz pogoja $T=0,5$ (enačba~\ref{eq:FP}):
-\beq
+\begin{equation}
 T = \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2)} = \frac{1}{2} \qquad
 \Longrightarrow \qquad \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2) = 1.
 \label{eq:06_46}
-\eeq
+\end{equation}
 Privzamemo, da so vrhovi ozki in sinus razvijemo za majhne vrednosti:
-\beq
+\begin{equation}
 \phi/2 = \sqrt{\frac{\left(1-R\right)^2}{4R}}.
 \label{eq:06_47}
-\eeq
+\end{equation}
 Fazni zamik na polovični vrednosti vrha je potem:
-\beq
+\begin{equation}
 \phi_{1/2} = \frac{1-R}{\sqrt{R}}.
 \label{eq:06_48}
-\eeq
+\end{equation}
 Vstavimo izraz za fazno razliko $\phi$ (enačba~\ref{eq:06_34}) in 
 za celotno širino vrha na polovični višini dobimo zvezo:
-\beq
+\begin{equation}
 2k_0 n_2 d = \frac{4\pi \nu n_2 d}{c_0} = 2\frac{1-R}{\sqrt{R}},
 \label{eq:06_49}
-\eeq
+\end{equation}
 od koder sledi:
-\beq
+\begin{equation}
 \delta \nu_{1/2} = \frac{1-R}{2\sqrt{R}} \frac{c_0}{\pi n_2 d}.
 \label{eq:06_50}
-\eeq
+\end{equation}
 \vglue-8truemm
 \begin{remark}
-Pogosto govorimo o finesi interferometra, ki jo vpeljemo kot
+Pogosto govorimo o finesi interferometra, ki jo vpeljemo kot\index{Finesa}
 kvocient med prostim spektralnim območjem in širino vrha. Izračunamo jo 
 z upoštevanjem enačb~(\ref{eq:FSR} in \ref{eq:06_50}):
-\beq
+\begin{equation}
 \mathcal{F} = \frac{\Delta \nu_\textrm{FSR}}{\delta \nu_{1/2}}  = \frac{\pi}{2}\sqrt{F}.
 \label{eq:06_51}
-\eeq
+\end{equation}
 \end{remark}
 
-\section{Večplastni nanosi}
+\section{Večplastni nanosi}\index{Interferenca!{večplastni nanos}}
 Prepustnost tanke plasti je razmeroma preprosto izračunati. Vendar se račun hitro
 zaplete, kadar je tankih plasti več. Namesto seštevanja prispevkov 
 posameznih odbojev valovanja na mejah med plastmi zato raje zapišemo celotno polje 
@@ -979,56 +985,56 @@ valovanju, označimo s črtico (slika~\ref{fig:06_prehodneM}).
 \end{figure}
 
 Poglejmo najprej, kako z matričnim pristopom opišemo povezavo med poljema na 
-meji snovi $1\rightarrow 2$. Robni pogoji (enačba~\ref{eq:RPE}) zahtevajo, 
+meji $1\rightarrow 2$. Robni pogoji (enačba~\ref{eq:RPE}) zahtevajo, 
 da se na meji ohranja tangentna komponenta jakosti električnega polja. Ker je
-vpad pravokotnen, se ohranja celotna jakost električnega polja. Izrazimo 
+vpad pravokoten, se ohranja celotna jakost električnega polja. Izrazimo 
 prepuščeno polje $E_2$ s poljema $\tilde{E}_1$ in $E_2'$, tako da upoštevamo
 amplitudno prepustnost in odbojnost na meji (enačbe~\ref{eq:06_35} in \ref{eq:06_36}):
-\beq
+\begin{equation}
 E_2 = t_{12}\tilde{E}_1 + r_{21}E_2'.
 \label{eq:06_53}
-\eeq
+\end{equation}
 Podobno zapišemo tudi odbito polje $\tilde{E}_1'$ kot:
-\beq
+\begin{equation}
 \tilde{E}_1' = t_{21}E_2' + r_{12}\tilde{E}_1.
 \label{eq:06_54}
-\eeq
+\end{equation}
 Iz enačbe~(\ref{eq:06_54}) izrazimo $E_2'$:
-\beq
+\begin{equation}
 E_2' = \frac{1}{t_{21}}\left(\tilde{E}_1' - r_{12}\tilde{E}_1\right) = 
 \frac{1}{t_{21}}\left(\tilde{E}_1' + r_{21}\tilde{E}_1\right),
 \label{eq:06_54a}
-\eeq
+\end{equation}
 pri čemer smo upoštevali, da velja $r_{12} = - r_{21}$. Izračunano polje vstavimo v 
 enačbo~(\ref{eq:06_53}) in dobimo:
-\beq
+\begin{equation}
 E_2 = t_{12}\tilde{E}_1 -\frac{r_{12}r_{21}}{t_{21}}\tilde{E}_1 + 
 \frac{r_{21}}{t_{21}}\tilde{E}_1'.
 \label{eq:06_55}
-\eeq
+\end{equation}
 Izraz preoblikujemo:
-\beq
+\begin{equation}
 E_2 = \frac{1}{t_{21}} \left(t_{12}t_{21}\tilde{E}_1 -r_{12}r_{21}\tilde{E}_1 + 
 r_{21}\tilde{E}_1'\right)\!\!.
 \label{eq:06_55a}
-\eeq
+\end{equation}
 Izračunajmo zvezo med koeficienti prepustnosti in odbojnosti:
-\beq
+\begin{equation}
 t_{12}t_{21} - r_{12}r_{21} = (1+r_{12})(1+r_{21}) - r_{12}r_{21} = 
 (1+r_{12})(1-r_{12}) + r_{12}^2 = 1,
 \label{eq:06_56}
-\eeq
+\end{equation}
 s čimer enačbo~(\ref{eq:06_55a}) poenostavimo v:
-\beq
+\begin{equation}
 E_2 = \frac{1}{t_{21}}\left(\tilde{E}_1 + r_{21}\tilde{E}_1'\right).
 \label{eq:06_57}
-\eeq
+\end{equation}
 Tako smo z enačbami povezali oba prispevka k polju na desni strani meje s poljem
 levo od meje.  
 
 Sestavimo zdaj 2D vektorja iz valovanj, ki se širita v desno in v levo, in zvezi
 med njimi (enačbi~\ref{eq:06_54a} in \ref{eq:06_57}) strnjeno zapišemo kot:
-\beq
+\begin{equation}
 \left[\begin{array}{c}
 E_{2}\\
 E_{2}'\\
@@ -1043,10 +1049,10 @@ r_{21}& 1\\
 \tilde{E}_1'\\
 \end{array}\right]\!\!.
 \label{eq:06_58}
-\eeq
+\end{equation}
 Kot bomo videli pozneje, je priročno obrniti smer gledanja, tako da polje na 
 levi izrazimo s poljem na desni strani meje. Obrnjene enačbe strnjeno zapišemo z matriko:
-\beq
+\begin{equation}
 \left[\begin{array}{c}
 \tilde{E}_{1}\\
 \tilde{E}_{1}'\\
@@ -1061,7 +1067,7 @@ E_2\\
 E_2'\\
 \end{array}\right]\!\!.
 \label{eq:06_59}
-\eeq
+\end{equation}
 Zapisani izraz posplošimo in zapišemo povezavo na meji med plastjo 
 $N-1$ in plastjo $N$:
 \boxeq{eq:prehodnaM}{
@@ -1078,7 +1084,7 @@ r_{N-1,N}& 1\\
 E_N\\
 E_N'\\
 \end{array}\right] = 
-\mathbf{M}_{N-1,N}\left[\begin{array}{c}
+M_{N-1,N}\left[\begin{array}{c}
 E_N\\
 E_N'\\
 \end{array}\right]\!\!.
@@ -1089,17 +1095,17 @@ levi in desni strani znotraj posamezne plasti. Razlika
 je le v fazi, ki jo valovanje pridobi med premikom po plasti. 
 Če je debelina $N$-te plasti $d_N$ in njen
 lomni količnik $n_N$, zapišemo zvezi:
-\beq
+\begin{equation}
 \tilde{E}_N = E_N e^{i k_0 n_N d_N}
 \label{eq:06_60}
-\eeq
+\end{equation}
 in 
-\beq
+\begin{equation}
 E_N' = \tilde{E}_N' e^{i k_0 n_N d_N}.
 \label{eq:06_61}
-\eeq
+\end{equation}
 V matričnem zapisu je premik po posamezni plasti enak:
-\beq
+\begin{equation}
 \left[\begin{array}{c}
 E_{N}\\
 E_{N}'\\
@@ -1112,12 +1118,12 @@ e^{-i\delta}& 0\\
 \tilde{E}_N\\
 \tilde{E}_N'\\
 \end{array}\right] = 
-\mathbf{P}_{N}\left[\begin{array}{c}
+P_{N}\left[\begin{array}{c}
 \tilde{E}_N\\
 \tilde{E}_N'\\
 \end{array}\right]\!\!,
 \label{eq:06_62}
-\eeq
+\end{equation}
 pri čemer smo vpeljali fazni zamik $\delta = k_0 n_N d_N$.
 
 Zapis z matrikami je priročen predvsem v primerih, ko imamo sistem več tankih plasti
@@ -1129,33 +1135,33 @@ zmnožimo v pravilnem vrstnem redu. Pri tem
 prehod obravnavamo od izhodne (desne) strani proti vpadni (levi) strani, saj vemo, da na
 izstopni strani svetlobe, ki bi se širila proti levi, ni. 
 Na splošno je zapis oblike:
-\beq
+\begin{equation}
 \left[\begin{array}{c}
 E_{0}\\
 E_{0}'\\
 \end{array}\right] = 
-\mathbf{M}_{01}
-\mathbf{P}_1
-\mathbf{M}_{12}
-\mathbf{P}_2
-\mathbf{M}_{23}
-\mathbf{P}_3 ... \mathbf{M}_{N,i}
+M_{01}
+P_1
+M_{12}
+P_2
+M_{23}
+P_3 ... M_{N,i}
 \left[\begin{array}{c}
 E_i\\
 0\\
 \end{array}\right] =
-\mathbf{A}
+A
 \left[\begin{array}{c}
 E_i\\
 0\\
 \end{array}\right]\!\!,
 \label{eq:06_63}
-\eeq
-pri čemer $\mathbf{A}$ označuje prehodno matriko celotnega sistema. Ko enkrat 
-poznamo matriko $\mathbf{A}$, lahko hitro izračunamo amplitudno 
+\end{equation}
+pri čemer $A$ označuje prehodno matriko celotnega sistema. Ko enkrat 
+poznamo matriko $A$, lahko hitro izračunamo amplitudno 
 prepustnost in odbojnost večplastnega sistema. Matriko zapišemo
 po komponentah:
-\beq
+\begin{equation}
 \left[\begin{array}{c}
 E_{0}\\
 E_{0}'\\
@@ -1169,8 +1175,9 @@ E_i\\
 0\\
 \end{array}\right]\!\!,
 \label{eq:06_64}
-\eeq
-od koder razberemo amplitudno prepustnost $t$ in amplitudno odbojnost $r$:
+\end{equation}
+od koder razberemo amplitudno prepustnost $t$ in amplitudno odbojnost
+$r$:\index{Amplitudna prepustnost!{večplastnega nanosa}}\index{Amplitudna odbojnost!{večplastnega nanosa}}
 \boxeq{eq:plasti}{
 t = \frac{E_i}{E_0} = \frac{1}{A_{11}} \qquad \mathrm{in} \qquad 
 r = \frac{E_0'}{E_0} = \frac{A_{21}}{A_{11}}.
@@ -1179,33 +1186,33 @@ Tako na preprost način izračunamo prepustnost in odbojnost
 večplastnih nanosov, vendar ne smemo pozabiti, 
 da je celoten račun narejen ob predpostavki pravokotnega vpada.
 
-\begin{example}{\bf Matrična obravnava Fabry-Perotovega etalona.}
+\begin{example}{\bf Matrična obravnava Fabry-Perotovega etalona.}\index{Fabry-Perotov etalon}
 Uporabimo matrični pristop za izračun prehoda svetlobe skozi tanko plast dielektrika
 (Fabry-Perotov etalon). Naj bodo debelina plasti $d$, njen lomni količnik $n_1$, 
 lomni količnik okolice pa $n_0$. V tem primeru moramo zapisati tri matrike:
-eno za prehod v plast $\mathbf{M}_{01}$, drugo za prehod znotraj plasti $\mathbf{P}_1$ in 
-tretjo za prehod iz plasti $\mathbf{M}_{10}$:
-\beq
+eno za prehod v plast $M_{01}$, drugo za prehod znotraj plasti $P_1$ in 
+tretjo za prehod iz plasti $M_{10}$:
+\begin{equation}
 \left[\begin{array}{c}
 E_{0}\\
 E_{0}'\\
 \end{array}\right] = 
-\mathbf{A}
+A
 \left[\begin{array}{c}
 E_i\\
 0\\
 \end{array}\right] = 
-\mathbf{M}_{01}\mathbf{P}_1\mathbf{M}_{10}
+M_{01}P_1M_{10}
 \left[\begin{array}{c}
 E_i\\
 0\\
 \end{array}\right]\!\!.
 \label{eq:06_65}
-\eeq
+\end{equation}
 Uporabimo matriki za prehod skozi mejo (enačba~\ref{eq:06_59}) 
 in za premik po snovi (enačba~\ref{eq:06_62}). Zapišemo:
-\beq
-\mathbf{A} =
+\begin{equation}
+A =
 \frac{1}{t_{01}}
 \left[\begin{array}{cc}
 1& r_{01}\\
@@ -1221,43 +1228,43 @@ e^{-i\delta}& 0\\
 r_{10}& 1\\
 \end{array}\right]\!\!,
 \label{eq:06_66}
-\eeq
+\end{equation}
 pri čemer je fazni zamik $\delta = k_0 n_1 d$. Matrike zmnožimo in dobimo:
-\beq
-\mathbf{A} =
+\begin{equation}
+A =
 \frac{1}{t_{01}t_{10}}
 \left[\begin{array}{cc}
 e^{-i\delta}+r_{01}r_{10}e^{i\delta}& r_{10}e^{-i\delta}+r_{01}e^{i\delta} \\
 r_{01}e^{-i\delta}+r_{10}e^{i\delta} & r_{01}r_{10}e^{-i\delta}+ e^{i\delta}\\
 \end{array}\right]\!\!.
 \label{eq:06_67}
-\eeq
-Ko poznamo celotno matriko $\mathbf{A}$, lahko iz nje razberemo koeficient prepustnosti 
+\end{equation}
+Ko poznamo celotno matriko $A$, lahko iz nje razberemo koeficient prepustnosti 
 (enačba~\ref{eq:plasti}):
-\beq
+\begin{equation}
 t = \frac{1}{A_{11}} = \frac{t_{01}t_{10}}{e^{-i\delta}+r_{01}r_{10}e^{i\delta}} = 
 \frac{1-r_{01}^2}{e^{-i\delta}\left(1-r_{01}^2e^{2i\delta}\right)},
 \label{eq:06_68}
-\eeq
+\end{equation}
 pri čemer smo upoštevali enačbe~(\ref{eq:06_35} in \ref{eq:06_36}) in zvezo
 $r_{01} = r_{10}$. 
 
 Vpeljemo še odbojnost na meji $R = r_{01}^2$ in fazni zamik 
 $\phi = 2 \delta = 2 k_0 n_2 d$. Izračunamo prepustnost, pri čemer upoštevamo 
 enačbo~(\ref{eq:06_44}):
-\beq
+\begin{equation}
 T = |t|^2 = \frac{\left(1-R\right)^2}{\left(1 - Re^{2i\delta}\right)\left(1 -
 Re^{-2i\delta}\right)} = \frac{\left(1-R\right)^2}{1 + R^2 - 2R\cos \phi}=
 \frac{1}{1 + \frac{4R}{\left(1-R\right)^2} \sin^2(\phi/2)}.
 \label{eq:06_69}
-\eeq
+\end{equation}
 Izpeljali smo prepustnost 
 tanke plasti dielektrika, ki je po pričakovanju povsem enaka prepustnosti 
 Fabry-Perotovega interferometra, izračunani s seštevanjem delnih valovanj (enačba~\ref{eq:FP}).
 
 \end{example}
 
-\begin{example}{\bf Antirefleksni nanos.}
+\begin{example}{\bf Antirefleksni nanos.}\index{Antirefleksni nanos}
 Kadar želimo zmanjšati odboj svetlobe pri vpadu na mejo dveh snovi, uporabimo
 antirefleksne nanose. To so praviloma zelo tanke plasti iz neke tretje snovi, 
 s katerimi dosežemo zmanjšanje odbojnosti in tako povečanje prepustnosti. Poglejmo, 
@@ -1267,8 +1274,8 @@ V tem primeru naj svetloba iz snovi z lomnim količnikom $n_1$ vpada na tanek an
 nanos debeline $d$ z lomnim količnikom $n_2$ in potem prehaja v snov z lomnim količnikom 
 $n_3$. Matrika, ki opisuje prehod skozi opisani sistem, je produkt dveh prehodov skozi
 mejo in enega premika po snovi:
-\beq
-\mathbf{A} = 
+\begin{equation}
+A = 
 \frac{1}{t_{12}}
 \left[\begin{array}{cc}
 1& r_{12}\\
@@ -1284,52 +1291,52 @@ e^{-i\delta}& 0\\
 r_{23}& 1\\
 \end{array}\right]\!\!.
 \label{eq:06_70}
-\eeq
+\end{equation}
 Matrike zmnožimo in dobimo:
-\beq
-\mathbf{A} =
+\begin{equation}
+A =
 \frac{1}{t_{12}t_{23}}
 \left[\begin{array}{cc}
 e^{-i\delta}+r_{12}r_{23}e^{i\delta}& r_{23}e^{-i\delta}+r_{12}e^{i\delta} \\
 r_{12}e^{-i\delta}+r_{23}e^{i\delta} & r_{12}r_{23}e^{-i\delta}+ e^{i\delta}\\
 \end{array}\right]\!\!.
 \label{eq:06_71}
-\eeq
+\end{equation}
 Prepustnost sistema izračunamo iz enačbe~(\ref{eq:plasti}), pri čemer s faktorjem $n_3/n_1$ 
 upoštevamo, da se po prehodu valovanje širi po drugačni snovi:
-\beq
+\begin{equation}
 T =\frac{n_3}{n_1} |t|^2 = \frac{n_3}{n_1} \left\rvert \frac{1}{A_{11}}\right\rvert^2 = 
 \frac{n_3}{n_1} \cdot  \frac{t_{12}^2t_{23}^2}{1+ r_{12}^2r_{23}^2+2r_{12}r_{23}\cos\phi},
 \label{eq:06_72}
-\eeq
+\end{equation}
 pri čemer je $\phi = 2k_0n_2d$. Prepustnost $T$ je največja, kadar je imenovalec najmanjši in 
-$\cos \phi = -1$. Iz tega pogoja izračunamo debelino antirefleksnega nanosa:
-\beq
+$\cos \phi = -1$. Iz tega pogoja izračunamo debelino  nanosa:
+\begin{equation}
 \phi = 2 \frac{2\pi}{\lambda} n_2 d = \pi \qquad \Longrightarrow \qquad d = \frac{\lambda}{4n_2}.
 \label{eq:06_73}
-\eeq
+\end{equation}
 Najmanjša potrebna debelina antirefleksnega nanosa je torej četrtina valovne dolžine valovanja v nanosu.
 Druge rešitve (večje debeline) dobimo z upoštevanjem periodičnosti sinusne funkcije. Rezultat je pričakovan,
 saj se pri izračunani debelini valovanje, ki je odbito od prve meje med plastmi, destruktivno sešteje z 
 valovanjem, odbitim na drugi meji. Celotno odbito valovanje je enako nič in vsa svetloba je prepuščena. 
 
 Izračunajmo še odbojnost z upoštevanjem enačbe~(\ref{eq:plasti}):
-\beq
+\begin{equation}
 R = |r|^2 = \left\rvert \frac{A_{21}}{A_{11}}\right\rvert^2 = 
 \left\rvert\frac{r_{12}e^{-i\delta}+r_{23}e^{i\delta}}{e^{-i\delta}+r_{12}r_{23}e^{i\delta}}\right\rvert^2\!\!.
 \label{eq:06_74}
-\eeq
+\end{equation}
 Vstavimo izračunano debelino nanosa (enačba~\ref{eq:06_73}) in odbojnost poenostavimo v:
-\beq
+\begin{equation}
 R = \frac{r_{12}^2+r_{23}^2-2r_{12}r_{23}}{1-r_{12}^2r_{23}^2} = \frac{(r_{12}-r_{23})^2}{(1-r_{12}r_{23})^2}.
 \label{eq:06_75}
-\eeq
+\end{equation}
 Da dosežemo popolno prepustnost svetlobe in nič odboja, mora biti $R=0$. To velja, kadar je $r_{12} = r_{23}$
 oziroma izraženo z lomnimi količniki snovi (enačba~\ref{eq:06_35}):
-\beq
+\begin{equation}
 \frac{n_1-n_2}{n_1+n_2} = \frac{n_2-n_3}{n_2+n_3}.
 \label{eq:06_76}
-\eeq
+\end{equation}
 Pri danih lomnih količnikih $n_1$ in $n_3$ izračunamo lomni količnik antirefleksnega nanosa in pogoja, 
 da se na plasti svetloba ne odbija, strnjeno zapišemo kot:
 \boxeq{eq:antirefleks}{
@@ -1353,30 +1360,30 @@ plasti različnih debelin in z različnimi lomnimi količniki. Tako dosežemo od
 na skoraj celotnem vidnem območju.
 \end{remark}
 
-\begin{example}{\bf Strukturne barve.}
+\begin{example}{\bf Strukturne barve.}\index{Strukturna barva}
 Posebej zanimiv primer večplastnih dielektrikov so periodične strukture. Enodimenzionalne 
 nastanejo z izmeničnim nanosom na primer dveh plasti z lomnima količnikoma $n_1$ in $n_2$, 
 lahko pa so tudi dvo- ali tridimenzionalne periodične strukture. Za opis širjenja svetlobe v
  takih periodičnih dielektričnih strukturah lahko uporabimo Blochov formalizem za opis elektronskih 
  stanj v periodični 
 kristalni mreži. Podobno kot se v kristalih pojavijo dovoljeni energijski pasovi za elektrone 
-in med njimi prepovedani pasovi oziroma energijske reže, se v periodičnih strukturah dielektikov
+in med njimi prepovedani pasovi oziroma energijske reže, se v periodičnih strukturah dielektrikov
 pojavijo stanja, ki se po snovi širijo, in stanja, ki se ne. Zaradi podobnosti s kristali
 govorimo o fotonskih kristalih, za njih pa je značilna velika odbojnost za valovanja s točno
-določenimi frekvencami znotraj prepovedanega pasu. 
+določenimi frekvencami znotraj prepovedanega pasu.\index{Fotonski kristal}
 
 Kadar telo dobi barvo zaradi strukture in ne zaradi barvila, govorimo o strukturni barvi. 
 Znani primeri strukturnih barv (fotonskih kristalov) v naravi so krila nekaterih metuljev, 
 nekatera peresa ptic (race, pava, vodomca, kolibrija), telesa nekaterih kačjih pastirjev ali hroščkov. 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/06_metulj.jpg}\hfill
 \includegraphics[width=7truecm]{slike/06_vodomec.jpg}\newline
 
 \includegraphics[width=7truecm]{slike/06_pav1.jpg}\hfill
 \includegraphics[width=7truecm]{slike/06_pastir.jpg}
-\caption{Nekaj primerov strukturne barve v naravi: metuljeva krila (foto: Pixabay, Garoch), peresa vodomca (foto:
-Pixabay, Timo Schl\"uter), pavje pero in kačji pastir (foto: Miran Pflaum).}
+\caption{Nekaj primerov strukturne barve v naravi: metuljeva krila (Foto: Garoch, Pixabay), peresa vodomca (Foto:
+Timo Schl\"uter, Pixabay), pavje pero in kačji pastir (Foto: Miran Pflaum).}
 \label{fig:06_FK}
 \end{figure}
  
