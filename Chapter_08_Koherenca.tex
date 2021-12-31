@@ -7,46 +7,47 @@ s pojavom interference. Obravnavali bomo časovno koherenco in zapisali
 Wiener-Hinčinov izrek ter prostorsko koherenco in z njo povezan 
 Van Cittert-Zernikov izrek. Poglavje bomo zaključili z opisom holografije.
 
-Koherenca oziroma koherentne lastnosti svetlobe se nanašajo na obstoj povezave
-med fazo elektromagnetnega valovanja na nekem kraju ob nekem času ter njegovo 
+Koherenca\index{Koherenca} oziroma koherentne lastnosti svetlobe se nanašajo na obstoj povezave
+med fazo elektromagnetnega\index{Faza valovanja} valovanja na nekem kraju ob nekem času ter njegovo 
 fazo na nekem drugem kraju ob nekem drugem času. V poglavjih o 
 uklonu (poglavje~\ref{chap:Uklon}) in interferenci (poglavje~\ref{chap:Interferenca})
 smo pri zapisu elektromagnetnega valovanja privzeli, da poznamo njegovo fazo 
 na vsakem kraju in ob vsakem času, s čimer smo predpostavili, 
 da je elektromagnetno valovanje popolnoma koherentno. Jakost 
 električnega polja popolno koherentnega valovanja zapišemo kot funkcijo $\mathbf{r}$ in $t$ 
-v obliki (enačba~\ref{eq:ravnival}):
-\beq
+v obliki (enačba~\ref{eq:ravnival}):\index{Jakost električnega polja}
+\begin{equation}
 \mathbf{E} (\mathbf{r}, t) = \mathbf{E}_0(\mathbf{r}, t) 
 e^{i\phi(\mathbf{r}, t)}.
 \label{eq:08_01}
-\eeq
+\end{equation}
 Koherentno valovanje ob interferenci da značilen interferenčni 
 vzorec, ki se s časom ne spreminja, nekoherentno valovanje pa ne. Pri  
 delno koherentnih valovanjih interferenčne vzorce sicer opazimo, vendar z zmanjšanim
 kontrastom. V realnih sistemih valovanje
 ni nikoli povsem koherentno in prej ali slej se povezava med njegovo 
-fazo izgubi. Ločimo časovno (tudi longitudinalno ali vzdolžno) in krajevno 
-(tudi transverzalno ali prečno) koherenco. 
+fazo izgubi. Najprej bomo obravnavali časovno (tudi longitudinalno ali vzdolžno) koherenco, 
+nato še krajevno (tudi transverzalno ali prečno). 
 
-\section{Časovna koherenca}
-Najprej bomo opisali časovno koherenco, ki povezuje valovanje na istem mestu 
+\section{Časovna koherenca}\index{Koherenca!{časovna}}
+Časovna koherenca povezuje valovanje na istem mestu 
 ob dveh različnih časih. Za opis se omejimo na monokromatsko elektromagnetno 
-valovanje v skalarnem približku. Na mestu $\mathbf{r}$ ob časih $t$ in $t+\tau$ valovanje
-zapišemo kot:
-\beq
+valovanje v skalarnem približku. Na mestu $\mathbf{r}$ ob časih $t$ in $t+\tau$ jakost
+električnega polja zapišemo kot:
+\begin{equation}
 E(\mathbf{r}, t) = E_0 e^{-i\omega t} e^{i\phi(\mathbf{r}, t)}
 \qquad \mathrm{in} \qquad
 E(\mathbf{r}, t+\tau) = E_0 e^{-i\omega (t+\tau)} e^{i\phi(\mathbf{r}, t+\tau)}.
 \label{eq:08_03}
-\eeq
+\end{equation}
 Glede na povezavo med $\phi(\mathbf{r}, t)$ in $\phi(\mathbf{r}, t+\tau)$ 
 ločimo tri vrste valovanj:
 \begin{itemize}
- \item popolnoma koherentno valovanje, za katerega velja: $\phi(\mathbf{r}, t+\tau) = 
+ \item popolnoma koherentno valovanje,\index{Koherenca!{popolna}} 
+ za katerega velja: $\phi(\mathbf{r}, t+\tau) = 
  f(\mathbf{r}, \tau, \phi(\mathbf{r}, t))$ za vsak $\tau$. 
  Če poznamo fazo valovanja ob nekem času, jo poznamo tudi ob vsakem drugem času.
- \item delno koherentno, za katerega velja:
+ \item delno koherentno, za katerega velja:\index{Koherenca!{delna}}
 \begin{equation}
 \phi(\mathbf{r}, t)=\begin{cases}
 f(\mathbf{r}, \tau, \phi(\mathbf{r}, t)); \quad \tau < \tau_c\\
@@ -54,26 +55,28 @@ f(\mathbf{r}, \tau, \phi(\mathbf{r}, t)); \quad \tau < \tau_c\\
 \end{cases}
 \label{eq:08_04}
 \end{equation}
-Do časa $\tau_c$, ki ga imenujemo koherenčni čas, fazo valovanja 
+Do časa $\tau_c$, ki ga imenujemo koherenčni čas, fazo valovanja\index{Koherenčni čas}
 poznamo, pri daljših časih pa ni povezave med fazo valovanja. Večina
 realnih optičnih sistemov je delno koherentnih.
- \item nekoherentno valovanje, za katerega velja, da
+ \item nekoherentno valovanje, za katerega velja, da\index{Nekoherentno valovanje}
  sta $\phi(\mathbf{r}, t)$ in $\phi(\mathbf{r}, t+\tau)$
  povsem nepovezana in naključna za vse vrednosti $\tau$.
 \end{itemize}
+
 \begin{example}{\bf Plinska svetilka.}
 Vzemimo za primer plinsko razelektritveno cev (neonsko svetilko) in 
 opazujmo svetlobo, ki jo svetilka oddaja. Z uporabo barvnega 
 filtra se omejimo na opazovanje ene same frekvence oziroma 
 ene same spektralne komponente. Izsevana svetloba je sestavljena iz
-sevalnih prispevkov vseh atomov, ki iz vzbujenega stanja prehajajo v 
+prispevkov vseh atomov, ki iz vzbujenega stanja prehajajo v 
 nižja energijska stanja s sevanjem. V času, ki je kratek v primerjavi 
 z značilnim časom med trki atomov, imajo vsa izsevana delna valovanja 
 neko določeno fazo. Ob trku dveh atomov se ta faza naključno spremeni. 
-Izkaže se, da je tipični čas med med trki atomov v razelektritveni cevi 
+Izkaže se, da je tipični čas med trki atomov v razelektritveni cevi 
 navadno le nekaj nihajnih period vidne svetlobe in shematski prikaz
 izsevanega električnega polja je prikazan na sliki~\ref{fig:08_neon}.
 \begin{figure}[h!]
+%\vglue-2truemm
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/08_neon.pdf_tex}
@@ -81,19 +84,21 @@ izsevanega električnega polja je prikazan na sliki~\ref{fig:08_neon}.
 čas ocenimo kot povprečni čas med posameznimi trki.
 }
 \label{fig:08_neon}
-\vglue-9truemm
+\vglue-8truemm
 \end{figure}
 
 \end{example}
 
-Časovno koherenco elektromagnetnega valovanja analiziramo z 
+Časovno koherenco elektromagnetnega valovanja analiziramo 
+z\index{Interferometer!{Michelsonov}}\index{Michelsonov interferometer}
 Michelsonovim interferometrom (glej razdelek~\ref{chap:Michelson}). 
 Spomnimo se, da Michelsonov interferometer vpadni snop 
 svetlobe razdeli na dva snopa, ki se nato odbijeta od zrcal in pred 
-vpadom na detektor ponovno združita. Če v postavitev dodamo kolimator, 
+vpadom na detektor ponovno združita. Če v postavitev dodamo kolimator,\index{Kolimacija} 
 ki iz izvorne svetlobe naredi širok vzporeden snop, dobimo tako imenovano
-Twyman-Greenovo postavitev (slika~\ref{fig:08_Twyman}).
-\begin{figure}[h]
+Twyman-Greenovo postavitev (slika~\ref{fig:08_Twyman}).\index{Interferometer!{Twyman-Greenov}}
+\index{Twyman-Grenov interferometer}
+\begin{figure}[ht]
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/08_TwymanGreen.pdf_tex}
@@ -102,115 +107,116 @@ je v kolimatorju, ki vpadno svetlobo (levo) razširi v širok snop. Snop s
 polprepustnim zrcalom razdelimo
 na dva delna snopa, ki se odbijeta od zrcal, nato pa s premikanjem enega
 od zrcal ustvarjamo časovni zamik med njima. Z opazovanjem 
-interferenčnega vzorca svetlobe, zbrane na detektorju, določimo
-koherenčni čas svetlobe.
+interferenčnega vzorca svetlobe, zbrane na detektorju, določimo njen
+koherenčni čas.
 }
 \label{fig:08_Twyman}
-\vglue-3truemm
+%\vglue-3truemm
 \end{figure}
 
 Vpadni snop svetlobe razdelimo na dve delni valovanji, ki po odbojih na 
 zrcalih interferirata na mestu detekcije. Čeprav izvirata iz istega 
 izvora, sta delni valovanji zaradi različno dolgih poti med seboj zakasnjeni. 
 Časovna zakasnitev je enaka:
-\beq
+\begin{equation}
 \tau = \frac{2 x}{c_0},
 \label{eq:08_05}
-\eeq
-pri čemer je $x$ pomik zrcala in $2x$ razlika v dolžini poti med prvo in drugo 
+\end{equation}
+pri čemer sta $x$ pomik zrcala in $2x$ razlika v dolžini poti med prvo in drugo 
 vejo interferometra. 
 
 Jakost
 električnega polja na detektorju zapišemo kot vsoto dveh delnih valovanj:
-\beq
+\begin{equation}
 E_d = E(t) + E(t+\tau).
 \label{eq:08_06}
-\eeq
-Gostota svetlobnega toka  je sorazmerna kvadratu jakosti:
-\beq
+\end{equation}
+Izmerjena gostota svetlobnega toka je sorazmerna kvadratu jakosti:
+\begin{equation}
 j_d \propto |E(t) + E(t+\tau)|^2 = \left(E(t) + E(t+\tau)\right) 
 \left(E^*(t) + E^*(t+\tau)\right)\!,
 \label{eq:08_07}
-\eeq
+\end{equation}
 od koder sledi:
-\beq
+\begin{equation}
 j_d \propto |E(t)|^2 + |E(t+\tau)|^2 + E(t)E^*(t+\tau) + E^*(t)E(t+\tau).
 \label{eq:08_08}
-\eeq
+\end{equation}
 Z detektorjem zajemamo signal v časovnem intervalu $T$, ki je bistveno 
 daljši od nihajnega časa svetlobe. Zato na detektorju zaznamo povprečen signal:
-\beq
+\begin{equation}
 \langle j_d \rangle \propto \frac{1}{T}\int_{-T/2}^{T/2} 
 \left(|E(t)|^2 + |E(t+\tau)|^2 + 2 \Re \left( E(t)E^*(t+\tau)\right) \right) dt.
 \label{eq:08_09}
-\eeq
+\end{equation}
 Kadar sta amplitudi delnih žarkov enaki, velja:
-\beq
+\begin{equation}
 \langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 2\frac{1}{T}\int_{-T/2}^{T/2} 
 \Re \left( E(t)E^*(t+\tau)\right) dt.
 \label{eq:08_10}
-\eeq
+\end{equation}
 Vpeljemo časovno avtokorelacijsko funkcijo periodičnega polja za dolge čase zajemanja:
+\index{Časovna avtokorelacijska funkcija!{za periodični signal}}
 \boxeq{eq:G1}{
 G^{(1)}(\tau)= \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2}E(t)E^*(t+\tau)dt
 }
 in signal na detektorju zapišemo kot:
-\beq
+\begin{equation}
 \langle j_d \rangle \propto 2\langle |E(t)|^2 \rangle + 
 2\Re \left( G^{(1)}(\tau)\right)\!\!.
 \label{eq:08_11}
-\eeq
+\end{equation}
 Zapisana avtokorelacijska funkcija podaja korelacijo valovanja samega s seboj pri
 dani časovni zakasnitvi $\tau$. Poglejmo nekaj primerov.
 
 \begin{example}{\bf Avtokorelacija sinusnega valovanja.}
 Obravnavajmo ravno sinusno elektromagnetno valovanje pri točno določeni frekvenci. 
 Zapišemo ga v obliki:
-\beq
+\begin{equation}
 E(t) = E_0 e^{-i\omega_0 t} \qquad \mathrm{in} \qquad E(t+\tau)= E_0 e^{-i\omega_0(t+\tau)},
 \label{eq:08_12}
-\eeq
+\end{equation}
 pri čemer je $E_0$ realno število. Potem je časovna avtokorelacijska 
 funkcija (enačba~\ref{eq:G1}) enaka:
-\beq
+\begin{equation}
 G^{(1)}(\tau) = \lim_{T\to \infty}~\frac{1}{T}
 \int_{-T/2}^{T/2}E_0 e^{-i\omega_0 t}E_0^*e^{i\omega_0 t}e^{i\omega_0\tau} dt.
 \label{eq:08_13}
-\eeq
+\end{equation}
 Sledi:
-\beq
+\begin{equation}
 G^{(1)}(\tau) = E_0^2 e^{i\omega_0 \tau} 
 \lim_{T\to \infty}~\frac{1}{T}\int_{-T/2}^{T/2} dt= E_0^2 e^{i\omega_0 \tau}.
 \label{eq:08_14}
-\eeq
+\end{equation}
 Če se omejimo zgolj na realni del, velja:
-\beq
-G^{(1)}(\tau) = E_0^2 \cos(\omega_0 \tau).
+\begin{equation}
+\Re \left( G^{(1)}(\tau)\right) = E_0^2 \cos(\omega_0 \tau).
 \label{eq:08_14a}
-\eeq
+\end{equation}
 Gostota svetlobnega toka na detektorju je potem enaka (enačba~\ref{eq:08_11}):
-\beq
+\begin{equation}
 \langle j_d \rangle \propto  
 2E_0^2 + 2 E_0^2 \cos(\omega_0 \tau).
 \label{eq:08_15}
-\eeq
+\end{equation}
 Vpeljemo $j_0$ kot gostoto energijskega toka posameznega delnega valovanja 
 in izmerjeno  gostoto toka na detektorju preoblikujemo v:
-\beq
+\begin{equation}
 \langle j_d \rangle  = 4j_0 \cos^2\frac{\omega_0 \tau}{2}.
 \label{eq:08_15a}
-\eeq
+\end{equation}
 Signal na detektorju je prikazan na sliki~\ref{fig:08_sinkoh}\,a.
 Z uporabo enačbe~(\ref{eq:08_05}) preoblikujemo še argument funkcije:
-\beq
+\begin{equation}
 \frac{\omega_0 \tau}{2} = \omega_0 \frac{x}{c_0} = k x = \frac{\Delta \phi}{2}.
 \label{eq:08_17}
-\eeq
+\end{equation}
 Dobimo izraz:
-\beq
+\begin{equation}
 \langle j_d \rangle  = 4j_0 \cos^2 (\Delta \phi/2).
 \label{eq:08_15c}
-\eeq
+\end{equation}
 ki ga že poznamo iz poglavja o interferenci (enačba~\ref{eq:06_09}). 
 
 Zapisani rezultat velja samo v primeru povsem koherentnega monokromatskega 
@@ -223,19 +229,20 @@ Pri zelo velikih vrednostih $x$ imata delna žarka naključni fazi,
 kar pomeni, da $\Delta \phi$ zavzema naključne vrednosti med $0$ in $2\pi$. 
 Posledično je povprečje $\langle \cos \Delta \phi \rangle= 0$
 in za velike vrednosti $\tau$ velja:
-\beq
+\begin{equation}
 \langle j_d \rangle = 2 j_0.
 \label{eq:08_18}
-\eeq
-\begin{figure}[h]
+\end{equation}
+\begin{figure}[ht]
 \vglue-3truemm
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/08_sinkoh.pdf_tex}
 \caption{Signal na detektorju Michelsonovega interferometra v odvisnosti od premika zrcala $x$
-v primeru koherentnega monokromatskega sinusnega valovanja (a). Kadar je dolžina valovanja
+za koherentnego monokromatsko sinusno valovanje (a). Kadar je dolžina valovanja
 končna in valovanje ni povsem monokromatsko, kontrast signala pri večjih $x$ oslabi.
-Karakteristična razdalja, na kateri kontrast signala oslabi, je koherenčna dolžina $L_c = c \tau_c$.
+Karakteristična razdalja, na kateri kontrast signala oslabi, 
+\index{Koherenčna dolžina} je koherenčna dolžina $L_c = c \tau_c$.
 }
 \label{fig:08_sinkoh}
 \vglue-7truemm
@@ -244,50 +251,54 @@ Karakteristična razdalja, na kateri kontrast signala oslabi, je koherenčna dol
 \end{example} 
 
 \begin{example}{\bf Avtokorelacija dušenega valovanja.}
-Izračunajmo avtokorelacijsko funkcijo eksponentno pojemajočega polja, ki ga zapišemo
+\index{Časovna avtokorelacijska funkcija!{za neperiodični signal}}
+Izračunajmo avtokorelacijsko funkcijo eks\-po\-nen\-tno pojemajočega polja, ki ga zapišemo
 v obliki:
-\beq
+\begin{equation}
 E(t) = E_0 e^{-t/\tau_0}e^{-i\omega_0 t}.
 \label{eq:08_101}
-\eeq
+\end{equation}
 Za razliko od prejšnjega primera, pri katerem je bil signal periodična funkcija in njegovo 
 trajanje bistveno daljše od časa merjenja $T$, moramo za neperiodične funkcije avtokorelacijsko
 funkcijo vpeljati drugače. Zapišemo:
 \boxeq{eq:G12}{
 \tilde{G}^{(1)}(\tau)= \int_{-\infty}^{\infty}E(t)E^*(t+\tau)dt.
 }
-Pri periodičnih funkcijah je namreč smiselno govoriti o povprečni vrednosti, pri neperiodičnih, 
-kot sta na primer eksponentno pojemajoča funkcija ali kratek sunek Gaussove oblike, pa ne. 
+Pri periodičnih funkcijah je namreč smiselno govoriti o povprečni vrednosti na danem intervalu, 
+pri neperiodičnih, kot sta eksponentno pojemajoča funkcija ali kratek 
+sunek Gaussove oblike, pa ne. 
 Ustrezno postavimo tudi meje integracije, pri Gaussovem sunku, na primer, od $-\infty$ do $\infty$, 
 pri eksponentno pojemajoči funkciji pa od $0$ do $\infty$. Avtokorelacijska 
-funkcija polja (enačba~\ref{eq:08_101}) je potem:
-\beq
+funkcija polja eksponentno pojemajočega polja (enačba~\ref{eq:08_101}) je potem:
+\begin{equation}
 \tilde{G}^{(1)}(\tau)= \int_{0}^{\infty}E_0^2 e^{-t/\tau_0}e^{-i\omega_0 t}
 e^{-(t+\tau)/\tau_0}e^{i\omega_0 (t+\tau)} dt = E_0^2 e^{i\omega_0 \tau}e^{-\tau/\tau_0} 
 \int_{0}^{\infty} e^{-2t/\tau_0}dt.
 \label{eq:08_103}
-\eeq
+\end{equation}
 Sledi:
-\beq
+\begin{equation}
 \tilde{G}^{(1)}(\tau)= E_0^2 \frac{\tau_0}{2}e^{-\tau/\tau_0}e^{i\omega_0 \tau}.
 \label{eq:08_104}
-\eeq
+\end{equation}
 Avtokorelacijska funkcija eksponentno pojemajočega polja je eksponentno pojemajoča funkcija.
 Podobno kratek račun pokaže, da je avtokorelacijska funkcija sunka svetlobe Gaussove oblike 
 prav tako Gaussova funkcija. 
 \end{example}
 
-Namesto koherenčnega časa $\tau_c$ lahko vpeljemo koherenčno dolžino 
+Namesto koherenčnega časa $\tau_c$ pogosto vpeljemo koherenčno dolžino\index{Koherenčna dolžina}
 $L_c = c_0 \tau_c$, ki označuje pot, ki jo svetloba prepotuje 
-v koherenčnem času. Časovno koherenco zato imenujemo tudi 
-longitudinalna ali vzdolžna koherenca, saj opazujemo zamik valovanja, ki se
-premakne vzdolžno glede na smer širjenja svetlobe. Valovanje, ki je 
+v koherenčnem času. Časovno koherenco zato imenujemo tudi
+\index{Koherenca!{longitudinalna}|see{časovna}}
+\index{Koherenca!{vzdolžna}|see{časovna}}
+longitudinalna ali vzdolžna koherenca, saj opazujemo zamik valovanja
+vzdolžno glede na smer širjenja svetlobe. Valovanje, ki je 
 koherentno za $\tau < \tau_c$, je tako pri opisanem eksperimentu 
 koherentno za spremembe dolžine poti, za katere velja $L < L_c$. Pri 
 večjih razlikah v dolžini poti se koherenca zmanjša in kontrast
-interferenčne slike izgubi. 
+interferenčne slike se izgubi. 
 
-\section{Wiener-Hinčinov izrek}
+\section{Wiener-Hinčinov izrek}\index{Wiender-Hinčinov izrek}
 Michelsonov interferometer lahko uporabimo za meritve emisijskih spektrov svetil
 ali absorpcijskih spektrov snovi. Takrat svetloba, ki vpada na interferometer,
 ni monokromatska, ampak je sestavljena iz valovanj z različnimi valovnimi dolžinami.
@@ -297,153 +308,154 @@ spekter vpadne svetlobe izračunamo kot Fourierevo transformiranko posnetega int
 Najprej razstavimo periodično vpadno električno polje na posamična valovanja z diskretnim
 Fourierevim razvojem. Pri tem upoštevamo, da polje analiziramo in zaznavamo le v nekem končnem
 časovnem intervalu $T$. Fourierev razvoj je potem:
-\beq
+\begin{equation}
 E(t) = \sum_n A_n e^{-i n \Delta\omega t},
 \label{eq:08_19}
-\eeq
+\end{equation}
 pri čemer je širina intervala $\Delta\omega = 2\pi/T$, $n$ pa je celo število. Koeficienti
 razvoja $A_n$ označujejo delež polja pri krožni frekvenci $n\Delta \omega$. 
 V nadaljevanju bomo krožno frekvenco posamezne komponente pisali kot 
 $\omega_n$:
-\beq
+\begin{equation}
 \omega_n = n \Delta \omega = n \frac{2\pi}{T}.
 \label{eq:08_20}
-\eeq
+\end{equation}
 Razstavimo še polje zakasnjenega delnega valovanja oziroma njegove kompleksno konjugirane vrednosti:
-\beq
+\begin{equation}
 E^*(t+\tau) = \sum_m A_m^* e^{i\omega_m (t + \tau)},
 \label{eq:08_21}
-\eeq
+\end{equation}
 kjer je $m$ celo število. Signal na detektorju je sorazmeren z avtokorelacijsko funkcijo
 polja, zato razstavljeni polji vstavimo v definicijo avtokorelacijske funkcije (enačba~\ref{eq:G1}):
-\beq
+\begin{equation}
 G^{(1)}(\tau) = \lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2} \sum_{n,m} A_n A_m^* e^{-i\omega_n t}
 e^{i\omega_m (t+\tau)} dt.
 \label{eq:08_22}
-\eeq
-Sledi:
-\beq
+\end{equation}
+Zamenjamo vrstni red integracije in seštevanja:
+\begin{equation}
 G^{(1)}(\tau) = 
 \sum_{n,m} A_n A_m^*e^{i\omega_m\tau} \left(
 \lim_{T\to\infty} \frac{1}{T} \int_{-T/2}^{T/2}e^{i(\omega_m - \omega_n)t}dt \right)\!\!.
 \label{eq:08_23}
-\eeq
+\end{equation}
 Privzamemo, da je čas meritve razmeroma dolg ($T\to\infty$) in izraz v oklepaju zapišemo kot funkcijo
 $\delta(\omega_n - \omega_m)$. Dobimo:
-\beq
+\begin{equation}
 G^{(1)}(\tau) = \sum_m|A_m|^2e^{i\omega_m\tau}.
 \label{eq:08_24}
-\eeq 
+\end{equation} 
 Izračunajmo Fourierevo transformiranko avtokorelacijske funkcije:
-\beq
+\begin{equation}
 \frac{1}{2\pi}\int_{-\infty}^{\infty} G^{(1)} (\tau) e^{-i\omega \tau} d\tau = 
 \frac{1}{2\pi}\sum_m |A_m|^2 \int_{-\infty}^{\infty} e^{i\omega_m\tau}e^{-i\omega \tau} d\tau = 
 \frac{T}{2\pi}|A (\omega)|^2.
 \label{eq:08_25}
-\eeq
+\end{equation}
 V zadnjem koraku smo upoštevali enačbo~(\ref{eq:08_20}) in integral zapisali kot 
 $T \delta (2\pi m  - \omega T)$, od koder sledi pogoj $\omega_m = \omega$. 
 Spomnimo se, kaj opisujejo parametri $A(\omega)$: to so deleži električnega polja pri 
 dani frekvenci $\omega$, kvadrat $|A(\omega)|^2$ pa je enak intenziteti svetlobe pri tej
 frekvenci.
 
-Vpeljemo spekter svetlobe $S(\omega)$ kot intenziteto svetlobe pri $\omega$ na frekvenčni 
+Vpeljemo spekter svetlobe $S(\omega)$\index{Spekter} kot intenziteto svetlobe pri $\omega$ na frekvenčni 
 interval $\Delta \omega$:
-\beq
+\begin{equation}
 S(\omega) = \frac{|A(\omega)|^2}{\Delta \omega} = \frac{T}{2\pi}|A(\omega)|^2.
 \label{eq:08_26}
-\eeq
+\end{equation}
 
 Primerjava enačb~(\ref{eq:08_25}) in (\ref{eq:08_26}) pokaže, da je spekter svetlobe enak 
-Fourierevi transformiranki avtokorelacijske funkcije svetlobnega električnega polja:
+Fourierevi transformiranki avtokorelacijske funkcije svetlobnega električnega 
+polja:\index{Wiender-Hinčinov izrek}
 \boxeq{eq:WH}{
 S(\omega) = \frac{1}{2\pi}\int_{-\infty}^{\infty} G^{(1)} (\tau) e^{-i\omega \tau} d\tau.
 }
 Zapisano zvezo imenujemo Wiener-Hinčinov izrek po ameriškem matematiku Norbertu
-Wienerju (1894--1964) in ruskemu matematiku Aleksandru Jakovljeviču Hinčinu (1894--1959).
+Wienerju (1894--1964) in ruskemu matematiku Aleksandru Jakovljeviču Hinčinu
+(1894--1959).\index{Wiener, Norbert}\index{Hinčin, Aleksander Jakovljevič}
 
 Z Michelsonovim interferometrom lahko z uporabo Wiener-Hinčinovega izreka izmerimo
 spekter svetlobe. Pri tem je pomembno, da signal na detektorju merimo oziroma
 povprečimo čim dlje. Predvsem mora veljati $T \gg \tau_c$, sicer sploh ne bi zaznali 
-preskoka faze, temveč bi izmerili navidez povsem koherentno svetlobo. 
-
-Poleg tega smo pri računu privzeli, da poznamo avtokorelacijsko funkcij $G^{(1)}(\tau)$ 
+preskoka faze, temveč bi izmerili navidez povsem koherentno svetlobo. Privzeli smo tudi,
+da poznamo avtokorelacijsko funkcijo $G^{(1)}(\tau)$ 
 za vse vrednosti $\tau$, to je za vse premike zrcala $x$. Tega seveda eksperimentalno
 ne moremo narediti, vendar navadno velja, da so vrednosti
 avtokorelacijske funkcije znatno večje od 0 le za $\tau <\tau_c$, izven merilnega
 območja pa so tako majhne, da na rezultat ne vplivajo.
 
-\begin{example}{\bf Spekter ravnega valovanja.}
+\begin{example}{\bf Spekter ravnega valovanja.}\index{Spekter!{ravnega valovanja}}
 Za primer si oglejmo spekter povsem koherentnega ravnega valovanja, ki ga zapišemo
 kot:
-\beq
+\begin{equation}
 E(t) = E_0 e^{-i\omega_0 t}.
 \label{eq:08_27}
-\eeq
+\end{equation}
 Avtokorelacijsko funkcijo takega valovanja smo že izračunali (enačba~\ref{eq:08_14}), zdaj
-pa izračunajmo še spekter kot Fourierevo transformacijo avtokorelacijske funkcije:
-\beq
+pa izračunajmo še spekter kot Fourierevo transformiranko avtokorelacijske funkcije:
+\begin{equation}
 S(\omega) = \frac{1}{2\pi}\int_{-\infty}^{\infty} E_0^2 e^{i\omega_0 \tau} e^{-i\omega \tau} d\tau,
 \label{eq:08_201}
-\eeq
+\end{equation}
 od koder sledi:
-\beq
+\begin{equation}
 S(\omega) \propto \delta (\omega - \omega_0).
 \label{eq:08_202}
-\eeq
+\end{equation}
 Po pričakovanju je spekter ravnega valovanja neskončno ozek (funkcija delta) pri krožni
 frekvenci valovanja $\omega_0$ (slika~\ref{fig:08_spekter}\,a in b).
 \end{example}
 
-\begin{example}{\bf Spekter omejenega ravnega valovanja.}
+\begin{example}{\bf Spekter omejenega ravnega valovanja.}\index{Spekter!{omejenega ravnega valovanja}}
 Poglejmo še bolj realistični primer, v katerem je valovanje časovno omejeno. Naj bo 
 valovanje enako ravnemu valovanju zgolj v intervalu dolžine $\tau_0$, sicer naj bo jakost
 električnega polja enaka nič (slika~\ref{fig:08_spekter}\,c).
 Ker gre za neperiodični signal, zapišemo avtokorelacijsko
-funkcijo z enačbo~(\ref{eq:G12}), nato pa izračunamo njeno Fourierevo transformacijo.
+funkcijo z enačbo~(\ref{eq:G12}), nato pa izračunamo njeno Fourierevo transformiranko.
 Ker je avtokorelacijska funkcija polja konvolucija funkcije same s seboj, 
 je Fouriereva transformiranka avtokorelacijske funkcije enaka kvadratu Fouriereve transformiranke
 polja. Za izračun spektra moramo tako samo izračunati Fourierevo transformiranko signala:
-\beq
+\begin{equation}
 S(\omega) = |F\{E(t)\}|^2,
 \label{eq:08_203}
-\eeq
+\end{equation}
 pri čemer $F\{f\}$ označuje Fourierevo transformiranko funkcije $f$. Omenimo še, da je spekter
 za časovno omejene signale definiran drugače kot za periodične signale. Pri periodičnih računamo
-svetlobno moč na enoto frekvenčnega intervala, pri neperiodičnih pa energijo. 
+svetlobno moč na enoto frekvenčnega intervala, pri neperiodičnih pa energijo.\index{Spekter!{neperiodičnega signala}}
 
 Izračunati moramo torej Fourierevo transformiranko signala, ki je znotraj intervala $\tau_0$ 
 enak ravnemu valovanju, sicer je enak nič:
-\beq
+\begin{equation}
 F\{E(t)\} = \frac{1}{2\pi}\int_{-\tau_0/2}^{\tau_0/2} \cos(\omega_0 t) e^{-i\omega t} dt=
 \frac{1}{2\pi}\int_{-\tau_0/2}^{\tau_0/2} \left(e^{i\omega_0 t}+ e^{-i\omega_0 t}\right)  e^{-i\omega t} dt.
 \label{eq:08_204}
-\eeq
+\end{equation}
 Integrala izračunamo in dobimo:
-\beq
+\begin{equation}
 F\{E(t)\} = \frac{1}{2\pi}\frac{\tau_0}{2}\left(\mathrm{sinc} \left((\omega-\omega_0)\frac{\tau_0}{2} \right)+
 \mathrm{sinc} \left((\omega+\omega_0)\frac{\tau_0}{2} \right) \right),
 \label{eq:08_205}
-\eeq
+\end{equation}
 pri čemer smo za zapis uporabili funkcijo $\mathrm{sinc}(x) = \sin(x)/x$. Kadar je dolžina sunka 
 velika v primerjavi s periodo valovanja v sunku ($\omega_0\tau_0 \gg1$), 
 se funkciji $\mathrm{sinc}$ pri $\pm\omega_0$ ne 
 prekrivata. Takrat za spekter pri pozitivnih frekvencah velja:
-\beq
+\begin{equation}
 S(\omega) \propto \mathrm{sinc}^2\left(\left(\omega - \omega_0\right)\frac{\tau_0}{2}\right).
 \label{eq:08_206}
-\eeq
+\end{equation}
 Spekter je prikazan na sliki~\ref{fig:08_spekter}\,d. Ničli okoli osrednjega vrha 
 spektra sta pri $\omega_0 \pm 2\pi/\tau_0$, zato širino spektra ocenimo
 na $\Delta \omega = 2\pi/\tau_0$. Z naraščajočim $\tau_0$ se spekter oži in v limiti 
 neskončno dolgega trajanja sunka po pričakovanju
 preide v funkcijo delta pri frekvenci $\omega_0$. 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/08_spekter.pdf_tex}
 \caption{Neomejenemu ravnemu valovanju (a) pripada spekter v obliki funkcije delta (b). Kadar je 
-sunek valovanja končnen (c), se spekter razširi (d).
+sunek valovanja končen (c), se spekter razširi (d).
 }
 \label{fig:08_spekter}
 \vglue-4truemm
@@ -453,7 +465,7 @@ sunek valovanja končnen (c), se spekter razširi (d).
 
 Na primeru smo spoznali, da je spekter povsem koherentne monokromatske svetlobe funkcija delta, 
 za časovno omejene sunke pa je širina spektra obratno sorazmerna z dolžino trajanja sunka. Na splošno
-velja:
+velja:\index{Spekter!{širina}}
 \boxeq{eq:spkor}{
 \Delta \omega \tau_c \gtrsim 2\pi.
 }
@@ -464,17 +476,19 @@ izvajamo interferenčne poskuse, saj znaša koherenčna dolžina le okoli dve va
 Po drugi strani z laserji s spektralno širino $\Delta \omega \sim 10~\si{kHz}$ 
 dosegamo koherenčne dolžine več $100~\si{km}$. 
 
-\section{Prostorska koherenca}
+\section{Prostorska koherenca}\index{Koherenca!{prostorska}}
 V prejšnjem razdelku smo spoznali časovno koherenco, ki opisuje povezavo
-med fazo valovanja ob različnih časih. Ker časovni zamik ustreza premiku valovanja
+med fazo valovanja ob različnih časih. 
+Ker časovni zamik ustreza premiku valovanja
 vzdolž smeri širjenja svetlobe, časovno koherenco imenujemo tudi vzdolžna koherenca. Opazujemo
 jo prek interference z delitvijo amplitude, na primer z Michelsonovim interferometrom. 
 
 Zdaj se osredotočimo na prostorsko koherenco, ki opisuje povezavo med fazo valovanja
-na različnih krajih. Ker se faza spreminja predvsem v prečni smeri, prostorsko
+na različnih krajih.\index{Koherenca!{prečna}|see{prostorska}}\index{Koherenca!{transverzalna}|see{prostorska}}
+Ker se faza spreminja predvsem v prečni smeri, prostorsko
 koherenco imenujemo tudi prečna ali transverzalna koherenca. 
 Pomembna je pri interferenčnih pojavih z delitvijo valovne fronte. 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/08_kohprimer.pdf_tex}
@@ -487,65 +501,77 @@ niti časovno niti prostorsko koherentno valovanje (d).
 \end{figure}
 
 Pri prostorski koherenci nas zanima faza valovanja na dveh različnih krajih $\mathbf{r}_1$ 
-in $\mathbf{r}_2$ ob času $t$. Kadar sta fazi valovanja na obeh krajih povezani in velja:
-\beq
+in $\mathbf{r}_2$ ob času $t$. Kadar sta fazi valovanja na obeh krajih povezani in velja:\index{Faza valovanja}
+\begin{equation}
 \phi(\mathbf{r}, t) =  f(\mathbf{r}_2-\mathbf{r}_1, t, \phi(\mathbf{r}_1, t)),
 \label{eq:08_28}
-\eeq
-pravimo, da sta točki $\mathbf{r}_1$ in $\mathbf{r}_2$ na isti koherenčni ploskvi. Če pa
-fazi $\phi(\mathbf{r}_1, t)$ in $\phi(\mathbf{r}_2, t)$ med seboj nista povezani, ležita
+\end{equation}
+pravimo, da sta točki $\mathbf{r}_1$ in $\mathbf{r}_2$ na isti koherenčni ploskvi.\index{Koherenčna ploskev}
+Če fazi $\phi(\mathbf{r}_1, t)$ in $\phi(\mathbf{r}_2, t)$ med seboj nista povezani, ležita
 na različnih koherenčnih ploskvah. 
 
-Prostorsko koherenco analiziramo z Youngovim eksperimentom (glej poglavje~\ref{chap:Young}),
-pri katerem svetlobo usmerimo na objektni zaslon z dvema majhnima odprtinama in opazujemo 
-interferenčno sliko na oddaljenem zaslonu. Svetilo, s katerega vpada svetloba na odprtini,
+Prostorsko koherenco analiziramo z Youngovim poskusom (glej poglavje~\ref{chap:Young}),\index{Youngov poskus}
+pri katerem svetlobo usmerimo na objektni zaslon\index{Objektni zaslon} z dvema majhnima odprtinama in opazujemo 
+interferenčno sliko na oddaljenem zaslonu.\index{Opazovalni zaslon} Svetilo, s katerega vpada svetloba na odprtini,
 naj bo razsežno. Ko sta odprtini v objektnem zaslonu zelo blizu skupaj, na oddaljenem zaslonu 
-nastane značilna interferenčna slika. S povečevanjem razmika med odprtinama se kontrast 
+nastane značilna interferenčna slika. Z večanjem razmika med odprtinama se kontrast 
 interference na zaslonu zmanjšuje. Ko popolnoma zbledi, je razmik med odprtinama enak 
-prečni koherenčni razdalji vpadnega valovanja. 
+prečni koherenčni razdalji vpadnega valovanja.\index{Koherenčna razdalja}
 Zaradi preprostosti se omejimo na ravninski primer in odprtini obravnavajmo kot ozki reži.
 Označimo velikost svetila z $L$, razmik med režama z $D$, oddaljenost med 
 svetilom in objektnim zaslonom pa naj bo $z_0'$. Svetloba po prehodu skozi reži 
-vpade na opazovalni zaslon na oddaljenosti $z_0$ od objektnega zaslona (slika~\ref{fig:08_kohprost}).
-\begin{figure}[h]
+vpada na opazovalni zaslon na oddaljenosti $z_0$ od objektnega zaslona (slika~\ref{fig:08_kohprost}). 
+Privzamemo, da velja $D \ll z_0, z_0'$.
+\begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/08_kohprost.pdf_tex}
-\caption{Z Youngovim poskusom analiziramo prečno koherenco svetila. S večanjem razmika med
-režama $D$ se kontrast interferenčne slika na opazovalnem zaslonu spreminja. Razmik med režama,
-pri katerem interferenčni vzorec izgine, določa prečno koherenčno razdaljo. Privzamemo, da 
-velja $D \ll z_0, z_0'$.
+\caption{Z Youngovim poskusom analiziramo prostorsko koherenco svetila. Z večanjem razmika med
+režama $D$ se kontrast interferenčne slike na opazovalnem zaslonu spreminja. Razmik med režama,
+pri katerem interferenčni vzorec izgine, določa prečno koherenčno razdaljo. 
 }
 \label{fig:08_kohprost}
-\vskip-4truemm
+\vskip-2truemm
 \end{figure}
 
-Žarki, ki izhajajo iz ene točke svetila, med seboj interferirajo, v primeru razsežnega svetila
-pa na zaslonu opazujemo superpozicijo interferenčnih vzorcev z različnih 
-delov svetila. Na opazovalnem zaslonu si izberemo točko, ki je simetrična glede na odprtini 
+Žarki, ki izhajajo iz ene točke svetila, po prehodu skozi reži 
+med seboj interferirajo. Kadar je svetilo razsežno, za vsako točko izvora
+nastane interferenčni vzorec in na zaslonu zaznamo 
+superpozicijo interferenčnih vzorcev z različnih 
+delov svetila. Na opazovalnem zaslonu si izberemo točko, ki je simetrična glede na reži 
 v objektnem zaslonu. Potem sta fazi žarkov, ki 
 izhajata s sredine svetila, enaki, medtem ko se fazi žarkov, ki izhajata z roba svetila, 
-razlikujeta za 
-\beq
+razlikujeta (slika~\ref{fig:08_kohprost}). Njuna fazna razlika je: 
+\begin{equation}
 \Delta \phi = k D \sin \beta \approx kD \frac{L}{2z_0'}.
 \label{eq:08_29}
-\eeq
+\end{equation}
 S spreminjanjem razmika med režama se fazni zamik med žarkoma z roba svetila povečuje. 
 Ko doseže $\pi$, je signal z roba svetila v protifazi signalu s sredine svetila in 
 interferenčna slika na zaslonu izgine. Zapišemo:
-\beq
+\begin{equation}
 \pi = \frac{2\pi}{\lambda}D_c\frac{L}{2z_0'},
 \label{eq:08_30}
-\eeq
+\end{equation}
 od koder sledi:
 \boxeq{eq:08_31}{
 D_c= \frac{z_0'\lambda}{L}.
 }
 Razdalja med režama $D_c$, pri kateri interferenčni vzorec izgine oziroma se signal izpovpreči, 
-določa transverzalno koherenčno razdaljo svetlobe, ki vpada na objektni zaslon. Parameter $D_c^2$
-je merilo za velikost koherenčne ploskve vpadne svetlobe. 
+določa transverzalno koherenčno razdaljo svetlobe, ki vpada na objektni 
+zaslon.\index{Koherenčna razdalja} Parameter $D_c^2$\index{Vidljivost}
+je merilo za velikost koherenčne ploskve vpadne svetlobe.\index{Koherenčna ploskev} 
+
+\begin{figure}[ht]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/08_VCZ_slika.pdf_tex}
+\caption{Primeri interferenčnih vzorcev, ki nastanejo pri prehodu skozi dve simetrični reži, svetilo
+pa je podolgovate oblike. Z naraščajočim razmikom (od a proti c) se kontrast interferenčnih prog zmanjšuje.
+Ko doseže razmik koherenčno razdaljo, kontrast povsem izgine.}
+\label{fig:08_VCZ_slika}
+\end{figure}
 \begin{remark}
-\vglue-6truemm
 Zapisali smo, da pri večanju razmika med režami fazni zamik med žarkoma, ki vpadata na zaslon skozi
 prvo in drugo režo, narašča. Zato bi pričakovali, da se pri faznem zamiku, ki je večji od $\pi$,
 kontrast povečuje. Vendar je bil račun narejen samo za dva žarka. Kadar upoštevamo prispevke
@@ -555,24 +581,24 @@ vseh delov svetila, se izkaže, da je kontrast za vse razmike, ki so večji od $
 
 Koherenčno razdaljo lahko zapišemo tudi kot funkcijo zornega kota $\alpha$, to je kota, pod 
 katerim opazujemo oddaljen predmet:
-\beq
+\begin{equation}
 D_c = \frac{\lambda}{\alpha}.
 \label{eq:08_32}
-\eeq
+\end{equation}
 Kadar je zorni kot zelo majhen, je koherenčna ploskev velika. Ta odvisnost se izraža na primer
 pri oddaljenih zvezdah. Zvezde so sicer velike in oddajajo nekoherentno svetlobo, vendar je 
 zaradi velike oddaljenosti in posledično majhnega zornega kota svetloba, ki vpada 
 na teleskope, prostorsko koherentna.
 
-\begin{example}{\bf Merjenje velikosti zvezd.}
+\begin{example}{\bf Merjenje velikosti zvezd.}\index{Youngov poskus}
 Z Youngovim poskusom lahko izmerimo velikost zvezde, če poznamo njeno oddaljenost. 
 Ker zvezde opazujemo pod zelo majhnim zornim kotom, je njihova koherenčna ploskev
 na Zemlji razmeroma velika. Zato namesto premičnih odprtin v zaslonu uporabimo dve 
 premični zrcali, ki vpadno svetlobo prek drugega para zrcal usmerita na zbiralno lečo.
 Na zaslonu opazujemo interferenco valovanj, ki vpadata pod malenkost različnima vpadnima kotoma
 (slika~\ref{fig:08_Stellar}). Z večanjem razmika med zrcaloma interferenčni kontrast izgine, kar
-omogoča določiti velikost zvezde.
-\begin{figure}[h]
+omogoča določiti velikost zvezde.\index{Michelsonov zvezdni interferometer}\index{Interferometer!{Michelsonov zvezdni}}
+\begin{figure}[ht]
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/08_Stellar.pdf_tex}
@@ -582,86 +608,88 @@ lahko določimo zorni kot zvezde.}
 \label{fig:08_Stellar}
 \end{figure}
 
-Z opisano postavitvijo sta leta 1920 Michelson in astronom Francis Gladheim Pease
+Z opisano postavitvijo sta leta 1920 Michelson\index{Michelson, Albert Abraham} 
+in astronom Francis Gladheim Pease\index{Pease, Francis Gladheim}
 prvič izmerila premer katerekoli zvezde. Opazovala sta interferenco svetlobe z 
 zvezde $\alpha$ v ozvezdju Orion (Betelgeza) in opazila, da pri razmiku zrcal, večjem
 od $D_c = 307~\si{cm}$, interferenčni kontrast izgine. Privzela sta, da je valovna dolžina
 svetlobe $575~\si{nm}$ in z upoštevanjem popravka za okrogel predmet (glej enačbo~\ref{eq:05_42}) 
 določila zorni kot:
-\beq
+\begin{equation}
 \alpha = 1,22 \frac{\lambda}{D_c} = 2,3 \times 10^{-7}~\si{\radian} = 0,047\si{\arcsec}.
 \label{eq:08_33}
-\eeq
-Z upoštevanjem oddaljenosti zvezde (podatek so pridobili iz paralakse) sta ocenila premer
+\end{equation}
+Na podlagi podatka o oddaljenosti zvezde (podatek so pridobili iz paralakse) sta ocenila premer
 na $390 \times 10^6~\si{km}$, kar ustreza približno $300~\times$ premeru Sonca. Poznejše 
 natančnejše meritve so pokazale, da je zvezda približno trikrat večja. Glavnina napake je 
 izvirala iz nenatančne ocene oddaljenosti zvezde. 
 \end{example}
 
-\section{Van Cittert-Zernikov izrek}
+\section{Van Cittert-Zernikov izrek}\index{Van Cittert-Zernikov izrek}
 Obravnavajmo prostorsko koherenco podrobneje. Pokazali bomo, da je kontrast interferenčnih prog
 na zaslonu sorazmeren z navzkrižno korelacijsko funkcijo jakosti električnega polja, podobno kot
-je pri časovni koherenci kontrast interferenčnih prog sorazmeren z avtokorelacijsko funkcijo polja
+je pri časovni koherenci kontrast\index{Vidljivost} interferenčnih prog sorazmeren z avtokorelacijsko funkcijo polja
 (enačba~\ref{eq:G12}). Nadalje velja, da je kontrast interferenčnih prog sorazmeren z 2D-Fourierevo
-transformiranko intenzitetne porazdelitve na oddaljenem izvoru. Čeprav je svetloba, ki jo oddaja
-svetilo, nekoherentna, stopnja njene koherence narašča z oddaljenostjo, zato je svetloba, ki vpada z zelo
-oddaljenih svetil (na primer zvezd), koherentna. Z inverzno transformiranko lahko iz izmerjenega
+transformiranko intenzitetne porazdelitve na oddaljenem izvoru. Z inverzno transformacijo lahko iz izmerjenega
 interferenčnega vzorca določimo intenzitetno porazdelitev svetila. To ugotovitev imenujemo
 Van Cittert-Zernikov izrek po nizozemskem fiziku Pietru Hendriku van Cittertu (1889-1959) 
-in nizozemskem fiziku in nobelovcu Fritsu Zerniku (1888--1966).
+in nizozemskem fiziku in nobelovcu Fritsu Zerniku (1888--1966).\index{van Cittert, Pieter Hendrik}
+\index{Zernike, Frits}
 
-Naj svetloba s svetila vpada na objektni zaslon, v katerem sta dve odprtini, na oddaljenem
-opazovalnem zaslonu pa opazujemo interferenčno sliko (slika~\ref{fig:08_VCZ}). Svetloba, ki vpada 
+Naj svetloba s svetila vpada na objektni zaslon,\index{Objektni zaslon} v katerem sta dve odprtini, 
+na oddaljenem opazovalnem zaslonu\index{Opazovalni zaslon} pa opazujemo interferenčno sliko 
+(slika~\ref{fig:08_VCZ}). Svetloba, ki vpada 
 na dano točko zaslona, je sestavljena iz prispevkov iz prve in druge odprtine. Privzamemo, 
 da je meritev dovolj dolga, da z detektorjem zaznavamo povprečni signal $\langle j_d \rangle$.
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/08_VCZ.pdf_tex}
 \caption{Svetloba iz nekoherentnega izvora vpada na objektni zaslon, v katerem sta dve odprtini.
-Na oddaljenem objektnem zaslonu opazujemo interferenčno sliko v odvisnosti od razmika med 
-odprtinami. Ko razmik doseže koherenčno razdaljo, kontrast interferenčnih prog izgine.}
+Na oddaljenem zaslonu opazujemo interferenčno sliko v odvisnosti od razmika med 
+odprtinama. Ko razmik doseže koherenčno razdaljo, kontrast interferenčnih prog izgine.}
 \label{fig:08_VCZ}
 \vskip-4truemm
 \end{figure}
 
 Povprečni signal na detektorju je sorazmeren kvadratu jakosti električnega polja, ki ga zapišemo
 kot vsoto prispevkov iz posameznih odprtin:
-\beq
+\begin{equation}
 \langle j_d \rangle \propto \langle|E_1(t)+ E_2(t+\tau)|^2 \rangle,
 \label{eq:08_34}
-\eeq
-pri čemer smo upoštevali časovni zamik $\tau$, ki nastane zaradi različno dolgih poti od
+\end{equation}
+pri čemer je  $\tau$ časovni zamik zaradi različno dolgih poti od
 odprtin do detektorja. Sledi:
-\beq
+\begin{equation}
 \langle j_d \rangle \propto \langle|E_1(t)|^2 \rangle + \langle|E_2(t+\tau)|^2 \rangle
 + 2\Re \left( \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt \right)\!\!.
 \label{eq:08_35}
-\eeq
-Pri tem prvi člen opisuje svetlobno polje iz prve reže, drugi člen svetlobo iz druge reže, 
+\end{equation}
+Prvi člen opisuje svetlobno polje iz prve reže, drugi člen svetlobo iz druge reže, 
 izraz v oklepaju tretjega člena pa predstavlja navzkrižno korelacijsko funkcijo polja ob dolgih
-časih meritve:
+časih meritve:\index{Navzkrižna korelacijska funkcija}
 \boxeq{eq:CC}{
 \Gamma_{12}(\tau) = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t+\tau) dt.
 }
 Kadar je svetloba iz 
 posamezne reže časovno koherentna, velja:
-\beq
+\begin{equation}
 E^*(t+\tau) = e^{i \omega \tau} E^*(t)
 \label{eq:08_36}
-\eeq
+\end{equation}
 in navzkrižno korelacijsko funkcijo zapišemo kot:
-\beq
+\begin{equation}
 \Gamma_{12}(\tau) = e^{i \omega \tau} \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t) dt =
  J_{12} e^{i \omega \tau}. 
  \label{eq:08_37}
-\eeq
+\end{equation}
 Člen $J_{12}$, ki je enak:
-\beq
+\begin{equation}
 J_{12} = \frac{1}{T}\int_{-T/2}^{T/2}E_1(t)E_2^*(t) dt,
 \label{eq:08_38}
-\eeq
-je odvisen od prostorske koherence valovanja in določa kontrast oziroma vidljivost interferenčne slike
+\end{equation}
+je odvisen od prostorske koherence valovanja in določa kontrast\index{Vidljivost}
+oziroma vidljivost\index{Vidljivost} interferenčne slike
 na opazovalnem zaslonu. Zaradi preglednosti v zapisu izpuščamo limito, vendar se moramo zavedati, 
 da zapisano velja le za dovolj dolge meritve.
 
@@ -669,62 +697,62 @@ Označimo z $(x_1, y_1)$ koordinate prve odprtine v objektnem zaslonu in z $(x_2
 koordinate druge odprtine. Svetilo s ploskvijo $S$ naj leži v ravnini $x'y'$. Potem je svetloba, 
 ki vpada na posamezno odprtino, sestavljena iz prispevkov vseh točk svetila $S$. Polje v prvi
 odprtini zapišemo kot:
-\beq
+\begin{equation}
 E_1 \propto \iint_S E_0(x',y') \frac{e^{ikr_1'}}{r_1'}dx'dy'
 \label{eq:08_39}
-\eeq
+\end{equation}
 in podobno polje v drugi reži kot:
-\beq
+\begin{equation}
 E_2 \propto \iint_S E_0(x'',y'') \frac{e^{ikr_2''}}{r_2''}dx''dy''.
 \label{eq:08_40}
-\eeq
+\end{equation}
 Vstavimo polji v enačbo~(\ref{eq:08_38}) in dobimo:
-\beq
+\begin{equation}
 J_{12} \propto \iint_S \iint_S \langle E_0(x',y') E_0^*(x'',y'') \rangle  \frac{e^{ik(r_1'-r_2')}}{r_1'r_2'}dx'dy'dx''dy''.
 \label{eq:08_41}
-\eeq
+\end{equation}
 Kadar je svetloba, ki izvira iz različnih delov svetila med seboj povsem nekorelirana,
 je povprečje različno od nič le v primeru, ko sta $x'=x''$ in $y'=y''$. To seveda velja, 
 če svetilo samo po sebi ni prostorsko koherentno, denimo termična svetloba zvezd.
 Zapišemo:
-\beq
+\begin{equation}
 \langle E_0(x',y') E_0^*(x'',y'') \rangle \propto \delta(x'-x'', y'-y'') |E_0(x',y')|^2.
 \label{eq:08_42}
-\eeq
+\end{equation}
 Enačbo~(\ref{eq:08_41}) poenostavimo, pri čemer privzamemo, da je oddaljenost svetila od 
 objektnega zaslona bistveno večja od dimenzij svetila, tako da $r_1'$ in $r_2'$ v imenovalcu 
 nadomestimo z $z_0'$:
-\beq
+\begin{equation}
 J_{12} \propto \iint_S |E_0(x',y')|^2 \frac{e^{ik(r_1'-r_2')}}{z_0'^2}dx'dy'
 \propto \frac{1}{z_0'^2}\iint_S j_0(x',y') e^{ik(r_1'-r_2')}dx'dy'.
 \label{eq:08_43}
-\eeq
+\end{equation}
 Z $j_0(x',y')$ smo označili intenziteto svetlobe, ki jo oddaja izbrana točka na svetilu, 
 v odvisnosti od lege točke $(x',y')$.
 
 Parameter $r_1'$ razvijemo za veliko oddaljenost izvora od objektnega zaslona:
-\beq
+\begin{equation}
 r_1' = \sqrt{z_0'^2+(x_1-x')^2+ (y_1-y')^2} \approx
 z_0'-\frac{x_1x'}{z_0'}-\frac{y_1y'}{z_0'}+\frac{x_1^2}{2z_0'}+\frac{y_1^2}{2z_0'}+\frac{x'^2}{2z_0'}
 +\frac{y'^2}{2z_0'}.
 \label{eq:08_44}
-\eeq
+\end{equation}
 Ter podobno za drugo odprtino. 
-% \beq
+% \begin{equation}
 % r_2' = \sqrt{z_0'^2+(x_2-x')^2+ (y_2-y')^2} \approx
 % z_0'-\frac{x_2x'}{z_0'}-\frac{y_2y'}{z_0'}+\frac{x_2^2}{2z_0'}+\frac{y_2^2}{2z_0'}+\frac{x'^2}{2z_0'}
 % +\frac{y'^2}{2z_0'}.
 % \label{eq:08_45}
-% \eeq
+% \end{equation}
 Razlika, ki nastopa v eksponentu (enačba~\ref{eq:08_43}), je enaka:
-\beq
+\begin{equation}
 r_1'-r_2' = \frac{x'(x_2-x_1)}{z_0'}+\frac{y'(y_2-y_1)}{z_0'}
 + \frac{(x_1^2-x_2^2)}{2z_0'^2} + \frac{(y_1^2-y_2^2)}{2z_0'^2}.
 \label{eq:08_46}
-\eeq
+\end{equation}
 Če sta odprtini simetrični glede na izhodišče, sta zadnja dva člena
 enaka nič, sicer prineseta neko konstantno fazo. V enačbo~(\ref{eq:08_43}) vstavimo 
-še razliki koordinat
+še razliki koordinat\index{Van Cittert-Zernikov izrek}
 $\Delta x = x_2-x_1$ in $\Delta y = y_2-y_1$ in dobimo Van Cittert-Zernikov izrek:
 \boxeq{eq:VCZ}{
 J_{12} \propto \frac{1}{z_0'^2}\iint_S j_{0}(x',y') e^{ikx'\Delta x/z_0'+ iky'\Delta y/z_0'}dx'dy'.
@@ -733,25 +761,18 @@ J_{12} \propto \frac{1}{z_0'^2}\iint_S j_{0}(x',y') e^{ikx'\Delta x/z_0'+ iky'\D
 Parameter $J_{12}$, ki ga lahko določimo iz interferenčne slike na opazovalnem zaslonu,
 je torej enak 2D-Fourierevi transformiranki intenzitetne porazdelitve svetlobnega polja 
 na nekoherentnem svetilu $j_0(x',y')$. Z inverzno Fourierevo transformacijo tako iz izmerjene vidljivosti
-kontrasta določimo porazdelitev intenzitete po izvoru, na primer po oddaljeni zvezdi. 
+interferenčnih prog določimo porazdelitev intenzitete po izvoru, na primer po oddaljeni zvezdi. 
 Pri tem velja, da manjši kot je svetlobni izvor, večja je njegova koherenca na oddaljenem 
 zaslonu in obratno.
 
 Če povzamemo ključno ugotovitev: Pri časovni koherenci je kontrast interferenčne slike
 inverzna Fouriereva transformiranka spektralne porazdelitve vpadne svetlobe, pri prostorski
 koherenci pa je kontrast interferenčne slike Fouriereva transformiranka prostorske porazdelitve vpadne svetlobe.
-\begin{figure}[h]
-\centering
-\def\svgwidth{140truemm} 
-\input{slike/08_VCZ_slika.pdf_tex}
-\caption{Primeri interferenčnih slik, ki nastanejo pri prehodu skozi dve simetrični odprtini, svetilo
-pa je podolgovate oblike. Z naraščajočim razmikom (od a proti c) se kontrast interferenčnih prog zmanjšuje.}
-\label{fig:08_VCZ_slika}
-\end{figure}
 
-\section{Holografija}
+
+\section{Holografija}\index{Holografija}
 Za konec si na kratko oglejmo še holografijo -- to je zapisovanje interferenčnega vzorca v medij
-in rekonstrukcija 3D slike predmeta. Hologram zapišemo tako, da snop monokromatske
+in rekonstrukcija 3D slike predmeta. Hologram zapišemo tako, da snop monokromatske\index{Hologram}
 koherentne svetlobe razdelimo na dva dela: referenčni snop usmerimo neposredno na medij, 
 praviloma film, z drugim
 delom pa osvetlimo predmet. Svetloba, ki se od predmeta odbija, interferira z referenčnim
@@ -759,14 +780,14 @@ snopom in v filmu shranjeni interferenčni vzorec ohrani informacijo o obliki pr
 (slika~\ref{fig:08_hologram}\,a). Ko
 (razvit) film ponovno osvetlimo z referenčnim snopom, v filmu vidimo 3D navidezno 
 sliko predmeta (slika~\ref{fig:08_hologram}\,b).
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \def\svgwidth{130truemm} 
 \input{slike/08_hologram2.pdf_tex}
 \caption{Hologram posnamemo tako, da film hkrati osvetlimo z referenčnim valovanjem in 
 valovanjem, ki se od predmeta odbija (a). Za 3D-rekonstrukcijo slike hologram osvetlimo
 z referenčnim valovanjem in opazujemo nastalo navidezno sliko (b). Z 1 je označen izhodni referenčni
-snop, z 2 valovanje, ki da navidezno sliko predmeta, in s 3 konugirano 
+snop, z 2 valovanje, ki da navidezno sliko predmeta, in s 3 konjugirano 
 valovanje, ki da pravo sliko predmeta. 
 }
 \label{fig:08_hologram}
@@ -785,7 +806,7 @@ s katero hologram posnamemo. Ker mora biti koherenčna razdalja precej daljša o
 optičnih poti obeh delnih valovanj, je za izdelavo hologramov potrebna laserska svetloba.
 Poleg tega mora imeti svetloba tudi dovolj veliko prostorsko koherenco, da koherenčna
 ploskev zajame celoten predmet. Danes se hologrami uporabljajo predvsem kot zaščita
-proti ponarejanju, na primer denarja, dokumentov in dražjih artikov ali za 
+proti ponarejanju, na primer denarja, dokumentov in dražjih artiklov ali za 
 holografsko interferometrijo, s katero zelo natančno merijo 3D spremembe velikosti predmetov. 
 
 Zapišimo električno polje na zaslonu (filmu). Naj referenčna svetloba na film vpada pod 
@@ -793,33 +814,33 @@ kotom $\alpha$.
 Omejimo se na skalarni približek, s čimer privzamemo, da je odbita svetloba enako polarizirana
 kot vpadna, in in jakost električnega polja referenčnega valovanja v 
 ravnini filma zapišemo kot:
-\beq
+\begin{equation}
 E_r = E_{r0}e^{i\phi},
 \label{eq:08_47}
-\eeq
+\end{equation}
 pri čemer $E_{r0}(xy)$ označuje konstantno amplitudo valovanja, $\phi$ pa fazo, 
 ki je zaradi neničelnega vpadnega kota $\alpha$ funkcija lege $x$. Jakost električnega polja
 signalnega valovanja, ki se odbija od predmeta, zapišemo kot:
-\beq
+\begin{equation}
 E_s = E_{s0}e^{i\vartheta},
 \label{eq:08_48}
-\eeq
+\end{equation}
 pri čemer sta tako amplituda $E_{s0}$ kot faza $\vartheta$ zapleteni funkciji kraja. 
 Kadar vpadata na film obe valovanji, za gostoto svetlobnega toka na filmu velja:
-\beq
+\begin{equation}
 j_h \propto |E_r + E_s|^2 = |E_r|^2 + |E_s|^2+ E_{r0}E_{s0}e^{i(\phi - \vartheta)} + 
 E_{r0}E_{s0}e^{-i(\phi - \vartheta)}.
 \label{eq:08_49}
-\eeq
+\end{equation}
 Pod določenimi pogoji lahko dosežemo, da je amplitudna prepustnost razvitega filma 
 sorazmerna z gostoto energijskega toka vpadne svetlobe $j_h$.
 Za opazovanje 3D slike predmeta, hologram (film) ponovno osvetlimo z referenčno 
-svetlobo (enačba~\ref{eq:08_47}). Jakost elektičnega polja prepuščene svetlobe je potem oblike:
-\beq
+svetlobo (enačba~\ref{eq:08_47}). Jakost električnega polja prepuščene svetlobe je potem oblike:
+\begin{equation}
 E_h \propto j_h E_r = \left(|E_r|^2 + |E_s|^2\right)E_r + E_{r0}^2E_{s0}e^{i\phi} + 
 E_{r0}^2E_{s0}e^{-i\phi}e^{2\vartheta}.
 \label{eq:08_50}
-\eeq
+\end{equation}
 Prvi člen v vsoti predstavlja neuklonjeno referenčno valovanje (glej sliko~\ref{fig:08_hologram}\,b), 
 drugi člen rekonstruirano signalno valovanje, ki da opazovalcu 3D sliko predmeta, 
 tretji člen pa je konjugirano signalno
@@ -834,7 +855,7 @@ ga zapisali, bo slika videti pod drugim kotom. Kadar hologram osvetlimo z belo s
 (in pri izdelavi poskrbimo, da se slike različnih barv med seboj ne prekrivajo)
 bo pod različnimi koti opazovanja hologram videti različnih barv. Takim hologramom pravimo mavrični
 hologram. Navadno je na njih nanešena tanka plast aluminija, zato da hologram lahko 
-opazujemo v odbiti svetlobi. 
+opazujemo v odbiti svetlobi.\index{Hologram!mavrični}
 \begin{figure}[!h]
 \centering
 \includegraphics[width=13truecm]{slike/08_photo_hologram.jpg}
@@ -844,10 +865,8 @@ opazujemo v odbiti svetlobi.
 \end{figure}
 
 \begin{remark}
-Kadar zajamemo interferenco ne le v tankem filmu, temveč po debelejšem sloju, imenujemo 
+Kadar zajamemo interferenco ne le v tankem filmu, temveč po debelejšem sloju, imenujemo\index{Hologram!volumski}
 nastalo interferenčno sliko volumski hologram. Za volumske holograme je značilno, da omogočajo 
-opazovanje hologramov v naravnih barvah predmeta, kar dosežemo s posebnim tridimenzionalim zapisom 
+opazovanje hologramov v naravnih barvah predmeta, kar dosežemo s posebnim tridimenzionalnim zapisom 
 v treh osnovnih barvah.
 \end{remark}
-
-
