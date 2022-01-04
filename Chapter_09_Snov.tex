@@ -321,9 +321,9 @@ njegova velikost pa je odvisna od razmerja med plazemsko in lastno frekvenco.
 V bližini lastne krožne frekvence $\omega_0$ lomni količnik naraste, nato strmo pade, potem pa 
 začne ponovno naraščati in se počasi približuje vrednosti 1. V skoraj celotnem 
 spektralnem območju je tako odvod lomnega količnika po frekvenci pozitiven 
-(to imenujemo območje normalne disperzije),\index{Disperzija!normalna}
+(to imenujemo območje normalne disperzije),\index{Disperzija!{normalna}}
 razen na ozkem intervalu v bližini  $\omega_0$, kjer je odvod negativen (območje anomalne 
-disperzije).\index{Disperzija!anomalna}
+disperzije).\index{Disperzija!{anomalna}}
 Za zelo velike frekvence vpadne svetlobe je lomni količnik približno enak 1.
 \begin{figure}[ht!]
 \centering
@@ -533,7 +533,7 @@ disperzije v dežnih kapljicah vode. Ko bela svetloba s Sonca vpade\index{Sonce}
 na kapljice v zraku, se svetloba različnih valovnih dolžin 
 lomi pod različnimi koti. Po odboju na zadnji strani kapljice 
 zato različne barve svetlobe izhajajo iz kapljic pod različnimi koti, 
-kar vidimo kot mavrico.
+kar vidimo kot mavrico (slika~\ref{fig:09_mavrica}).
 \vglue-5truemm
 \end{example}
 
@@ -581,12 +581,12 @@ disperzije opazimo pri preslikavi z lečo.
 Spoznali smo, da je goriščna razdalja leče odvisna
 od lomnega količnika snovi, iz katere je leča narejena 
 (enačba~\ref{eq:goriscna}). Zaradi disperzije stekla
-je goriščna razdalja za različne valovne dolžine različna,
-kar pripelje do napake leče, imenovane kromatična
+se goriščna razdalja za različne valovne dolžine razlikuje,
+kar pripelje do napake leče, imenovane kromatična\index{Leča!{kromatična aberacija}}
 aberacija. Na sliki je to opazno predvsem 
-ob robovih slike, kjer so slike videti barvno razmazane. 
+ob robovih, kjer je slika ne samo neostra, temveč tudi barvno razmazana (slika~\ref{fig:09_aberacija}). 
 Napako zbiralne leče navadno odpravimo z dodatno razpršilno lečo, ki kompenzira
-disperzijo prve leče. Nastali sestav imenujemo akromatska leča.
+disperzijo prve leče. Nastali sestav imenujemo akromatska leča.\index{Leča!{akromatska}}
 \begin{figure}[ht!]
 \vglue-3truemm
 \centering
@@ -595,12 +595,12 @@ disperzijo prve leče. Nastali sestav imenujemo akromatska leča.
 se vidi učinek disperzije: rdeči odtenki so premaknjeni proti sredini 
 leče, modri odtenki pa proti robu.}
 \label{fig:09_aberacija}
-\vglue-7truemm
+\vglue-8truemm
 \end{figure}
 
 \end{example}
-
-\begin{example}{\bf Disperzija v optičnih vlaknih.}
+\begin{example}{\bf Disperzija v optičnih vlaknih.}\index{Disperzija!{v optičnem vlaknu}}
+\index{Optično vlakno}
 Disperzija igra zelo pomembno vlogo pri prenosu signalov
 po optičnih vlaknih. Informacija po vlaknih potuje
 v obliki kratkih sunkov svetlobe, ki imajo neko
@@ -609,7 +609,7 @@ komponente sunkov svetlobe zaradi disperzije
 potujejo z malenkost različnimi hitrostmi in sunki se 
 med prehodom skozi vlakno podaljšajo. Ko je podaljšanje
 tako veliko, da posameznih sunkov ne razločimo več, 
-se informacija izgubi.  
+se informacija izgubi (slika~\ref{fig:09_disperzijafib}).  
 Disperzija v optičnih vlaknih tako omejuje količino 
 podatkov, ki jih lahko po vlaknu prenašamo v časovni enoti.
 \begin{figure}[ht]
@@ -620,6 +620,7 @@ podatkov, ki jih lahko po vlaknu prenašamo v časovni enoti.
 disperzije podaljšajo. Kadar je disperzija premočna, sunkov
 na izhodu ne zaznavamo več ločeno in informacija se izgubi.}
 \label{fig:09_disperzijafib}
+\vglue-8truemm
 \end{figure}
 
 \end{example}
@@ -631,11 +632,11 @@ v prevodnih snoveh in izračunali lomni količnik.
 V  poglavju za tem (razdelek~\ref{section:410}) 
 smo obravnavali odboj na prevodni snovi, zdaj pa si oglejmo odvisnost
 lomnega količnika kovin od valovne dolžine vpadne svetlobe v mikroskopskem
-modelu.
+modelu.\index{Disperzija!{v prevodniku}}
 
-Obravnavajmo elektrone po Drudejevem modelu prostega elektronskega plina
+Obravnavajmo elektrone po Drudejevem modelu prostega elektronskega plina\index{Drudejev model}
 v mreži nepremičnih pozitivnih nabojev. V tem modelu so elektroni prosti,
-zato je konstanta vzmeti $k=0$ in lastna frekvenca $\omega_0=0$. Izhajamo 
+zato je konstanta vzmeti $k=0$ in lastna krožna frekvenca $\omega_0=0$. Izhajamo 
 iz splošne enačbe za izračun kompleksnega lomnega količnika $\mathcal{N}$
 (enačba~\ref{eq:09_16}) in dobimo:
 \begin{equation}
@@ -646,7 +647,9 @@ iz splošne enačbe za izračun kompleksnega lomnega količnika $\mathcal{N}$
 Pri tem smo z $\omega$ označili krožno frekvenco vpadne svetlobe, z
 $\omega_p$ pa plazemsko frekvenco, podano z enačbo~(\ref{eq:09_14}). 
 Koeficient dušenja $\gamma$ opisuje električno upornost, ki jo v idealnih 
-prevodnikih lahko zanemarimo. Lomni količnik potem izračunamo kot:
+prevodnikih lahko zanemarimo. 
+
+Lomni količnik potem izračunamo kot:
 \boxeq{eq:09_36a}{
 n \approx \sqrt{1- \frac{\omega_p^2}{\omega^2}}.
 }
@@ -654,16 +657,32 @@ Za vrednosti $\omega < \omega_p$ je lomni količnik imaginaren in svetloba se v 
 močno absorbira. Po drugi strani je za krožne frekvence $\omega > \omega_p$ lomni količnik realen 
 in snov prozorna. Ključni parameter pri odzivu prevodnikov je tako plazemska frekvenca. 
 
-Plazemska frekvenca za srebro je v ultravijoličnem delu spektra 
+\begin{example}{\bf Barvi srebra in zlata.}\index{Zlato}\index{Srebro}
+Plazemska frekvenca za srebro leži v ultravijoličnem delu spektra 
 pri okoli $320~\si{\nano\meter}$. Lomni količnik srebra je tako za celoten 
 spekter vidne svetlobe imaginaren in odbojnost
 vidne svetlobe je približno enaka za vse valovne dolžine.  
 Pri zlatu je lomni 
-količnik za del vidnega spektra z daljšimi valovnimi dolžinami realen, pri 
-krajših valovnih dolžinah pa je imaginaren. Rdeča in rumena barva se zato v zlatu 
+količnik za del vidnega spektra z daljšimi valovnimi dolžinami imaginaren, pri 
+krajših valovnih dolžinah pa kompleksen. Rdeča in rumena barva se zato v zlatu 
 ne moreta razširjati in ko bela svetloba vpade na zlato, se rdeča in rumena svetloba
-od njega odbijeta. To da zlatu značilno rdečkasto-rumeno barvo. Za modre odtenke
-svetlobe je lomni količnik zlata realen, zato se modri odtenki znatno šibkeje odbijajo od površine.
+od njega v celoti odbijeta. Za modre odtenke
+svetlobe je lomni količnik zlata kompleksen, zato se 
+modri odtenki znatno šibkeje odbijajo od površine.
+To da zlatu značilno rdečkasto-rumeno barvo.\index{Odbojnost!{na kovinah}}
+\begin{figure}[htp]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/09_kovine.pdf_tex}
+\caption{Odbojnosti na kovinah v odvisnosti od valovne dolžine vpadne svetlobe. Odbojnost
+srebra je v vidnem delu spektra (osenčeno območje) praktično 
+neodvisna od valovne dolžine, podobno velja tudi za aluminij, zato sta kovini
+videti neobarvano. Odbojnosti bakra in zlata sta za modre odtenke bistveno 
+manjši kot za rdeče in rumene, zato ima baker značilno rdečkasto barvo in zlato
+rdečkasto-rumeno barvo (Povzeto po E. Hecht, {\it Optics}, Pearson, 2017.)}
+\label{fig:09_kovine}
+\vglue-3truemm
+\end{figure}
 \begin{figure}[htp]
 \centering
 \includegraphics[width=7truecm]{slike/09_zlato.jpg}\hfill
@@ -671,19 +690,10 @@ svetlobe je lomni količnik zlata realen, zato se modri odtenki znatno šibkeje 
 \caption{Ploščica $91,6\%$ (22-karatnega) in košček $83,3\%$ (20-karatnega) zlata (levo). 
 Podobno zlatorumeno barvo ima tudi pirit FeS$_2$ (desno).}
 \label{fig:09_zlato}
+\vglue-8truemm
 \end{figure}
-\begin{figure}[htp]
-\centering
-\def\svgwidth{100truemm} 
-\input{slike/09_kovine.pdf_tex}
-\caption{Odbojnosti na kovinah v odvisnosti od valovne dolžine vpadne svetlobe. Odbojnost
-srebra je v vidnem delu spektra (osenčeno področje) praktično 
-neodvisna od valovne dolžine, podobno velja tudi za aluminij, zato sta kovini
-videti neobarvano. Odbojnosti bakra in zlata sta pri modrih odtenkih bistveno 
-manjši kot pri rdečih in rumenih, zato ima baker značilno rdečkasto barvo in zlato
-rumeno-rdečkasto barvo (Povzeto po E. Hecht, {\it Optics}, Pearson, 2017.)}
-\label{fig:09_kovine}
-\end{figure}
+
+\end{example}
 % \begin{figure}[htp]
 % \centering
 % \includegraphics[width=35truemm]{slike/09_2euro.jpg}
@@ -698,14 +708,14 @@ rumeno-rdečkasto barvo (Povzeto po E. Hecht, {\it Optics}, Pearson, 2017.)}
 % \label{fig:09_kovanci}
 % \end{figure}
 
-
-\section{Optični metamateriali}
+\section{Optični metamateriali}\index{Metamaterial}
 Posebna vrsta snovi so metamateriali. To so snovi, ki jih v naravi ne najdemo (so umetno
 ustvarjene), zaradi svoje natančno načrtovane in zapletene strukture pa delujejo na 
 vpadno elektromagnetno valovanje drugače od navadnih snovi. Za optiko so najbolj zanimivi
-metamateriali, ki imajo na določenem frekvenčnem območju negativni lomni količnik.
+metamateriali, ki imajo na določenem frekvenčnem območju negativni lomni količnik.\index{Lomni 
+količnik!{negativen}}
 
-V tretjem poglavju smo spoznali, da je lomni količnik enak korenu dielektričnosti
+V tretjem poglavju smo spoznali, da je lomni količnik enak korenu iz dielektričnosti
 (enačba~\ref{eq:n}). Rezultat izhaja iz zveze $n^2 = \varepsilon \mu$, pri čemer smo 
 vzelo pozitivno vrednost korena. Druga rešitev, sicer precej bolj nenavadna, je negativna
 vrednost lomnega količnika $n = - \sqrt{\varepsilon \mu}$. To lahko dosežemo pri snoveh,
@@ -713,14 +723,14 @@ za katere sta na določenem frekvenčnem območju hkrati $\varepsilon<0$ in $\mu
 Ker je njun produkt pozitiven, se svetloba v snovi ne absorbira, njen lomni količnik 
 pa je negativen. V navadnih snoveh tako velja:
 \begin{equation}
-\varepsilon >0, \mu > 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
-\qquad \Rightarrow \qquad n = \sqrt{\varepsilon\mu},
+\varepsilon >0, \mu > 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu >0
+\qquad \mathrm{in} \qquad n = \sqrt{\varepsilon\mu},
 \label{eq:09_37m}
 \end{equation}
 v metamaterialih pa:
 \begin{equation}
-\varepsilon <0, \mu < 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu 
-\qquad \Rightarrow \qquad n = -\sqrt{\varepsilon\mu}<0. 
+\varepsilon <0, \mu < 0 \qquad \Rightarrow \qquad n^2 = \varepsilon \mu >0
+\qquad \mathrm{in} \qquad n = -\sqrt{\varepsilon\mu}<0. 
 \label{eq:09_38}
 \end{equation}
 Metamaterialov v naravi ne najdemo, lahko pa jih za izbrane valovne dolžine naredimo z
@@ -728,14 +738,14 @@ nanostrukturiranimi kompozitnimi materiali. Pri tem mora biti sestavni element k
 bistveno manjši od valovne dolžine vpadne svetlobe, zato metamateriali tipično delujejo v 
 mikrovalovnem območju spektra.
 
-V metamaterialih je posebej zanimiv lom svetlobe. Zapišemo lomni zakon 
+V metamaterialih je posebej zanimiv lom svetlobe. Zapišemo lomni zakon\index{Lomni zakon!{v metamaterialih}}
 (enačba~\ref{eq:lomnizakon}):
 \begin{equation}
 n_1 \sin\alpha = n_2 \sin\beta,
 \label{eq:09_39}
 \end{equation}
 pri čemer velja $n_1>0$ in $n_2<0$. Ko svetloba vpade na metamaterial pod vpadnim
-kotom $\alpha>0 $, je lomni kot $\beta <0$. 
+kotom $\alpha>0 $, je lomni kot $\beta <0$ (slika~\ref{fig:09_meta}). 
 \begin{figure}[ht]
 \centering
 \def\svgwidth{80truemm} 
@@ -747,14 +757,14 @@ in valovnega vektorja $\mathbf{k}$ nasprotni.}
 \end{figure}
 
 Drugo zanimivo lastnost  metamaterialov spoznamo, če si ogledamo Poyntingov vektor. 
-Spomnimo se (enačba~\ref{eq:Poyntingov}), da velja zveza 
+Spomnimo se (enačba~\ref{eq:Poyntingov}), da velja zveza\index{Poyntingov vektor!{v metamaterialih}}
 $\mathbf{S} = \mathbf{E}\times \mathbf{H}$. Smer Poyntingovega vektorja določa smer
 energijskega toka in v navadnih snoveh je ta smer enaka smeri valovnega vektorja.
 V metamaterialih pa negativna vrednost konstant učinkuje enako, kot bi učinkovala
 sprememba predznaka magnetnega polja. Iz zveze za Poyntingov vektor sledi, da ima
 smer energijskega toka v metamaterialih nasprotno smer od smeri valovnega vektorja. 
 
-\section{Optična aktivnost}
+\section{Optična aktivnost}\index{Optična aktivnost}
 Določene snovi imajo prav posebno sposobnost sukanja polarizacije vpadne svetlobe.
 Take snovi imenujemo optično aktivne snovi, pojav sukanja linearne polarizacije
 vpadne svetlobe ob prehodu skozi snov pa optična aktivnost.
@@ -762,7 +772,7 @@ Optične aktivno snovi so kiralne, torej brez zrcalne simetrije, in so lahko
 v trdnem, tekočem ali plinastem stanju. Primeri optično aktivnih snovi
 so raztopine glukoze in fruktoze, aminokisline ter kremen.
 
-Naj na optično aktivno snov v smeri osi $z$ 
+Naj na optično aktivno snov v smeri osi $z$
 vpada svetloba, ki je linearno polarizirana vzdolž osi $x$ 
 (slika~\ref{fig:09_aktivnost}). Po 
 prehodu skozi snov se smer linearne polarizacije
@@ -770,16 +780,16 @@ zasuče za kot $\Delta \varphi$ glede na os $x$, pri čemer je kot zasuka
 odvisen od snovi in od dolžine poti skozi snov $L$. Z Jonesovimi
 vektorji vpadno polarizacijo v opisanem primeru zapišemo kot:
 \begin{equation}
-\mathbf{J}_{in} = 
+\mathbf{J}_{1} = 
 \left[\begin{array}{c}
 1\\
 0\\
 \end{array}\right]\!\!,
 \label{eq:09_40}
 \end{equation}
-zasukano izhodno polarizacijo pa kot:
+zasukano izhodno polarizacijo pa kot:\index{Polarizacija!{zasuk}}
 \begin{equation}
-\mathbf{J}_{out} = 
+\mathbf{J}_{2} = 
 \left[\begin{array}{c}
 \cos \Delta \varphi\\
 \sin \Delta \varphi\\
@@ -795,7 +805,7 @@ desnosučne pa pozitiven.
 \def\svgwidth{100truemm} 
 \input{slike/09_aktivnost.pdf_tex}
 \caption{Optično aktivne snovi sučejo smer vpadne linearne polarizacije. Na sliki
-je primer levosučne snovi, saj se po prehodu snovi polarizacija, gledano v smeri 
+je primer levosučne snovi, saj se po prehodu skozi snov polarizacija, gledano v smeri 
 izvora svetlobe, zasuče v levo.}
 \label{fig:09_aktivnost}
 \vglue-7truemm
@@ -822,7 +832,7 @@ racemat. Racemat je optično neaktiven.
 je razlika med njima ključna. Tako so vse standardne aminokisline razen
 glicina optično aktivne in brez izjeme vse levosučne. Po drugi strani je skoraj 
 vsa glukoza v naravi desnosučna, prav tako tudi drugi enostavni sladkorji. Problem
-nastane pri umetni sintezi spojin, saj med kemijskimi reakcijami praviloma
+nastane pri umetni sintezi spojin, saj med kemijskimi reakcijami praviloma 
 nastajata oba izomera v enaki količini. Če želimo nastale spojine uporabiti, na
 primer v farmaciji, ju je treba ločiti, saj imata lahko izomera povsem različen
 učinek: en zdravilen in drug škodljiv.
@@ -840,7 +850,7 @@ da je molekula kiralna. Kiralni center je ogljik.}
 
 Sukanje linearne polarizacije v optično aktivnih snoveh preprosto pojasnimo
 z različnima lomnima količnikoma za levo in desno krožno polarizirano valovanje\footnote{~Optično 
-aktivnost zato imenujemo tudi cirkularni dvojni lom. Pri navadnem dvojnem lomu 
+aktivnost zato imenujemo tudi cirkularni dvojni lom. Pri navadnem dvojnem lomu\index{Dvojni lom!{cirkularni}}
 (glej poglavje~\ref{chap:AnizotropneSnovi}) se razlikujeta lomna količnika za dve 
 ortogonalni linearni polarizaciji, pri cirkularnem dvojnem lomu pa se razlikujeta lomna
 količnika za dve nasproti krožni polarizaciji.}.
@@ -869,8 +879,8 @@ i\\
 \end{array}\right]\!\!.
 \label{eq:09_43}
 \end{equation}
-Po prehodu skozi snov različno krožno polarizirani komponenti 
-občutita različna lomna količnika in imata zato ob prehodu snovi z 
+Ob prehodu skozi snov različno krožno polarizirani komponenti 
+občutita različna lomna količnika in imata zato na izhodu iz snovi z 
 dolžino $L$ različni fazi:
 \begin{equation}
 \mathbf{J}_{2}  = 
@@ -955,7 +965,7 @@ valovni dolžini $589~\si{nm}$) sta $n_D = 1,54420$ in $n_L = 1,54427$.
 \input{slike/09_aktivnost_foto.pdf_tex}
 \caption{Raztopina sladkorja v vodi je optično aktivna. Ko jo postavimo med prekrižana
 polarizatorja, prepušča svetlobo (levo). Ker je zasuk polarizacije odvisen od valovne dolžine
-svetlobe, je pod različnimi koti polarizatorjev raztopina videti različnih barv (desno).}
+svetlobe, je pod različnimi koti polarizatorjev raztopina sladkorja videti različnih barv (desno).}
 \label{fig:09_aktivnost-foto}
 \end{figure}
 
@@ -964,30 +974,32 @@ Pogosto se uporablja fenomenološki zapis:
 \Delta \varphi = \beta L,
 \label{eq:09_50}
 \end{equation}
-pri čemer je $\beta = \beta (\lambda)$ specifična sučnost snovi. Navadno je podana pri referenčni
+pri čemer je $\beta = \beta (\lambda)$ specifična sučnost snovi.\index{Specifična sučnost snovi}
+Navadno je podana pri referenčni
 valovni dolžini $\lambda = 589,3~\si{nm}$, kar ustreza spektralni črti natrijevega dubleta. V
 trdnih snoveh je optična aktivnost relativno velika in jo podajamo v enotah $\si{\degree}/\si{mm}$. Za 
 kremen je vrednost $\beta = 21,7\si{\degree}/\si{mm}$. V tekočinah je učinek
 navadno šibkejši, zato ga pogosto podajamo v enotah $\si{\degree}/\si{dm}$. V terpentinu
 je $\beta = -35\si{\degree}/\si{dm}$ in v nikotinu $\beta = -165\si{\degree}/\si{dm}$,
 pri čemer negativni znak pomeni, da sta snovi levosučni. Za raztopine je specifična sučnost
-podana pri koncentraciji $1~\si{g}/1~\si{cm}^3$ in temperaturi $T = 20~\si{\celsius}$. 
+podana pri koncentraciji $1~\si{g/cm^3}$ in temperaturi $T = 20~\si{\celsius}$. 
 Specifična sučnost za glukozo v vodi je $\beta = 53\si{\degree}/\si{dm}$.
 \vglue-5truemm
 \begin{remark}
 Pogosto se razlika med desno in levo krožno polariziranim valovanjem pojavi ne le v realnem, 
 temveč tudi v imaginarnem delu lomnega količnika. Takšna snov eno cirkularno polarizacijo močneje
-absorbira kot drugo. V tem primeru govorimo o cirkularnem dikroizmu snovi. Merjenje cirkularnega
+absorbira kot drugo. V tem primeru govorimo o cirkularnem dikroizmu snovi.\index{Dikroizem!cikrularni}
+Merjenje cirkularnega
 dikroizma (CD) v odvisnosti od valovne dolžine vpadne svetlobe je osnova za CD spektroskopijo, ki
 se uporablja med drugim za določanje sekundarne strukture proteinov. 
 \vglue-5truemm
 \end{remark}
 
-\section{Faradayev pojav}
+\section{Faradayev pojav}\index{Faradayev pojav}\index{Faraday, Michael}\index{Magneto-optični pojav|see{Faradayev pojav}}
 V prejšnjem razdelku smo spoznali kiralne snovi, ki so optično aktivne in sučejo smer
 linearne polarizacije zaradi svojih mikroskopskih ali strukturnih lastnosti. 
 Podobno obnašanje opazimo tudi v izotropnih dielektrikih, ki jih postavimo v vzdolžno
-magnetno polje. Pojav imenujemo magneto-optični oziroma Faradayev pojav
+magnetno polje (slika~\ref{fig:09_Faraday}). Pojav imenujemo magneto-optični oziroma Faradayev pojav
 po njegovem odkritelju Michaelu Faradayu. Za razliko 
 od intrinzične optične aktivnosti, ki polarizacijo vedno zasuče v isto smer (na primer
 v desno glede na smer potovanja svetlobe skozi snov), je zasuk pri Faradayevem pojavu 
@@ -996,26 +1008,27 @@ magnetnega polja. Po dogovoru je zasuk pozitiven, če se polarizacija suče v
 pozitivni smeri, gledano proti izvoru svetlobe\footnote{To je ravno nasprotno kot
 pri optični aktivnosti, kjer je kot zasuka pozitiven pri desnosučnih snoveh.}.
 Večina snovi suče polarizacijo v pozitivni smeri, to je v smeri električnega toka, ki
-magnetno polje ustvari. 
+magnetno polje ustvari.
 \vglue4truemm
 \begin{figure}[ht]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/09_faraday.pdf_tex}
 \caption{Faradayev pojav opisuje sukanje linearne polarizacije svetlobe v vzdolžnem mag\-net\-nem
-polju. Zasuk je premo sorazmeren gostoti polja in dolžini, ki jo svetloba prepotuje
+polju. Zasuk je premo sorazmeren gostoti polja $\mathbf{B}$ in dolžini $L$, ki jo svetloba prepotuje
 v magnetnem polju.}
 \label{fig:09_Faraday}
 \end{figure}
 
-Kot zasuka linearne polarizacije zapišemo kot:
+Kot zasuka linearne polarizacije zapišemo kot:\index{Polarizacija!{zasuk}}
 \boxeq{eq:09_51}{
 \Delta \varphi = V L~B_0,
 }
 pri čemer so $L$ dolžina prepotovane poti po snovi, $B_0$ gostota zunanjega 
-magnetnega polja in $V$ sorazmernostna Verdetova konstanta, imenovana po francoskem 
-fiziku \'{E}milu Verdetu (1824--1866). Ker se vrednosti konstante močno 
-spreminjajo z valovno dolžino vpadne svetlobe in temperaturo snovi 
+magnetnega polja in $V$ sorazmernostna Verdetova konstanta, imenovana po 
+francoskem\index{Verdetova konstanta}\index{Verdet, \'{E}mil}
+fiziku \'{E}milu Verdetu (1824--1866). Ker so vrednosti konstante močno 
+odvisne od valovne dolžine vpadne svetlobe in temperature snovi 
 (naraščajo z nižanjem temperature in krajšanjem valovne dolžine), jih navadno
 podajamo pri valovni dolžini natrijevega dubleta $\lambda = 589,3~\si{nm}$ in 
 temperaturi $300~\si{K}$. 
@@ -1041,7 +1054,7 @@ zelo veliko magnetno polje. Poleg tega je kot zasuka naveden po prepotovanem $1~
 v magnetnem polju, kar je navadno težko izvedljivo. Pogosto zato Verdetovo konstanto
 podajamo v enotah $\si{min}/\si{G\,cm}$. 
 
-Faradayev pojav uporabljamo za izdelavo optičnih izolatorjev -- naprav, ki svetlobo
+Faradayev pojav uporabljamo za izdelavo optičnih izolatorjev -- naprav, ki svetlobo\index{Optični izolator}
 v eno smer prepuščajo, v drugo pa ne. Gostoto magnetnega polja in dolžino snovi v polju 
 izberemo tako, da je zasuk polarizacije enak $45\si{\degree}$. Če snov postavimo med dva 
 polarizatorja, ki sta zasukana za isti kot, je vsa vpadna svetloba prepuščena 
@@ -1056,14 +1069,16 @@ svetlobe.
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/09_izolator1.pdf_tex}
-\caption{Faradayev izolator v eni smeri prepušča svetlobo (a), v drugi smeri pa ne (b).
-V magnetnem polju zasučemo vpadno polarizacijo za $45\si{\degree}$. V smeri naprej je
-svetloba prepuščena skozi izhodni analizator. V nasprotni smeri se linearna polarizacija
-zasuče za isti kot v isti smeri, zato je vpadni polarizator ne prepušča.}
+\caption{Faradayev izolator je sestavljen iz snovi v magnetnem polju 
+in dveh polarizatorjev pod kotom $45\si{\degree}$. V magnetnem polju zasučemo 
+vpadno polarizacijo za $45\si{\degree}$, zato je v smeri naprej 
+svetloba prepuščena skozi izhodni analizator (a). Po odboju od zrcala se
+svetloba vrača skozi izolator v nasprotni smeri. Ob prehodu skozi snov se
+linearna polarizacija zasuče za isti kot v isti smeri, zato je vpadni polarizator ne prepušča.}
 \label{fig:09_izolator}
 \end{figure}
 
-\subsection*{Izpeljava Faradayevega pojava z Lorentzevim modelom}
+\subsection*{Izpeljava Faradayevega pojava z Lorentzevim modelom}\index{Lorentzev model!{Faradayev pojav}}
 Faradayev pojav lahko pojasnimo z Lorentzevim modelom snovi 
 (glej razdelek~\ref{chap:lomni}), ki jo izpostavimo zunanjemu 
 statičnemu magnetnemu polju in cirkularno polariziranemu
@@ -1084,7 +1099,7 @@ njen naboj. Newtonov zakon za negativno nabito kroglico je potem:
 m\ddot{\mathbf{r}} = -k \mathbf{r}-e_0 \mathbf{E} -e_0 \dot{\mathbf{r}}\times \mathbf{B}_0.
 \label{eq:09_55}
 \end{equation}
-Pri tem vektor $\mathbf{r}$ označuje lego elektrona v ravnini $\mathbf{r} = (x,y,0)$. Konstanta
+Pri tem vektor $\mathbf{r}$ označuje lego kroglice (elektrona) v ravnini $\mathbf{r} = (x,y,0)$. Konstanta
 $k$ je konstanta vzmeti, ki veže elektron na jedro in  jo bomo izrazili z lastno frekvenco 
 nihanja $\omega_0^2 = k/m$, $m$ je masa elektrona, jakost električnega polja je $\mathbf{E} = (E_x, E_y, 0)$,
 magnetnega polja pa $\mathbf{B}_0 = (0,0,B_0)$, torej vzdolž smeri širjenja svetlobe. 
@@ -1130,7 +1145,7 @@ Gibalno enačbo (enačba~\ref{eq:09_55}) delimo z $m$ in prepišemo v:
 \end{equation}
 Razstavimo jo po komponentah in dobimo sistem enačb:
 \begin{align}
-\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \label{eq:09_52a} \\
+\ddot{x} + \frac{e_0}{m} \dot{y} B_0 + \omega_0^2 x &= -\frac{e_0}{m}E_x \qquad \mathrm{in}\label{eq:09_52a} \\
 \ddot{y} - \frac{e_0}{m} \dot{x} B_0 + \omega_0^2 y &= -\frac{e_0}{m}E_y.
 \label{eq:09_52b}
 \end{align}
@@ -1144,8 +1159,9 @@ Uvedemo novi spremenljivki $x + iy = z$ in $E_x+iE_y = E_+$ in enačbo zapišemo
 \ddot{z} -i \omega_{c}\dot{z} + \omega_0^2 z = -\frac{e_0}{m}E_+,
 \label{eq:09_63}
 \end{equation}
-pri čemer smo vpeljali ciklotronsko frekvenco $\omega_{c} = e_0B_0/m$.
-Drugič zapisani enačbi~(\ref{eq:09_52a} in \ref{eq:09_52b}) 
+pri čemer smo vpeljali ciklotronsko krožno frekvenco $\omega_{c} = e_0B_0/m$.
+
+Drugič zapisani enačbi~(\ref{eq:09_52a} in \ref{eq:09_52b})\index{Ciklotronska krožna frekvenca}
 odštejmo in uvedemo novi spremenljivki $x-iy=w$ ter $E_x-iE_y = E_-$.
 Dobimo:
 \begin{equation}
@@ -1154,29 +1170,30 @@ Dobimo:
 \end{equation}
 Z vpeljavo novih spremenljivk smo enačbi~(\ref{eq:09_52a} in \ref{eq:09_52b}) razklopili. 
 Rešitev novih dveh enačb~(\ref{eq:09_63} in \ref{eq:09_64}) 
-iščemo v obliki $z = z_0 e^{-i\omega t}$ in $w = w_0 e^{-i\omega t}$, pri čemer
-je $\omega$ frekvenca vpadne svetlobe. Vstavimo nastavek za $z$ in $w$ in dobimo rešitvi za amplitudi:
+iščemo z nastavkoma $z = z_0 e^{-i\omega t}$ in $w = w_0 e^{-i\omega t}$, pri čemer
+je $\omega$ krožna frekvenca vpadne svetlobe. Vstavimo nastavka za $z$ in $w$ in dobimo rešitvi za amplitudi:
 \begin{equation}
 z_0 = \frac{-e_0 E_+/m}{\omega_0^2 - \omega^2 - \omega_{c}\omega} \qquad \mathrm{in} \qquad 
 w_0 = \frac{-e_0 E_-/m}{\omega_0^2 - \omega^2 + \omega_{c}\omega}.
 \label{eq:09_65}
 \end{equation}
-Povsem analogno enačbam~(\ref{eq:09_07}-\ref{eq:09_16}) za linearno polarizirano 
-valovanje izpeljemo lomna količnika:
+Povsem analogno enačbam za linearno polarizirano 
+valovanje (enačbe~\ref{eq:09_07}-\ref{eq:09_16}) izpeljemo lomna količnika za krožno polarizirani valovanji:
 \begin{equation}
 n_+^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 - \omega_{c}\omega} \qquad \mathrm{in}
 \qquad 
 n_-^2 = 1 + \frac{\omega_p^2}{\omega_0^2 -\omega^2 + \omega_{c}\omega}.
 \label{eq:09_66}
 \end{equation}
-Pri tem $\omega_p$ označuje plazemsko frekvenco $\omega_p = \sqrt{e_0^2 \varrho/\varepsilon_0 m}$. 
+Pri tem $\omega_p$ označuje plazemsko krožno\index{Plazemska krožna frekvenca}
+frekvenco $\omega_p = \sqrt{e_0^2 \varrho/\varepsilon_0 m}$. 
 Asimetrija magnetne sile, ki za levo krožno polarizirano valovanje kaže proti
 središču kroženja in za desno krožno polarizirano valovanje stran od njega, 
-torej povzroči, da sta lomna količnika za krožno polarizirani valovanji različna. 
+povzroči, da sta lomna količnika za krožno polarizirani valovanji različna. 
 Razlika lomnih količnikov, ki določa sukanje vpadne linearno polarizirane svetlobe,
 je odvisna od smeri magnetnega polja. Nasprotna smer magnetnega polja torej suče svetlobo
 v nasprotno smer. Po drugi strani pa smer sukanja ni odvisna od smeri širjenja svetlobe, 
-zato se svetloba, ki se širi v nasprotno smer, suče v isto stran.
+zato se svetloba, ki se širi v nasprotno smer, suče v isto smer.
 
 Kateri lomni količnik ustreza kateri krožni polarizaciji najlaže uvidimo, če primerjamo
 predznak električne in magnetne sile na elektron. Pri desno krožno polariziranem 
@@ -1199,4 +1216,4 @@ Sledi:
 = V L~B_0.
 \end{equation}
 Tako smo na preprostem modelu atoma pokazali približno linearno odvisnost kota zasuka od zunanjega 
-magnetnega polja.
+magnetnega polja.\index{Verdetova konstanta}
