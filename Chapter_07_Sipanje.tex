@@ -1,6 +1,6 @@
 \chapterimage{07_Sipanje.jpg} % Chapter heading image
 
-\chapter{Sipanje}
+\chapter{Sipanje}\index{Sipanje}
 V tem poglavju bomo na kratko predstavili sipanje svetlobe in z Rayleighovim
 sipanjem na atomih in molekulah pojasnili modro barvo neba. Izpeljali bomo 
 kotno odvisnost sipane svetlobe in njeno polarizacijo, poglavje pa zaključili
@@ -38,11 +38,11 @@ tudi v smereh, ki se razlikujejo od vpadne smeri. Pravimo, da se svetloba siplje
 Zaradi sipanja svetlobe se gostota svetlobnega toka v smeri vpadnega valovanja
 zmanjšuje, kar imenujemo slabljenje, atenuacija ali ekstinkcija. Podobno učinkuje tudi 
 absorpcija svetlobe v snovi, zato je celotno slabljenje sestavljeno iz 
-prispevkov sipanja in absorpcije (slika~\ref{fig:07_skica}\,a). Pri obravnavni sipanja se mi omejimo na 
+prispevkov sipanja in absorpcije (slika~\ref{fig:07_skica}\,a). Pri obravnavni sipanja se bomo omejili na 
 dielektrične snovi, ki svetlobe ne absorbirajo. Sipanje, pri katerem se 
-svetloba ne absorbira in energija ne izgublja, imenujemo elastično sipanje.
+svetloba ne absorbira in energija ne izgublja, imenujemo elastično sipanje.\index{Sipanje!{elastično}}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/07_skica01.pdf_tex}
@@ -59,38 +59,39 @@ vzdolž smeri $z$ (slika~\ref{fig:07_skica}\,b). Prostornina osvetljenega
 dela naj bo $V = S \Delta z$,
 v njem pa naj bo $N$ sipalcev, to je delcev, na katerih se svetloba siplje. 
 Vsak od sipalcev prispeva k zmanjšanju svetlobnega toka:
-\beq
-\Delta P_1 = - \sigma_S j,
+\begin{equation}
+\Delta P_1 = - \sigma_S j.
 \label{eq:07_01}
-\eeq
-pri čemer vpeljemo razmerje med svetlobnim tokom sipane svetlobe 
-in gostoto svetlobnega toka vpadne svetlobe $\sigma_S$ kot sipalni presek. 
-Sipalni presek ima
-enoto ploščine, vendar se razlikuje od prečnega preseka sipalca.
-Njegova velikost je določena s tem, kako močno vpliva na vpadno 
+\end{equation}
+pri čemer vpeljemo sipalni presek $\sigma_S$\index{Sipalni presek} kot razmerje med svetlobnim 
+tokom sipane svetlobe in gostoto svetlobnega toka vpadne svetlobe. 
+Sipalni presek ima enoto ploščine, vendar se razlikuje od prečnega preseka sipalca.
+Njegova velikost je določena s tem, kako močno sipalec vpliva na vpadno 
 svetlobo: delci z večjim sipalnim presekom bolj sipljejo svetlobo in obratno, 
 delci z manjšim sipalnim presekom manj zmotijo potek vpadnega valovanja. 
 Sipalni presek je specifičen za izbrano snov, je pa odvisen od valovne 
-dolžine elektromagnetnega valovanja, ki vpada na delec. 
+dolžine valovanja, ki vpada na delec. 
 
 Skupni prispevek vseh delcev v osvetljenem delu snovi k zmanjšanju svetlobnega toka
 je:
-\beq
+\begin{equation}
 \Delta P = - N \sigma_S j.
 \label{eq:07_02}
-\eeq
+\end{equation}
 Vpeljemo gostoto sipalcev $\varrho = N/V$ in dobimo:
-\beq
+\begin{equation}
 \Delta P = - \sigma_S j\,\varrho S \Delta z.
 \label{eq:07_03}
-\eeq
+\end{equation}
 Izraz delimo s presekom snopa $S$ in ga zapišemo v diferencialni obliki:
-\beq
+\begin{equation}
 dj = \frac{dP}{S} = - \sigma_S j\, \varrho dz.
 \label{eq:07_04}
-\eeq
-Vpeljemo $\mu = \sigma_S \varrho$ kot koeficient slabljenja (tudi atenuacijski ali ekstinkcijski 
-koeficient). Sorazmeren je z gostoto delcev, na katerem se svetloba siplje, sorazmernostni
+\end{equation}
+Vpeljemo $\mu = \sigma_S \varrho$ kot koeficient slabljenja\index{Koeficient slabljenja}
+(tudi atenuacijski ali ekstinkcijski\index{Atenuacijski koeficient|see{Koeficient slabljenja}}
+\index{Ekstinkcijski koeficient|see{Koeficient slabljenja}}
+koeficient). Sorazmeren je z gostoto delcev, na katerih se svetloba siplje, sorazmernostni
 faktor pa je sipalni presek. Enačbo~(\ref{eq:07_04}) integriramo in dobimo:
 \boxeq{eq:BL}{
 j(z) = j_0 e^{-\mu z},
@@ -101,37 +102,38 @@ sipanja in je povsem analogna Beer-Lambertovem zakon za absorpcijo svetlobe v sn
 
 \begin{remark}
 Poleg totalnega sipalnega preseka $\sigma_S$, ki pove, kako močno se svetloba siplje,
-pogosto vpeljemo tudi diferencialni sipalni presek:
-\beq
+pogosto vpeljemo tudi diferencialni sipalni presek:\index{Sipalni presek!totalni}
+\begin{equation}
 \frac{d\sigma}{d\Omega} = \frac{j(\vartheta)}{j_0} r^2,
 \label{eq:07_04a}
-\eeq
+\end{equation}
 pri čemer je $r$ razdalja od sipalca do opazovalca, kot $\vartheta$ pa merimo
-glede na smer vpadne svetlobe. Diferencialni sipalni
+glede na smer vpadne svetlobe. Diferencialni sipalni\index{Sipalni presek!diferencialni}
 presek pove, kako močno se svetloba siplje v prostorski kot $d\Omega$ pri kotu $\vartheta$. 
 Integral diferencialnega sipalnega preseka po prostorskem kotu da totalni
 sipalni presek:
-\beq
+\begin{equation}
 \sigma_S = \int \frac{d\sigma}{d\Omega} d\Omega.
 \label{eq:07_04b}
-\eeq
+\end{equation}
 \end{remark}
 
-\section{Sipanje na vezanem elektronu in Rayleighovo sipanje}
+\section{Sipanje na vezanem elektronu in Rayleighovo sipanje}\index{Sipanje!{Rayleighovo}}
 Najprej si podrobneje oglejmo sipanje na delcih, ki so bistveno manjši 
 od valovne dolžine svetlobe (npr. atomi in molekule). Za njih velja $R \ll \lambda$, 
 pri čemer je $R$ značilna dimenzija delca. Tako sipanje imenujemo 
-Rayleighovo sipanje po angleškemu fiziku Lordu Rayleighu (1842--1919).
+Rayleighovo sipanje po angleškemu fiziku Lordu 
+Rayleighu (1842--1919).\index{Rayleighovo sipanje}\index{Rayleigh, Lord}
 
 Uporabimo Lorentzev model atoma, ki smo ga spoznali v razdelku~\ref{chap:lomni}.
-V njem elektron opišemo kot lahko kroglico z maso $m$, ki je z vzmetjo 
+V njem elektron opišemo kot lahko kroglico z maso $m$ in nabojem $e$, ki je z vzmetjo\index{Lorentzev model!sipanje} 
 s koeficientom $k_0$ vezana na bistveno večje jedro. Ko
 na atom vpade elektromagnetno valovanje, deluje na elektron 
 Lorentzeva sila in elektron zaniha. Naj svetloba na atom vpada vzdolž 
 smeri $x$, njena polarizacija pa naj bo vzporedna osi $z$ 
 (glej sliko~\ref{fig:07_koor2}).\footnote{Zaradi uveljavljenega koordinatnega sistema
 pri kasnejšem zapisu sevajočega dipola smo pri tem računu zasukali koordinatni sistem.}
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/07_koor2.pdf_tex}
@@ -145,68 +147,67 @@ polja.}
 
 Newtonov zakon za gibanje elektrona smo na splošno zapisali z enačbo~(\ref{eq:09_02}), 
 zdaj pa dušenje zanemarimo in poenostavljeno zapišemo:
-\beq
+\begin{equation}
 m \ddot{z} + k_0 z = e E = e E_0 e^{-i\omega t},
 \label{eq:07_50}
-\eeq
+\end{equation}
 pri čemer smo vpadno polje $E$ zapisali kot ravno valovanje s frekvenco $\omega$ v
 izhodišču pri $x=0$. 
 Uporabimo nastavek za periodično spreminjanje lege, pri čemer ima vsiljeno 
 nihanje elektrona enako smer in enako frekvenco kot vpadno valovanje. Dobimo resonančno odvisnost:
-\beq
+\begin{equation}
 z = \frac{e/m}{\omega_0^2-\omega^2}E,
 \label{eq:07_51}
-\eeq
+\end{equation}
 pri čemer je $\omega_0 = \sqrt{k_0/m}$ lastna frekvenca nihanja.
 Inducirani dipolni moment, ki nastane zaradi premikanja elektrona, 
 je enak:
-\beq
+\begin{equation}
 p = ez  = \frac{e^2/m}{\omega_0^2-\omega^2} E = 
 \frac{e^2/m}{\omega_0^2-\omega^2}E_0 e^{-i\omega t}.
 \label{eq:07_52}
-\eeq
-S tem smo pokazali, da dipolni moment, ki se inducira v atomu, oscilira s frekvenco, 
+\end{equation}
+S tem smo pokazali, da dipolni moment, ki se inducira v atomu, niha s frekvenco, 
 ki je enaka frekvenci vpadnega valovanja, njegova amplituda pa je funkcija te frekvence.
 
-Za oscilirajoči dipolni moment vemo, da oddaja elektromagnetno valovanje -- seva. 
+Za nihajoči dipolni moment vemo, da oddaja elektromagnetno valovanje -- seva. 
 Sevalno polje v velikih oddaljenostih od električnega dipola zapišemo 
 kot:\footnote{Glej npr. Strnad, {\it Fizika, drugi del}, DMFA-založništvo (2018) in
 Podgornik in Vilfan, {\it Elektromagnetno polje}, DMFA-založništvo (2012).}
-\beq
+\begin{equation}
 \mathbf{E}_\mathrm{sev} = \frac{1}{4 \pi \varepsilon_0 c^2 r}
 \left(\ddot{\mathbf{p}} \times \frac{\mathbf{r}}{r}\right)\times \frac{\mathbf{r}}{r}.
 \label{eq:07_12}
-\eeq
-Vstavimo sinusno oscilirajoč električni dipol (enačba~\ref{eq:07_52})
+\end{equation}
+Vstavimo sinusno nihajoč električni dipol (enačba~\ref{eq:07_52})
 in izračunamo vektorski produkt, pri čemer upoštevamo, da je smer induciranega
-dipola vzdolž osi $z$. Za sevalno polje dobimo:
-\beq
+dipola vzdolž osi $z$. Za sevalno polje dobimo:\index{Sevalno polje dipola}
+\begin{equation}
 \mathbf{E}_\mathrm{sev} = -
 \frac{e^2}{4 \pi \varepsilon_0\,m c^2}\frac{\omega^2}{\omega_0^2-\omega^2}E_0
 \sin \vartheta \left(\frac{e^{ikr - i\omega t}}{r}\right) \hat{\mathbf{e}}_\vartheta.
 \label{eq:dipolE}
-\eeq
+\end{equation}
 V velikih oddaljenostih od dipola je smer jakosti električnega polja vzdolž smeri enotskega
 vektorja $\hat{\mathbf{e}}_\vartheta$. V tem približku se amplituda polja zmanjšuje 
 kot $1/r$. Vzdolž smeri $z$, to je vzdolž smeri polarizacije vpadnega valovanja, 
-je jakost električnega polja enaka nič. 
+je jakost izsevanega električnega polja enaka nič.\index{Jakost električnega polja}
 
 Podobno kot jakost električnega polja izračunamo tudi jakost magnetnega polja:
-\beq
+\begin{equation}
 \mathbf{H}_\mathrm{sev} = \frac{1}{4 \pi c r}
-\left(\ddot{\mathbf{p}} \times \frac{\mathbf{r}}{r}\right) = 
-\mathbf{H}_\mathrm{sev} = - \frac{e^2}{4 \pi m c}
+\left(\ddot{\mathbf{p}} \times \frac{\mathbf{r}}{r}\right) = - \frac{e^2}{4 \pi m c}
 \frac{\omega^2}{\omega_0^2-\omega^2}E_0\sin \vartheta
 \left(\frac{e^{ikr - i\omega t}}{r}\right) \hat{\mathbf{e}}_\varphi.
 \label{eq:dipolH}
-\eeq
+\end{equation}
 Jakost izsevanega magnetnega polja je pravokotna na smer dipola in 
 hkrati tudi na smer jakosti električnega polja. Podobno kot jakost
 električnega polja tudi jakost magnetnega polja pojema z oddaljenostjo
 od dipola kot $1/r$ in je enaka nič vzdolž smeri $z$.
 
-Gostoto energijskega toka sevalnega polja izračunamo kot povprečje 
-Poyntingovega vektorja (enačba~\ref{eq:Poyntingov}):
+Gostoto energijskega toka sevalnega polja izračunamo kot povprečje\index{Sipanje!{kotna odvisnost}}
+Poyntingovega vektorja (enačba~\ref{eq:Poyntingov}):\index{Poyntingov vektor}
 \boxeq{eq:dipolj}{
 \mathbf{j}_\mathrm{sev} = \langle \mathbf{E}_\mathrm{sev}
 \times \mathbf{H}_\mathrm{sev}  \rangle 
@@ -216,47 +217,48 @@ E_0^2 \sin^2 \vartheta \,\mathbf{e}_r.
 }
 Smer gostote svetlobnega toka je radialno navzven, 
 kar pomeni, da se zaradi sevanja vpadni energijski tok preusmeri iz vpadne smeri
-v druge smeri. Posledično amplituda v vpadni smeri slabi, v ostalih smereh pa se 
-pojavi sipana svetloba. Amplituda gostote svetlobnega toka 
+v druge smeri. Posledično intenziteta svetlobe v vpadni smeri slabi, v ostalih smereh pa se 
+pojavi sipana svetloba. Gostota svetlobnega toka 
 pojema obratno sorazmerno s kvadratom oddaljenosti od izhodišča, kar je v skladu
 z ohranitvijo energije.  
-Vidimo, da je sevalno polje odvisno od kota $\vartheta$,
-ki je kot med smerjo polarizacije vpadne svetlobe in smerjo opazovanja. Vzdolž
-smeri vpadne polarizacije, ki je hkrati tudi smer induciranega dipola, sipanja ni, 
-največje sipanje pa je v smeri pravokotno glede na smer polarizacije vpadne svetlobe (slika~\ref{fig:07_dipol}). Zanimivo je, da se enako svetlobe siplje v smeri naprej kot nazaj.
-\begin{figure}[!h]
-\vglue-2truemm
+Sevalno polje je močno odvisno od kota $\vartheta$: vzdolž smeri vpadne 
+polarizacije (os $z$) sipanja ni, največje sipanje pa je v smeri pravokotno glede na smer 
+polarizacije vpadne svetlobe ($\vartheta = 90\si{\degree}$). Porazdelitev sipane svetlobe 
+je osno simetrična okoli osi $z$, njena odvisnost v ravnini $xz$ pa je prikazana na 
+sliki~\ref{fig:07_dipol}. Zanimivo je, da se enako svetlobe siplje v smeri naprej kot nazaj.
+\begin{figure}[!ht]
 \centering
 \def\svgwidth{60truemm} 
 \input{slike/07_dipol.pdf_tex}
 \caption{Intenziteta sipane svetlobe je močno odvisna od smeri: v smeri induciranega
-dipola (zelena puščica) je enaka nič, največja pa je v ravnini, ki je pravokotna na dipol.}
+dipola (zelena puščica) je enaka nič, največja pa je v ravnini, ki je pravokotna na dipol. }
 \label{fig:07_dipol}
 \end{figure}
 
-Poleg kotne odvisnosti ima gostota svetlobnega toka, ki jo izseva inducirani dipol, 
+Poleg kotne odvisnosti ima gostota svetlobnega toka, ki jo izseva 
+inducirani dipol,\index{Sipanje!{frekvenčna odvisnost}} 
 tudi zelo pomembno frekvenčno odvisnost. Omejimo se na vpadno valovanje, katerega 
 frekvenca je daleč od resonančnih frekvenc atoma in za katero velja 
 $\omega \ll \omega_0$. Takrat lahko v imenovalcu enačbe~(\ref{eq:dipolj}) 
 frekvenco $\omega$ zanemarimo, v števcu
 pa jo seveda ohranimo. Vpeljemo $j_0$ kot gostoto vpadnega energijskega toka in dobimo:
-\beq
+\begin{equation}
 j_\mathrm{sev}
 = j_0 \frac{e^4}{16 \pi^2 \varepsilon_0^2 m^2 c^4 \omega_0^4} \frac{\omega^4}{r^2} 
 \sin^2 \vartheta.
 \label{eq:07_53}
-\eeq
+\end{equation}
 Za Rayleighovo sipanje je značilna četrta potenca v odvisnosti od frekvence 
 vpadne svetlobe:
 \boxeq{eq:rayleigh}{
 j_\mathrm{sev} \propto \omega^4 \propto \frac{1}{\lambda^4}.
 }
-Valovanja s večjimi frekvencami in krajšimi valovnimi dolžinami se tako 
+Valovanja s večjimi frekvencami (in krajšimi valovnimi dolžinami) se tako 
 bistveno bolj sipljejo kot valovanja z daljšimi valovnimi dolžinami 
 (slika~\ref{fig:07_rayleighlambda}). Kadar se
 siplje vidna bela svetloba, se modri del spektra siplje bistveno močneje kot rdeči
 del. To ima zelo pomembno -- in vidno -- posledico.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \vglue-2truemm
 \centering
 \def\svgwidth{60truemm} 
@@ -272,30 +274,31 @@ Pri zapisu Rayleighovega sipanja smo privzeli, da je $\omega \ll \omega_0$. Ta z
 velja za elastično vezan elektron. V nasprotnem primeru, ko je $\omega \gg \omega_0$, 
 govorimo o Thomsonovem sipanju, ki opisuje elastično sipanje elektromagnetnega valovanja 
 na prostem elektronu. Pri tem pogoju se v enačbi~(\ref{eq:dipolj}) frekvenčna 
-odvisnost pokrajša in za Thomsonovo sipanje je značilno, da je intenziteta 
+odvisnost okrajša in za Thomsonovo sipanje je značilno, da je intenziteta\index{Thomsonovo 
+sipanje}\index{Sipanje!{Thomsonovo}}
 sipane svetlobe neodvisna od frekvence vpadnega valovanja. 
 Medtem ko Rayleighovo sipanje tipično opazujemo z vidno
 svetlobo, Thomsonovo sipanje navadno opazujemo z rentgenskimi žarki.
 \end{remark}
 
 Izraz za intenziteto sipane svetlobe (enačba~\ref{eq:07_53}) lahko še malo 
-preoblikujemo. Vpeljemo dipolni moment $p$ kot produkt naboja $e$ in odmika 
-iz ravnovesne lege $eE/k$. Vstavimo lastno krožno frekvenco in dobimo:
-\beq
+preoblikujemo. Zapišemo dipolni moment $p$ kot produkt naboja $e$ in odmika 
+iz ravnovesne lege $eE/k$. Izrazimo še $k$ z lastno krožno frekvenco in dobimo:
+\begin{equation}
 p = \frac{e^2 E}{m\omega_0^2}.
 \label{eq:07_54}
-\eeq
+\end{equation}
 Sledi:
 \boxeq{eq:07_55}{
 \mathbf{j}_\mathrm{sev}
 = \frac{p^2}{32 \pi^2 \varepsilon_0 c^3} \frac{\omega^4}{r^2} 
 \sin^2 \vartheta \,\mathbf{e}_r.
 }
-Z vpeljavo dipolnega momenta smo veljavnost izračunanega izraza razširili
-tudi na večje delce, v katerih se ob vpadu elektromagnetnega 
+Z vpeljavo dipolnega momenta smo izračunani izraz posplošili in njegovo
+veljavnost razširili na večje delce, v katerih se ob vpadu elektromagnetnega 
 valovanja inducira električni dipol.
 
-\begin{example}{\bf Sipanje na majhnih dielektričnih kroglicah.}
+\begin{example}{\bf Sipanje na majhnih dielektričnih kroglicah.}\index{Sipanje!{na kroglicah}}
 Obravnavajmo sipanje svetlobe na dielektričnih kroglicah z
 dielektričnostjo $\varepsilon_2$, dielektričnost 
 okolice pa naj bo enaka $\varepsilon_1$. Kroglice naj bodo majhne ($R < \lambda$),
@@ -306,21 +309,20 @@ Inducirani dipolni moment v kroglici izračunamo iz
 elektrostatike z upoštevanjem robnih pogojev na površini 
 kroglice\footnote{Glej npr. Stratton, {\it Electromagnetic Theory}, različne izdaje.}
 in ga zapišemo kot:
-\beq
+\begin{equation}
 p = 4 \pi \varepsilon_0 R^3 \,\frac{\varepsilon-1}{\varepsilon +2} E,
 \label{eq:07_56}
-\eeq
+\end{equation}
 pri čemer je $\varepsilon = \varepsilon_2/\varepsilon_1$. 
 
-Povsem enak rezultat dobimo tudi z upoštevanjem zveze med polarizirnostjo in 
+Do povsem enakega rezultata pridemo tudi z upoštevanjem zveze med polarizirnostjo in 
 dielektričnostjo snovi (enačba~\ref{eq:09_35a}), kjer zapišemo:
-\beq
+\begin{equation}
 p = \alpha E = \frac{3\varepsilon_0}{\varrho}\frac{\varepsilon-1}{\varepsilon+2}E,
 \label{eq:07_57}
-\eeq
-Pri čemer je $\varrho$ gostota delcev, inverz gostote pa je prostornina, ki pripada
-enemu delcu, to je $4\pi R^3/3$. Ko prostornino enega delca vstavimo, 
-dobimo enačbo~(\ref{eq:07_56}).
+\end{equation}
+pri čemer je $\varrho$ gostota delcev. Inverz gostote je prostornina, ki pripada
+enemu delcu, to je $4\pi R^3/3$. Ko vstavimo prostornino enega delca, dobimo enačbo~(\ref{eq:07_56}).
 
 Oba izraza dokazujeta, da se svetloba siplje le, če sta dielektričnosti 
 kroglice in okoliške snovi različni.
@@ -332,34 +334,34 @@ Vrnimo se k izrazu za gostoto energijskega toka sipane
 svetlobe (enačba~\ref{eq:07_55}) in upoštevajmo velikost induciranega 
 dipolnega momenta v dielektrični kroglici (enačba~\ref{eq:07_56}). Na danem
 mestu je gostota svetlobnega toka sipane svetlobe sorazmerna:
-\beq
+\begin{equation}
 j_\mathrm{sev} \propto \omega^4 p^2 \propto E^2 \frac{R^6}{\lambda^4}.
 \label{eq:07_17}
-\eeq
-Sipalni presek, ki ga izračunamo kot razmerje med sipanim svetlobnim tokom in 
+\end{equation}
+Sipalni presek, ki ga izračunamo kot razmerje med sipanim svetlobnim tokom in\index{Sipalni presek}
 vpadno gostoto svetlobnega toka, je sorazmeren s šesto potenco polmera 
 delca in obratno sorazmeren s četrto potenco valovne dolžine svetlobe.
 
-\begin{example}{\bf Zakaj je nebo modro?}
+\begin{example}{\bf Zakaj je nebo modro?}\index{Modro nebo}\index{Sonce}
 Preden svetloba s Sonca doseže Zemljino površje, prepotuje Zemljino atmosfero.
 Pri tem se del svetlobe absorbira (najizrazitejše so absorpcije v ultravijoličnem delu 
 spektra na ozonski plasti ter v infrardečem spektru na molekulah vode in ogljikovega 
 dioksida). Preostala svetloba potuje skozi atmosfero in se pri tem na molekulah
 Rayleighovo siplje. Zaradi močne odvisnosti intenzitete sipanja od valovne dolžine 
-svetlobe (enačba~\ref{eq:rayleigh}) se modri odtenki s krajšo valovno dolžino 
-sipljejo bistveno bolj kot svetloba rdečih odtenkov z daljšo valovno dolžino.
+svetlobe (enačba~\ref{eq:rayleigh}) se modri odtenki sipljejo 
+bistveno bolj kot svetloba rdečih odtenkov z daljšo valovno dolžino.
 Na primer: svetloba z $\lambda = 400~\si{\nm}$ se siplje 10-krat močneje kot 
 svetloba z $\lambda = 710~\si{\nm}$. Ko opazujemo nebo, zaznavamo svetlobo, 
 ki se na atmosferi siplje. Ker se modri odtenki sipljejo bolj kot rdeči, 
-vidimo nebo modro. 
-\begin{figure}[!h]
+vidimo nebo modro (slika~\ref{fig:07_Modrina}). 
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/07_ModroNebo.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_Luna.jpg}
 \caption{Barva neba je posledica sipanja svetlobe. Ker se močneje siplje 
 svetloba s krajšo valovno dolžino, je nebo podnevi videti modro (levo).
 Na Luni, kjer ni atmosfere, na kateri bi se svetloba sipala, je nebo 
-tudi podnevi povsem črno (Foto: NASA).}
+tudi podnevi povsem črno. Foto z Lune: NASA.}
 \label{fig:07_Modrina}
 \end{figure}
 
@@ -370,7 +372,7 @@ tega k temu prispeva tudi občutljivost očesa, ki se pri krajših valovnih dol�
 zmanjša in vijolične barve ne zaznava tako močno kot modre. 
 \end{example}
 
-\begin{example}{\bf In zakaj je sončni zahod rdeč?}
+\begin{example}{\bf In zakaj je sončni zahod rdeč?}\index{Sonce}
 Tudi rdeči sončni vzhodi in zahodi so posledica sipanja svetlobe v atmosferi. 
 Takrat Sonce leži nizko nad obzorjem in pot svetlobe skozi atmosfero je 
 razmeroma dolga. Pogosto je v ozračju bližje površju tudi več vlage, prašnih delcev
@@ -378,15 +380,15 @@ in drugih sipalcev. Ker se modra svetloba močno siplje na vse strani, rdeča
 pa razmeroma šibko, je večina svetlobe, ki pride do opazovalca iz smeri Sonca,
 rdečkaste barve. Zaradi človekove aktivnosti in višjih dnevnih temperatur je 
 navadno zvečer v zraku več sipalcev kot proti jutru. Sončni zahodi so zato pogosto
-bolj izrazito rdečkasti kot sončni vzhodi.
+bolj izrazito rdečkasti kot sončni vzhodi (slika~\ref{fig:07_Rdeca}, levo).
 \end{example}
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/07_Zahod.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_Hribi.jpg}
-\caption{Ker se modra barva bolj siplje, je večina prepuščene svetlobe ob Sončnem
-vzhodu ali zahodu rdečkaste barve (levo). Zaradi sipanja svetlobe so oddaljeni
-grebeni modrikastih barv (desno).}
+\caption{Ker se modra barva bolj siplje, je večina prepuščene svetlobe ob sončnem
+vzhodu ali zahodu rdečkaste barve (levo). Sipanje svetlobe je vzrok, zakaj so oddaljeni
+grebeni videti modrikastih barv (desno).}
 \label{fig:07_Rdeca}
 \end{figure}
 
@@ -395,7 +397,7 @@ Zaradi sipanja svetlobe v zraku opazimo še en zanimiv pojav: modrikasto
 obarvanost oddaljenih gorskih grebenov. Med opazovalcem in oddaljenim grebenom
 je razmeroma dolga pot skozi ozračje, na katerem se svetloba siplje. Več kot
 je ozračja med goro in opazovalcem, več bo sipane svetlobe. Posledično so
-bolj oddaljene gore videti bolj modro in svetlejše. 
+bolj oddaljene gore videti bolj modro in svetlejše (slika~\ref{fig:07_Rdeca}, desno). 
 
 Kadar ozračje ni čisto in so prisotni večji delci (na primer prah ali vodne kapljice),
 takrat se svetloba siplje drugače. Kot bomo spoznali v nadaljevanju, je sipanje
@@ -404,14 +406,15 @@ na večjih delcih, siva. V meglenem vremenu so posledično oddaljene gore -- in 
 videti sivo.
 \end{example}
 
-\begin{example}{\bf Tyndallov pojav.} Pojav, ki je zelo podoben Rayleighovem sipanju
-na molekulah in delcih v zraku, je Tyndallov pojav. Pojav, ki se imenuje po irskem fiziku
-Johnu Tyndallu (1820--1893), opisuje sipanje svetlobe v koloidih in suspenzijah. Za Rayleighovo
+\begin{example}{\bf Tyndallov pojav.} Tyndallov pojav, ki se imenuje po irskem fiziku\index{Tyndall, John}
+Johnu Tyndallu (1820--1893), opisuje sipanje svetlobe v koloidih in suspenzijah.\index{Tyndallov pojav}
+Za Rayleighovo
 sipanje smo izpeljali, da intenziteta sipane svetlobe narašča s šesto potenco velikosti
-delca. Na večjih delcih (a vseeno po velikosti manjših ali največ primerljivih z valovno dolžino 
-svetlobe), se tako svetloba zelo močno siplje. Koloid pri navadni 
-osvetlitvi zato pogosto vidimo modrikast, pri presevni osvetlitvi pa rdečkaste barve.
-\begin{figure}[!h]
+delca (enačba~\ref{eq:07_17}). Na večjih delcih (a po velikosti še vedno manjših 
+ali največ primerljivih z valovno dolžino 
+svetlobe), se tako svetloba zelo močno siplje. Koloide pri navadni 
+osvetlitvi zato pogosto vidimo modrikaste, pri presevni osvetlitvi pa rdečkaste barve.
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/07_Mo2N1.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_Mo2N2.jpg}
@@ -424,7 +427,7 @@ videti modra (levo). Ko isto disperzijo osvetlimo od zadaj, je prepuščena svet
 
 \end{example}
 
-\section{Polarizacija sipane svetlobe}
+\section{Polarizacija sipane svetlobe}\index{Polarizacija!{sipane svetlobe}}\index{Sipanje!{polarizacija}}
 Pri razlagi Rayleighovega sipanja v prejšnjem razdelku smo privzeli, da na
 delec vpada linearno polarizirano elektromagnetno valovanje, ki v delcu vzbudi 
 električni dipolni moment. Oscilirajoči dipol seva, pri čemer je polarizacija
@@ -432,20 +435,19 @@ izsevane svetlobe vzdolž enotskega vektorja $\mathbf{e}_\vartheta$. Sevanja vzd
 smeri vpadne polarizacije ni, v smeri pravokotno na vpadno svetlobo pa je polarizacija
 pravokotna na sipalno ravnino (slika~\ref{fig:07_pol}\,a).
 
-Kadar na sipalni delec vpada nepolarizirana svetloba, vpadno svetlobo razstavimo
+Kadar na sipalni delec vpada nepolarizirana svetloba, vpadno svetlobo razstavimo\index{Sipanje!{nepolarizirane svetlobe}}
 na dve med seboj pravokotni komponenti in obravnavamo vsako posebej. Naj bo smer
 vpadne svetlobe vzdolž osi $x$, električno polje vpadne svetlobe pa razdelimo na 
-polarizacijo vzdolž osi $y$ in polarizacijo vzdolž osi $z$.  
+polarizacijo vzdolž osi $y$ in polarizacijo vzdolž osi $z$ (slika~\ref{fig:07_pol}\,b).  
 Komponenta vzdolž osi $y$ vzbudi dipolni moment, ki vzdolž osi $y$ 
 ne seva, vzdolž osi $z$ pa je izsevana svetloba polarizirana v smeri $y$. 
 Podobno komponenta vzdolž osi $z$ ne povzroči sevanja vzdolž osi $z$,
 izsevana svetloba vzdolž osi $y$ pa je polarizirana v smeri $z$. Posledično je v smereh
 pravokotno na smer vpadne svetlobe sipana svetloba linearno polarizirana. 
-Pri poljubnem sipalnem kotu je sipana svetloba na splošno delno polarizirana 
-(slika~\ref{fig:07_pol}\,b).
-\begin{figure}[!h]
+Pri poljubnem sipalnem kotu je sipana svetloba na splošno delno polarizirana.
+\begin{figure}[!ht]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{135truemm} 
 \input{slike/07_sipanjePol_1.pdf_tex}
 \caption{Linearno polarizirana vpadna svetloba se na delcu siplje, pri čemer je polarizacija
 sipane svetlobe vzporedna z $\mathbf{e}_\vartheta$ (a). Nepolarizirano vpadno svetlobo
@@ -460,9 +462,9 @@ Poglejmo pojav podrobneje. Naj bo opazovalec vzdolž smeri vektorja $\mathbf{r}$
 smer določajo koti $\vartheta_1$, $\vartheta_2$ in $\beta$. Pri tem je $\vartheta_1$ 
 kot med smerjo opazovalca in osjo $y$, $\vartheta_2$ med smerjo opazovalca in 
 osjo $z$, kot $\beta$, tako imenovani sipalni kot, pa je kot med smerjo opazovalca 
-in osjo $x$ (slika~). Med koti velja 
+in osjo $x$ (slika~\ref{fig:07_smernikoti}). Med koti velja\index{Sipalni kot}
 zveza: $\cos^2 \vartheta_1 + \cos^2 \vartheta_2 + \cos^2 \beta = 1$.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \vglue-2truemm
 \centering
 \def\svgwidth{50truemm} 
@@ -472,25 +474,25 @@ zveza: $\cos^2 \vartheta_1 + \cos^2 \vartheta_2 + \cos^2 \beta = 1$.
 \vglue-5truemm
 \end{figure}
 
-Potem sevalno polje dipola, induciranega v smeri $y$ (modra polarizacija 
-na sliki~\ref{fig:07_NeboPol}\,b) zapišemo kot (enačba~\ref{eq:07_53}):
-\beq
+Sevalno polje dipola, induciranega v smeri $y$ 
+zapišemo kot (enačba~\ref{eq:07_53}):
+\begin{equation}
 j_y = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_1.
 \label{eq:07_58}
-\eeq
-Pri tem smo konstante ter odvisnost od frekvence in oddaljenosti od dipola združili 
+\end{equation}
+Konstante ter odvisnost od frekvence in oddaljenosti od dipola smo združili 
 v funkcijo $f$. Upoštevali smo le polovico gostote vpadnega svetlobnega toka $j_0$, saj 
-upoštevamo le izbrano polarizacijo. Podobno zapišemo tudi sevalno polje dipola, ki je 
-induciran v smeri $z$ (rdeča polarizacija na sliki~\ref{fig:07_NeboPol}\,b):
-\beq
+velja zapisano le za izbrano polarizacijo. Podobno zapišemo sevalno polje dipola, ki je 
+induciran v smeri $z$:
+\begin{equation}
 j_z = \frac{j_0}{2} f(\omega, r) \sin^2 \vartheta_2.
 \label{eq:07_59}
-\eeq
+\end{equation}
 Celotna gostota energijskega toka sipane svetlobe je vsota obeh prispevkov:
-\beq
+\begin{equation}
 j_\mathrm{sev} = j_y + j_z = j_0 f(\omega, r) \frac{\sin^2 \vartheta_1 + \sin^2 \vartheta_2}{2}.
 \label{eq:07_60}
-\eeq
+\end{equation}
 Z upoštevanjem zveze med smernimi kosinusi dobimo:
 \boxeq{eq:07_61}{
 j_\mathrm{sev} = j_0 f(\omega, r) \frac{1+ \cos^2 \beta}{2}.
@@ -499,13 +501,14 @@ Intenziteta sipane nepolarizirane svetlobe je, po pričakovanju, odvisna zgolj o
 Njena odvisnost (slika~\ref{fig:07_nepol}) je simetrična v smeri naprej in nazaj, pri čemer je 
 sipanja v teh dveh smereh dvakrat več kot pravokotno na vpadno smer. V smeri naprej je sipanje 
 nepolarizirano, v pravokotnih smereh je linearno polarizirano, v ostalih smereh pa delno polarizirano.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \vglue-2truemm
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/07_nepol.pdf_tex}
 \caption{Celotna intenziteta sipane nepolarizirane svetlobe je vsota dveh prispevkov, pri čemer vsak
-ustreza eni od komponent polarizacije vpadne svetlobe (modra $y$ in rdeča $z$).}
+ustreza eni od komponent polarizacije vpadne svetlobe (modra $y$ in rdeča $z$). Prostorska porazdelitev
+intenzitete sipane svetlobe je osno simetrična okoli osi $x$.}
 \label{fig:07_nepol}
 \vglue-7truemm
 \end{figure}
@@ -514,17 +517,17 @@ ustreza eni od komponent polarizacije vpadne svetlobe (modra $y$ in rdeča $z$).
 svetlobo v posodico z vodo, kateri smo dodali kapljico mleka. Svetloba se siplje,
 vendar je intenziteta sipane svetlobe na mestu opazovalca močno odvisna
 od smeri vpadne polarizacije. Z zasukom laserja za $90\si{\degree}$
-sipana svetloba praktično izgine (slika~\ref{fig:07_mleko} zgoraj). 
+sipana svetloba praktično izgine (sliki~\ref{fig:07_mleko} zgoraj). 
 Polarizacijo sipane svetlobe preverimo z uporabo linearnih polarizatorjev 
-(slika~\ref{fig:07_mleko} spodaj). 
-\begin{figure}[!h]
+(sliki~\ref{fig:07_mleko} spodaj). 
+\begin{figure}[!ht]
 \centering
 \vglue-1truemm
 \includegraphics[width=7truecm]{slike/07_Mleko1.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_Mleko2.jpg}\\ \vglue3truemm
 \includegraphics[width=7truecm]{slike/07_Mleko3.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_Mleko4.jpg}
-\caption{Sipanje v posodici vode z dodanim mlekom. Intenziteta sipane svetlobe je odvisna 
+\caption{Sipanje v posodici vode z dodano kapljivo mleka. Intenziteta sipane svetlobe je odvisna 
 od polarizacije vpadne svetlobe (zgoraj), sipana svetloba pod pravim kotom pa je linearno
 polarizirana (spodaj). Rdeče puščice označujejo smer polarizacije svetlobe, beli puščici
 pa smeri polarizatorjev.}
@@ -534,15 +537,15 @@ pa smeri polarizatorjev.}
 
 \end{example}
 
-\begin{example}{\bf Polarizacija modrega neba.}
+\begin{example}{\bf Polarizacija modrega neba.}\index{Modro nebo}
 Spoznali smo, da je sipana svetloba najbolj izrazito linearno polarizirana v smeri pravokotno na smer 
-širjenja. Pri opazovanju neba to pomeni pravokotno na smer, iz katere vpada nepolarizirana 
+širjenja. Pri opazovanju neba to pomeni pravokotno na smer, iz katere vpada nepolarizirana\index{Sonce}
 svetloba s Sonca. Komponenta svetlobe, ki je polarizirana pravokotno na Zemljino površje, 
-v smeri opazovalca ne seva, polarizacija, ki leži tangentno na Zemljino površje, pa seva. Ta
+v smeri opazovalca ne seva, polarizacija, ki leži tangentno na Zemljino površje, pa. Ta
 pojav preverimo s polarizacijskim filtrom. Svetloba, ki jo zaznamo, tudi pri pravokotni smeri
 ni povsem linearno polarizirana, saj v atmosferi prihaja do večkratnega sipanja in tudi do 
 sipanja na večjih delcih v atmosferi, za katere Rayleighov približek ne velja.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/07_NeboPol2.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_NeboPol1.jpg}
@@ -561,7 +564,7 @@ zasuk polarizatorja.}
 % razstavimo na dve komponenti: eno, ki je vzporedna s sipalno ravnino $E_\parallel$, in drugo, ki 
 % je nanjo pravokotna $E_\perp$. V našem zapisu je tako $E_\parallel \parallel y$ in
 % $E_\perp \parallel z$. 
-% \beq
+% \begin{equation}
 % \mathbf{E}_s = 
 % \left[\begin{array}{c}
 % E_{s,y}\\
@@ -583,7 +586,7 @@ zasuk polarizatorja.}
 % \frac{e^{ik(r-x)}}{ikr}
 % \right)\!\!.
 % \label{eq:07_14}
-% \eeq
+% \end{equation}
 % Pri tem je matrika amplitudna sipalna matrika, ki je na splošno funkcija zenitalnega
 % in azimutalnega kota (če delec ni povsem okrogel), ki poruši simetrijo. Vektor v zgornjem
 % zapisu predstavlja optično polje vpadne svetlobe, zadnji člen pa je transportni faktor,
@@ -591,13 +594,13 @@ zasuk polarizatorja.}
 % je prišlo so sipanja (z).
 % 
 % V praksi navadno merimo gostoto energijskega toka sipane svetlobe:
-% \beq
+% \begin{equation}
 % j_s \propto |E_{s, \parallel}|^2 + |E_{s, \perp}|^2.
 % \label{eq:07_15}
-% \eeq
+% \end{equation}
 % Ker sta polarizaciji ortogonalni, mešani členi ničesar ne prispevajo. Potem sipalno matriko
 % za gostoto svetlobnega toka zapišemo kot:
-% \beq
+% \begin{equation}
 % \left[\begin{array}{c}
 % j_{s, \parallel}(\beta)\\
 % j_{s, \perp}(\beta)\\
@@ -611,20 +614,20 @@ zasuk polarizatorja.}
 % j_{i, \perp}(\beta)\\
 % \end{array}\right]\!\!.
 % \label{eq:07_16}
-% \eeq
+% \end{equation}
 % 
 % .. Kakšen komentar, zakaj je to dobro, primer? .. Zakaj so indeksi tako čudno?
 
-\section{Miejevo sipanje}
+\section{Miejevo sipanje}\index{Miejevo sipanje}\index{Sipanje!{Miejevo}}
 Z Rayleighovim sipanjem dobro opišemo sipanje svetlobe na delcih, ki so 
 po velikosti precej manjši od valovne dolžine vpadne svetlobe. Po drugi strani lahko
 sipanje na delcih, ki so precej večji od valovne dolžine svetlobe, opišemo
 z geometrijsko optiko. V vmesnem režimu, pri katerem je velikost delcev 
 primerljiva z valovno dolžino svetlobe, je opis sipanja najzahtevnejši.
 Takrat govorimo o Miejevem sipanju, ki se imenuje po nemškem fiziku Gustavu 
-Mieju (1868--1957). Miejevo sipanje je, 
+Mieju (1868--1957). Miejevo sipanje je,\index{Mie, Gustav} 
 tako kot Rayleighovo, elastično sipanje, kar pomeni, da se valovna dolžina svetlobe
-pri sipanju ne spremeni. 
+pri sipanju ne spremeni.
 
 Pri Rayleighovem sipanju smo izračunali intenziteto sipane svetlobe za posamezni
 delec in prispevke vseh sipalcev sešteli. To smo lahko naredili, saj so 
@@ -637,11 +640,11 @@ je kotna odvisnost Miejevo sipane svetlobe zelo zapletena.
 
 Druga pomembna lastnost Miejevega sipanja je zelo šibka odvisnost intenzitete
 sipanja od valovne dolžine svetlobe -- za razliko od četrte potence pri Rayleighovem
-sipanju. Z naraščajočo velikostjo delcev postane Miejevo sipanje od valovne dolžine
-neodvisno in sipana svetloba je videti bela. Značilen primer Miejevega 
+sipanju. Z naraščajočo velikostjo delcev postane Miejevo sipanje neodvisno od valovne dolžine
+in sipana svetloba je videti bela. Značilen primer Miejevega 
 sipanja je sipanje svetlobe na drobnih kapljicah megle ali oblakov, kar da 
-megli in oblakom značilno belo oziroma sivo barvo.
-\begin{figure}[!h]
+megli in oblakom značilno belo oziroma sivo barvo (slika~\ref{fig:07_Mie}).
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=7truecm]{slike/07_oblak.jpg}\hfill
 \includegraphics[width=7truecm]{slike/07_meglaB.jpg}
@@ -658,31 +661,31 @@ lastnosti, kot sta lomni količnik in koeficient absorpcije. Za okrogle delce
 iščemo rešitve v sferičnih koordinatah. Pojav dovolj dobro opišemo, če rešujemo skalarno
 obliko Helmholtzeve enačbe (enačba~\ref{eq:03_12}) in rešitve
 poiščemo z metodo separacije spremenljivk:
-\beq
-E_{lm}(r,\vartheta, \varphi) = R_l(r) \Theta_l^m(\vartheta) \Phi_m(\varphi) = 
+\begin{equation}
+E_{lm}(r,\vartheta, \varphi) = 
 E_0 e^{im\varphi}P_l^m (\cos \vartheta) Z_l (kr).
 \label{eq:07_20}
-\eeq
+\end{equation}
 Pri tem $P$ označujejo pridružene Legendrove polinome in $Z$ sferične Besslove 
 funkcije prvega ali drugega reda. Celotno sipano polje zapišemo kot vsoto vseh prispevkov:
-\beq
+\begin{equation}
 E = \sum_{l,m} A_{lm}E_{lm},
 \label{eq:07_21}
-\eeq
-pri čemer koeficiente razvoja $A$ določimo iz robnih pogojev. 
+\end{equation}
+pri čemer koeficiente razvoja $A_{lm}$ določimo iz robnih pogojev. 
 
-Vpeljimo sipalni izkoristek $Q_s$ kot razmerje 
+Vpeljimo sipalni izkoristek $Q_s$ kot razmerje\index{Sipalni izkoristek}
 med sipalnim presekom $\sigma_s$ in dejanskim prečnim presekom delca $A$.
 Za Rayleighovo sipanje z upoštevanjem enačbe~(\ref{eq:07_17}) in prečnega preseka kroglice $\pi R^2$
 izračunamo, da je sipalni izkoristek sorazmeren s četrto
 potenco $kR$. Za Miejevo sipanje je ta odvisnost zaradi interferenčnih pojavov bistveno
 bolj zapletena in shematsko prikazana na sliki~\ref{fig:07_MieGraf}\,a. V limiti za majhne delce
-preide v Rayleihovo sipanje, v limiti velikih vrednosti $kR$ pa za delce brez 
+preide v Rayleighovo sipanje, v limiti velikih vrednosti $kR$ pa za delce brez 
 absorpcije zavzame vrednost 2. V vmesnem območju se pojavijo vrhovi, tako imenovane Miejeve resonance, 
 pri katerih je sipanje še posebej močno. Kotna odvisnost Miejevega sipanja 
 (slika~\ref{fig:07_MieGraf},\,b) ima izrazit vrh v smeri naprej in zapleten vzorec 
 sipanja v drugih smereh. 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/07_MieGraf.pdf_tex}
@@ -693,9 +696,9 @@ Miejevega sipanja (b). Povzeto po Born in Wolf, {\it Principles of Optics}, sedm
 \vglue-3truemm
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=9truecm]{slike/07_Glorija.jpg}
+\includegraphics[width=9truecm]{slike/07_Glorija.jpg}\index{Glorija}
 \caption{Miejevo sipanje na drobnih kapljicah vode je vzrok za nastanek tako imenovane
 glorije. To je pojav, pri katerem so okoli sence opazovalca na megli ali oblaku vidne
 barvne ojačitve. Ker je kotna porazdelitev sipanja odvisna od valovne dolžine svetlobe, so
@@ -707,14 +710,16 @@ prikazanem primeru so kapljice megle velike okoli $7~\si{\micron}$. Foto: Martin
 
 \begin{remark}
 Pri obravnavi sipanja svetlobe smo se omejili le na elastično sipanje, pri katerem se valovna 
-dolžina svetlobe ohranja. Poleg tega poznamo neelastično sipanje, pri katerem se valovna dolžina 
+dolžina svetlobe ohranja. Poleg tega poznamo neelastično sipanje,\index{Sipanje!{neelastično}}
+pri katerem se valovna dolžina\index{Sipanje!{Ramanovo}}\index{Ramanovo sipanje}
 sipane svetlobe razlikuje od valovne dolžine vpadne svetlobe. Primer neelastičnega sipanja
 je Ramanovo sipanje. Ko se svetloba siplje, se del energije vpadnega valovanja porabi za 
 vzbujanje nihanj ali rotacije gradnikov snovi, sipana svetloba pa ima praviloma nižjo frekvenco oziroma
 večjo valovno dolžino. Razlika frekvenc vpadne in sipane svetlobe sovpada z energijskimi
-nivoji v snovi, zato je ta Ramanovo sipanje zelo uporabno za spektroskopske metode analize snovi.
+nivoji v snovi, zato je Ramanovo sipanje zelo uporabno za spektroskopske metode analize snovi.
 
-Drugi primer neelastičnega sipanja je Brillouinovo sipanje, pri katerem del energije 
+Drugi primer neelastičnega sipanja je Brillouinovo sipanje, pri katerem del 
+energije\index{Brillouinovo sipanje}\index{Sipanje!{Brillouinovo}}
 vpadne svetlobe preide na mrežna nihanja v snovi. Z merjenjem spremembe frekvence sipane svetlobe
 glede na frekvenco vpadne svetlobe lahko določimo lastnosti snovi.
 \end{remark}
